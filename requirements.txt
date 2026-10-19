@@ -1,0 +1,5 @@
+# Versions installed via conda-forge in .conda312; use README's Conda restore on Windows.
+# This list is not a guarantee that PyPI supplies matching Windows wheels.
+pybullet==3.2.5
+numpy==2.5.4
+pillow==12.3.0

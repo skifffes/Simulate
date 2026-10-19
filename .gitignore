@@ -1,0 +1,17 @@
+# Python 虚拟环境（.conda312 是本机验证环境，体积大且平台相关）
+.venv/
+.conda312/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# 系统与 IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

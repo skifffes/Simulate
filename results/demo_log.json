@@ -1,0 +1,48 @@
+[
+  {
+    "success": true,
+    "reason": "ok",
+    "seconds": 2.345833333333333,
+    "distance": 2.009041886576611,
+    "ik": true,
+    "reached": true,
+    "collision": false,
+    "limit": false,
+    "error": 1.0334204803864267e-06,
+    "position_error_m": 9.102575075626249e-06,
+    "orientation_error_rad": 0.0,
+    "target_position_m": [
+      0.45,
+      -0.2,
+      0.38
+    ],
+    "actual_position_m": [
+      0.44999200105667114,
+      -0.19999611377716064,
+      0.3799980580806732
+    ]
+  },
+  {
+    "success": true,
+    "reason": "ok",
+    "seconds": 1.3208333333333333,
+    "distance": 1.0254918314768287,
+    "ik": true,
+    "reached": true,
+    "collision": false,
+    "limit": false,
+    "error": 6.695085686008066e-08,
+    "position_error_m": 8.650909396625334e-06,
+    "orientation_error_rad": 0.0,
+    "target_position_m": [
+      0.4,
+      0.2,
+      0.45
+    ],
+    "actual_position_m": [
+      0.3999938666820526,
+      0.19999700784683228,
+      0.44999468326568604
+    ]
+  }
+]
