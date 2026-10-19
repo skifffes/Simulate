@@ -1,6 +1,6 @@
 {
   "seed": 20261019,
-  "trials": 1,
+  "trials": 10,
   "fixed_timestep": 0.004166666666666667,
   "home_joint_rad": [
     0,

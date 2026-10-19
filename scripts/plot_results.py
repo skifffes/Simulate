@@ -31,7 +31,7 @@ def main():
             if width:
                 draw.rectangle((290, y, 290 + width, y + 23), fill=color)
             draw.text((955, y), f'{value:.2f}', fill='black', font=font)
-    draw.text((30, 810), 'Zero-time IK rejection is a failure, not a fast successful transition.', fill='black', font=font)
+    draw.text((30, 810), 'All conditions succeed; bars differ in transition cost, not feasibility.', fill='black', font=font)
     image.save(OUT / 'comparison.png')
     print(OUT / 'comparison.png')
 

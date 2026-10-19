@@ -2,12 +2,38 @@
 import numpy as np
 import pybullet as p
 
+TWO_PI = 2.0 * np.pi
+
+
+def wrap_into_limits(q, lower, upper, rest, tol=1e-5):
+    """把 IK 候选折算成同一物理构型的限位内等价角。
+
+    旋转关节相差 2π 时末端位姿完全相同，但 PyBullet 可能直接返回限位外的
+    角度（例如 5.483 rad 与 -0.801 rad 等价）。这里只做等价折算，不改变
+    机械臂构型；若某关节不存在限位内等价角，则保留原值交给调用方判定失败。
+    """
+    q = np.asarray(q, dtype=float).copy()
+    rest = np.asarray(rest, dtype=float)
+    wrapped = np.zeros(q.shape, dtype=bool)
+    for i in range(q.size):
+        if lower[i] - tol <= q[i] <= upper[i] + tol:
+            continue
+        candidates = [q[i] + TWO_PI * k for k in (-2, -1, 1, 2)]
+        feasible = [v for v in candidates if lower[i] - tol <= v <= upper[i] + tol]
+        if not feasible:
+            continue
+        q[i] = min(feasible, key=lambda v: abs(v - rest[i]))
+        wrapped[i] = True
+    return q, wrapped
+
+
 class MotionResult:
     def __init__(self, success, reason, seconds, distance, ik, reached, collision, limit, error):
         self.success, self.reason = success, reason
         self.seconds, self.distance = seconds, distance
         self.ik, self.reached = ik, reached
         self.collision, self.limit, self.error = collision, limit, error
+        self.ik_wrapped = False
 
 class RobotController:
     def __init__(self, sim, max_steps=1800):
@@ -15,13 +41,14 @@ class RobotController:
 
     def solve(self, position, orientation, rest=None):
         s = self.sim
+        seed = s.q() if rest is None else np.asarray(rest, dtype=float)
         result = p.calculateInverseKinematics(s.robot, s.ee, position, orientation,
             lowerLimits=s.lower.tolist(), upperLimits=s.upper.tolist(),
-            jointRanges=(s.upper-s.lower).tolist(), restPoses=(s.q() if rest is None else rest).tolist(),
+            jointRanges=(s.upper-s.lower).tolist(), restPoses=seed.tolist(),
             maxNumIterations=200, residualThreshold=1e-5, physicsClientId=s.client)
-        q = np.asarray(result[:7])
+        q, wrapped = wrap_into_limits(np.asarray(result[:7]), s.lower, s.upper, seed)
         ok = bool(np.all(q >= s.lower - 1e-5) and np.all(q <= s.upper + 1e-5))
-        return q, ok
+        return q, ok, wrapped
 
     def move(self, target, sim_steps=None):
         s = self.sim
@@ -55,10 +82,11 @@ class RobotController:
                             distance, True, reached, False, False, err)
 
     def move_pose(self, position, orientation, sim_steps=None):
-        q, ik = self.solve(position, orientation)
+        q, ik, wrapped = self.solve(position, orientation)
         if not ik:
             return MotionResult(False, 'ik_joint_limits', 0, 0, False, False, False, False, None)
         result = self.move(q, sim_steps)
+        result.ik_wrapped = bool(np.any(wrapped))
         actual, quat = self.sim.pose()
         result.position_error_m = float(np.linalg.norm(actual - np.asarray(position)))
         result.orientation_error_rad = float(2 * np.arccos(np.clip(abs(np.dot(quat, orientation)), 0, 1)))

@@ -59,8 +59,10 @@ def main():
             print(f'  后继: {result.success} ({result.reason})')
             color = (0, 0.6, 0) if result.success else (0.8, 0, 0)
             status(f'{title} | {"SUCCESS" if result.success else "FAILED: " + result.reason}', color)
+            if getattr(result, 'ik_wrapped', False):
+                print('  IK 候选经 2π 等价折算后落入关节限位，按该等价角执行。')
             if result.reason == 'ik_joint_limits':
-                print('  IK 候选超出关节限位，拒绝执行；机械臂保持 A 终态，不是窗口卡住。')
+                print('  IK 候选超出关节限位且无等价角，拒绝执行；机械臂保持 A 终态，不是窗口卡住。')
             print('  当前画面保持 3 秒。')
             time.sleep(3)
         print('四种情况播放完毕，窗口保持 5 秒。')
