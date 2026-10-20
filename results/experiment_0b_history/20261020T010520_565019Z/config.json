@@ -1,0 +1,114 @@
+{
+  "experiment": "0B geometric sensitivity sanity check",
+  "seed": 20261020,
+  "trials_per_condition": 3,
+  "ik_starts_per_trial": 4,
+  "fixed_timestep_s": 0.004166666666666667,
+  "home_joint_positions_rad": [
+    0,
+    -0.5,
+    0,
+    -2.1,
+    0,
+    1.65,
+    0.78
+  ],
+  "targets": {
+    "B": {
+      "position_m": [
+        0.55,
+        0.0,
+        0.38
+      ],
+      "euler_rad": [
+        3.141592653589793,
+        0.0,
+        1.5707963267948966
+      ]
+    },
+    "C": {
+      "position_m": [
+        0.55,
+        -0.2,
+        0.16
+      ],
+      "euler_rad": [
+        1.5707963267948966,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "path_check": {
+    "method": "80-segment joint-space interpolation; temporary resetJointState for collision probing only",
+    "execution": "motor-controlled RobotController.move after path probe"
+  },
+  "modes": [
+    "direct",
+    "reset_to_canonical"
+  ],
+  "exploration_disclosure": "Before this fixed configuration was established, exploratory tests had been run for C at (0.55,-0.20,0.16), including Euler orientations (pi/2,0,0), (pi/2,0,pi/2), and (pi/2,0,-pi/2), plus a nearby position. Interpret as exploratory sanity check, not preregistered confirmation.",
+  "scope": "Geometric/kinematic sensitivity test only; not evidence of VLA compositional generalization.",
+  "repetitions_note": "Deterministic repeated runs are not statistically independent physics trials.",
+  "runtime": {
+    "python": "3.12.15",
+    "numpy": "2.5.4",
+    "pybullet": "unknown"
+  },
+  "generated_utc": "2026-10-20T01:01:29+00:00",
+  "ik_seed_offsets_rad": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.18,
+      -0.12,
+      0.16,
+      0.12,
+      -0.15,
+      0.1,
+      0.2
+    ],
+    [
+      -0.18,
+      0.12,
+      -0.16,
+      -0.12,
+      0.15,
+      -0.1,
+      -0.2
+    ],
+    [
+      0.0,
+      0.2,
+      0.0,
+      -0.18,
+      0.0,
+      0.12,
+      -0.15
+    ]
+  ],
+  "ik_seed_noise_std_rad": 0.015,
+  "ik_max_iterations": 300,
+  "ik_residual_threshold": 1e-05,
+  "acceptance": {
+    "position_m": 0.025,
+    "orientation_rad": 0.15,
+    "joint_tracking_rad": 0.06
+  },
+  "pre_existing_data_sha256_before": {
+    "results\\results.csv": "5707fecbb6e165182b0f8339d0413db88772edb8a4e3b77b1b339a1beb765307",
+    "results\\summary.csv": "2fc31fa26f540b5a7ab67bb502df559bfb6bb03a340471d90b59d5e450e07278"
+  },
+  "pre_existing_data_sha256_after": {
+    "results\\results.csv": "5707fecbb6e165182b0f8339d0413db88772edb8a4e3b77b1b339a1beb765307",
+    "results\\summary.csv": "2fc31fa26f540b5a7ab67bb502df559bfb6bb03a340471d90b59d5e450e07278"
+  },
+  "pre_existing_data_unchanged": true
+}

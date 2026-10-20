@@ -2,6 +2,24 @@
 
 已在本机 Windows 11 原生 GUI 和 DIRECT 模式实际运行。无需 ROS、WSL、模型权重或真机。
 
+## 实验 0B：独立几何敏感性检查
+
+原实验代码和结果保持不变。新增入口 `scripts/run_experiment_0b.py`，在原环境中运行 `python scripts/run_experiment_0b.py`；默认 3 个种子 × 4 个 IK 初值 × 8 个条件，共 96 条候选记录。输出在 `results/experiment_0b/`，重跑前自动归档旧 0B 输出到 `results/experiment_0b_history/`。
+
+B/C 的位置和朝向均不同。本次 direct 四组都成功：z1→B 为 0.604 rad / 0.881 s，z2→B 为 3.182 rad / 3.567 s；z1→C 为 3.331 rad / 3.722 s，z2→C 为 2.251 rad / 2.597 s。因此当前控制器在所测初值附近出现 **B 偏好 z1、C 偏好 z2** 的代价交叉。这不是全局最优代价、真实物体交接或 VLA 组合泛化的证明。
+
+HOME 恢复对照中 B 为 1.688 rad / 2.010 s，C 为 2.347 rad / 2.696 s，加上恢复动作的总交接时间为 3.948 s 和 4.634 s，即从统一 HOME 起点出发 B 更省。reset 组 z1 与 z2 的数值差异只来自浮点，因恢复后起点完全相同，该组不携带实现信息。每组 12 个候选不是独立物理样本，仅 IK 初始猜测有扰动。目标探索过程已在配置中披露。
+
+**此前的“HOME→C 全部 tracking_error”是仿真接触伪影，结论已作废。** Panda URDF 中 `panda_link7` 与 `panda_hand` 的碰撞几何长期重叠约 2.5 cm；失败判定本就把该固定连接对排除在外，但 PyBullet 仍在求解该接触，产生约 19 kN 罚函数力，相当于给第 5 关节加约 12 N·m 制动，使其在 100% 力矩处饱和、以约 0.2 rad/s 爬行，最终停在距目标 0.789 rad 处。该对现在动力学层也已关闭（`Simulation.ignored_contacts`），修复前的结果归档在 `results/experiment_0b_history/`。direct 四组数值未受影响。
+
+实时观看入口 `scripts/watch_experiment_0b.py`：直接打开 PyBullet 窗口，按记录顺序现场执行四组 direct 交接和一组 HOME 复位对照，画面上叠加工况、阶段、实时行程/误差、末端轨迹和 B/C 目标标记；`--speed` 调速，SPACE 跳过当前停留，P 暂停，ESC 或关闭窗口退出。示例：`& ".\.conda312\python.exe" ".\scripts\watch_experiment_0b.py" --speed 0.7 --hold 4`。
+
+离线回放入口 `scripts/visualize_experiment_0b.py`：读取上述 CSV 中 trial 0 / ik_start_index 0 的记录，重建 A 与可选 HOME 状态后用原控制器重放，离屏渲染为 GIF、关键帧拼图和末端路径图，输出在 `results/experiment_0b_visualization/`。两条入口行程、耗时和成功标志都与原始记录一致。回放是确定性场景复现，不是独立物理试验。
+
+`scripts/diagnose_0b_reset.py` 用于复核 reset 组的逐关节追踪与力矩占用，也就是定位上面那次接触伪影的诊断入口。
+
+详见 [0B 数据与图表](results/experiment_0b/README.md)、[0B 可视化回放](results/experiment_0b_visualization/README.md) 和 [阶段二物理交接设计（尚未实施）](docs/experiment_0b_stage2_design.md)。
+
 ## 环境
 
 原系统 Python 3.13 无合适 PyBullet wheel；尝试 Python 3.12 后发现 PyPI 的 PyBullet 3.2.7 同样没有 Windows wheel。最终使用项目独立 Conda 环境 `.conda312`，不修改 base：Python 3.12.15、PyBullet 3.2.5、NumPy 2.5.4、Pillow 12.3.0。实际包 URL 锁定在 `results/conda-explicit-win64.txt`。

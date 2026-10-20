@@ -10,8 +10,9 @@ HOME = [0, -0.5, 0, -2.1, 0, 1.65, 0.78]
 
 
 class Simulation:
-    def __init__(self, gui=False, realtime=False):
+    def __init__(self, gui=False, realtime=False, speed=1.0):
         self.gui, self.realtime = gui, realtime
+        self.speed = max(1e-3, float(speed))
         self.client = p.connect(p.GUI if gui else p.DIRECT)
         if self.client < 0:
             raise RuntimeError('PyBullet connection failed')
@@ -28,6 +29,14 @@ class Simulation:
         self.cube = p.loadURDF('cube_small.urdf', [0.55, 0, 0.025], useFixedBase=True, physicsClientId=self.client)
         self.robot = p.loadURDF('franka_panda/panda.urdf', useFixedBase=True,
                                 flags=p.URDF_USE_SELF_COLLISION, physicsClientId=self.client)
+        # 该 URDF 的 panda_link7 与 panda_hand 碰撞几何常年重叠约 2.5 cm。
+        # 失败判定本来就把这一固定连接对排除在外，但物理引擎仍按罚函数求解，
+        # 产生约 19 kN 接触力，相当于给 panda_joint5 附加约 12 N·m 制动，
+        # 曾使 HOME→C 出现假 tracking_error。这里在动力学层面同样关闭该对。
+        self.ignored_contacts = [(6, 8)]
+        for link_a, link_b in self.ignored_contacts:
+            p.setCollisionFilterPair(self.robot, self.robot, link_a, link_b, enableCollision=0,
+                                     physicsClientId=self.client)
         self.joints = list(range(7))
         self.ee = 11  # panda_grasptarget：夹爪中心参考坐标系。
         self.lower = np.array([p.getJointInfo(self.robot, j, physicsClientId=self.client)[8] for j in self.joints])
@@ -64,7 +73,7 @@ class Simulation:
             self.label = p.addUserDebugText(text, [0, 0, 0.95], textSize=1.1,
                                           replaceItemUniqueId=getattr(self, 'label', -1), physicsClientId=self.client)
         if self.realtime:
-            time.sleep(self.dt)
+            time.sleep(self.dt / self.speed)
 
     def collisions(self):
         contacts = p.getContactPoints(bodyA=self.robot, physicsClientId=self.client)

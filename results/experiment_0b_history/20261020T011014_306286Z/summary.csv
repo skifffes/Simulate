@@ -1,0 +1,9 @@
+﻿mode,condition,ik_pose_valid_candidates,ik_candidates_in_limits,ik_candidates_total,mean_successful_total_handoff_s,mean_successful_total_handoff_rad,path_feasible_candidates,execution_successes,execution_attempts,mean_successful_length_rad,mean_successful_time_s,deterministic_repetitions_not_independent_samples
+direct,z1->B,12,12,12,0.88125,0.604453458264789,12,12,12,0.604453458264789,0.88125,True
+direct,z1->C,12,12,12,3.722222222222222,3.3306462672732913,12,12,12,3.3306462672732913,3.722222222222222,True
+direct,z2->B,12,12,12,3.567013888888889,3.1818928343543207,12,12,12,3.1818928343543207,3.567013888888889,True
+direct,z2->C,12,12,12,2.5972222222222223,2.2514264144752287,12,12,12,2.2514264144752287,2.5972222222222223,True
+reset_to_canonical,z1->B,12,12,12,3.9479166666666665,3.3051863603519807,12,12,12,1.6881815807451517,2.010416666666667,True
+reset_to_canonical,z1->C,12,12,12,,,12,0,12,,,True
+reset_to_canonical,z2->B,12,12,12,3.9562500000000003,3.3151118087958125,12,12,12,1.6881816261280793,2.010416666666667,True
+reset_to_canonical,z2->C,12,12,12,,,12,0,12,,,True

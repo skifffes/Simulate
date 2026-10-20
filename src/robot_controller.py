@@ -50,7 +50,8 @@ class RobotController:
         ok = bool(np.all(q >= s.lower - 1e-5) and np.all(q <= s.upper + 1e-5))
         return q, ok, wrapped
 
-    def move(self, target, sim_steps=None):
+    def move(self, target, sim_steps=None, observer=None):
+        """observer(k, n, q, seconds) 只用于观测，不参与控制或成功判定。"""
         s = self.sim
         target = np.asarray(target, dtype=float)
         if np.any(target < s.lower) or np.any(target > s.upper):
@@ -76,16 +77,18 @@ class RobotController:
                 return MotionResult(False, 'joint_limit_during_motion', seconds, distance, True, False, False, True, None)
             if s.collisions():
                 return MotionResult(False, 'collision_during_motion', seconds, distance, True, False, True, False, None)
+            if observer is not None:
+                observer(k, n, q, seconds)
         err = float(np.linalg.norm(s.q() - target))
         reached = err < 0.06
         return MotionResult(reached, 'ok' if reached else 'tracking_error', seconds,
                             distance, True, reached, False, False, err)
 
-    def move_pose(self, position, orientation, sim_steps=None):
+    def move_pose(self, position, orientation, sim_steps=None, observer=None):
         q, ik, wrapped = self.solve(position, orientation)
         if not ik:
             return MotionResult(False, 'ik_joint_limits', 0, 0, False, False, False, False, None)
-        result = self.move(q, sim_steps)
+        result = self.move(q, sim_steps, observer=observer)
         result.ik_wrapped = bool(np.any(wrapped))
         actual, quat = self.sim.pose()
         result.position_error_m = float(np.linalg.norm(actual - np.asarray(position)))
