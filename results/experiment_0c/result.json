@@ -1,0 +1,236 @@
+{
+  "success": true,
+  "failure": null,
+  "failure_stage": null,
+  "failure_text": null,
+  "initial_object_position": [
+    0.55,
+    0.0,
+    0.041
+  ],
+  "final_object_position": [
+    0.44999864723276634,
+    0.1828308146148078,
+    0.03999008441789245
+  ],
+  "final_object_quaternion": [
+    -1.6032376719919958e-06,
+    1.9174857421039614e-06,
+    -5.7710025180404834e-06,
+    0.9999999999802242
+  ],
+  "lift_height_m": 0.09999811016262981,
+  "slip_m": 0.0034533048144974343,
+  "place_xy_error_m": 0.002830814938032622,
+  "place_height_error_m": -9.915582107548893e-06,
+  "final_tilt_deg": 0.0002864127462424639,
+  "final_linear_speed": 1.204769642142092e-10,
+  "final_angular_speed": 2.4892312851994596e-09,
+  "release_contacts": 0,
+  "hand_contact_samples": 0,
+  "closed_finger_widths": [
+    0.020457157154896564,
+    0.020454461871776707
+  ],
+  "grasp_contact": {
+    "force_1": 19.999992956582243,
+    "force_2": 20.000005911199477,
+    "active_links": [
+      9,
+      10
+    ],
+    "widths": [
+      0.020457157154896564,
+      0.020454461871776707
+    ]
+  },
+  "targets": {
+    "pre_grasp": [
+      0.55,
+      0.0,
+      0.18
+    ],
+    "grasp": [
+      0.55,
+      0.0,
+      0.055
+    ],
+    "lift": [
+      0.55,
+      0.0,
+      0.155
+    ],
+    "place_above": [
+      0.45,
+      0.18,
+      0.155
+    ],
+    "place": [
+      0.45,
+      0.18,
+      0.055
+    ],
+    "retreat": [
+      0.45,
+      0.18,
+      0.24
+    ]
+  },
+  "gripper_widths": {
+    "open": 0.04,
+    "preclose": 0.024,
+    "close": 0.017
+  },
+  "params": {
+    "block_half": [
+      0.02,
+      0.02,
+      0.04
+    ],
+    "block_mass": 0.12,
+    "block_start": [
+      0.55,
+      0.0,
+      0.041
+    ],
+    "block_friction": 1.2,
+    "orientation": [
+      1.0,
+      0.0,
+      0.0,
+      6.123233995736766e-17
+    ],
+    "pre_grasp": [
+      0.55,
+      0.0,
+      0.18
+    ],
+    "grasp": [
+      0.55,
+      0.0,
+      0.055
+    ],
+    "lift": [
+      0.55,
+      0.0,
+      0.155
+    ],
+    "place_above": [
+      0.45,
+      0.18,
+      0.155
+    ],
+    "place": [
+      0.45,
+      0.18,
+      0.055
+    ],
+    "retreat": [
+      0.45,
+      0.18,
+      0.24
+    ],
+    "open_width": 0.04,
+    "preclose_width": 0.024,
+    "close_width": 0.017,
+    "grasp_force": 20.0,
+    "open_force": 20.0,
+    "open_speed": 0.06,
+    "close_speed": 0.05,
+    "preclose_seconds": 0.6,
+    "close_seconds": 0.8,
+    "release_seconds": 0.8,
+    "settle_seconds": 1.0,
+    "lift_height_target": 0.08,
+    "slip_tolerance_m": 0.02,
+    "place_tolerance_m": 0.02,
+    "height_tolerance_m": 0.012,
+    "tilt_tolerance_deg": 12.0,
+    "rest_linear_speed": 0.01,
+    "rest_angular_speed": 0.1,
+    "block_yaw": 0.0
+  },
+  "sim_seconds": 8.679166666666667,
+  "episode": 0,
+  "stage_trace": [
+    {
+      "stage": "open_gripper",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.5
+    },
+    {
+      "stage": "approach_pre",
+      "success": true,
+      "reason": "ok",
+      "seconds": 1.3458333333333332,
+      "distance_rad": 1.0503066254086384,
+      "position_error_m": 9.599351005859541e-06
+    },
+    {
+      "stage": "preclose",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.6
+    },
+    {
+      "stage": "approach",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.65,
+      "distance_rad": 0.3808562255520878,
+      "position_error_m": 1.1644920966383456e-05
+    },
+    {
+      "stage": "close",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.8
+    },
+    {
+      "stage": "lift",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.5708333333333333,
+      "distance_rad": 0.3069108893002016,
+      "position_error_m": 9.533693546816895e-06
+    },
+    {
+      "stage": "transport",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.8375,
+      "distance_rad": 0.563353592870032,
+      "position_error_m": 1.4449073803094719e-05
+    },
+    {
+      "stage": "lower",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.6416666666666666,
+      "distance_rad": 0.3730869514551115,
+      "position_error_m": 1.4557637269972162e-05
+    },
+    {
+      "stage": "release",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.8
+    },
+    {
+      "stage": "retreat",
+      "success": true,
+      "reason": "ok",
+      "seconds": 0.9333333333333333,
+      "distance_rad": 0.6552667949961122,
+      "position_error_m": 9.445294470179726e-06
+    },
+    {
+      "stage": "settle",
+      "success": true,
+      "reason": "ok",
+      "seconds": 1.0
+    }
+  ],
+  "block_offset_m": 0.0
+}

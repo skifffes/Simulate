@@ -1,0 +1,17 @@
+friction,grasp_force_n,success,failure,failure_stage,meas_force_1,meas_force_2,lift_height_m,slip_m,place_xy_error_m
+0.05,0.5,False,object_not_lifted,lift,0.5,0.5,0.0,0.1,nan
+0.05,2.0,False,object_not_lifted,lift,2.0,2.0,0.0,0.1,nan
+0.05,8.0,False,object_not_lifted,lift,8.0,8.0,-0.0,0.1,nan
+0.05,20.0,True,,,20.0,20.0,0.0983,0.0038,0.0034
+0.2,0.5,False,object_not_lifted,lift,0.5,0.5,-0.0,0.1,nan
+0.2,2.0,False,object_not_lifted,lift,2.0,2.0,-0.0,0.1,nan
+0.2,8.0,True,,,8.0,8.0,0.1,0.0039,0.0034
+0.2,20.0,True,,,20.0,20.0,0.1,0.0035,0.0024
+0.6,0.5,False,object_not_lifted,lift,0.5,0.5,-0.0001,0.1001,nan
+0.6,2.0,True,,,2.0,2.0,0.0997,0.0067,0.0052
+0.6,8.0,True,,,8.0,8.0,0.1,0.0039,0.0031
+0.6,20.0,True,,,19.999,20.001,0.1,0.0033,0.0027
+1.2,0.5,False,object_not_lifted,lift,0.5,0.5,-0.0,0.1,nan
+1.2,2.0,True,,,2.0,2.0,0.1,0.0044,0.004
+1.2,8.0,True,,,8.0,8.0,0.1,0.0039,0.0032
+1.2,20.0,True,,,20.0,20.0,0.1,0.0035,0.0028

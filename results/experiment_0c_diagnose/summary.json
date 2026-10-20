@@ -1,0 +1,20 @@
+{
+  "frictions": [
+    0.05,
+    0.2,
+    0.6,
+    1.2
+  ],
+  "forces": [
+    0.5,
+    2.0,
+    8.0,
+    20.0
+  ],
+  "success_count": 9,
+  "total": 16,
+  "failures": [
+    "object_not_lifted"
+  ],
+  "note": "负对照：只改变工件摩擦与夹爪电机力上限，其余流程完全一致。"
+}

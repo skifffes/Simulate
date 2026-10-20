@@ -1,0 +1,105 @@
+{
+  "episodes": 5,
+  "jitter_m": 0.0,
+  "success_rate": 1.0,
+  "failures": [],
+  "lift_height_m": {
+    "mean": 0.09999811016262981,
+    "std": 0.0,
+    "min": 0.09999811016262981,
+    "max": 0.09999811016262981
+  },
+  "slip_m": {
+    "mean": 0.0034533048144974343,
+    "std": 0.0,
+    "min": 0.0034533048144974343,
+    "max": 0.0034533048144974343
+  },
+  "place_xy_error_m": {
+    "mean": 0.002830814938032622,
+    "std": 0.0,
+    "min": 0.002830814938032622,
+    "max": 0.002830814938032622
+  },
+  "final_tilt_deg": {
+    "mean": 0.0002864127462424639,
+    "std": 0.0,
+    "min": 0.0002864127462424639,
+    "max": 0.0002864127462424639
+  },
+  "final_linear_speed": {
+    "mean": 1.204769642142092e-10,
+    "std": 0.0,
+    "min": 1.204769642142092e-10,
+    "max": 1.204769642142092e-10
+  },
+  "params": {
+    "block_half": [
+      0.02,
+      0.02,
+      0.04
+    ],
+    "block_mass": 0.12,
+    "block_start": [
+      0.55,
+      0.0,
+      0.041
+    ],
+    "block_friction": 1.2,
+    "orientation": [
+      1.0,
+      0.0,
+      0.0,
+      6.123233995736766e-17
+    ],
+    "pre_grasp": [
+      0.55,
+      0.0,
+      0.18
+    ],
+    "grasp": [
+      0.55,
+      0.0,
+      0.055
+    ],
+    "lift": [
+      0.55,
+      0.0,
+      0.155
+    ],
+    "place_above": [
+      0.45,
+      0.18,
+      0.155
+    ],
+    "place": [
+      0.45,
+      0.18,
+      0.055
+    ],
+    "retreat": [
+      0.45,
+      0.18,
+      0.24
+    ],
+    "open_width": 0.04,
+    "preclose_width": 0.024,
+    "close_width": 0.017,
+    "grasp_force": 20.0,
+    "open_force": 20.0,
+    "open_speed": 0.06,
+    "close_speed": 0.05,
+    "preclose_seconds": 0.6,
+    "close_seconds": 0.8,
+    "release_seconds": 0.8,
+    "settle_seconds": 1.0,
+    "lift_height_target": 0.08,
+    "slip_tolerance_m": 0.02,
+    "place_tolerance_m": 0.02,
+    "height_tolerance_m": 0.012,
+    "tilt_tolerance_deg": 12.0,
+    "rest_linear_speed": 0.01,
+    "rest_angular_speed": 0.1
+  },
+  "note": "同一固定场景的确定性重复运行，用于检查可重复性，不是独立物理样本。"
+}

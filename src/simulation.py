@@ -10,9 +10,11 @@ HOME = [0, -0.5, 0, -2.1, 0, 1.65, 0.78]
 
 
 class Simulation:
-    def __init__(self, gui=False, realtime=False, speed=1.0):
+    def __init__(self, gui=False, realtime=False, speed=1.0, reference_cube=True):
         self.gui, self.realtime = gui, realtime
         self.speed = max(1e-3, float(speed))
+        # 0B 用固定立方体作视觉参考；0C 需要自己的可移动工件，因此可关闭。
+        self.reference_cube = reference_cube
         self.client = p.connect(p.GUI if gui else p.DIRECT)
         if self.client < 0:
             raise RuntimeError('PyBullet connection failed')
@@ -26,7 +28,10 @@ class Simulation:
         p.setTimeStep(self.dt, physicsClientId=self.client)
         p.setPhysicsEngineParameter(deterministicOverlappingPairs=1, numSolverIterations=100, physicsClientId=self.client)
         self.plane = p.loadURDF('plane.urdf', physicsClientId=self.client)
-        self.cube = p.loadURDF('cube_small.urdf', [0.55, 0, 0.025], useFixedBase=True, physicsClientId=self.client)
+        self.cube = (p.loadURDF('cube_small.urdf', [0.55, 0, 0.025], useFixedBase=True,
+                                physicsClientId=self.client) if self.reference_cube else -1)
+        # 抓取任务中手指与工件的接触是预期接触，不属于碰撞失败。
+        self.allowed_contacts = set()
         self.robot = p.loadURDF('franka_panda/panda.urdf', useFixedBase=True,
                                 flags=p.URDF_USE_SELF_COLLISION, physicsClientId=self.client)
         # 该 URDF 的 panda_link7 与 panda_hand 碰撞几何常年重叠约 2.5 cm。
@@ -75,7 +80,13 @@ class Simulation:
         if self.realtime:
             time.sleep(self.dt / self.speed)
 
-    def collisions(self):
+    def collisions(self, allowed=None):
+        """返回非预期碰撞。
+
+        allowed 为 {(body_id, robot_link_index)} 集合，表示允许的接触，
+        例如 0C 中手指与工件的接触。默认使用 self.allowed_contacts。
+        """
+        allowed = self.allowed_contacts if allowed is None else allowed
         contacts = p.getContactPoints(bodyA=self.robot, physicsClientId=self.client)
         bad = []
         for c in contacts:
@@ -83,6 +94,8 @@ class Simulation:
                 continue
             # 固定底座与地面的接触属于预期支撑，不计为失败。
             if c[2] == self.plane and c[3] == -1:
+                continue
+            if (c[2], c[3]) in allowed:
                 continue
             # URDF 固定连接的相邻夹爪链接可能具有重叠碰撞几何。
             if c[2] == self.robot:
@@ -94,13 +107,14 @@ class Simulation:
             bad.append({'body': c[2], 'link_a': c[3], 'link_b': c[4], 'penetration_m': c[8]})
         return bad
 
-    def screenshot(self, path):
+    def screenshot(self, path, target=(0.35, 0, 0.3), distance=1.3, yaw=45, pitch=-28,
+                   width=960, height=720):
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
-        view = p.computeViewMatrixFromYawPitchRoll([0.35, 0, 0.3], 1.3, 45, -28, 0, 2)
-        proj = p.computeProjectionMatrixFOV(55, 960 / 720, 0.02, 5)
-        pixels = p.getCameraImage(960, 720, view, proj, renderer=p.ER_TINY_RENDERER, physicsClientId=self.client)[2]
-        Image.fromarray(np.asarray(pixels, dtype=np.uint8).reshape(720, 960, 4)).convert('RGB').save(path)
+        view = p.computeViewMatrixFromYawPitchRoll(list(target), distance, yaw, pitch, 0, 2)
+        proj = p.computeProjectionMatrixFOV(55, width / height, 0.02, 5)
+        pixels = p.getCameraImage(width, height, view, proj, renderer=p.ER_TINY_RENDERER, physicsClientId=self.client)[2]
+        Image.fromarray(np.asarray(pixels, dtype=np.uint8).reshape(height, width, 4)).convert('RGB').save(path)
 
     def close(self):
         if p.isConnected(self.client):

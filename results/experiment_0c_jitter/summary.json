@@ -1,0 +1,104 @@
+{
+  "episodes": 5,
+  "jitter_m": 0.004,
+  "success_rate": 1.0,
+  "failures": [],
+  "lift_height_m": {
+    "mean": 0.09999801429694333,
+    "std": 2.3255231610924516e-07,
+    "min": 0.09999777980304006,
+    "max": 0.09999832124833453
+  },
+  "slip_m": {
+    "mean": 0.004083509733413352,
+    "std": 0.00018387353533051536,
+    "min": 0.0037428289006672423,
+    "max": 0.00430043969620171
+  },
+  "place_xy_error_m": {
+    "mean": 0.0035486459942606794,
+    "std": 0.00016412081920433788,
+    "min": 0.003245741771160656,
+    "max": 0.0037254473797809257
+  },
+  "final_tilt_deg": {
+    "mean": 0.0006869936671671454,
+    "std": 0.0003835172822018557,
+    "min": 0.00019684991485665373,
+    "max": 0.0010853726550817666
+  },
+  "final_linear_speed": {
+    "mean": 4.84496784736149e-06,
+    "std": 9.689493208906621e-06,
+    "min": 3.462668673438641e-11,
+    "max": 2.422395426079255e-05
+  },
+  "params": {
+    "block_half": [
+      0.02,
+      0.02,
+      0.04
+    ],
+    "block_mass": 0.12,
+    "block_start": [
+      0.55,
+      0.0,
+      0.041
+    ],
+    "block_friction": 1.2,
+    "orientation": [
+      1.0,
+      0.0,
+      0.0,
+      6.123233995736766e-17
+    ],
+    "pre_grasp": [
+      0.55,
+      0.0,
+      0.18
+    ],
+    "grasp": [
+      0.55,
+      0.0,
+      0.055
+    ],
+    "lift": [
+      0.55,
+      0.0,
+      0.155
+    ],
+    "place_above": [
+      0.45,
+      0.18,
+      0.155
+    ],
+    "place": [
+      0.45,
+      0.18,
+      0.055
+    ],
+    "retreat": [
+      0.45,
+      0.18,
+      0.24
+    ],
+    "open_width": 0.04,
+    "preclose_width": 0.024,
+    "close_width": 0.017,
+    "grasp_force": 20.0,
+    "open_speed": 0.06,
+    "close_speed": 0.05,
+    "preclose_seconds": 0.6,
+    "close_seconds": 0.8,
+    "release_seconds": 0.8,
+    "settle_seconds": 1.0,
+    "lift_height_target": 0.08,
+    "slip_tolerance_m": 0.02,
+    "place_tolerance_m": 0.02,
+    "height_tolerance_m": 0.012,
+    "tilt_tolerance_deg": 12.0,
+    "rest_linear_speed": 0.01,
+    "rest_angular_speed": 0.1
+  },
+  "note": "同一固定场景的确定性重复运行，用于检查可重复性，不是独立物理样本。"
+}

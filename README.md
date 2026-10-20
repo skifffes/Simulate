@@ -20,6 +20,21 @@ HOME 恢复对照中 B 为 1.688 rad / 2.010 s，C 为 2.347 rad / 2.696 s，加
 
 详见 [0B 数据与图表](results/experiment_0b/README.md)、[0B 可视化回放](results/experiment_0b_visualization/README.md) 和 [阶段二物理交接设计（尚未实施）](docs/experiment_0b_stage2_design.md)。
 
+## 实验 0C 第一阶段：真实接触抓取-抬升-移动-放置
+
+只做 A 的共同任务本身，B/C 后继交接与 VLA/RL 均未实现。工件是 `0.04 × 0.04 × 0.08 m`、`0.12 kg` 的可自由移动长方体；Panda 原有双指夹爪用电机闭合（20 N/指，URDF 上限）真实夹持，流程为接近 → 预闭合 → 下降 → 闭合 → 抬升 10 cm → 移动 → 放下 → 释放。全程未调用 `resetBasePositionAndOrientation` 搬运工件，也没有固定约束或 kinematic 物体。
+
+```powershell
+& '.\.conda312\python.exe' '.\scripts\watch_experiment_0c.py' --speed 1   # 实时窗口
+& '.\.conda312\python.exe' '.\scripts\run_experiment_0c.py' --episodes 5  # 数据 + GIF
+```
+
+实测：固定场景 5/5 成功，抬升 0.1000 m，双指接触力 20.00/20.00 N，相对滑移 3.45 mm，放置 xy 误差 2.83 mm，高度误差 −0.01 mm，终态静止且释放后无接触。工件起点随机平移 ±4 mm 的 5 次重复同样 5/5。摩擦 × 夹持力负对照 16 组中 9 组成功，失败全部为 `object_not_lifted`，说明成功依赖真实摩擦和夹持力，且失败判定不是恒真。
+
+关键几何：朝下抓取时指尖在末端目标上方 1.1 cm、手掌碰撞盒底部在上方 3.5 cm，因此抓取点取 `z = 0.055`，既插入工件 3.6 cm，又让手掌离工件顶面 1 cm。最早把末端目标放到工件中心时，手掌压到工件顶面（298 N）并把工件推开，这是几何错误而非摩擦问题。
+
+这些是确定性场景的重复运行，不是独立的物理样本，5/5 不能当作鲁棒成功率。详见 [0C 设计与结果](docs/experiment_0c_stage1.md) 和 [0C 数据说明](results/experiment_0c/README.md)。
+
 ## 环境
 
 原系统 Python 3.13 无合适 PyBullet wheel；尝试 Python 3.12 后发现 PyPI 的 PyBullet 3.2.7 同样没有 Windows wheel。最终使用项目独立 Conda 环境 `.conda312`，不修改 base：Python 3.12.15、PyBullet 3.2.5、NumPy 2.5.4、Pillow 12.3.0。实际包 URL 锁定在 `results/conda-explicit-win64.txt`。
@@ -84,6 +99,6 @@ A 在所有条件均成功，8 个条件全部 10/10。z2 直接交接时 PyBull
 - `docs/experiment_notes.md`：指标边界和学习要点。
 - `docs/vla_next_step.md`：官方资料核对与下一阶段建议。
 
-没有录制视频。`src/policy.py` 预留 `Policy.act(observation)` 抽象接口，但当前实验直接使用脚本控制器，尚未接入 VLA。
+GIF 只由离线渲染脚本生成（0B 在 `results/experiment_0b_visualization/`，0C 在 `results/experiment_0c/`）；实时窗口本身不录制。`src/policy.py` 预留 `Policy.act(observation)` 抽象接口，但当前实验直接使用脚本控制器，尚未接入 VLA。
 
-**当前仅为技能交接的几何/运动学代理测试，不涉及物体操作，更不是 VLA 未见技能组合泛化的证据。**
+**0B 仍是技能交接的几何/运动学代理测试；0C 第一阶段才引入真实接触的物体操作，但只验证抓取-搬运-放置，不涉及 B/C 交接，也不是 VLA 未见技能组合泛化的证据。**

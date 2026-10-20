@@ -1,0 +1,2 @@
+episode,block_offset_m,success,failure,lift_height_m,slip_m,place_xy_error_m,place_height_error_m,final_tilt_deg,final_linear_speed,final_angular_speed,release_contacts,closed_finger_1,closed_finger_2
+0,0.0,False,object_not_lifted,-2.0792814004258475e-06,0.0999997319882465,nan,nan,nan,nan,nan,-1,0.021056576676697004,0.021055191857947592
