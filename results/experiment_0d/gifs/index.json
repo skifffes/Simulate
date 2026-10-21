@@ -1,0 +1,82 @@
+[
+  {
+    "name": "z1_B_success_ep0",
+    "arm": "z1_B",
+    "outcome": "success",
+    "episode": 0,
+    "recorded_success": 1,
+    "replay_success": 1,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\z1_B_success_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\z1_B_success_ep0"
+  },
+  {
+    "name": "z1_B_failure_ep2",
+    "arm": "z1_B",
+    "outcome": "failure",
+    "episode": 2,
+    "recorded_success": 0,
+    "replay_success": 0,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\z1_B_failure_ep2.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\z1_B_failure_ep2"
+  },
+  {
+    "name": "z2_B_success_ep0",
+    "arm": "z2_B",
+    "outcome": "success",
+    "episode": 0,
+    "recorded_success": 1,
+    "replay_success": 1,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\z2_B_success_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\z2_B_success_ep0"
+  },
+  {
+    "name": "z1_C_success_ep0",
+    "arm": "z1_C",
+    "outcome": "success",
+    "episode": 0,
+    "recorded_success": 1,
+    "replay_success": 1,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\z1_C_success_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\z1_C_success_ep0"
+  },
+  {
+    "name": "z2_C_failure_ep0",
+    "arm": "z2_C",
+    "outcome": "failure",
+    "episode": 0,
+    "recorded_success": 0,
+    "replay_success": 0,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\z2_C_failure_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\z2_C_failure_ep0"
+  },
+  {
+    "name": "reset_B_success_ep0",
+    "arm": "reset_B",
+    "outcome": "success",
+    "episode": 0,
+    "recorded_success": 1,
+    "replay_success": 1,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\reset_B_success_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\reset_B_success_ep0"
+  },
+  {
+    "name": "reset_B_failure_ep3",
+    "arm": "reset_B",
+    "outcome": "failure",
+    "episode": 3,
+    "recorded_success": 0,
+    "replay_success": 0,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\reset_B_failure_ep3.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\reset_B_failure_ep3"
+  },
+  {
+    "name": "reset_C_success_ep0",
+    "arm": "reset_C",
+    "outcome": "success",
+    "episode": 0,
+    "recorded_success": 1,
+    "replay_success": 1,
+    "gif": "D:\\python\\simulate\\results\\experiment_0d\\gifs\\reset_C_success_ep0.gif",
+    "keyframes": "D:\\python\\simulate\\results\\experiment_0d\\keyframes\\reset_C_success_ep0"
+  }
+]

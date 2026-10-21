@@ -1,0 +1,125 @@
+{
+  "episodes_per_arm": 5,
+  "arms": {
+    "z1_B": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": null,
+      "successor_success_rate_given_entered": 0.8,
+      "total_success_rate": 0.8,
+      "mean_a_sim_s": 9.274166666666666,
+      "mean_reset_sim_s": 0.0,
+      "mean_succ_sim_s": 9.331666666666667,
+      "mean_total_sim_s": 18.605833333333333,
+      "mean_total_joint_rad": 5.961105969753545,
+      "failures": [
+        "B:推动中/后工件倾角过大 (push)"
+      ]
+    },
+    "z2_B": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": null,
+      "successor_success_rate_given_entered": 1.0,
+      "total_success_rate": 1.0,
+      "mean_a_sim_s": 13.973333333333333,
+      "mean_reset_sim_s": 0.0,
+      "mean_succ_sim_s": 8.499166666666667,
+      "mean_total_sim_s": 22.4725,
+      "mean_total_joint_rad": 6.808081016075478,
+      "failures": []
+    },
+    "z1_C": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": null,
+      "successor_success_rate_given_entered": 1.0,
+      "total_success_rate": 1.0,
+      "mean_a_sim_s": 9.274166666666666,
+      "mean_reset_sim_s": 0.0,
+      "mean_succ_sim_s": 3.88,
+      "mean_total_sim_s": 13.154166666666669,
+      "mean_total_joint_rad": 4.4496512333387015,
+      "failures": []
+    },
+    "z2_C": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": null,
+      "successor_success_rate_given_entered": 0.0,
+      "total_success_rate": 0.0,
+      "mean_a_sim_s": 13.973333333333333,
+      "mean_reset_sim_s": 0.0,
+      "mean_succ_sim_s": 4.020833333333334,
+      "mean_total_sim_s": 17.994166666666665,
+      "mean_total_joint_rad": 7.6005609437336235,
+      "failures": [
+        "C:顶抓下降被工件挡住（开口/位姿不匹配） (descend)",
+        "C:顶抓下降被工件挡住（开口/位姿不匹配） (descend)",
+        "C:顶抓下降被工件挡住（开口/位姿不匹配） (descend)",
+        "C:顶抓下降被工件挡住（开口/位姿不匹配） (descend)",
+        "C:顶抓下降被工件挡住（开口/位姿不匹配） (descend)"
+      ]
+    },
+    "reset_B": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": 1.0,
+      "successor_success_rate_given_entered": 0.8,
+      "total_success_rate": 0.8,
+      "mean_a_sim_s": 13.973333333333333,
+      "mean_reset_sim_s": 12.204999999999998,
+      "mean_succ_sim_s": 9.925833333333333,
+      "mean_total_sim_s": 36.104166666666664,
+      "mean_total_joint_rad": 11.686119453330035,
+      "failures": [
+        "B:推动中/后工件倾角过大 (settle)"
+      ]
+    },
+    "reset_C": {
+      "episodes": 5,
+      "a_success_rate": 1.0,
+      "reset_success_rate": 1.0,
+      "successor_success_rate_given_entered": 1.0,
+      "total_success_rate": 1.0,
+      "mean_a_sim_s": 13.973333333333333,
+      "mean_reset_sim_s": 12.204999999999998,
+      "mean_succ_sim_s": 3.8816666666666664,
+      "mean_total_sim_s": 30.060000000000002,
+      "mean_total_joint_rad": 10.088215186495768,
+      "failures": []
+    }
+  },
+  "baselines": {
+    "baseline_1_fixed_z1": {
+      "arms": [
+        "z1_B",
+        "z1_C"
+      ],
+      "episodes": 10,
+      "total_success_rate": 0.9,
+      "mean_total_sim_s": 15.879999999999999,
+      "mean_total_joint_rad": 5.205378601546124
+    },
+    "baseline_2_fixed_z2": {
+      "arms": [
+        "z2_B",
+        "z2_C"
+      ],
+      "episodes": 10,
+      "total_success_rate": 0.5,
+      "mean_total_sim_s": 20.233333333333334,
+      "mean_total_joint_rad": 7.20432097990455
+    },
+    "baseline_3_canonical_restore": {
+      "arms": [
+        "reset_B",
+        "reset_C"
+      ],
+      "episodes": 10,
+      "total_success_rate": 0.9,
+      "mean_total_sim_s": 33.08208333333333,
+      "mean_total_joint_rad": 10.8871673199129
+    }
+  }
+}

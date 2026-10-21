@@ -1,0 +1,139 @@
+{
+  "experiment": "0D plan-conditioned physical skill handover",
+  "seed_base": 20261021,
+  "episodes_per_arm": 5,
+  "arms": {
+    "z1_B": {
+      "handover": "z1",
+      "successor": "B",
+      "reset": false
+    },
+    "z2_B": {
+      "handover": "z2",
+      "successor": "B",
+      "reset": false
+    },
+    "z1_C": {
+      "handover": "z1",
+      "successor": "C",
+      "reset": false
+    },
+    "z2_C": {
+      "handover": "z2",
+      "successor": "C",
+      "reset": false
+    },
+    "reset_B": {
+      "handover": "z2",
+      "successor": "B",
+      "reset": true
+    },
+    "reset_C": {
+      "handover": "z2",
+      "successor": "C",
+      "reset": true
+    }
+  },
+  "handover_yaw_deg": {
+    "z1": 0.0,
+    "z2": 90.0
+  },
+  "block_half_extents_m": [
+    0.05,
+    0.02,
+    0.02
+  ],
+  "handover_point_xy": [
+    0.45,
+    0.18
+  ],
+  "task_params": {
+    "block_half": [
+      0.05,
+      0.02,
+      0.02
+    ],
+    "block_mass": 0.08,
+    "block_yaw_deg": 0.0,
+    "grasp_yaw_deg": null,
+    "block_start": [
+      0.55,
+      0.0,
+      0.021
+    ],
+    "block_friction": 1.2,
+    "pre_grasp": [
+      0.55,
+      0.0,
+      0.16
+    ],
+    "grasp": [
+      0.55,
+      0.0,
+      0.03
+    ],
+    "lift": [
+      0.55,
+      0.0,
+      0.13
+    ],
+    "place_above": [
+      0.45,
+      0.18,
+      0.13
+    ],
+    "place": [
+      0.45,
+      0.18,
+      0.03
+    ],
+    "retreat": [
+      0.45,
+      0.18,
+      0.22
+    ],
+    "open_width": 0.07,
+    "preclose_width": 0.06,
+    "close_width": 0.017,
+    "grasp_force": 20.0,
+    "open_force": 20.0,
+    "open_speed": 0.06,
+    "close_speed": 0.05,
+    "preclose_seconds": 0.6,
+    "close_seconds": 0.8,
+    "release_seconds": 0.8,
+    "settle_seconds": 1.2,
+    "rotate_step_deg": 10.0,
+    "lift_height_target": 0.08,
+    "slip_tolerance_m": 0.02,
+    "place_tolerance_m": 0.02,
+    "height_tolerance_m": 0.012,
+    "tilt_tolerance_deg": 12.0,
+    "yaw_tolerance_deg": 12.0,
+    "rest_linear_speed": 0.01,
+    "rest_angular_speed": 0.1
+  },
+  "perturbation": {
+    "start_x_m": [
+      0.547,
+      0.553
+    ],
+    "start_y_m": [
+      -0.003,
+      0.003
+    ],
+    "start_yaw_deg": [
+      -3.0,
+      3.0
+    ],
+    "mass_kg": [
+      0.075,
+      0.085
+    ],
+    "lateral_friction": [
+      1.05,
+      1.35
+    ]
+  },
+  "note": "每 episode 的扰动配置由 seed+episode 生成，所有臂共用，因此臂间是配对比较；失败案例不筛除。"
+}

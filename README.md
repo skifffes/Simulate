@@ -35,6 +35,19 @@ HOME 恢复对照中 B 为 1.688 rad / 2.010 s，C 为 2.347 rad / 2.696 s，加
 
 这些是确定性场景的重复运行，不是独立的物理样本，5/5 不能当作鲁棒成功率。详见 [0C 设计与结果](docs/experiment_0c_stage1.md) 和 [0C 数据说明](results/experiment_0c/README.md)。
 
+## 实验 0D：计划条件化的物理技能交接
+
+把 0C 的真实抓放与两个后继技能接起来：A 有两个终态 z1（工件长边沿 X）和 z2（长边沿 Y），B 从侧面推到挡板，C 从上方顶抓。工件 `0.10 × 0.04 × 0.04 m`，长边大于夹爪 0.08 m 开口，因此 z2 的工件在 C 下**几何上抓不住**。
+
+```powershell
+& '.\.conda312\python.exe' '.\scripts\run_experiment_0d.py'              # 5 episode × 6 臂 + GIF
+& '.\.conda312\python.exe' '.\scripts\run_experiment_0d.py' --no-gifs    # 只出数据与图表
+```
+
+实测（种子 20261021，同 episode 内六臂共用扰动）：z1→B 4/5、z2→B 5/5、z1→C 5/5、**z2→C 0/5**；无条件复位后 z2→B 4/5、z2→C 5/5。三个基线：固定 z1 90%（15.9 仿真秒 / 5.21 rad）、固定 z2 50%（20.2 / 7.20）、恢复公共标准状态 90%（33.1 / 10.89）。z2→C 的 5 次失败全部是 `grasp_approach_blocked`：0.10 m 长边顺指缝方向、超出 0.08 m 开口，下降时指腹撞在工件侧面。
+
+推进中发现并修正了两个会让结果失真的实现缺陷：抓取朝向缺省成“与终态同向”导致 z2 的 90° 其实是被手指挤出来的；预闭合开口（0.024 m）小于工件宽度导致复位抓取先撞偏工件再闭合。修正后 z2 靠腕部 10° 步进真实转动，复位滑移从 23 mm 降到 ≤ 4 mm。细节与全部失败记录见 [0D 报告](results/experiment_0d/report.md)。
+
 ## 环境
 
 原系统 Python 3.13 无合适 PyBullet wheel；尝试 Python 3.12 后发现 PyPI 的 PyBullet 3.2.7 同样没有 Windows wheel。最终使用项目独立 Conda 环境 `.conda312`，不修改 base：Python 3.12.15、PyBullet 3.2.5、NumPy 2.5.4、Pillow 12.3.0。实际包 URL 锁定在 `results/conda-explicit-win64.txt`。
