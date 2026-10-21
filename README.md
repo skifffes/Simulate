@@ -40,9 +40,14 @@ HOME 恢复对照中 B 为 1.688 rad / 2.010 s，C 为 2.347 rad / 2.696 s，加
 把 0C 的真实抓放与两个后继技能接起来：A 有两个终态 z1（工件长边沿 X）和 z2（长边沿 Y），B 从侧面推到挡板，C 从上方顶抓。工件 `0.10 × 0.04 × 0.04 m`，长边大于夹爪 0.08 m 开口，因此 z2 的工件在 C 下**几何上抓不住**。
 
 ```powershell
+& '.\.conda312\python.exe' '.\scripts\watch_experiment_0d.py' --arm z1_B   # 实时窗口
+& '.\.conda312\python.exe' '.\scripts\watch_experiment_0d.py' --arm z2_C   # 看几何失败
+& '.\.conda312\python.exe' '.\scripts\watch_experiment_0d.py' --list       # 列出六个臂
 & '.\.conda312\python.exe' '.\scripts\run_experiment_0d.py'              # 5 episode × 6 臂 + GIF
 & '.\.conda312\python.exe' '.\scripts\run_experiment_0d.py' --no-gifs    # 只出数据与图表
 ```
+
+可视化窗口：空格开始／结束后重放，`P` 暂停，`ESC` 退出；`--speed` 调实时倍率，`--episode` 选扰动样本，`--auto` 跳过等待。画面里绿框是当前臂的交接目标轮廓（长边方向随 z1/z2 变化），挡板位置标为 `WALL`；HUD 显示阶段、仿真时间、工件位姿/朝向、指宽与接触力。
 
 实测（种子 20261021，同 episode 内六臂共用扰动）：z1→B 4/5、z2→B 5/5、z1→C 5/5、**z2→C 0/5**；无条件复位后 z2→B 4/5、z2→C 5/5。三个基线：固定 z1 90%（15.9 仿真秒 / 5.21 rad）、固定 z2 50%（20.2 / 7.20）、恢复公共标准状态 90%（33.1 / 10.89）。z2→C 的 5 次失败全部是 `grasp_approach_blocked`：0.10 m 长边顺指缝方向、超出 0.08 m 开口，下降时指腹撞在工件侧面。
 
