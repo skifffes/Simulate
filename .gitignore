@@ -22,6 +22,9 @@ data/*smoke*/
 # 服务器输出的整批评测视频与逐集记录，本地只保留代表性片段
 results/experiment_1/eval/*/episodes/
 
+# 本地任务说明（含服务器连接信息，不入库）
+prompt.md
+
 # 手工备份文件
 *.bak
 
