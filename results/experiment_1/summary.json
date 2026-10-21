@@ -1,0 +1,266 @@
+{
+  "groups": {
+    "vla_id_chunk": {
+      "label": "VLA 分布内 chunk50",
+      "summary": {
+        "policy": "outputs/smolvla_panda/checkpoints/015000/pretrained_model",
+        "episodes": 20,
+        "success": 13,
+        "success_rate": 0.65,
+        "failure_counts": {
+          "object_not_lifted": 6,
+          "hand_contact": 1
+        },
+        "failure_text": {
+          "object_not_lifted": "抬升后工件未被带起",
+          "hand_contact": "工件与手掌/臂本体接触"
+        },
+        "mean_lift_height_m": 0.07912018252549323,
+        "mean_place_xy_error_m": 0.06254812466235396,
+        "mean_ticks": 130.5,
+        "mean_tracking_error_rad": 0.023373901974782813,
+        "seeds": [
+          20261021,
+          20261022,
+          20261023,
+          20261024,
+          20261025,
+          20261026,
+          20261027,
+          20261028,
+          20261029,
+          20261030,
+          20261031,
+          20261032,
+          20261033,
+          20261034,
+          20261035,
+          20261036,
+          20261037,
+          20261038,
+          20261039,
+          20261040
+        ]
+      },
+      "failed_seeds": [
+        20261021,
+        20261024,
+        20261026,
+        20261027,
+        20261028,
+        20261029,
+        20261036
+      ]
+    },
+    "vla_id_n10": {
+      "label": "VLA 分布内 n10",
+      "summary": {
+        "policy": "outputs/smolvla_panda/checkpoints/015000/pretrained_model",
+        "n_action_steps": 10,
+        "episodes": 20,
+        "success": 15,
+        "success_rate": 0.75,
+        "failure_counts": {
+          "object_not_lifted": 4,
+          "object_slipped": 1
+        },
+        "failure_text": {
+          "object_not_lifted": "抬升后工件未被带起",
+          "object_slipped": "运输中工件相对夹爪滑移超限"
+        },
+        "mean_lift_height_m": 0.08070087673307431,
+        "mean_place_xy_error_m": 0.04468590733803113,
+        "mean_ticks": 129.35,
+        "mean_tracking_error_rad": 0.021407944170612682,
+        "seeds": [
+          20261021,
+          20261022,
+          20261023,
+          20261024,
+          20261025,
+          20261026,
+          20261027,
+          20261028,
+          20261029,
+          20261030,
+          20261031,
+          20261032,
+          20261033,
+          20261034,
+          20261035,
+          20261036,
+          20261037,
+          20261038,
+          20261039,
+          20261040
+        ]
+      },
+      "failed_seeds": [
+        20261023,
+        20261027,
+        20261030,
+        20261033,
+        20261036
+      ]
+    },
+    "vla_ood_chunk": {
+      "label": "VLA 留出 chunk50",
+      "summary": {
+        "policy": "outputs/smolvla_panda/checkpoints/015000/pretrained_model",
+        "episodes": 20,
+        "success": 15,
+        "success_rate": 0.75,
+        "failure_counts": {
+          "object_not_lifted": 3,
+          "object_slipped": 1,
+          "hand_contact": 1
+        },
+        "failure_text": {
+          "object_not_lifted": "抬升后工件未被带起",
+          "object_slipped": "运输中工件相对夹爪滑移超限",
+          "hand_contact": "工件与手掌/臂本体接触"
+        },
+        "mean_lift_height_m": 0.0889430078442082,
+        "mean_place_xy_error_m": 0.03308274127097245,
+        "mean_ticks": 130.9,
+        "mean_tracking_error_rad": 0.021829514267239315,
+        "seeds": [
+          30000000,
+          30000001,
+          30000002,
+          30000003,
+          30000004,
+          30000005,
+          30000006,
+          30000007,
+          30000008,
+          30000009,
+          30000010,
+          30000011,
+          30000012,
+          30000013,
+          30000014,
+          30000015,
+          30000016,
+          30000017,
+          30000018,
+          30000019
+        ]
+      },
+      "failed_seeds": [
+        30000009,
+        30000014,
+        30000016,
+        30000017,
+        30000019
+      ]
+    },
+    "vla_ood_n10": {
+      "label": "VLA 留出 n10",
+      "summary": {
+        "policy": "outputs/smolvla_panda/checkpoints/015000/pretrained_model",
+        "n_action_steps": 10,
+        "episodes": 20,
+        "success": 10,
+        "success_rate": 0.5,
+        "failure_counts": {
+          "object_not_lifted": 8,
+          "object_slipped": 2
+        },
+        "failure_text": {
+          "object_not_lifted": "抬升后工件未被带起",
+          "object_slipped": "运输中工件相对夹爪滑移超限"
+        },
+        "mean_lift_height_m": 0.06204719104670868,
+        "mean_place_xy_error_m": 0.08182755392443238,
+        "mean_ticks": 133.15,
+        "mean_tracking_error_rad": 0.02438959659295788,
+        "mean_inference_latency_ms": 37.91885912785347,
+        "failure_stage_counts": {
+          "approach/grasp": 8,
+          "lift/transport": 2,
+          "place/release": 0
+        },
+        "seeds": [
+          30000000,
+          30000001,
+          30000002,
+          30000003,
+          30000004,
+          30000005,
+          30000006,
+          30000007,
+          30000008,
+          30000009,
+          30000010,
+          30000011,
+          30000012,
+          30000013,
+          30000014,
+          30000015,
+          30000016,
+          30000017,
+          30000018,
+          30000019
+        ]
+      },
+      "failed_seeds": [
+        30000001,
+        30000003,
+        30000008,
+        30000009,
+        30000010,
+        30000012,
+        30000013,
+        30000014,
+        30000015,
+        30000016
+      ]
+    },
+    "expert_ood": {
+      "label": "专家 留出",
+      "summary": {
+        "policy": "expert",
+        "n_action_steps": null,
+        "episodes": 20,
+        "success": 20,
+        "success_rate": 1.0,
+        "failure_counts": {},
+        "failure_text": {},
+        "mean_lift_height_m": 0.09999792004232351,
+        "mean_place_xy_error_m": 0.002974405727085391,
+        "mean_ticks": 175.55,
+        "mean_tracking_error_rad": 0.0,
+        "seeds": [
+          30000000,
+          30000001,
+          30000002,
+          30000003,
+          30000004,
+          30000005,
+          30000006,
+          30000007,
+          30000008,
+          30000009,
+          30000010,
+          30000011,
+          30000012,
+          30000013,
+          30000014,
+          30000015,
+          30000016,
+          30000017,
+          30000018,
+          30000019
+        ]
+      },
+      "failed_seeds": []
+    }
+  },
+  "ood_cross_tab": {
+    "both_ok": 8,
+    "chunk_only_ok": 7,
+    "n10_only_ok": 2,
+    "both_fail": 3
+  }
+}

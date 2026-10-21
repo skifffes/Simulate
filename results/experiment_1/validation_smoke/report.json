@@ -1,0 +1,155 @@
+{
+  "dataset": "data\\lerobot_panda_pick_place_smoke",
+  "codebase_version": "v2.1",
+  "fps": 20,
+  "episodes": 10,
+  "frames": 1755,
+  "checks": 261,
+  "failures": 0,
+  "episode_metrics": [
+    {
+      "episode_index": 0,
+      "length": 176,
+      "err_now": 0.005128412068796915,
+      "err_next": 0.0003928584971655088,
+      "corr": 0.9997153066115989,
+      "max_action_jump": 0.0353398323059082,
+      "failures": []
+    },
+    {
+      "episode_index": 1,
+      "length": 175,
+      "err_now": 0.005106889019852953,
+      "err_next": 0.0003896850007314587,
+      "corr": 0.9996954847509646,
+      "max_action_jump": 0.035199880599975586,
+      "failures": []
+    },
+    {
+      "episode_index": 2,
+      "length": 176,
+      "err_now": 0.0051250383005438434,
+      "err_next": 0.00039313123464293015,
+      "corr": 0.999714686308009,
+      "max_action_jump": 0.03549182415008545,
+      "failures": []
+    },
+    {
+      "episode_index": 3,
+      "length": 175,
+      "err_now": 0.005108155901211644,
+      "err_next": 0.00038974222147264035,
+      "corr": 0.9996951723468902,
+      "max_action_jump": 0.0351870059967041,
+      "failures": []
+    },
+    {
+      "episode_index": 4,
+      "length": 176,
+      "err_now": 0.005089041125332614,
+      "err_next": 0.0003887895460335427,
+      "corr": 0.9996514621990712,
+      "max_action_jump": 0.03470292687416077,
+      "failures": []
+    },
+    {
+      "episode_index": 5,
+      "length": 176,
+      "err_now": 0.005075114554579855,
+      "err_next": 0.00038919094770015325,
+      "corr": 0.9997160484500256,
+      "max_action_jump": 0.035514116287231445,
+      "failures": []
+    },
+    {
+      "episode_index": 6,
+      "length": 176,
+      "err_now": 0.005130807126882116,
+      "err_next": 0.0003918406841423385,
+      "corr": 0.9996483380183647,
+      "max_action_jump": 0.03463056683540344,
+      "failures": []
+    },
+    {
+      "episode_index": 7,
+      "length": 175,
+      "err_now": 0.005128331435071531,
+      "err_next": 0.00039163604971551914,
+      "corr": 0.9996915888607039,
+      "max_action_jump": 0.034886837005615234,
+      "failures": []
+    },
+    {
+      "episode_index": 8,
+      "length": 175,
+      "err_now": 0.005140569182949384,
+      "err_next": 0.00039258297737633285,
+      "corr": 0.999693216032741,
+      "max_action_jump": 0.03514385223388672,
+      "failures": []
+    },
+    {
+      "episode_index": 9,
+      "length": 175,
+      "err_now": 0.005103949967471115,
+      "err_next": 0.00038970041783899093,
+      "corr": 0.9996948628186958,
+      "max_action_jump": 0.03517889976501465,
+      "failures": []
+    }
+  ],
+  "replay": [
+    {
+      "mean_q_error": 1.7160011631814468e-06,
+      "max_q_error": 9.896272085141433e-05,
+      "mean_grip_error": 0.0016357680920547324,
+      "per_joint_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "episode_index": 2
+    },
+    {
+      "mean_q_error": 2.214388707340286e-06,
+      "max_q_error": 0.00011165096081322545,
+      "mean_grip_error": 0.0015880939581487169,
+      "per_joint_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1e-05,
+        0.0
+      ],
+      "episode_index": 4
+    },
+    {
+      "mean_q_error": 1.5428987079433888e-06,
+      "max_q_error": 9.743734096723244e-05,
+      "mean_grip_error": 0.0013649825759282476,
+      "per_joint_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "episode_index": 9
+    }
+  ],
+  "sampled": [
+    6,
+    9,
+    0,
+    2,
+    4
+  ]
+}

@@ -1,0 +1,34 @@
+# 原子技能 A（抓取-抬升-搬运-放置）的 LeRobot v2.1 数据集约定
+# 采集脚本：scripts/collect_atomic_vla_data.py
+# 校验脚本：scripts/validate_atomic_dataset.py
+repo_id: local/panda_pick_place
+root: data/lerobot_panda_pick_place
+codebase_version: v2.1
+fps: 20                 # 策略控制频率，仿真 240 Hz / 12 步
+episodes: 150
+frames: 26317
+task: pick up the orange block and place it on the target position
+
+cameras:
+  top:
+    type: fixed          # 第三人称固定视角
+    image_size: [256, 256]
+    feature: observation.images.top
+  wrist:
+    type: wrist          # 手掌侧挂腕部相机
+    image_size: [256, 256]
+    feature: observation.images.wrist
+
+state:
+  dim: 9                 # 7 个手臂关节角 + 两指实际位移
+  feature: observation.state
+action:
+  dim: 8                 # 7 个关节目标角 + 单指目标宽度
+  feature: action
+
+# 数据成分：150 个 episode 全部为专家闭环轨迹，
+# 工件起点在 ±8 mm / ±3° 内随机，摩擦系数按 ±20% 抖动。
+variation:
+  block_xy_jitter_m: 0.008
+  block_yaw_jitter_deg: 3.0
+  friction_jitter_ratio: 0.2

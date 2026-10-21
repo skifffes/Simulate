@@ -10,8 +10,20 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 
-# 运行日志（实验产物在 results/ 下，日志不入库）
+# 运行日志（实验产物在 results/ 下，日志不入库；训练日志作为实验依据保留）
 *.log
+!results/experiment_1/training/train_smolvla.log
+
+# 数据集原始视频体积大（meta 与 data/*.parquet 保留，便于复现结构）
+data/lerobot_panda_pick_place/videos/
+# 采集分片与冒烟数据集：可重新生成，不入库
+data/_shards_*/
+data/*smoke*/
+# 服务器输出的整批评测视频与逐集记录，本地只保留代表性片段
+results/experiment_1/eval/*/episodes/
+
+# 手工备份文件
+*.bak
 
 # 系统与 IDE
 .DS_Store

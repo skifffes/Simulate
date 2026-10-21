@@ -1,0 +1,50 @@
+{
+  "dataset": "data\\lerobot_smoke3",
+  "codebase_version": "v2.1",
+  "fps": 20,
+  "episodes": 2,
+  "frames": 351,
+  "checks": 67,
+  "failures": 0,
+  "episode_metrics": [
+    {
+      "episode_index": 0,
+      "length": 176,
+      "err_now": 0.005126331684551792,
+      "err_next": 0.00039246854170043514,
+      "corr": 0.9997126508571933,
+      "max_action_jump": 0.035280466079711914,
+      "failures": []
+    },
+    {
+      "episode_index": 1,
+      "length": 175,
+      "err_now": 0.005113563795169446,
+      "err_next": 0.00039035301993509765,
+      "corr": 0.9996817252294632,
+      "max_action_jump": 0.03470563888549805,
+      "failures": []
+    }
+  ],
+  "replay": [
+    {
+      "mean_q_error": 1.961887168252856e-06,
+      "max_q_error": 0.00010035773163963313,
+      "mean_grip_error": 0.0014882253127774037,
+      "per_joint_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "episode_index": 1
+    }
+  ],
+  "sampled": [
+    1,
+    0
+  ]
+}

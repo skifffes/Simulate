@@ -1,0 +1,68 @@
+scope,check,ok,detail
+meta,codebase_version == v2.1,True,v2.1
+meta,chunks_size == 1000,True,1000
+meta,fps == 20,True,20
+meta,total_episodes 与 episodes.jsonl 一致,True,2 vs 2
+meta,total_tasks 与 tasks.jsonl 一致,True,1 vs 1
+meta,total_frames 与各 episode 长度之和一致,True,351 vs 351
+meta,存在两路视频特征,True,"observation.images.top,observation.images.wrist"
+meta,total_videos 与 episode*视频数一致,True,4 vs 4
+meta,total_chunks 与 episode 数一致,True,1 vs 1
+meta,splits.train 覆盖全部 episode,True,{'train': '0:2'}
+meta,observation.state 为 7 关节 + 2 指（9 维）,True,[9]
+meta,action 为 7 关节目标 + 夹爪目标（8 维）,True,[8]
+meta,特征 observation.images.top 为 256x256 RGB,True,"[256, 256, 3]"
+meta,特征 observation.images.wrist 为 256x256 RGB,True,"[256, 256, 3]"
+meta,episode_index 连续无重复,True,"[0, 1]...[0, 1]"
+meta,episodes_stats 与 episodes 一一对应,True,2 vs 2
+meta,episodes_stats 覆盖全部特征,True,
+meta,tasks 文本非空且唯一,True,['pick up the orange block and place it on the target position']
+episode 0,长度与 episodes.jsonl 一致,True,176 vs 176
+episode 0,状态/动作形状与特征定义一致,True,"(176, 9) (176, 8) 期望 (T,9) (T,8)"
+episode 0,时间戳从 0 开始且步长 1/fps,True,diff=[0.049999 0.05    ]
+episode 0,frame_index 为 0..T-1,True,[0 1 2]...
+episode 0,episode_index 列恒定,True,[0]
+episode 0,index 列全局连续,True,0..175
+episode 0,task_index 合法,True,[0]
+episode 0,index 跨 episode 连续,True,0 vs 0
+episode 0,episode 任务文本与 tasks 一致,True,['pick up the orange block and place it on the target position']
+episode 0,状态/动作无 NaN/Inf,True,
+episode 0,机械臂关节在限位内,True,violate=0
+episode 0,"夹爪宽度在 [0, 0.08]",True,min=0.0170 max=0.0400
+episode 0,相邻动作无异常跳变 (<0.35 rad/周期),True,0.035
+episode 0,动作指向下一周期观测,True,err_next=0.0004 err_now=0.0051
+episode 0,运动方向与动作残差正相关 (r>0.5),True,r=1.000
+episode 0,episodes_stats 数值与实算一致,True,
+episode 0,视频统计 observation.images.top 帧数一致,True,[176]
+episode 0,视频统计 observation.images.wrist 帧数一致,True,[176]
+episode 0,视频帧数与长度一致 observation.images.top,True,176 vs 176
+episode 0,视频分辨率 256x256 observation.images.top,True,256x256
+episode 0,视频时长与 fps 一致 observation.images.top,True,8.80s vs 8.80s
+episode 0,视频帧数与长度一致 observation.images.wrist,True,176 vs 176
+episode 0,视频分辨率 256x256 observation.images.wrist,True,256x256
+episode 0,视频时长与 fps 一致 observation.images.wrist,True,8.80s vs 8.80s
+episode 1,长度与 episodes.jsonl 一致,True,175 vs 175
+episode 1,状态/动作形状与特征定义一致,True,"(175, 9) (175, 8) 期望 (T,9) (T,8)"
+episode 1,时间戳从 0 开始且步长 1/fps,True,diff=[0.049999 0.05    ]
+episode 1,frame_index 为 0..T-1,True,[0 1 2]...
+episode 1,episode_index 列恒定,True,[1]
+episode 1,index 列全局连续,True,176..350
+episode 1,task_index 合法,True,[0]
+episode 1,index 跨 episode 连续,True,176 vs 176
+episode 1,episode 任务文本与 tasks 一致,True,['pick up the orange block and place it on the target position']
+episode 1,状态/动作无 NaN/Inf,True,
+episode 1,机械臂关节在限位内,True,violate=0
+episode 1,"夹爪宽度在 [0, 0.08]",True,min=0.0170 max=0.0400
+episode 1,相邻动作无异常跳变 (<0.35 rad/周期),True,0.035
+episode 1,动作指向下一周期观测,True,err_next=0.0004 err_now=0.0051
+episode 1,运动方向与动作残差正相关 (r>0.5),True,r=1.000
+episode 1,episodes_stats 数值与实算一致,True,
+episode 1,视频统计 observation.images.top 帧数一致,True,[175]
+episode 1,视频统计 observation.images.wrist 帧数一致,True,[175]
+episode 1,视频帧数与长度一致 observation.images.top,True,175 vs 175
+episode 1,视频分辨率 256x256 observation.images.top,True,256x256
+episode 1,视频时长与 fps 一致 observation.images.top,True,8.75s vs 8.75s
+episode 1,视频帧数与长度一致 observation.images.wrist,True,175 vs 175
+episode 1,视频分辨率 256x256 observation.images.wrist,True,256x256
+episode 1,视频时长与 fps 一致 observation.images.wrist,True,8.75s vs 8.75s
+episode 1,动作回放关节偏差 < 0.01 rad,True,mean=0.00000 max=0.00010

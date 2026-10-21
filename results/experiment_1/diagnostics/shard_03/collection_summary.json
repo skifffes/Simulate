@@ -1,0 +1,14 @@
+{
+  "dataset": "D:\\python\\simulate\\data\\_shards_lerobot_panda_pick_place\\shard_03",
+  "episodes": 25,
+  "frames": 4387,
+  "fps": 20,
+  "attempts": 25,
+  "stored": 25,
+  "elapsed_s": 512.0,
+  "size_mb": 9.6,
+  "seed": 20291042,
+  "jitter_m": 0.008,
+  "friction_jitter": 0.2,
+  "steps_per_action": 12
+}

@@ -1,0 +1,38 @@
+# SmolVLA 微调配置（单张 A40）
+# 实际启动命令见 server/train_smolvla.sh：
+#   GPU=0 STEPS=15000 BATCH=8 WORKERS=8 \
+#   OUT=/scratch/lijh/simulate_vla/outputs/smolvla_panda \
+#   JOB=smolvla_panda bash server/train_smolvla.sh
+dataset:
+  repo_id: local/panda_pick_place
+  root: /scratch/lijh/simulate_vla/data/lerobot_panda_pick_place
+  video_backend: pyav
+  eval_fraction: 0.0      # 150 条轨迹全部用于训练，泛化由独立测试种子评估
+
+policy:
+  type: smolvla
+  path: lerobot/smolvla_base
+  device: cuda
+  push_to_hub: false
+  # checkpoint 默认参数：chunk_size=50, n_action_steps=50,
+  # resize_imgs_with_padding=(512,512), freeze_vision_encoder=true,
+  # train_expert_only=true, optimizer_lr=1e-4
+
+training:
+  steps: 15000
+  batch_size: 8
+  num_workers: 8
+  save_freq: 1500
+  log_freq: 50
+  seed: 1000
+
+output:
+  dir: /scratch/lijh/simulate_vla/outputs/smolvla_panda
+  job_name: smolvla_panda
+  final_checkpoint: checkpoints/015000/pretrained_model
+
+# 训练结果（服务器记录）
+result:
+  final_loss: 0.006
+  wall_time_minutes: 79
+  checkpoints: [001500, 003000, 004500, ..., 015000]

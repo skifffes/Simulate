@@ -1,0 +1,26 @@
+# 闭环评测配置（scripts/eval_vla_policy.py）
+# 评测环境与训练数据仅共享任务定义，测试种子完全独立于采集时的 150 个种子。
+policy:
+  checkpoint: outputs/smolvla_panda/checkpoints/015000/pretrained_model
+  n_action_steps: 10      # 训练用 50 步 chunk；部署时只执行前 10 步就重新规划
+  device: cuda
+
+rollout:
+  episodes: 20
+  seed_base: 30000000     # 训练集种子为 20261021..20261170，测试集不重叠
+  max_ticks: 260          # 20 Hz -> 最长 13 s
+  warmup_steps: 30
+  block_xy_jitter_m: 0.008
+  friction_jitter_ratio: 0.2
+  record_video: true
+  video_fps: 20
+
+baseline:
+  expert: true            # 同一批种子上运行解析式专家策略
+
+# 成功判定沿用 GraspPlaceTask（与实验 0C 一致）：
+#   抬升高度 >= 0.03 m、放置 XY 误差 <= 0.02 m、倾角/滑移/静止速度在阈值内
+success_criteria:
+  lift_height_min_m: 0.03
+  place_xy_error_max_m: 0.02
+  slip_max_m: 0.015

@@ -1,0 +1,12 @@
+{
+  "policy": "outputs/smolvla_panda/checkpoints/015000/pretrained_model",
+  "device": "cuda",
+  "n_action_steps": 10,
+  "chunks": 20,
+  "task": "pick up the orange block and place it on the target position",
+  "inference_ms_mean": 288.0164481466636,
+  "inference_ms_p50": 278.77327901660465,
+  "inference_ms_p95": 354.53298705397174,
+  "cached_action_ms_mean": 3.506406278271849,
+  "cached_action_ms_p95": 3.9467631519073287
+}
