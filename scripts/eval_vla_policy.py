@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 import time
@@ -35,6 +36,7 @@ from manipulation import (  # noqa: E402
 )
 from vla.cameras import CameraRig  # noqa: E402
 from vla.config import CAMERAS, FPS, IMAGE_SIZE, STEPS_PER_ACTION, TASK  # noqa: E402
+from vla.diagnostics import EpisodeMonitor  # noqa: E402
 from vla.scenario import build_scene, scenario_for_seed  # noqa: E402
 
 ACTION_DIM = 8
@@ -145,15 +147,21 @@ def _write_video(path: Path, frames, fps: int = 20):
 
 
 def run_episode(runner, seed: int, args) -> dict:
-    scenario = scenario_for_seed(seed, args.jitter, args.friction_jitter)
+    shift = None
+    if args.ood_shift_x or args.ood_shift_y:
+        shift = (args.ood_shift_x, args.ood_shift_y)
+    scenario = scenario_for_seed(seed, args.jitter, args.friction_jitter,
+                                 shift=shift, yaw=args.ood_yaw,
+                                 friction=args.ood_friction)
     sim, block = build_scene(scenario)
     try:
-        camera = CameraRig(sim)
+        camera = CameraRig(sim, supersample=args.supersample)
         for _ in range(args.warmup_steps):
             sim.step()
 
         task = GraspPlaceTask(sim, None, block, params=scenario.params,
                               record_interval=4, contact_interval=4)
+        monitor = EpisodeMonitor(sim, block, task, sim.dt)
         runner.reset()
         initial = task.initial
         max_z = float(initial['position'][2])
@@ -164,6 +172,11 @@ def run_episode(runner, seed: int, args) -> dict:
         closed_once = False
 
         start = time.perf_counter()
+        did_timeout = True
+        action = np.zeros(ACTION_DIM, dtype=np.float32)
+        target = np.zeros(7, dtype=np.float32)
+        width = 0.0
+        tick = -1
         for tick in range(args.max_ticks):
             frames = camera.capture()
             if video is not None:
@@ -200,33 +213,67 @@ def run_episode(runner, seed: int, args) -> dict:
                 local = relative_pose(sim, block)
                 slip = max(slip, float(np.linalg.norm(np.asarray(local[0]) - np.asarray(grasp_local[0]))))
             task._sample('policy')
+            monitor.tick(tick, action, target, width, np.asarray(state[:7]), obj)
 
             # 放下并保持：工件高度回到初始位置附近且夹爪已张开，则提前结束
             if tick > 40 and obj['position'][2] < initial['position'][2] + 0.01 and width > 0.035:
                 if float(obj['linear_speed']) < DEFAULT_PARAMS['rest_linear_speed']:
+                    did_timeout = False
                     break
         rollout_seconds = time.perf_counter() - start
 
-        # 收尾：张开夹爪、原地静置，让工件稳定下来
-        set_gripper(sim, DEFAULT_PARAMS['open_width'],
-                    DEFAULT_PARAMS['open_force'], DEFAULT_PARAMS['open_speed'])
-        settle_start = sim.steps
+        # 收尾静置：严格模式不替策略做任何动作，只让物理继续跑；
+        # 辅助模式保留旧行为（先替模型张开夹爪再判定），仅用于解释历史数据。
+        settle_seconds = float(DEFAULT_PARAMS['settle_seconds'])
         settle_interval = max(1, int(round(0.05 / sim.dt)))
-        for _ in range(int(round(DEFAULT_PARAMS['settle_seconds'] / sim.dt))):
-            sim.step()
-            if (sim.steps - settle_start) % settle_interval == 0:
-                task._sample('settle')
-                if video is not None:
-                    video.append(np.asarray(camera.capture()['top'], dtype=np.uint8).copy())
-        for s in task.samples:
-            if s['t'] >= (settle_start - task.step0) * sim.dt:
-                task.max_rest_speed = max(task.max_rest_speed, s['obj_lin_speed'])
+
+        def settle(do_open: bool, width_cmd: float):
+            if do_open:
+                set_gripper(sim, DEFAULT_PARAMS['open_width'],
+                            DEFAULT_PARAMS['open_force'], DEFAULT_PARAMS['open_speed'])
+            task.max_rest_speed = 0.0
+            start = sim.steps
+            for _ in range(int(round(settle_seconds / sim.dt))):
+                sim.step()
+                if (sim.steps - start) % settle_interval == 0:
+                    task._sample('settle')
+                    if video is not None:
+                        video.append(np.asarray(camera.capture()['top'], dtype=np.uint8).copy())
+                    monitor.tick(tick + (sim.steps - start) // STEPS_PER_ACTION,
+                                 action, target, width_cmd, np.asarray(sim.q()),
+                                 object_state(sim, block), phase='settle')
+            for s in task.samples:
+                if s['t'] >= (start - task.step0) * sim.dt:
+                    task.max_rest_speed = max(task.max_rest_speed, s['obj_lin_speed'])
 
         task.lift_height = max_z - float(initial['position'][2])
         task.slip = slip
+        if args.mode == 'assisted':
+            settle(True, DEFAULT_PARAMS['open_width'])
+        else:
+            settle(False, float(width))
         task._finalize()
-
         result = task.result()
+        result['mode'] = args.mode
+
+        # 严格自主：成功必须包含策略自己下达的张开指令；判定前不做任何清理动作。
+        if args.mode == 'strict' and result['success'] and \
+                'release_cmd' not in monitor.events and 'close_cmd' in monitor.events:
+            result['success'] = False
+            result['failure'] = 'no_autonomous_release'
+            result['failure_text'] = '策略未自主张开夹爪'
+
+        diag = monitor.summary(result, did_timeout, args.mode)
+        result.update(diag)
+
+        # 反事实：严格模式若失败，再替它张开夹爪并静置，量化“多少成功依赖辅助释放”。
+        assisted_would_succeed = bool(result['success'])
+        if args.mode == 'strict' and not result['success'] and args.counterfactual_assisted:
+            settle(True, DEFAULT_PARAMS['open_width'])
+            task._finalize()
+            assisted_would_succeed = bool(task.success)
+            result['counterfactual_failure'] = task.failure
+        result['counterfactual_assisted_success'] = bool(assisted_would_succeed)
         result.update({
             'seed': int(seed),
             'ticks': int(tick + 1),
@@ -277,10 +324,15 @@ def run_expert_episode(seed: int, args) -> dict:
     from robot_controller import RobotController
     from vla.expert import VLAExpertTask
 
-    scenario = scenario_for_seed(seed, args.jitter, args.friction_jitter)
+    shift = None
+    if args.ood_shift_x or args.ood_shift_y:
+        shift = (args.ood_shift_x, args.ood_shift_y)
+    scenario = scenario_for_seed(seed, args.jitter, args.friction_jitter,
+                                 shift=shift, yaw=args.ood_yaw,
+                                 friction=args.ood_friction)
     sim, block = build_scene(scenario)
     try:
-        camera = CameraRig(sim)
+        camera = CameraRig(sim, supersample=args.supersample)
         for _ in range(args.warmup_steps):
             sim.step()
         task = VLAExpertTask(sim, RobotController(sim), block,
@@ -321,6 +373,18 @@ def main(argv=None):
     parser.add_argument('--warmup-steps', type=int, default=30)
     parser.add_argument('--jitter', type=float, default=0.008)
     parser.add_argument('--friction-jitter', type=float, default=0.2)
+    parser.add_argument('--mode', choices=['strict', 'assisted'], default='strict',
+                        help='strict=严格自主（判定前不替模型松开夹爪）；assisted=旧口径')
+    parser.add_argument('--supersample', type=int, default=2,
+                        help='渲染超采样倍数；1 与数据采集一致，2 为旧评测默认')
+    parser.add_argument('--seeds', help='显式种子列表（逗号分隔），优先于 seed-base/episodes')
+    parser.add_argument('--ood-shift-x', type=float, default=0.0)
+    parser.add_argument('--ood-shift-y', type=float, default=0.0)
+    parser.add_argument('--ood-yaw', type=float)
+    parser.add_argument('--ood-friction', type=float)
+    parser.add_argument('--counterfactual-assisted', action='store_true', default=True)
+    parser.add_argument('--no-counterfactual-assisted', dest='counterfactual_assisted',
+                        action='store_false')
     parser.add_argument('--device', default='cuda')
     parser.add_argument('--n-action-steps', type=int,
                         help='每个 chunk 实际执行的步数，默认沿用 checkpoint 配置（50）')
@@ -348,9 +412,14 @@ def main(argv=None):
     else:
         runner = SmolVLARunner(args.policy, args.device, n_action_steps=args.n_action_steps)
 
+    if args.seeds:
+        seeds = [int(s) for s in str(args.seeds).replace(';', ',').split(',') if s.strip()]
+    else:
+        seeds = [args.seed_base + i for i in range(args.episodes)]
+    args.episodes = len(seeds)
+
     results = []
-    for i in range(args.episodes):
-        seed = args.seed_base + i
+    for i, seed in enumerate(seeds):
         res = run_expert_episode(seed, args) if args.expert else run_episode(runner, seed, args)
         results.append(res)
         flag = 'OK  ' if res['success'] else 'FAIL'
@@ -364,13 +433,54 @@ def main(argv=None):
     for r in results:
         if not r['success']:
             failures[r['failure']] = failures.get(r['failure'], 0) + 1
+    csv_fields = [
+        'seed', 'mode', 'success', 'failure', 'failure_primary', 'failure_stage_event',
+        'failure_reasons', 'lift_height_m', 'place_xy_error_m', 'slip_m',
+        'autonomous_release', 'release_tick', 'close_tick', 'close_offset_xy_m',
+        'close_offset_z_m', 'close_dual_contact', 'target_entry_tick', 'stable_tick',
+        'ticks', 'timeout', 'saturated_ticks', 'clipped_action_ticks',
+        'max_tracking_err_rad', 'action_sign_flips_per_tick',
+        'counterfactual_assisted_success', 'block_x', 'block_y', 'block_yaw',
+        'block_friction',
+    ]
+    with (out_dir / 'episodes.csv').open('w', newline='', encoding='utf-8') as fh:
+        writer = csv.DictWriter(fh, fieldnames=csv_fields, extrasaction='ignore')
+        writer.writeheader()
+        for r in results:
+            scene = r.get('scene') or {}
+            bs = scene.get('block_start') or [None, None]
+            writer.writerow({
+                **{k: r.get(k, '') for k in csv_fields},
+                'block_x': bs[0], 'block_y': bs[1],
+                'block_yaw': scene.get('block_yaw', ''),
+                'block_friction': scene.get('block_friction', ''),
+            })
+
     summary = {
         'policy': 'expert' if args.expert else args.policy,
+        'mode': args.mode,
+        'supersample': args.supersample,
         'n_action_steps': args.n_action_steps,
+        'jitter': args.jitter,
+        'friction_jitter': args.friction_jitter,
+        'ood': {'shift_x': args.ood_shift_x, 'shift_y': args.ood_shift_y,
+                'yaw': args.ood_yaw, 'friction': args.ood_friction},
         'episodes': n,
         'success': n_ok,
         'success_rate': round(n_ok / max(n, 1), 4),
+        'autonomous_release_count': sum(1 for r in results if r.get('autonomous_release')),
+        'counterfactual_assisted_success': sum(
+            1 for r in results if r.get('counterfactual_assisted_success')),
         'failure_counts': failures,
+        'failure_primary_counts': {
+            k: sum(1 for r in results if r.get('failure_primary') == k)
+            for k in sorted({r.get('failure_primary') for r in results if r.get('failure_primary')})
+        },
+        'failure_stage_event_counts': {
+            k: sum(1 for r in results if r.get('failure_stage_event') == k)
+            for k in sorted({r.get('failure_stage_event') for r in results
+                             if r.get('failure_stage_event')})
+        },
         'failure_text': {k: FAIL_TEXT.get(k, k) for k in failures},
         'mean_lift_height_m': float(np.mean([r['lift_height_m'] for r in results])),
         'mean_place_xy_error_m': float(np.nanmean([r['place_xy_error_m'] for r in results])),

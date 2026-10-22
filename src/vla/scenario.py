@@ -52,10 +52,26 @@ def make_params(rng, jitter, friction_jitter):
     return params
 
 
-def scenario_for_seed(seed, jitter=0.008, friction_jitter=0.2):
-    """由种子确定性地生成场景参数。"""
+def scenario_for_seed(seed, jitter=0.008, friction_jitter=0.2,
+                      shift=None, yaw=None, friction=None):
+    """由种子确定性地生成场景参数。
+
+    shift/yaw/friction 用于受控 OOD：显式覆盖采样结果，一次只改一个因素。
+    目标点、工件尺寸与质量、成功判据都保持不变。
+    """
     rng = np.random.default_rng(int(seed))
     params = make_params(rng, jitter, friction_jitter)
+    if shift is not None:
+        base = DEFAULT_PARAMS['block_start']
+        dx, dy = float(shift[0]), float(shift[1])
+        params['block_start'] = (base[0] + dx, base[1] + dy, base[2])
+        for key in ('pre_grasp', 'grasp', 'lift'):
+            params[key] = (params['block_start'][0], params['block_start'][1],
+                           DEFAULT_PARAMS[key][2])
+    if yaw is not None:
+        params['block_yaw'] = float(yaw)
+    if friction is not None:
+        params['block_friction'] = float(friction)
     return Scenario(seed=int(seed), block_start=tuple(params['block_start']),
                     block_yaw=float(params['block_yaw']),
                     block_friction=float(params['block_friction']),

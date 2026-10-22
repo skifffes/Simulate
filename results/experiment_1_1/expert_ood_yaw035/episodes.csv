@@ -1,0 +1,11 @@
+seed,mode,success,failure,failure_primary,failure_stage_event,failure_reasons,lift_height_m,place_xy_error_m,slip_m,autonomous_release,release_tick,close_tick,close_offset_xy_m,close_offset_z_m,close_dual_contact,target_entry_tick,stable_tick,ticks,timeout,saturated_ticks,clipped_action_ticks,max_tracking_err_rad,action_sign_flips_per_tick,counterfactual_assisted_success,block_x,block_y,block_yaw,block_friction
+30000000,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000001,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000002,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000003,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000004,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000005,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000006,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000007,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000008,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,
+30000009,,False,tracking_error,,,,0.0,nan,0.0,,,,,,,,,62,,,,,,,,,,

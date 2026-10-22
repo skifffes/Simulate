@@ -1,0 +1,16 @@
+group,episodes,success,success_rate,wilson_lo,wilson_hi,autonomous_release,mean_lift_m,mean_xy_error_m
+VLA strict · chunk50 · IID-20,20,16,0.8,0.584,0.9193,20,0.0873,0.0403
+VLA strict · n10 · IID-20,20,14,0.7,0.481,0.8545,19,0.0846,0.0427
+VLA assisted · chunk50 · IID-20,20,17,0.85,0.6396,0.9476,20,0.1005,0.0185
+VLA strict · n10 · ss2 · IID-20,20,13,0.65,0.4329,0.8188,17,0.0693,0.0633
+VLA strict · chunk50 · IID-60,60,51,0.85,0.7389,0.919,60,0.0933,0.0309
+VLA strict · n10 · IID-60,60,47,0.7833,0.6638,0.8688,59,0.0872,0.0394
+Expert · IID-20,20,20,1.0,0.8389,1.0,0,0.1,0.003
+VLA strict · OOD shift-x 3cm,10,1,0.1,0.0179,0.4042,10,0.0743,0.0795
+VLA strict · OOD yaw 0.25rad,10,0,0.0,0.0,0.2775,10,0.0168,0.185
+VLA strict · OOD yaw 0.5rad (超几何极限),10,0,0.0,0.0,0.2775,10,0.0086,0.1975
+VLA strict · OOD friction 0.4,10,10,1.0,0.7225,1.0,10,0.1063,0.0026
+Expert · OOD shift-x 3cm,10,10,1.0,0.7225,1.0,0,0.1,0.0024
+Expert · OOD yaw 0.25rad,10,10,1.0,0.7225,1.0,0,0.0893,0.0054
+Expert · OOD yaw 0.5rad (超几何极限),10,0,0.0,0.0,0.2775,0,0.0,
+Expert · OOD friction 0.4,10,10,1.0,0.7225,1.0,0,0.1,0.0027

@@ -1,0 +1,11 @@
+{
+  "n_episodes": 5,
+  "data_vs_ss1_mae": 1.7906107584635413,
+  "data_vs_ss2_mae": 1.9399546305338542,
+  "data_vs_ss1_psnr": 37.74615711398483,
+  "data_vs_ss2_psnr": 35.19139949557058,
+  "codec_floor_mae": 2.1340393066406245,
+  "grad_ratio_ss1": 1.2248978552041137,
+  "grad_ratio_ss2": 1.1584613409136746,
+  "conclusion": "\u91c7\u96c6\u4e0e ss=1 \u4e00\u81f4"
+}

@@ -1,0 +1,4 @@
+comparison,n_pairs,both_success,only_a,only_b,both_fail,mcnemar_p
+strict chunk50 vs strict n10 (IID-20),20,10,6,4,0,0.7539
+strict vs assisted chunk50 (IID-20),20,13,3,4,0,1.0
+ss1 vs ss2 n10 (IID-20),20,8,6,5,1,1.0

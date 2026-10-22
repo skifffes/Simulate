@@ -120,3 +120,20 @@ A 在所有条件均成功，8 个条件全部 10/10。z2 直接交接时 PyBull
 GIF 只由离线渲染脚本生成（0B 在 `results/experiment_0b_visualization/`，0C 在 `results/experiment_0c/`）；实时窗口本身不录制。`src/policy.py` 预留 `Policy.act(observation)` 抽象接口，但当前实验直接使用脚本控制器，尚未接入 VLA。
 
 **0B 仍是技能交接的几何/运动学代理测试；0C 第一阶段才引入真实接触的物体操作，但只验证抓取-搬运-放置，不涉及 B/C 交接，也不是 VLA 未见技能组合泛化的证据。**
+
+## 实验 1 / 1.1：SmolVLA 原子抓取放置
+
+- 实验 1（150 条示范、15 000 步微调、初步闭环）：[docs/experiment_1.md](docs/experiment_1.md)
+- 实验 1.1（严格自主评测、渲染一致性、失败诊断、受控 OOD）：[docs/experiment_1_1.md](docs/experiment_1_1.md)
+
+关键结论：严格自主成功率 **85%**（51/60，IID held-out，chunk50，95% CI 74–92%）；旧评测的自动松爪**没有**制造假成功（对失败集补张爪反事实复跑，0 次救回）；失败全部集中在接近-抓取段（闭爪但未形成双指接触）；受控 OOD 中位置 +3 cm 降到 10%、yaw 0.25 rad 降到 0%，摩擦 0.4 仍为 100%。
+
+```bash
+# 服务器：严格评测（示例）
+env GPU=0 MODE=strict SS=1 SEEDS=$(seq -s, 30000000 30000059) OUT=iid60_chunk50 bash server/e11_run.sh
+
+# 本地汇总（生成 results/experiment_1_1/ 下的 CSV / 图 / summary.md）
+python scripts/analyze_experiment_1_1.py
+```
+
+原始记录与图表在 [results/experiment_1_1/](results/experiment_1_1/README.md)。

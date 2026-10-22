@@ -1,0 +1,1523 @@
+{
+  "summary": {
+    "policy": "expert",
+    "mode": "strict",
+    "supersample": 1,
+    "n_action_steps": null,
+    "jitter": 0.008,
+    "friction_jitter": 0.2,
+    "ood": {
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "yaw": 0.35,
+      "friction": null
+    },
+    "episodes": 10,
+    "success": 0,
+    "success_rate": 0.0,
+    "autonomous_release_count": 0,
+    "counterfactual_assisted_success": 0,
+    "failure_counts": {
+      "tracking_error": 10
+    },
+    "failure_primary_counts": {},
+    "failure_stage_event_counts": {},
+    "failure_text": {
+      "tracking_error": "关节跟踪误差超限"
+    },
+    "mean_lift_height_m": 0.0,
+    "mean_place_xy_error_m": NaN,
+    "mean_ticks": 62.0,
+    "mean_tracking_error_rad": 0.0,
+    "mean_inference_latency_ms": 0.0,
+    "failure_stage_counts": {
+      "approach/grasp": 0,
+      "lift/transport": 0,
+      "place/release": 0
+    },
+    "seeds": [
+      30000000,
+      30000001,
+      30000002,
+      30000003,
+      30000004,
+      30000005,
+      30000006,
+      30000007,
+      30000008,
+      30000009
+    ]
+  },
+  "episodes": [
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5565740427216742,
+        0.001539888216310131,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.570584294469721,
+        0.007022380696046781,
+        0.043397064659580695
+      ],
+      "final_object_quaternion": [
+        -0.08705326505020314,
+        0.23109582577140242,
+        0.114844126955995,
+        0.9621991866858172
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.18
+        ],
+        "grasp": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.055
+        ],
+        "lift": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.041
+        ],
+        "block_friction": 1.3990560997348247,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.18
+        ],
+        "grasp": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.055
+        ],
+        "lift": [
+          0.5565740427216742,
+          0.001539888216310131,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000000,
+      "ticks": 62,
+      "wall_seconds": 4.938,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5554437038027313,
+        0.004538385052730125,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5733981551335022,
+        0.010609255455466952,
+        0.04455026370531916
+      ],
+      "final_object_quaternion": [
+        -0.09641175077547684,
+        0.24961854452945145,
+        0.17361758062876345,
+        0.9477617275644867
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.18
+        ],
+        "grasp": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.055
+        ],
+        "lift": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.041
+        ],
+        "block_friction": 1.0944238589678605,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.18
+        ],
+        "grasp": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.055
+        ],
+        "lift": [
+          0.5554437038027313,
+          0.004538385052730125,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000001,
+      "ticks": 62,
+      "wall_seconds": 5.536,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5545635075806772,
+        0.0033107109556441833,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5714808380982597,
+        0.010838315181394078,
+        0.04368669964330996
+      ],
+      "final_object_quaternion": [
+        -0.10976220868684279,
+        0.2326065688481515,
+        0.17661175891426742,
+        0.9500814324499163
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.18
+        ],
+        "grasp": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.055
+        ],
+        "lift": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.041
+        ],
+        "block_friction": 1.0447228152561172,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.18
+        ],
+        "grasp": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.055
+        ],
+        "lift": [
+          0.5545635075806772,
+          0.0033107109556441833,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000002,
+      "ticks": 62,
+      "wall_seconds": 5.269,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5529831775987384,
+        -0.00651814236137328,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5695571630389309,
+        0.0006894456673370925,
+        0.04387411888515909
+      ],
+      "final_object_quaternion": [
+        -0.10462243324124662,
+        0.23870150177137148,
+        0.16029567281940008,
+        0.952040459639268
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.18
+        ],
+        "grasp": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.055
+        ],
+        "lift": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.041
+        ],
+        "block_friction": 1.0271654907833483,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.18
+        ],
+        "grasp": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.055
+        ],
+        "lift": [
+          0.5529831775987384,
+          -0.00651814236137328,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000003,
+      "ticks": 62,
+      "wall_seconds": 4.714,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.554674556105799,
+        0.005775355748424832,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5726174640068904,
+        0.011795883873906421,
+        0.04454370758327199
+      ],
+      "final_object_quaternion": [
+        -0.09540534109695131,
+        0.24954278140507163,
+        0.17302227780863444,
+        0.9479923588936288
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.18
+        ],
+        "grasp": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.055
+        ],
+        "lift": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.041
+        ],
+        "block_friction": 1.0999456779341226,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.18
+        ],
+        "grasp": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.055
+        ],
+        "lift": [
+          0.554674556105799,
+          0.005775355748424832,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000004,
+      "ticks": 62,
+      "wall_seconds": 4.721,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5510388962552807,
+        0.000840260069550517,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.567548410085985,
+        0.006810751460041191,
+        0.04409994032964937
+      ],
+      "final_object_quaternion": [
+        -0.1059062214194353,
+        0.23817576148496258,
+        0.16616367285125413,
+        0.9510235605547831
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.18
+        ],
+        "grasp": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.055
+        ],
+        "lift": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.041
+        ],
+        "block_friction": 1.1247686639412042,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.18
+        ],
+        "grasp": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.055
+        ],
+        "lift": [
+          0.5510388962552807,
+          0.000840260069550517,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000005,
+      "ticks": 62,
+      "wall_seconds": 4.717,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5577040477994732,
+        -0.005901103841921945,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5715379264925982,
+        -0.0003751270236815497,
+        0.04330117347543323
+      ],
+      "final_object_quaternion": [
+        -0.08780801766336366,
+        0.22663813009899753,
+        0.11940494782427392,
+        0.9626356363933047
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.18
+        ],
+        "grasp": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.055
+        ],
+        "lift": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.041
+        ],
+        "block_friction": 1.3859373203110508,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.18
+        ],
+        "grasp": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.055
+        ],
+        "lift": [
+          0.5577040477994732,
+          -0.005901103841921945,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000006,
+      "ticks": 62,
+      "wall_seconds": 4.709,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5549095568292579,
+        -0.0016094109812789855,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5727750747201478,
+        0.004557774302013321,
+        0.04453909217253506
+      ],
+      "final_object_quaternion": [
+        -0.09970624915459216,
+        0.24942003483607394,
+        0.17379870167027944,
+        0.9474398774590498
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.18
+        ],
+        "grasp": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.055
+        ],
+        "lift": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.041
+        ],
+        "block_friction": 1.1301604244191106,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.18
+        ],
+        "grasp": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.055
+        ],
+        "lift": [
+          0.5549095568292579,
+          -0.0016094109812789855,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000007,
+      "ticks": 62,
+      "wall_seconds": 4.696,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5471237176961002,
+        -0.005216556568098253,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5612933641264531,
+        0.001221785889163224,
+        0.043828099623297596
+      ],
+      "final_object_quaternion": [
+        -0.10533810689189373,
+        0.21414403798589318,
+        0.1599822159640932,
+        0.9578370972178654
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.18
+        ],
+        "grasp": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.055
+        ],
+        "lift": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.041
+        ],
+        "block_friction": 1.2863292991402913,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.18
+        ],
+        "grasp": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.055
+        ],
+        "lift": [
+          0.5471237176961002,
+          -0.005216556568098253,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000008,
+      "ticks": 62,
+      "wall_seconds": 4.681,
+      "mean_tracking_error_rad": 0.0
+    },
+    {
+      "success": false,
+      "failure": "tracking_error",
+      "failure_stage": "approach",
+      "failure_text": "关节跟踪误差超限",
+      "initial_object_position": [
+        0.5550669916734379,
+        -0.002433606139674531,
+        0.039988694626190036
+      ],
+      "final_object_position": [
+        0.5703841847262745,
+        0.004806950700192605,
+        0.04300291316448636
+      ],
+      "final_object_quaternion": [
+        -0.08862713765238078,
+        0.23231777928833208,
+        0.14798826532075954,
+        0.9572215800040429
+      ],
+      "lift_height_m": 0.0,
+      "slip_m": 0.0,
+      "place_xy_error_m": NaN,
+      "place_height_error_m": NaN,
+      "final_tilt_deg": NaN,
+      "final_linear_speed": NaN,
+      "final_angular_speed": NaN,
+      "release_contacts": -1,
+      "hand_contact_samples": 0,
+      "closed_finger_widths": [
+        null,
+        null
+      ],
+      "grasp_contact": {},
+      "targets": {
+        "pre_grasp": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.18
+        ],
+        "grasp": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.055
+        ],
+        "lift": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ]
+      },
+      "gripper_widths": {
+        "open": 0.04,
+        "preclose": 0.024,
+        "close": 0.017
+      },
+      "params": {
+        "block_half": [
+          0.02,
+          0.02,
+          0.04
+        ],
+        "block_mass": 0.12,
+        "block_start": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.041
+        ],
+        "block_friction": 1.0829064161049367,
+        "orientation": [
+          1.0,
+          0.0,
+          0.0,
+          6.123233995736766e-17
+        ],
+        "pre_grasp": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.18
+        ],
+        "grasp": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.055
+        ],
+        "lift": [
+          0.5550669916734379,
+          -0.002433606139674531,
+          0.155
+        ],
+        "place_above": [
+          0.45,
+          0.18,
+          0.155
+        ],
+        "place": [
+          0.45,
+          0.18,
+          0.055
+        ],
+        "retreat": [
+          0.45,
+          0.18,
+          0.24
+        ],
+        "open_width": 0.04,
+        "preclose_width": 0.024,
+        "close_width": 0.017,
+        "grasp_force": 20.0,
+        "open_force": 20.0,
+        "open_speed": 0.06,
+        "close_speed": 0.05,
+        "preclose_seconds": 0.6,
+        "close_seconds": 0.8,
+        "release_seconds": 0.8,
+        "settle_seconds": 1.0,
+        "lift_height_target": 0.08,
+        "slip_tolerance_m": 0.02,
+        "place_tolerance_m": 0.02,
+        "height_tolerance_m": 0.012,
+        "tilt_tolerance_deg": 12.0,
+        "rest_linear_speed": 0.01,
+        "rest_angular_speed": 0.1,
+        "block_yaw": 0.35
+      },
+      "sim_seconds": 3.1,
+      "seed": 30000009,
+      "ticks": 62,
+      "wall_seconds": 4.74,
+      "mean_tracking_error_rad": 0.0
+    }
+  ]
+}
