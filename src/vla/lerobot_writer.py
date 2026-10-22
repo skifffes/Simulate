@@ -437,6 +437,93 @@ def merge_datasets(shards, out_root, features, fps, robot_type, task, verbose=Tr
     return info
 
 
+def merge_multi_task(shards, out_root, features, fps, robot_type, verbose=True):
+    """合并多个单任务 shard，并保留每集自己的任务文本与 task_index。
+
+    与 merge_datasets 的区别：任务不再是全局单一字符串，而是按 episode 保留。
+    """
+    shards = [Path(s) for s in shards]
+    writer = LeRobotV21Writer(out_root, features, fps, robot_type=robot_type, task=None,
+                              resume=False)
+    episodes, episodes_stats = [], []
+    total_frames = 0
+    for shard in shards:
+        info_file = shard / 'meta/info.json'
+        if not info_file.exists():
+            continue
+        info = json.loads(info_file.read_text(encoding='utf-8'))
+        available = {key: value for key, value in info['features'].items()
+                     if key not in DEFAULT_FEATURES}
+        if info['fps'] != fps or available != json.loads(json.dumps(features)):
+            raise ValueError(f'{shard} 的 fps/features 与目标数据集不一致')
+        shard_episodes = _read_jsonl(shard / 'meta/episodes.jsonl')
+        shard_stats = {row['episode_index']: row['stats']
+                       for row in _read_jsonl(shard / 'meta/episodes_stats.jsonl')}
+        for episode in shard_episodes:
+            source_index = episode['episode_index']
+            chunk = source_index // CHUNKS_SIZE
+            source_table = pq.read_table(shard / DATA_PATH.format(episode_chunk=chunk,
+                                                                  episode_index=source_index))
+            length = source_table.num_rows
+            task = episode['tasks'][0]
+            target_index = len(episodes)
+            global_start = total_frames
+            target_chunk = target_index // CHUNKS_SIZE
+            task_index = writer._task_index(task)
+            table = pa.table({
+                'observation.state': source_table.column('observation.state'),
+                'action': source_table.column('action'),
+                'timestamp': source_table.column('timestamp'),
+                'frame_index': source_table.column('frame_index'),
+                'episode_index': pa.array(np.full(length, target_index, dtype=np.int64),
+                                          type=pa.int64()),
+                'index': pa.array(np.arange(global_start, global_start + length, dtype=np.int64),
+                                  type=pa.int64()),
+                'task_index': pa.array(np.full(length, task_index, dtype=np.int64),
+                                       type=pa.int64()),
+            })
+            target_data = writer.root / DATA_PATH.format(episode_chunk=target_chunk,
+                                                         episode_index=target_index)
+            target_data.parent.mkdir(parents=True, exist_ok=True)
+            pq.write_table(table, target_data, compression='snappy')
+
+            for key in writer.video_keys:
+                source_video = shard / VIDEO_PATH.format(episode_chunk=chunk, video_key=key,
+                                                         episode_index=source_index)
+                target_video = writer.root / VIDEO_PATH.format(episode_chunk=target_chunk,
+                                                               video_key=key,
+                                                               episode_index=target_index)
+                target_video.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source_video, target_video)
+                if probe_video(target_video)['frames'] != length:
+                    raise RuntimeError(f'{target_video} 帧数与 parquet 不一致')
+
+            stats = {key: dict(value) for key, value in shard_stats[source_index].items()}
+            stats['episode_index'] = {'min': [target_index], 'max': [target_index],
+                                      'mean': [target_index], 'std': [0.0], 'count': [length]}
+            stats['task_index'] = {'min': [task_index], 'max': [task_index],
+                                   'mean': [task_index], 'std': [0.0], 'count': [length]}
+            index_values = np.arange(global_start, global_start + length, dtype=np.float64)
+            stats['index'] = {'min': [float(index_values.min())], 'max': [float(index_values.max())],
+                              'mean': [float(index_values.mean())],
+                              'std': [float(index_values.std())], 'count': [length]}
+            episodes.append({'episode_index': target_index, 'tasks': [task], 'length': length})
+            episodes_stats.append({'episode_index': target_index, 'stats': stats})
+            total_frames += length
+            if verbose and target_index % 20 == 0:
+                print(f'  merge ep {target_index} ({shard.name}) task={task[:32]} '
+                      f'length={length}')
+
+    writer.episodes = episodes
+    writer.episodes_stats = episodes_stats
+    writer.total_frames = total_frames
+    info = writer.finalize()
+    if verbose:
+        print(f'合并完成: {len(episodes)} 个 episode, {total_frames} 帧, '
+              f'{len(writer.tasks)} 个任务 -> {writer.root}')
+    return info
+
+
 def delete_dataset(root):
     root = Path(root)
     if root.exists():

@@ -168,11 +168,18 @@ class SkillExpert:
         if not ok:
             return self._result('A90', False, reason)
         # 夹爪 yaw 从 +90° 转到 0°：物体随之从长轴 Y 转到长轴 X。
+        # 从 HOME 出发时某些种子在 0° 附近 IK 不可达，反方向转到 180° 等价。
         ok, reason = self._spin((start[0], start[1], 0.15), (start[0], PLACE[1] - 0.06, 0.15),
                                 math.pi / 2, 0.0, n=12, tag='rotate90')
+        place_yaw = 0.0
+        if not ok and reason == 'ik_joint_limits':
+            ok, reason = self._spin((start[0], start[1], 0.15),
+                                    (start[0], PLACE[1] - 0.06, 0.15),
+                                    math.pi / 2, math.pi, n=12, tag='rotate90_rev')
+            place_yaw = math.pi
         if not ok:
             return self._result('A90', False, reason)
-        ok, reason = self.place(PLACE, yaw_g=0.0)
+        ok, reason = self.place(PLACE, yaw_g=place_yaw)
         if not ok:
             return self._result('A90', False, reason)
         final = self._final()
@@ -241,12 +248,18 @@ class SkillExpert:
             return self._result('C', False, reason)
         final_yaw_g = yaw_g
         if not long_y:
-            # 长轴 X -> 需要旋回 Y：夹爪 yaw 从 0 转到 -90°。
+            # 长轴 X -> 需要旋回 Y：夹爪 yaw 从 0 转到 -90°；
+            # 若该构型下 IK 不可达，反方向转到 +90° 同样能让长轴回到 Y。
             ok, reason = self._spin((pos[0], pos[1], 0.15), (TRAY[0], TRAY[1], 0.15),
                                     0.0, -math.pi / 2, n=12, tag='rotate_to_tray')
+            if not ok and reason == 'ik_joint_limits':
+                ok, reason = self._spin((pos[0], pos[1], 0.15), (TRAY[0], TRAY[1], 0.15),
+                                        0.0, math.pi / 2, n=12, tag='rotate_to_tray_rev')
+                final_yaw_g = math.pi / 2
+            else:
+                final_yaw_g = -math.pi / 2
             if not ok:
                 return self._result('C', False, reason)
-            final_yaw_g = -math.pi / 2
         ok, reason = self.place(TRAY, yaw_g=final_yaw_g, open_width=0.023)
         if not ok:
             return self._result('C', False, reason)

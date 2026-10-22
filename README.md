@@ -142,11 +142,16 @@ python scripts/analyze_experiment_1_1.py
 
 - 阶段 1 已完成：统一坐标系、A0/A90 定义、B 的挡板与 C 的托盘，四条组合链（A0→B / A90→B / A0→C / A90→C）专家可行性各 **5/5**：[docs/experiment_2_scene.md](docs/experiment_2_scene.md)
 - 场景俯视图（带 +X/+Y 箭头）：[results/experiment_2/scene_diagram.svg](results/experiment_2/scene_diagram.svg)
-- 新代码：`src/vla/atomic_tasks/scene2.py`（统一场景）、`src/vla/atomic_tasks/experts.py`（A0/A90/B/C 专家）、`scripts/feasibility_experiment_2.py`
+- 阶段 2 已完成：四个技能各 120 条独立示范，合成 480 集 / 68 808 帧的多任务 LeRobot 数据集，校验 11 540 项 0 失败：[docs/experiment_2_data.md](docs/experiment_2_data.md)
+- 新代码：`src/vla/atomic_tasks/scene2.py`（统一场景）、`src/vla/atomic_tasks/experts.py`（A0/A90/B/C 专家）、`src/vla/atomic_tasks/recording.py`（20 Hz 录制）、`scripts/collect_multi_atomic_data.py`
 
 ```bash
 # 服务器：四链可行性（每链 5 个种子）
 cd ~/simulate_vla
 PYTHONPATH=. venv/bin/python -u scripts/feasibility_experiment_2.py --trials 5 \
   --out results/experiment_2/feasibility
+
+# 服务器：采集并合并多任务数据集
+PYTHONPATH=. venv/bin/python -u scripts/collect_multi_atomic_data.py \
+  --merge --out data/lerobot_panda_multi --shards data/_shards_exp2
 ```

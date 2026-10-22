@@ -78,20 +78,25 @@ def make_tray(client):
     return bodies
 
 
-def build_scene(seed: int | None = None, jitter: float = 0.0, friction_jitter: float = 0.0):
-    """建场景；返回 (sim, block, wall, tray_bodies, info)。"""
+def build_scene(seed: int | None = None, jitter: float = 0.0, friction_jitter: float = 0.0,
+                start=None, yaw: float = 0.0):
+    """建场景；返回 (sim, block, wall, tray_bodies, info)。
+
+    start/yaw 用于让 B/C 从“类 A 终态”的初始状态开始（独立原子任务，不是 A→B 轨迹）。
+    """
     rng = np.random.default_rng(0 if seed is None else int(seed))
-    start = np.array(START, dtype=float)
+    base = np.array(START if start is None else start, dtype=float)
     if jitter > 0:
-        start[0] += rng.uniform(-jitter, jitter)
-        start[1] += rng.uniform(-jitter, jitter)
+        base[0] += rng.uniform(-jitter, jitter)
+        base[1] += rng.uniform(-jitter, jitter)
     friction = BLOCK_FRICTION
     if friction_jitter > 0:
         friction = float(np.clip(BLOCK_FRICTION + rng.uniform(-friction_jitter, friction_jitter),
                                  0.8, 2.0))
     sim = Simulation(gui=False, reference_cube=False)
     enable_contact_solver(sim)
-    block = create_block(sim, BLOCK_HALF, BLOCK_MASS, tuple(start),
+    block = create_block(sim, BLOCK_HALF, BLOCK_MASS, tuple(base),
+                         orientation=p.getQuaternionFromEuler([0.0, 0.0, float(yaw)]),
                          lateral_friction=friction)
     wall = make_wall(sim.client)
     tray = make_tray(sim.client)
