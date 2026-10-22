@@ -163,6 +163,15 @@ def run_episode(runner, seed: int, args) -> dict:
                               record_interval=4, contact_interval=4)
         monitor = EpisodeMonitor(sim, block, task, sim.dt)
         runner.reset()
+        # 固定本集的全部随机源：SmolVLA 的 flow-matching 噪声来自 torch RNG，
+        # 不设种子时同一 seed 的两次评测动作会不同（1.1 审计发现）。
+        if getattr(args, 'seed_policy', True):
+            np.random.seed(int(seed))
+            torch = getattr(runner, 'torch', None)
+            if torch is not None:
+                torch.manual_seed(int(seed))
+                if torch.cuda.is_available():
+                    torch.cuda.manual_seed_all(int(seed))
         initial = task.initial
         max_z = float(initial['position'][2])
         grasp_local = None
@@ -386,6 +395,10 @@ def main(argv=None):
     parser.add_argument('--no-counterfactual-assisted', dest='counterfactual_assisted',
                         action='store_false')
     parser.add_argument('--device', default='cuda')
+    parser.add_argument('--seed-policy', action='store_true', default=True,
+                        help='按 episode seed 固定 numpy/torch RNG，使同一 seed 可复现')
+    parser.add_argument('--no-seed-policy', dest='seed_policy', action='store_false',
+                        help='关闭策略采样播种，用于测量评测噪声')
     parser.add_argument('--n-action-steps', type=int,
                         help='每个 chunk 实际执行的步数，默认沿用 checkpoint 配置（50）')
     parser.add_argument('--out', required=True, help='评测结果目录')

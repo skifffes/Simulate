@@ -96,6 +96,24 @@ def fmt_pct(k, n):
     return f'{100.0 * k / n:.0f}%' if n else '-'
 
 
+def classify(ep):
+    """按任务级失败原因重新分类。
+
+    1.1 早期版本把“闭爪指令后 20 tick 内无双指接触”当作空抓，但策略常在
+    空中先闭爪再下降，导致成功抓取也被误标。这里以任务级 failure 为准，
+    只有“没抬起且抬升 <3 cm”才归为空抓。
+    """
+    if ep.get('success'):
+        return 'completed'
+    fail = ep.get('failure') or ''
+    lift = float(ep.get('lift_height_m') or 0.0)
+    if fail == 'object_not_lifted':
+        return 'no_grasp_contact' if lift < 0.03 else 'lift_failed'
+    if fail == 'object_slipped':
+        return 'dropped_in_transport'
+    return fail or 'other'
+
+
 def main():
     summaries, episodes = [], []
     by_name = {}
@@ -110,8 +128,7 @@ def main():
         lift = [float(r.get('lift_height_m', 0.0)) for r in rows]
         xy = [float(r.get('place_xy_error_m', float('nan'))) for r in rows]
         xy = [v for v in xy if v == v]
-        prim = Counter(r.get('failure_primary') or ('completed' if r.get('success') else 'unknown')
-                       for r in rows)
+        prim = Counter(classify(r) for r in rows)
         stage = Counter(r.get('failure_stage_event') or ('completed' if r.get('success') else 'unknown')
                         for r in rows)
         summaries.append({
@@ -134,7 +151,7 @@ def main():
                 'seed': r['seed'],
                 'success': int(bool(r.get('success'))),
                 'failure': r.get('failure') or '',
-                'failure_primary': r.get('failure_primary') or '',
+                'failure_primary': classify(r),
                 'failure_stage_event': r.get('failure_stage_event') or '',
                 'failure_reasons': r.get('failure_reasons') or '',
                 'lift_height_m': r.get('lift_height_m'),

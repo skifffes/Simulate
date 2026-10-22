@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="900" viewBox="0 0 920 900">
+  <rect width="920" height="900" fill="#ffffff"/>
+  <text x="40" y="44" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" fill="#111">实验 2 场景俯视图（单位：m，世界坐标）</text>
+  <text x="40" y="72" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#555">物体 0.10 (Y) × 0.04 (X) × 0.04 (Z)；初始长轴沿 Y；A 沿 +Y 搬运；B 沿 +X 推向挡板；C 放入沿 Y 的托盘</text>
+
+  <!-- table -->
+  <rect x="100" y="100" width="600" height="700" fill="#f4f4f2" stroke="#cccccc"/>
+
+  <!-- grid every 0.1 m -->
+  <g stroke="#e6e6e3" stroke-width="1">
+    <line x1="220" y1="100" x2="220" y2="800"/><line x1="340" y1="100" x2="340" y2="800"/>
+    <line x1="460" y1="100" x2="460" y2="800"/><line x1="580" y1="100" x2="580" y2="800"/>
+    <line x1="700" y1="100" x2="700" y2="800"/>
+    <line x1="100" y1="200" x2="700" y2="200"/><line x1="100" y1="320" x2="700" y2="320"/>
+    <line x1="100" y1="440" x2="700" y2="440"/><line x1="100" y1="560" x2="700" y2="560"/>
+    <line x1="100" y1="680" x2="700" y2="680"/>
+  </g>
+
+  <!-- wall -->
+  <rect x="616" y="284" width="24" height="360" fill="#8a8a93" stroke="#5f5f66"/>
+  <text x="648" y="300" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#444">挡板 WALL</text>
+  <text x="648" y="320" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#666">内表面 x = 0.78</text>
+
+  <!-- tray -->
+  <rect x="278" y="92" width="14" height="216" fill="#4a6fc4" opacity="0.85"/>
+  <rect x="388" y="92" width="14" height="216" fill="#4a6fc4" opacity="0.85"/>
+  <text x="330" y="120" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#2f4f9e">托盘 TRAY（内宽 0.080）</text>
+
+  <!-- initial block -->
+  <rect x="316" y="620" width="48" height="120" fill="#d9772f" stroke="#9c4d13"/>
+  <text x="200" y="690" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#7a3a0e">初始：长轴沿 Y</text>
+  <text x="200" y="712" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#7a3a0e">中心 (0.55, 0.00)</text>
+
+  <!-- A place A0 -->
+  <rect x="316" y="404" width="48" height="120" fill="#f0c9a8" stroke="#c07a3a" stroke-dasharray="5 4"/>
+  <text x="380" y="450" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#8a4a12">A0 终态：长轴沿 Y</text>
+  <text x="380" y="472" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8a4a12">中心 (0.55, 0.18)</text>
+
+  <!-- A place A90 -->
+  <rect x="280" y="440" width="120" height="48" fill="none" stroke="#2f7d4f" stroke-dasharray="6 5"/>
+  <text x="380" y="516" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#2f7d4f">A90 终态：长轴沿 X（旋转 90°）</text>
+
+  <!-- arrows -->
+  <g stroke="#111" stroke-width="3" fill="none">
+    <line x1="500" y1="770" x2="640" y2="770"/>
+    <polygon points="640,770 626,763 626,777" fill="#111"/>
+    <line x1="140" y1="760" x2="140" y2="620"/>
+    <polygon points="140,620 133,634 147,634" fill="#111"/>
+  </g>
+  <text x="650" y="776" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#111">+X（B 推动方向）</text>
+  <text x="60" y="700" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#111">+Y</text>
+  <text x="40" y="726" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#555">（A 搬运方向）</text>
+
+  <!-- legend -->
+  <text x="40" y="840" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#444">A0 = 抓取后保持长轴 Y 放置；A90 = 搬运中绕 Z 真实旋转 90°，终态长轴 X。两者高层目标相同，只是 A 的执行参数不同。</text>
+  <text x="40" y="866" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#444">B 从 A 的真实终态出发沿 +X 推；C 重新抓取、必要时旋转，再放入托盘。</text>
+</svg>

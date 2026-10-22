@@ -1,0 +1,21 @@
+{
+  "trials": 5,
+  "jitter": 0.006,
+  "seeds": "7000-7004",
+  "chains": [
+    {"chain": "A0_B", "trials": 5, "A_success": 5, "B_or_C_success": 5, "full_chain_success": 5},
+    {"chain": "A90_B", "trials": 5, "A_success": 5, "B_or_C_success": 5, "full_chain_success": 5},
+    {"chain": "A0_C", "trials": 5, "A_success": 5, "B_or_C_success": 5, "full_chain_success": 5},
+    {"chain": "A90_C", "trials": 5, "A_success": 5, "B_or_C_success": 5, "full_chain_success": 5}
+  ],
+  "push_metrics": {
+    "A0_B": {"front_gap_m": 0.2094, "pushed_m": 0.2027, "end_gap_m": 0.0004,
+             "lateral_dy_m": -0.0006, "yaw_change_rad": 0.0847},
+    "A90_B": {"front_gap_m": 0.1799, "pushed_m": 0.1713, "end_gap_m": 0.0085,
+              "lateral_dy_m": -0.0003, "yaw_change_rad": 0.0113}
+  },
+  "tray_metrics": {
+    "A0_C": {"dx_m": 0.0017, "dy_m": 0.0},
+    "A90_C": {"dx_m": 0.0001, "dy_m": -0.0001}
+  }
+}

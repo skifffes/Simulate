@@ -126,7 +126,7 @@ GIF 只由离线渲染脚本生成（0B 在 `results/experiment_0b_visualization
 - 实验 1（150 条示范、15 000 步微调、初步闭环）：[docs/experiment_1.md](docs/experiment_1.md)
 - 实验 1.1（严格自主评测、渲染一致性、失败诊断、受控 OOD）：[docs/experiment_1_1.md](docs/experiment_1_1.md)
 
-关键结论：严格自主成功率 **85%**（51/60，IID held-out，chunk50，95% CI 74–92%）；旧评测的自动松爪**没有**制造假成功（对失败集补张爪反事实复跑，0 次救回）；失败全部集中在接近-抓取段（闭爪但未形成双指接触）；受控 OOD 中位置 +3 cm 降到 10%、yaw 0.25 rad 降到 0%，摩擦 0.4 仍为 100%。
+关键结论：严格自主成功率 **85%**（51/60，IID held-out，chunk50，95% CI 74–92%）；旧评测的自动松爪**没有**制造假成功（对失败集补张爪反事实复跑，0 次救回）；IID 失败集中在接近-抓取段，位置 OOD 下主要变成放置误差；受控 OOD 中位置 +3 cm 降到 10%、yaw 0.25 rad 降到 0%，摩擦 0.4 仍为 100%。
 
 ```bash
 # 服务器：严格评测（示例）
@@ -137,3 +137,16 @@ python scripts/analyze_experiment_1_1.py
 ```
 
 原始记录与图表在 [results/experiment_1_1/](results/experiment_1_1/README.md)。
+
+## 实验 2（进行中）：多原子技能与零样本组合
+
+- 阶段 1 已完成：统一坐标系、A0/A90 定义、B 的挡板与 C 的托盘，四条组合链（A0→B / A90→B / A0→C / A90→C）专家可行性各 **5/5**：[docs/experiment_2_scene.md](docs/experiment_2_scene.md)
+- 场景俯视图（带 +X/+Y 箭头）：[results/experiment_2/scene_diagram.svg](results/experiment_2/scene_diagram.svg)
+- 新代码：`src/vla/atomic_tasks/scene2.py`（统一场景）、`src/vla/atomic_tasks/experts.py`（A0/A90/B/C 专家）、`scripts/feasibility_experiment_2.py`
+
+```bash
+# 服务器：四链可行性（每链 5 个种子）
+cd ~/simulate_vla
+PYTHONPATH=. venv/bin/python -u scripts/feasibility_experiment_2.py --trials 5 \
+  --out results/experiment_2/feasibility
+```

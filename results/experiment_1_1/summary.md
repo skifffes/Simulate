@@ -29,12 +29,12 @@
 ## 主要失败原因
 
 - **VLA strict · chunk50 · IID-20**：no_grasp_contact×4
-- **VLA strict · n10 · IID-20**：no_grasp_contact×5, no_gripper_close×1
-- **VLA assisted · chunk50 · IID-20**：no_grasp_contact×3
-- **VLA strict · n10 · ss2 · IID-20**：no_grasp_contact×7
-- **VLA strict · chunk50 · IID-60**：no_grasp_contact×9
-- **VLA strict · n10 · IID-60**：no_grasp_contact×12, no_gripper_close×1
-- **VLA strict · OOD shift-x 3cm**：no_grasp_contact×9
-- **VLA strict · OOD yaw 0.25rad**：no_grasp_contact×10
+- **VLA strict · n10 · IID-20**：no_grasp_contact×4, dropped_in_transport×2
+- **VLA assisted · chunk50 · IID-20**：dropped_in_transport×2, no_grasp_contact×1
+- **VLA strict · n10 · ss2 · IID-20**：no_grasp_contact×6, dropped_in_transport×1
+- **VLA strict · chunk50 · IID-60**：no_grasp_contact×8, dropped_in_transport×1
+- **VLA strict · n10 · IID-60**：no_grasp_contact×11, dropped_in_transport×2
+- **VLA strict · OOD shift-x 3cm**：place_position_error×6, no_grasp_contact×3
+- **VLA strict · OOD yaw 0.25rad**：no_grasp_contact×9, dropped_in_transport×1
 - **VLA strict · OOD yaw 0.5rad (超几何极限)**：no_grasp_contact×10
-- **Expert · OOD yaw 0.5rad (超几何极限)**：unknown×10
+- **Expert · OOD yaw 0.5rad (超几何极限)**：tracking_error×10

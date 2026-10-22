@@ -122,9 +122,13 @@ class EpisodeMonitor:
             ev['close_width_cmd'] = float(width_cmd)
             ev['close_width_actual'] = width_actual
             ev['close_dual_contact'] = int(dual)
-        if 'close_cmd' in ev and 'dual_contact' not in ev and tick - ev['close_cmd'] <= CLOSE_GRACE_TICKS:
-            if dual:
-                ev['dual_contact'] = tick
+        if 'close_cmd' in ev and 'grasp' not in ev and dual:
+            # 抓持时刻以“双指首次同时接触”为准，而不是闭爪指令时刻：
+            # 策略常常先在空中闭爪再下降，用闭爪时刻会把成功的抓取也标成空抓。
+            ev['grasp'] = tick
+            ev['grasp_offset_xy'] = _xy(center, obj_pos)
+            ev['grasp_offset_z'] = float(center[2] - obj_pos[2])
+            ev['close_to_grasp_ticks'] = tick - ev['close_cmd']
         if 'liftoff' not in ev and obj_pos[2] - self.init[2] > LIFTOFF_DZ:
             ev['liftoff'] = tick
             ev['liftoff_offset'] = float(np.linalg.norm(obj_pos - center))
@@ -160,37 +164,38 @@ class EpisodeMonitor:
         final_width = self.rows[-1]['width_actual'] if self.rows else 0.0
 
         reasons = []
+        fail = result.get('failure') or ''
         if not result.get('success'):
             if 'close_cmd' not in ev:
                 primary, stage = 'no_gripper_close', 'approach'
                 reasons.append('全程未下达闭合指令')
-            elif not ev.get('close_dual_contact', 0):
+            elif 'grasp' not in ev and fail in ('object_not_lifted', ''):
                 primary, stage = 'no_grasp_contact', 'grasp'
-                reasons.append('闭爪后双指未同时接触工件')
-            elif lift < 0.03:
+                reasons.append('闭爪后全程未形成双指接触')
+            elif fail == 'object_not_lifted':
                 primary, stage = 'lift_failed', 'lift'
                 reasons.append(f'抬升仅 {lift * 1000:.0f} mm')
-            elif self.slip > 0.02:
+            elif fail == 'object_slipped':
                 primary, stage = 'dropped_in_transport', 'transport'
                 reasons.append(f'相对滑移 {self.slip * 1000:.0f} mm')
-            elif 'target_entry' not in ev and not released:
-                primary, stage = 'no_autonomous_release', 'release'
-                reasons.append('未自主张开夹爪')
-            elif 'target_entry' not in ev:
+            elif fail == 'place_position_error':
                 primary, stage = 'place_position_error', 'place'
                 reasons.append(f'放置点偏差 {xy_err * 1000:.0f} mm')
-            elif not released:
-                primary, stage = 'no_autonomous_release', 'release'
-                reasons.append('到达目标区但未自主张开夹爪')
-            elif result.get('release_contacts', 0) > 0:
+            elif fail == 'not_released':
                 primary, stage = 'no_autonomous_release', 'release'
                 reasons.append('释放后仍与工件接触')
+            elif fail in ('place_height_error', 'object_tipped'):
+                primary, stage = 'place_unstable', 'place'
+                reasons.append(str(result.get('failure_text') or fail))
             elif timeout:
                 primary, stage = 'timeout', 'timeout'
                 reasons.append('超时')
+            elif fail:
+                primary, stage = fail, 'settle'
+                reasons.append(str(result.get('failure_text') or fail))
             else:
-                primary, stage = (result.get('failure') or 'other'), 'settle'
-                reasons.append(str(result.get('failure_text') or result.get('failure')))
+                primary, stage = 'other', 'settle'
+                reasons.append('任务失败但无明确类别')
         else:
             primary, stage = 'completed', 'completed'
 
