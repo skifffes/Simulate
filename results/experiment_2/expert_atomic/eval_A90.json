@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "skill": "A90",
+    "episodes": 20,
+    "success": 20,
+    "success_rate": 1.0,
+    "mean_latency_ms": 0.0,
+    "ticks_mean": 7.0
+  },
+  "episodes": [
+    {
+      "final_position": [
+        0.5499620195925814,
+        0.18302811522856355,
+        0.01998695989877665
+      ],
+      "final_yaw_rad": -1.5668215386661206,
+      "final_tilt_deg": 0.013367009055236322,
+      "final_speed_m_s": 5.299833345768247e-07,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0030283534055334754,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000000,
+      "ticks": 7,
+      "wall_seconds": 0.99,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5493600466535326,
+          0.004290620454014821,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499623382943617,
+        0.18254791706758675,
+        0.019984885354416435
+      ],
+      "final_yaw_rad": -1.5655930371570688,
+      "final_tilt_deg": 0.008034615708778264,
+      "final_speed_m_s": 1.959564152195827e-06,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0025481953981928984,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000001,
+      "ticks": 7,
+      "wall_seconds": 1.03,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5495517700055687,
+          0.007421674269915494,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499448991263645,
+        0.18254989846691427,
+        0.019990249832328784
+      ],
+      "final_yaw_rad": -1.5655772060532038,
+      "final_tilt_deg": 0.013446949924602387,
+      "final_speed_m_s": 4.1138459901739856e-07,
+      "lift_height_m": 3.32086628918038e-07,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0025504937360925233,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000002,
+      "ticks": 7,
+      "wall_seconds": 1.0,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5472958209791787,
+          0.0021254028360972593,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499834653141096,
+        0.18259414166423185,
+        0.01998732042572201
+      ],
+      "final_yaw_rad": -1.5644514927661262,
+      "final_tilt_deg": 0.00608827638237934,
+      "final_speed_m_s": 5.5859829789942967e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0025941943585516356,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000003,
+      "ticks": 7,
+      "wall_seconds": 1.39,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5438393491801969,
+          -0.006769606440693124,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499784683915708,
+        0.18314460484253084,
+        0.0199871262390921
+      ],
+      "final_yaw_rad": -1.565846568097812,
+      "final_tilt_deg": 0.005494491353892868,
+      "final_speed_m_s": 1.159900821148026e-07,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0031446785568369296,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000004,
+      "ticks": 7,
+      "wall_seconds": 1.14,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5538583628768509,
+          -0.0018549785210887947,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499559915145416,
+        0.18250630621781685,
+        0.019984851011931752
+      ],
+      "final_yaw_rad": -1.5653909753815547,
+      "final_tilt_deg": 0.007913003762294145,
+      "final_speed_m_s": 3.1961610085558095e-06,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.002506692562772669,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000005,
+      "ticks": 7,
+      "wall_seconds": 1.2,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5550490710143678,
+          0.004227758038456384,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499824366702806,
+        0.18259677473254102,
+        0.01998755702028427
+      ],
+      "final_yaw_rad": -1.5643387298432812,
+      "final_tilt_deg": 0.006219619044312633,
+      "final_speed_m_s": 4.441170768940199e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0025968341268002354,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000006,
+      "ticks": 7,
+      "wall_seconds": 1.04,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.545903607505076,
+          -0.0014491698511139945,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499702141825655,
+        0.18091015594041357,
+        0.01998478103317769
+      ],
+      "final_yaw_rad": -1.5654702545477717,
+      "final_tilt_deg": 0.01843506997137974,
+      "final_speed_m_s": 1.314371934824456e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0009106431962027517,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000007,
+      "ticks": 7,
+      "wall_seconds": 1.05,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5474940572651574,
+          -0.005034823470993033,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499639252554931,
+        0.1824375515985255,
+        0.01998608561249821
+      ],
+      "final_yaw_rad": -1.5649381370319349,
+      "final_tilt_deg": 0.0065363435906864295,
+      "final_speed_m_s": 1.4752845532293325e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0024378185294778496,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000008,
+      "ticks": 7,
+      "wall_seconds": 1.1,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5531434012809263,
+          0.0005576803372980763,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499510959411147,
+        0.18268701720006864,
+        0.019988207210246575
+      ],
+      "final_yaw_rad": -1.5664173216505874,
+      "final_tilt_deg": 0.006545764545816602,
+      "final_speed_m_s": 2.396138479413066e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0026874621933043424,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000009,
+      "ticks": 7,
+      "wall_seconds": 0.97,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5522569126793337,
+          -0.007818596888004216,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499603380698994,
+        0.18251022885203325,
+        0.01998485523270723
+      ],
+      "final_yaw_rad": -1.5654290297105131,
+      "final_tilt_deg": 0.0078539732708528,
+      "final_speed_m_s": 2.186731114169102e-06,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.002510542164210649,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000010,
+      "ticks": 7,
+      "wall_seconds": 1.03,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5575916597624188,
+          -0.006005275802077023,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499707517077439,
+        0.18096351275371703,
+        0.019985436116156833
+      ],
+      "final_yaw_rad": -1.5655457726516686,
+      "final_tilt_deg": 0.016323332027558965,
+      "final_speed_m_s": 1.0519509600840925e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0009639565805446222,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000011,
+      "ticks": 7,
+      "wall_seconds": 1.03,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5541236160465103,
+          0.005463933637129438,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499790377382553,
+        0.18315889704142008,
+        0.019986646427510444
+      ],
+      "final_yaw_rad": -1.565762235963029,
+      "final_tilt_deg": 0.005680131950557963,
+      "final_speed_m_s": 9.553032310135034e-09,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0031589665928448835,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000012,
+      "ticks": 7,
+      "wall_seconds": 1.0,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5493684303728353,
+          0.007468541624284449,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499679709738853,
+        0.18095090764436014,
+        0.019984776080477374
+      ],
+      "final_yaw_rad": -1.5655833346482728,
+      "final_tilt_deg": 0.018511140188351108,
+      "final_speed_m_s": 1.2484967891984847e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0009514469016274259,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000013,
+      "ticks": 7,
+      "wall_seconds": 1.01,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5554427585471909,
+          0.005431252945246141,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499781971086529,
+        0.18085252787183098,
+        0.019984818039414834
+      ],
+      "final_yaw_rad": -1.565115574392049,
+      "final_tilt_deg": 0.018369890611618065,
+      "final_speed_m_s": 1.470215154611777e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0008528066242236678,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000014,
+      "ticks": 7,
+      "wall_seconds": 0.99,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5457123106745674,
+          -0.0023151783055087452,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499373945285225,
+        0.18271960219207062,
+        0.0199869618848602
+      ],
+      "final_yaw_rad": -1.566496002913082,
+      "final_tilt_deg": 0.013360033564196587,
+      "final_speed_m_s": 5.324187104850986e-07,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.002720322688243854,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000015,
+      "ticks": 7,
+      "wall_seconds": 1.16,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.545730510643292,
+          -0.004586851913279162,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499653224791062,
+        0.1828410727367655,
+        0.019988657174626927
+      ],
+      "final_yaw_rad": -1.5666140512673752,
+      "final_tilt_deg": 0.0048612029106370625,
+      "final_speed_m_s": 6.307273706291341e-09,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0028412843620531196,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000016,
+      "ticks": 7,
+      "wall_seconds": 0.97,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5434370599520513,
+          0.00458522330936682,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499747560624458,
+        0.18239939854307005,
+        0.01998705844932195
+      ],
+      "final_yaw_rad": -1.5647916478797093,
+      "final_tilt_deg": 0.005979334298849287,
+      "final_speed_m_s": 1.1167913515023764e-08,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.002399531334421361,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000017,
+      "ticks": 7,
+      "wall_seconds": 1.02,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5537216444479688,
+          0.004186389305882429,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5499503167694181,
+        0.18255295832956825,
+        0.019987275086731596
+      ],
+      "final_yaw_rad": -1.5663024291074459,
+      "final_tilt_deg": 0.006599720328465652,
+      "final_speed_m_s": 5.866982952192548e-09,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0025534417275342313,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000018,
+      "ticks": 7,
+      "wall_seconds": 1.01,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5460581469327392,
+          0.0033932641606811715,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.549957640142646,
+        0.1829297219791598,
+        0.01998696074399918
+      ],
+      "final_yaw_rad": -1.5667296577645538,
+      "final_tilt_deg": 0.013364061786968631,
+      "final_speed_m_s": 5.317892293044419e-07,
+      "lift_height_m": 0.0,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0029300281965686094,
+      "failure": null,
+      "success": true,
+      "skill": "A90",
+      "seed": 40000019,
+      "ticks": 7,
+      "wall_seconds": 1.22,
+      "mean_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "expert_reason": "ok",
+      "scene": {
+        "start": [
+          0.5473906875500935,
+          0.002955249621379965,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    }
+  ]
+}

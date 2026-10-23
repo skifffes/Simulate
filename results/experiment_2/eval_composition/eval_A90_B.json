@@ -1,0 +1,573 @@
+{
+  "summary": {
+    "chain": "A90_B",
+    "episodes": 20,
+    "chain_success": 0,
+    "chain_rate": 0.0,
+    "A_success": 20,
+    "conditional_B_success": 0,
+    "conditional_B_rate": 0.0
+  },
+  "episodes": [
+    {
+      "chain": "A90_B",
+      "seed": 40000000,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 32.53,
+      "a_initial": {
+        "position": [
+          0.5493600466535326,
+          0.004290620454014821,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6687457244291073,
+        0.21424775354075254,
+        0.08115433972972515
+      ],
+      "final_yaw_rad": -1.5039844274836425,
+      "final_tilt_deg": 0.5282412287097908,
+      "final_speed": 0.0028170803532322065,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000001,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 33.04,
+      "a_initial": {
+        "position": [
+          0.5495517700055687,
+          0.007421674269915494,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6740480298780659,
+        0.2080790973382502,
+        0.08420189221029344
+      ],
+      "final_yaw_rad": -1.4492119114166222,
+      "final_tilt_deg": 1.9854778458922984,
+      "final_speed": 9.34292974123084e-05,
+      "final_contacts": 3
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000002,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 140,
+      "b_ticks": 200,
+      "wall_seconds": 31.68,
+      "a_initial": {
+        "position": [
+          0.5472958209791787,
+          0.0021254028360972593,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6657378701102731,
+        0.20976220870689483,
+        0.08843597723665274
+      ],
+      "final_yaw_rad": -1.4981267831957774,
+      "final_tilt_deg": 1.0358886531420524,
+      "final_speed": 0.03128944212794163,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000003,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 31.7,
+      "a_initial": {
+        "position": [
+          0.5438393491801969,
+          -0.006769606440693124,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5579854935781443,
+        0.19475502511140838,
+        0.01998758645498886
+      ],
+      "final_yaw_rad": -1.5885632595835963,
+      "final_tilt_deg": 0.00583708446093683,
+      "final_speed": 3.977362506571486e-08,
+      "final_contacts": 0
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000004,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 139,
+      "b_ticks": 200,
+      "wall_seconds": 31.88,
+      "a_initial": {
+        "position": [
+          0.5538583628768509,
+          -0.0018549785210887947,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6694193591071455,
+        0.2081761900701991,
+        0.08993479108136336
+      ],
+      "final_yaw_rad": -1.4501468747507908,
+      "final_tilt_deg": 0.805956666512189,
+      "final_speed": 1.3008734701916046e-06,
+      "final_contacts": 3
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000005,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 31.67,
+      "a_initial": {
+        "position": [
+          0.5550490710143678,
+          0.004227758038456384,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6755073573116367,
+        0.21688321975945535,
+        0.08789725907647326
+      ],
+      "final_yaw_rad": -1.5043591886112024,
+      "final_tilt_deg": 1.357753135487911,
+      "final_speed": 5.333913512034652e-08,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000006,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 31.39,
+      "a_initial": {
+        "position": [
+          0.545903607505076,
+          -0.0014491698511139945,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5340448758106784,
+        0.18440003038145994,
+        0.019986736889143198
+      ],
+      "final_yaw_rad": -1.5487442356517476,
+      "final_tilt_deg": 0.011812666969045215,
+      "final_speed": 6.385123491128122e-10,
+      "final_contacts": 0
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000007,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 31.52,
+      "a_initial": {
+        "position": [
+          0.5474940572651574,
+          -0.005034823470993033,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5609751070076714,
+        0.21864761251274534,
+        0.028273366175487567
+      ],
+      "final_yaw_rad": -2.2224616580323477,
+      "final_tilt_deg": 44.54163898174302,
+      "final_speed": 2.2851658689378502e-11,
+      "final_contacts": 0
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000008,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 31.94,
+      "a_initial": {
+        "position": [
+          0.5531434012809263,
+          0.0005576803372980763,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.661529195900569,
+        0.2119281587548243,
+        0.0801704154593891
+      ],
+      "final_yaw_rad": -1.403536013655101,
+      "final_tilt_deg": 2.284564320780993,
+      "final_speed": 6.08366759183365e-07,
+      "final_contacts": 4
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000009,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 31.82,
+      "a_initial": {
+        "position": [
+          0.5522569126793337,
+          -0.007818596888004216,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6721662415410261,
+        0.21426394220006326,
+        0.08228766881907615
+      ],
+      "final_yaw_rad": -1.4756389545754107,
+      "final_tilt_deg": 1.6017581012858164,
+      "final_speed": 2.6470307462304653e-07,
+      "final_contacts": 3
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000010,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 143,
+      "b_ticks": 200,
+      "wall_seconds": 33.41,
+      "a_initial": {
+        "position": [
+          0.5575916597624188,
+          -0.006005275802077023,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6763730994814592,
+        0.2005253622593963,
+        0.08994117995546533
+      ],
+      "final_yaw_rad": -1.490683660486861,
+      "final_tilt_deg": 0.32488827643883106,
+      "final_speed": 0.018879636246280647,
+      "final_contacts": 7
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000011,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 140,
+      "b_ticks": 200,
+      "wall_seconds": 31.81,
+      "a_initial": {
+        "position": [
+          0.5541236160465103,
+          0.005463933637129438,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6703075410435536,
+        0.20206362313722412,
+        0.08765908943525276
+      ],
+      "final_yaw_rad": -1.454572345341287,
+      "final_tilt_deg": 0.7584231683168241,
+      "final_speed": 0.021917717659702442,
+      "final_contacts": 3
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000012,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 33.13,
+      "a_initial": {
+        "position": [
+          0.5493684303728353,
+          0.007468541624284449,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6681850143504918,
+        0.20764405838903593,
+        0.08485137887116188
+      ],
+      "final_yaw_rad": -1.5439282295495422,
+      "final_tilt_deg": 2.019993928207638,
+      "final_speed": 1.4013855142139997e-07,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000013,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 140,
+      "b_ticks": 200,
+      "wall_seconds": 32.83,
+      "a_initial": {
+        "position": [
+          0.5554427585471909,
+          0.005431252945246141,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5889218687591138,
+        0.17293390718418994,
+        0.019985923411412466
+      ],
+      "final_yaw_rad": -1.659135870598685,
+      "final_tilt_deg": 0.01662465606751547,
+      "final_speed": 4.508451462521714e-07,
+      "final_contacts": 0
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000014,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 33.09,
+      "a_initial": {
+        "position": [
+          0.5457123106745674,
+          -0.0023151783055087452,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5638896539091615,
+        0.17608545355922645,
+        0.01998817784142728
+      ],
+      "final_yaw_rad": -1.441833751482322,
+      "final_tilt_deg": 0.0030412271034610306,
+      "final_speed": 2.5614316720613288e-08,
+      "final_contacts": 0
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000015,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 33.81,
+      "a_initial": {
+        "position": [
+          0.545730510643292,
+          -0.004586851913279162,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.67397714957047,
+        0.20823275408130168,
+        0.08593470218724884
+      ],
+      "final_yaw_rad": -1.518619529032854,
+      "final_tilt_deg": 3.1308063476278187,
+      "final_speed": 2.6952746199670463e-06,
+      "final_contacts": 4
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000016,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 140,
+      "b_ticks": 200,
+      "wall_seconds": 32.71,
+      "a_initial": {
+        "position": [
+          0.5434370599520513,
+          0.00458522330936682,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6374601440123175,
+        0.22459514828013188,
+        0.08503782872383311
+      ],
+      "final_yaw_rad": -0.9238983364523662,
+      "final_tilt_deg": 99.1486542347881,
+      "final_speed": 0.00025289206725294643,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000017,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 142,
+      "b_ticks": 200,
+      "wall_seconds": 32.35,
+      "a_initial": {
+        "position": [
+          0.5537216444479688,
+          0.004186389305882429,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.6591044406711712,
+        0.20149142247306745,
+        0.07428439083158166
+      ],
+      "final_yaw_rad": -1.4050452122248442,
+      "final_tilt_deg": 5.663821739378744,
+      "final_speed": 0.03757194290803767,
+      "final_contacts": 2
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000018,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 139,
+      "b_ticks": 200,
+      "wall_seconds": 32.17,
+      "a_initial": {
+        "position": [
+          0.5460581469327392,
+          0.0033932641606811715,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.668030274123979,
+        0.21052584628724436,
+        0.08733349814301548
+      ],
+      "final_yaw_rad": -1.476554225437143,
+      "final_tilt_deg": 4.258871833713859,
+      "final_speed": 0.00012085604965771018,
+      "final_contacts": 3
+    },
+    {
+      "chain": "A90_B",
+      "seed": 40000019,
+      "phase_reached": "B",
+      "A_success": true,
+      "B_success": false,
+      "chain_success": false,
+      "a_ticks": 141,
+      "b_ticks": 200,
+      "wall_seconds": 32.34,
+      "a_initial": {
+        "position": [
+          0.5473906875500935,
+          0.002955249621379965,
+          0.019989917745699866
+        ],
+        "yaw": 0.0
+      },
+      "final_position": [
+        0.5872945722155005,
+        0.172040349821335,
+        0.01998626417339034
+      ],
+      "final_yaw_rad": -1.6197635623733393,
+      "final_tilt_deg": 0.012370428586124232,
+      "final_speed": 5.829711547372166e-06,
+      "final_contacts": 0
+    }
+  ]
+}

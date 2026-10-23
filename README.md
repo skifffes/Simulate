@@ -138,20 +138,37 @@ python scripts/analyze_experiment_1_1.py
 
 原始记录与图表在 [results/experiment_1_1/](results/experiment_1_1/README.md)。
 
-## 实验 2（进行中）：多原子技能与零样本组合
+## 实验 2：多原子技能与零样本组合
 
-- 阶段 1 已完成：统一坐标系、A0/A90 定义、B 的挡板与 C 的托盘，四条组合链（A0→B / A90→B / A0→C / A90→C）专家可行性各 **5/5**：[docs/experiment_2_scene.md](docs/experiment_2_scene.md)
-- 场景俯视图（带 +X/+Y 箭头）：[results/experiment_2/scene_diagram.svg](results/experiment_2/scene_diagram.svg)
-- 阶段 2 已完成：四个技能各 120 条独立示范，合成 480 集 / 68 808 帧的多任务 LeRobot 数据集，校验 11 540 项 0 失败：[docs/experiment_2_data.md](docs/experiment_2_data.md)
-- 新代码：`src/vla/atomic_tasks/scene2.py`（统一场景）、`src/vla/atomic_tasks/experts.py`（A0/A90/B/C 专家）、`src/vla/atomic_tasks/recording.py`（20 Hz 录制）、`scripts/collect_multi_atomic_data.py`
+- 完整报告：[docs/experiment_2.md](docs/experiment_2.md)
+- 阶段 1（统一场景与四链可行性 5/5）：[docs/experiment_2_scene.md](docs/experiment_2_scene.md)
+- 阶段 2（480 集多任务数据集，校验 0 失败）：[docs/experiment_2_data.md](docs/experiment_2_data.md)
+- 阶段 3/4（共享 SmolVLA 训练 20K 步 + 原子评测）：[docs/experiment_2_training.md](docs/experiment_2_training.md)
+- 场景俯视图：[results/experiment_2/scene_diagram.svg](results/experiment_2/scene_diagram.svg)
+
+**结果**：原子技能 A0 **100%**、A90 **100%**、B **40%**、C **95%**（专家 100/100/90/95）；组合 A0→B **0/20**、A90→B **0/20**、A0→C **20/20**、A90→C **0/20**。
+
+关键结论：原子技能会做不等于组合会做。C 单独 95%，在 A90 之后掉到 0%；B 单独 40%，在 A 之后掉到 0%；而 A0→C 是 100%。失败来自**交接状态分布偏移**（B 在 A 之后把物体抓起来而不是推、C 在 A90 的旋转腕构型下抓不住），不是原子能力本身。
 
 ```bash
-# 服务器：四链可行性（每链 5 个种子）
+# 服务器：训练（单卡 A40，20K 步，约 111 分钟）
 cd ~/simulate_vla
-PYTHONPATH=. venv/bin/python -u scripts/feasibility_experiment_2.py --trials 5 \
-  --out results/experiment_2/feasibility
+GPU=0 STEPS=20000 BATCH=8 SAVE_FREQ=2000 \
+  setsid nohup bash server/train_smolvla_multi.sh > logs/e2_train.log 2>&1 &
 
-# 服务器：采集并合并多任务数据集
-PYTHONPATH=. venv/bin/python -u scripts/collect_multi_atomic_data.py \
-  --merge --out data/lerobot_panda_multi --shards data/_shards_exp2
+# 原子评测与组合评测
+CUDA_VISIBLE_DEVICES=3 HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python \
+  scripts/eval_multi_atomic_vla.py \
+  --policy outputs/smolvla_multi/checkpoints/020000/pretrained_model \
+  --skills A0 A90 B C --episodes 20 --seed-base 40000000 \
+  --out results/experiment_2/eval_atomic
+
+CUDA_VISIBLE_DEVICES=3 HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python \
+  scripts/eval_skill_composition.py \
+  --policy outputs/smolvla_multi/checkpoints/020000/pretrained_model \
+  --chains A0_B A90_B A0_C A90_C --episodes 20 --seed-base 40000000 \
+  --out results/experiment_2/eval_composition
+
+# 本地汇总
+python scripts/analyze_experiment_2.py
 ```

@@ -1,0 +1,13 @@
+kind,name,episodes,success,rate
+atomic,A0,20,20,1.0
+atomic,A90,20,20,1.0
+atomic,B,20,8,0.4
+atomic,C,20,19,0.95
+expert,A0,20,20,1.0
+expert,A90,20,20,1.0
+expert,B,20,18,0.9
+expert,C,20,19,0.95
+chain,A0_B,20,0,0.0
+chain,A90_B,20,0,0.0
+chain,A0_C,20,20,1.0
+chain,A90_C,20,0,0.0
