@@ -172,3 +172,16 @@ CUDA_VISIBLE_DEVICES=3 HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python \
 # 本地汇总
 python scripts/analyze_experiment_2.py
 ```
+
+## 实验 2.1（进行中）：组合失败的交接状态归因
+
+- 阶段 1（核对与冻结）已完成：[docs/experiment_2_1_audit.md](docs/experiment_2_1_audit.md)
+- 冻结配置与模型校验和：[results/experiment_2_1/frozen_config.json](results/experiment_2_1/frozen_config.json)
+- 关键发现：实验 2 的 480 条示范**全部从同一个 HOME 构型出发**（四个技能的起始关节各只有 1 个唯一值），B/C 只覆盖了物体位姿、没有覆盖机器人构型；A0/A90/C 的成功集都有 11 cm 以上的真实抬升并自主释放。
+
+```bash
+# 服务器：复跑核对
+PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
+  --dataset data/lerobot_panda_multi --diag data/_shards_exp2 \
+  --results results/experiment_2 --out results/experiment_2_1/audit
+```

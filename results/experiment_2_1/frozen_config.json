@@ -1,0 +1,60 @@
+{
+  "experiment": "2.1",
+  "freeze_date": "2026-10-23",
+  "purpose": "对实验 2 的技能组合失败做受控归因诊断；本轮不微调模型",
+  "checkpoint": {
+    "path": "outputs/smolvla_multi/checkpoints/020000/pretrained_model",
+    "model_sha256": "b7924be757424d4ddcafb50bccb0bb28b1332a8a4f07a3cad97a93f98bfc641d",
+    "model_bytes": 906713352,
+    "mtime": "2026-10-23 14:00"
+  },
+  "git_commit_local": "cc1f9e9",
+  "policy": {
+    "base": "lerobot/smolvla_base",
+    "n_action_steps": 50,
+    "chunk_size": 50,
+    "device": "cuda",
+    "eval_mode": true
+  },
+  "control": {
+    "fps": 20,
+    "steps_per_action": 12,
+    "sim_hz": 240,
+    "max_ticks_atomic": 260,
+    "max_ticks_composition_a": 200,
+    "max_ticks_composition_b": 200
+  },
+  "cameras": {
+    "top": {
+      "target": [0.55, 0.21, 0.02],
+      "distance": 1.05,
+      "yaw": 50.0,
+      "pitch": -52.0,
+      "fov": 50.0
+    },
+    "wrist": {
+      "link": 8,
+      "offset": [0.09, 0.0, -0.01],
+      "aim": "grasp",
+      "fov": 75.0
+    },
+    "image_size": [256, 256],
+    "supersample": 1
+  },
+  "tasks": {
+    "A0": "pick up the orange block and place it in the target area, keeping its long side aligned with Y",
+    "A90": "pick up the orange block and place it in the target area, with its long side aligned with X",
+    "B": "push the orange block along the positive X direction to the wall",
+    "C": "pick up the orange block and place it into the tray, with its long side aligned with Y"
+  },
+  "seeds": {
+    "eval": "40000000-40000019",
+    "collection": "A0 900000+, A90 910000+, B 920000+, C 930000+"
+  },
+  "success_criteria": {
+    "A0": "distance to PLACE <= 2 cm, long axis Y error <= 12 deg, tilt <= 12 deg, released, rest",
+    "A90": "distance to PLACE <= 2 cm, long axis X error <= 12 deg, tilt <= 12 deg, released, rest",
+    "B": "front gap to wall <= 2 cm, |lateral dy| <= 2 cm, yaw change <= 15 deg, tilt <= 12 deg, rest",
+    "C": "|dx| <= 2 cm, |dy| <= 5 cm, long axis Y error <= 12 deg, tilt <= 12 deg, released, rest"
+  }
+}

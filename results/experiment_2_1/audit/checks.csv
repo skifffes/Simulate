@@ -1,0 +1,16 @@
+scope,check,ok,detail
+dataset,episodes == 480,True,480
+dataset,tasks == 4,True,4
+start-states,A0 起始关节唯一值数 == 1,True,1
+start-states,A0 起始关节与 HOME 最大偏差 < 1e-4,True,1.3852119445711963e-05
+start-states,A90 起始关节唯一值数 == 1,True,1
+start-states,A90 起始关节与 HOME 最大偏差 < 1e-4,True,1.3852119445711963e-05
+start-states,B 起始关节唯一值数 == 1,True,1
+start-states,B 起始关节与 HOME 最大偏差 < 1e-4,True,1.3852119445711963e-05
+start-states,C 起始关节唯一值数 == 1,True,1
+start-states,C 起始关节与 HOME 最大偏差 < 1e-4,True,1.3852119445711963e-05
+object-dist,B 物体 yaw 只取 0/90 附近,True,"[-5.0, -4.0, -3.0, -2.0, -1.0, -0.0, 2.0, 3.0]"
+object-dist,C 物体 yaw 只取 0/90 附近,True,"[-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0]"
+eval,A0 成功集全部有 >3cm 抬升,True,no_lift=0
+eval,A90 成功集全部有 >3cm 抬升,True,no_lift=0
+eval,C 成功集全部有 >3cm 抬升,True,no_lift=0
