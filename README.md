@@ -176,8 +176,9 @@ python scripts/analyze_experiment_2.py
 ## 实验 2.1（进行中）：组合失败的交接状态归因
 
 - 阶段 1（核对与冻结）已完成：[docs/experiment_2_1_audit.md](docs/experiment_2_1_audit.md)
+- 阶段 2（真实交接快照与恢复验证）已完成：[docs/experiment_2_1_snapshots.md](docs/experiment_2_1_snapshots.md)
 - 冻结配置与模型校验和：[results/experiment_2_1/frozen_config.json](results/experiment_2_1/frozen_config.json)
-- 关键发现：实验 2 的 480 条示范**全部从同一个 HOME 构型出发**（四个技能的起始关节各只有 1 个唯一值），B/C 只覆盖了物体位姿、没有覆盖机器人构型；A0/A90/C 的成功集都有 11 cm 以上的真实抬升并自主释放。
+- 关键发现：实验 2 的 480 条示范**全部从同一个 HOME 构型出发**（四个技能的起始关节各只有 1 个唯一值），B/C 只覆盖了物体位姿、没有覆盖机器人构型；A0/A90/C 的成功集都有 11 cm 以上的真实抬升并自主释放；A0 与 A90 的终态差异主要在第 7 关节（1.41 rad），且都不接近限位；40 个快照恢复后关节/物体/图像逐位一致。
 
 ```bash
 # 服务器：复跑核对

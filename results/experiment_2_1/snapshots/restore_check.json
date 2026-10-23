@@ -1,0 +1,886 @@
+{
+  "checked": 40,
+  "passed": 40,
+  "reports": [
+    {
+      "file": "A0_40000000.json",
+      "skill": "A0",
+      "seed": 40000000,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5493600466535326,
+        0.004290620454014821,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000001.json",
+      "skill": "A0",
+      "seed": 40000001,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5495517700055687,
+        0.007421674269915494,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000002.json",
+      "skill": "A0",
+      "seed": 40000002,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 2.9802322387695312e-08,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5472958209791787,
+        0.0021254028360972593,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000003.json",
+      "skill": "A0",
+      "seed": 40000003,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5438393491801969,
+        -0.006769606440693124,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000004.json",
+      "skill": "A0",
+      "seed": 40000004,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5538583628768509,
+        -0.0018549785210887947,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000005.json",
+      "skill": "A0",
+      "seed": 40000005,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5550490710143678,
+        0.004227758038456384,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000006.json",
+      "skill": "A0",
+      "seed": 40000006,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.545903607505076,
+        -0.0014491698511139945,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000007.json",
+      "skill": "A0",
+      "seed": 40000007,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5474940572651574,
+        -0.005034823470993033,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000008.json",
+      "skill": "A0",
+      "seed": 40000008,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5531434012809263,
+        0.0005576803372980763,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000009.json",
+      "skill": "A0",
+      "seed": 40000009,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5522569126793337,
+        -0.007818596888004216,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000010.json",
+      "skill": "A0",
+      "seed": 40000010,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5575916597624188,
+        -0.006005275802077023,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000011.json",
+      "skill": "A0",
+      "seed": 40000011,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5541236160465103,
+        0.005463933637129438,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000012.json",
+      "skill": "A0",
+      "seed": 40000012,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 2.9802322387695312e-08,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5493684303728353,
+        0.007468541624284449,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000013.json",
+      "skill": "A0",
+      "seed": 40000013,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5554427585471909,
+        0.005431252945246141,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000014.json",
+      "skill": "A0",
+      "seed": 40000014,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5457123106745674,
+        -0.0023151783055087452,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000015.json",
+      "skill": "A0",
+      "seed": 40000015,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.545730510643292,
+        -0.004586851913279162,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000016.json",
+      "skill": "A0",
+      "seed": 40000016,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5434370599520513,
+        0.00458522330936682,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000017.json",
+      "skill": "A0",
+      "seed": 40000017,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5537216444479688,
+        0.004186389305882429,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000018.json",
+      "skill": "A0",
+      "seed": 40000018,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5460581469327392,
+        0.0033932641606811715,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A0_40000019.json",
+      "skill": "A0",
+      "seed": 40000019,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 2.9802322387695312e-08,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5473906875500935,
+        0.002955249621379965,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000000.json",
+      "skill": "A90",
+      "seed": 40000000,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5493600466535326,
+        0.004290620454014821,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000001.json",
+      "skill": "A90",
+      "seed": 40000001,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5495517700055687,
+        0.007421674269915494,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000002.json",
+      "skill": "A90",
+      "seed": 40000002,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5472958209791787,
+        0.0021254028360972593,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000003.json",
+      "skill": "A90",
+      "seed": 40000003,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5438393491801969,
+        -0.006769606440693124,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000004.json",
+      "skill": "A90",
+      "seed": 40000004,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5538583628768509,
+        -0.0018549785210887947,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000005.json",
+      "skill": "A90",
+      "seed": 40000005,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5550490710143678,
+        0.004227758038456384,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000006.json",
+      "skill": "A90",
+      "seed": 40000006,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.545903607505076,
+        -0.0014491698511139945,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000007.json",
+      "skill": "A90",
+      "seed": 40000007,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5474940572651574,
+        -0.005034823470993033,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000008.json",
+      "skill": "A90",
+      "seed": 40000008,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 2.9802322387695312e-08,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5531434012809263,
+        0.0005576803372980763,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000009.json",
+      "skill": "A90",
+      "seed": 40000009,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5522569126793337,
+        -0.007818596888004216,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000010.json",
+      "skill": "A90",
+      "seed": 40000010,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5575916597624188,
+        -0.006005275802077023,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000011.json",
+      "skill": "A90",
+      "seed": 40000011,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5541236160465103,
+        0.005463933637129438,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000012.json",
+      "skill": "A90",
+      "seed": 40000012,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5493684303728353,
+        0.007468541624284449,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000013.json",
+      "skill": "A90",
+      "seed": 40000013,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5554427585471909,
+        0.005431252945246141,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000014.json",
+      "skill": "A90",
+      "seed": 40000014,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5457123106745674,
+        -0.0023151783055087452,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000015.json",
+      "skill": "A90",
+      "seed": 40000015,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.545730510643292,
+        -0.004586851913279162,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000016.json",
+      "skill": "A90",
+      "seed": 40000016,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5434370599520513,
+        0.00458522330936682,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000017.json",
+      "skill": "A90",
+      "seed": 40000017,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5537216444479688,
+        0.004186389305882429,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000018.json",
+      "skill": "A90",
+      "seed": 40000018,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5460581469327392,
+        0.0033932641606811715,
+        0.0199898253144541
+      ]
+    },
+    {
+      "file": "A90_40000019.json",
+      "skill": "A90",
+      "seed": 40000019,
+      "joint_max_diff": 0.0,
+      "finger_max_diff": 0.0,
+      "object_pos_diff_m": 0.0,
+      "object_quat_diff_rad": 0.0,
+      "object_linear_diff": 0.0,
+      "object_angular_diff": 0.0,
+      "finger_contact_diff": 0,
+      "image_mae": {
+        "top": 0.0,
+        "wrist": 0.0
+      },
+      "restored_ok": true,
+      "scene_obj_pos": [
+        0.5473906875500935,
+        0.002955249621379965,
+        0.0199898253144541
+      ]
+    }
+  ]
+}
