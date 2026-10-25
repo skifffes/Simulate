@@ -173,13 +173,26 @@ CUDA_VISIBLE_DEVICES=3 HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python \
 python scripts/analyze_experiment_2.py
 ```
 
-## 实验 2.1（进行中）：组合失败的交接状态归因
+## 实验 2.1：组合失败的交接状态归因
 
-- 阶段 1（核对与冻结）已完成：[docs/experiment_2_1_audit.md](docs/experiment_2_1_audit.md)
-- 阶段 2（真实交接快照与恢复验证）已完成：[docs/experiment_2_1_snapshots.md](docs/experiment_2_1_snapshots.md)
-- 阶段 3（T0/T1/T2/T3 控制变量诊断）已完成：[docs/experiment_2_1_diagnosis.md](docs/experiment_2_1_diagnosis.md)
+- 完整报告：[docs/experiment_2_1.md](docs/experiment_2_1.md)
+- 阶段 1（核对与冻结）：[docs/experiment_2_1_audit.md](docs/experiment_2_1_audit.md)
+- 阶段 2（真实交接快照与恢复验证）：[docs/experiment_2_1_snapshots.md](docs/experiment_2_1_snapshots.md)
+- 阶段 3（T0/T1/T2/T3 控制变量诊断）：[docs/experiment_2_1_diagnosis.md](docs/experiment_2_1_diagnosis.md)
 - 冻结配置与模型校验和：[results/experiment_2_1/frozen_config.json](results/experiment_2_1/frozen_config.json)
-- 关键发现：实验 2 的 480 条示范**全部从同一个 HOME 构型出发**（四个技能的起始关节各只有 1 个唯一值），B/C 只覆盖了物体位姿、没有覆盖机器人构型；**只把机器人恢复 HOME，A90→C 就从 0/20 恢复到 19/20、A90→B 从 0/20 恢复到 17/20**——交接失败的主因是前序技能留下的关节构型；A0→B 则退化到 B 自身在 yaw 0 上的短板（5%）。
+
+**结论**：组合失败的主因是前序技能留下的机器人关节构型，不是物体状态或语言条件。
+
+| 组合 | T0 真实交接 | T1 只恢复机器人 | T2 只恢复物体 | T3 全标准 |
+|---|---:|---:|---:|---:|
+| A0→B | 0/20 | 1/20 | 0/20 | 1/20 |
+| A90→B | 0/20 | **17/20** | 无效 | 1/20 |
+| A0→C | 10/20 | **19/20** | 14/20 | 20/20 |
+| A90→C | 0/20 | **19/20** | 无效 | 20/20 |
+
+补充证据：同一状态下 B 指令产生"闭爪+水平推"、A 指令产生"张爪+抬升"（语言条件没有失效）；A0 终态到 C 训练状态的最近邻只有 0.13 rad，但 T0 仍只有 50%——关节距离不等于可执行性。
+
+![条件对比](results/experiment_2_1/diagnosis/conditions.png)
 
 ```bash
 # 服务器：复跑核对
