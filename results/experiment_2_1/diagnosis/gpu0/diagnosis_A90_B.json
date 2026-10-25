@@ -1,0 +1,3493 @@
+{
+  "chain": "A90_B",
+  "summary": {
+    "T0": {
+      "n": 20,
+      "valid": 20,
+      "success": 0,
+      "rate": 0.0
+    },
+    "T1": {
+      "n": 20,
+      "valid": 20,
+      "success": 17,
+      "rate": 0.85
+    },
+    "T2": {
+      "n": 20,
+      "valid": 0,
+      "success": 0,
+      "rate": 0.0
+    },
+    "T3": {
+      "n": 20,
+      "valid": 20,
+      "success": 1,
+      "rate": 0.05
+    }
+  },
+  "episodes": [
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000000,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986291246694883,
+        "object_speed": 4.3392740909698364e-08,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.557691738066191,
+          0.18043019199605678,
+          0.019986291246694883
+        ],
+        "yaw": -1.5812240407565843
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.61,
+      "lift_m": 4.7300960190690966e-07,
+      "max_z": 0.01998676425629679,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5576920002248213,
+          0.1804301984916924,
+          0.019986806052109864
+        ],
+        "yaw": -1.5812239205201477,
+        "tilt_deg": 0.005459797995422758,
+        "speed": 3.9082526835177584e-08
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17210217002326522,
+        "lateral_dy_m": 6.495635612724371e-09,
+        "yaw_change_rad": 1.2023643658487515e-07
+      },
+      "failure": "push_check",
+      "snapshot": 40000000
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000000,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986291246694883,
+        "object_speed": 4.3392740909698364e-08,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.557691738066191,
+          0.18043019199605678,
+          0.019986291246694883
+        ],
+        "yaw": -1.5812240407565843
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.21,
+      "lift_m": 0.0035494485695932755,
+      "max_z": 0.02353573981628816,
+      "events": {
+        "close": 3,
+        "first_contact": 51,
+        "first_success": 98
+      },
+      "final_object": {
+        "position": [
+          0.7195941122518585,
+          0.1806403273384364,
+          0.019987359568804024
+        ],
+        "yaw": -1.5952236895514624,
+        "tilt_deg": 0.003965001382683481,
+        "speed": 1.365222940227193e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.009932305736796598,
+        "lateral_dy_m": 0.00021013534237962483,
+        "yaw_change_rad": 0.013999648794878139
+      },
+      "failure": null,
+      "snapshot": 40000000
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000000,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.013047917474880221,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000000
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000000,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.43,
+      "lift_m": 0.036378636632547826,
+      "max_z": 0.05737863663254783,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "lift": 74
+      },
+      "final_object": {
+        "position": [
+          0.7293924678464652,
+          0.15947319943890526,
+          0.02761112272999011
+        ],
+        "yaw": -0.49735440423291893,
+        "tilt_deg": 57.4314772456119,
+        "speed": 9.001851315133838e-14
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.009175468304805978,
+        "lateral_dy_m": -0.020526800561094738,
+        "yaw_change_rad": 0.497354404232919
+      },
+      "failure": "push_check",
+      "snapshot": 40000000
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000001,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984792673479072,
+        "object_speed": 7.594255574607211e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5544973282713963,
+          0.17671443260437633,
+          0.019984792673479072
+        ],
+        "yaw": -1.5562006412856944
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.38,
+      "lift_m": 2.634144515949177e-07,
+      "max_z": 0.019985056087930667,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5544887585815572,
+          0.17672141209566125,
+          0.019984819332743705
+        ],
+        "yaw": -1.5565975732718151,
+        "tilt_deg": 0.010266519348774995,
+        "speed": 6.244463053823364e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17523231592003008,
+        "lateral_dy_m": 6.979491284919703e-06,
+        "yaw_change_rad": 0.0003969319861207854
+      },
+      "failure": "push_check",
+      "snapshot": 40000001
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000001,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984792673479072,
+        "object_speed": 7.594255574607211e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5544973282713963,
+          0.17671443260437633,
+          0.019984792673479072
+        ],
+        "yaw": -1.5562006412856944
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.5,
+      "lift_m": 0.0020776115048796798,
+      "max_z": 0.022062404178358752,
+      "events": {
+        "close": 3,
+        "first_contact": 56,
+        "first_success": 99
+      },
+      "final_object": {
+        "position": [
+          0.7168422337961486,
+          0.17960251625056514,
+          0.019986093477366167
+        ],
+        "yaw": -1.6607103741667297,
+        "tilt_deg": 0.005870432341379751,
+        "speed": 0.00032651890389106175
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.011563884590101381,
+        "lateral_dy_m": 0.0028880836461888104,
+        "yaw_change_rad": 0.10450973288103538
+      },
+      "failure": null,
+      "snapshot": 40000001
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000001,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.015456780850355067,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000001
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000001,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.75,
+      "lift_m": 0.020202440740766044,
+      "max_z": 0.041202440740766046,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "lift": 67
+      },
+      "final_object": {
+        "position": [
+          0.7035764640876032,
+          0.10752956285385294,
+          0.01998956767334355
+        ],
+        "yaw": -1.7829094775098104,
+        "tilt_deg": 0.0006859578923757006,
+        "speed": 7.895394710744422e-08
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.02333360150958752,
+        "lateral_dy_m": -0.07247043714614705,
+        "yaw_change_rad": 1.7829094775098104
+      },
+      "failure": "push_check",
+      "snapshot": 40000001
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000002,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984633473065633,
+        "object_speed": 4.2914905812449343e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5567401153577709,
+          0.18408048149430323,
+          0.019984633473065633
+        ],
+        "yaw": -1.6006425699848053
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.45,
+      "lift_m": 5.291174309668412e-07,
+      "max_z": 0.0199851625904966,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5567400413097117,
+          0.18408119448062896,
+          0.019985185392216748
+        ],
+        "yaw": -1.6006438675038341,
+        "tilt_deg": 0.01693279495020396,
+        "speed": 3.1882166663066385e-08
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17268536674574042,
+        "lateral_dy_m": 7.129863257293589e-07,
+        "yaw_change_rad": 1.29751902888664e-06
+      },
+      "failure": "push_check",
+      "snapshot": 40000002
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000002,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984633473065633,
+        "object_speed": 4.2914905812449343e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5567401153577709,
+          0.18408048149430323,
+          0.019984633473065633
+        ],
+        "yaw": -1.6006425699848053
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.23,
+      "lift_m": 0.003257117098127895,
+      "max_z": 0.02324175057119353,
+      "events": {
+        "close": 3,
+        "first_contact": 51,
+        "first_success": 95
+      },
+      "final_object": {
+        "position": [
+          0.7261140008961982,
+          0.18602679627033306,
+          0.01998723179100044
+        ],
+        "yaw": -1.5141992042455652,
+        "tilt_deg": 0.0096336068391816,
+        "speed": 6.583355568863428e-09
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.002834720351670428,
+        "lateral_dy_m": 0.0019463147760298283,
+        "yaw_change_rad": 0.08644336573924004
+      },
+      "failure": null,
+      "snapshot": 40000002
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000002,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01209858761508123,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000002
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000002,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.61,
+      "lift_m": 0.0425010205628327,
+      "max_z": 0.0635010205628327,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "lift": 64
+      },
+      "final_object": {
+        "position": [
+          0.6998962521847112,
+          0.16200738619028873,
+          0.019987982506151202
+        ],
+        "yaw": -1.4205673766571203,
+        "tilt_deg": 0.0033367625856051872,
+        "speed": 1.0408924472707169e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.02767361575167171,
+        "lateral_dy_m": -0.01799261380971126,
+        "yaw_change_rad": 1.4205673766571203
+      },
+      "failure": "push_check",
+      "snapshot": 40000002
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000003,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986565938665612,
+        "object_speed": 3.094051758488254e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5569372868437894,
+          0.18191789875495148,
+          0.019986565938665612
+        ],
+        "yaw": -1.5580507977384375
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.39,
+      "lift_m": 0.0,
+      "max_z": 0.019986565938665612,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5569374847463793,
+          0.18191802012540065,
+          0.0199864863495651
+        ],
+        "yaw": -1.5580504046878292,
+        "tilt_deg": 0.01261431105962418,
+        "speed": 2.9066409766995564e-10
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17281166512197688,
+        "lateral_dy_m": 1.2137044916316064e-07,
+        "yaw_change_rad": 3.930506082827634e-07
+      },
+      "failure": "push_check",
+      "snapshot": 40000003
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000003,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986565938665612,
+        "object_speed": 3.094051758488254e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5569372868437894,
+          0.18191789875495148,
+          0.019986565938665612
+        ],
+        "yaw": -1.5580507977384375
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.51,
+      "lift_m": 0.0038917825161946425,
+      "max_z": 0.023878348454860254,
+      "events": {
+        "close": 3,
+        "first_contact": 53,
+        "first_success": 102
+      },
+      "final_object": {
+        "position": [
+          0.7201075195829336,
+          0.17828906227258356,
+          0.019986841708100136
+        ],
+        "yaw": -1.538757172355273,
+        "tilt_deg": 0.011296740096403414,
+        "speed": 9.300517214911666e-09
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.00927746744100677,
+        "lateral_dy_m": -0.0036288364823679198,
+        "yaw_change_rad": 0.01929362538316437
+      },
+      "failure": null,
+      "snapshot": 40000003
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000003,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.011588120416020309,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000003
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000003,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.86,
+      "lift_m": 0.03473095971448355,
+      "max_z": 0.05573095971448355,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "lift": 101
+      },
+      "final_object": {
+        "position": [
+          0.7276641051610795,
+          0.16867014230898758,
+          0.02410104881581718
+        ],
+        "yaw": -0.7822153685731927,
+        "tilt_deg": 76.52037495664011,
+        "speed": 9.994378574900966e-10
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.002906188024993206,
+        "lateral_dy_m": -0.011329857691012413,
+        "yaw_change_rad": 0.7822153685731927
+      },
+      "failure": "push_check",
+      "snapshot": 40000003
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000004,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984537346775896,
+        "object_speed": 2.465021669152979e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5551046334862272,
+          0.1787638283960067,
+          0.019984537346775896
+        ],
+        "yaw": -1.5737736601286247
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.44,
+      "lift_m": 1.0680894282563691e-07,
+      "max_z": 0.019984644155718722,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5551064284440469,
+          0.1787652495308534,
+          0.01998459188364779
+        ],
+        "yaw": -1.573689981167937,
+        "tilt_deg": 0.010984867385293702,
+        "speed": 1.297532547980029e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17483590788000114,
+        "lateral_dy_m": 1.4211348466908191e-06,
+        "yaw_change_rad": 8.36789606877275e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000004
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000004,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984537346775896,
+        "object_speed": 2.465021669152979e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5551046334862272,
+          0.1787638283960067,
+          0.019984537346775896
+        ],
+        "yaw": -1.5737736601286247
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.42,
+      "lift_m": 0.002614859572506529,
+      "max_z": 0.022599396919282425,
+      "events": {
+        "close": 3,
+        "first_contact": 55,
+        "first_success": 97
+      },
+      "final_object": {
+        "position": [
+          0.7154716019214592,
+          0.1771051298008754,
+          0.01998476872721911
+        ],
+        "yaw": -1.551732190724091,
+        "tilt_deg": 0.00938540228455015,
+        "speed": 8.793175229073112e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.014156224209271873,
+        "lateral_dy_m": -0.0016586985951313193,
+        "yaw_change_rad": 0.022041469404533665
+      },
+      "failure": null,
+      "snapshot": 40000004
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000004,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01256383240556843,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000004
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000004,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.37,
+      "lift_m": 0.0026765884629365473,
+      "max_z": 0.02367658846293655,
+      "events": {
+        "close": 3,
+        "first_contact": 56,
+        "first_success": 111
+      },
+      "final_object": {
+        "position": [
+          0.7538945466330622,
+          0.19440342228700094,
+          0.01998640801871976
+        ],
+        "yaw": -0.09333774724754454,
+        "tilt_deg": 0.005361529545111399,
+        "speed": 3.4946285368014233e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.001532395444191148,
+        "lateral_dy_m": 0.01440342228700095,
+        "yaw_change_rad": 0.09333774724754454
+      },
+      "failure": null,
+      "snapshot": 40000004
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000005,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998728937274076,
+        "object_speed": 2.7551011080963605e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5620480588464231,
+          0.18186304184130062,
+          0.01998728937274076
+        ],
+        "yaw": -1.5629583361190746
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.7,
+      "lift_m": 0.0,
+      "max_z": 0.01998728937274076,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5620443334044115,
+          0.18185372856803875,
+          0.019986990835607853
+        ],
+        "yaw": -1.5628257625089228,
+        "tilt_deg": 0.013261309857018637,
+        "speed": 6.54483816694813e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.16779784523672825,
+        "lateral_dy_m": -9.313273261868371e-06,
+        "yaw_change_rad": 0.00013257361015184266
+      },
+      "failure": "push_check",
+      "snapshot": 40000005
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000005,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998728937274076,
+        "object_speed": 2.7551011080963605e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5620480588464231,
+          0.18186304184130062,
+          0.01998728937274076
+        ],
+        "yaw": -1.5629583361190746
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.61,
+      "lift_m": 0.003006727048833556,
+      "max_z": 0.022994016421574316,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "first_success": 102
+      },
+      "final_object": {
+        "position": [
+          0.7133314108987722,
+          0.1789705588899096,
+          0.019987178057141904
+        ],
+        "yaw": -1.4543397498001804,
+        "tilt_deg": 0.0047228482411275354,
+        "speed": 3.2119042043427922e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.014683388999003566,
+        "lateral_dy_m": -0.0028924829513910233,
+        "yaw_change_rad": 0.1086185863188942
+      },
+      "failure": null,
+      "snapshot": 40000005
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000005,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01382587506536223,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000005
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000005,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.59,
+      "lift_m": 0.02340549443921652,
+      "max_z": 0.04440549443921652,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "lift": 121
+      },
+      "final_object": {
+        "position": [
+          0.7211919099823934,
+          0.17697492764737793,
+          0.019986265481944026
+        ],
+        "yaw": -0.408505596780499,
+        "tilt_deg": 0.013295005264885907,
+        "speed": 1.714098718172451e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.020591863631511886,
+        "lateral_dy_m": -0.00302507235262206,
+        "yaw_change_rad": 0.408505596780499
+      },
+      "failure": "push_check",
+      "snapshot": 40000005
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000006,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986364036918808,
+        "object_speed": 2.3292064671686882e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5534029933967721,
+          0.18061759163826388,
+          0.019986364036918808
+        ],
+        "yaw": -1.546332276205473
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.23,
+      "lift_m": 1.524324312749542e-06,
+      "max_z": 0.019987888361231557,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5534032204237989,
+          0.1806157305340388,
+          0.01998788107862674
+        ],
+        "yaw": -1.5463136594741147,
+        "tilt_deg": 0.006206261885447975,
+        "speed": 1.8097266220227198e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17612215942126053,
+        "lateral_dy_m": -1.861104225092669e-06,
+        "yaw_change_rad": 1.861673135827857e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000006
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000006,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986364036918808,
+        "object_speed": 2.3292064671686882e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5534029933967721,
+          0.18061759163826388,
+          0.019986364036918808
+        ],
+        "yaw": -1.546332276205473
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.14,
+      "lift_m": 0.011392015117031279,
+      "max_z": 0.03137837915395009,
+      "events": {
+        "close": 3,
+        "first_contact": 50,
+        "lift": 57,
+        "first_success": 96
+      },
+      "final_object": {
+        "position": [
+          0.719201483359083,
+          0.1979760099103736,
+          0.019986485572226473
+        ],
+        "yaw": -1.7247551509388734,
+        "tilt_deg": 0.012587489862451933,
+        "speed": 1.2433402943678697e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.008322903597369646,
+        "lateral_dy_m": 0.01735841827210971,
+        "yaw_change_rad": 0.17842287473340046
+      },
+      "failure": null,
+      "snapshot": 40000006
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000006,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.013485282779575112,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000006
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000006,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.41,
+      "lift_m": 0.009323457256633489,
+      "max_z": 0.03032345725663349,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "lift": 65
+      },
+      "final_object": {
+        "position": [
+          0.7385243873848059,
+          0.1980495771028402,
+          0.01999012007751154
+        ],
+        "yaw": -0.39034205839613995,
+        "tilt_deg": 0.010350208130023741,
+        "speed": 3.694941734434025e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.003954795143726986,
+        "lateral_dy_m": 0.01804957710284022,
+        "yaw_change_rad": 0.39034205839613995
+      },
+      "failure": "push_check",
+      "snapshot": 40000006
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000007,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019987655990926834,
+        "object_speed": 4.614991668565324e-10,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5580551911207368,
+          0.17686958674906153,
+          0.019987655990926834
+        ],
+        "yaw": -1.601127210398386
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.19,
+      "lift_m": 3.861405101918125e-09,
+      "max_z": 0.019987659852331936,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5580551908231477,
+          0.176869581745953,
+          0.019987660210920275
+        ],
+        "yaw": -1.601127213195337,
+        "tilt_deg": 0.008174359419311432,
+        "speed": 4.6082911578536605e-10
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17136128175911913,
+        "lateral_dy_m": -5.003108538570444e-09,
+        "yaw_change_rad": 2.7969508931136033e-09
+      },
+      "failure": "push_check",
+      "snapshot": 40000007
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000007,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019987655990926834,
+        "object_speed": 4.614991668565324e-10,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5580551911207368,
+          0.17686958674906153,
+          0.019987655990926834
+        ],
+        "yaw": -1.601127210398386
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.4,
+      "lift_m": 0.0044139551050211764,
+      "max_z": 0.02440161109594801,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "first_success": 103
+      },
+      "final_object": {
+        "position": [
+          0.7287757976132757,
+          0.18076698258127344,
+          0.024354958477742456
+        ],
+        "yaw": -1.5161767927915961,
+        "tilt_deg": 14.494439409441938,
+        "speed": 1.974822194723102e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.00020691857677501702,
+        "lateral_dy_m": 0.0038973958322119084,
+        "yaw_change_rad": 0.0849504176067899
+      },
+      "failure": "push_check",
+      "snapshot": 40000007
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000007,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.013880553362526818,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000007
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000007,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.49,
+      "lift_m": 0.026146906603993648,
+      "max_z": 0.04714690660399365,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "lift": 100
+      },
+      "final_object": {
+        "position": [
+          0.7539338427086208,
+          0.22322425106850144,
+          0.01998521991305463
+        ],
+        "yaw": -0.05261834937217193,
+        "tilt_deg": 0.01007588622134834,
+        "speed": 2.3163723381944042e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0034641342069573478,
+        "lateral_dy_m": 0.043224251068501446,
+        "yaw_change_rad": 0.05261834937217193
+      },
+      "failure": "push_check",
+      "snapshot": 40000007
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000008,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998470664936909,
+        "object_speed": 4.419249168201942e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5605322684944737,
+          0.17652053398222825,
+          0.01998470664936909
+        ],
+        "yaw": -1.5793716132505826
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.47,
+      "lift_m": 1.21327762579726e-07,
+      "max_z": 0.01998482797713167,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5605269966495217,
+          0.176516341015018,
+          0.01998468077879515
+        ],
+        "yaw": -1.5791287514319339,
+        "tilt_deg": 0.010788030576410873,
+        "speed": 3.6068312857757227e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.16930809250857803,
+        "lateral_dy_m": -4.1929672102425375e-06,
+        "yaw_change_rad": 0.000242861818648743
+      },
+      "failure": "push_check",
+      "snapshot": 40000008
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000008,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998470664936909,
+        "object_speed": 4.419249168201942e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5605322684944737,
+          0.17652053398222825,
+          0.01998470664936909
+        ],
+        "yaw": -1.5793716132505826
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.25,
+      "lift_m": 0.0035915738947076246,
+      "max_z": 0.023576280544076716,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "first_success": 101
+      },
+      "final_object": {
+        "position": [
+          0.7191175810778516,
+          0.17472081676774823,
+          0.01998787149026931
+        ],
+        "yaw": -1.6009651655925934,
+        "tilt_deg": 0.007729450326535733,
+        "speed": 4.597935054409107e-09
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.010301885915248277,
+        "lateral_dy_m": -0.0017997172144800233,
+        "yaw_change_rad": 0.02159355234201077
+      },
+      "failure": null,
+      "snapshot": 40000008
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000008,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.009708282848402194,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000008
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000008,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.44,
+      "lift_m": 0.03137162032100478,
+      "max_z": 0.05237162032100478,
+      "events": {
+        "close": 3,
+        "first_contact": 59,
+        "lift": 73
+      },
+      "final_object": {
+        "position": [
+          0.7250250232533644,
+          0.11116232027175157,
+          0.04762743948281574
+        ],
+        "yaw": -1.9177540779520919,
+        "tilt_deg": 54.03510590436373,
+        "speed": 1.1733294797522366e-14
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0011536311253691478,
+        "lateral_dy_m": -0.06883767972824842,
+        "yaw_change_rad": 1.9177540779520919
+      },
+      "failure": "push_check",
+      "snapshot": 40000008
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000009,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019987715234255948,
+        "object_speed": 3.62983306035882e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5503214586618222,
+          0.17896821866783882,
+          0.019987715234255948
+        ],
+        "yaw": -1.6049397052055914
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.39,
+      "lift_m": 2.3854148009996856e-07,
+      "max_z": 0.019987953775736048,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5503202977561027,
+          0.17896430254792906,
+          0.0199879290887987
+        ],
+        "yaw": -1.6048907176352032,
+        "tilt_deg": 0.007516364800862025,
+        "speed": 2.3886024002623555e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17902700439913655,
+        "lateral_dy_m": -3.916119909769256e-06,
+        "yaw_change_rad": 4.8987570388181474e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000009
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000009,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019987715234255948,
+        "object_speed": 3.62983306035882e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5503214586618222,
+          0.17896821866783882,
+          0.019987715234255948
+        ],
+        "yaw": -1.6049397052055914
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.12,
+      "lift_m": 0.0016926443455799883,
+      "max_z": 0.021680359579835936,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "first_success": 97
+      },
+      "final_object": {
+        "position": [
+          0.7174868874935745,
+          0.1750449519953453,
+          0.0199879659459521
+        ],
+        "yaw": -1.5313650140622872,
+        "tilt_deg": 0.006661614479998752,
+        "speed": 3.990238716114913e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.011763556273388542,
+        "lateral_dy_m": -0.003923266672493514,
+        "yaw_change_rad": 0.07357469114330417
+      },
+      "failure": null,
+      "snapshot": 40000009
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000009,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01608135494032406,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000009
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000009,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.86,
+      "lift_m": 0.0074368836979638,
+      "max_z": 0.0284368836979638,
+      "events": {
+        "close": 3,
+        "first_contact": 53,
+        "first_success": 114
+      },
+      "final_object": {
+        "position": [
+          0.7313527113688932,
+          0.1799181745345627,
+          0.01998639223634199
+        ],
+        "yaw": -0.26418816356778263,
+        "tilt_deg": 0.012920063821614387,
+        "speed": 1.5327399000553457e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.016284908191269265,
+        "lateral_dy_m": -8.182546543727964e-05,
+        "yaw_change_rad": 0.26418816356778263
+      },
+      "failure": "push_check",
+      "snapshot": 40000009
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000010,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998611625015068,
+        "object_speed": 5.615142447030693e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5554058987835362,
+          0.17853256615657426,
+          0.01998611625015068
+        ],
+        "yaw": -1.5713697831277766
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.45,
+      "lift_m": 1.2834955603613363e-06,
+      "max_z": 0.01998739974571104,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5554042472420174,
+          0.17853546989883917,
+          0.019985730342270594
+        ],
+        "yaw": -1.5713578286667844,
+        "tilt_deg": 0.010399531716737055,
+        "speed": 2.820594617029582e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17458453060324353,
+        "lateral_dy_m": 2.9037422649147437e-06,
+        "yaw_change_rad": 1.195446099222508e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000010
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000010,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998611625015068,
+        "object_speed": 5.615142447030693e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5554058987835362,
+          0.17853256615657426,
+          0.01998611625015068
+        ],
+        "yaw": -1.5713697831277766
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.44,
+      "lift_m": 0.0018821347053987955,
+      "max_z": 0.021868250955549475,
+      "events": {
+        "close": 3,
+        "first_contact": 53,
+        "first_success": 101
+      },
+      "final_object": {
+        "position": [
+          0.7157397428368749,
+          0.17776711972896658,
+          0.019987370214789305
+        ],
+        "yaw": -1.5020808275109345,
+        "tilt_deg": 0.00593768233910636,
+        "speed": 1.2906532728668553e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.01300502751705157,
+        "lateral_dy_m": -0.0007654464276076745,
+        "yaw_change_rad": 0.06928895561684212
+      },
+      "failure": null,
+      "snapshot": 40000010
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000010,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01714058165792165,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000010
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000010,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.65,
+      "lift_m": 0.031734034468218195,
+      "max_z": 0.0527340344682182,
+      "events": {
+        "close": 3,
+        "first_contact": 55,
+        "lift": 66
+      },
+      "final_object": {
+        "position": [
+          0.7104404563279557,
+          0.15386067235234493,
+          0.019986615349760012
+        ],
+        "yaw": -1.3941706927854125,
+        "tilt_deg": 0.012130108081323693,
+        "speed": 1.5498939677160637e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.016823259348440534,
+        "lateral_dy_m": -0.02613932764765506,
+        "yaw_change_rad": 1.3941706927854125
+      },
+      "failure": "push_check",
+      "snapshot": 40000010
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000011,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985610781356272,
+        "object_speed": 3.941591979870226e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5564639547968385,
+          0.17769806148415734,
+          0.019985610781356272
+        ],
+        "yaw": -1.5419595250884501
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.95,
+      "lift_m": 2.0065245556546984e-06,
+      "max_z": 0.019987617305911927,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5564631125789535,
+          0.17769848619818213,
+          0.019987691479898647
+        ],
+        "yaw": -1.541950316181403,
+        "tilt_deg": 0.005606016560280796,
+        "speed": 7.319978033575927e-08
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.1729808480797228,
+        "lateral_dy_m": 4.247140247826131e-07,
+        "yaw_change_rad": 9.20890704714239e-06
+      },
+      "failure": "push_check",
+      "snapshot": 40000011
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000011,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985610781356272,
+        "object_speed": 3.941591979870226e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5564639547968385,
+          0.17769806148415734,
+          0.019985610781356272
+        ],
+        "yaw": -1.5419595250884501
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.84,
+      "lift_m": 0.0015972102450038106,
+      "max_z": 0.021582821026360083,
+      "events": {
+        "close": 3,
+        "first_contact": 53,
+        "first_success": 108
+      },
+      "final_object": {
+        "position": [
+          0.7108709962970164,
+          0.1791808298900196,
+          0.019985065271906344
+        ],
+        "yaw": -1.479811284292085,
+        "tilt_deg": 0.007771451201394161,
+        "speed": 0.00019182765617929836
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.017518626696615525,
+        "lateral_dy_m": 0.0014827684058622559,
+        "yaw_change_rad": 0.06214824079636516
+      },
+      "failure": null,
+      "snapshot": 40000011
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000011,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.016690743494107554,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000011
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000011,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.69,
+      "lift_m": 0.006452901870257842,
+      "max_z": 0.027452901870257843,
+      "events": {
+        "close": 3,
+        "first_contact": 55
+      },
+      "final_object": {
+        "position": [
+          0.7258028604390662,
+          0.19018800918238,
+          0.019990050336426333
+        ],
+        "yaw": -0.5883216831253945,
+        "tilt_deg": 0.00744670132296135,
+        "speed": 2.884749945479737e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.009811391479337406,
+        "lateral_dy_m": 0.010188009182379998,
+        "yaw_change_rad": 0.5883216831253945
+      },
+      "failure": "push_check",
+      "snapshot": 40000011
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000012,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986457222999184,
+        "object_speed": 6.139845738895378e-08,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5563832470234565,
+          0.17837492939013183,
+          0.019986457222999184
+        ],
+        "yaw": -1.5550702740264442
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.56,
+      "lift_m": 2.1203768699185055e-08,
+      "max_z": 0.019986478426767883,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5563832582085376,
+          0.17837490164404435,
+          0.019986478933974955
+        ],
+        "yaw": -1.5550702797473581,
+        "tilt_deg": 0.012690311016788114,
+        "speed": 7.70369315168566e-10
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17330841640077932,
+        "lateral_dy_m": -2.7746087483127013e-08,
+        "yaw_change_rad": 5.720913964779584e-09
+      },
+      "failure": "push_check",
+      "snapshot": 40000012
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000012,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986457222999184,
+        "object_speed": 6.139845738895378e-08,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5563832470234565,
+          0.17837492939013183,
+          0.019986457222999184
+        ],
+        "yaw": -1.5550702740264442
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.45,
+      "lift_m": 0.0014251754362777855,
+      "max_z": 0.02141163265927697,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "first_success": 100
+      },
+      "final_object": {
+        "position": [
+          0.7139080628704427,
+          0.1808231057635783,
+          0.019986971698679506
+        ],
+        "yaw": -1.4640792382433758,
+        "tilt_deg": 0.006237855606026519,
+        "speed": 1.0569585939633283e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.014246087545503605,
+        "lateral_dy_m": 0.0024481763734464645,
+        "yaw_change_rad": 0.09099103578306833
+      },
+      "failure": null,
+      "snapshot": 40000012
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000012,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01372721718227396,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000012
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000012,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.36,
+      "lift_m": 0.024303440349883725,
+      "max_z": 0.04530344034988373,
+      "events": {
+        "close": 3,
+        "first_contact": 58,
+        "lift": 72
+      },
+      "final_object": {
+        "position": [
+          0.7227734038108787,
+          0.10067396369525407,
+          0.03375851963218753
+        ],
+        "yaw": -1.958483694631121,
+        "tilt_deg": 20.134705521389,
+        "speed": 2.95789732557223e-14
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.003376336585755313,
+        "lateral_dy_m": -0.07932603630474593,
+        "yaw_change_rad": 1.958483694631121
+      },
+      "failure": "push_check",
+      "snapshot": 40000012
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000013,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984654444201725,
+        "object_speed": 6.576182379360872e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.559225333287366,
+          0.1740596291267813,
+          0.019984654444201725
+        ],
+        "yaw": -1.5585375006191236
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.74,
+      "lift_m": 3.058521260215774e-07,
+      "max_z": 0.019984960296327747,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5592204520073475,
+          0.17406808048108358,
+          0.01998475368538418
+        ],
+        "yaw": -1.5584082626615265,
+        "tilt_deg": 0.010389204857808587,
+        "speed": 5.482765452571739e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17053562960127444,
+        "lateral_dy_m": 8.451354302274616e-06,
+        "yaw_change_rad": 0.00012923795759700596
+      },
+      "failure": "push_check",
+      "snapshot": 40000013
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000013,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984654444201725,
+        "object_speed": 6.576182379360872e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.559225333287366,
+          0.1740596291267813,
+          0.019984654444201725
+        ],
+        "yaw": -1.5585375006191236
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.3,
+      "lift_m": 0.0026787846408993544,
+      "max_z": 0.02266343908510108,
+      "events": {
+        "close": 3,
+        "first_contact": 53,
+        "first_success": 101
+      },
+      "final_object": {
+        "position": [
+          0.7273315801341634,
+          0.17672150229261838,
+          0.01998541992707653
+        ],
+        "yaw": -1.4628083880190377,
+        "tilt_deg": 0.007354812581426116,
+        "speed": 2.0262517497451843e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0008041079513437799,
+        "lateral_dy_m": 0.0026618731658370753,
+        "yaw_change_rad": 0.09572911260008587
+      },
+      "failure": null,
+      "snapshot": 40000013
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000013,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01123687780050129,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000013
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000013,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.47,
+      "lift_m": 0.030023847478250206,
+      "max_z": 0.05102384747825021,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "lift": 65
+      },
+      "final_object": {
+        "position": [
+          0.7229903104780201,
+          0.10921242524314125,
+          0.041697169560550466
+        ],
+        "yaw": -1.894959360800137,
+        "tilt_deg": 28.956746004356003,
+        "speed": 2.055936200833826e-12
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.003243496815500957,
+        "lateral_dy_m": -0.07078757475685875,
+        "yaw_change_rad": 1.894959360800137
+      },
+      "failure": "push_check",
+      "snapshot": 40000013
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000014,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998603789415068,
+        "object_speed": 6.080828528195849e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5517389568511777,
+          0.17885619443308878,
+          0.01998603789415068
+        ],
+        "yaw": -1.5721180748456378
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.31,
+      "lift_m": 2.38723467212848e-06,
+      "max_z": 0.019988425128822807,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.551738348444347,
+          0.1788590866908046,
+          0.019987454528602244
+        ],
+        "yaw": -1.5721041081587437,
+        "tilt_deg": 0.006625391138557479,
+        "speed": 5.489214391025028e-09
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17823553869312803,
+        "lateral_dy_m": 2.8922577158252416e-06,
+        "yaw_change_rad": 1.3966686894129056e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000014
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000014,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.01998603789415068,
+        "object_speed": 6.080828528195849e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5517389568511777,
+          0.17885619443308878,
+          0.01998603789415068
+        ],
+        "yaw": -1.5721180748456378
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.1,
+      "lift_m": 0.01328918236487411,
+      "max_z": 0.03327522025902479,
+      "events": {
+        "close": 3,
+        "first_contact": 54,
+        "first_success": 102,
+        "lift": 110
+      },
+      "final_object": {
+        "position": [
+          0.7240380792362273,
+          0.19198283227074872,
+          0.02769394614494179
+        ],
+        "yaw": -1.5065021861008505,
+        "tilt_deg": 33.373577482922045,
+        "speed": 7.755122518861762e-11
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0047802315021532316,
+        "lateral_dy_m": 0.013126637837659938,
+        "yaw_change_rad": 0.0656158887447873
+      },
+      "failure": "push_check",
+      "snapshot": 40000014
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000014,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.012954454740218113,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000014
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000014,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.43,
+      "lift_m": 0.03589477478219712,
+      "max_z": 0.05689477478219712,
+      "events": {
+        "close": 3,
+        "first_contact": 58,
+        "lift": 74
+      },
+      "final_object": {
+        "position": [
+          0.7116512835026936,
+          0.17234268285054644,
+          0.02816528946912085
+        ],
+        "yaw": -1.0640239769522526,
+        "tilt_deg": 50.03131635184997,
+        "speed": 7.956710094908034e-12
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.014925779383937243,
+        "lateral_dy_m": -0.0076573171494535575,
+        "yaw_change_rad": 1.0640239769522526
+      },
+      "failure": "push_check",
+      "snapshot": 40000014
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000015,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984867586621293,
+        "object_speed": 5.884460192657516e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5512741116318993,
+          0.1819117049569754,
+          0.019984867586621293
+        ],
+        "yaw": -1.5835679922067114
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.41,
+      "lift_m": 1.4713808797403582e-07,
+      "max_z": 0.019985014724709267,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5512668623595037,
+          0.18190584233680798,
+          0.019984957818139353
+        ],
+        "yaw": -1.5832311004879582,
+        "tilt_deg": 0.009520704734473499,
+        "speed": 5.147336546295259e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.17848831411572785,
+        "lateral_dy_m": -5.862620167412791e-06,
+        "yaw_change_rad": 0.0003368917187531739
+      },
+      "failure": "push_check",
+      "snapshot": 40000015
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000015,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019984867586621293,
+        "object_speed": 5.884460192657516e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5512741116318993,
+          0.1819117049569754,
+          0.019984867586621293
+        ],
+        "yaw": -1.5835679922067114
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 26.42,
+      "lift_m": 0.002822671992759724,
+      "max_z": 0.022807539579381017,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "first_success": 101
+      },
+      "final_object": {
+        "position": [
+          0.7210255974777638,
+          0.1839435281603557,
+          0.01998661275032052
+        ],
+        "yaw": -1.6329902824403209,
+        "tilt_deg": 0.014526005370154681,
+        "speed": 6.6494851260034e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.007827996195855391,
+        "lateral_dy_m": 0.0020318232033803008,
+        "yaw_change_rad": 0.049422290233609445
+      },
+      "failure": null,
+      "snapshot": 40000015
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000015,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.013222712772071349,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000015
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000015,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.47,
+      "lift_m": 0.019039304010995187,
+      "max_z": 0.04003930401099519,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "lift": 75
+      },
+      "final_object": {
+        "position": [
+          0.6712002810890672,
+          0.12324976463857372,
+          0.01998661710101074
+        ],
+        "yaw": -1.6860825384977631,
+        "tilt_deg": 0.005289893023101021,
+        "speed": 4.628500633727092e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.05683100372380012,
+        "lateral_dy_m": -0.056750235361426274,
+        "yaw_change_rad": 1.6860825384977631
+      },
+      "failure": "push_check",
+      "snapshot": 40000015
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000016,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985190940559793,
+        "object_speed": 1.421310869346932e-05,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5596694640434556,
+          0.17668010743954765,
+          0.019985190940559793
+        ],
+        "yaw": -1.6075441064466576
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.99,
+      "lift_m": 1.3114484457774078e-07,
+      "max_z": 0.01998532208540437,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5596807363997124,
+          0.1766891449629133,
+          0.019985264952662517
+        ],
+        "yaw": -1.6070333664205732,
+        "tilt_deg": 0.008277051733775855,
+        "speed": 7.794237331242993e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.1696275058935689,
+        "lateral_dy_m": 9.037523365645894e-06,
+        "yaw_change_rad": 0.0005107400260844219
+      },
+      "failure": "push_check",
+      "snapshot": 40000016
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000016,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985190940559793,
+        "object_speed": 1.421310869346932e-05,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5596694640434556,
+          0.17668010743954765,
+          0.019985190940559793
+        ],
+        "yaw": -1.6075441064466576
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.77,
+      "lift_m": 0.013671064129074675,
+      "max_z": 0.03365625506963447,
+      "events": {
+        "close": 3,
+        "first_contact": 51,
+        "lift": 94,
+        "first_success": 96
+      },
+      "final_object": {
+        "position": [
+          0.7284439785630085,
+          0.18024661330981384,
+          0.02867423639585796
+        ],
+        "yaw": -1.606061954317268,
+        "tilt_deg": 24.41086010898601,
+        "speed": 6.981538770349281e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0008819434627678202,
+        "lateral_dy_m": 0.00356650587026619,
+        "yaw_change_rad": 0.0014821521293895135
+      },
+      "failure": "push_check",
+      "snapshot": 40000016
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000016,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.014185341552257466,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000016
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000016,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.35,
+      "lift_m": 0.0030211067221411064,
+      "max_z": 0.024021106722141108,
+      "events": {
+        "close": 3,
+        "first_contact": 51,
+        "first_success": 100
+      },
+      "final_object": {
+        "position": [
+          0.7493075764829227,
+          0.18491512187733286,
+          0.019986495590479915
+        ],
+        "yaw": -0.22607405235136208,
+        "tilt_deg": 0.012691045492735031,
+        "speed": 1.1887197136438866e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": -6.3154791942743316e-06,
+        "lateral_dy_m": 0.0049151218773328675,
+        "yaw_change_rad": 0.22607405235136208
+      },
+      "failure": "push_check",
+      "snapshot": 40000016
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000017,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986814548856927,
+        "object_speed": 1.0606067296782341e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5604695707670755,
+          0.1784517665907568,
+          0.019986814548856927
+        ],
+        "yaw": -1.529549683936753
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.83,
+      "lift_m": 0.0,
+      "max_z": 0.019986814548856927,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5604628390670368,
+          0.17843827052141478,
+          0.019986812641136532
+        ],
+        "yaw": -1.5293123925034313,
+        "tilt_deg": 0.013886820257345502,
+        "speed": 1.0622068832799383e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.16875073694521325,
+        "lateral_dy_m": -1.349606934200609e-05,
+        "yaw_change_rad": 0.00023729143332174019
+      },
+      "failure": "push_check",
+      "snapshot": 40000017
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000017,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986814548856927,
+        "object_speed": 1.0606067296782341e-06,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5604695707670755,
+          0.1784517665907568,
+          0.019986814548856927
+        ],
+        "yaw": -1.529549683936753
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.57,
+      "lift_m": 0.006358859743074718,
+      "max_z": 0.026345674291931645,
+      "events": {
+        "close": 3,
+        "first_contact": 55,
+        "first_success": 101
+      },
+      "final_object": {
+        "position": [
+          0.7155230821643292,
+          0.18654510579561354,
+          0.019985121406848272
+        ],
+        "yaw": -1.5583307818872962,
+        "tilt_deg": 0.007445050393685529,
+        "speed": 3.30480073623817e-06
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.014231498089139594,
+        "lateral_dy_m": 0.008093339204856748,
+        "yaw_change_rad": 0.02878109795054318
+      },
+      "failure": null,
+      "snapshot": 40000017
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000017,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01710250932124352,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000017
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000017,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.3,
+      "lift_m": 0.03773632320874093,
+      "max_z": 0.05873632320874093,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "lift": 79
+      },
+      "final_object": {
+        "position": [
+          0.7388488464488067,
+          0.14397608587493216,
+          0.028019806723395477
+        ],
+        "yaw": -0.26915411679980417,
+        "tilt_deg": 52.691391083912315,
+        "speed": 1.522087515775341e-12
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.008575424860028158,
+        "lateral_dy_m": -0.036023914125067835,
+        "yaw_change_rad": 0.26915411679980417
+      },
+      "failure": "push_check",
+      "snapshot": 40000017
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000018,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986438361819653,
+        "object_speed": 9.295346032002155e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5580746355790333,
+          0.17135210699880535,
+          0.019986438361819653
+        ],
+        "yaw": -1.6197390916108203
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 25.85,
+      "lift_m": 1.5843213661548283e-06,
+      "max_z": 0.019988022683185808,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5580731257759455,
+          0.17134604814960175,
+          0.01998799674569173
+        ],
+        "yaw": -1.6196603820733548,
+        "tilt_deg": 0.007645982656355283,
+        "speed": 4.199169183626557e-07
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.1710096625015335,
+        "lateral_dy_m": -6.058849203599559e-06,
+        "yaw_change_rad": 7.870953746547116e-05
+      },
+      "failure": "push_check",
+      "snapshot": 40000018
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000018,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019986438361819653,
+        "object_speed": 9.295346032002155e-07,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.5580746355790333,
+          0.17135210699880535,
+          0.019986438361819653
+        ],
+        "yaw": -1.6197390916108203
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.82,
+      "lift_m": 0.002466732550971955,
+      "max_z": 0.022453170912791608,
+      "events": {
+        "close": 3,
+        "first_contact": 52,
+        "first_success": 97
+      },
+      "final_object": {
+        "position": [
+          0.7156396042142118,
+          0.18025828280005793,
+          0.01998487668557475
+        ],
+        "yaw": -1.6205655343531038,
+        "tilt_deg": 0.008511530539312124,
+        "speed": 1.2124070039484708e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.013427334076677622,
+        "lateral_dy_m": 0.00890617580125258,
+        "yaw_change_rad": 0.0008264427422834952
+      },
+      "failure": null,
+      "snapshot": 40000018
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000018,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.014021818628295261,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000018
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000018,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 27.01,
+      "lift_m": 0.02879733671399067,
+      "max_z": 0.04979733671399067,
+      "events": {
+        "close": 3,
+        "first_contact": 51,
+        "lift": 75
+      },
+      "final_object": {
+        "position": [
+          0.7275327278925549,
+          0.12508294969104908,
+          0.049406751924261805
+        ],
+        "yaw": -1.5796184299335183,
+        "tilt_deg": 60.67314598432023,
+        "speed": 1.2282180149242073e-14
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0022927780583719137,
+        "lateral_dy_m": -0.054917050308950915,
+        "yaw_change_rad": 1.5796184299335183
+      },
+      "failure": "push_check",
+      "snapshot": 40000018
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T0",
+      "seed": 40000019,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985193159585,
+        "object_speed": 1.8940674717553416e-05,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.560574317835186,
+          0.17713056998967436,
+          0.019985193159585
+        ],
+        "yaw": -1.6262368679412627
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.77,
+      "lift_m": 4.48284052545489e-07,
+      "max_z": 0.019985641443637545,
+      "events": {
+        "close": 3
+      },
+      "final_object": {
+        "position": [
+          0.5605554545545571,
+          0.17716353702537116,
+          0.019985491436463727
+        ],
+        "yaw": -1.6255832644603283,
+        "tilt_deg": 0.007778792901398872,
+        "speed": 1.7797317446554936e-05
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.16842437621823936,
+        "lateral_dy_m": 3.296703569680148e-05,
+        "yaw_change_rad": 0.0006536034809343505
+      },
+      "failure": "push_check",
+      "snapshot": 40000019
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T1",
+      "seed": 40000019,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.019985193159585,
+        "object_speed": 1.8940674717553416e-05,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 4,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.560574317835186,
+          0.17713056998967436,
+          0.019985193159585
+        ],
+        "yaw": -1.6262368679412627
+      },
+      "success": true,
+      "ticks": 260,
+      "wall_seconds": 25.74,
+      "lift_m": 0.0038333297489630755,
+      "max_z": 0.023818522908548075,
+      "events": {
+        "close": 3,
+        "first_contact": 56,
+        "first_success": 98
+      },
+      "final_object": {
+        "position": [
+          0.7195063494396023,
+          0.1750416688834971,
+          0.019987632798400302
+        ],
+        "yaw": -1.5420767537666202,
+        "tilt_deg": 0.0037809896817140734,
+        "speed": 1.1560974213917455e-09
+      },
+      "released": true,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.009939956987166654,
+        "lateral_dy_m": -0.0020889011061772655,
+        "yaw_change_rad": 0.08416011417464243
+      },
+      "failure": null,
+      "snapshot": 40000019
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T2",
+      "seed": 40000019,
+      "valid": false,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": -0.01309728738732554,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "failure": "invalid_init",
+      "ticks": 0,
+      "snapshot": 40000019
+    },
+    {
+      "chain": "A90_B",
+      "condition": "T3",
+      "seed": 40000019,
+      "valid": true,
+      "validity": {
+        "object_height_m": 0.021,
+        "object_speed": 0.0,
+        "min_robot_object_distance": 0.0,
+        "table_contacts": 0,
+        "joints_ok": true
+      },
+      "start_object": {
+        "position": [
+          0.55,
+          0.18,
+          0.021
+        ],
+        "yaw": 0.0
+      },
+      "success": false,
+      "ticks": 260,
+      "wall_seconds": 26.33,
+      "lift_m": 0.052060056017754694,
+      "max_z": 0.0730600560177547,
+      "events": {
+        "close": 3,
+        "first_contact": 57,
+        "lift": 84
+      },
+      "final_object": {
+        "position": [
+          0.725385099665976,
+          0.16726819561359085,
+          0.06102862700889634
+        ],
+        "yaw": -1.088301476505248,
+        "tilt_deg": 66.3269773195378,
+        "speed": 6.565247175224552e-06
+      },
+      "released": false,
+      "stable": true,
+      "detail": {
+        "gap_m": 0.0010430825399855292,
+        "lateral_dy_m": -0.01273180438640914,
+        "yaw_change_rad": 1.088301476505248
+      },
+      "failure": "push_check",
+      "snapshot": 40000019
+    }
+  ]
+}
