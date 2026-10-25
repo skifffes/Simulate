@@ -200,3 +200,10 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
   --dataset data/lerobot_panda_multi --diag data/_shards_exp2 \
   --results results/experiment_2 --out results/experiment_2_1/audit
 ```
+
+## 实验 2.2（进行中）：交接时机与真实物理连接
+
+- 阶段 1（交接协议审计）已完成：[docs/experiment_2_2_audit.md](docs/experiment_2_2_audit.md)
+- 机器可读记录：[results/experiment_2_2/protocol_audit.json](results/experiment_2_2/protocol_audit.json)
+
+关键结论：实验 2 的 A0→C 20/20 与 2.1 的 10/20 不能只归因于判据。2.1 的 10 次失败里，**8 次物体从未离开放置区**（交接状态差异），**2 次到达托盘后继续执行 260 tick 把 yaw 漂出容差**（判定窗口差异）。因此需要统一判据（v2.2）重跑 H0–H3，不能直接比较两套历史数字。

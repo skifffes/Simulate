@@ -1,0 +1,81 @@
+{
+  "experiment": "2.2",
+  "stage": 1,
+  "date": "2026-10-25",
+  "frozen": {
+    "checkpoint": "outputs/smolvla_multi/checkpoints/020000/pretrained_model",
+    "model_sha256": "b7924be757424d4ddcafb50bccb0bb28b1332a8a4f07a3cad97a93f98bfc641d",
+    "git_commit_before": "7d9e1bb",
+    "fps": 20,
+    "steps_per_action": 12,
+    "chunk": 50,
+    "camera": "256x256, ss=1, top+wrist",
+    "seeds": "40000000-40000019"
+  },
+  "protocols": {
+    "exp2_composition": {
+      "script": "scripts/eval_skill_composition.py",
+      "a_success_condition": "position<=2cm, yaw<=12deg, tilt<=12deg, speed<0.01, no finger contact; NO lift requirement",
+      "switch": "first tick where a_done holds (line 160-166)",
+      "chunk_cleared": true,
+      "switch_semantics": "H0-like: discard remaining chunk",
+      "b_c_judgement": "first tick where b_done/c_done holds (line 169-172), then break",
+      "post_judge_settle": "0.6 s physics only, result NOT re-checked (line 173-176)",
+      "release_required_for_C": true,
+      "lift_required_for_A": false,
+      "horizon_observed": {"A0_C": {"a_ticks": [96, 102], "b_ticks": [41, 44]}}
+    },
+    "atomic_eval": {
+      "script": "scripts/eval_multi_atomic_vla.py",
+      "a_success_condition": "same as exp2 + released; lift recorded but not required in criteria",
+      "b_c_judgement": "fixed 260 ticks, then 0.6 s settle, then evaluate with released + stability",
+      "horizon": 260
+    },
+    "exp2_1_diagnosis": {
+      "script": "scripts/diagnose_handoff_states.py",
+      "handoff_state": "snapshot after A success + 1.0 s settle + 5 stability samples",
+      "t0_extra_settle": 0,
+      "b_c_judgement": "fixed 260 ticks, then 1.0 s settle, then released + stability + position/yaw re-check",
+      "horizon": 260
+    }
+  },
+  "ten_questions": [
+    {"id": 1, "question": "A 的成功条件", "exp2": "位置<=2cm + yaw<=12deg + tilt<=12deg + speed<0.01 + 无指接触；无抬升要求", "exp2_1": "快照要求 lift>=3cm、released、稳定 1.2 s", "same": false},
+    {"id": 2, "question": "首次满足时夹爪是否完全释放", "exp2": "物理上无指接触（force=0），但命令可能刚切到张开", "exp2_1": "是，快照在释放并稳定之后", "same": false},
+    {"id": 3, "question": "触发时是否还有未执行动作块", "exp2": "是，chunk=50，切换发生在任意 tick", "exp2_1": "是（快照时 A 已结束）", "same": true},
+    {"id": 4, "question": "是否等动作块结束才重新调用模型", "exp2": "否，每 tick 调 select_action", "exp2_1": "否", "same": true},
+    {"id": 5, "question": "切换时是否清空旧 chunk", "exp2": "是，policy.reset() 重建 _queues", "exp2_1": "是", "same": true},
+    {"id": 6, "question": "是否清空推理状态", "exp2": "只有 _queues，无其它状态", "exp2_1": "同", "same": true},
+    {"id": 7, "question": "等待期间电机目标", "exp2": "无等待，保持 A 最后目标", "exp2_1": "T0 无等待；快照采集期间保持最后目标 1.2 s", "same": false},
+    {"id": 8, "question": "切换时物体是否仍在运动", "exp2": "speed<0.01 单次检查", "exp2_1": "连续 5 次 <0.01", "same": false},
+    {"id": 9, "question": "是否有自动开爪/重置/修状态", "exp2": "无", "exp2_1": "无", "same": true},
+    {"id": 10, "question": "最终成功判据是否一致", "exp2": "首次满足即锁定，之后不复查", "exp2_1": "260 tick + 1.0 s 静置 + released + 稳定", "same": false}
+  ],
+  "evidence_A0_C": {
+    "exp2": {"success": 20, "n": 20, "b_ticks": [41, 44], "final_contacts_all_zero": true},
+    "exp2_1_t0": {
+      "success": 10,
+      "n": 20,
+      "failures_never_moved_object": 8,
+      "failures_transient_then_drift": 2,
+      "transient_seeds": [40000013, 40000016],
+      "transient_first_success_ticks": [46, 47],
+      "transient_final_yaw_deg": [-15.0, -12.9]
+    }
+  },
+  "audit_conclusion": {
+    "timing_state_component_min": 8,
+    "judging_protocol_component_max": 2,
+    "statement": "实验 2 与 2.1 的 A0→C 差异不能只用判据解释：2.1 的 10 次失败里 8 次物体从未离开 PLACE（交接状态差异），2 次是到达托盘后继续执行 260 tick 导致 yaw 漂出容差（判定时机差异）。"
+  },
+  "unified_protocol_v22": {
+    "a_success": "position<=2cm, yaw<=12deg, tilt<=12deg, released, lift>=3cm, speed<0.01 for 3 consecutive ticks",
+    "events": ["t_a_success", "t_release", "t_chunk_boundary", "t_object_stable"],
+    "H0": "switch at t_a_success tick, discard remaining chunk",
+    "H1": "switch at next chunk boundary after t_a_success, log extra executed ticks",
+    "H2": "switch 0.6 s after t_release",
+    "H3": "switch 1.2 s after t_release",
+    "b_c_judgement": "at first tick satisfying success (including released), stop sending new actions, run 1.0 s physics, then re-check position/yaw/tilt/released/speed",
+    "logging": ["q", "qd", "ee_pose", "gripper", "object_pose", "object_velocity", "contacts", "first_chunk_actions"]
+  }
+}
