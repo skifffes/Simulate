@@ -279,6 +279,7 @@ def main():
     ap.add_argument('--chain', default='A0_C')
     ap.add_argument('--conditions', nargs='+', default=CONDITIONS)
     ap.add_argument('--episodes', type=int, default=20)
+    ap.add_argument('--offset', type=int, default=0, help='跳过前 N 个快照（用于扩样）')
     ap.add_argument('--max-ticks-a', type=int, default=200)
     ap.add_argument('--max-ticks-b', type=int, default=260)
     ap.add_argument('--warmup-steps', type=int, default=30)
@@ -296,7 +297,7 @@ def main():
         if 'restore' in path.name or 'collection' in path.name:
             continue
         snaps.append(json.loads(path.read_text(encoding='utf-8')))
-    snaps = snaps[:args.episodes]
+    snaps = snaps[args.offset:args.offset + args.episodes]
 
     runner = PolicyRunner(args.policy)
     rows = []

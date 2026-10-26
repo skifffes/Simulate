@@ -209,10 +209,12 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
 关键结论：实验 2 的 A0→C 20/20 与 2.1 的 10/20 不能只归因于判据。2.1 的 10 次失败里，**8 次物体从未离开放置区**（交接状态差异），**2 次到达托盘后继续执行 260 tick 把 yaw 漂出容差**（判定窗口差异）。因此需要统一判据（v2.2）重跑 H0–H3，不能直接比较两套历史数字。
 
 - 阶段 2（交接时机 H0/H2/H3）已完成：[docs/experiment_2_2_timing.md](docs/experiment_2_2_timing.md)
-- 结果：A0→C **H0 8/10、H2 4/10、H3 3/10**（McNemar p=0.0625）；A90→C 三种时机均 0/10。等待 1.2 s 期间物理状态只变了 0.0066 rad / 0.3 mm，说明是 flow-matching 策略对交接点扰动的敏感性，而不是机械臂漂移。
+- 结果（20 状态）：A0→C **H0 17/20、H2 12/20、H3 11/20**（H0 vs H3 McNemar p≈0.070）；A90→C 三种时机均 0/20。等待 1.2 s 期间物理状态只变了 0.0066 rad / 0.3 mm，说明是 flow-matching 策略对交接点扰动的敏感性，而不是机械臂漂移。
 - 数据：[timing_branch](results/experiment_2_2/timing_branch/)、[timing](results/experiment_2_2/timing/)；脚本：`scripts/eval_handoff_timing.py`
 
 - 阶段 3（Physical Retreat to HOME 基线）已完成：[docs/experiment_2_2_retreat.md](docs/experiment_2_2_retreat.md)
 - 结果：A90→C **0/20 → 18/20**、A90→B **0/20 → 20/20**、A0→C **10/20 → 17/20**、A0→B **0/20 → 4/20**（Oracle HOME 参考 19/17/19/1）。
 - 退让质量：80/80 到达 HOME、0 碰撞、物体位移 ~2 μm、A 任务条件 80/80 保持；全程连续关节运动，无瞬移；829 个控制周期 ≈ 3.45 s 仿真时间。
-- 结论：传统运动规划是强 Baseline，A90 链的组合失败可由执行层完全解决；A0→B 仍是 B 的原子短板。
+
+- **完整报告**：[docs/experiment_2_2.md](docs/experiment_2_2.md)
+- 最终结论：当前组合失败绝大部分可由"交接时机 + 一个最朴素的关节空间退让"解释或解决；A90 链由执行层完全恢复（90–100%），A0→C 到 85%，A0→B 仍是 B 在 yaw 0 上的原子短板。
