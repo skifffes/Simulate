@@ -1,0 +1,192 @@
+{
+  "episodes": 48,
+  "overall": {
+    "n": 48,
+    "success": 47,
+    "rate": 0.9792,
+    "ci95": [
+      0.891,
+      0.9963
+    ]
+  },
+  "by_mode": {
+    "home": {
+      "n": 12,
+      "success": 11,
+      "rate": 0.9167,
+      "ci95": [
+        0.6461,
+        0.9851
+      ]
+    },
+    "home_neighborhood": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    },
+    "multi_ik": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    },
+    "task_relevant": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    }
+  },
+  "by_yaw_bin": {
+    "long_Y_yaw0": {
+      "n": 24,
+      "success": 23,
+      "rate": 0.9583,
+      "ci95": [
+        0.7976,
+        0.9926
+      ]
+    },
+    "long_X_yaw90": {
+      "n": 24,
+      "success": 24,
+      "rate": 1.0,
+      "ci95": [
+        0.862,
+        1.0
+      ]
+    }
+  },
+  "diverse_only": {
+    "n": 36,
+    "success": 36,
+    "rate": 1.0,
+    "ci95": [
+      0.9036,
+      1.0
+    ]
+  },
+  "by_mode_yaw": {
+    "home@yaw0": {
+      "n": 7,
+      "success": 6,
+      "rate": 0.8571,
+      "ci95": [
+        0.4869,
+        0.9743
+      ]
+    },
+    "home@yaw90": {
+      "n": 5,
+      "success": 5,
+      "rate": 1.0,
+      "ci95": [
+        0.5655,
+        1.0
+      ]
+    },
+    "home_neighborhood@yaw0": {
+      "n": 5,
+      "success": 5,
+      "rate": 1.0,
+      "ci95": [
+        0.5655,
+        1.0
+      ]
+    },
+    "home_neighborhood@yaw90": {
+      "n": 7,
+      "success": 7,
+      "rate": 1.0,
+      "ci95": [
+        0.6457,
+        1.0
+      ]
+    },
+    "multi_ik@yaw0": {
+      "n": 6,
+      "success": 6,
+      "rate": 1.0,
+      "ci95": [
+        0.6097,
+        1.0
+      ]
+    },
+    "multi_ik@yaw90": {
+      "n": 6,
+      "success": 6,
+      "rate": 1.0,
+      "ci95": [
+        0.6097,
+        1.0
+      ]
+    },
+    "task_relevant@yaw0": {
+      "n": 6,
+      "success": 6,
+      "rate": 1.0,
+      "ci95": [
+        0.6097,
+        1.0
+      ]
+    },
+    "task_relevant@yaw90": {
+      "n": 6,
+      "success": 6,
+      "rate": 1.0,
+      "ci95": [
+        0.6097,
+        1.0
+      ]
+    }
+  },
+  "start_distance_by_mode": {
+    "home": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "home_neighborhood": {
+      "mean": 0.333,
+      "min": 0.181,
+      "max": 0.427
+    },
+    "multi_ik": {
+      "mean": 1.522,
+      "min": 1.093,
+      "max": 2.321
+    },
+    "task_relevant": {
+      "mean": 1.577,
+      "min": 1.017,
+      "max": 2.399
+    }
+  },
+  "max_joint_step_rad": 0.03768,
+  "max_lift_m": 0.0088,
+  "lifted_count": 0,
+  "mean_ticks": 1351.6,
+  "failures": [
+    {
+      "mode": "home",
+      "seed": 50000036,
+      "reason": "b_push_6",
+      "yaw0_deg": 0.0,
+      "ticks": 1342
+    }
+  ],
+  "a_terminal_distance_rad": {
+    "A0": 2.004,
+    "A90": 1.65
+  }
+}

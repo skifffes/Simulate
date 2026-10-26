@@ -1,0 +1,5 @@
+﻿model,group,success,n,rate,ci_low,ci_high,failure_modes
+vla,long_Y_yaw0,1,12,0.0833,0.0149,0.3539,"{""push_check"": 11}"
+vla,long_X_yaw90,7,8,0.875,0.5291,0.9776,"{""push_check"": 1}"
+expert,long_Y_yaw0,10,12,0.8333,0.552,0.953,"{""push_check"": 2}"
+expert,long_X_yaw90,8,8,1.0,0.6756,1.0,{}

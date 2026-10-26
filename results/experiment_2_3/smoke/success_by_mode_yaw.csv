@@ -1,0 +1,11 @@
+﻿group,success,n,rate,ci95
+home@yaw0,6,7,0.8571,"[0.4869, 0.9743]"
+home@yaw90,5,5,1.0,"[0.5655, 1.0]"
+home_neighborhood@yaw0,5,5,1.0,"[0.5655, 1.0]"
+home_neighborhood@yaw90,7,7,1.0,"[0.6457, 1.0]"
+multi_ik@yaw0,6,6,1.0,"[0.6097, 1.0]"
+multi_ik@yaw90,6,6,1.0,"[0.6097, 1.0]"
+task_relevant@yaw0,6,6,1.0,"[0.6097, 1.0]"
+task_relevant@yaw90,6,6,1.0,"[0.6097, 1.0]"
+all,47,48,0.9792,"[0.891, 0.9963]"
+diverse_only,36,36,1.0,"[0.9036, 1.0]"

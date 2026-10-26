@@ -1,0 +1,76 @@
+{
+  "episodes_requested": 48,
+  "sampled": 48,
+  "success": 47,
+  "rate": 0.9792,
+  "ci95": [
+    0.891,
+    0.9963
+  ],
+  "by_mode": {
+    "home": {
+      "n": 12,
+      "success": 11,
+      "rate": 0.9167,
+      "ci95": [
+        0.6461,
+        0.9851
+      ]
+    },
+    "home_neighborhood": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    },
+    "multi_ik": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    },
+    "task_relevant": {
+      "n": 12,
+      "success": 12,
+      "rate": 1.0,
+      "ci95": [
+        0.7575,
+        1.0
+      ]
+    }
+  },
+  "by_yaw_bin": {
+    "long_Y_yaw0": {
+      "n": 24,
+      "success": 23,
+      "rate": 0.9583,
+      "ci95": [
+        0.7976,
+        0.9926
+      ]
+    },
+    "long_X_yaw90": {
+      "n": 24,
+      "success": 24,
+      "rate": 1.0,
+      "ci95": [
+        0.862,
+        1.0
+      ]
+    }
+  },
+  "lifted_count": 0,
+  "lifted_episodes": [],
+  "max_joint_step_overall": 0.03768,
+  "mean_wall_seconds": 0.57,
+  "failure_modes": {
+    "b_push_6": 1
+  },
+  "rejections_total": {}
+}

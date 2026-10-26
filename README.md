@@ -201,7 +201,7 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
   --results results/experiment_2 --out results/experiment_2_1/audit
 ```
 
-## 实验 2.2（进行中）：交接时机与真实物理连接
+## 实验 2.2（已完成）：交接时机与真实物理连接
 
 - 阶段 1（交接协议审计）已完成：[docs/experiment_2_2_audit.md](docs/experiment_2_2_audit.md)
 - 机器可读记录：[results/experiment_2_2/protocol_audit.json](results/experiment_2_2/protocol_audit.json)
@@ -218,3 +218,34 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
 
 - **完整报告**：[docs/experiment_2_2.md](docs/experiment_2_2.md)
 - 最终结论：当前组合失败绝大部分可由"交接时机 + 一个最朴素的关节空间退让"解释或解决；A90 链由执行层完全恢复（90–100%），A0→C 到 85%，A0→B 仍是 B 在 yaw 0 上的原子短板。
+
+## 实验 2.3（阶段 0–2 已完成）：原子技能起始状态覆盖
+
+- 阶段 0（数据/起点/协议审计）：[docs/experiment_2_3_audit.md](docs/experiment_2_3_audit.md)
+- 阶段 1–2（多起点生成器 + B 专家冒烟）：[docs/experiment_2_3_smoke.md](docs/experiment_2_3_smoke.md)
+
+**审计要点**：480 集里四个技能的起始关节唯一值都是 1 行（= HOME，偏差 1.4×10⁻⁵ rad）；A0/A90 真实终态距 HOME **2.00 / 1.65 rad**。B 的原子瓶颈与物体朝向强相关：冻结 VLA 在 yaw≈0 **1/12 = 8%**、yaw≈90 **7/8 = 88%**（专家 10/12、8/8）——实验 2 的"B 40%"是两种朝向混合后的平均值。
+
+**生成器与冒烟**：
+
+- 新增 `src/vla/atomic_tasks/starts.py`：HOME 邻域 / 多 IK / 任务相关三类采样 + 7 项物理合法检查（限位、静态碰撞、夹爪间距、物体稳定、相机视锥、B 接近位姿 IK、关节路径粗检）。100 候选/模式的接受率 100% / 100% / 90% / 91%，拒绝仅来自限位余量。
+- B 专家 48 集冒烟（4 模式 × 12，yaw 各半）：**47/48 成功**；三种多样起点 **36/36**；yaw0 23/24、yaw90 24/24；物体最大抬升 8.8 mm（没有抓起）；无 HOME 重置；起点距离覆盖 1.0–2.5 rad（覆盖 A 终态区间）。
+- 结果：[results/experiment_2_3/smoke/](results/experiment_2_3/smoke/)、[results/experiment_2_3/starts/](results/experiment_2_3/starts/)；图：![冒烟概览](results/experiment_2_3/smoke/overview.png)
+
+```bash
+# 审计（只读）
+python scripts/audit_experiment_2_3.py
+
+# 服务器：生成器合法性探测（约 1 分钟）
+HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python -u scripts/probe_start_sampler.py \
+  --per-mode 100 --out results/experiment_2_3/starts
+
+# 服务器：B 专家多起点冒烟（48 集，约 2 分钟）
+HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python -u scripts/smoke_multistart_b.py \
+  --episodes 48 --seed-base 50000000 --out results/experiment_2_3/smoke --preview-every 6
+
+# 本地：汇总与画图
+python scripts/analyze_experiment_2_3_smoke.py
+```
+
+**下一步（未做）**：D1 canonical / D2 diverse 的等预算 B 数据采集与共享 SmolVLA 重训，先原子按 yaw 分层评测，再做 A0→B / A90→B 的直接交接（统一 v2.2）。
