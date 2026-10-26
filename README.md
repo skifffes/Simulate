@@ -207,3 +207,7 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
 - 机器可读记录：[results/experiment_2_2/protocol_audit.json](results/experiment_2_2/protocol_audit.json)
 
 关键结论：实验 2 的 A0→C 20/20 与 2.1 的 10/20 不能只归因于判据。2.1 的 10 次失败里，**8 次物体从未离开放置区**（交接状态差异），**2 次到达托盘后继续执行 260 tick 把 yaw 漂出容差**（判定窗口差异）。因此需要统一判据（v2.2）重跑 H0–H3，不能直接比较两套历史数字。
+
+- 阶段 2（交接时机 H0/H2/H3）已完成：[docs/experiment_2_2_timing.md](docs/experiment_2_2_timing.md)
+- 结果：A0→C **H0 8/10、H2 4/10、H3 3/10**（McNemar p=0.0625）；A90→C 三种时机均 0/10。等待 1.2 s 期间物理状态只变了 0.0066 rad / 0.3 mm，说明是 flow-matching 策略对交接点扰动的敏感性，而不是机械臂漂移。
+- 数据：[timing_branch](results/experiment_2_2/timing_branch/)、[timing](results/experiment_2_2/timing/)；脚本：`scripts/eval_handoff_timing.py`
