@@ -1,0 +1,640 @@
+{
+  "summary": {
+    "chain": "A90_C",
+    "episodes": 20,
+    "retreat_ok": 20,
+    "a_still_ok": 20,
+    "chain_success": 18,
+    "retreat_rate": 1.0,
+    "chain_rate": 0.9,
+    "mode_counts": {
+      "direct": 20,
+      "staged": 0
+    },
+    "collisions": 0,
+    "mean_object_moved_m": 1.917536744330792e-06,
+    "mean_retreat_seconds": 0.169
+  },
+  "episodes": [
+    {
+      "chain": "A90_C",
+      "seed": 40000000,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 829,
+      "retreat_collision": false,
+      "joint_error_home": 0.005341213901122799,
+      "object_moved_m": 1.4758679412864104e-07,
+      "object_yaw_change": 4.309371504085391e-08,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.007703826578177216,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 105,
+      "vla_ticks": 106,
+      "vla_wall_seconds": 11.41,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5492918255502983,
+          0.4031930496710977,
+          0.01998545823499406
+        ],
+        "yaw": 0.011143391537189929,
+        "tilt_deg": 0.01082182537802109
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000001,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 828,
+      "retreat_collision": false,
+      "joint_error_home": 0.005355204126528734,
+      "object_moved_m": 2.478344871886857e-06,
+      "object_yaw_change": 9.818314551202079e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.005567178783579467,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 112,
+      "vla_ticks": 113,
+      "vla_wall_seconds": 11.19,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5530259932660887,
+          0.4008653038959427,
+          0.01998809884408887
+        ],
+        "yaw": -0.06438686162399015,
+        "tilt_deg": 0.00530095980165731
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000002,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 831,
+      "retreat_collision": false,
+      "joint_error_home": 0.005341009338833247,
+      "object_moved_m": 5.202927726280157e-07,
+      "object_yaw_change": 4.4664221743317967e-07,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.007879256897539908,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 105,
+      "vla_ticks": 106,
+      "vla_wall_seconds": 10.55,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5526604851152861,
+          0.4043605162101166,
+          0.019986931246846272
+        ],
+        "yaw": -0.09169705191627076,
+        "tilt_deg": 0.0047379430915147
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000003,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 824,
+      "retreat_collision": false,
+      "joint_error_home": 0.005379536052912692,
+      "object_moved_m": 2.3051449462365166e-07,
+      "object_yaw_change": 3.812480959819453e-07,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.007197742946464206,
+      "retreat_wall_seconds": 0.15,
+      "vla_success": true,
+      "first_success_tick": 103,
+      "vla_ticks": 104,
+      "vla_wall_seconds": 10.34,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5527507112111357,
+          0.3998513599306184,
+          0.01998745821423569
+        ],
+        "yaw": -0.08592655251951989,
+        "tilt_deg": 0.005581170560584204
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000004,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 821,
+      "retreat_collision": false,
+      "joint_error_home": 0.005363938849805239,
+      "object_moved_m": 4.7542526940442346e-07,
+      "object_yaw_change": 2.0741045347438813e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.00525249104222185,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 111,
+      "vla_ticks": 112,
+      "vla_wall_seconds": 11.06,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5522386505567477,
+          0.40324469270834845,
+          0.01998472632378342
+        ],
+        "yaw": -0.030906594015270704,
+        "tilt_deg": 0.018329328241692713
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000005,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 827,
+      "retreat_collision": false,
+      "joint_error_home": 0.005363755699359041,
+      "object_moved_m": 2.9900042918826847e-06,
+      "object_yaw_change": 3.408873491972386e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.012189940987139053,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 120,
+      "vla_ticks": 121,
+      "vla_wall_seconds": 11.83,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5537316947516744,
+          0.4042645151884834,
+          0.01998743854484024
+        ],
+        "yaw": -0.029413795473770637,
+        "tilt_deg": 0.005336201815009221
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000006,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 825,
+      "retreat_collision": false,
+      "joint_error_home": 0.0053482409830459265,
+      "object_moved_m": 7.355177395281547e-07,
+      "object_yaw_change": 3.545974036622823e-07,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.0034588851706925843,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 121,
+      "vla_ticks": 122,
+      "vla_wall_seconds": 12.39,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5463765226425726,
+          0.4007921132598889,
+          0.01998825209861579
+        ],
+        "yaw": -0.08801570755247332,
+        "tilt_deg": 0.0028266165137047056
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000007,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 824,
+      "retreat_collision": false,
+      "joint_error_home": 0.005359976743407324,
+      "object_moved_m": 1.5842406060578738e-09,
+      "object_yaw_change": 6.787821416054385e-10,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.00864208294133138,
+      "retreat_wall_seconds": 0.15,
+      "vla_success": true,
+      "first_success_tick": 108,
+      "vla_ticks": 109,
+      "vla_wall_seconds": 11.02,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5512551820126146,
+          0.4036212210732788,
+          0.01998774753455981
+        ],
+        "yaw": -0.06121803588598625,
+        "tilt_deg": 0.0040403848015700995
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000008,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 817,
+      "retreat_collision": false,
+      "joint_error_home": 0.005355364329511281,
+      "object_moved_m": 1.6626451474672968e-06,
+      "object_yaw_change": 5.8698626001385534e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.011091224206015554,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 106,
+      "vla_ticks": 107,
+      "vla_wall_seconds": 10.65,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5506410006100128,
+          0.4063799475227056,
+          0.019985910965982803
+        ],
+        "yaw": -0.05966748379434057,
+        "tilt_deg": 0.016286029624947858
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000009,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 825,
+      "retreat_collision": false,
+      "joint_error_home": 0.005359352987540256,
+      "object_moved_m": 1.098757732794384e-06,
+      "object_yaw_change": 1.193862196191553e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.0010816545205809204,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 107,
+      "vla_ticks": 108,
+      "vla_wall_seconds": 10.74,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5534248303603186,
+          0.39692053296715185,
+          0.019987551123206552
+        ],
+        "yaw": -0.04763467192482656,
+        "tilt_deg": 0.00736892744183009
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000010,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 828,
+      "retreat_collision": false,
+      "joint_error_home": 0.005376370934256192,
+      "object_moved_m": 1.1829300538898153e-06,
+      "object_yaw_change": 9.287399085566861e-06,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.005600432311832771,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 107,
+      "vla_ticks": 108,
+      "vla_wall_seconds": 11.81,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5503557471053966,
+          0.40058136717799137,
+          0.01998740582741585
+        ],
+        "yaw": 0.03801460444446886,
+        "tilt_deg": 0.005523908925795599
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000011,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 827,
+      "retreat_collision": false,
+      "joint_error_home": 0.0053541378396112504,
+      "object_moved_m": 7.943398997537533e-07,
+      "object_yaw_change": 5.037446682010227e-08,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.00686132303883451,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 104,
+      "vla_ticks": 105,
+      "vla_wall_seconds": 10.59,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5486777134773512,
+          0.402874683689355,
+          0.019989640975217254
+        ],
+        "yaw": 0.02141042524781081,
+        "tilt_deg": 0.0011859559588821215
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000012,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 828,
+      "retreat_collision": false,
+      "joint_error_home": 0.005366729208682142,
+      "object_moved_m": 2.7728138582062046e-08,
+      "object_yaw_change": 1.5212124448993336e-08,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.00658687335720441,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 116,
+      "vla_ticks": 117,
+      "vla_wall_seconds": 11.54,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5468833773089848,
+          0.4012596919162774,
+          0.01998844540255637
+        ],
+        "yaw": -0.09401775679126782,
+        "tilt_deg": 0.0030764285073578744
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000013,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 819,
+      "retreat_collision": false,
+      "joint_error_home": 0.005346572580950282,
+      "object_moved_m": 2.1753429455070432e-06,
+      "object_yaw_change": 3.0449848726465945e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.0109703381216512,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 102,
+      "vla_ticks": 103,
+      "vla_wall_seconds": 11.12,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5543196764304531,
+          0.3995585898542248,
+          0.019985825348274016
+        ],
+        "yaw": -0.11162358376268323,
+        "tilt_deg": 0.014788921313775455
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000014,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 824,
+      "retreat_collision": false,
+      "joint_error_home": 0.005336801749025621,
+      "object_moved_m": 3.310121082152118e-06,
+      "object_yaw_change": 1.545761939780732e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.0020793761919562347,
+      "retreat_wall_seconds": 0.29,
+      "vla_success": false,
+      "first_success_tick": 106,
+      "vla_ticks": 107,
+      "vla_wall_seconds": 10.77,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5500522047970362,
+          0.40505947680255444,
+          0.020075816042922363
+        ],
+        "yaw": -0.09227530741642147,
+        "tilt_deg": 0.13375360789680316
+      },
+      "vla_failure": "final_check"
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000015,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 831,
+      "retreat_collision": false,
+      "joint_error_home": 0.005340541202218385,
+      "object_moved_m": 1.8532542429193521e-06,
+      "object_yaw_change": 6.386391051482754e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.0022954969214281024,
+      "retreat_wall_seconds": 0.15,
+      "vla_success": false,
+      "first_success_tick": 106,
+      "vla_ticks": 107,
+      "vla_wall_seconds": 11.42,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5556846796585158,
+          0.4004628754412174,
+          0.02012468638484552
+        ],
+        "yaw": -0.08426109145828262,
+        "tilt_deg": 0.19710412853193304
+      },
+      "vla_failure": "final_check"
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000016,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 823,
+      "retreat_collision": false,
+      "joint_error_home": 0.005353102752839178,
+      "object_moved_m": 3.561883104167955e-06,
+      "object_yaw_change": 0.00012530802143495556,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.010225413435428468,
+      "retreat_wall_seconds": 0.18,
+      "vla_success": true,
+      "first_success_tick": 109,
+      "vla_ticks": 110,
+      "vla_wall_seconds": 10.92,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.552307062883533,
+          0.4037472116447032,
+          0.019988280819399552
+        ],
+        "yaw": -0.09768497642292406,
+        "tilt_deg": 0.004229110828335292
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000017,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 828,
+      "retreat_collision": false,
+      "joint_error_home": 0.005368511530513764,
+      "object_moved_m": 3.66016942629333e-06,
+      "object_yaw_change": 5.757569513420435e-05,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.010582284385040911,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 106,
+      "vla_ticks": 107,
+      "vla_wall_seconds": 10.48,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5527341901779623,
+          0.4066482771567333,
+          0.01998603771650362
+        ],
+        "yaw": -0.02920677116244835,
+        "tilt_deg": 0.009844349223112756
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000018,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 823,
+      "retreat_collision": false,
+      "joint_error_home": 0.005345924142949654,
+      "object_moved_m": 1.4998247975089237e-06,
+      "object_yaw_change": 4.969320432257618e-06,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.01183227112387287,
+      "retreat_wall_seconds": 0.17,
+      "vla_success": true,
+      "first_success_tick": 108,
+      "vla_ticks": 109,
+      "vla_wall_seconds": 10.5,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5503232669666007,
+          0.4131085475683711,
+          0.0199898802694079
+        ],
+        "yaw": -0.08960361014322415,
+        "tilt_deg": 0.00043549386456380413
+      },
+      "vla_failure": null
+    },
+    {
+      "chain": "A90_C",
+      "seed": 40000019,
+      "retreat_ok": true,
+      "retreat_mode": "direct",
+      "retreat_reason": "ok",
+      "retreat_ticks": 826,
+      "retreat_collision": false,
+      "joint_error_home": 0.005342483424603195,
+      "object_moved_m": 9.944467840891317e-06,
+      "object_yaw_change": 0.00016766571076809456,
+      "a_still_ok": true,
+      "a_xy_error_m": 0.01094971558406282,
+      "retreat_wall_seconds": 0.16,
+      "vla_success": true,
+      "first_success_tick": 113,
+      "vla_ticks": 114,
+      "vla_wall_seconds": 11.62,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.5539119165076721,
+          0.4085561458809618,
+          0.01998838189524548
+        ],
+        "yaw": -0.11305731090477966,
+        "tilt_deg": 0.002524827977413591
+      },
+      "vla_failure": null
+    }
+  ]
+}

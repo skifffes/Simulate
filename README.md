@@ -211,3 +211,8 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
 - 阶段 2（交接时机 H0/H2/H3）已完成：[docs/experiment_2_2_timing.md](docs/experiment_2_2_timing.md)
 - 结果：A0→C **H0 8/10、H2 4/10、H3 3/10**（McNemar p=0.0625）；A90→C 三种时机均 0/10。等待 1.2 s 期间物理状态只变了 0.0066 rad / 0.3 mm，说明是 flow-matching 策略对交接点扰动的敏感性，而不是机械臂漂移。
 - 数据：[timing_branch](results/experiment_2_2/timing_branch/)、[timing](results/experiment_2_2/timing/)；脚本：`scripts/eval_handoff_timing.py`
+
+- 阶段 3（Physical Retreat to HOME 基线）已完成：[docs/experiment_2_2_retreat.md](docs/experiment_2_2_retreat.md)
+- 结果：A90→C **0/20 → 18/20**、A90→B **0/20 → 20/20**、A0→C **10/20 → 17/20**、A0→B **0/20 → 4/20**（Oracle HOME 参考 19/17/19/1）。
+- 退让质量：80/80 到达 HOME、0 碰撞、物体位移 ~2 μm、A 任务条件 80/80 保持；全程连续关节运动，无瞬移；829 个控制周期 ≈ 3.45 s 仿真时间。
+- 结论：传统运动规划是强 Baseline，A90 链的组合失败可由执行层完全解决；A0→B 仍是 B 的原子短板。
