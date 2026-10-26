@@ -70,7 +70,24 @@ def video_path(root, info, video_key, episode_index):
 
 
 def probe_video(path):
-    """返回 (帧数, 时长秒, 宽, 高)。"""
+    """返回 (帧数, 时长秒, 宽, 高)。
+
+    优先用 PyAV：服务器上 imageio_ffmpeg 的 count_frames_and_secs 会卡住
+    （2026-10-26 实测），没有 av 时回退旧实现。
+    """
+    try:
+        import av
+    except ImportError:
+        av = None
+    if av is not None:
+        with av.open(str(path)) as container:
+            stream = container.streams.video[0]
+            frames = int(stream.frames or 0)
+            if frames <= 0:
+                frames = sum(1 for _ in container.decode(video=0))
+            fps = float(stream.average_rate) if stream.average_rate else 0.0
+            seconds = frames / fps if fps else 0.0
+            return frames, float(seconds), int(stream.width), int(stream.height)
     import imageio_ffmpeg
     frames, seconds = imageio_ffmpeg.count_frames_and_secs(str(path))
     generator = imageio_ffmpeg.read_frames(str(path), pix_fmt='rgb24')
@@ -82,9 +99,24 @@ def probe_video(path):
 
 def read_video_frames(path, indices):
     """按需解码指定帧号（升序）。"""
-    import imageio_ffmpeg
     wanted = sorted(int(i) for i in indices)
-    frames, cursor = {}, 0
+    frames = {}
+    try:
+        import av
+    except ImportError:
+        av = None
+    if av is not None:
+        wanted_set = set(wanted)
+        last = wanted[-1] if wanted else -1
+        with av.open(str(path)) as container:
+            for index, frame in enumerate(container.decode(video=0)):
+                if index in wanted_set:
+                    frames[index] = frame.to_ndarray(format='rgb24')
+                if index >= last:
+                    break
+        return frames
+    import imageio_ffmpeg
+    cursor = 0
     generator = imageio_ffmpeg.read_frames(str(path), pix_fmt='rgb24')
     meta = next(generator)
     width, height = meta['size']

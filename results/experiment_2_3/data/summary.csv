@@ -1,0 +1,3 @@
+﻿variant,episodes,frames,attempts,attempt_success_rate,first_attempt_success_rate,yaw0_attempt_success_rate,yaw90_attempt_success_rate,mean_ticks
+D1,120,14759,201,0.597,0.597,0.4545,0.8696,123.0
+D2,120,14653,132,0.9015,0.9167,0.831,0.9836,122.1

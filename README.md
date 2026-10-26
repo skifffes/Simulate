@@ -248,4 +248,4 @@ HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python -u scripts/smoke_multistart_b.py
 python scripts/analyze_experiment_2_3_smoke.py
 ```
 
-**下一步（未做）**：D1 canonical / D2 diverse 的等预算 B 数据采集与共享 SmolVLA 重训，先原子按 yaw 分层评测，再做 A0→B / A90→B 的直接交接（统一 v2.2）。
+**下一步（已部分完成）**：D1 canonical / D2 diverse 的等预算 B 数据已完成采集（阶段 3，未训练）：[docs/experiment_2_3_data.md](docs/experiment_2_3_data.md)。两个 480 集变体 `lerobot_panda_e23_D1/D2` 的 B 帧数相差 0.7%（完整数据集帧数相差 0.15%），校验 0 失败；D1 的 yaw0 专家尝试成功率 45.5%，yaw90 87.0%，D2 在同一批 spec 上首次尝试 110/120。下一步是共享 SmolVLA 重训、按 yaw 分层的原子评测，再做 A0→B / A90→B 的直接交接（统一 v2.2）。

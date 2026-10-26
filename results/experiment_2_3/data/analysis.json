@@ -1,0 +1,142 @@
+{
+  "D1": {
+    "dataset": "/scratch/lijh/simulate_vla/data/_shards_e23/B_D1_*",
+    "episodes": 120,
+    "frames": 14759,
+    "attempts": 201,
+    "elapsed_s": 2223.0,
+    "attempt_success": {
+      "success": 120,
+      "n": 201,
+      "rate": 0.597,
+      "ci95": [
+        0.528,
+        0.6624
+      ]
+    },
+    "first_attempt_success": {
+      "success": 120,
+      "n": 201,
+      "rate": 0.597,
+      "ci95": [
+        0.528,
+        0.6624
+      ]
+    },
+    "by_yaw_attempt": {
+      "long_Y_yaw0": {
+        "success": 60,
+        "n": 132,
+        "rate": 0.4545,
+        "ci95": [
+          0.3721,
+          0.5396
+        ]
+      },
+      "long_X_yaw90": {
+        "success": 60,
+        "n": 69,
+        "rate": 0.8696,
+        "ci95": [
+          0.7703,
+          0.9298
+        ]
+      }
+    },
+    "mean_ticks": 123.0
+  },
+  "D2": {
+    "dataset": "/scratch/lijh/simulate_vla/data/_shards_e23/B_D2",
+    "episodes": 120,
+    "frames": 14653,
+    "attempts": 132,
+    "elapsed_s": 1608.6,
+    "attempt_success": {
+      "success": 119,
+      "n": 132,
+      "rate": 0.9015,
+      "ci95": [
+        0.8388,
+        0.9415
+      ]
+    },
+    "first_attempt_success": {
+      "success": 110,
+      "n": 120,
+      "rate": 0.9167,
+      "ci95": [
+        0.8534,
+        0.9541
+      ]
+    },
+    "home_fallbacks": 1,
+    "by_yaw_attempt": {
+      "long_Y_yaw0": {
+        "success": 59,
+        "n": 71,
+        "rate": 0.831,
+        "ci95": [
+          0.7274,
+          0.9006
+        ]
+      },
+      "long_X_yaw90": {
+        "success": 60,
+        "n": 61,
+        "rate": 0.9836,
+        "ci95": [
+          0.9128,
+          0.9971
+        ]
+      }
+    },
+    "by_mode_episodes": {
+      "home": {
+        "n": 61,
+        "mean_home_distance": 0.0
+      },
+      "home_neighborhood": {
+        "n": 31,
+        "mean_home_distance": 0.352
+      },
+      "multi_ik": {
+        "n": 14,
+        "mean_home_distance": 1.589
+      },
+      "task_relevant": {
+        "n": 14,
+        "mean_home_distance": 1.664
+      }
+    },
+    "mean_ticks": 122.1
+  },
+  "specs": {
+    "n": 120,
+    "yaw0": 60,
+    "yaw90": 60,
+    "gap_range_yaw0": [
+      0.1963,
+      0.2213
+    ],
+    "gap_range_yaw90": [
+      0.1667,
+      0.1911
+    ],
+    "x_range": [
+      0.5382,
+      0.562
+    ],
+    "y_range": [
+      0.1681,
+      0.1918
+    ]
+  },
+  "budget": {
+    "episodes_equal": true,
+    "frames_ratio_D2_over_D1": 0.9928
+  },
+  "a_terminal_distance_rad": {
+    "A0": 2.004,
+    "A90": 1.65
+  }
+}

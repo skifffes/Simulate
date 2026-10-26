@@ -1,0 +1,10 @@
+{
+  "variant": "D2",
+  "dataset": "/scratch/lijh/simulate_vla/data/_shards_e23/B_D2",
+  "episodes": 120,
+  "frames": 14653,
+  "specs_used": 120,
+  "attempts": 132,
+  "elapsed_s": 1608.6,
+  "task": "push the orange block along the positive X direction to the wall"
+}

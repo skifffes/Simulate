@@ -100,9 +100,28 @@ def encode_video(frames, path, fps):
 
 
 def probe_video(path):
-    """用 ffmpeg 自带工具读取视频元信息，用于写入后自检。"""
+    """读取视频元信息；优先用 PyAV（服务器上 imageio_ffmpeg 的
+    count_frames_and_secs 会卡住，2026-10-26 实测），没有 av 时回退到旧实现。"""
+    try:
+        import av
+    except ImportError:
+        av = None
+    if av is not None:
+        with av.open(str(path)) as container:
+            stream = container.streams.video[0]
+            frames = int(stream.frames or 0)
+            if frames <= 0:
+                frames = sum(1 for _ in container.decode(video=0))
+            fps = float(stream.average_rate) if stream.average_rate else 0.0
+            if stream.duration is not None and stream.time_base is not None:
+                seconds = float(stream.duration * stream.time_base)
+            elif frames and fps:
+                seconds = frames / fps
+            else:
+                seconds = 0.0
+            return {'frames': int(frames), 'seconds': round(seconds, 4),
+                    'fps': fps, 'size': (int(stream.width), int(stream.height))}
     from imageio_ffmpeg import count_frames_and_secs, read_frames
-
     frames, seconds = count_frames_and_secs(str(path))
     generator = read_frames(str(path), pix_fmt='rgb24')
     meta = next(generator)
