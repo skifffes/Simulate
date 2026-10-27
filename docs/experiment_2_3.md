@@ -292,7 +292,7 @@ D2 把 60/120 条 B 示范从 HOME 换成多样起点，HOME 起点的标准 B �
 ![B 成功终态](../results/experiment_2_3/cases/b_ok/top_end.png)
 ![A0→B 失败终态](../results/experiment_2_3/cases/a0b_fail/top_end.png)
 
-左：标准 B 成功——物体留在桌面、贴墙；右：A0→B 失败——物体被抬到约 8 cm 并被带离放置区。两条轨迹的逐 tick 物体 z / 夹爪指令 / 接触数在 `trace.json` 中。
+第一张：标准 B 成功——物体留在桌面、贴墙；第二张：A0→B 失败——物体被抬到约 8 cm 并被带离放置区。两条轨迹的逐 tick 物体 z / 夹爪指令 / 接触数在 `trace.json` 中。
 
 ## 7. 与实验 2 / 2.1 / 2.2 的对照
 
