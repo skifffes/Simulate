@@ -35,10 +35,10 @@
     "both_fingers": 1,
     "table_loss": 2,
     "wall_contact": 0,
-    "conn_tilt_mean": 0.0,
-    "conn_dx_mean": 0.0,
+    "conn_tilt_mean": 0.15,
+    "conn_dx_mean": 0.0019,
     "conn_contacts": 0,
-    "conn_ticks_mean": 0.0,
+    "conn_ticks_mean": 270.0,
     "gate_ticks_mean": 0.0
   },
   "C3": {
@@ -49,10 +49,10 @@
     "both_fingers": 2,
     "table_loss": 0,
     "wall_contact": 0,
-    "conn_tilt_mean": 0.0,
-    "conn_dx_mean": 0.0,
+    "conn_tilt_mean": 0.15,
+    "conn_dx_mean": 0.0019,
     "conn_contacts": 0,
-    "conn_ticks_mean": 0.0,
+    "conn_ticks_mean": 244.0,
     "gate_ticks_mean": 0.0
   },
   "C4": {
@@ -91,10 +91,10 @@
     "both_fingers": 2,
     "table_loss": 0,
     "wall_contact": 0,
-    "conn_tilt_mean": 0.0,
-    "conn_dx_mean": 0.0,
+    "conn_tilt_mean": 0.24,
+    "conn_dx_mean": 0.0041,
     "conn_contacts": 0,
-    "conn_ticks_mean": 0.0,
+    "conn_ticks_mean": 163.0,
     "gate_ticks_mean": 0.0
   },
   "G3": {

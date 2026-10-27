@@ -35,5 +35,5 @@
 ## 限制
 
 - 每条件仅 3 个配对 seed。
-- C2/C3/R1 的连接段在 `physics_trace.csv` 中被标成 `A0`（`joint_path` 未更新 skill），连接阶段的倾斜/成本不能可靠分段；C4 的 `retreat` 标签正确。
-- G5 R0 连接段物体倾斜 24°，但 robot–object 接触计数为 0，需下一轮逐 link 接触检查确认。
+- C2/C3/R1 的连接段 skill 标签已修复并重跑：C2/C3 连接 270/244 ticks、倾斜 0.15°；R1 163 ticks、倾斜 0.24°。本目录数据为修正后版本。
+- G5 R0 连接段物体倾斜 23.9°、位移 7.5 mm；R1 仅 0.24° / 4.1 mm。R0 的 robot–object 接触计数仍为 0，单指扫掠碰撞的具体 link 需下一轮逐 link 接触检查确认。

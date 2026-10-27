@@ -78,6 +78,7 @@ class Episode25(Episode):
         self.policy_step += 1
 
     def joint_path(self, q_goal, skill, tag):
+        self.skill = skill
         q0 = self.sim.q().copy()
         delta = np.asarray(q_goal, dtype=float) - q0
         n = max(1, int(math.ceil(float(np.linalg.norm(delta)) / 0.002)))
