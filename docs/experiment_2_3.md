@@ -22,8 +22,8 @@ D1 与 D2 都用同一个 `smolvla_base` 微调 20 000 步（最终 loss 0.006 /
 
 因此本轮支持 prompt.md 的**情况 B**：原子多起点能力可以改善，但"仅扩大状态覆盖"不足以修复真实交接；把 A 的真实终态当作 B 的起点时，失败集中在状态-动作模式的错配上，而不是单纯的关节构型越界。
 
-![原子 B](results/experiment_2_3/analysis/atomic_b.png)
-![组合](results/experiment_2_3/analysis/composition.png)
+![原子 B](../results/experiment_2_3/analysis/atomic_b.png)
+![组合](../results/experiment_2_3/analysis/composition.png)
 
 本实验保持"训练时只有独立原子示范、测试时给定技能计划"的零样本组合设定，只改变原子 B 的**机器人起始状态覆盖**，建立 D1（canonical，全部 HOME）与 D2（同一批物体 spec，一半多样起点）的等预算对照，并保留 D0（实验 2 原始数据与模型）作为历史基线。所有原子与组合评测使用冻结模型、统一 v2.2 判据，训练数据中没有任何 A→B 连续轨迹。
 
@@ -280,6 +280,20 @@ D0/D1 在 A90 终态上 20 集里物体 xy 位移全是 0.000 m、z 保持 0.020
 
 D2 把 60/120 条 B 示范从 HOME 换成多样起点，HOME 起点的标准 B 从 9/20 降到 6/20（yaw90 8/8→6/8，配对 p=0.25）。方向与"数据稀释"一致，但样本太小，不能下强结论；它提醒我们：在固定 120 条预算下，扩大起点覆盖会挤占 canonical 起点数据。
 
+### 6.5 代表性轨迹
+
+两条轨迹都只用于说明失败模式，不参与成功率统计：
+
+| 案例 | 模型 / seed | 现象 | 文件 |
+|---|---|---|---|
+| B 标准成功 | D1 / 40000004（yaw≈89°） | 物体 z 始终 ≤0.021 m，被推到墙边（gap 8 mm） | [top.mp4](../results/experiment_2_3/cases/b_ok/top.mp4) / [wrist.mp4](../results/experiment_2_3/cases/b_ok/wrist.mp4) |
+| A0→B 连续失败 | D2 / 40000002 | A 成功（97 ticks）；B 阶段物体 z 峰值 **0.125 m**、结束 0.079 m，x 前进 0.14 m，没有贴墙 | [top.mp4](../results/experiment_2_3/cases/a0b_fail/top.mp4) / [wrist.mp4](../results/experiment_2_3/cases/a0b_fail/wrist.mp4) |
+
+![B 成功终态](../results/experiment_2_3/cases/b_ok/top_end.png)
+![A0→B 失败终态](../results/experiment_2_3/cases/a0b_fail/top_end.png)
+
+左：标准 B 成功——物体留在桌面、贴墙；右：A0→B 失败——物体被抬到约 8 cm 并被带离放置区。两条轨迹的逐 tick 物体 z / 夹爪指令 / 接触数在 `trace.json` 中。
+
 ## 7. 与实验 2 / 2.1 / 2.2 的对照
 
 | 设置 | A0→B | A90→B | 说明 |
@@ -376,6 +390,7 @@ python scripts/analyze_experiment_2_3_results.py
 | `results/experiment_2_3/analysis/results.json` | 全部成功率、Wilson CI、McNemar、失败动力学 |
 | `results/experiment_2_3/analysis/atomic_b.png` / `composition.png` | 结果图 |
 | `results/experiment_2_3/eval/` | 原子/起点/组合/快照的逐集 JSON + CSV |
+| `results/experiment_2_3/cases/` | 代表性成功/失败轨迹的 mp4、关键帧与逐 tick trace |
 | `server/run_e23_evals.sh` / `run_e23_starts.sh` | 评测编排 |
 | 服务器 `outputs/smolvla_e23_D1` / `_D2` | 两个 20K checkpoint |
 | 服务器 `data/lerobot_panda_e23_D1` / `_D2` | 两个 480 集训练集 |
