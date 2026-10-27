@@ -1,0 +1,154 @@
+{
+  "groups": {
+    "G0_a0b_direct": {
+      "n": 10,
+      "success": 0,
+      "a_success": 10,
+      "wall_contact": 0,
+      "both_fingers": 8,
+      "table_loss": 7,
+      "lift_gt_3cm": 7,
+      "max_lift_mean": 0.0678,
+      "max_lift_max": 0.1056,
+      "failure_types": {
+        "not_reached": 2,
+        "grasp_lift": 7,
+        "tipping": 1
+      }
+    },
+    "G1_a90b_direct": {
+      "n": 10,
+      "success": 0,
+      "a_success": 10,
+      "wall_contact": 0,
+      "both_fingers": 10,
+      "table_loss": 10,
+      "lift_gt_3cm": 10,
+      "max_lift_mean": 0.0932,
+      "max_lift_max": 0.104,
+      "failure_types": {
+        "grasp_lift": 9,
+        "success_then_lost": 1
+      }
+    },
+    "G2_b_home_yaw0": {
+      "n": 10,
+      "success": 0,
+      "a_success": 10,
+      "wall_contact": 8,
+      "both_fingers": 8,
+      "table_loss": 3,
+      "lift_gt_3cm": 2,
+      "max_lift_mean": 0.018,
+      "max_lift_max": 0.063,
+      "failure_types": {
+        "grasp_lift": 1,
+        "push_rotated": 4,
+        "tipping": 4,
+        "wall_induced_lift": 1
+      }
+    },
+    "G3_b_home_yaw90": {
+      "n": 10,
+      "success": 9,
+      "a_success": 10,
+      "wall_contact": 0,
+      "both_fingers": 10,
+      "table_loss": 1,
+      "lift_gt_3cm": 0,
+      "max_lift_mean": 0.0058,
+      "max_lift_max": 0.0213,
+      "failure_types": {
+        "success": 9,
+        "tipping": 1
+      }
+    },
+    "G4_a0b_retreat_home": {
+      "n": 10,
+      "success": 0,
+      "a_success": 10,
+      "wall_contact": 8,
+      "both_fingers": 7,
+      "table_loss": 7,
+      "lift_gt_3cm": 4,
+      "max_lift_mean": 0.0343,
+      "max_lift_max": 0.1055,
+      "failure_types": {
+        "unknown": 1,
+        "wall_induced_lift": 3,
+        "tipping": 5,
+        "grasp_lift": 1
+      }
+    },
+    "G5_a0b_local_retreat": {
+      "n": 10,
+      "success": 0,
+      "a_success": 10,
+      "wall_contact": 0,
+      "both_fingers": 0,
+      "table_loss": 0,
+      "lift_gt_3cm": 0,
+      "max_lift_mean": 0.0004,
+      "max_lift_max": 0.0012,
+      "failure_types": {
+        "tipping": 4,
+        "no_contact": 5,
+        "not_reached": 1
+      }
+    }
+  },
+  "representative": {
+    "G0_worst_lift": {
+      "group": "G0_a0b_direct",
+      "seed": 40000002,
+      "dir": "/scratch/lijh/simulate_vla/results/experiment_2_4/G0_a0b_direct/seed_40000002",
+      "success": false,
+      "max_lift": 0.1055660757046369,
+      "failure": "grasp_lift"
+    },
+    "G4_best": {
+      "group": "G4_a0b_retreat_home",
+      "seed": 40000000,
+      "dir": "/scratch/lijh/simulate_vla/results/experiment_2_4/G4_a0b_retreat_home/seed_40000000",
+      "success": false,
+      "max_lift": 0.0035819599893769476,
+      "failure": "unknown"
+    },
+    "G5_best": {
+      "group": "G5_a0b_local_retreat",
+      "seed": 40000002,
+      "dir": "/scratch/lijh/simulate_vla/results/experiment_2_4/G5_a0b_local_retreat/seed_40000002",
+      "success": false,
+      "max_lift": 0.0,
+      "failure": "no_contact"
+    },
+    "G3_success": {
+      "group": "G3_b_home_yaw90",
+      "seed": 40000000,
+      "dir": "/scratch/lijh/simulate_vla/results/experiment_2_4/G3_b_home_yaw90/seed_40000000",
+      "success": true,
+      "max_lift": 0.006372497842939327,
+      "failure": "success"
+    },
+    "G2_success": {
+      "group": "G2_b_home_yaw0",
+      "seed": 40000000,
+      "dir": "/scratch/lijh/simulate_vla/results/experiment_2_4/G2_b_home_yaw0/seed_40000000",
+      "success": false,
+      "max_lift": 0.0629871886442733,
+      "failure": "grasp_lift"
+    }
+  },
+  "n_episodes": 60,
+  "failure_types_all": {
+    "not_reached": 3,
+    "grasp_lift": 18,
+    "tipping": 15,
+    "success_then_lost": 1,
+    "push_rotated": 4,
+    "wall_induced_lift": 4,
+    "success": 9,
+    "unknown": 1,
+    "no_contact": 5
+  }
+}

@@ -1,0 +1,7 @@
+﻿group,n,success,a_success,wall_contact,both_fingers,table_loss,lift_gt_3cm,max_lift_mean,max_lift_max
+G0_a0b_direct,10,0,10,0,8,7,7,0.0678,0.1056
+G1_a90b_direct,10,0,10,0,10,10,10,0.0932,0.104
+G2_b_home_yaw0,10,0,10,8,8,3,2,0.018,0.063
+G3_b_home_yaw90,10,9,10,0,10,1,0,0.0058,0.0213
+G4_a0b_retreat_home,10,0,10,8,7,7,4,0.0343,0.1055
+G5_a0b_local_retreat,10,0,10,0,0,0,0,0.0004,0.0012

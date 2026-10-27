@@ -279,3 +279,33 @@ python scripts/analyze_experiment_2_3_results.py
 ```
 
 **产物**：`results/experiment_2_3/analysis/`（results.json、两张图）、`results/experiment_2_3/eval/`（逐集 JSON/CSV）、服务器 `outputs/smolvla_e23_D1/D2` 与 `data/lerobot_panda_e23_D1/D2`。
+
+## 实验 2.4（已完成）：A→B 接触模式失效归因与多视角诊断
+
+- 完整报告：[docs/experiment_2_4.md](docs/experiment_2_4.md)
+- 结果目录与视频索引：[results/experiment_2_4/README.md](results/experiment_2_4/README.md)、[video_manifest.csv](results/experiment_2_4/video_manifest.csv)
+
+**设置**：冻结 D2 checkpoint，PyBullet 240 Hz 物理 / 20 Hz 策略；6 组 × 10 个正式 rollout；每次 rollout 记录 240 Hz 物理状态、逐物理步接触点（body/link/力）、策略动作、成功判据时间线，以及 top / side / contact 三视角视频（180 个基础视角 + 60 个 comparison + 46 个事件剪辑）。诊断相机不参与 VLA 输入。
+
+| 组别 | 条件 | 成功 | 抬升>3cm | 双指 | 桌面丢失 | 墙接触 | max lift |
+|---|---|---:|---:|---:|---:|---:|---:|
+| G0 | A0→B 直接 | 0/10 | 7/10 | 8/10 | 7/10 | **0/10** | 6.8 cm |
+| G1 | A90→B 直接 | 0/10 | 10/10 | 10/10 | 10/10 | **0/10** | 9.3 cm |
+| G2 | B 独立 yaw0 | 0/10 | 2/10 | 8/10 | 3/10 | 8/10 | 1.8 cm |
+| G3 | B 独立 yaw90 | **9/10** | 0/10 | 10/10 | 1/10 | 0/10 | 0.6 cm |
+| G4 | A0→B 退 HOME | 0/10 | 4/10 | 7/10 | 7/10 | 8/10 | 3.4 cm |
+| G5 | A0→B 局部退让 | 0/10 | 0/10 | 0/10 | 0/10 | 0/10 | 0.04 cm |
+
+**结论**：A0→B / A90→B 的主导失败是**交接后夹爪闭合、把物体夹住并抬走**（G0 7/10、G1 9/10 为 grasp_lift；双指 + 桌面丢失 + 零墙接触；抬升前 EE 目标 z 已上升 13.9/21.1 mm）。同一个 B 在独立 yaw90 起点 9/10 成功、最大抬升 0.6 cm——不是不会推。yaw0 是独立失败链：B HOME yaw0 0/10，以撞墙/翻倒/推转为主；A0 终态是 yaw0，所以退 HOME 也 0/10。预先固定的 5 cm 局部退让把夹爪退到 B 够不到的位置（5/10 完全不接触），不成立。实验 2.3 的多起点模型没有改变 A→B 的接触失效模式（Q8，5 集诊断）。
+
+![Group rates](results/experiment_2_4/figures/fig8_group_rates.png)
+
+```bash
+# 服务器：六组正式实验（6 进程并行）
+bash server/run_e24_formal.sh
+
+# 汇总、案例证据、跨模型诊断
+PYTHONPATH=src venv/bin/python scripts/analyze_experiment_2_4.py
+PYTHONPATH=src venv/bin/python scripts/case_analysis_2_4.py
+PYTHONPATH=src venv/bin/python scripts/compare_models_2_4.py
+```

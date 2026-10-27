@@ -1,0 +1,51 @@
+{
+  "D2_formal": {
+    "n": 5,
+    "success": 0,
+    "grasp_lift": 3,
+    "both_fingers": 3,
+    "table_loss": 3,
+    "wall_contact": 0,
+    "max_lift_mean": 0.0631,
+    "seeds": [
+      40000000,
+      40000001,
+      40000002,
+      40000003,
+      40000004
+    ]
+  },
+  "D0_diag": {
+    "n": 5,
+    "success": 0,
+    "grasp_lift": 5,
+    "both_fingers": 5,
+    "table_loss": 5,
+    "wall_contact": 0,
+    "max_lift_mean": 0.0683,
+    "seeds": [
+      40000000,
+      40000001,
+      40000002,
+      40000003,
+      40000004
+    ]
+  },
+  "D1_diag": {
+    "n": 5,
+    "success": 0,
+    "grasp_lift": 2,
+    "both_fingers": 5,
+    "table_loss": 5,
+    "wall_contact": 0,
+    "max_lift_mean": 0.0416,
+    "seeds": [
+      40000000,
+      40000001,
+      40000002,
+      40000003,
+      40000004
+    ]
+  },
+  "note": "all restricted to seeds 40000000-40000004; D2 from the 10-episode G0 formal run, D0/D1 from 5-episode diagnostic runs"
+}
