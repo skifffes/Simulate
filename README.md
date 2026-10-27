@@ -219,10 +219,12 @@ PYTHONPATH=src venv/bin/python -u scripts/audit_experiment_2_1.py \
 - **完整报告**：[docs/experiment_2_2.md](docs/experiment_2_2.md)
 - 最终结论：当前组合失败绝大部分可由"交接时机 + 一个最朴素的关节空间退让"解释或解决；A90 链由执行层完全恢复（90–100%），A0→C 到 85%，A0→B 仍是 B 在 yaw 0 上的原子短板。
 
-## 实验 2.3（阶段 0–2 已完成）：原子技能起始状态覆盖
+## 实验 2.3（已完成）：原子技能起始状态覆盖与零样本组合
 
+- 完整报告：[docs/experiment_2_3.md](docs/experiment_2_3.md)
 - 阶段 0（数据/起点/协议审计）：[docs/experiment_2_3_audit.md](docs/experiment_2_3_audit.md)
 - 阶段 1–2（多起点生成器 + B 专家冒烟）：[docs/experiment_2_3_smoke.md](docs/experiment_2_3_smoke.md)
+- 阶段 3（D1/D2 等预算数据）：[docs/experiment_2_3_data.md](docs/experiment_2_3_data.md)
 
 **审计要点**：480 集里四个技能的起始关节唯一值都是 1 行（= HOME，偏差 1.4×10⁻⁵ rad）；A0/A90 真实终态距 HOME **2.00 / 1.65 rad**。B 的原子瓶颈与物体朝向强相关：冻结 VLA 在 yaw≈0 **1/12 = 8%**、yaw≈90 **7/8 = 88%**（专家 10/12、8/8）——实验 2 的"B 40%"是两种朝向混合后的平均值。
 
@@ -248,4 +250,32 @@ HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python -u scripts/smoke_multistart_b.py
 python scripts/analyze_experiment_2_3_smoke.py
 ```
 
-**下一步（已部分完成）**：D1 canonical / D2 diverse 的等预算 B 数据已完成采集（阶段 3，未训练）：[docs/experiment_2_3_data.md](docs/experiment_2_3_data.md)。两个 480 集变体 `lerobot_panda_e23_D1/D2` 的 B 帧数相差 0.7%（完整数据集帧数相差 0.15%），校验 0 失败；D1 的 yaw0 专家尝试成功率 45.5%，yaw90 87.0%，D2 在同一批 spec 上首次尝试 110/120。下一步是共享 SmolVLA 重训、按 yaw 分层的原子评测，再做 A0→B / A90→B 的直接交接（统一 v2.2）。
+**训练与评测结果**（D1/D2 各 20K 步，冻结模型，统一 v2.2）：
+
+| 评测 | D0 | D1 canonical | D2 diverse |
+|---|---:|---:|---:|
+| 标准原子 B | 8/20 | 9/20 | 6/20 |
+| B 标准 · yaw0 / yaw90 | 1/12 / 7/8 | 1/12 / 8/8 | 0/12 / 6/8 |
+| B 未知合法起点 | 6/40 | 13/40 | **18/40** |
+| B 未知起点 · yaw90 | 6/20 | 11/20 | **17/20** |
+| 真实 A0→B / A90→B | 0/20 / 0/20 | 0/20 / 0/20 | 0/20 / 0/20 |
+| 固定 A 终态的 B | 0/20 / 0/20 | 0/20 / 0/20 | 0/20 / 0/20 |
+
+关键结论：多样起点把 B 在**未见过的 yaw90 构型**上的成功率从 11/20 提到 17/20（McNemar p≈0.070），但 **yaw0 仍是 1/20、A→B 仍是全部 0/20**。连续组合失败时物体被抬高 3–6 cm、平移 10–15 cm——B 在 A 之后执行了"抓+搬"而不是"推"；固定 A 终态下 D0/D1 的 B 甚至不碰物体。**仅扩大机器人起点覆盖不足以修复真实技能交接**；实验 2.2 的 Physical Retreat（A90→B 20/20）仍是强 baseline。A0/A90/C 无遗忘（D1/D2 全部 100%）。
+
+```bash
+# 服务器：等预算训练（两张 A40 并行，各约 113 min）
+GPU=1 STEPS=20000 BATCH=8 OUT=$HOME/simulate_vla/outputs/smolvla_e23_D1 \
+  DATA=$HOME/simulate_vla/data/lerobot_panda_e23_D1 \
+  setsid nohup bash server/train_smolvla_multi.sh > logs/e23_train_D1.log 2>&1 &
+# D2 同理（GPU=3、OUT/DATA 换成 D2）
+
+# 服务器：评测编排（标准原子 + 组合 + 固定快照 + 未知起点）
+bash server/run_e23_evals.sh
+bash server/run_e23_starts.sh
+
+# 本地：汇总
+python scripts/analyze_experiment_2_3_results.py
+```
+
+**产物**：`results/experiment_2_3/analysis/`（results.json、两张图）、`results/experiment_2_3/eval/`（逐集 JSON/CSV）、服务器 `outputs/smolvla_e23_D1/D2` 与 `data/lerobot_panda_e23_D1/D2`。

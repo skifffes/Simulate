@@ -1,0 +1,35 @@
+{
+  "D1": {
+    "data": "data/lerobot_panda_e23_D1",
+    "steps": 20000,
+    "batch_size": 8,
+    "seed": 1000,
+    "final_loss": 0.006,
+    "checkpoint": "outputs/smolvla_e23_D1/checkpoints/020000/pretrained_model",
+    "model_safetensors_bytes": 906713352,
+    "model_safetensors_sha256": "b06a3a7ad92b92e14c88b2297dffbf4354bb3da584481ed575fa10d02a7c6fb2",
+    "train_log": "results/experiment_2_3/training/train_D1.log"
+  },
+  "D2": {
+    "data": "data/lerobot_panda_e23_D2",
+    "steps": 20000,
+    "batch_size": 8,
+    "seed": 1000,
+    "final_loss": 0.007,
+    "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+    "model_safetensors_bytes": 906713352,
+    "model_safetensors_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+    "train_log": "results/experiment_2_3/training/train_D2.log"
+  },
+  "common": {
+    "base_policy": "lerobot/smolvla_base",
+    "steps": 20000,
+    "batch_size": 8,
+    "lr": 0.0001,
+    "save_freq": 2000,
+    "seed": 1000,
+    "gpu": {"D1": 1, "D2": 3},
+    "started": "2026-10-27 09:45",
+    "finished": "2026-10-27 11:38"
+  }
+}

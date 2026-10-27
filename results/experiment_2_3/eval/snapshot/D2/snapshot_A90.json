@@ -1,0 +1,592 @@
+{
+  "summary": {
+    "tag": "D2",
+    "a_skill": "A90",
+    "n": 20,
+    "success": 0,
+    "rate": 0.0,
+    "ticks_mean": 260.0
+  },
+  "episodes": [
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000000,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 27.35,
+      "released": false,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5576917384718727,
+          0.18043019201521168,
+          0.0199862920542328
+        ],
+        "yaw": -1.581224040751165
+      },
+      "final_object": {
+        "position": [
+          0.6765925634724381,
+          0.20633023569958026,
+          0.04829443831880684
+        ],
+        "yaw": -1.5195494788728354,
+        "tilt_deg": 8.751521566386334
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000001,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.61,
+      "released": false,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5544973171043154,
+          0.17671441219407377,
+          0.019984756481264774
+        ],
+        "yaw": -1.5562014630791547
+      },
+      "final_object": {
+        "position": [
+          0.6890876650594521,
+          0.20433203022370552,
+          0.051632169852305156
+        ],
+        "yaw": -1.4764034220341276,
+        "tilt_deg": 1.8842862846970976
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000002,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.14,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5567401156254873,
+          0.18408048837213423,
+          0.019984639143335207
+        ],
+        "yaw": -1.6006425707094756
+      },
+      "final_object": {
+        "position": [
+          0.5596552080124586,
+          0.19157126857335582,
+          0.019988108367946185
+        ],
+        "yaw": -1.5460218789156144,
+        "tilt_deg": 0.005247366675637464
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000003,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.13,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5569372653179098,
+          0.18191795673625602,
+          0.0199865104988508
+        ],
+        "yaw": -1.5580507987575196
+      },
+      "final_object": {
+        "position": [
+          0.5556105197274501,
+          0.18615533914714963,
+          0.01998738703342418
+        ],
+        "yaw": -1.5656428365153485,
+        "tilt_deg": 0.011542545671037933
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000004,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.07,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.555104644783852,
+          0.1787638530953577,
+          0.019984533841077998
+        ],
+        "yaw": -1.5737736642955809
+      },
+      "final_object": {
+        "position": [
+          0.5582856401047757,
+          0.18664357716837882,
+          0.0199865408892792
+        ],
+        "yaw": -1.5250867232392713,
+        "tilt_deg": 0.012167645279682109
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000005,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 24.98,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5620480590155351,
+          0.18186298546763194,
+          0.019987283252915496
+        ],
+        "yaw": -1.5629579873464845
+      },
+      "final_object": {
+        "position": [
+          0.5684117887032858,
+          0.19398158499707505,
+          0.01998812721198975
+        ],
+        "yaw": -1.5383779039471075,
+        "tilt_deg": 0.0037661137974239326
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000006,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.31,
+      "released": false,
+      "stable": false,
+      "switch_object": {
+        "position": [
+          0.5534029955569548,
+          0.18061759151926404,
+          0.01998636837696297
+        ],
+        "yaw": -1.546332274776895
+      },
+      "final_object": {
+        "position": [
+          0.699560768668993,
+          0.19354765951725592,
+          0.06916826600306747
+        ],
+        "yaw": -1.4334481315294116,
+        "tilt_deg": 0.9437910112345456
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000007,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 24.81,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5580551911202993,
+          0.17686958674171976,
+          0.01998765599712018
+        ],
+        "yaw": -1.6011272104025098
+      },
+      "final_object": {
+        "position": [
+          0.5575309545848716,
+          0.18310211677709243,
+          0.019989927972767715
+        ],
+        "yaw": -1.602674692271051,
+        "tilt_deg": 6.279164911657962e-05
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000008,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.12,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5605322869927828,
+          0.17652060617994567,
+          0.019984703202752474
+        ],
+        "yaw": -1.5793707860597468
+      },
+      "final_object": {
+        "position": [
+          0.5605269860538175,
+          0.17651632900865177,
+          0.019984642987957553
+        ],
+        "yaw": -1.5791284269819896,
+        "tilt_deg": 0.010816509107076227
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000009,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.05,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5503214583736828,
+          0.17896821259171908,
+          0.01998771967658476
+        ],
+        "yaw": -1.60493964047518
+      },
+      "final_object": {
+        "position": [
+          0.5537299344590207,
+          0.1882434482053229,
+          0.019987800036245614
+        ],
+        "yaw": -1.4956293887144252,
+        "tilt_deg": 0.0034955936338771205
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000010,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.13,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5554058924654361,
+          0.1785325696031964,
+          0.019986113546576645
+        ],
+        "yaw": -1.5713697374920823
+      },
+      "final_object": {
+        "position": [
+          0.554557977283355,
+          0.18340576298147096,
+          0.019988049543456184
+        ],
+        "yaw": -1.566887897637441,
+        "tilt_deg": 0.00640324924021712
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000011,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.03,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5564639512131022,
+          0.177698058237258,
+          0.01998561740591983
+        ],
+        "yaw": -1.5419595263455181
+      },
+      "final_object": {
+        "position": [
+          0.5604895819585921,
+          0.18615779693662993,
+          0.019988361796010035
+        ],
+        "yaw": -1.5253694506938154,
+        "tilt_deg": 0.00343030618169535
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000012,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.1,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5563832474397966,
+          0.1783749284704615,
+          0.019986457991854414
+        ],
+        "yaw": -1.5550702742990459
+      },
+      "final_object": {
+        "position": [
+          0.5570183084843924,
+          0.18056508689722725,
+          0.019987487916366883
+        ],
+        "yaw": -1.559891773924416,
+        "tilt_deg": 0.004421460034768834
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000013,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.14,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5592252377311037,
+          0.17405981095915823,
+          0.019984757156348575
+        ],
+        "yaw": -1.5585370004384398
+      },
+      "final_object": {
+        "position": [
+          0.5592419724661918,
+          0.17406249851711686,
+          0.019988808562739466
+        ],
+        "yaw": -1.5579730632910629,
+        "tilt_deg": 0.004255571765310754
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000014,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.18,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5517389486099068,
+          0.17885618723734442,
+          0.019986035725014607
+        ],
+        "yaw": -1.5721180774277852
+      },
+      "final_object": {
+        "position": [
+          0.5486645627868827,
+          0.18441192184309588,
+          0.01998923735960897
+        ],
+        "yaw": -1.571991029554482,
+        "tilt_deg": 0.009170139118472052
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000015,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.63,
+      "released": false,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5512740663215037,
+          0.18191160181027202,
+          0.019984806096169514
+        ],
+        "yaw": -1.583567998861526
+      },
+      "final_object": {
+        "position": [
+          0.6781028137360519,
+          0.19521946942855195,
+          0.07237727112592637
+        ],
+        "yaw": -1.4308941695963682,
+        "tilt_deg": 0.42690437952532234
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000016,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.08,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5596695857740872,
+          0.1766804007766373,
+          0.019985081011749763
+        ],
+        "yaw": -1.6075441195894524
+      },
+      "final_object": {
+        "position": [
+          0.5592891334075875,
+          0.1806356159057407,
+          0.01998549065044076
+        ],
+        "yaw": -1.6331255070416566,
+        "tilt_deg": 0.008318121678620059
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000017,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 27.03,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5604695609040734,
+          0.17845174681778236,
+          0.019986814548518122
+        ],
+        "yaw": -1.5295493363405603
+      },
+      "final_object": {
+        "position": [
+          0.5637140371381233,
+          0.1909557524200707,
+          0.01998471230052404
+        ],
+        "yaw": -1.4672817758325054,
+        "tilt_deg": 0.009761509783649074
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000018,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.88,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5580746447748868,
+          0.1713521131079073,
+          0.019986454192360614
+        ],
+        "yaw": -1.6197390917674461
+      },
+      "final_object": {
+        "position": [
+          0.5608747983544417,
+          0.1840648100147462,
+          0.01998799542693307
+        ],
+        "yaw": -1.6240451465388148,
+        "tilt_deg": 0.003192479624559792
+      }
+    },
+    {
+      "policy_tag": "D2",
+      "a_skill": "A90",
+      "seed": 40000019,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 28.06,
+      "released": true,
+      "stable": true,
+      "switch_object": {
+        "position": [
+          0.5605742516031689,
+          0.1771306241564081,
+          0.019985127150867192
+        ],
+        "yaw": -1.6262340228058534
+      },
+      "final_object": {
+        "position": [
+          0.5666957727199046,
+          0.19161206186702973,
+          0.019987967042954517
+        ],
+        "yaw": -1.5259656723229136,
+        "tilt_deg": 0.006372978405740059
+      }
+    }
+  ]
+}

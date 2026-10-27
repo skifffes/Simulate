@@ -1,0 +1,604 @@
+{
+  "atomic_std": {
+    "D0": {
+      "A0": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "A90": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "B": {
+        "success": 8,
+        "n": 20,
+        "rate": 0.4,
+        "ci95": [
+          0.2188,
+          0.6134
+        ]
+      },
+      "B_by_yaw": {
+        "yaw0": {
+          "success": 1,
+          "n": 12,
+          "rate": 0.0833,
+          "ci95": [
+            0.0149,
+            0.3539
+          ]
+        },
+        "yaw90": {
+          "success": 7,
+          "n": 8,
+          "rate": 0.875,
+          "ci95": [
+            0.5291,
+            0.9776
+          ]
+        }
+      },
+      "C": {
+        "success": 19,
+        "n": 20,
+        "rate": 0.95,
+        "ci95": [
+          0.7639,
+          0.9911
+        ]
+      }
+    },
+    "D1": {
+      "A0": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "A90": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "B": {
+        "success": 9,
+        "n": 20,
+        "rate": 0.45,
+        "ci95": [
+          0.2582,
+          0.6579
+        ]
+      },
+      "B_by_yaw": {
+        "yaw0": {
+          "success": 1,
+          "n": 12,
+          "rate": 0.0833,
+          "ci95": [
+            0.0149,
+            0.3539
+          ]
+        },
+        "yaw90": {
+          "success": 8,
+          "n": 8,
+          "rate": 1.0,
+          "ci95": [
+            0.6756,
+            1.0
+          ]
+        }
+      },
+      "C": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      }
+    },
+    "D2": {
+      "A0": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "A90": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      },
+      "B": {
+        "success": 6,
+        "n": 20,
+        "rate": 0.3,
+        "ci95": [
+          0.1455,
+          0.519
+        ]
+      },
+      "B_by_yaw": {
+        "yaw0": {
+          "success": 0,
+          "n": 12,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.2425
+          ]
+        },
+        "yaw90": {
+          "success": 6,
+          "n": 8,
+          "rate": 0.75,
+          "ci95": [
+            0.4093,
+            0.9285
+          ]
+        }
+      },
+      "C": {
+        "success": 20,
+        "n": 20,
+        "rate": 1.0,
+        "ci95": [
+          0.8389,
+          1.0
+        ]
+      }
+    }
+  },
+  "atomic_starts": {
+    "D0": {
+      "tag": "D0",
+      "policy": "outputs/smolvla_multi/checkpoints/020000/pretrained_model",
+      "n": 40,
+      "all": {
+        "n": 40,
+        "success": 6,
+        "rate": 0.15
+      },
+      "by_yaw": {
+        "yaw0": {
+          "n": 20,
+          "success": 0,
+          "rate": 0.0
+        },
+        "yaw90": {
+          "n": 20,
+          "success": 6,
+          "rate": 0.3
+        }
+      },
+      "by_mode": {
+        "home_neighborhood": {
+          "n": 20,
+          "success": 5,
+          "rate": 0.25
+        },
+        "multi_ik": {
+          "n": 10,
+          "success": 0,
+          "rate": 0.0
+        },
+        "task_relevant": {
+          "n": 10,
+          "success": 1,
+          "rate": 0.1
+        }
+      }
+    },
+    "D1": {
+      "tag": "D1",
+      "policy": "outputs/smolvla_e23_D1/checkpoints/020000/pretrained_model",
+      "n": 40,
+      "all": {
+        "n": 40,
+        "success": 13,
+        "rate": 0.325
+      },
+      "by_yaw": {
+        "yaw0": {
+          "n": 20,
+          "success": 2,
+          "rate": 0.1
+        },
+        "yaw90": {
+          "n": 20,
+          "success": 11,
+          "rate": 0.55
+        }
+      },
+      "by_mode": {
+        "home_neighborhood": {
+          "n": 20,
+          "success": 9,
+          "rate": 0.45
+        },
+        "multi_ik": {
+          "n": 10,
+          "success": 2,
+          "rate": 0.2
+        },
+        "task_relevant": {
+          "n": 10,
+          "success": 2,
+          "rate": 0.2
+        }
+      }
+    },
+    "D2": {
+      "tag": "D2",
+      "policy": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+      "n": 40,
+      "all": {
+        "n": 40,
+        "success": 18,
+        "rate": 0.45
+      },
+      "by_yaw": {
+        "yaw0": {
+          "n": 20,
+          "success": 1,
+          "rate": 0.05
+        },
+        "yaw90": {
+          "n": 20,
+          "success": 17,
+          "rate": 0.85
+        }
+      },
+      "by_mode": {
+        "home_neighborhood": {
+          "n": 20,
+          "success": 9,
+          "rate": 0.45
+        },
+        "multi_ik": {
+          "n": 10,
+          "success": 5,
+          "rate": 0.5
+        },
+        "task_relevant": {
+          "n": 10,
+          "success": 4,
+          "rate": 0.4
+        }
+      }
+    }
+  },
+  "composition": {
+    "D0": {
+      "A0_B": {
+        "tag": "D0",
+        "chain": "A0_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 98.65
+      },
+      "A90_B": {
+        "tag": "D0",
+        "chain": "A90_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 141.05
+      }
+    },
+    "D1": {
+      "A0_B": {
+        "tag": "D1",
+        "chain": "A0_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 97.4
+      },
+      "A90_B": {
+        "tag": "D1",
+        "chain": "A90_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 140.55
+      }
+    },
+    "D2": {
+      "A0_B": {
+        "tag": "D2",
+        "chain": "A0_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 98.4
+      },
+      "A90_B": {
+        "tag": "D2",
+        "chain": "A90_B",
+        "n": 20,
+        "A_success": 20,
+        "B_success": 0,
+        "chain_success": 0,
+        "chain_rate": 0.0,
+        "conditional_B_success": 0,
+        "a_ticks_mean": 141.35
+      }
+    }
+  },
+  "snapshot": {
+    "D0": {
+      "A0": {
+        "tag": "D0",
+        "a_skill": "A0",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      },
+      "A90": {
+        "tag": "D0",
+        "a_skill": "A90",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      }
+    },
+    "D1": {
+      "A0": {
+        "tag": "D1",
+        "a_skill": "A0",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      },
+      "A90": {
+        "tag": "D1",
+        "a_skill": "A90",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      }
+    },
+    "D2": {
+      "A0": {
+        "tag": "D2",
+        "a_skill": "A0",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      },
+      "A90": {
+        "tag": "D2",
+        "a_skill": "A90",
+        "n": 20,
+        "success": 0,
+        "rate": 0.0,
+        "ticks_mean": 260.0
+      }
+    }
+  },
+  "paired_comparisons": {
+    "composition_A0_B": {
+      "n_pairs": 20,
+      "only_D1": 0,
+      "only_D2": 0,
+      "mcnemar_p": 1.0
+    },
+    "composition_A90_B": {
+      "n_pairs": 20,
+      "only_D1": 0,
+      "only_D2": 0,
+      "mcnemar_p": 1.0
+    },
+    "snapshot_A0": {
+      "n_pairs": 20,
+      "only_D1": 0,
+      "only_D2": 0,
+      "mcnemar_p": 1.0
+    },
+    "snapshot_A90": {
+      "n_pairs": 20,
+      "only_D1": 0,
+      "only_D2": 0,
+      "mcnemar_p": 1.0
+    },
+    "atomic_starts": {
+      "n_pairs": 40,
+      "only_D1": 3,
+      "only_D2": 8,
+      "mcnemar_p": 0.2266
+    },
+    "atomic_starts_yaw90": {
+      "n_pairs": 20,
+      "only_D1": 1,
+      "only_D2": 7,
+      "mcnemar_p": 0.0703
+    },
+    "atomic_std_B": {
+      "n_pairs": 20,
+      "only_D1": 3,
+      "only_D2": 0,
+      "mcnemar_p": 0.25
+    }
+  },
+  "failure_dynamics": {
+    "composition_A0_B_D0": {
+      "n": 20,
+      "z_mean": 0.0538,
+      "z_max": 0.0828,
+      "xy_moved_mean": 0.1106,
+      "xy_moved_max": 0.1467
+    },
+    "composition_A90_B_D0": {
+      "n": 20,
+      "z_mean": 0.0417,
+      "z_max": 0.0964,
+      "xy_moved_mean": 0.0984,
+      "xy_moved_max": 0.139
+    },
+    "snapshot_A0_D0": {
+      "n": 20,
+      "z_mean": 0.022,
+      "z_max": 0.0283,
+      "xy_moved_mean": 0.0125,
+      "xy_moved_max": 0.0407
+    },
+    "snapshot_A90_D0": {
+      "n": 20,
+      "z_mean": 0.02,
+      "z_max": 0.02,
+      "xy_moved_mean": 0.0,
+      "xy_moved_max": 0.0
+    },
+    "composition_A0_B_D1": {
+      "n": 20,
+      "z_mean": 0.0295,
+      "z_max": 0.0665,
+      "xy_moved_mean": 0.1131,
+      "xy_moved_max": 0.1616
+    },
+    "composition_A90_B_D1": {
+      "n": 20,
+      "z_mean": 0.0351,
+      "z_max": 0.0503,
+      "xy_moved_mean": 0.1287,
+      "xy_moved_max": 0.1532
+    },
+    "snapshot_A0_D1": {
+      "n": 20,
+      "z_mean": 0.022,
+      "z_max": 0.0283,
+      "xy_moved_mean": 0.0073,
+      "xy_moved_max": 0.0396
+    },
+    "snapshot_A90_D1": {
+      "n": 20,
+      "z_mean": 0.02,
+      "z_max": 0.02,
+      "xy_moved_mean": 0.0,
+      "xy_moved_max": 0.0
+    },
+    "composition_A0_B_D2": {
+      "n": 20,
+      "z_mean": 0.0445,
+      "z_max": 0.0788,
+      "xy_moved_mean": 0.1024,
+      "xy_moved_max": 0.1586
+    },
+    "composition_A90_B_D2": {
+      "n": 20,
+      "z_mean": 0.0563,
+      "z_max": 0.0805,
+      "xy_moved_mean": 0.1467,
+      "xy_moved_max": 0.1651
+    },
+    "snapshot_A0_D2": {
+      "n": 20,
+      "z_mean": 0.02,
+      "z_max": 0.02,
+      "xy_moved_mean": 0.0018,
+      "xy_moved_max": 0.017
+    },
+    "snapshot_A90_D2": {
+      "n": 20,
+      "z_mean": 0.0281,
+      "z_max": 0.0724,
+      "xy_moved_mean": 0.0326,
+      "xy_moved_max": 0.1467
+    }
+  },
+  "coverage_vs_success": {
+    "0.0-0.5": {
+      "success": 8,
+      "n": 19,
+      "rate": 0.4211,
+      "ci95": [
+        0.2314,
+        0.6372
+      ]
+    },
+    "0.5-1.0": {
+      "success": 1,
+      "n": 1,
+      "rate": 1.0,
+      "ci95": [
+        0.2065,
+        1.0
+      ]
+    },
+    "1.0-1.5": {
+      "success": 2,
+      "n": 4,
+      "rate": 0.5,
+      "ci95": [
+        0.15,
+        0.85
+      ]
+    },
+    "1.5-2.0": {
+      "success": 5,
+      "n": 12,
+      "rate": 0.4167,
+      "ci95": [
+        0.1933,
+        0.6805
+      ]
+    },
+    "2.0-2.6": {
+      "success": 2,
+      "n": 4,
+      "rate": 0.5,
+      "ci95": [
+        0.15,
+        0.85
+      ]
+    }
+  }
+}

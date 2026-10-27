@@ -1,0 +1,732 @@
+{
+  "summary": {
+    "skill": "A0",
+    "episodes": 20,
+    "success": 20,
+    "success_rate": 1.0,
+    "mean_latency_ms": 13.725815900901441,
+    "ticks_mean": 260.0
+  },
+  "episodes": [
+    {
+      "final_position": [
+        0.5477579455793099,
+        0.1779869198887103,
+        0.019987064310039056
+      ],
+      "final_yaw_rad": -0.006064677893414248,
+      "final_tilt_deg": 0.004963388343300618,
+      "final_speed_m_s": 1.030730938369176e-08,
+      "lift_height_m": 0.1234141553127831,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.003013187607801141,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000000,
+      "ticks": 260,
+      "wall_seconds": 27.61,
+      "mean_latency_ms": 20.01012700672548,
+      "p95_latency_ms": 14.245024335104972,
+      "min_width_cmd": 0.01694250851869583,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5493600466535326,
+          0.004290620454014821,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5506958540007478,
+        0.1766619262105413,
+        0.01998921140760241
+      ],
+      "final_yaw_rad": -0.0012217304892636642,
+      "final_tilt_deg": 0.010472508405316803,
+      "final_speed_m_s": 1.5723574493779466e-07,
+      "lift_height_m": 0.11877070030908937,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0034098312882352108,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000001,
+      "ticks": 260,
+      "wall_seconds": 26.74,
+      "mean_latency_ms": 17.91656392116028,
+      "p95_latency_ms": 14.241062279324979,
+      "min_width_cmd": 0.01685922220349312,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5495517700055687,
+          0.007421674269915494,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5518658588567822,
+        0.17885588498537633,
+        0.019987895854563276
+      ],
+      "final_yaw_rad": -0.027133048720241502,
+      "final_tilt_deg": 0.007379726615798846,
+      "final_speed_m_s": 1.703193522589976e-07,
+      "lift_height_m": 0.11899259924606745,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0021887047402789793,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000002,
+      "ticks": 260,
+      "wall_seconds": 26.57,
+      "mean_latency_ms": 17.433829019920758,
+      "p95_latency_ms": 14.085589512251318,
+      "min_width_cmd": 0.016731560230255127,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5472958209791787,
+          0.0021254028360972593,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5488144619763867,
+        0.17439467757351923,
+        0.01998780327931311
+      ],
+      "final_yaw_rad": -0.024211551416526655,
+      "final_tilt_deg": 0.004145141638841596,
+      "final_speed_m_s": 1.346367824526312e-09,
+      "lift_height_m": 0.12031105986807195,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.005729322814281036,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000003,
+      "ticks": 260,
+      "wall_seconds": 26.68,
+      "mean_latency_ms": 17.838956957432227,
+      "p95_latency_ms": 14.279662689659745,
+      "min_width_cmd": 0.016715506091713905,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5438393491801969,
+          -0.006769606440693124,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5535278273214966,
+        0.1731203473987584,
+        0.01998723314846722
+      ],
+      "final_yaw_rad": 0.009963804705280192,
+      "final_tilt_deg": 0.0051685231955390315,
+      "final_speed_m_s": 2.8150007895487103e-08,
+      "lift_height_m": 0.12364075494245585,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.007731441361354821,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000004,
+      "ticks": 260,
+      "wall_seconds": 26.88,
+      "mean_latency_ms": 18.584023773347816,
+      "p95_latency_ms": 14.179570809938014,
+      "min_width_cmd": 0.016495995223522186,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5538583628768509,
+          -0.0018549785210887947,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5498778500702576,
+        0.1862373699138878,
+        0.019987218938643362
+      ],
+      "final_yaw_rad": 0.01537610729038338,
+      "final_tilt_deg": 0.010123371537363809,
+      "final_speed_m_s": 9.565249387508003e-10,
+      "lift_height_m": 0.12378068090244593,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.00623856586468469,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000005,
+      "ticks": 260,
+      "wall_seconds": 26.96,
+      "mean_latency_ms": 18.445940238710204,
+      "p95_latency_ms": 14.27100426517427,
+      "min_width_cmd": 0.016741715371608734,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5550490710143678,
+          0.004227758038456384,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5490752635327923,
+        0.17301393760707534,
+        0.019985392241024334
+      ],
+      "final_yaw_rad": 0.016247541220358135,
+      "final_tilt_deg": 0.016244535151872408,
+      "final_speed_m_s": 1.488284684036319e-09,
+      "lift_height_m": 0.12058869578919401,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0070469997368823485,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000006,
+      "ticks": 260,
+      "wall_seconds": 26.09,
+      "mean_latency_ms": 15.85215494627706,
+      "p95_latency_ms": 14.248135092202574,
+      "min_width_cmd": 0.01667167991399765,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.545903607505076,
+          -0.0014491698511139945,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5549423176057504,
+        0.17255682102398387,
+        0.01998840574829892
+      ],
+      "final_yaw_rad": 0.011320939135638983,
+      "final_tilt_deg": 0.005569126879338862,
+      "final_speed_m_s": 4.377656838609786e-12,
+      "lift_height_m": 0.12257486249250973,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.008934618994961032,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000007,
+      "ticks": 260,
+      "wall_seconds": 26.31,
+      "mean_latency_ms": 11.338040623992967,
+      "p95_latency_ms": 8.110474445857102,
+      "min_width_cmd": 0.016546472907066345,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5474940572651574,
+          -0.005034823470993033,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.552108028996266,
+        0.17307215213780552,
+        0.01998517755973325
+      ],
+      "final_yaw_rad": -0.017173607662871473,
+      "final_tilt_deg": 0.016969921718557747,
+      "final_speed_m_s": 6.3297074613323095e-09,
+      "lift_height_m": 0.12067588151927042,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.007241468238610902,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000008,
+      "ticks": 260,
+      "wall_seconds": 25.71,
+      "mean_latency_ms": 11.382153215639008,
+      "p95_latency_ms": 5.344263685401523,
+      "min_width_cmd": 0.016649184748530388,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5531434012809263,
+          0.0005576803372980763,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.551254158751074,
+        0.1621991810308051,
+        0.01998689468877004
+      ],
+      "final_yaw_rad": 0.007362163900504823,
+      "final_tilt_deg": 0.00534987828930107,
+      "final_speed_m_s": 1.287720324586336e-08,
+      "lift_height_m": 0.12187037134796047,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.017844945226784637,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000009,
+      "ticks": 260,
+      "wall_seconds": 26.78,
+      "mean_latency_ms": 11.355641106358513,
+      "p95_latency_ms": 7.81459013815038,
+      "min_width_cmd": 0.016687549650669098,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5522569126793337,
+          -0.007818596888004216,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.548628758801897,
+        0.16949429244068318,
+        0.01998642763008175
+      ],
+      "final_yaw_rad": 0.0046521397388921675,
+      "final_tilt_deg": 0.005061794081057376,
+      "final_speed_m_s": 5.928616318464271e-09,
+      "lift_height_m": 0.12295644374195752,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.010594819193608811,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000010,
+      "ticks": 260,
+      "wall_seconds": 25.69,
+      "mean_latency_ms": 11.218914437967424,
+      "p95_latency_ms": 5.044836492743343,
+      "min_width_cmd": 0.01661982387304306,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5575916597624188,
+          -0.006005275802077023,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5485355608013339,
+        0.1869505709285424,
+        0.01998406518340705
+      ],
+      "final_yaw_rad": -0.006585627195889798,
+      "final_tilt_deg": 0.020817050531952267,
+      "final_speed_m_s": 2.4215082710784053e-08,
+      "lift_height_m": 0.11865761676406328,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.007103169602317589,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000011,
+      "ticks": 260,
+      "wall_seconds": 25.67,
+      "mean_latency_ms": 11.167804397588881,
+      "p95_latency_ms": 5.065725342137739,
+      "min_width_cmd": 0.016608605161309242,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5541236160465103,
+          0.005463933637129438,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5512463344861296,
+        0.17832375688018726,
+        0.01998716353215786
+      ],
+      "final_yaw_rad": 0.008836149367054761,
+      "final_tilt_deg": 0.006010423836186499,
+      "final_speed_m_s": 2.9727208356200792e-08,
+      "lift_height_m": 0.11674860925114333,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0020888132152098535,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000012,
+      "ticks": 260,
+      "wall_seconds": 26.08,
+      "mean_latency_ms": 11.161856842675032,
+      "p95_latency_ms": 7.66120230546221,
+      "min_width_cmd": 0.016781283542513847,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5493684303728353,
+          0.007468541624284449,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5490881830109683,
+        0.17958229174099363,
+        0.019986335608241618
+      ],
+      "final_yaw_rad": 0.002766528974354534,
+      "final_tilt_deg": 0.006161025818453181,
+      "final_speed_m_s": 3.856359971739506e-09,
+      "lift_height_m": 0.11916998119515249,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0010029408811734922,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000013,
+      "ticks": 260,
+      "wall_seconds": 25.8,
+      "mean_latency_ms": 11.198183293275248,
+      "p95_latency_ms": 6.647483760025351,
+      "min_width_cmd": 0.016642730683088303,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5554427585471909,
+          0.005431252945246141,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5476010142682924,
+        0.17216135400121393,
+        0.019986217870114415
+      ],
+      "final_yaw_rad": 0.0066518996717908705,
+      "final_tilt_deg": 0.013522843388197987,
+      "final_speed_m_s": 4.664249215284863e-10,
+      "lift_height_m": 0.12088334388515223,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.008197530337560292,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000014,
+      "ticks": 260,
+      "wall_seconds": 26.97,
+      "mean_latency_ms": 11.50316845294303,
+      "p95_latency_ms": 7.95401680516079,
+      "min_width_cmd": 0.01672418788075447,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5457123106745674,
+          -0.0023151783055087452,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5488791808445274,
+        0.16689894029429425,
+        0.019986933487047154
+      ],
+      "final_yaw_rad": -0.02575186558473314,
+      "final_tilt_deg": 0.013468534497522385,
+      "final_speed_m_s": 9.215398770417983e-07,
+      "lift_height_m": 0.1232979012366684,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.013148916342867998,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000015,
+      "ticks": 260,
+      "wall_seconds": 25.92,
+      "mean_latency_ms": 11.69479793170467,
+      "p95_latency_ms": 5.325443123001601,
+      "min_width_cmd": 0.016750512644648552,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.545730510643292,
+          -0.004586851913279162,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5494631190132885,
+        0.1800169103460651,
+        0.019985807176396485
+      ],
+      "final_yaw_rad": -0.00017146633534148207,
+      "final_tilt_deg": 0.006380465684100195,
+      "final_speed_m_s": 4.020265172972644e-08,
+      "lift_height_m": 0.12199416766260193,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0005371472365156718,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000016,
+      "ticks": 260,
+      "wall_seconds": 27.08,
+      "mean_latency_ms": 11.711082307962128,
+      "p95_latency_ms": 7.902214006753638,
+      "min_width_cmd": 0.016664911061525345,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5434370599520513,
+          0.00458522330936682,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5529254951878659,
+        0.17894362955818383,
+        0.019986261902551258
+      ],
+      "final_yaw_rad": 0.010256476322760047,
+      "final_tilt_deg": 0.006547460106293551,
+      "final_speed_m_s": 1.338669729603108e-08,
+      "lift_height_m": 0.11641861979059082,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.003110376280222276,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000017,
+      "ticks": 260,
+      "wall_seconds": 28.24,
+      "mean_latency_ms": 12.344799543587635,
+      "p95_latency_ms": 8.265844592824577,
+      "min_width_cmd": 0.01683049649000168,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5537216444479688,
+          0.004186389305882429,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5483340441540792,
+        0.17897602203336965,
+        0.01998511792529065
+      ],
+      "final_yaw_rad": 0.006574483409058451,
+      "final_tilt_deg": 0.0073077371925754754,
+      "final_speed_m_s": 7.212174814047767e-09,
+      "lift_height_m": 0.12288271361496522,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.0019554896462784916,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000018,
+      "ticks": 260,
+      "wall_seconds": 25.71,
+      "mean_latency_ms": 11.251163716839914,
+      "p95_latency_ms": 5.599833786254746,
+      "min_width_cmd": 0.016562893986701965,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5460581469327392,
+          0.0033932641606811715,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    },
+    {
+      "final_position": [
+        0.5536882294851428,
+        0.17604401889647023,
+        0.0199846280000403
+      ],
+      "final_yaw_rad": 0.01649713375430969,
+      "final_tilt_deg": 0.008090775416593447,
+      "final_speed_m_s": 4.60675582910636e-05,
+      "lift_height_m": 0.11832972839413625,
+      "released": true,
+      "rest": true,
+      "xy_error_m": 0.005408587914286068,
+      "failure": null,
+      "success": true,
+      "skill": "A0",
+      "seed": 40000019,
+      "ticks": 260,
+      "wall_seconds": 25.52,
+      "mean_latency_ms": 11.107116283920522,
+      "p95_latency_ms": 4.959475831128657,
+      "min_width_cmd": 0.01681353524327278,
+      "max_width_cmd": 0.03999999910593033,
+      "ever_released": true,
+      "scene": {
+        "start": [
+          0.5473906875500935,
+          0.002955249621379965,
+          0.019989917745699866,
+          0.0
+        ],
+        "block_start": "default",
+        "jitter": 0.008,
+        "yaw": 0.0
+      }
+    }
+  ]
+}

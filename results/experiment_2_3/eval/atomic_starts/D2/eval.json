@@ -1,0 +1,1643 @@
+{
+  "summary": {
+    "tag": "D2",
+    "policy": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+    "n": 40,
+    "all": {
+      "n": 40,
+      "success": 18,
+      "rate": 0.45
+    },
+    "by_yaw": {
+      "yaw0": {
+        "n": 20,
+        "success": 1,
+        "rate": 0.05
+      },
+      "yaw90": {
+        "n": 20,
+        "success": 17,
+        "rate": 0.85
+      }
+    },
+    "by_mode": {
+      "home_neighborhood": {
+        "n": 20,
+        "success": 9,
+        "rate": 0.45
+      },
+      "multi_ik": {
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      "task_relevant": {
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      }
+    }
+  },
+  "episodes": [
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000000,
+      "start_q": [
+        -0.05968,
+        -0.51106,
+        0.09513,
+        -2.19962,
+        -0.04662,
+        1.79661,
+        1.19536
+      ],
+      "home_distance_rad": 0.4678,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.63,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7460076160792223,
+          0.14548514116317837,
+          0.019990034309717956
+        ],
+        "yaw": 0.2548292373015987,
+        "tilt_deg": 0.0101331203043219
+      },
+      "switch_object": {
+        "position": [
+          0.5485879999925636,
+          0.1680640000009028,
+          0.01998992609293359
+        ],
+        "yaw": -0.011770000013654218
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000007,
+      "start_q": [
+        -0.04626,
+        -0.65304,
+        -0.07874,
+        -2.18765,
+        -0.07066,
+        1.79346,
+        0.63035
+      ],
+      "home_distance_rad": 0.2957,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.39,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7199361237185388,
+          0.18135383530513965,
+          0.01998541482696653
+        ],
+        "yaw": -0.8519446559038987,
+        "tilt_deg": 0.014475212238785024
+      },
+      "switch_object": {
+        "position": [
+          0.5420439927806605,
+          0.17074700107370697,
+          0.019989926887779688
+        ],
+        "yaw": -0.06630001388605339
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000014,
+      "start_q": [
+        0.01061,
+        -0.42342,
+        0.01542,
+        -2.19596,
+        -0.0553,
+        1.76732,
+        0.94661
+      ],
+      "home_distance_rad": 0.245,
+      "success": false,
+      "failure": "final_check",
+      "first_success_tick": 142,
+      "ticks": 143,
+      "wall_seconds": 14.18,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7517097545672119,
+          0.19017478242477123,
+          0.019985969829158658
+        ],
+        "yaw": -0.17291063015126304,
+        "tilt_deg": 0.014280746198875146
+      },
+      "switch_object": {
+        "position": [
+          0.5445859984228457,
+          0.18212100021773855,
+          0.019989926265340244
+        ],
+        "yaw": -0.04511000301895278
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000021,
+      "start_q": [
+        -0.04101,
+        -0.44205,
+        0.02335,
+        -1.98462,
+        -0.06804,
+        1.52779,
+        1.03113
+      ],
+      "home_distance_rad": 0.3186,
+      "success": false,
+      "failure": "final_check",
+      "first_success_tick": 118,
+      "ticks": 119,
+      "wall_seconds": 11.81,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7493166068841677,
+          0.17606820904860443,
+          0.026900234816340945
+        ],
+        "yaw": 0.0036051820538375193,
+        "tilt_deg": 27.069327012398755
+      },
+      "switch_object": {
+        "position": [
+          0.5446249984667515,
+          0.17179900021143152,
+          0.019989926260509428
+        ],
+        "yaw": -0.044790002934329505
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000028,
+      "start_q": [
+        0.01212,
+        -0.70321,
+        0.00396,
+        -1.97695,
+        0.02049,
+        1.83896,
+        0.96814
+      ],
+      "home_distance_rad": 0.3579,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.55,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7551182794093901,
+          0.20853547401551556,
+          0.019987537091600033
+        ],
+        "yaw": 0.025728315524620342,
+        "tilt_deg": 0.0042498518247645585
+      },
+      "switch_object": {
+        "position": [
+          0.5570919953379911,
+          0.1824240003765222,
+          0.01998992659752336
+        ],
+        "yaw": 0.05909999346158207
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000035,
+      "start_q": [
+        0.03913,
+        -0.4289,
+        0.07212,
+        -2.1778,
+        -0.01377,
+        1.89108,
+        0.74255
+      ],
+      "home_distance_rad": 0.2785,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.46,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7161995617094508,
+          0.1861925591814955,
+          0.019988890218534075
+        ],
+        "yaw": -0.7423730674998482,
+        "tilt_deg": 0.0035476134065499736
+      },
+      "switch_object": {
+        "position": [
+          0.5534789997260686,
+          0.18782400002716848,
+          0.019989926121902816
+        ],
+        "yaw": 0.02898999955372142
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000042,
+      "start_q": [
+        -0.00981,
+        -0.65654,
+        0.04138,
+        -1.95615,
+        -0.14187,
+        1.69961,
+        0.60676
+      ],
+      "home_distance_rad": 0.3156,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.22,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7236516482206681,
+          0.17428580259243873,
+          0.02758520054811169
+        ],
+        "yaw": -0.8665018282915843,
+        "tilt_deg": 32.32690495832637
+      },
+      "switch_object": {
+        "position": [
+          0.547936999966209,
+          0.17803900000419035,
+          0.01998992609581592
+        ],
+        "yaw": -0.017190000062630332
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000049,
+      "start_q": [
+        0.04452,
+        -0.63616,
+        0.03495,
+        -2.17505,
+        -0.05991,
+        1.91591,
+        0.66777
+      ],
+      "home_distance_rad": 0.3381,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.79,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7406630327586957,
+          0.21251445802360133,
+          0.01998813950155305
+        ],
+        "yaw": -0.34891341888740024,
+        "tilt_deg": 0.0034695921740184933
+      },
+      "switch_object": {
+        "position": [
+          0.5453649991478886,
+          0.18890500011487887,
+          0.019989926185612787
+        ],
+        "yaw": -0.038630001623366494
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000056,
+      "start_q": [
+        0.03139,
+        -0.60513,
+        0.03142,
+        -1.96046,
+        -0.15746,
+        1.89244,
+        0.75383
+      ],
+      "home_distance_rad": 0.3417,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.53,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7210819006106296,
+          0.18389917999909233,
+          0.01998883389934678
+        ],
+        "yaw": -0.7133667680276372,
+        "tilt_deg": 0.0038694997511871413
+      },
+      "switch_object": {
+        "position": [
+          0.5474289999186812,
+          0.18627700001025962,
+          0.019989926101019687
+        ],
+        "yaw": -0.021420000151777953
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "home_neighborhood",
+      "seed": 81000063,
+      "start_q": [
+        -0.01235,
+        -0.44875,
+        0.07128,
+        -2.22909,
+        -0.01373,
+        1.80268,
+        0.75098
+      ],
+      "home_distance_rad": 0.2211,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.38,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7107879897206236,
+          0.19610616710272874,
+          0.01999017801318295
+        ],
+        "yaw": 1.1288056893637122,
+        "tilt_deg": 0.008545664483432452
+      },
+      "switch_object": {
+        "position": [
+          0.5579099928210856,
+          0.17752900054742402,
+          0.01998992686995806
+        ],
+        "yaw": 0.06591999035848183
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "multi_ik",
+      "seed": 81000070,
+      "start_q": [
+        0.29542,
+        0.00026,
+        -0.00172,
+        -2.52456,
+        0.0,
+        2.52481,
+        -0.4917
+      ],
+      "home_distance_rad": 1.703,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 98,
+      "ticks": 99,
+      "wall_seconds": 9.55,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7455826803192618,
+          0.2036706572481836,
+          0.02192320815997615
+        ],
+        "yaw": -0.28084982493598115,
+        "tilt_deg": 5.587063586164579
+      },
+      "switch_object": {
+        "position": [
+          0.5381449658519175,
+          0.18483600566237351,
+          0.01998992987664181
+        ],
+        "yaw": -0.09879006422848488
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "multi_ik",
+      "seed": 81000077,
+      "start_q": [
+        -0.09721,
+        -0.40259,
+        0.6631,
+        -2.68026,
+        0.33805,
+        2.32735,
+        2.64532
+      ],
+      "home_distance_rad": 2.2018,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.36,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7269047948973265,
+          0.200139413632047,
+          0.04579911389979
+        ],
+        "yaw": 1.4132739351391652,
+        "tilt_deg": 77.61899408226837
+      },
+      "switch_object": {
+        "position": [
+          0.5496849999999822,
+          0.17239900000000222,
+          0.019989926092122686
+        ],
+        "yaw": -0.00263000000003345
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "multi_ik",
+      "seed": 81000084,
+      "start_q": [
+        0.36385,
+        -0.24984,
+        0.04352,
+        -2.76559,
+        0.01837,
+        2.51589,
+        -0.39427
+      ],
+      "home_distance_rad": 1.664,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.41,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7196566204812078,
+          0.17532035413156336,
+          0.019985149314671144
+        ],
+        "yaw": -0.8444262389620619,
+        "tilt_deg": 0.014496516434232573
+      },
+      "switch_object": {
+        "position": [
+          0.539205976231228,
+          0.17410100382757213,
+          0.01998992872231142
+        ],
+        "yaw": -0.08995004513368467
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "multi_ik",
+      "seed": 81000091,
+      "start_q": [
+        0.16717,
+        0.04765,
+        0.34253,
+        -2.32847,
+        -0.02302,
+        2.37322,
+        1.3113
+      ],
+      "home_distance_rad": 1.1416,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.71,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7268049189783679,
+          0.24644540593599554,
+          0.04944291288312298
+        ],
+        "yaw": 1.764310054476037,
+        "tilt_deg": 45.48979321943271
+      },
+      "switch_object": {
+        "position": [
+          0.5557879979181165,
+          0.185512000182535,
+          0.01998992631802952
+        ],
+        "yaw": 0.048229996895437124
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "multi_ik",
+      "seed": 81000098,
+      "start_q": [
+        -0.15014,
+        -0.39845,
+        0.43606,
+        -2.70818,
+        0.228,
+        2.33056,
+        2.45323
+      ],
+      "home_distance_rad": 1.9768,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.96,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.6671776911850185,
+          0.19179914152164415,
+          0.01998629362690802
+        ],
+        "yaw": 1.1664788809964295,
+        "tilt_deg": 0.013251858815342703
+      },
+      "switch_object": {
+        "position": [
+          0.5520649999658984,
+          0.17641200000360904,
+          0.01998992609583307
+        ],
+        "yaw": 0.01720999994199453
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "task_relevant",
+      "seed": 81000105,
+      "start_q": [
+        0.37653,
+        -0.08132,
+        0.13091,
+        -2.55997,
+        0.01724,
+        2.47927,
+        -0.29199
+      ],
+      "home_distance_rad": 1.5437,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.29,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.734670530413638,
+          0.2019378233653223,
+          0.019987640689812312
+        ],
+        "yaw": 0.02521955975500796,
+        "tilt_deg": 90.0
+      },
+      "switch_object": {
+        "position": [
+          0.5507129999995121,
+          0.16972800000005325,
+          0.019989926092173316
+        ],
+        "yaw": 0.005939999999147753
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "task_relevant",
+      "seed": 81000112,
+      "start_q": [
+        0.31985,
+        0.17344,
+        0.09939,
+        -2.21851,
+        -0.02511,
+        2.39096,
+        -0.34928
+      ],
+      "home_distance_rad": 1.5507,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.86,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7066408505287,
+          0.15128884016426694,
+          0.01998972069089565
+        ],
+        "yaw": -1.0934036882250282,
+        "tilt_deg": 0.0009529643668383608
+      },
+      "switch_object": {
+        "position": [
+          0.5393089771004143,
+          0.18834400367708856,
+          0.01998992862575356
+        ],
+        "yaw": -0.08909004351764457
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "task_relevant",
+      "seed": 81000119,
+      "start_q": [
+        0.31277,
+        -0.02503,
+        0.02739,
+        -2.482,
+        0.00108,
+        2.45697,
+        -0.44609
+      ],
+      "home_distance_rad": 1.6201,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.76,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7227106346414935,
+          0.11121269045042091,
+          0.0374408293129487
+        ],
+        "yaw": -1.8841481439351428,
+        "tilt_deg": 39.03731660504716
+      },
+      "switch_object": {
+        "position": [
+          0.5520509999668388,
+          0.17870300000351144,
+          0.019989926095730585
+        ],
+        "yaw": 0.01708999994357218
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "task_relevant",
+      "seed": 81000126,
+      "start_q": [
+        0.29311,
+        0.13489,
+        0.04758,
+        -2.32248,
+        -0.01012,
+        2.4572,
+        -0.43729
+      ],
+      "home_distance_rad": 1.6353,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 28.39,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7220352701302964,
+          0.19328720991923581,
+          0.019988405782743832
+        ],
+        "yaw": 0.7532309660059865,
+        "tilt_deg": 0.005562397363564124
+      },
+      "switch_object": {
+        "position": [
+          0.5600469816209026,
+          0.18669100117243054,
+          0.01998992808111276
+        ],
+        "yaw": 0.0837299784072619
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw0",
+      "mode": "task_relevant",
+      "seed": 81000133,
+      "start_q": [
+        0.10966,
+        -0.1087,
+        0.23235,
+        -2.51268,
+        0.03726,
+        2.40653,
+        1.09844
+      ],
+      "home_distance_rad": 1.0318,
+      "success": false,
+      "failure": "final_check",
+      "first_success_tick": 83,
+      "ticks": 84,
+      "wall_seconds": 8.55,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7380832742539136,
+          0.17019114410216735,
+          0.019067607952772462
+        ],
+        "yaw": -0.7187696278098878,
+        "tilt_deg": 95.29453409222486
+      },
+      "switch_object": {
+        "position": [
+          0.5490489999984649,
+          0.17642600000018405,
+          0.019989926092288227
+        ],
+        "yaw": -0.007930000002794603
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050000,
+      "start_q": [
+        -0.04997,
+        -0.69329,
+        0.02467,
+        -2.25931,
+        -0.00381,
+        1.70478,
+        0.9202
+      ],
+      "home_distance_rad": 0.2975,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 106,
+      "ticks": 107,
+      "wall_seconds": 11.72,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7199414345551778,
+          0.17629248009691514,
+          0.019986924224491547
+        ],
+        "yaw": 1.576539325751998,
+        "tilt_deg": 0.005985158646217064
+      },
+      "switch_object": {
+        "position": [
+          0.5585119993017669,
+          0.17000599041539308,
+          0.019989927130232815
+        ],
+        "yaw": 1.6417299875636449
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050007,
+      "start_q": [
+        0.03143,
+        -0.57857,
+        0.06088,
+        -1.93352,
+        0.03532,
+        1.43735,
+        0.71496
+      ],
+      "home_distance_rad": 0.2988,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 96,
+      "ticks": 97,
+      "wall_seconds": 10.45,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7119209269126632,
+          0.1799919511846433,
+          0.01998648289125274
+        ],
+        "yaw": 1.7470199470560468,
+        "tilt_deg": 0.012531345365637802
+      },
+      "switch_object": {
+        "position": [
+          0.5609079985188423,
+          0.18628597466767452,
+          0.019989928832504417
+        ],
+        "yaw": 1.6616999720793664
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050014,
+      "start_q": [
+        -0.03515,
+        -0.62258,
+        0.07381,
+        -2.24742,
+        -0.05115,
+        1.88665,
+        0.88415
+      ],
+      "home_distance_rad": 0.336,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 95,
+      "ticks": 96,
+      "wall_seconds": 9.51,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7084575402203123,
+          0.17674603876820688,
+          0.019988044465682527
+        ],
+        "yaw": 1.6786818669340053,
+        "tilt_deg": 0.0028268235681534
+      },
+      "switch_object": {
+        "position": [
+          0.5545459999251589,
+          0.1729709992035871,
+          0.019989926178627725
+        ],
+        "yaw": 1.6086799987508023
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050021,
+      "start_q": [
+        0.05533,
+        -0.60527,
+        -0.0361,
+        -2.24095,
+        0.12304,
+        1.92883,
+        0.39962
+      ],
+      "home_distance_rad": 0.5224,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 89,
+      "ticks": 90,
+      "wall_seconds": 9.76,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7110808684940565,
+          0.18699503299390202,
+          0.019988815080231967
+        ],
+        "yaw": 1.8461192430299285,
+        "tilt_deg": 0.0041081218269853935
+      },
+      "switch_object": {
+        "position": [
+          0.5609609984993087,
+          0.19106497418683632,
+          0.01998992888445666
+        ],
+        "yaw": 1.6621399716667113
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050028,
+      "start_q": [
+        0.04855,
+        -0.53568,
+        -0.03599,
+        -2.15637,
+        -0.19758,
+        1.65318,
+        0.92387
+      ],
+      "home_distance_rad": 0.2605,
+      "success": false,
+      "failure": "final_check",
+      "first_success_tick": 103,
+      "ticks": 104,
+      "wall_seconds": 10.83,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7133066932226926,
+          0.18884935876380593,
+          0.02747572367271532
+        ],
+        "yaw": 1.68961426626445,
+        "tilt_deg": 27.145436652152792
+      },
+      "switch_object": {
+        "position": [
+          0.542953999351671,
+          0.18970999552523254,
+          0.01998992658467315
+        ],
+        "yaw": 1.5120799913920893
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050035,
+      "start_q": [
+        0.02148,
+        -0.66448,
+        0.04824,
+        -2.03746,
+        -0.15768,
+        1.52976,
+        0.80501
+      ],
+      "home_distance_rad": 0.2715,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 110,
+      "ticks": 111,
+      "wall_seconds": 13.01,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.721799842685274,
+          0.18355858536400685,
+          0.019985265029574633
+        ],
+        "yaw": 1.684206578742271,
+        "tilt_deg": 0.00882045025714649
+      },
+      "switch_object": {
+        "position": [
+          0.53804599413701,
+          0.18429596473852605,
+          0.019989930000594826
+        ],
+        "yaw": 1.4711799337447875
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050042,
+      "start_q": [
+        0.01785,
+        -0.62069,
+        -0.05403,
+        -2.08468,
+        0.14929,
+        1.54729,
+        0.84043
+      ],
+      "home_distance_rad": 0.2335,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 108,
+      "ticks": 109,
+      "wall_seconds": 10.93,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7252956124838132,
+          0.19376331406066008,
+          0.01998597435619761
+        ],
+        "yaw": 1.665175957149499,
+        "tilt_deg": 0.01595592822880716
+      },
+      "switch_object": {
+        "position": [
+          0.5524289999932033,
+          0.1835699999347449,
+          0.019989926099222385
+        ],
+        "yaw": 1.5910399998901426
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050049,
+      "start_q": [
+        -0.01176,
+        -0.49207,
+        0.04552,
+        -2.24464,
+        0.01799,
+        1.78051,
+        1.09615
+      ],
+      "home_distance_rad": 0.3748,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 97,
+      "ticks": 98,
+      "wall_seconds": 9.9,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7164332313212286,
+          0.17241657916646097,
+          0.01998725723124334
+        ],
+        "yaw": 1.628209617316181,
+        "tilt_deg": 0.005516043957625944
+      },
+      "switch_object": {
+        "position": [
+          0.5448309998200112,
+          0.17764699868660022,
+          0.01998992623632543
+        ],
+        "yaw": 1.5277199974892375
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050056,
+      "start_q": [
+        0.00414,
+        -0.5677,
+        0.08216,
+        -2.2206,
+        -0.02549,
+        1.54119,
+        0.67557
+      ],
+      "home_distance_rad": 0.222,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 98,
+      "ticks": 99,
+      "wall_seconds": 9.83,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7100304768319908,
+          0.180102633839132,
+          0.019985244214264217
+        ],
+        "yaw": 1.6609222582559524,
+        "tilt_deg": 0.006876577402233458
+      },
+      "switch_object": {
+        "position": [
+          0.5552789998695815,
+          0.1808289985555399,
+          0.019989926248924175
+        ],
+        "yaw": 1.6147899977990214
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "home_neighborhood",
+      "seed": 81050063,
+      "start_q": [
+        0.01356,
+        -0.2927,
+        0.03832,
+        -1.9986,
+        0.1297,
+        1.47782,
+        0.61255
+      ],
+      "home_distance_rad": 0.3597,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 98,
+      "ticks": 99,
+      "wall_seconds": 9.61,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7110609649027959,
+          0.18496517604534823,
+          0.020366640538597547
+        ],
+        "yaw": 1.433902750714959,
+        "tilt_deg": 1.0403573370587735
+      },
+      "switch_object": {
+        "position": [
+          0.542635999221315,
+          0.1827109946747003,
+          0.019989926678551026
+        ],
+        "yaw": 1.5094299897539978
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "multi_ik",
+      "seed": 81050070,
+      "start_q": [
+        0.28315,
+        -0.12708,
+        -0.0689,
+        -2.4264,
+        -0.0117,
+        2.29958,
+        -0.5628
+      ],
+      "home_distance_rad": 1.5987,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 100,
+      "ticks": 101,
+      "wall_seconds": 10.81,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7130084305488219,
+          0.1972046006971605,
+          0.019988228379359183
+        ],
+        "yaw": 1.3732265703955406,
+        "tilt_deg": 0.0032246991054561353
+      },
+      "switch_object": {
+        "position": [
+          0.544713999802503,
+          0.18726399856397924,
+          0.019989926249813005
+        ],
+        "yaw": 1.5267399972530284
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "multi_ik",
+      "seed": 81050077,
+      "start_q": [
+        0.45364,
+        -0.21712,
+        0.22298,
+        -2.73349,
+        0.0819,
+        2.51999,
+        -0.18048
+      ],
+      "home_distance_rad": 1.5566,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 25.63,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7211706202707712,
+          0.1991747812847016,
+          0.01998678503985525
+        ],
+        "yaw": 1.4693410069836528,
+        "tilt_deg": 0.005805803956715053
+      },
+      "switch_object": {
+        "position": [
+          0.5420109989075663,
+          0.16906899266168557,
+          0.019989926900929624
+        ],
+        "yaw": 1.5042199858856864
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "multi_ik",
+      "seed": 81050084,
+      "start_q": [
+        0.35112,
+        -0.32941,
+        0.00403,
+        -2.7394,
+        0.00195,
+        2.40999,
+        -0.43192
+      ],
+      "home_distance_rad": 1.6148,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 99,
+      "ticks": 100,
+      "wall_seconds": 9.82,
+      "released": false,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7103864808409363,
+          0.18324178846565137,
+          0.020581893223225692
+        ],
+        "yaw": 1.6270530601842539,
+        "tilt_deg": 0.94124551592986
+      },
+      "switch_object": {
+        "position": [
+          0.5518859999974712,
+          0.17495699997629613,
+          0.019989926094701637
+        ],
+        "yaw": 1.5865099999594792
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "multi_ik",
+      "seed": 81050091,
+      "start_q": [
+        0.09557,
+        -0.44344,
+        0.15227,
+        -2.83626,
+        0.09597,
+        2.39502,
+        0.94816
+      ],
+      "home_distance_rad": 1.0817,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 84,
+      "ticks": 85,
+      "wall_seconds": 8.56,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7095279697120579,
+          0.1867591417064814,
+          0.019984804904136236
+        ],
+        "yaw": 1.738863737682238,
+        "tilt_deg": 0.01926001061942894
+      },
+      "switch_object": {
+        "position": [
+          0.5526849999899823,
+          0.17274599990266867,
+          0.019989926102710588
+        ],
+        "yaw": 1.5931699998373945
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "multi_ik",
+      "seed": 81050098,
+      "start_q": [
+        0.17096,
+        -0.12683,
+        0.3934,
+        -2.5022,
+        0.0706,
+        2.38372,
+        1.29558
+      ],
+      "home_distance_rad": 1.1376,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 81,
+      "ticks": 82,
+      "wall_seconds": 8.05,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7118241624424181,
+          0.17423789731416514,
+          0.019986964522307905
+        ],
+        "yaw": 1.5474555964568095,
+        "tilt_deg": 0.009432126932695798
+      },
+      "switch_object": {
+        "position": [
+          0.5603109987355467,
+          0.1783409796656748,
+          0.019989928292429415
+        ],
+        "yaw": 1.6567199765562408
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "task_relevant",
+      "seed": 81050105,
+      "start_q": [
+        -0.0384,
+        0.25186,
+        0.40238,
+        -2.21978,
+        -0.15297,
+        2.44649,
+        2.82663
+      ],
+      "home_distance_rad": 2.3642,
+      "success": false,
+      "failure": "timeout",
+      "first_success_tick": null,
+      "ticks": 260,
+      "wall_seconds": 26.27,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7133315776194634,
+          0.1852538530020964,
+          0.019990168430373326
+        ],
+        "yaw": 1.2136833542251904,
+        "tilt_deg": 90.0
+      },
+      "switch_object": {
+        "position": [
+          0.5587749992293326,
+          0.19072698919685335,
+          0.019989927262033694
+        ],
+        "yaw": 1.6439199862022604
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "task_relevant",
+      "seed": 81050112,
+      "start_q": [
+        0.29886,
+        0.18861,
+        0.07066,
+        -2.27269,
+        -0.02103,
+        2.46073,
+        -0.40079
+      ],
+      "home_distance_rad": 1.628,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 93,
+      "ticks": 94,
+      "wall_seconds": 9.22,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7232462459802076,
+          0.19202868355436,
+          0.0199880890583355
+        ],
+        "yaw": 1.6945172945843194,
+        "tilt_deg": 0.005463631019673445
+      },
+      "switch_object": {
+        "position": [
+          0.5617819981930252,
+          0.18820296582723636,
+          0.01998992978753419
+        ],
+        "yaw": 1.6689799649477268
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "task_relevant",
+      "seed": 81050119,
+      "start_q": [
+        0.3102,
+        -0.02238,
+        0.0215,
+        -2.50889,
+        0.00079,
+        2.48651,
+        -0.45434
+      ],
+      "home_distance_rad": 1.6478,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 111,
+      "ticks": 112,
+      "wall_seconds": 11.27,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7121721753257669,
+          0.18600750186359258,
+          0.019989900328247642
+        ],
+        "yaw": 1.5219087025735425,
+        "tilt_deg": 0.0002154718226436262
+      },
+      "switch_object": {
+        "position": [
+          0.5399579971679601,
+          0.1778679820429899,
+          0.019989928077054648
+        ],
+        "yaw": 1.4871099657238391
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "task_relevant",
+      "seed": 81050126,
+      "start_q": [
+        -0.1555,
+        -0.15215,
+        0.4774,
+        -2.59112,
+        0.10978,
+        2.45281,
+        2.58847
+      ],
+      "home_distance_rad": 2.1311,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 101,
+      "ticks": 102,
+      "wall_seconds": 10.07,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7110477665812636,
+          0.17895264632578878,
+          0.01998745798313433
+        ],
+        "yaw": 1.6118597566029453,
+        "tilt_deg": 0.004574724984617686
+      },
+      "switch_object": {
+        "position": [
+          0.5521009999961405,
+          0.17362299996351346,
+          0.01998992609609281
+        ],
+        "yaw": 1.5882999999379943
+      },
+      "policy_tag": "D2"
+    },
+    {
+      "group": "yaw90",
+      "mode": "task_relevant",
+      "seed": 81050133,
+      "start_q": [
+        -0.15919,
+        -0.14956,
+        0.45616,
+        -2.64619,
+        0.11121,
+        2.50877,
+        2.55892
+      ],
+      "home_distance_rad": 2.1375,
+      "success": true,
+      "failure": null,
+      "first_success_tick": 111,
+      "ticks": 112,
+      "wall_seconds": 11.02,
+      "released": true,
+      "stable": true,
+      "final_object": {
+        "position": [
+          0.7138595188485556,
+          0.17884752820722208,
+          0.01998786996950881
+        ],
+        "yaw": 1.6089720977015747,
+        "tilt_deg": 0.0074277698646539264
+      },
+      "switch_object": {
+        "position": [
+          0.5516159999986159,
+          0.1719699999871842,
+          0.019989926093516363
+        ],
+        "yaw": 1.5842699999779388
+      },
+      "policy_tag": "D2"
+    }
+  ]
+}
