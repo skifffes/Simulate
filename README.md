@@ -309,3 +309,34 @@ PYTHONPATH=src venv/bin/python scripts/analyze_experiment_2_4.py
 PYTHONPATH=src venv/bin/python scripts/case_analysis_2_4.py
 PYTHONPATH=src venv/bin/python scripts/compare_models_2_4.py
 ```
+
+## 实验 2.5（部分完成，时间受限）：接触前置条件与物理安全连接
+
+- 完整报告：[docs/experiment_2_5.md](docs/experiment_2_5.md)
+- 结果目录：[results/experiment_2_5/README.md](results/experiment_2_5/README.md)
+
+**条件**：同一冻结 D2 checkpoint，A90→B 的 5 种连接（C0 原始硬切换、C1 延迟闭爪 0.5 s、C2 安全离开、C3 Oracle 预推动、C4 退回 HOME），以及 G5 的 R0 原始局部退让 / R1 clearance-first。受时间限制，每条件 3 个配对 seed（40000000–40000002）。
+
+| 条件 | B 成功 | max lift 均值 |
+|---|---:|---:|
+| C0 | 0/3 | 9.8 cm |
+| C1 | 0/3 | 9.0 cm |
+| C2 | 0/3 | 2.5 cm |
+| C3 | 0/3 | 0.8 cm |
+| C4 | **3/3** | 0.33 cm |
+| R0 | 0/3 | 0.06 cm |
+| R1 | 0/3 | 0.95 cm |
+| G3 参考 | 9/10 | 0.58 cm |
+
+**结论**：C1 的夹爪 gate 确实生效（执行开度最小 0.035 m，原始 0.0149 m），但 3/3 仍抬升——早期闭爪不是充分原因。C2/C3 抑制了抬升却仍 0/3，说明"离开物体/预推动"不足以恢复 B；只有 C4 连续退回 HOME 3/3 成功。G5 的 R0 连接段出现 24° 物体倾斜但接触计数为 0，单指扫掠碰撞尚未证实；R1 未恢复 B。每条件仅 3 个 seed，且 C2/C3/R1 的连接段 skill 标签有 bug，结论只作方向性证据。
+
+```bash
+# 单条件（服务器）
+HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src venv/bin/python \
+  scripts/run_experiment_2_5.py --condition C1 --episodes 3 --seed-base 40000000 \
+  --policy outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model \
+  --out results/experiment_2_5
+
+# 五条件并行
+bash server/run_e25_formal.sh
+```
