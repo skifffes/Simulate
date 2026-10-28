@@ -1,113 +1,90 @@
 {
-  "status": "partial_initial_state_only",
-  "blocked": "D2 全帧训练数据集位于服务器 data/lerobot_panda_e23_D2；本机网络不可达，无法读取 interior/all frames，故未计算 trajectory NN。",
-  "d2_episodes": 120,
-  "d2_yaw0": 60,
-  "d2_yaw90": 60,
-  "d2_home": 61,
-  "d2_diverse": 59,
-  "c3_query": {
-    "seed": 40000000,
-    "q": [
-      0.70472,
-      0.33588,
-      -0.28329,
-      -2.43388,
-      0.24138,
-      2.74713,
-      0.99882
-    ],
-    "ee": [
-      0.44975,
-      0.18298,
-      0.06957
-    ],
-    "obj": [
-      0.54794,
-      0.18289,
-      0.01999
-    ],
-    "obj_yaw_deg": -89.807,
-    "gap_m": 0.18199,
-    "grip": 0.04,
-    "policy_step": 153,
-    "physics_step": 1991
-  },
-  "initial_nn_all": {
-    "dq": 0.913643,
-    "ee_mm": 152.354288,
-    "ori_deg": 0.0,
-    "rel_mm": 149.506315,
-    "yaw_deg": 2.189778,
-    "gap_mm": 3.35
-  },
-  "initial_nn_yaw90": {
-    "dq": 0.913643,
-    "ee_mm": 152.354288,
-    "ori_deg": 0.0,
-    "rel_mm": 149.506315,
-    "yaw_deg": 2.189778,
-    "gap_mm": 3.35
-  },
-  "initial_nn_all_episode": 74,
-  "initial_nn_yaw90_episode": 74,
-  "initial_nn_all_joint_abs": [
-    0.612031,
-    0.197451,
-    0.438543,
-    0.172018,
-    0.272919,
-    0.348728,
-    0.056291
+  "n_b_episodes": 120,
+  "n_b_frames": 14653,
+  "mapping_max_start_distance": 1.6e-07,
+  "queries": [
+    {
+      "seed": 40000000,
+      "q": [
+        0.70472,
+        0.33588,
+        -0.28329,
+        -2.43388,
+        0.24138,
+        2.74713,
+        0.99882
+      ],
+      "start_min": 0.913643,
+      "start_episode": 74,
+      "interior_min": 0.118369,
+      "interior_episode": 22,
+      "interior_frame": 39,
+      "interior_progress": 0.305,
+      "interior_yaw90_min": 0.17104,
+      "interior_yaw90_episode": 66,
+      "interior_yaw90_frame": 39,
+      "interior_yaw90_progress": 0.331,
+      "all_min": 0.118369,
+      "start_percentile": 100.0,
+      "interior_percentile": 62.5
+    },
+    {
+      "seed": 40000001,
+      "q": [
+        0.70163,
+        0.33783,
+        -0.28452,
+        -2.4306,
+        0.24275,
+        2.74546,
+        0.99297
+      ],
+      "start_min": 0.912133,
+      "start_episode": 74,
+      "interior_min": 0.119723,
+      "interior_episode": 22,
+      "interior_frame": 39,
+      "interior_progress": 0.305,
+      "interior_yaw90_min": 0.172844,
+      "interior_yaw90_episode": 66,
+      "interior_yaw90_frame": 39,
+      "interior_yaw90_progress": 0.331,
+      "all_min": 0.119723,
+      "start_percentile": 100.0,
+      "interior_percentile": 64.2
+    },
+    {
+      "seed": 40000002,
+      "q": [
+        0.70173,
+        0.34311,
+        -0.28141,
+        -2.42122,
+        0.24139,
+        2.74154,
+        0.99898
+      ],
+      "start_min": 0.907898,
+      "start_episode": 74,
+      "interior_min": 0.11619,
+      "interior_episode": 22,
+      "interior_frame": 39,
+      "interior_progress": 0.305,
+      "interior_yaw90_min": 0.17186,
+      "interior_yaw90_episode": 66,
+      "interior_yaw90_frame": 39,
+      "interior_yaw90_progress": 0.331,
+      "all_min": 0.11619,
+      "start_percentile": 100.0,
+      "interior_percentile": 62.5
+    }
   ],
-  "initial_nn_yaw90_joint_abs": [
-    0.612031,
-    0.197451,
-    0.438543,
-    0.172018,
-    0.272919,
-    0.348728,
-    0.056291
-  ],
-  "nearest_by_relative_geometry": {
-    "episode": 38,
-    "group": "yaw0",
-    "mode": "task_relevant",
-    "rel_mm": 85.52,
-    "dq": 1.5636,
-    "yaw_deg": 87.38
-  },
-  "nearest_by_ee_distance": {
-    "episode": 38,
-    "group": "yaw0",
-    "mode": "task_relevant",
-    "ee_mm": 84.9,
-    "dq": 1.5636,
-    "yaw_deg": 87.38
-  },
-  "counts_within": {
-    "q_lt_0.5": 0,
-    "q_lt_0.75": 0,
-    "q_lt_1.0": 3,
-    "rel_lt_50mm": 0,
-    "rel_lt_100mm": 3,
-    "ee_lt_100mm": 3,
-    "yaw_lt_10deg": 60,
-    "gap_lt_10mm": 47
-  },
   "reference": {
-    "all_min": 0.0,
-    "all_median": 0.0,
-    "all_p95": 0.292112,
-    "all_max": 0.430041,
-    "yaw90_min": 0.0,
-    "yaw90_median": 0.053072,
-    "yaw90_p95": 0.429585,
-    "yaw90_max": 0.485854
-  },
-  "c3_distance_percentile_in_ref": {
-    "all": 100.0,
-    "yaw90": 100.0
-  },
-  "trajectory_nn": "unavailable"
+    "start_median": 0.0,
+    "start_p95": 0.292112,
+    "start_max": 0.430041,
+    "interior_episode_min_median": 0.0,
+    "interior_episode_min_p95": 0.261033,
+    "interior_episode_min_max": 0.430041
+  }
 }

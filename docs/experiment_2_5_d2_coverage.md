@@ -1,176 +1,204 @@
-# 实验 2.5 补充诊断：C3 启动状态与 D2 训练状态的最近邻覆盖
+# 实验 2.5 补充诊断：C3 启动状态与 D2 训练状态的最近邻覆盖（全帧版）
 
-## 结论（先给数字）
+## 结论（先给实际数字）
 
 **Q1：C3 与 D2 B 训练起点的最小七关节距离是多少？对应哪个 episode？HOME 还是 diverse？**
 
-**0.913643 rad**，对应 **episode 74**（`D2_episodes.jsonl` 中 `index=74`），
-**diverse 起点**（`mode=task_relevant`，`home_distance_rad=1.0504`），
-`spec.group=yaw90`，该示范 `success=true`、`reason=ok`。
-C3 是该数据集中 **yaw90 的 C3 seed 40000000**。
+**0.913643 rad**（seed 40000000；另外两个 C3 为 0.912133 / 0.907898），
+对应 **D2 B 数据集 episode 74**（collection index 74），
+**diverse**（`mode=task_relevant`，`home_distance_rad=1.0504`），`group=yaw90`，成功示范。
+C3 的三个 seed 都指向同一个最近起点。
 
-**Q2：C3 与 D2 B 所有训练轨迹中间帧的最小七关节距离是多少？**
+**Q2：C3 与 D2 B 所有训练轨迹中间帧的最小七关节距离是多少？对应哪条轨迹第几帧？**
 
-**未计算。** D2 全帧训练数据集在服务器 `data/lerobot_panda_e23_D2`，本轮服务器网络不可达；本地没有 parquet 帧。没有用配置或起点数据伪造中间帧结果。详见 §5。
+- 全部中间帧：**0.118369 rad**，**episode 22，frame 39**，`progress=0.305`（长度 127）。
+  另外两个 C3：0.119723 / 0.116190，同样指向 ep22 f39。
+- **任务几何匹配（yaw90）的中间帧**：**0.171040 rad**，**episode 66，frame 39**，
+  `progress=0.331`（长度 118）；另外两个 C3：0.172844 / 0.171860，同样 ep66 f39。
+- 注意：ep22 是 **yaw0**（物体长轴 Y），与 C3 的 yaw90 任务几何不同；它只是关节空间更近。
+  **ep66 才是 task-compatible 的最近中间帧。**
 
 **Q3：最近训练起点和最近训练中间帧，哪个在关节空间更接近 C3？相差多少？**
 
-**无法比较**（只有起点结果；中间帧不可用）。起点最近距离为 0.913643 rad。
+中间帧显著更近：
 
-**Q4：在末端—物体相对位置、姿态、夹爪开度方面，最近邻是否仍然接近？**
+- start：**0.9136 rad**；
+- interior（全部）：**0.1184 rad**，比 start 近 **0.795 rad**；
+- interior（yaw90）：**0.1710 rad**，比 start 近 **0.743 rad**。
 
-对 episode 74：EE 世界位置差 **152.4 mm**，EE 相对物体位置差 **149.5 mm**，
-EE 姿态差 **0.0°**，物体 yaw 差 **2.19°**（按矩形块 π 对称），
-墙间隙差 **3.35 mm**。**夹爪开度在 D2 元数据中没有记录，无法比较**。
-所以：姿态、物体 yaw、墙间隙接近；末端/相对位置相差约 15 cm，不能算“完整操作状态近邻”。
+**Q4：在末端—物体相对位置、姿态、夹爪开度方面，这些最近邻是否仍然接近？**
+
+- **start ep74**：EE 世界位置差 **152.4 mm**，EE–物体相对位置差 **149.5 mm**，
+  EE 姿态差 **0.0°**，物体 yaw 差 **2.19°**，墙间隙差 **3.35 mm**；
+  训练夹爪开度缺失（D2 元数据未存）。
+- **interior ep66 f39（yaw90，task-compatible）**：
+  EE 世界位置差 **7.70 mm**，物体位置差 **6.98 mm**，
+  **EE–物体相对位置差 1.87 mm**，物体 yaw 差 **2.19°**，墙间隙差 **1.73 mm**，
+  夹爪 **0.0140 m（专家）vs 0.0166 m（C3）**，差 2.56 mm，且两者都是闭合状态。
+
+所以：**起点只是关节构型“有点近”，完整物理状态并不近；任务匹配的中间帧 ep66 f39 才是真正的完整状态近邻**。
 
 **Q5：D2 是否存在多条不同的 B 示范经过 C3 附近，还是只有个别偶然接近的帧？**
 
-在**起点**层面：q 距离 <1.0 rad 的只有 **3 条**不同示范（episode 74、46、98），
-<0.75 rad 的 **0 条**；相对 EE–物体距离 <100 mm 的 **3 条**，<50 mm 的 **0 条**。
-没有“多条示范密集覆盖”的证据，更像 **个别 task_relevant 起点偶然接近**。
-中间帧层面无法判断（不可用）。
+- 全帧、不筛任务：top-20 来自多条示范（ep22、12、38、52、54…），但在 yaw0/yaw90 之间混合。
+- **筛到 yaw90（任务兼容）后，top-20 全部来自同一条示范 ep66 的相邻帧（f34–f43）**；
+  不同示范数 = **1**。
+- 因此：**存在一条训练轨迹经过了几乎相同的状态；没有多条 task-compatible 示范支持它。**
+  这是“单条轨迹覆盖”，不是“多示范密集覆盖”。
 
 **Q6：最接近的训练中间帧处于什么操作阶段？后续专家动作是什么？**
 
-**无法回答。** 需要 D2 全帧 observations/actions；当前不可用。
+ep66 f39，`progress=0.331`，是 **approach-to-contact 的下降阶段**（wrist 图像显示手指在物体上方，尚未接触）。
+后续 6 个控制帧（20 Hz）专家：
 
-**Q7：C3 的冻结 VLA 后续动作与对应专家动作有什么实际差异？**
+- EE z：**0.0700 → 0.060 → 0.0486 → 0.0373 → 0.0258 → 0.0186 → 0.0182 m**（单调下降）；
+- 夹爪：始终保持 **0.014 m**（闭合）；
+- 第 45 帧 top 图显示夹爪已到物体上方/接触位置，随后进入推动。
 
-**无法做严格对照。** 没有最近中间帧及其后续专家动作。C3 自身的 B 执行在 2.5 中为 0/3，这是策略结果，不是与专家的同状态对照。
+**Q7：最近训练帧之后，C3 的冻结 VLA 与专家动作有什么实际差异？**
+
+从几乎相同的状态（EE 差 7.7 mm、相对几何差 1.9 mm、夹爪差 2.6 mm）出发：
+
+| tick | 专家 EE z (m) | C3 VLA EE z (m) |
+|---:|---:|---:|
+| 0 | 0.0700 | 0.0696 |
+| 2 | 0.0486 | **0.0917** |
+| 4 | 0.0258 | **0.0820** |
+| 6 | 0.0182 | **0.0757** |
+| 10 | 0.0180 | 0.0573 |
+
+- 专家：**继续下降**，夹爪保持 0.014 m，去建立推动接触；
+- C3 VLA：前 2–6 个 tick **先上升 2.2 cm**，夹爪 0.0166→0.0172（仍闭合），随后才缓慢下降。
+- 这不是“闭爪差异”——两者都已经闭合；差异是**垂直运动方向/阶段**。
 
 **Q8：C3 更像是完全未覆盖的状态，还是已出现于训练数据、但模型无法可靠利用的状态？**
 
-**起点层面：C3 是明显 outlier，不是被起点分布覆盖的状态。**
-它的 q 距离 0.914 rad **大于 D2 全部 120 个起点内部最近邻的最大值 0.430 rad**，
-也大于 yaw90 子集的 max 0.486 rad；C3 的 100% 分位在参考分布之外。
-但物理上并非“完全不同”：姿态差 0°、物体 yaw 差 2.2°、墙间隙差 3.3 mm，
-EE/相对位置差约 15 cm——属于“末端位置较远、但朝向/物体几何接近”的 task_relevant 起点。
+**在起点层面：未覆盖（outlier）。** 0.9136 rad 大于 D2 全部 120 个起点内部最近邻的 max **0.430 rad**；
+C3 在起点参考分布中为 100 百分位。
 
-**中间轨迹层面：未知。** 因此不能回答“是否已出现于训练轨迹、但模型无法利用”。
-现有证据只支持：**起点关节空间未覆盖（outlier）**；不支持也不否定中间状态覆盖，
-更不支持“完全未见过”或“模型一定无法泛化”的强结论。
+**在中间轨迹/完整物理状态层面：被覆盖，而且是单条 task-compatible 轨迹覆盖。**
+ep66 f39 与 C3 的 q 距离仅 **0.171 rad**，EE 差 7.7 mm、相对几何差 **1.9 mm**、
+夹爪差 2.6 mm、yaw 差 2.2°；该帧在 D2 内部“episode 到其他轨迹”的距离分布中位于 **62.5 百分位**（不异常）。
+
+**所以现有证据更支持：C3 的启动状态在训练轨迹中出现过（单条示范），但冻结 VLA 没有从该状态产生专家那样的下降/接触动作。**
+这不是“完全未见过的状态”，也不是“多示范覆盖充分”；更准确的表述是：
+
+> **起点未覆盖、中间状态被单条 task-compatible 示范覆盖，但模型未能利用该状态的动作。**
+
+必须保留的不确定性：
+- 专家帧是**一条已经执行到 33% 的轨迹的中间帧**，C3 是**新策略启动**；State Coverage ≠ Successful Launch Capability。
+- 训练每帧的物体真值/接触模式没有存进 parquet；ep66 f39 的相对几何用 `start_ee`→f39 FK 与 `D2_episodes` 的**起始物体位置**计算，假设该帧物体尚未移动（wrist 图支持尚未接触，但不是逐帧物体真值）。
+- 只有 3 个 C3 seed，且只有一个 task-compatible 训练 episode；不能外推到所有 C3 或所有 yaw90。
 
 ---
 
-## 1. 数据与口径
+## 1. 数据标识与口径
 
-### 1.1 D2 训练起点
-
-- 来源：`results/experiment_2_3/data/D2_episodes.jsonl`（D2 数据采集/筛选记录）。
-- 过滤：`success=true` 且 `reason=='ok'` → **120 条 B 示范**，与实验 2.3 报告的 120 条一致。
-- 组成：60 yaw0 + 60 yaw90；61 HOME + 59 diverse（`home_neighborhood` 31、`multi_ik` 14、`task_relevant` 14）。
-- 字段：`start_q`（7 关节）、`start_ee`、`scene.block_start`、`scene.block_yaw`、`scene.wall_inner_x`、`spec.group`、`mode`、`home_distance_rad`、`success`。
-- **未验证**：这些记录与最终 `lerobot_panda_e23_D2` parquet 的一一对应关系（服务器不可达）。因此本报告把它们称为“D2 B 采集起点”，不是已核对的 parquet 帧。
-
-### 1.2 C3 查询状态
-
-本地可用：C3 **seed 40000000**（`results/experiment_2_5/policy_trace.jsonl` + `physics_trace.csv`），
-取 **first `skill=='B'`** 的控制周期；q 为实际关节位置，不是 IK 目标。
-
-| 字段 | 值 |
+| 项 | 值 |
 |---|---|
-| seed | 40000000 |
-| policy_step / physics_step | 153 / 1991 |
-| q (rad) | [0.70472, 0.33588, −0.28329, −2.43388, 0.24138, 2.74713, 0.99882] |
-| gripper actual | 0.040 m |
-| EE (m) | (0.44975, 0.18298, 0.06957) |
-| 物体 (m) | (0.54794, 0.18289, 0.01999) |
-| 物体 yaw | −89.807° |
-| 墙间隙 | 0.18199 m |
-| B task | “push the block toward the wall until it touches” |
+| D2 checkpoint | `outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model` |
+| sha256 | `34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b` |
+| B 训练数据 | `data/_shards_e23/B_D2`（120 episodes，14,653 frames，task `push ... positive X ... wall`） |
+| D2 全集 | `data/lerobot_panda_e23_D2`（480 episodes / 68,892 frames；B 为其中 120 条） |
+| 起点/场景元数据 | `results/experiment_2_3/data/D2_episodes.jsonl`（120 条 success/reason=ok） |
+| C3 查询 | `results/experiment_2_5/G1/C3/seed_{40000000,40000001,40000002}` 的首个 `skill=='B'` 控制周期 |
+| 关节顺序 | `panda_joint1..7`，rad |
+| 距离 | `dq = ||q_C3 − q_train||_2` |
+| 物体 yaw | 矩形块 4×10×4 cm，周期 π；`yaw_diff=min(|wrap(Δ)|, π−|wrap(Δ)|)` |
 
-C3 seed 40000001/40000002 的 trace 在服务器，本轮不可达；**只分析了 1/3 个 C3 episode**，这是本报告的主要限制。
+B shard 与 collection metadata 的起点对齐：120 条 episode 的 first-frame q 与 `D2_episodes` 的 `start_q` 最近匹配，**最大残差 1.6e-7 rad**，可认为一一对应。
 
-### 1.3 距离与角度
+## 2. 三个 C3 查询
 
-- 关节：`dq = ||q_C3 − q_train||_2`，rad，7 维，顺序 `panda_joint1..7`。
-- 物体 yaw：矩形块 4×10×4 cm，yaw 周期 π；`yaw_diff = min(|wrap(Δ)|, π−|wrap(Δ)|)`。
-- EE 姿态：从 `ee_qx..qw` 与训练 `start_q` 的 FK 四元数计算角距离（度）。
-- 墙间隙：`wall_inner_x − block_x − half_x`，yaw0 半长 0.02 m、yaw90 半长 0.05 m。
-- 训练夹爪开度：**缺失**（`D2_episodes.jsonl` 只有 start_q/start_ee）。
+| seed | q 距离起点 min | q 距离 interior min | interior ep/frame (progress) | yaw90 interior ep/frame | yaw90 dq |
+|---:|---:|---:|---|---:|---:|
+| 40000000 | 0.913643 | **0.118369** | ep22 f39 (0.305) | ep66 f39 (0.331) | **0.171040** |
+| 40000001 | 0.912133 | 0.119723 | ep22 f39 (0.305) | ep66 f39 (0.331) | 0.172844 |
+| 40000002 | 0.907898 | 0.116190 | ep22 f39 (0.305) | ep66 f39 (0.331) | 0.171860 |
 
-## 2. Initial-State NN（真实计算）
+查询状态（seed 40000000）：
 
-Top-10（按 q L2，全部 120 起点）：
+```text
+q = [0.70472, 0.33588, -0.28329, -2.43388, 0.24138, 2.74713, 0.99882]
+EE = (0.44975, 0.18298, 0.06957)
+Object = (0.54794, 0.18289, 0.01999)
+Object yaw = -89.81°
+Gap = 0.18199 m
+Grip = 0.040 m at first B observation; first B command closes to 0.01656
+```
 
-| rank | ep | group | start type | mode | dq (rad) | EE (mm) | rel EE–obj (mm) | yaw diff (°) | gap (mm) |
-|---:|---:|---|---|---|---:|---:|---:|---:|---:|
-| 1 | 74 | yaw90 | diverse | task_relevant | **0.9136** | 152.4 | 149.5 | 2.19 | 3.35 |
-| 2 | 46 | yaw0 | diverse | task_relevant | 0.9742 | 101.9 | 102.1 | 87.1 | 36.1 |
-| 3 | 98 | yaw90 | diverse | task_relevant | 0.9792 | 148.0 | 148.5 | 5.4 | 2.6 |
-| 4 | 36 | yaw0 | diverse | multi_ik | 1.0170 | 167.7 | 168.0 | 86.0 | 24.7 |
-| 5 | 80 | yaw90 | diverse | multi_ik | 1.0613 | 180.9 | 183.5 | 2.5 | 2.5 |
-| 6 | 82 | yaw90 | diverse | task_relevant | 1.0949 | 171.1 | 172.1 | 3.6 | 6.7 |
-| 7 | 88 | yaw90 | diverse | multi_ik | 1.1297 | 168.0 | 165.5 | 1.7 | 1.8 |
-| 8 | 104 | yaw90 | diverse | multi_ik | 1.1773 | 185.6 | 188.1 | 4.3 | 4.0 |
-| 9 | 64 | yaw90 | diverse | multi_ik | 1.2537 | 211.1 | 211.2 | 2.4 | 0.1 |
-| 10 | 4 | yaw0 | diverse | multi_ik | 1.2663 | 226.2 | 230.7 | 89.7 | 24.2 |
+## 3. 参考分布
 
-- 只有 yaw90 的 74 / 98 同时满足“q 最近”和物体 yaw 接近；其它 yaw0 候选的 yaw 差 ~87–90°，几何不匹配。
-- **按相对几何另找最近**：episode 38（yaw0，task_relevant），rel 85.5 mm、EE 84.9 mm，但 dq=1.5636、yaw 差 87.4°——**只是位置接近，任务几何不对**。
-- **按 EE 世界位置**：同样是 episode 38（84.9 mm），同上不匹配。
+| 参考 | median | p95 | max |
+|---|---:|---:|---:|
+| B 起点内部 NN（120） | 0.0（重复 HOME） | 0.292 | **0.430** |
+| 每条 B 轨迹到其他轨迹的 interior 最小距离（120） | 0.0（HOME 近似重复） | 0.261 | **0.430** |
+| **C3 start** | — | — | **0.914（超出 max）** |
+| **C3 interior（yaw90）** | — | — | **0.171（约 62.5 百分位）** |
 
-### 2.1 每个关节的绝对误差（episode 74）
+参考分布只用于校准几何密度，不是成功阈值。
 
-| j1 | j2 | j3 | j4 | j5 | j6 | j7 |
-|---:|---:|---:|---:|---:|---:|---:|
-| 0.612 | 0.197 | 0.439 | 0.172 | 0.273 | 0.349 | 0.056 |
+## 4. 物理状态对比
 
-最大单关节误差在 **j1（0.612 rad）**。这解释了为什么末端只差 15 cm、关节距离却有 0.91 rad：肩部/肘部存在冗余构型差异。
+### 4.1 最近起点 ep74
 
-![Initial NN](../results/experiment_2_5/d2_c3_coverage/figures/fig1_initial_state_nn.png)
-![Joint comparison](../results/experiment_2_5/d2_c3_coverage/figures/fig3_joint_comparison.png)
-![Relative geometry](../results/experiment_2_5/d2_c3_coverage/figures/fig4_relative_geometry.png)
+- q 0.9136 rad；EE 152.4 mm；相对 EE–物体 149.5 mm；
+- 姿态 0.0°（FK 重建）；物体 yaw 2.19°；墙间隙 3.35 mm；
+- 训练夹爪开度缺失。
 
-## 3. 覆盖度量与参考分布
+### 4.2 最近 task-compatible 中间帧 ep66 f39
 
-### M1 Joint-Space Coverage
+- episode 66（collection index 66，`task_relevant`，yaw90），起点物体 `(0.54628, 0.17611, 0.01999)`、yaw 1.519 rad；
+- q 0.1710 rad；EE 7.70 mm；物体位置 6.98 mm；相对 EE–物体 **1.87 mm**；
+- 姿态差：**未存逐帧姿态**；用 q FK 的 EE 方向比较，C3 与 ep66 的腕部构型接近（关节差见 CSV）。
+- 夹爪 0.0140 vs 0.0166 m（差 2.6 mm，均闭合）；
+- 墙间隙 0.18372 vs 0.18199 m（差 1.73 mm）；
+- 体素/接触：训练无逐帧接触标签；wrist 图显示 f39 尚未接触。
 
-- C3 → 最近起点：**0.9136 rad**。
-- D2 B 起点内部最近邻（排除自身）：median **0.0**、p95 **0.292**、max **0.430 rad**（120 条；大量 HOME 重复导致 median 0）。
-- yaw90 子集：median 0.053、p95 0.430、max **0.486 rad**。
-- C3 的距离在参考分布中为 **100 百分位（超出最大值）**。
+## 5. 专家后续动作 vs C3 VLA
 
-### M2 Relative Geometry Coverage
+ep66 f39 后续（20 Hz，原始专家）：
 
-- EE 位置：152.4 mm（ep74）；最小可用 84.9 mm（ep38，但 yaw0/87° 不匹配）。
-- 相对 EE–物体：149.5 mm（ep74）；最小 85.5 mm（ep38，不匹配）。
-- 姿态：0.0°（ep74；FK 重建，非原始存储字段）。
-- 夹爪：训练缺失，无法比较。
-- 物体 yaw：2.19°（ep74）。
-- 墙间隙：3.35 mm（ep74）。
+```text
+t=0  EE z 0.0700  grip 0.014
+t=1  EE z 0.0600  grip 0.014
+t=2  EE z 0.0486  grip 0.014
+t=3  EE z 0.0373  grip 0.014
+t=4  EE z 0.0258  grip 0.014
+t=5  EE z 0.0186  grip 0.014
+t=6  EE z 0.0182  grip 0.014
+```
 
-### M3 Task-State Coverage
+C3 VLA（同一冻结 D2 checkpoint，从 C3 首个 B tick 起）：
 
-- 物体 yaw 匹配的 60 条 yaw90 中，q 最近的 3 条（74/98/80）都来自 diverse/task_relevant 或 multi_ik；
-- 但没有任何一条同时满足“q<0.75 rad、rel<100 mm、yaw<10°、gap<10 mm”的完整组合；
-- 以这些条件筛后，**完整操作状态近邻数量为 0**（保守结论）。
+```text
+t=0  EE z 0.0696  grip 0.0166
+t=1  EE z 0.0852  grip 0.0172
+t=2  EE z 0.0917  grip 0.0174
+t=3  EE z 0.0876  grip 0.0172
+t=4  EE z 0.0820  grip 0.0166
+t=5  EE z 0.0850  grip 0.0169
+t=6  EE z 0.0757  grip 0.0167
+```
 
-![Reference distributions](../results/experiment_2_5/d2_c3_coverage/figures/fig6_reference_distribution.png)
+差异不是夹爪（两者闭合），而是**前 6 个 tick 的垂直方向**：专家下降 5.2 cm，VLA 先上升 2.2 cm 再回落。C3 的 B 最终 0/3 成功、max lift <1 cm（2.5），与“从匹配状态出发却没有建立推动接触”一致。
 
-## 4. 解释边界
+## 6. 图表与匹配帧
 
-- 0.914 rad 是**起点分布外**，但不等于“没见过类似末端几何”：ep74 的 yaw/姿态/间隙接近，EE 仍差 15 cm。
-- 训练起点是“每条示范第 0 帧”，而 C3 是连接器结束后的**新策略启动点**；起点覆盖与“从该点启动的成功能力”不是同一件事。
-- **未计算 interior/all-frame**：不能回答“训练轨迹是否经过 C3 附近”，也不能回答“最近中间帧的后续专家动作”。
+- Figure 1：起点最近邻（yaw90）柱状图。
+- Figure 2：三个 C3 的 start / interior(all) / interior(yaw90) 距离。
+- Figure 3：C3、最近起点、最近中间帧的七关节对比。
+- Figure 4：C3 与 ep66 f39 的相对 EE–物体位置（x-z）。
+- Figure 5：ep66 f39 之后专家 vs C3 VLA 的 EE z。
+- Figure 6：D2 内部参考分布与 C3 距离。
+- `matched_frames/`：D2 ep66 top/wrist f39 与 f45，C3 seed 40000000 top/contact f153（原始训练视频抽帧，不是重渲染）。
 
-## 5. 为什么没有 trajectory/interior NN
+![Figure 5](../results/experiment_2_5/d2_c3_coverage/figures/fig5_nearest_subsequent.png)
 
-服务器 `222.29.51.96:22` 在本轮分析期间连接超时（`Test-NetConnection` 为 False；`ssh` timeout），
-无法读取：
+![D2 ep66 f39 top](../results/experiment_2_5/d2_c3_coverage/matched_frames/d2_ep66_top_f39.png)
+![C3 top f153](../results/experiment_2_5/d2_c3_coverage/matched_frames/c3_seed40000000_top_f153.png)
 
-- `data/lerobot_panda_e23_D2/data/chunk-*/episode_*.parquet`（全帧 observation/action）
-- C3 seed 40000001/40000002 的 `policy_trace.jsonl`/`physics_trace.csv`
-- 训练数据的原始 top/wrist 图像
-
-本地只有：
-- `D2_episodes.jsonl`（起点/场景/结果，无帧）
-- 1 个 C3 seed 的 trace
-
-因此本轮**没有生成** `interior_nn.csv`、`all_frame_nn.csv`、`episode_deduplicated_nn.csv`、`nearest_trajectory_comparison.csv`、Figure 2/5、matched frames。没有用配置或起点伪造这些结果。
-
-## 6. 交付文件
+## 7. 交付文件
 
 ```text
 results/experiment_2_5/d2_c3_coverage/
@@ -178,38 +206,27 @@ results/experiment_2_5/d2_c3_coverage/
   d2_b_state_manifest.csv
   initial_nn.csv
   initial_nn_yaw90.csv
-  initial_nn_by_relative_geometry.csv
-  initial_nn_by_ee_distance.csv
+  interior_nn.csv
+  interior_nn_yaw90.csv
+  all_frame_nn.csv
+  episode_deduplicated_nn.csv
   reference_distance_distribution.csv
+  nearest_trajectory_comparison.csv
+  nearest_trajectory_comparison_yaw90.csv
   analysis_summary.json
   analysis_config.json
-  figures/fig1_initial_state_nn.png
-  figures/fig3_joint_comparison.png
-  figures/fig4_relative_geometry.png
-  figures/fig6_reference_distribution.png
+  figures/fig1..fig6
+  matched_frames/
 docs/experiment_2_5_d2_coverage.md
-scripts/analyze_d2_c3_coverage.py
+scripts/analyze_d2_c3_full.py
+scripts/extract_c3_match_frames.py
 ```
 
-## 7. 复现（服务器恢复后补全）
+## 8. 解释边界
 
-```bash
-# 当前可复现的部分（本地）
-python scripts/analyze_d2_c3_coverage.py
-
-# 服务器恢复后：读取全帧并补 interior/all-frame NN
-ssh lijh@222.29.51.96
-cd /scratch/lijh/simulate_vla
-ls data/lerobot_panda_e23_D2/data/chunk-*
-# 需要按 meta/episodes.jsonl 的任务标签筛出 120 条 B，逐帧读取 observation.state/action
-```
-
-## 8. 最终判断
-
-**C3 的 B 启动状态在关节空间是 D2 起点分布的 outlier（0.914 rad，超过全体起点内部最近邻 max 0.430 rad）。**
-但它不是“完全不同的物理状态”：物体 yaw 差 2.2°、墙间隙差 3.3 mm、姿态差 0°，EE/相对位置差约 15 cm。
-因此更准确的表述是：
-
-> **C3 是一个“关节构型远离训练起点、但末端/物体几何部分接近”的 task_relevant 启动状态；起点层面覆盖不足，中间轨迹层面未知。**
-
-在没有全帧数据之前，不能判断它是否属于“训练轨迹中出现过、但模型无法利用”的状态，也不能据此证明模型完全不具备该状态的启动能力。
+- **State Coverage**：ep66 f39 证明训练中存在几乎相同的状态（q 0.171 rad，相对几何 1.9 mm）。
+- **Action Coverage**：该帧之后专家有明确的下降/接触动作；但不能仅凭“专家动作存在”证明模型能产生它。
+- **Successful Launch Capability**：C3 VLA 从该状态启动后 0/3，前 6 tick 方向与专家相反；这是能力问题，不是状态完全未覆盖。
+- 训练帧是**已经执行 33% 的中间帧**；C3 是连接器结束后的新启动。两者即便状态相同，策略的“阶段上下文”可能不同（图像历史、动作队列不同）。
+- 每帧物体/接触真值缺失：ep66 f39 的相对几何用起点物体位置近似；wrist 图显示尚未接触，但不能替代逐帧真值。
+- 只有 3 个 C3 seed，task-compatible 训练轨迹只有 1 条；统计上只能作为机制证据，不是总体成功率结论。
