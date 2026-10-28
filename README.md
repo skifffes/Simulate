@@ -313,7 +313,7 @@ PYTHONPATH=src venv/bin/python scripts/compare_models_2_4.py
 ## 实验 2.5（部分完成，时间受限）：接触前置条件与物理安全连接
 
 - 完整报告：[docs/experiment_2_5.md](docs/experiment_2_5.md)
-- D2–C3 起点覆盖补充诊断：[docs/experiment_2_5_d2_coverage.md](docs/experiment_2_5_d2_coverage.md)（仅起点 NN；全帧 NN 因服务器不可达未完成）
+- D2–C3 全帧覆盖与状态对齐审计：[docs/experiment_2_5_d2_coverage.md](docs/experiment_2_5_d2_coverage.md)（已修正 action/observation 夹爪字段混用；完整观测无近邻）
 - 结果目录：[results/experiment_2_5/README.md](results/experiment_2_5/README.md)
 
 **条件**：同一冻结 D2 checkpoint，A90→B 的 5 种连接（C0 原始硬切换、C1 延迟闭爪 0.5 s、C2 安全离开、C3 Oracle 预推动、C4 退回 HOME），以及 G5 的 R0 原始局部退让 / R1 clearance-first。受时间限制，每条件 3 个配对 seed（40000000–40000002）。

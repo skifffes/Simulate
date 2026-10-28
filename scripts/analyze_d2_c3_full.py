@@ -162,6 +162,8 @@ def main():
                 'rel_mm': float(np.linalg.norm((q['ee'] - q['obj']) - (ee - obj)) * 1000),
                 'ori_deg': quat_angle_deg(q['quat'], fk_poses([r['start_q']])[0][1]),
                 'yaw_deg': yawdiff, 'gap_mm': abs(q['gap'] - gap) * 1000,
+                'grip_obs': float(G[i][0]),
+                'grip_diff_mm': abs(q['grip'] - G[i][0]) * 1000,
                 'home_distance_rad': r['home_distance_rad'],
                 'q0_dist': 0.0,
             })
@@ -178,14 +180,16 @@ def main():
             all_rows.append({'query_seed': q['seed'], 'rank': rank, 'episode_index': int(fe[k]),
                              'frame_index': int(ff[k]), 'timestamp': float(ft[k]),
                              'progress': float(ff[k] / max(1, lengths[int(fe[k])] - 1)),
-                             'dq': float(dq[k]), 'gripper': float(FG[k])})
+                             'dq': float(dq[k]), 'grip_obs': float(FG[k]),
+                             'grip_diff_mm': abs(float(FG[k]) - q['grip']) * 1000})
         # interior
         order_i = [k for k in order if interior_mask[k]][:20]
         for rank, k in enumerate(order_i, 1):
             inter_rows.append({'query_seed': q['seed'], 'rank': rank, 'episode_index': int(fe[k]),
                                'frame_index': int(ff[k]), 'timestamp': float(ft[k]),
                                'progress': float(ff[k] / max(1, lengths[int(fe[k])] - 1)),
-                               'dq': float(dq[k]), 'gripper': float(FG[k])})
+                               'dq': float(dq[k]), 'grip_obs': float(FG[k]),
+                             'grip_diff_mm': abs(float(FG[k]) - q['grip']) * 1000})
         k = order_i[0]
         nearest_info.append((q, int(fe[k]), int(ff[k]), float(dq[k]), int(k)))
         order90 = [k for k in order if interior90_mask[k]][:20]
@@ -194,7 +198,8 @@ def main():
                                  'episode_index': int(fe[k]), 'frame_index': int(ff[k]),
                                  'timestamp': float(ft[k]),
                                  'progress': float(ff[k] / max(1, lengths[int(fe[k])] - 1)),
-                                 'dq': float(dq[k]), 'gripper': float(FG[k])})
+                                 'dq': float(dq[k]), 'grip_obs': float(FG[k]),
+                                 'grip_diff_mm': abs(float(FG[k]) - q['grip']) * 1000})
         k90 = order90[0]
         nearest90_info.append((q, int(fe[k90]), int(ff[k90]), float(dq[k90]), int(k90)))
     # dedup per episode
@@ -209,19 +214,52 @@ def main():
             dedup.append({'query_seed': q['seed'], 'episode_index': i,
                           'frame_index': int(ff[k]), 'timestamp': float(ft[k]),
                           'progress': float(ff[k] / max(1, lengths[i] - 1)),
-                          'dq': float(d), 'gripper': float(FG[k])})
+                          'dq': float(d), 'grip_obs': float(FG[k]),
+                          'grip_diff_mm': abs(float(FG[k]) - q['grip']) * 1000})
+    # gripper-constrained searches (analysis tolerance, not a success threshold)
+    grip_rows = []
+    start_mask = np.zeros(len(FQ), bool)
+    start_mask[starts_idx] = True
+    for tol in (0.002, 0.0051, 0.010):
+        for q in queries:
+            for subset_name, mask in (('starts', start_mask),
+                                      ('interior', interior_mask),
+                                      ('interior_yaw90', interior90_mask),
+                                      ('all_frames', np.ones(len(FQ), bool))):
+                m = mask & (np.abs(FG - q['grip']) <= tol)
+                if not m.any():
+                    grip_rows.append({'query_seed': q['seed'], 'tolerance_mm': tol * 1000,
+                                      'subset': subset_name, 'n_frames': 0})
+                    continue
+                d = np.linalg.norm(FQ[m] - q['q'], axis=1)
+                kk = np.where(m)[0][int(np.argmin(d))]
+                grip_rows.append({'query_seed': q['seed'], 'tolerance_mm': tol * 1000,
+                                  'subset': subset_name, 'n_frames': int(m.sum()),
+                                  'episode_index': int(fe[kk]),
+                                  'frame_index': int(ff[kk]),
+                                  'progress': round(float(ff[kk] / max(1, lengths[int(fe[kk])] - 1)), 3),
+                                  'dq': round(float(d.min()), 6),
+                                  'grip_obs': round(float(FG[kk]), 6),
+                                  'grip_diff_mm': round(abs(float(FG[kk]) - q['grip']) * 1000, 3),
+                                  'n_episodes': int(len(set(fe[m].tolist())))})
 
     # write
     def wcsv(path, rows):
         with path.open('w', newline='', encoding='utf-8-sig') as f:
             if not rows:
                 return
-            w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+            fields = []
+            for r in rows:
+                for k in r:
+                    if k not in fields:
+                        fields.append(k)
+            w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader(); w.writerows(rows)
 
     wcsv(OUT / 'initial_nn.csv', init_rows)
     wcsv(OUT / 'interior_nn.csv', inter_rows)
     wcsv(OUT / 'interior_nn_yaw90.csv', inter90_rows)
+    wcsv(OUT / 'gripper_constrained_nn.csv', grip_rows)
     wcsv(OUT / 'all_frame_nn.csv', all_rows)
     wcsv(OUT / 'episode_deduplicated_nn.csv', dedup)
 
@@ -273,6 +311,16 @@ def main():
             'all_min': round(float(dq_all.min()), 6),
             'start_percentile': round(float((ref_start <= dq_start.min()).mean() * 100), 1),
             'interior_percentile': round(float((ref_inter <= inter.min()).mean() * 100), 1)})
+    start_grips = [float(G[i][0]) for i in range(len(Q))]
+    k66 = int(starts_idx[66] + 39)
+    audit = {'c3_obs_grip_m': [round(q['grip'], 6) for q in queries],
+             'c3_first_action_grip_m': [round(float(q['vla_width'][0]), 6) for q in queries],
+             'b_start_grip_min_m': round(min(start_grips), 6),
+             'b_start_grip_max_m': round(max(start_grips), 6),
+             'ep66_f39_obs_grip_m': round(float(FG[k66]), 6),
+             'ep66_f39_action_grip_m': round(float(FA[k66, 7]), 6),
+             'ep66_f39_frame': int(ff[k66])}
+    summary['state_alignment_audit'] = audit
     (OUT / 'analysis_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
 
     # nearest trajectory comparison: expert next 30 vs VLA next 30

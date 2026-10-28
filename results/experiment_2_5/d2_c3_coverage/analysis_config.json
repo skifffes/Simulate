@@ -8,10 +8,20 @@
   "joint_order": ["panda_joint1", "panda_joint2", "panda_joint3", "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"],
   "units": "rad",
   "distance": "dq = L2 of 7 joint positions; object yaw modulo pi",
+  "state_alignment": {
+    "c3_first_B_observation_gripper_m": 0.04,
+    "c3_first_B_action_gripper_m": 0.01656,
+    "d2_B_start_observation_gripper_m": 0.035,
+    "d2_B_start_action_gripper_m": 0.014,
+    "ep66_f39_observation_gripper_m": 0.014,
+    "ep66_f39_action_gripper_m": 0.014,
+    "note": "old report compared C3 action target to D2 observation"
+  },
   "missing": [
     "per-frame object pose and contact labels in the LeRobot B parquet",
-    "gripper width in D2_episodes.jsonl start metadata",
+    "gripper width in D2_episodes.jsonl start metadata (parquet observation has it)",
     "C3 query states beyond 3 seeds",
+    "C3 exact 256x256 VLA input images",
     "visual embedding nearest neighbors"
   ]
 }

@@ -86,5 +86,22 @@
     "interior_episode_min_median": 0.0,
     "interior_episode_min_p95": 0.261033,
     "interior_episode_min_max": 0.430041
+  },
+  "state_alignment_audit": {
+    "c3_obs_grip_m": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "c3_first_action_grip_m": [
+      0.01656,
+      0.0164,
+      0.01695
+    ],
+    "b_start_grip_min_m": 0.035,
+    "b_start_grip_max_m": 0.035,
+    "ep66_f39_obs_grip_m": 0.014,
+    "ep66_f39_action_grip_m": 0.014,
+    "ep66_f39_frame": 39
   }
 }

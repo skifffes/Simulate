@@ -103,7 +103,7 @@ sub = [r for r in comp if r['query_seed'] == '40000000']
 line(OUT / 'fig5_nearest_subsequent.png',
      [('expert EE z (D2 ep66 f39+)', '#d62728', [int(r['t']) for r in sub], [float(r['expert_ee_z']) for r in sub]),
       ('C3 VLA EE z', '#1f77b4', [int(r['t']) for r in sub], [float(r['vla_ee_z']) for r in sub])],
-     'Figure 5: expert descends, frozen VLA ascends from the matched state', 'EE z (m)')
+     'Figure 5: expert ep66 f39 (obs grip 14 mm) vs C3 VLA (obs grip 40 mm)', 'EE z (m)')
 # Fig 6 reference bars
 ref = summary['reference']
 bars(OUT / 'fig6_reference_distribution.png', ['start NN', 'interior episode-min'],
@@ -112,3 +112,7 @@ bars(OUT / 'fig6_reference_distribution.png', ['start NN', 'interior episode-min
       ('max', '#d62728', [ref['start_max'], ref['interior_episode_min_max']])],
      'Figure 6: D2 internal reference distances (rad)', 'rad')
 print('done')
+bars(OUT / 'fig7_state_alignment.png',
+     ['C3 obs', 'C3 action', 'D2 B start obs', 'D2 B start action', 'ep66 f39 obs', 'ep66 f39 action'],
+     [('gripper (mm)', '#1f77b4', [40.0, 16.56, 35.0, 14.0, 14.0, 14.0])],
+     'Figure 7: observation vs action gripper fields (mm)', 'mm')
