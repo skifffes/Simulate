@@ -1,0 +1,181 @@
+{
+  "C3": {
+    "n_states": 10,
+    "frozen_success": 0,
+    "expert_success": 10,
+    "frozen_lift_mean": 0.0191,
+    "expert_tilt_mean": 0.01,
+    "frozen_first_links": {
+      "robot_link9": 10
+    },
+    "expert_first_links": {
+      "robot_link10": 8,
+      "robot_link9": 2
+    },
+    "frozen_palm_episodes": 1,
+    "expert_palm_episodes": 0
+  },
+  "B90": {
+    "states": 8,
+    "rollouts": 64,
+    "frozen_by_width": {
+      "14": {
+        "n": 8,
+        "success": 6
+      },
+      "25": {
+        "n": 8,
+        "success": 8
+      },
+      "35": {
+        "n": 8,
+        "success": 6
+      },
+      "40": {
+        "n": 8,
+        "success": 4
+      }
+    },
+    "expert_by_width": {
+      "14": {
+        "n": 8,
+        "success": 8
+      },
+      "25": {
+        "n": 8,
+        "success": 8
+      },
+      "35": {
+        "n": 8,
+        "success": 8
+      },
+      "40": {
+        "n": 8,
+        "success": 8
+      }
+    },
+    "frozen_success": 24,
+    "expert_success": 32,
+    "frozen_first_links": {
+      "robot_link10": 26,
+      "robot_link9": 6
+    },
+    "expert_first_links": {
+      "robot_link9": 28,
+      "robot_link10": 4
+    },
+    "frozen_palm_rollouts": 3
+  },
+  "geometry": [
+    {
+      "c3_seed": 40000000,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.171,
+      "nearest_q_ee_mm": 7.69,
+      "nearest_q_rel_mm": 1.87,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.171,
+      "nearest_rel_ee_mm": 7.69,
+      "nearest_rel_rel_mm": 1.87
+    },
+    {
+      "c3_seed": 40000001,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1728,
+      "nearest_q_ee_mm": 7.37,
+      "nearest_q_rel_mm": 1.9,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1728,
+      "nearest_rel_ee_mm": 7.37,
+      "nearest_rel_rel_mm": 1.9
+    },
+    {
+      "c3_seed": 40000002,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1719,
+      "nearest_q_ee_mm": 10.75,
+      "nearest_q_rel_mm": 1.84,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1719,
+      "nearest_rel_ee_mm": 10.75,
+      "nearest_rel_rel_mm": 1.84
+    },
+    {
+      "c3_seed": 40000003,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1861,
+      "nearest_q_ee_mm": 10.93,
+      "nearest_q_rel_mm": 1.88,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1861,
+      "nearest_rel_ee_mm": 10.93,
+      "nearest_rel_rel_mm": 1.88
+    },
+    {
+      "c3_seed": 40000004,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1761,
+      "nearest_q_ee_mm": 9.89,
+      "nearest_q_rel_mm": 1.82,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1761,
+      "nearest_rel_ee_mm": 9.89,
+      "nearest_rel_rel_mm": 1.82
+    },
+    {
+      "c3_seed": 40000005,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.172,
+      "nearest_q_ee_mm": 7.49,
+      "nearest_q_rel_mm": 1.83,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.172,
+      "nearest_rel_ee_mm": 7.49,
+      "nearest_rel_rel_mm": 1.83
+    },
+    {
+      "c3_seed": 40000006,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1822,
+      "nearest_q_ee_mm": 11.36,
+      "nearest_q_rel_mm": 1.88,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1822,
+      "nearest_rel_ee_mm": 11.36,
+      "nearest_rel_rel_mm": 1.88
+    },
+    {
+      "c3_seed": 40000007,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.187,
+      "nearest_q_ee_mm": 10.82,
+      "nearest_q_rel_mm": 1.85,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.187,
+      "nearest_rel_ee_mm": 10.82,
+      "nearest_rel_rel_mm": 1.85
+    },
+    {
+      "c3_seed": 40000008,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1805,
+      "nearest_q_ee_mm": 4.62,
+      "nearest_q_rel_mm": 1.79,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1805,
+      "nearest_rel_ee_mm": 4.62,
+      "nearest_rel_rel_mm": 1.79
+    },
+    {
+      "c3_seed": 40000009,
+      "nearest_q_state": "ep066_f039",
+      "nearest_q_dq": 0.1716,
+      "nearest_q_ee_mm": 4.74,
+      "nearest_q_rel_mm": 1.92,
+      "nearest_rel_state": "ep066_f039",
+      "nearest_rel_dq": 0.1716,
+      "nearest_rel_ee_mm": 4.74,
+      "nearest_rel_rel_mm": 1.92
+    }
+  ]
+}

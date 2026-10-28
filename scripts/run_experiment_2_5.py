@@ -133,6 +133,33 @@ class Episode25(Episode):
         self.connector['mode'] = 'clearance_first'
         self.connector['end_ee'] = [float(v) for v in self.sim.pose()[0]]
 
+    def save_c3_snapshot(self):
+        bullet = self.out / 'c3_terminal.bullet'
+        p.saveBullet(str(bullet), physicsClientId=self.sim.client)
+        q = self.sim.q().copy()
+        dq = np.array([p.getJointState(self.sim.robot, j, physicsClientId=self.sim.client)[1]
+                       for j in range(7)])
+        fingers = np.asarray(finger_widths(self.sim))
+        ee, quat = self.sim.pose()
+        pos, oquat = p.getBasePositionAndOrientation(self.block, physicsClientId=self.sim.client)
+        lv, av = p.getBaseVelocity(self.block, physicsClientId=self.sim.client)
+        meta = {
+            'source': 'C3_terminal', 'seed': self.seed, 'episode': self.ep_index,
+            'physics_step': self.physics_step,
+            'q': [float(v) for v in q], 'dq': [float(v) for v in dq],
+            'fingers': [float(v) for v in fingers], 'grip_actual': float(fingers.mean()),
+            'ee': [float(v) for v in ee], 'ee_quat': [float(v) for v in quat],
+            'obj': [float(v) for v in pos], 'obj_quat': [float(v) for v in oquat],
+            'obj_linear_velocity': [float(v) for v in lv],
+            'obj_angular_velocity': [float(v) for v in av],
+            'q_target': [float(v) for v in self.q_target],
+            'grip_target': float(self.grip_target),
+            'connector': self.connector,
+            'bullet': str(bullet),
+        }
+        (self.out / 'c3_terminal.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2),
+                                                   encoding='utf-8')
+
     def run(self):
         self.build()
         a_ok = False
@@ -148,6 +175,9 @@ class Episode25(Episode):
                     self.safe_clearance()
                 elif self.condition == 'C3':
                     self.prepush()
+                elif self.condition == 'C3_snapshot':
+                    self.prepush()
+                    self.save_c3_snapshot()
                 elif self.condition == 'C4':
                     self.retreat_home()
                 elif self.condition == 'R1':
@@ -171,7 +201,7 @@ class Episode25(Episode):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--condition', choices=['C1', 'C2', 'C3', 'C4', 'R1'], required=True)
+    ap.add_argument('--condition', choices=['C1', 'C2', 'C3', 'C3_snapshot', 'C4', 'R1'], required=True)
     ap.add_argument('--episodes', type=int, default=3)
     ap.add_argument('--seed-base', type=int, default=40000000)
     ap.add_argument('--policy', required=True)

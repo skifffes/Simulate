@@ -364,3 +364,19 @@ bash server/run_e26_A.sh
 bash server/run_e26_B.sh
 PYTHONPATH=src venv/bin/python scripts/analyze_experiment_2_6.py
 ```
+
+## 实验 2.6 补充：真实 C3 终态 B90 与 B90 夹爪扩展
+
+- 报告：[docs/experiment_2_6_b90_extension.md](docs/experiment_2_6_b90_extension.md)
+- 结果：[results/experiment_2_6/](results/experiment_2_6/)
+
+C3 真实终态（10 个独立 seed，快照恢复误差 0）：冻结 D2 **0/10**，闭环专家 **10/10**；原 C3 基线 0/3。
+
+B90 扩展：8 条 yaw90 轨迹 ×4 夹爪开度 ×2 条件 = 64 次。专家 **32/32**；冻结 **24/32**（14/25/35/40 mm = 6/8、8/8、6/8、4/8），8 个“专家成功、冻结失败”组合。
+
+```bash
+bash server/run_e26_c3_states.sh
+bash server/run_e26_c3_b.sh
+bash server/run_e26_b90_ext.sh
+PYTHONPATH=src venv/bin/python scripts/analyze_b90_extension.py
+```

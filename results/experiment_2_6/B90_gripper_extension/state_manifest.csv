@@ -1,0 +1,9 @@
+﻿state,episode,frame,group,mode,seed,q_replay_error_rad,bullet
+ep064_f039,64,39,yaw90,multi_ik,53050005,1.7373778701616024e-07,results/experiment_2_6/B90_gripper_extension/reconstructed/ep064_f039.bullet
+ep066_f039,66,39,yaw90,task_relevant,53050007,1.1687655179154676e-07,results/experiment_2_6/A_midstate_launch/reconstructed/ep066_f039.bullet
+ep074_f039,74,39,yaw90,task_relevant,53050015,1.2339912560388598e-07,results/experiment_2_6/A_midstate_launch/reconstructed/ep074_f039.bullet
+ep080_f039,80,39,yaw90,multi_ik,53050022,2.638583410679699e-07,results/experiment_2_6/A_midstate_launch/reconstructed/ep080_f039.bullet
+ep082_f039,82,39,yaw90,task_relevant,53050024,3.914753876165015e-06,results/experiment_2_6/B90_gripper_extension/reconstructed/ep082_f039.bullet
+ep088_f039,88,39,yaw90,multi_ik,53050030,1.3206471374421776e-07,results/experiment_2_6/B90_gripper_extension/reconstructed/ep088_f039.bullet
+ep098_f039,98,39,yaw90,task_relevant,53050044,1.1639441333856134e-07,results/experiment_2_6/A_midstate_launch/reconstructed/ep098_f039.bullet
+ep104_f039,104,39,yaw90,multi_ik,53050052,7.778199454506453e-08,results/experiment_2_6/B90_gripper_extension/reconstructed/ep104_f039.bullet

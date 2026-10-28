@@ -1,0 +1,19 @@
+{
+  "git_commit": "a0d6377 + b90 extension working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "c3_seeds": [40000000, 40000001, 40000002, 40000003, 40000004, 40000005, 40000006, 40000007, 40000008, 40000009],
+  "c3_snapshot": "after A90 success + original C3 prepush connector, before any B action",
+  "c3_restore": "same build_scene then p.restoreState; q/object restore error 0 in audit",
+  "b90_states": 8,
+  "b90_widths_m": [0.014, 0.025, 0.035, 0.040],
+  "b90_rollouts": 64,
+  "b90_expert": "closed-loop RecordingExpert.skill_b from the modified snapshot",
+  "success_rule": "v2.2: gap<=0.02, |dy|<=0.02, dyaw<=15deg, tilt<=12deg, speed<0.01 after 1s settle",
+  "limitations": [
+    "C3 n=10 independent seeds; B90 n=8 states, 4 widths, 1 rollout each",
+    "policy sampling is stochastic; ep66 f39 40 mm succeeded in 2.6 and failed here",
+    "no per-frame object ground truth for training data; state comes from replay",
+    "no visual embedding analysis"
+  ]
+}
