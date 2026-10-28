@@ -1,0 +1,119 @@
+{
+  "snapshot": "ep066_f039",
+  "initial_gripper_m": 0.04,
+  "n": 10,
+  "success": 3,
+  "accuracy": 0.3,
+  "rows": [
+    {
+      "run": 0,
+      "success": false,
+      "max_lift_m": 0.10241735766075713,
+      "wall_contact": false,
+      "final_gap_m": 0.05931,
+      "final_tilt_deg": 180.925,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run00/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 1,
+      "success": true,
+      "max_lift_m": 0.017185034672339356,
+      "wall_contact": true,
+      "final_gap_m": 0.01135,
+      "final_tilt_deg": 0.013,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run01/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 2,
+      "success": false,
+      "max_lift_m": 0.0030067735852736706,
+      "wall_contact": false,
+      "final_gap_m": 0.05434,
+      "final_tilt_deg": 0.006,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run02/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 3,
+      "success": false,
+      "max_lift_m": 0.021008729809108544,
+      "wall_contact": false,
+      "final_gap_m": 0.07947,
+      "final_tilt_deg": 0.003,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run03/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 4,
+      "success": true,
+      "max_lift_m": 0.017149730425059604,
+      "wall_contact": false,
+      "final_gap_m": 0.01765,
+      "final_tilt_deg": 0.02,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run04/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 5,
+      "success": false,
+      "max_lift_m": 0.03743358281741119,
+      "wall_contact": false,
+      "final_gap_m": 0.20052,
+      "final_tilt_deg": 0.003,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run05/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 6,
+      "success": true,
+      "max_lift_m": 0.004238308751445839,
+      "wall_contact": false,
+      "final_gap_m": 0.01194,
+      "final_tilt_deg": 0.003,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run06/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 7,
+      "success": false,
+      "max_lift_m": 0.026664544967381503,
+      "wall_contact": false,
+      "final_gap_m": 0.04252,
+      "final_tilt_deg": 0.005,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run07/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 8,
+      "success": false,
+      "max_lift_m": 0.008179603379047856,
+      "wall_contact": false,
+      "final_gap_m": 0.01512,
+      "final_tilt_deg": 33.891,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run08/frozen/ep066_f039_g040"
+    },
+    {
+      "run": 9,
+      "success": false,
+      "max_lift_m": 0.03291054400145402,
+      "wall_contact": false,
+      "final_gap_m": 0.04945,
+      "final_tilt_deg": 0.012,
+      "gripper_initial_m": 0.039999992045763655,
+      "object_move_mm": 8.604250446343704e-10,
+      "path": "results/experiment_2_6/ep66_f39_frozen_x10/run09/frozen/ep066_f039_g040"
+    }
+  ]
+}
