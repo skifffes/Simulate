@@ -341,3 +341,26 @@ HF_HUB_OFFLINE=1 CUDA_VISIBLE_DEVICES=0 PYTHONPATH=src venv/bin/python \
 # 五条件并行
 bash server/run_e25_formal.sh
 ```
+
+## 实验 2.6（已完成）：D2 中间状态独立启动与夹爪扩增可行性
+
+- 报告：[docs/experiment_2_6_midstate_validation.md](docs/experiment_2_6_midstate_validation.md)
+- 结果：[results/experiment_2_6/](results/experiment_2_6/)
+
+从 D2 B 数据重建 10 个中间状态（replay q 误差 ≤5.3e-6 rad），比较原始专家后缀与冻结 D2 独立启动；并在 ep66 f39 / ep22 f39 上改变夹爪初始开度（14/25/35/40 mm）。
+
+| 条件 | 专家 | 冻结 D2 |
+|---|---:|---:|
+| A 中间状态（10 个） | 9/10 | **6/10**（yaw90 5/5，yaw0 1/5） |
+| B ep66 f39（4 宽度） | 3/4 | **4/4** |
+| B ep22 f39（2 宽度） | 2/2 | **1/2** |
+
+结论：冻结 D2 能从 yaw90 中间状态直接启动（5/5），但 yaw0 仅 1/5，3 个状态“专家成功、冻结失败”，支持小规模定向 A 后缀试点；B 的宽度效应非单调，专家自己也会在 25 mm 失败，只有 1 个“专家成功、冻结失败”候选，暂不足以支持正式扩增。
+
+```bash
+# 重建 + A/B（服务器）
+PYTHONPATH=src venv/bin/python scripts/reconstruct_b_midstates.py --states 66:39,66:45,22:39
+bash server/run_e26_A.sh
+bash server/run_e26_B.sh
+PYTHONPATH=src venv/bin/python scripts/analyze_experiment_2_6.py
+```

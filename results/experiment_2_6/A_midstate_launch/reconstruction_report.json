@@ -1,0 +1,192 @@
+[
+  {
+    "episode": 66,
+    "frame": 39,
+    "seed": 53050007,
+    "group": "yaw90",
+    "mode": "task_relevant",
+    "start_q_dist": 1.4754332085342642e-08,
+    "q_error_rad": 1.1687655179154676e-07,
+    "gripper_error_m": 6.742191076269943e-10,
+    "gripper_obs_m": 0.014000010885239816,
+    "obj_xy": [
+      0.5462799977219756,
+      0.1761099838797736
+    ],
+    "obj_z": 0.019989987499654045,
+    "obj_yaw_rad": 1.5192186433041104,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep066_f039.bullet",
+    "length": 119
+  },
+  {
+    "episode": 66,
+    "frame": 45,
+    "seed": 53050007,
+    "group": "yaw90",
+    "mode": "task_relevant",
+    "start_q_dist": 1.4754332085342642e-08,
+    "q_error_rad": 1.2476765495777368e-07,
+    "gripper_error_m": 2.2975255725699029e-10,
+    "gripper_obs_m": 0.01399999414262821,
+    "obj_xy": [
+      0.5462799977227749,
+      0.17610998388450025
+    ],
+    "obj_z": 0.019989987503573864,
+    "obj_yaw_rad": 1.5192186433041104,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep066_f045.bullet",
+    "length": 119
+  },
+  {
+    "episode": 22,
+    "frame": 30,
+    "seed": 52000049,
+    "group": "yaw0",
+    "mode": "task_relevant",
+    "start_q_dist": 5.16597321066621e-08,
+    "q_error_rad": 4.9979879711458395e-08,
+    "gripper_error_m": 6.549947736966821e-10,
+    "gripper_obs_m": 0.014000009934692907,
+    "obj_xy": [
+      0.5517399996480776,
+      0.18363000003673563
+    ],
+    "obj_z": 0.019989965089010592,
+    "obj_yaw_rad": 0.019801300779278674,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep022_f030.bullet",
+    "length": 129
+  },
+  {
+    "episode": 22,
+    "frame": 39,
+    "seed": 52000049,
+    "group": "yaw0",
+    "mode": "task_relevant",
+    "start_q_dist": 5.16597321066621e-08,
+    "q_error_rad": 8.592415451309599e-08,
+    "gripper_error_m": 6.599825443098783e-10,
+    "gripper_obs_m": 0.014000010405341965,
+    "obj_xy": [
+      0.5517399995890787,
+      0.18363000004289304
+    ],
+    "obj_z": 0.019989926131797352,
+    "obj_yaw_rad": 0.019801300779278674,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep022_f039.bullet",
+    "length": 129
+  },
+  {
+    "episode": 12,
+    "frame": 39,
+    "seed": 52000026,
+    "group": "yaw0",
+    "mode": "multi_ik",
+    "start_q_dist": 9.457831815816529e-08,
+    "q_error_rad": 1.4103574349449787e-07,
+    "gripper_error_m": 5.311983526656849e-10,
+    "gripper_obs_m": 0.01400001074221906,
+    "obj_xy": [
+      0.5437599641393728,
+      0.18010000522661643
+    ],
+    "obj_z": 0.01998992919376197,
+    "obj_yaw_rad": -0.0603116590946187,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep012_f039.bullet",
+    "length": 130
+  },
+  {
+    "episode": 38,
+    "frame": 39,
+    "seed": 52000074,
+    "group": "yaw0",
+    "mode": "task_relevant",
+    "start_q_dist": 1.4981777741622652e-07,
+    "q_error_rad": 2.1280133865885342e-07,
+    "gripper_error_m": 4.417522250776962e-10,
+    "gripper_obs_m": 0.014000010187111646,
+    "obj_xy": [
+      0.5491599834605231,
+      0.18604000144110694
+    ],
+    "obj_z": 0.019989927444066212,
+    "obj_yaw_rad": 0.04917960273721147,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep038_f039.bullet",
+    "length": 129
+  },
+  {
+    "episode": 74,
+    "frame": 39,
+    "seed": 53050015,
+    "group": "yaw90",
+    "mode": "task_relevant",
+    "start_q_dist": 1.2843160916961057e-07,
+    "q_error_rad": 1.2339912560388598e-07,
+    "gripper_error_m": 7.070541097053962e-10,
+    "gripper_obs_m": 0.01399984607397911,
+    "obj_xy": [
+      0.5623151693453536,
+      0.16875844228223016
+    ],
+    "obj_z": 0.02011034040886279,
+    "obj_yaw_rad": 1.5359538245218962,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep074_f039.bullet",
+    "length": 97
+  },
+  {
+    "episode": 98,
+    "frame": 39,
+    "seed": 53050044,
+    "group": "yaw90",
+    "mode": "task_relevant",
+    "start_q_dist": 1.4270320435907514e-07,
+    "q_error_rad": 1.1639441333856134e-07,
+    "gripper_error_m": 1.942664064336075e-09,
+    "gripper_obs_m": 0.013999688519090094,
+    "obj_xy": [
+      0.5625739840346285,
+      0.18753294769470677
+    ],
+    "obj_z": 0.02007444105862617,
+    "obj_yaw_rad": 1.4805299580267468,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep098_f039.bullet",
+    "length": 98
+  },
+  {
+    "episode": 46,
+    "frame": 39,
+    "seed": 52000097,
+    "group": "yaw0",
+    "mode": "task_relevant",
+    "start_q_dist": 1.084739633584889e-07,
+    "q_error_rad": 5.205963087937394e-06,
+    "gripper_error_m": 1.0032980800843416e-06,
+    "gripper_obs_m": 0.013989750093883393,
+    "obj_xy": [
+      0.5653030581010978,
+      0.1715059371434288
+    ],
+    "obj_z": 0.02216288255961148,
+    "obj_yaw_rad": -0.04647741368044829,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep046_f039.bullet",
+    "length": 105
+  },
+  {
+    "episode": 80,
+    "frame": 39,
+    "seed": 53050022,
+    "group": "yaw90",
+    "mode": "multi_ik",
+    "start_q_dist": 1.2807856313244884e-07,
+    "q_error_rad": 2.638583410679699e-07,
+    "gripper_error_m": 3.065302779815121e-07,
+    "gripper_obs_m": 0.013999516484905229,
+    "obj_xy": [
+      0.5671175069722311,
+      0.17192826430118516
+    ],
+    "obj_z": 0.020077285848505523,
+    "obj_yaw_rad": 1.530885329020924,
+    "bullet": "results/experiment_2_6/A_midstate_launch/reconstructed/ep080_f039.bullet",
+    "length": 100
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "source": "results/experiment_2_5/G1/C3/seed_40000000..40000002",
+  "n": 3,
+  "success": 0,
+  "max_lift_m": [0.0083, 0.0, 0.0],
+  "gripper_observation_m": 0.04,
+  "note": "C3 frozen D2 baseline from experiment 2.5; no expert continuation snapshot in 2.6"
+}
