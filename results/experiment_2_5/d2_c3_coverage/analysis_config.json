@@ -1,0 +1,17 @@
+{
+  "git_commit": "4bee95a",
+  "d2_checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "d2_checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "d2_dataset_identity": "data/lerobot_panda_e23_D2 (server; not reachable at analysis time)",
+  "d2_start_metadata": "results/experiment_2_3/data/D2_episodes.jsonl (120 successful B collection episodes)",
+  "c3_query_source": "results/experiment_2_5/policy_trace.jsonl + physics_trace.csv (C3 seed 40000000, first skill=B tick)",
+  "joint_order": ["panda_joint1", "panda_joint2", "panda_joint3", "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"],
+  "units": "rad",
+  "distance": "dq = L2 of 7 joint positions; object yaw compared modulo pi (rectangular block symmetry)",
+  "missing": [
+    "D2 full-frame observations/actions (interior/all-frame NN) because server dataset is unreachable",
+    "C3 seeds 40000001 and 40000002 query traces (server unreachable)",
+    "Gripper width in D2_episodes.jsonl (start_q/start_ee only)",
+    "D2 episode task text labels (only group yaw0/yaw90 and mode are stored)"
+  ]
+}

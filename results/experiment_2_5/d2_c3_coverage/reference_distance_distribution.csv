@@ -1,0 +1,13 @@
+﻿subset,stat,value_rad
+all_120,min,0.0
+all_120,p25,0.0
+all_120,median,0.0
+all_120,p75,0.189963
+all_120,p95,0.292112
+all_120,max,0.430041
+yaw90_60,min,0.0
+yaw90_60,p25,0.0
+yaw90_60,median,0.053072
+yaw90_60,p75,0.211993
+yaw90_60,p95,0.429585
+yaw90_60,max,0.485854

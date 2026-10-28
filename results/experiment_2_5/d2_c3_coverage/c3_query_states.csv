@@ -1,0 +1,2 @@
+﻿seed,policy_step,physics_step,time_s,q1..q7,dq1..dq7,grip_actual,ee_x,ee_y,ee_z,ee_qx,ee_qy,ee_qz,ee_qw,obj_x,obj_y,obj_z,obj_yaw_deg,obj_gap_m,task,status
+40000000,153,1991,8.29583,0.70472,0.33588,-0.28329,-2.43388,0.24138,2.74713,0.99882,,0.04,0.44975,0.18298,0.06957,1.0,-0.0002,0.00012,9e-05,0.54794,0.18289,0.01999,-89.807,0.18199,push the orange block along the positive X direction to the wall,available
