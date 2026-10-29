@@ -1,0 +1,23 @@
+{
+  "git_commit": "ca743ef + experiment 2.7 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "task": "push the orange block along the positive X direction to the wall",
+  "action_chunk_length": 50,
+  "seed_count": 20,
+  "observation_widths_m": [0.014, 0.020, 0.025, 0.030, 0.035, 0.040],
+  "image_sets": ["real40", "real14"],
+  "cross_replay": {
+    "P14_source": "C3_seed40000000_frozen_14mm_x10/run00 (closed-loop success)",
+    "P40_source": "C3_direct_B90/frozen/seed_40000000 (closed-loop failure)",
+    "gripper_protocol": "command single-finger target 0.014 m from tick 0 in all four conditions",
+    "type": "open-loop action replay diagnostic"
+  },
+  "training_data": "data/_shards_e23/B_D2 (120 episodes, 14653 frames)",
+  "limitations": [
+    "counterfactual image/state combinations are diagnostic, not real sensor inputs",
+    "cross replay is open-loop, not autonomous VLA success",
+    "training data has no per-frame object pose; phase is estimated from progress/EE height",
+    "single C3 snapshot for counterfactual and source trajectories"
+  ]
+}

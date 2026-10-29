@@ -1,0 +1,100 @@
+{
+  "n_frames": 14653,
+  "n_episodes": 120,
+  "grip_min": 0.011897926218807697,
+  "grip_max": 0.03500015288591385,
+  "grip_ge_30_frames": 240,
+  "grip_ge_35_frames": 100,
+  "nearest_q": 0.11836688570751708,
+  "nearest_episode": 22,
+  "nearest_grip": 0.01400000974535942,
+  "coverage": [
+    {
+      "radius_rad": 0.1,
+      "n_frames": 0,
+      "episodes": 0,
+      "grip_min": null,
+      "grip_max": null,
+      "grip_ge_30": 0,
+      "grip_ge_35": 0
+    },
+    {
+      "radius_rad": 0.2,
+      "n_frames": 37,
+      "episodes": 6,
+      "grip_min": 0.014000008348375559,
+      "grip_max": 0.01400001160800457,
+      "grip_ge_30": 0,
+      "grip_ge_35": 0
+    },
+    {
+      "radius_rad": 0.3,
+      "n_frames": 97,
+      "episodes": 9,
+      "grip_min": 0.01399998739361763,
+      "grip_max": 0.014000013004988432,
+      "grip_ge_30": 0,
+      "grip_ge_35": 0
+    },
+    {
+      "radius_rad": 0.5,
+      "n_frames": 323,
+      "episodes": 10,
+      "grip_min": 0.01391684403643012,
+      "grip_max": 0.01403739582747221,
+      "grip_ge_30": 0,
+      "grip_ge_35": 0
+    },
+    {
+      "radius_rad": 0.75,
+      "n_frames": 584,
+      "episodes": 14,
+      "grip_min": 0.012745045125484467,
+      "grip_max": 0.014100235886871815,
+      "grip_ge_30": 0,
+      "grip_ge_35": 0
+    }
+  ],
+  "bins": [
+    {
+      "bin_mm": "<16",
+      "n": 13800,
+      "episodes": 120,
+      "grip_mean": 0.013993590827322686,
+      "ee_z_mean": 0.08451737767584838,
+      "ee_z_std": 0.12675955647806592,
+      "progress_mean": 0.528849252177525,
+      "q_to_c3_mean": 1.1297935820456757
+    },
+    {
+      "bin_mm": "16-25",
+      "n": 373,
+      "episodes": 120,
+      "grip_mean": 0.01993208667812694,
+      "ee_z_mean": 0.4256143671867435,
+      "ee_z_std": 0.15785330729382482,
+      "progress_mean": 0.06008056548611235,
+      "q_to_c3_mean": 1.6171602383032027
+    },
+    {
+      "bin_mm": "25-35",
+      "n": 380,
+      "episodes": 120,
+      "grip_mean": 0.029315822576417735,
+      "ee_z_mean": 0.43467848904823003,
+      "ee_z_std": 0.14413127585987565,
+      "progress_mean": 0.015711234273251155,
+      "q_to_c3_mean": 1.6501436571174126
+    },
+    {
+      "bin_mm": ">=35",
+      "n": 100,
+      "episodes": 100,
+      "grip_mean": 0.035000017415732144,
+      "ee_z_mean": 0.4624153491854668,
+      "ee_z_std": 0.11846336035548241,
+      "progress_mean": 0.0,
+      "q_to_c3_mean": 1.6124407882280898
+    }
+  ]
+}

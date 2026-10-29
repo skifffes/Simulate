@@ -1,0 +1,12 @@
+{
+  "group": "G2_b_home_yaw0",
+  "seed": 40000000,
+  "a_success": true,
+  "success": true,
+  "max_lift_m": 0.006081725527989124,
+  "wall_contact": false,
+  "both_fingers": true,
+  "table_loss": false,
+  "first_lift": null,
+  "first_success_tick": null
+}

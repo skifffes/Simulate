@@ -1,0 +1,11 @@
+group,condition,success,path,description
+C3,C3_14mm,True,/scratch/lijh/simulate_vla/results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run00/frozen/seed_40000000_g014/side.mp4,side view
+C3,C3_40mm,False,/scratch/lijh/simulate_vla/results/experiment_2_6/C3_direct_B90/frozen/seed_40000000/side.mp4,side view
+cross_replay,P14_g014,True,/scratch/lijh/simulate_vla/results/experiment_2_7/crossed_action_replay/P14_g014/side.mp4,side view
+cross_replay,P14_g040,True,/scratch/lijh/simulate_vla/results/experiment_2_7/crossed_action_replay/P14_g040/side.mp4,side view
+cross_replay,P40_g014,False,/scratch/lijh/simulate_vla/results/experiment_2_7/crossed_action_replay/P40_g014/side.mp4,side view
+cross_replay,P40_g040,False,/scratch/lijh/simulate_vla/results/experiment_2_7/crossed_action_replay/P40_g040/side.mp4,side view
+comparison,C3_14mm_vs_40mm,,/scratch/lijh/simulate_vla/results/experiment_2_7/videos/C3_14mm_vs_40mm.mp4,side-by-side
+comparison,C3_first_contact_comparison,,/scratch/lijh/simulate_vla/results/experiment_2_7/videos/C3_first_contact_comparison.mp4,side-by-side
+comparison,cross_replay_P14_vs_P40,,/scratch/lijh/simulate_vla/results/experiment_2_7/videos/cross_replay_P14_vs_P40.mp4,side-by-side
+comparison,cross_replay_gripper_comparison,,/scratch/lijh/simulate_vla/results/experiment_2_7/videos/cross_replay_gripper_comparison.mp4,side-by-side

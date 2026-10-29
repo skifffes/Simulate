@@ -1,0 +1,5 @@
+﻿condition,success,max_lift_m,wall_contact,final_gap_m,final_dy_m,final_tilt_deg,first_contact_link,first_contact_time,normal_x,normal_y,normal_z,ee_z_at_contact,grip_at_contact
+P14_g014,True,0.006081725527989124,False,0.00916,0.01073,0.017,robot_link10,0.7375,0.99144,-0.12582,-0.03484,0.01992,0.014
+P14_g040,True,0.005945437296779245,False,0.01283,0.0142,0.007,robot_link10,0.7375,0.97998,-0.19676,-0.03041,0.01992,0.0142
+P40_g014,False,0.03616865553034837,False,0.17051,-0.00835,0.006,robot_link9,0.64583,0.05158,0.00017,-0.99867,0.04775,0.014
+P40_g040,False,0.006468393405552851,False,0.17173,0.01015,0.007,robot_link9,0.64583,0.05158,0.00017,-0.99867,0.04775,0.01604

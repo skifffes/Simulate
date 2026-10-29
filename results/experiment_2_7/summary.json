@@ -1,0 +1,38 @@
+{
+  "exp1_observation_intervention": {
+    "n_seeds": 20,
+    "sets": {
+      "real40": {
+        "joint_l2_vs_14mm": {"0.020": 0.0174, "0.025": 0.0388, "0.030": 0.0705, "0.035": 0.1051, "0.040": 0.1412},
+        "dz_first10_m": {"0.014": -0.05310, "0.020": -0.05169, "0.025": -0.05075, "0.030": -0.04817, "0.035": -0.04160, "0.040": -0.03476},
+        "ee_z_t10_m": {"0.014": 0.01947, "0.020": 0.02183, "0.025": 0.02393, "0.030": 0.02707, "0.035": 0.03643, "0.040": 0.05151}
+      },
+      "real14": {
+        "joint_l2_vs_14mm": {"0.020": 0.0180, "0.025": 0.0383, "0.030": 0.0701, "0.035": 0.1041, "0.040": 0.1401},
+        "dz_first10_m": {"0.014": -0.05302, "0.020": -0.05074, "0.025": -0.05035, "0.030": -0.04801, "0.035": -0.04177, "0.040": -0.03478}
+      }
+    },
+    "joint_l2_std_at_40mm": 0.00437,
+    "dz_std_first10_at_40mm": 0.00783
+  },
+  "exp2_cross_replay": {
+    "P14_g014": {"success": true, "max_lift_m": 0.00608, "gap_m": 0.00916, "dy_m": 0.01073, "first_link": "robot_link10", "first_time_s": 0.7375},
+    "P14_g040": {"success": true, "max_lift_m": 0.00595, "gap_m": 0.01283, "dy_m": 0.01420, "first_link": "robot_link10", "first_time_s": 0.7375},
+    "P40_g014": {"success": false, "max_lift_m": 0.03617, "gap_m": 0.17051, "dy_m": -0.00835, "first_link": "robot_link9", "first_time_s": 0.6458},
+    "P40_g040": {"success": false, "max_lift_m": 0.00647, "gap_m": 0.17173, "dy_m": 0.01015, "first_link": "robot_link9", "first_time_s": 0.6458}
+  },
+  "c3_actual": {
+    "14mm": {"first_link": "robot_link10", "first_time_s": 0.746, "ee_z_at_contact": 0.0199, "normal": [0.95, -0.32, -0.02], "final_tilt_deg": 0.01},
+    "40mm": {"first_link": "robot_link9", "first_time_s": 0.613, "ee_z_at_contact": 0.0478, "normal": [0.05, 0.0, -1.0], "final_tilt_deg": 78.1}
+  },
+  "exp3_training": {
+    "n_frames": 14653,
+    "n_episodes": 120,
+    "grip_max_m": 0.0350,
+    "frames_grip_ge_30mm": 240,
+    "frames_grip_ge_35mm": 100,
+    "frames_grip_40mm": 0,
+    "near_c3_q_0.75": {"frames": 584, "episodes": 14, "grip_min_m": 0.01275, "grip_max_m": 0.01410, "grip_ge_30mm": 0},
+    "near_c3_q_0.30": {"frames": 323, "episodes": 10, "grip_max_m": 0.01404, "grip_ge_30mm": 0}
+  }
+}

@@ -380,3 +380,19 @@ bash server/run_e26_c3_b.sh
 bash server/run_e26_b90_ext.sh
 PYTHONPATH=src venv/bin/python scripts/analyze_b90_extension.py
 ```
+
+## 实验 2.7：夹爪观测 → 动作 → 接触的因果诊断
+
+- 报告：[docs/experiment_2_7_gripper_causality.md](docs/experiment_2_7_gripper_causality.md)
+- 结果：[results/experiment_2_7/](results/experiment_2_7/)
+
+反事实推理固定 C3 图像/七关节/20 个采样种子，仅改夹爪观测 14→40 mm：七关节动作 L2 **0→0.141 rad**，预测前 10 步末端下降 **−5.31→−3.48 cm**，单调且远超随机波动。交叉重放：P14 机械臂路径 + 14/40 mm 都成功；P40 路径 + 14/40 mm 都失败（顶部 link9，法向≈−Z，gap≈17 cm）。D2 B90 训练夹爪最大 35 mm，**40 mm 帧 0**；C3 附近 q≤0.75 的 584 帧全部为 12.75–14.10 mm。
+
+```bash
+PYTHONPATH=src venv/bin/python scripts/exp27_observation_intervention.py \
+  --snapshot results/experiment_2_6/C3_direct_B90/states/G1/C3_snapshot/seed_40000000/c3_terminal.json \
+  --policy outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model \
+  --out results/experiment_2_7/observation_intervention --seeds 20
+bash server/run_cross.sh
+PYTHONPATH=src venv/bin/python scripts/exp27_training_analysis.py
+```
