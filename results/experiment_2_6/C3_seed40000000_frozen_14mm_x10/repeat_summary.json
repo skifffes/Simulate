@@ -1,0 +1,119 @@
+{
+  "c3_state": "seed_40000000",
+  "initial_gripper_m": 0.014,
+  "n": 10,
+  "success": 10,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "run": 0,
+      "success": true,
+      "max_lift_m": 0.00285096332171891,
+      "wall_contact": false,
+      "final_gap_m": 0.01389,
+      "final_tilt_deg": 0.011,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run00/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 1,
+      "success": true,
+      "max_lift_m": 0.0024494117438959677,
+      "wall_contact": false,
+      "final_gap_m": 0.01599,
+      "final_tilt_deg": 0.007,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run01/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 2,
+      "success": true,
+      "max_lift_m": 0.0045936632097194376,
+      "wall_contact": false,
+      "final_gap_m": 0.00246,
+      "final_tilt_deg": 0.006,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run02/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 3,
+      "success": true,
+      "max_lift_m": 0.0022008481566483905,
+      "wall_contact": false,
+      "final_gap_m": 0.01777,
+      "final_tilt_deg": 0.962,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run03/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 4,
+      "success": true,
+      "max_lift_m": 0.002520953011933686,
+      "wall_contact": false,
+      "final_gap_m": 0.00779,
+      "final_tilt_deg": 0.41,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run04/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 5,
+      "success": true,
+      "max_lift_m": 0.0012084596102826459,
+      "wall_contact": false,
+      "final_gap_m": 0.01508,
+      "final_tilt_deg": 0.009,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run05/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 6,
+      "success": true,
+      "max_lift_m": 0.003227494938919249,
+      "wall_contact": false,
+      "final_gap_m": 0.01994,
+      "final_tilt_deg": 5.054,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run06/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 7,
+      "success": true,
+      "max_lift_m": 0.0034656252966275697,
+      "wall_contact": false,
+      "final_gap_m": 0.01347,
+      "final_tilt_deg": 0.008,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run07/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 8,
+      "success": true,
+      "max_lift_m": 0.002778572747613974,
+      "wall_contact": false,
+      "final_gap_m": 0.01789,
+      "final_tilt_deg": 0.007,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run08/frozen/seed_40000000_g014"
+    },
+    {
+      "run": 9,
+      "success": true,
+      "max_lift_m": 0.004119254872736296,
+      "wall_contact": false,
+      "final_gap_m": 0.01967,
+      "final_tilt_deg": 0.015,
+      "gripper_initial_m": 0.01400000722337141,
+      "object_move_mm": 1.742567819133027e-11,
+      "path": "results/experiment_2_6/C3_seed40000000_frozen_14mm_x10/run09/frozen/seed_40000000_g014"
+    }
+  ]
+}
