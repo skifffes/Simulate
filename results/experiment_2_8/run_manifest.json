@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-29T18:30:00+08:00",
+  "git_commit": "0e85c29 + experiment_2.8 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "dataset": "data/_shards_e23/B_D2 (60 yaw90 episodes, 7016 frames)",
+  "stages": {
+    "state_preparation": {"status": "completed", "n_states": 32, "n_episodes": 8},
+    "policy_sensitivity": {"status": "completed", "seeds": 10, "widths": 6, "inferences": 1920,
+                            "predictions": "results/experiment_2_8/data/policy_predictions.csv",
+                            "sensitivity": "results/experiment_2_8/data/policy_sensitivity.csv"},
+    "training_dynamics": {"status": "completed", "frames": 7016, "episodes": 60},
+    "local_coverage": {"status": "completed", "states": 32, "radii": 4},
+    "joint_analysis": {"status": "completed"},
+    "figures": {"status": "completed", "n": 7},
+    "report": {"status": "completed"}
+  },
+  "failed_or_skipped": [],
+  "limitations": [
+    "observation-only counterfactual; images unchanged",
+    "10 policy seeds, not 20",
+    "32 states from 8 episodes, not full 60",
+    "progress-stratified stages, not contact ground truth",
+    "40mm training coverage is zero"
+  ]
+}

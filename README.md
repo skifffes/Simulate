@@ -396,3 +396,20 @@ PYTHONPATH=src venv/bin/python scripts/exp27_observation_intervention.py \
 bash server/run_cross.sh
 PYTHONPATH=src venv/bin/python scripts/exp27_training_analysis.py
 ```
+
+## 实验 2.8：跨中间状态夹爪—机械臂耦合
+
+- 报告：[results/experiment_2_8/report.md](results/experiment_2_8/report.md)
+- 结果：[results/experiment_2_8/](results/experiment_2_8/)、镜像 [outputs/exp28_gripper_arm_coupling/](outputs/exp28_gripper_arm_coupling/)
+
+8 条 yaw90 B90 轨迹 × 4 个中间帧 = 32 个状态；每状态 6 种夹爪观测 ×10 个成对种子。14→40 mm 在 step10 使 **32/32** 状态预测更高，平均 **+20.95 mm**（+3.28～+67.91 mm），状态内种子 std 1.56 mm；前 20 步全部为正，chunk 末端 22/32。D2 yaw90 训练夹爪最大 35 mm、40 mm 帧 0；q≤0.30 邻域只有 5/32 状态有 14 mm+35 mm 共同支持。
+
+```bash
+venv/bin/python scripts/reconstruct_b_midstates.py --states 66:10,66:25,... --out results/experiment_2_8/states/reconstructed
+venv/bin/python scripts/exp28_prepare_states.py
+bash server/run_e28_policy.sh
+venv/bin/python scripts/exp28_training_dynamics.py
+venv/bin/python scripts/exp28_local_coverage.py
+venv/bin/python scripts/exp28_joint_analysis.py
+python scripts/exp28_visualize.py
+```

@@ -1,0 +1,8 @@
+{
+  "n_frames": 7016,
+  "n_episodes": 60,
+  "pearson_grip_vz": 0.10987111205960014,
+  "spearman_grip_vz": -0.0647139318807098,
+  "grip_max": 35.00005230307579,
+  "grip_40_frames": 0
+}

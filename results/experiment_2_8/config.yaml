@@ -1,0 +1,16 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+git_commit: 0e85c29 + experiment_2.8 working tree
+dataset: data/_shards_e23/B_D2
+task: "push the orange block along the positive X direction to the wall"
+yaw: yaw90
+state_selection:
+  episodes: [66, 74, 98, 80, 88, 104, 64, 82]
+  frames: [10, 25, 39, 55]
+  n_states: 32
+gripper_widths_mm: [14, 20, 25, 30, 35, 40]
+seeds: 10
+action_chunk: 50
+neighborhood_radii: [0.15, 0.30, 0.50, 0.75]
+fk: "PyBullet Panda link11, world +Z up"
+output: results/experiment_2_8
