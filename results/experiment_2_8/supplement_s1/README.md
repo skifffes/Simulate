@@ -30,7 +30,8 @@
 | `data/conditional_target_statistics.csv` | progress×grip 条件统计 |
 | `data/local_target_coverage.csv` | 32 状态×4 邻域 |
 | `data/model_expert_comparison.csv` | 32 状态模型敏感性 vs 专家局部统计 |
-| `figures/fig01–fig08` | 图 |
+| `data/d2_start_distribution.csv` | 120 条 D2 B 起点的 q 距离、EE、物体几何 |
+| `figures/fig01–fig09` | 图（fig09 为 D2 起点分布） |
 
 ## 代码
 
