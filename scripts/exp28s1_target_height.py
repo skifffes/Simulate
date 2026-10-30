@@ -101,17 +101,28 @@ def main():
     with (DATA / 'expert_chunk_targets.csv').open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=list(chunk[0].keys())); w.writeheader(); w.writerows(chunk)
 
-    # grip-bin stats
+    # grip-bin stats. Use numeric tolerance so 34.99998 and 35.00002
+    # (the same physical initial opening) are not split across bins.
     G = np.array([r['gripper_obs_mm'] for r in dyn])
-    bins = [(13, 15.5, '14mm'), (15.5, 25, '16-25mm'), (25, 35, '25-35mm'), (35, 40.5, '35-40mm')]
+    bins = [(13.0, 15.5, '14mm'), (15.5, 24.5, '16-25mm'),
+            (24.5, 34.5, '25-35mm'), (34.5, 40.5, '35-40mm')]
+    chunk_map = {(int(c['episode_id']), int(c['frame_id']), int(c['horizon'])): c
+                 for c in chunk}
     stat_rows = []
     for lo, hi, name in bins:
         m = (G >= lo) & (G < hi)
         if not m.any():
             continue
-        row = {'grip_bin': name, 'n_frames': int(m.sum()), 'n_episodes': len(set(int(dyn[i]['episode_id']) for i in np.where(m)[0]))}
+        row = {'grip_bin': name, 'n_frames': int(m.sum()),
+               'n_episodes': len(set(int(dyn[i]['episode_id']) for i in np.where(m)[0]))}
         for k in HORIZONS:
-            vals = np.array([float(chunk[i]['dz_target_mm']) for i in np.where(m)[0] if int(chunk[i]['horizon']) == k and float(chunk[i]['valid']) == 1])
+            vals = []
+            for i in np.where(m)[0]:
+                r = dyn[i]
+                c = chunk_map[(int(r['episode_id']), int(r['frame_id']), k)]
+                if int(c['valid']) == 1:
+                    vals.append(float(c['dz_target_mm']))
+            vals = np.asarray(vals)
             row[f'dz_target_h{k}_mean_mm'] = float(vals.mean()) if len(vals) else ''
             row[f'dz_target_h{k}_std_mm'] = float(vals.std()) if len(vals) else ''
         vals = np.array([r['dz_target_mm'] for r in dyn])[m]
@@ -162,22 +173,28 @@ def main():
     with (DATA / 'timing_summary.csv').open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=list(timing[0].keys())); w.writeheader(); w.writerows(timing)
 
-    # conditional stats by progress x grip bin
+    # conditional stats by progress x grip bin. A row is estimable only if
+    # its own group and at least one other group in the same progress bin
+    # both have >=50 frames from >=10 independent episodes.
     cond = []
     for plo, phi in ((0, .15), (.15, .3), (.3, .5), (.5, 1.01)):
         pm = [r for r in dyn if plo <= r['progress'] < phi]
-        avail = []
+        rows_here = []
         for lo, hi, name in bins:
             sub = [r for r in pm if lo <= r['gripper_obs_mm'] < hi]
             if not sub:
                 continue
-            avail.append(name)
-            cond.append({'progress_bin': f'{plo:.2f}-{min(phi,1):.2f}', 'grip_bin': name,
-                         'n_frames': len(sub), 'n_episodes': len(set(r['episode_id'] for r in sub)),
-                         'dz_target_mean_mm': float(np.mean([r['dz_target_mm'] for r in sub])),
-                         'actual_vz_mean_mm_s': float(np.mean([r['vz_actual_mm_s'] for r in sub])),
-                         'target_descent_frac': float(np.mean([r['dz_target_mm'] < -1 for r in sub])),
-                         'estimable': bool(len(sub) >= 10 and len(avail) >= 2)})
+            rows_here.append({'progress_bin': f'{plo:.2f}-{min(phi,1):.2f}', 'grip_bin': name,
+                              'n_frames': len(sub), 'n_episodes': len(set(r['episode_id'] for r in sub)),
+                              'dz_target_mean_mm': float(np.mean([r['dz_target_mm'] for r in sub])),
+                              'actual_vz_mean_mm_s': float(np.mean([r['vz_actual_mm_s'] for r in sub])),
+                              'target_descent_frac': float(np.mean([r['dz_target_mm'] < -1 for r in sub]))})
+        qualifying = [r for r in rows_here if r['n_frames'] >= 50 and r['n_episodes'] >= 10]
+        for r in rows_here:
+            r['n_qualifying_grip_groups'] = len(qualifying)
+            r['estimable'] = bool(len(qualifying) >= 2 and r['n_frames'] >= 50
+                                  and r['n_episodes'] >= 10)
+            cond.append(r)
     with (DATA / 'conditional_target_statistics.csv').open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=list(cond[0].keys())); w.writeheader(); w.writerows(cond)
 
