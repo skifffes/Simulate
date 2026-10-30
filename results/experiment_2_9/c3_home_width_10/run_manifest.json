@@ -1,0 +1,10 @@
+{
+  "created": "2026-10-30T16:40:00+08:00",
+  "snapshot": "C3 object pose seed40000000 + HOME robot",
+  "n_runs": 20,
+  "widths_mm": [14, 40],
+  "success": {"14": 8, "40": 10},
+  "accuracy": {"14": 0.8, "40": 1.0},
+  "object_init_move_mm": 0.000282,
+  "limitations": ["n=10 per width", "single C3 object seed", "no wall contact required by v2.2"]
+}

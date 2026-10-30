@@ -1,0 +1,27 @@
+{
+  "snapshot": "C3 object pose + HOME robot",
+  "per_width": [
+    {
+      "width_mm": 14,
+      "n": 10,
+      "success": 8,
+      "accuracy": 0.8,
+      "max_lift_mean_mm": 5.9946489747241705,
+      "max_lift_max_mm": 20.875207411091118,
+      "final_gap_mean_mm": 15.623999999999999,
+      "final_tilt_max_deg": 36.843,
+      "wall_contact": 0
+    },
+    {
+      "width_mm": 40,
+      "n": 10,
+      "success": 10,
+      "accuracy": 1.0,
+      "max_lift_mean_mm": 6.747452830945844,
+      "max_lift_max_mm": 18.90601801515845,
+      "final_gap_mean_mm": 14.276000000000002,
+      "final_tilt_max_deg": 7.686,
+      "wall_contact": 0
+    }
+  ]
+}
