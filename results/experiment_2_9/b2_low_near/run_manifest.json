@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-30T16:30:00+08:00",
+  "git_commit": "2db4bfb + B2 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "stages": {
+    "original_low00_recheck": {"status": "completed"},
+    "state_generation": {"status": "completed", "n_states": 7},
+    "state_validity": {"status": "completed", "configs": 21, "valid": 21},
+    "policy_predictions": {"status": "completed", "conditions": 3, "seeds": 10},
+    "rollouts": {"status": "completed", "n": 69, "D2": 30, "E1": 30, "E0": 9},
+    "analysis": {"status": "completed"},
+    "figures": {"status": "completed", "n": 9},
+    "videos": {"status": "completed", "n": 3},
+    "report": {"status": "completed"},
+    "targeted_ft": {"status": "not_executed", "reason": "No-Go"}
+  },
+  "failed_or_skipped": [],
+  "limitations": [
+    "5 states entered physical rollouts; 2 prediction-only",
+    "2 D2 repeats per state/width",
+    "exact policy query timestamps not logged",
+    "E1 low branch heuristic and unstable"
+  ]
+}

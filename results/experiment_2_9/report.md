@@ -57,3 +57,14 @@ D2 按宽度：14 mm **6/8**、35 mm **4/8**、40 mm **7/8**。
   - `scripts/exp29_analyze_b.py`
   - `scripts/exp29_visualize_a.py`
   - `scripts/exp29_visualize_b.py`
+
+## B2 补充：真实 Low-Near（结果摘要）
+
+完整报告：[b2_low_near/report.md](b2_low_near/report.md)
+
+- 原 `low_00` 的 14/35 **并非轨迹接近**：z@0.5s 114.7 vs160.5 mm；z@1.0s 18.4 vs70.3 mm；接触高度 17.5 vs16.3 mm，但接触时间 1.18 vs1.68 s，路径 0.209 vs0.259 m。差异在接近段持续，仅接触高度附近收敛。
+- 新 3 个真正 Low-Near（EE z 0.070–0.085，后方0.07–0.09m）：14→40 预测仅 **+9.9 mm**，低于旧 Low +61.7、Mid-Near +62.2。
+- D2 物理 30 次 **25/30**；Low-Near **15/18**（00/01 均6/6，02为3/6）；14/35/40 = **8/10、8/10、9/10**。
+- E0 Low-Near 7/9；E1 Low-Near 仅 **6/18**，低位分支不可靠。
+- D2 5 个失败：3 tilt、2 侧向；无纯 −Z 顶部接触。
+- **No-Go**，不训练。

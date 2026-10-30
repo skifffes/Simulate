@@ -1,0 +1,4 @@
+group,condition,state,width_m,path,description
+B2,D2,low_near_00,14/35,/scratch/lijh/simulate_vla/results/experiment_2_9/b2_low_near/videos/B2_low_near00_D2_g14_vs_g35.mp4,true low-near D2 widths
+B2,E0/D2,low_near_00,35,/scratch/lijh/simulate_vla/results/experiment_2_9/b2_low_near/videos/B2_low_near00_expert_vs_D2_g35.mp4,expert vs D2
+B2,D2,low_near_02,14/40,/scratch/lijh/simulate_vla/results/experiment_2_9/b2_low_near/videos/B2_low_near02_D2_g14_vs_g40.mp4,edge state widths

@@ -1,0 +1,16 @@
+﻿state_id,kind,width_mm,D2_success,E0_success,E1_success,D2_lift_mean_mm,pred_delta_14_40_step10_mm
+low_far_00,low_far,14,1/2,0/0,2/2,2.66,12.31
+low_far_00,low_far,35,2/2,0/0,2/2,4.74,12.31
+low_far_00,low_far,40,2/2,0/0,2/2,4.81,12.31
+low_near_00,low_near,14,2/2,1/1,2/2,8.91,9.74
+low_near_00,low_near,35,2/2,1/1,2/2,2.49,9.74
+low_near_00,low_near,40,2/2,1/1,0/2,5.6,9.74
+low_near_01,low_near,14,2/2,1/1,0/2,3.61,11.08
+low_near_01,low_near,35,2/2,1/1,0/2,2.43,11.08
+low_near_01,low_near,40,2/2,1/1,2/2,1.93,11.08
+low_near_02,low_near,14,1/2,0/1,0/2,4.66,8.91
+low_near_02,low_near,35,1/2,0/1,0/2,6.55,8.91
+low_near_02,low_near,40,1/2,1/1,0/2,11.67,8.91
+mid_near_00,mid_near,14,2/2,0/0,2/2,2.11,61.02
+mid_near_00,mid_near,35,1/2,0/0,2/2,5.49,61.02
+mid_near_00,mid_near,40,2/2,0/0,2/2,3.82,61.02
