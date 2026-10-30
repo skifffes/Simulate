@@ -424,3 +424,19 @@ python scripts/exp28_visualize.py
 HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python scripts/exp28s1_target_height.py
 python scripts/exp28s1_visualize.py
 ```
+
+## 实验 2.9：A/B 物理一致性与低位联合状态
+
+- 报告：[results/experiment_2_9/ab/report.md](results/experiment_2_9/ab/report.md)
+- 摘要：[results/experiment_2_9/report.md](results/experiment_2_9/report.md)
+
+A：10 个新 Low/High 状态、40/40 宽度配置物理有效；物理一致 14→40 step10 高度差 Low **+61.7 mm**、High **+51.3 mm**，35→40 仅 +6.2/+2.5 mm；图像夹爪效应 <1 mm，本体主导。
+
+B：E0/E1 专家 **12/12 +12/12**，冻结 D2 **17/24**；D2 14/35/40 = **6/8、4/8、7/8**。`low_00`+35 专家成功、D2 0/2，但 `high_00`+35 为2/2；失败为 tilt/yaw/侧向，不是统一顶部接触。C 阶段 **No-Go**，未训练。
+
+```bash
+venv/bin/python scripts/exp29_prepare_states.py
+venv/bin/python scripts/exp29_modality.py --manifest ... --policy ... --out ...
+bash server/run_e29_b.sh
+venv/bin/python scripts/exp29_analyze_b.py
+```

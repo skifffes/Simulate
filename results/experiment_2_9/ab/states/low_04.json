@@ -1,0 +1,15 @@
+{
+  "seed": 92000044,
+  "bullet": "/scratch/lijh/simulate_vla/results/experiment_2_9/ab/states/low_04.bullet",
+  "group": "yaw90",
+  "tag": "low_04",
+  "state_id": "low_04",
+  "kind": "low",
+  "source": "exp29_generated",
+  "obj": [
+    0.546784448653853,
+    0.17068139849425454,
+    0.019989925958664063
+  ],
+  "obj_yaw": 1.5493593176636946
+}

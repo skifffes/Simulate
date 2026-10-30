@@ -1,0 +1,22 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+git_commit: 8440348 + experiment_2.9 working tree
+task: "push the orange block along the positive X direction to the wall"
+experiment: 2.9 A/B
+A:
+  n_states: 10
+  low_states: 5
+  high_states: 5
+  new_seed_base: 92000000
+  widths_m: [0.014, 0.025, 0.035, 0.040]
+  conditions: [P14-V14, P35-V35, P40-V40, P14-V40, P40-V14]
+  seeds: 10
+  action_chunk: 50
+B:
+  states: [low_00, low_03, high_00, high_03]
+  widths_m: [0.014, 0.035, 0.040]
+  experts: [E0_original, E1_state_aware]
+  d2_repeats_per_config: 2
+  n_rollouts: 48
+judge: v2.2
+outputs: results/experiment_2_9/ab

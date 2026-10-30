@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-30T15:20:00+08:00",
+  "git_commit": "8440348 + experiment_2.9 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "stages": {
+    "A_state_generation": {"status": "completed", "n_states": 10, "low": 5, "high": 5},
+    "A_physical_validity": {"status": "completed", "configs": 40, "valid": 40},
+    "A_modality_inference": {"status": "completed", "conditions": 5, "seeds": 10, "inferences": 500},
+    "B_expert_rollouts": {"status": "completed", "E0": 12, "E1": 12},
+    "B_frozen_rollouts": {"status": "completed", "runs": 24},
+    "B_analysis": {"status": "completed", "n_rollouts": 48},
+    "figures": {"status": "completed", "n": 6},
+    "videos": {"status": "completed", "n": 4},
+    "report": {"status": "completed"},
+    "C_targeted_ft": {"status": "not_executed", "reason": "No-Go after A/B"}
+  },
+  "failed_or_skipped": [],
+  "limitations": [
+    "4 B states, 2 D2 samples per state/width",
+    "E0/E1 each run once",
+    "low/high are new but same scene family",
+    "no C, no training"
+  ]
+}

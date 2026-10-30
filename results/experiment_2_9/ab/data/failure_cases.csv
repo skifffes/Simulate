@@ -1,0 +1,8 @@
+﻿condition,state_id,width_m,rep,success,max_lift_m,wall_contact,final_gap_m,final_dy_m,final_tilt_deg,first_link,first_time_s,normal_z,ee_z_at_contact,run_dir
+D2,high_00,0.014,1,False,0.009705805719043583,False,0.01544,-0.00199,39.059,robot_link10,2.04583,-0.02733,0.02431,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/high_00_g014_r1/frozen/high_00_g014
+D2,high_03,0.014,0,False,0.00945432253512667,False,0.01878,0.00641,42.506,robot_link10,2.22917,-0.0,0.02052,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/high_03_g014_r0/frozen/high_03_g014
+D2,high_03,0.035,0,False,0.01626818469876582,True,0.0084,-0.00088,43.506,robot_link10,2.44583,-0.02294,0.02403,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/high_03_g035_r0/frozen/high_03_g035
+D2,low_00,0.035,0,False,0.0063466229247511954,True,0.00378,0.03238,0.014,robot_link10,1.68333,-0.04175,0.01633,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/low_00_g035_r0/frozen/low_00_g035
+D2,low_00,0.035,1,False,0.0020249746426772124,False,0.00948,0.00156,0.01,robot_link10,1.69167,-0.02359,0.0257,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/low_00_g035_r1/frozen/low_00_g035
+D2,low_00,0.04,0,False,0.018833726035075014,True,0.00181,0.01136,31.921,robot_link10,1.51667,-0.03778,0.02002,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/low_00_g040_r0/frozen/low_00_g040
+D2,low_03,0.035,1,False,0.0190319580379967,True,0.01623,-0.00334,81.827,robot_link10,1.64583,-0.05406,0.023,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/runs/D2/low_03_g035_r1/frozen/low_03_g035

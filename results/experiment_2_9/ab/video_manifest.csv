@@ -1,0 +1,5 @@
+group,condition,state,width_m,path,description
+B,E1,low_00,0.035,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/videos/B_low00_g35_expert_vs_D2.mp4,expert success vs D2 fail
+B,D2,low_00,0.014/0.035,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/videos/B_low00_D2_g14_vs_g35.mp4,D2 width comparison
+B,E1,high_03,0.035,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/videos/B_high03_g35_expert_vs_D2.mp4,expert success vs D2 tilt fail
+B,E1,low_00,0.040,/scratch/lijh/simulate_vla/results/experiment_2_9/ab/videos/B_low00_g40_expert_vs_D2.mp4,expert success vs D2 tilt fail
