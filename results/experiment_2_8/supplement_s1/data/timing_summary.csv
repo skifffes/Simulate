@@ -1,0 +1,7 @@
+﻿variant,comparison,n,mean_s,median_s,min_s,max_s,positive,negative
+lo,close_to_target_lo_s,60,0.2533333333333333,0.25,0.25,0.45,60,0
+lo,close_to_actual_lo_s,60,0.25,0.25,0.25,0.25,60,0
+mid,close_to_target_mid_s,60,0.38416666666666666,0.25,0.25,1.9000000000000001,60,0
+mid,close_to_actual_mid_s,60,0.25666666666666665,0.25,0.25,0.65,60,0
+hi,close_to_target_hi_s,56,0.3901785714285714,0.25,0.25,2.25,56,0
+hi,close_to_actual_hi_s,60,0.32583333333333336,0.25,0.25,1.9000000000000001,60,0

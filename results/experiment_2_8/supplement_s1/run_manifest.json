@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-30T14:30:00+08:00",
+  "git_commit": "059fc62 + experiment 2.8-S1 working tree",
+  "dataset": "data/_shards_e23/B_D2 (60 yaw90, 7016 frames)",
+  "stages": {
+    "label_verification": {"status": "completed"},
+    "expert_target_height": {"status": "completed", "frames": 7016, "episodes": 60},
+    "chunk_targets": {"status": "completed", "horizons": [0, 4, 9, 19, 49], "rows": 35080},
+    "gripper_statistics": {"status": "completed"},
+    "temporal_events": {"status": "completed", "thresholds": 3},
+    "conditional_analysis": {"status": "completed", "progress_bins": 4},
+    "local_coverage": {"status": "completed", "states": 32, "radii": 4},
+    "model_comparison": {"status": "completed", "states": 32},
+    "figures": {"status": "completed", "n": 8},
+    "report": {"status": "completed"}
+  },
+  "failed_or_skipped": [],
+  "limitations": [
+    "observational data; no causal identification",
+    "40 mm training frames = 0",
+    "no fixed-q common support for 14->40 in most progress bins",
+    "event thresholds are descriptive"
+  ]
+}

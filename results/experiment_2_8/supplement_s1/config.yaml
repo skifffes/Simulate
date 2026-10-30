@@ -1,0 +1,15 @@
+dataset: data/_shards_e23/B_D2
+yaw: yaw90
+n_episodes: 60
+n_frames: 7016
+timestamp_step_s: 0.05
+action: action[0:7] absolute joint target; action[7] gripper target
+observation: observation.state[0:7] q; [7:9] two fingers
+horizons: [0, 4, 9, 19, 49]
+fk: PyBullet Panda link 11, world +Z up
+event_thresholds:
+  close: initial_grip - 2 mm, 2 frames
+  target_descent: [-2, -5, -10] mm, 3 frames
+  actual_descent: [-20, -50, -80] mm/s, 3 frames
+local_radii: [0.15, 0.30, 0.50, 0.75]
+output: results/experiment_2_8/supplement_s1

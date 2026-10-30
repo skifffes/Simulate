@@ -413,3 +413,14 @@ venv/bin/python scripts/exp28_local_coverage.py
 venv/bin/python scripts/exp28_joint_analysis.py
 python scripts/exp28_visualize.py
 ```
+
+## 实验 2.8-S1：专家动作目标高度与夹爪时序
+
+- 报告：[results/experiment_2_8/supplement_s1/report.md](results/experiment_2_8/supplement_s1/report.md)
+
+60 条 yaw90 / 7,016 帧。夹爪与 `Δz_target` 全局 Pearson **0.088**、Spearman **−0.031**；h0 的14 mm 目标下降率31.9%、25–35/35 mm 为0%，但宽夹爪几乎只在轨迹起点，h19 方向反转。60/60 条 episode 闭合→目标下降为正，中位 **0.25 s**；ep66 延迟1.90 s。progress 0–15% 有四组共同覆盖，15% 后几乎仅14 mm；q≤0.30 只有5/32状态有14 mm+35 mm共同支持，40 mm 为0。
+
+```bash
+HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python scripts/exp28s1_target_height.py
+python scripts/exp28s1_visualize.py
+```
