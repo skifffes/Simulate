@@ -1,0 +1,14 @@
+﻿state_id,radius_rad,narrow_frames,narrow_episodes,wide_frames,wide_episodes,expert_dz_h0_narrow,expert_dz_h0_wide,model_delta_14_35_step10_mm,comparison_valid,reason
+ep074_f010,0.75,3837,56,5,5,-5.029348777410479,0.0,47.43918888270855,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep098_f010,0.75,3304,58,7,7,-5.894536496936085,0.0,59.057995676994324,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep080_f010,0.75,2921,55,7,7,-6.911161365239374,0.0,56.40118755400181,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep088_f010,0.5,236,32,5,5,-13.134141531536134,0.0,46.12189456820488,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep088_f010,0.75,1179,55,7,7,-13.562250428969724,0.0,46.12189456820488,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep104_f010,0.5,69,8,6,6,-10.189139108726943,0.0,51.308468729257584,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep104_f010,0.75,1067,53,7,7,-14.559834982567898,0.0,51.308468729257584,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep104_f025,0.75,3622,60,5,5,-4.066430215072247,0.0,6.457909382879734,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep064_f010,0.5,42,6,6,6,-7.925979083492642,0.0,51.19943022727966,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep064_f010,0.75,911,53,7,7,-15.078874903963111,0.0,51.19943022727966,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep064_f025,0.75,3237,60,5,5,-4.964903748807418,0.0,21.555821038782597,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep082_f010,0.5,806,53,5,5,-13.964769063013659,0.0,59.33490917086601,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase
+ep082_f010,0.75,2347,57,7,7,-7.964774294433743,0.0,59.33490917086601,False,wide frames only initial phase/high EE; narrow spans descent/push; no matched phase

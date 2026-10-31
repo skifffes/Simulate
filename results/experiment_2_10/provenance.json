@@ -1,0 +1,20 @@
+{
+  "created": "2026-10-31T10:40:00+08:00",
+  "git_commit": "d1b7a20 + experiment_2.10 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "dataset": "data/lerobot_panda_e23_D2 (480 episodes, 68892 frames)",
+  "b90": "data/_shards_e23/B_D2 (yaw90 60 episodes, 7016 frames)",
+  "missing_fields": ["per-frame object pose", "per-frame contact", "EE orientation (marked not_available)"],
+  "phase_labels": "inferred from actual grip, action target dz and EE z; not ground truth",
+  "sampling": "all valid B90 yaw90 frames; no weighting",
+  "files": {
+    "dataset_audit": "data/dataset_audit.csv",
+    "frame_table": "data/b90_frame_state_action.parquet",
+    "horizons": "data/expert_action_horizons.parquet",
+    "phase_events": "data/expert_phase_events.csv",
+    "coverage": "data/local_joint_coverage.csv",
+    "policy": "data/policy_response.csv",
+    "identifiability": "data/identifiability_matrix.csv"
+  }
+}

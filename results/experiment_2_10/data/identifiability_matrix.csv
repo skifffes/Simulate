@@ -1,0 +1,10 @@
+﻿question,status,evidence,counter,confound
+Q1 gripper-action height relation,Observed/Supported,wide 60 frames only initial; narrow spans close/descend/push; global h0 weak,wide future h19 -167mm; not simply wide=high,phase/EE/q
+Q2 fixed-q wide/narrow expert contrast,Not Identifiable,0/43 states common at 0.30; 13 rows @0.50/0.75 only early wide,,no matched phase/geometry
+Q3 cause of non-identifiability,Observed,wide only 5-7 initial frames; no object frame labels; frames clustered,,
+Q4 C3 q coverage,Supported (q-only),C3 126-147 frames/3-4 eps at0.75,0 wide frames,"q-only, no object"
+Q5 ep66 f39 role,Supported (14mm only),"1731 q-neighbors/52 eps at0.75, all narrow",0 wide; cannot infer +35/+40,
+Q6 model vs expert in supported region,Not Identifiable,no valid wide/narrow phase-matched comparison,,coverage/phase
+H1 expert timing association,Supported/Weakened,"close cmd 0s, actual close 0.35s, descent 0.30s, low 2.0s; wide only initial",descent starts before actual close; wide future targets descend,hard-coded expert
+H2 local joint supervision gap,Observed; causal Not Identifiable,C3 wide=0; ep66 wide=0,gap alone does not predict direction,no wide labels
+H3 expert conditional action difference,Not Identifiable,no fixed-state wide/narrow labels,,no common support

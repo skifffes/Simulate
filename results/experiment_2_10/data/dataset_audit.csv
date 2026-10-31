@@ -1,0 +1,7 @@
+﻿dataset,task,episodes,frames,language
+lerobot_panda_e23_D2,A0_yaw_longY,120,16164,pick up ... long side aligned with Y
+lerobot_panda_e23_D2,A90_yaw_longX,120,21450,pick up ... long side aligned with X
+lerobot_panda_e23_D2,B90_push_yaw90,60,7016,push ... positive X
+lerobot_panda_e23_D2,B0_push_yaw0,60,7637,push ... positive X
+lerobot_panda_e23_D2,C_tray,120,16625,pick up ... into tray
+lerobot_panda_e23_D2,TOTAL,480,68892,

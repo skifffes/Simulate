@@ -1,0 +1,18 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+dataset: data/lerobot_panda_e23_D2
+dataset_total_episodes: 480
+dataset_total_frames: 68892
+b90_shard: data/_shards_e23/B_D2 (yaw90 60 episodes / 7016 frames)
+fps: 20
+observation: observation.state[0:7]=q, [7:9]=two fingers
+action: action[0:7]=absolute joint target, action[7]=gripper target
+fk: Panda link 11, world +Z, mm in derived fields
+grip_bins_mm:
+  narrow: [12.5, 16.5]
+  intermediate: [20.0, 30.0]
+  wide: [34.5, 35.5]
+horizons: [0, 4, 9, 19, 49]
+neighborhood_radii: [0.15, 0.30, 0.50, 0.75]
+common_support_rule: ">=5 frames and >=3 episodes in both narrow and wide"
+phase_labels: inferred from actual grip/action target/EE; not ground truth

@@ -440,3 +440,16 @@ venv/bin/python scripts/exp29_modality.py --manifest ... --policy ... --out ...
 bash server/run_e29_b.sh
 venv/bin/python scripts/exp29_analyze_b.py
 ```
+
+## 实验 2.10：D2 B90 数据夹爪—机械臂条件关系审计
+
+- 报告：[results/experiment_2_10/report.md](results/experiment_2_10/report.md)
+
+D2 全量 480 集/68,892 帧；B90 60/7,016。B90 中 Wide（35 mm）只在 initial（60/60），Intermediate 只在 initial；Narrow 覆盖 close/descend/push。wide 的 Δz_target h0=0、h9=−44.4、h19=−167.4 mm，不支持“宽=高”。C3 q 邻域有 126–147 narrow 帧/3–4 eps，但 wide=0；ep66 f39 1,731 narrow/52 eps，wide=0。43 个状态 r=0.30 common support=0/43；r=0.5/0.75 的 13 行 wide 仅 5–7 个 initial 帧，阶段不匹配。模型 14→35 在32/32状态为正（均值+15.75mm），但专家无 same-q wide 标签，比较为 Not Identifiable。
+
+```bash
+HF_HUB_OFFLINE=1 PYTHONPATH=src venv/bin/python scripts/exp210_build.py
+venv/bin/python scripts/exp210_coverage.py
+python scripts/exp210_local.py
+python scripts/exp210_visualize.py
+```
