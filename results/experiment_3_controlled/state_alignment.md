@@ -1,62 +1,59 @@
-# State alignment (v2): actual first-inference states
+# State alignment (v3): actual first-inference states
 
-This file uses the **actual state and images captured immediately before the first D2 inference** from the v2 rollouts. It does not use a separate offline 30-step audit.
+This file uses the **actual state and images captured immediately before the first D2 inference**. v3 adds a target-convergence gate for continuous groups.
 
-- **Snapshot:** A/B/C restored from saved state, then one unified 30-step settle.
-- **Continuous:** B/C built from the A terminal; C executes the joint transition in the same process, then immediately starts D2; B does the diagnostic qB placement, then starts D2. Both use the same 30-step settle and no intermediate snapshot.
+## V3 continuous B/C
 
-## B/C snapshot
+| Variable | Value |
+|---|---:|
+| q error to qB | **5.20×10⁻⁶ rad** |
+| q max error | ≤5.20×10⁻⁶ rad |
+| dq L2 | **5.68×10⁻¹³** |
+| convergence steps | **201** (0.8375 s) |
+| EE position difference B/C | **0.0 mm** |
+| relative translation B/C | **0.0 mm** |
+| relative rotation B/C | **0.0°** |
+| gripper difference | **0.0 mm** |
+| top RGB hash | **equal** |
+| wrist RGB hash | **equal** |
+| first action 7-joint L2 | **0.0** |
+| success | 4/5 both; same failure seed4 |
+
+Convergence criteria: q L2≤0.01 rad, q max≤0.01, dq L2≤0.2, object speed≤0.01 m/s, grip error≤2 mm, held 120 steps, max 1200 steps. All 10 runs converged in 201 steps. The pre-v3 run had q error 0.671 rad and EE error 207 mm; it is invalid and replaced.
+
+## Snapshot B/C (v2 state audit; still valid)
 
 | Variable | Value |
 |---|---:|
 | q L2 | **9.07×10⁻⁷ rad** |
-| q max | 5.26×10⁻⁷ rad |
-| dq L2 | 6.55×10⁻¹¹ |
 | EE position | **1.79×10⁻⁴ mm** |
-| EE rotation | 0° |
-| gripper | 1.88×10⁻⁶ mm |
 | object position | **3.61×10⁻⁸ mm** |
-| object yaw-axis | 1.95×10⁻⁸° |
-| **full T_EE⁻¹T_object translation** | **1.91×10⁻⁴ mm** |
-| **full T_EE⁻¹T_object rotation** | **0°** |
-| top RGB MAE | **0.0** |
-| wrist RGB MAE | **0.0** |
+| relative translation | **1.91×10⁻⁴ mm** |
+| relative rotation | **0°** |
+| top/wrist MAE | **0 / 0** |
+| first action 7-joint L2 | **0.0** |
 | contacts | 0 vs 0 |
-
-## B/C continuous
-
-| Variable | Value |
-|---|---:|
-| q L2 | **0.0** |
-| EE position | **0.0** |
-| **relative translation** | **0.0** |
-| **relative rotation** | **0.0277°** |
-| top/wrist MAE | **0.0** |
-| contacts | 0 vs 0 |
-
-Since B and C follow the same qB/grip and settle, their continuous starts are identical at recorded precision. The binary outcomes are also identical for all 5 seeds.
 
 ## A/B snapshot
 
 | Variable | Value |
 |---|---:|
 | q L2 | 5.29×10⁻⁸ rad |
-| EE position | 3.33×10⁻⁵ mm |
-| EE rotation | 0° |
 | object position | **1.864 mm** |
-| object yaw-axis | 2.54° |
-| **full T_EE⁻¹T_object translation** | **1.864 mm** |
-| **full T_EE⁻¹T_object rotation** | **177.46°** |
-| top RGB MAE | **0.05798** |
-| wrist RGB MAE | 0.0 |
+| **relative translation** | **1.864 mm** |
+| **relative rotation** | **177.46°** |
+| axis-equivalent yaw | **2.54°** |
+| top MAE | **0.05798** |
+| wrist MAE | 0.0 |
+| first action 7-joint L2 | **0.0084–0.0103 rad** |
 
-The full relative rotation is 177.46° because the rectangular block is 180°-symmetric; the **axis-equivalent** yaw difference is 2.54°. Both are reported; for contact geometry the axis-equivalent is the physically relevant one, but the full SE(3) value is not hidden.
+The rectangular block is 180°-symmetric; full relative quaternion rotation is 177.46°, axis-equivalent yaw difference is 2.54°. Both are reported.
 
 ## Thresholds
 
-| Variable | Threshold | B/C snapshot | B/C continuous | A/B |
+| Variable | Threshold | B/C snapshot | B/C continuous v3 | A/B |
 |---|---:|---|---|---|
-| q L2 | 0.01 rad | PASS | PASS | PASS |
+| q L2 | 0.01 rad | PASS | PASS (5.2e-6 to qB) | PASS |
 | q max | 0.01 rad | PASS | PASS | PASS |
 | dq L2 | 0.1 | PASS | PASS | PASS |
 | EE position | 1 mm | PASS | PASS | PASS |
@@ -64,15 +61,16 @@ The full relative rotation is 177.46° because the rectangular block is 180°-sy
 | gripper | 0.5 mm | PASS | PASS | PASS |
 | object position | 0.5 mm | PASS | PASS | **FAIL (1.864 mm)** |
 | relative translation | 0.5 mm | PASS | PASS | **FAIL (1.864 mm)** |
-| relative rotation | 5° | PASS | PASS | **FAIL (177.46°) / axis 2.54°** |
-| top RGB MAE | 1 px | PASS | PASS | PASS (0.058) |
-| wrist RGB MAE | 1 px | PASS | PASS | PASS |
+| relative rotation | 5° | PASS | PASS | **FAIL (177.46° full) / axis 2.54°** |
+| top RGB MAE | 1 px | PASS | PASS (hash equal) | PASS (0.058) |
+| wrist RGB MAE | 1 px | PASS | PASS (hash equal) | PASS |
 | contacts | equal | PASS | PASS | PASS |
 
 ## Interpretation
 
-- **B/C snapshot:** state-aligned on every recorded variable; first-action q L2 is exactly **0.0**; only later dynamics/numerical amplification can differ.
-- **B/C continuous:** state-aligned and **all 5 outcomes identical**; no evidence of a transition-history residual.
-- **A/B:** not a pure object-position test; object position and top image are both different. A/B first-action q L2 is 0.0084–0.0103 rad; A and B are both 5/5 in the v2 snapshot run.
-- **Controller target:** `q_target` in `initial_state.json` is the actual held q, not an independent commanded target. The actual D2 action target is in `first_action_v2.csv` (`q1..q7`, `grip_mm`). This is an explicit limitation.
-- **Observation hashes:** `data/observation_hashes_v2.csv` archives the actual top/wrist SHA-256 prefixes at first inference.
+- **B/C continuous v3:** reaches qB, is state-aligned at float precision, has identical first action and identical 5-seed outcomes. No evidence of a transition-history residual.
+- **B/C snapshot:** state-aligned, first action identical, but C seed4 fails while B seed4 succeeds; binary success is sensitive to later dynamics/numerics and is not a state-equivalence test.
+- **A/B:** not a pure object-position test: object position and top image differ together.
+- **Controller target:** v3 `initial_state.json` has `q_target=qB`; raw full-precision first actions are in `first_action_v3.csv`.
+- **Observation hashes:** `data/observation_hashes_v3.csv`.
+

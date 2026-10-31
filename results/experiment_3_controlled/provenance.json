@@ -1,5 +1,5 @@
 {
-  "created": "2026-10-31T16:00:00+08:00",
+  "created": "2026-10-31T16:20:00+08:00",
   "git_base_commit": "576048a82fcef5ab60575b90c835f4a0b8fc4d16",
   "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
   "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
@@ -7,13 +7,13 @@
   "b_target": "ep064_f000 from data/_shards_e23/B_D2",
   "groups": {
     "A_snapshot": "B reference reconstructed scene",
-    "B_snapshot": "A scene, diagnostic qB reset, 30-step settle",
-    "C_snapshot": "A scene, restore transition endpoint, 30-step settle",
-    "B_continuous": "A scene, qB reset, same process, 30-step settle",
-    "C_continuous": "A scene, execute qA->qB, same process, no snapshot restore"
+    "B_snapshot": "A scene, diagnostic qB reset",
+    "C_snapshot": "A scene, restore transition endpoint",
+    "B_continuous_v3": "A scene, qB reset, converged to qB, same process",
+    "C_continuous_v3": "A scene, execute qA->qB, converge to qB, no snapshot restore"
   },
   "seeds": [0,1,2,3,4],
-  "settle_steps": 30,
-  "success": "v2.2; wall_contact reported separately",
-  "limitations": ["1 A state", "1 B target", "5 seeds", "B reference reconstructed", "independent controller target not fully saved"]
+  "convergence": "201 steps in all v3 runs; q error 5.2e-6 rad, dq 5.7e-13",
+  "success": "v2.2; wall_contact reported separately (0/25)",
+  "limitations": ["1 A state", "1 B target", "5 seeds", "B reference reconstructed", "internal controller target/queue not fully logged"]
 }
