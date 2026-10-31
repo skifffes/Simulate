@@ -1,6 +1,6 @@
 import cv2,numpy as np
 from pathlib import Path
-V=Path('/scratch/lijh/simulate_vla/results/experiment_3_controlled/videos');C=Path('/scratch/lijh/simulate_vla/results/experiment_3_controlled/rollout_v2/C_continuous_r0')
+V=Path('/scratch/lijh/simulate_vla/results/experiment_3_controlled/videos');C=Path('/scratch/lijh/simulate_vla/results/experiment_3_controlled/rollout_v4/C_continuous_r0')
 def read(p):
  cap=cv2.VideoCapture(str(p));out=[]
  while True:

@@ -1,5 +1,5 @@
 """实验 3 v3：continuous transition 的目标到达与稳定验证；未达目标不启动 D2。"""
-import argparse,json,sys
+import argparse,json,sys,random
 from pathlib import Path
 import numpy as np,pybullet as p,torch
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'scripts'))
@@ -44,16 +44,20 @@ class ConvergedEpisode(ControlledEpisode):
         q=self.sim.q();dq=np.array([p.getJointState(self.sim.robot,j,physicsClientId=self.sim.client)[1] for j in range(9)])
         pos,quat=p.getBasePositionAndOrientation(self.block,physicsClientId=self.sim.client);vel,ang=p.getBaseVelocity(self.block,physicsClientId=self.sim.client)
         ee=p.getLinkState(self.sim.robot,11,computeForwardKinematics=True,physicsClientId=self.sim.client)
-        self.initial_state={'q':q.tolist(),'dq':dq.tolist(),'ee':list(ee[4]),'ee_quat':list(ee[5]),'obj_pos':list(pos),'obj_quat':list(quat),'obj_vel':list(vel),'obj_ang':list(ang),'seed':self.control_seed,'group':self.group,'mode':self.mode,'q_target':qb.tolist(),'grip_target':gw,'converged':self.converged,'conv_steps':self.conv_steps}
+        self.initial_state={'q':q.tolist(),'dq':dq.tolist(),'ee':list(ee[4]),'ee_quat':list(ee[5]),'obj_pos':list(pos),'obj_quat':list(quat),'obj_vel':list(vel),'obj_ang':list(ang),'seed':self.control_seed,'group':self.group,'mode':self.mode,'q_target':qb.tolist(),'grip_target':gw,'grip_actual':[float(x) for x in finger_widths(self.sim)],'converged':self.converged,'conv_steps':self.conv_steps}
         (self.out/'initial_state.json').write_text(json.dumps(self.initial_state,indent=2))
         obs=self.rig256.capture();np.savez_compressed(self.out/'initial_observation.npz',top=obs['top'],wrist=obs['wrist'])
+        state=np.concatenate([q,finger_widths(self.sim)]).astype(np.float32)
+        top=torch.from_numpy(np.ascontiguousarray(obs['top'])).float().div_(255.0).permute(2,0,1).numpy()
+        wrist=torch.from_numpy(np.ascontiguousarray(obs['wrist'])).float().div_(255.0).permute(2,0,1).numpy()
+        np.savez_compressed(self.out/'model_input.npz',top=top,wrist=wrist,state=state,task='push the orange block along the positive X direction to the wall')
     def run(self):
         self.build()
         if not self.converged:
             self.finish(True,False,None)
             if p.isConnected(self.sim.client):p.disconnect(self.sim.client)
             return
-        seed=self.control_seed;torch.manual_seed(seed);torch.cuda.manual_seed_all(seed);np.random.seed(seed)
+        seed=self.control_seed;random.seed(seed);torch.manual_seed(seed);torch.cuda.manual_seed_all(seed);np.random.seed(seed)
         success,first=(False,None)
         try:success,first=self.run_b()
         finally:

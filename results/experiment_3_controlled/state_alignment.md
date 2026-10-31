@@ -1,8 +1,8 @@
-# State alignment (v3): actual first-inference states
+# State alignment (v4): actual first-inference states
 
-This file uses the **actual state and images captured immediately before the first D2 inference**. v3 adds a target-convergence gate for continuous groups.
+This file uses the **actual state and images captured immediately before the first D2 inference**. v4 adds a target-convergence gate and verifies actual gripper state and the real model input tensors.
 
-## V3 continuous B/C
+## V4 continuous B/C
 
 | Variable | Value |
 |---|---:|
@@ -11,15 +11,22 @@ This file uses the **actual state and images captured immediately before the fir
 | dq L2 | **5.68×10⁻¹³** |
 | convergence steps | **201** (0.8375 s) |
 | EE position difference B/C | **0.0 mm** |
+| dq difference B/C | **0.0** |
+| object position / velocity difference | **0.0 / 0.0** |
 | relative translation B/C | **0.0 mm** |
 | relative rotation B/C | **0.0°** |
-| gripper difference | **0.0 mm** |
+| **actual left finger** | **35.00026 mm** |
+| **actual right finger** | **34.99980 mm** |
+| **actual gripper B/C difference** | **0.0 mm** |
+| **startup contacts** | **0** |
+| **9D model state input L2** | **0.0** |
+| **top/wrist normalized input MAE** | **0.0 / 0.0** |
 | top RGB hash | **equal** |
 | wrist RGB hash | **equal** |
 | first action 7-joint L2 | **0.0** |
 | success | 4/5 both; same failure seed4 |
 
-Convergence criteria: q L2≤0.01 rad, q max≤0.01, dq L2≤0.2, object speed≤0.01 m/s, grip error≤2 mm, held 120 steps, max 1200 steps. All 10 runs converged in 201 steps. The pre-v3 run had q error 0.671 rad and EE error 207 mm; it is invalid and replaced.
+Convergence criteria: q L2≤0.01 rad, q max≤0.01, dq L2≤0.2, object speed≤0.01 m/s, grip error≤2 mm, held 120 steps, max 1200 steps. All 10 runs converged in 201 steps. The pre-v4 run had q error 0.671 rad and EE error 207 mm; it is invalid and replaced. V4 physically adjusts the gripper from the A-open state with `set_gripper` (no `resetJointState` for fingers); the B/C actual finger positions are equal at 35.00026/34.99980 mm.
 
 ## Snapshot B/C (v2 state audit; still valid)
 
@@ -73,4 +80,5 @@ The rectangular block is 180°-symmetric; full relative quaternion rotation is 1
 - **A/B:** not a pure object-position test: object position and top image differ together.
 - **Controller target:** v3 `initial_state.json` has `q_target=qB`; raw full-precision first actions are in `first_action_v3.csv`.
 - **Observation hashes:** `data/observation_hashes_v3.csv`.
+
 

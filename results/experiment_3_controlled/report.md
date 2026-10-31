@@ -1,36 +1,37 @@
-# 实验 3 受控诊断 v3：目标到达验证后的 B/C 连续 transition
+# 实验 3 受控诊断 v4：目标到达验证后的 B/C 连续 transition
 
 ## 0. 结论先行
 
 v2 的 continuous 组虽然 B/C 完全相同，但**没有到达 qB**：启动 q 与 qB 差约 0.671 rad，EE 差约 207 mm，q6 速度约 −17.64 rad/s。因此 v2 continuous **不能作为 transition 证据**。
 
-v3 修正为**目标到达/稳定验证**：
+v4 修正为**目标到达/稳定验证**：
 
 - 在规划执行、夹爪调整、稳定等待、首次 D2 推理前，分别记录 q、dq、EE、夹爪、物体、接触；
 - 使用**收敛条件**而不是固定 30 步：q L2≤0.01 rad、q max≤0.01、dq L2≤0.2、物体速度≤0.01 m/s、夹爪误差≤2 mm，连续保持 120 步（0.5 s）；
 - 最大等待 1200 步；未收敛则标记 transition failure，不启动 D2；
 - 保存真实 q target、dq、首推理图像和**未四舍五入的 raw action**。
 
-v3 结果：
+v4 结果：
 
 | 条件 | n | v2.2 成功 | wall contact | 目标 q 误差 | dq |
 |---|---:|---:|---:|---:|---:|
 | A snapshot | 5 | **5/5** | 0 | — | — |
 | B snapshot | 5 | **5/5** | 0 | — | — |
 | C snapshot | 5 | **4/5** | 0 | — | — |
-| **B continuous v3** | 5 | **4/5** | 0 | **5.2×10⁻⁶ rad** | **5.7×10⁻¹³** |
-| **C continuous v3** | 5 | **4/5** | 0 | **5.2×10⁻⁶ rad** | **5.7×10⁻¹³** |
+| **B continuous v4** | 5 | **4/5** | 0 | **5.2×10⁻⁶ rad** | **5.7×10⁻¹³** |
+| **C continuous v4** | 5 | **4/5** | 0 | **5.2×10⁻⁶ rad** | **5.7×10⁻¹³** |
 
 - **B/C continuous 都真正到达 qB**：201 步收敛（0.8375 s），q 误差 5.2×10⁻⁶ rad，dq 5.7×10⁻¹³；实际 q/EE/物体/图像一致。
+- **v4 还验证了实际夹爪与真实模型输入**：实际左右手指 **35.00026 / 34.99980 mm**，B/C 差 0；9D state 输入 L2=0；top/wrist 归一化输入 MAE=0、hash 相同；启动接触数 0。
 - B/C continuous 的 5 个配对 seed **结果与行为完全相同**：4/5，失败均为 seed4 tilt 19.26°；首动作七关节 L2=0；gap/tilt 相同。
 - **没有观察到连续 transition 的额外残余影响。**
 - **25 次中 wall_contact=0**；22 次 v2.2 成功，3 次失败（C snapshot seed4、B/C continuous seed4）。v2.2 成功不是墙接触。
 
 ---
 
-## 1. v2 的问题与 v3 修复
+## 1. v2 的问题与 v4 修复
 
-| 问题 | v2 | v3 |
+| 问题 | v2 | v4 |
 |---|---|---|
 | continuous 目标到达 | 只 `sim.command(qb)` + 30 步（0.125 s）；实际 q 与 qB 差 **0.671 rad**，EE 差 **207 mm**，q6 dq **−17.64 rad/s** | 收敛循环，最大 1200 步；201 步达到 q 误差 **5.2×10⁻⁶ rad**，dq≈0 |
 | 目标验证 | 无 | `transition_convergence.csv` + `converged` 标志 |
@@ -38,7 +39,7 @@ v3 结果：
 | `q_target` | 写入当前实际 q，不是命令目标 | 写入真实 qB |
 | 首动作精度 | `policy_trace` 5 位小数 | **raw_actions.npz 全精度** |
 | C 连续执行 | 5/5 但未到目标，无效 | 4/5，目标到达有效 |
-| 归档 | v2 trace | v3 trace `e3c_v3_traces.tar.gz` + hashes |
+| 归档 | v2 trace | v4 trace `e3c_v4_traces.tar.gz` + hashes |
 
 收敛定义：
 
@@ -52,9 +53,9 @@ v3 结果：
 
 ---
 
-## 2. v3 continuous 目标到达
+## 2. v4 continuous 目标到达
 
-`data/b90_rollout_results_v3.csv`：
+`data/b90_rollout_results_v4.csv`：
 
 | group | seed | converge | steps | q_err(qB) | dq_norm | success | gap | tilt |
 |---|---:|---|---:|---:|---:|---|---:|---:|
@@ -65,7 +66,7 @@ v3 结果：
 | B | 4 | ✅ | 201 | 5.2e-6 | 5.7e-13 | ❌ | 11.37 | 19.26 |
 | C | 0–4 | ✅ | 201 | 5.2e-6 | 5.7e-13 | 4/5 | 同 B | 同 B |
 
-- B/C 的 q、dq、q_target、grip、物体、图像、首动作均一致；`state_alignment_v3.csv` 中 q/EE/relative pose/action7 全部为 **0**，top hash 相同。
+- B/C 的 q、dq、q_target、grip、物体、图像、首动作均一致；`state_alignment_v4.csv` 中 q/EE/relative pose/action7 全部为 **0**，top hash 相同。
 - B/C seed4 同时失败，说明不是 C 额外引入；是该状态/seed 下策略动力学本身失败。
 - **C 到达 qB 后 B/C 完全相同**，这是本轮真正的“连续 transition”证据。
 
@@ -76,13 +77,14 @@ v3 结果：
 
 ## 3. B/C 启动状态
 
-`state_alignment_v3.csv`（连续）：
+`state_alignment_v4.csv`（连续）：
 
-| seed | q L2 | EE mm | relative pos mm | relative rot deg | grip mm | top MAE | action7 L2 |
-|---:|---:|---:|---:|---:|---:|---:|---:|
-| 0–4 | **0.0** | **0.0** | **0.0** | **0.0** | **0.0** | **0.0** | **0.0** |
+| seed | q L2 | dq L2 | EE mm | **actual grip L/R mm** | relative pos mm | relative rot deg | **9D state input** | **top/wrist input MAE** | contacts | action7 L2 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0–4 | **0.0** | **0.0** | **0.0** | **0.0 / 0.0** | **0.0** | **0.0** | **0.0** | **0 / 0** | **0** | **0.0** |
 
-- top hash 相同，wrist 相同。
+- 实际夹爪：左 **0.03500026 m**，右 **0.03499980 m**；B/C 完全一致。
+- 首推理接触数：0；物体速度差0。
 - 目标 q、实际 q、q_target 均为 qB（差异 5.2e-6），dq≈0。
 - B/C continuous 是当前最干净的状态匹配对照。
 
@@ -98,31 +100,31 @@ Snapshot 组：
 - B/C 首推理 q 差 **9.1×10⁻⁷ rad**，相对位姿 1.9×10⁻⁴ mm，图像0，首动作 L2=0。
 
 C seed4 失败与 B/C 首动作相同并存，说明二值成功对后续动力学/微观数值高度敏感。  
-**不能把这个 seed4 差异归因于 transition history**；snapshot C 也经过了快照恢复，而不是连续 transition。v3 continuous seed4 是 B/C 同时失败，进一步支持“不是 C 特有”。
+**不能把这个 seed4 差异归因于 transition history**；snapshot C 也经过了快照恢复，而不是连续 transition。v4 continuous seed4 是 B/C 同时失败，进一步支持“不是 C 特有”。
 
 ---
 
 ## 5. 旧结果与 v2 的处理
 
 - 旧实验 3 AtoB 3/9 vs Bref 6/9：未配对策略种子（A row seed 53050005 vs B/C 64），**不用于因果结论**。
-- v2 continuous 5/5：目标 q 误差 **0.671 rad**、EE **207 mm**，**无效**；已被 v3 取代。
-- v2 snapshot A/B/C 5/5/5/4、状态对齐仍然有效；v3 保留 snapshot 作为对照。
-- v2 continuous 的 5/5 不再作为结论；v3 的 4/5/4/5 才是目标到达后的结果。
+- v2 continuous 5/5：目标 q 误差 **0.671 rad**、EE **207 mm**，**无效**；已被 v4 取代。
+- v2 snapshot A/B/C 5/5/5/4、状态对齐仍然有效；v4 保留 snapshot 作为对照。
+- v2 continuous 的 5/5 不再作为结论；v4 的 4/5/4/5 才是目标到达后的结果。
 
 ---
 
 ## 6. 八个问题
 
 **1. 规划能否可靠到达 B90 构型？**  
-Snapshot 路径可执行；v3 continuous 通过收敛验证：201 步、q 误差 5.2e-6 rad、dq≈0。不是固定 30 步的假到达。
+Snapshot 路径可执行；v4 continuous 通过收敛验证：201 步、q 误差 5.2e-6 rad、dq≈0。不是固定 30 步的假到达。
 
 **2. 匹配 q 后哪些变量仍未匹配？**  
-- B/C continuous：**无记录差异**；q/EE/relative pose/action7 全0，图像 hash 相同。
+- B/C continuous：**无记录差异**；q/dq/EE/relative pose/actual grip/9D input/top-wrist input/action7 全0；接触0。
 - A/B：物体 1.864 mm、相对位姿 1.864 mm、top 0.058。
-- 控制器独立命令目标现已保存为 qB；内部控制器状态仍未完全审计。
+- 控制器内部 target/queue 未完整审计，但 q_target=qB 和真实首动作已保存。
 
 **3. B/C 是否具备可比较完整启动状态？**  
-**是**：v3 continuous 满足收敛和所有记录阈值；B/C 首动作全精度 L2=0。
+**是**：v4 continuous 满足收敛和所有记录阈值；B/C 首动作全精度 L2=0。
 
 **4. 物体场景改变是否伴随首段动作变化？**  
 A/B 七关节 L2 **0.0084–0.0103 rad**；A/B 均5/5。  
@@ -137,7 +139,7 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 二值成功对 seed 敏感；5 seeds 不足以给稳定边界。
 
 **7. 首次接触错误可能来自什么？**  
-- v3 所有运行 wall_contact=0；v2.2 成功不要求墙接触。
+- v4 所有运行 wall_contact=0；v2.2 成功不要求墙接触。
 - seed4 B/C 均失败，tilt19.26°；不是 C 特有。
 - 首次接触日志仍为 `robot_link10`（夹爪/手指），不是墙。
 - 具体动力学放大机制仍未识别。
@@ -155,7 +157,7 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 
 ### Observed
 
-- v3 B/C continuous 201 步收敛，q 误差5.2e-6 rad，dq5.7e-13；B/C q/EE/relative pose/action7=0，图像 hash相同。
+- v4 B/C continuous 201 步收敛，q 误差5.2e-6 rad，dq5.7e-13；q/EE/relative pose/actual grip/9D input/top-wrist input/action7=0，接触0。
 - B/C continuous 5 seeds 均4/5，失败均 seed4 tilt19.26°，gap/tilt相同。
 - Snapshot A5/5、B5/5、C4/5；C snapshot seed4 tilt19.78°。
 - 25 次 wall_contact=0；22 次 v2.2 成功。
@@ -164,7 +166,7 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 ### Supported
 
 - 连续 transition 到达 qB 后，B/C 没有可测量的额外状态或行为差异。
-- v2 continuous 的 5/5 是假到达；v3 修正后是 4/5，且 B/C 同失败。
+- v2 continuous 的 5/5 是假到达；v4 修正后是 4/5，且 B/C 同失败。
 - 旧 3/9 vs6/9 至少部分来自未配对种子。
 - 二值成功不能替代行为/轨迹比较；v2.2成功≠墙接触。
 
@@ -188,7 +190,7 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 `videos/AtoB_full.mp4`：
 
 - A90 终态 → 真实规划过渡（44 帧展示）；
-- 随后 **v3 continuous C seed0**，目标收敛到 qB 后启动 D2（84 policy ticks）；
+- 随后 **v4 continuous C seed0**，目标收敛到 qB 后启动 D2（84 policy ticks）；
 - 左 side，右 top；包含接近/接触/推动。
 
 ![Video frames](figures/fig05_ato_b_video_frames.png)
@@ -200,8 +202,9 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 - 1 个 B 目标（ep064 f000）×5 seeds；不是统计泛化。
 - 1 个唯一 A 终态。
 - B Reference 是重建场景，不是原始训练快照。
-- 收敛阈值是工程阈值；v3 只在 201 步达到，尚未测试其他 B 起点。
+- 收敛阈值是工程阈值；v4 只在 201 步达到，尚未测试其他 B 起点。
 - 控制器内部 target/queue 仍未完整审计；本轮已保存 q_target=qB 与 raw action。
 - C snapshot seed4 与 continuous seed4 的关系仍未完全识别：两者都失败，但 snapshot C 失败而 B 成功；连续 B/C 同失败。
 - 规划为碰撞采样直线，不是连续时间动态可行轨迹。
 - wall_contact 基于仿真接触日志；未做力/穿透审计。
+

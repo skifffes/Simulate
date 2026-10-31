@@ -9,11 +9,12 @@
     "A_snapshot": "B reference reconstructed scene",
     "B_snapshot": "A scene, diagnostic qB reset",
     "C_snapshot": "A scene, restore transition endpoint",
-    "B_continuous_v3": "A scene, qB reset, converged to qB, same process",
-    "C_continuous_v3": "A scene, execute qA->qB, converge to qB, no snapshot restore"
+    "B_continuous_v4": "A scene, qB reset, converged to qB, same process",
+    "C_continuous_v4": "A scene, execute qA->qB, converge to qB, no snapshot restore"
   },
   "seeds": [0,1,2,3,4],
   "convergence": "201 steps in all v3 runs; q error 5.2e-6 rad, dq 5.7e-13",
   "success": "v2.2; wall_contact reported separately (0/25)",
   "limitations": ["1 A state", "1 B target", "5 seeds", "B reference reconstructed", "internal controller target/queue not fully logged"]
 }
+

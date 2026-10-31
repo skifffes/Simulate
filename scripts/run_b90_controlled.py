@@ -46,7 +46,6 @@ class ControlledEpisode(SnapshotEpisode):
             gw=0.035
             if self.group=='B':
                 for j in range(7):p.resetJointState(self.sim.robot,j,float(qb[j]),physicsClientId=self.sim.client)
-            for j in (9,10):p.resetJointState(self.sim.robot,j,gw,physicsClientId=self.sim.client)
             self.sim.command(qb);set_gripper(self.sim,gw,20.0,0.05)
             for _ in range(30):self.sim.step();self.physics_step+=1
         else:
