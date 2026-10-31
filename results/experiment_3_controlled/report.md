@@ -22,7 +22,7 @@ v4 结果：
 | **C continuous v4** | 5 | **4/5** | 0 | **5.2×10⁻⁶ rad** | **5.7×10⁻¹³** |
 
 - **B/C continuous 都真正到达 qB**：201 步收敛（0.8375 s），q 误差 5.2×10⁻⁶ rad，dq 5.7×10⁻¹³；实际 q/EE/物体/图像一致。
-- **v4 还验证了实际夹爪与真实模型输入**：实际左右手指 **35.00026 / 34.99980 mm**，B/C 差 0；9D state 输入 L2=0；top/wrist 归一化输入 MAE=0、hash 相同；启动接触数 0。
+- **v4 还验证了实际夹爪、接触与真实模型输入**：实际左右手指 **35.00026 / 34.99980 mm**，B/C 差 0；两指 dq **5.16e-11 / -5.95e-11**；启动接触为 **4 个物体-桌面、0 物体-机械臂、0 物体-墙**；9D state 输入 L2=0；top/wrist 归一化输入 MAE=0、hash 相同；seed0 的首次 `PolicyRunner.act()` 实参 top/wrist/state 最大差均为 **0.0**。
 - B/C continuous 的 5 个配对 seed **结果与行为完全相同**：4/5，失败均为 seed4 tilt 19.26°；首动作七关节 L2=0；gap/tilt 相同。
 - **没有观察到连续 transition 的额外残余影响。**
 - **25 次中 wall_contact=0**；22 次 v2.2 成功，3 次失败（C snapshot seed4、B/C continuous seed4）。v2.2 成功不是墙接触。
@@ -81,10 +81,11 @@ v4 结果：
 
 | seed | q L2 | dq L2 | EE mm | **actual grip L/R mm** | relative pos mm | relative rot deg | **9D state input** | **top/wrist input MAE** | contacts | action7 L2 |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 0–4 | **0.0** | **0.0** | **0.0** | **0.0 / 0.0** | **0.0** | **0.0** | **0.0** | **0 / 0** | **0** | **0.0** |
+| 0–4 | **0.0** | **0.0** | **0.0** | **0.0 / 0.0** | **0.0** | **0.0** | **0.0** | **0 / 0** | **0 robot / 4 table / 0 wall** | **0.0** |
 
 - 实际夹爪：左 **0.03500026 m**，右 **0.03499980 m**；B/C 完全一致。
-- 首推理接触数：0；物体速度差0。
+- 两指实际 dq：**5.16×10⁻¹¹ / −5.95×10⁻¹¹**；B/C 差0。
+- 首推理接触：物体-桌面 **4**，物体-机械臂 **0**，物体-墙 **0**；物体速度差0。
 - 目标 q、实际 q、q_target 均为 qB（差异 5.2e-6），dq≈0。
 - B/C continuous 是当前最干净的状态匹配对照。
 
@@ -119,7 +120,7 @@ C seed4 失败与 B/C 首动作相同并存，说明二值成功对后续动力�
 Snapshot 路径可执行；v4 continuous 通过收敛验证：201 步、q 误差 5.2e-6 rad、dq≈0。不是固定 30 步的假到达。
 
 **2. 匹配 q 后哪些变量仍未匹配？**  
-- B/C continuous：**无记录差异**；q/dq/EE/relative pose/actual grip/9D input/top-wrist input/action7 全0；接触0。
+- B/C continuous：**无记录差异**；q/dq/EE/relative pose/actual grip/9D input/top-wrist input/action7 全0；物体-机械臂接触0（物体-桌面4）。
 - A/B：物体 1.864 mm、相对位姿 1.864 mm、top 0.058。
 - 控制器内部 target/queue 未完整审计，但 q_target=qB 和真实首动作已保存。
 
@@ -157,7 +158,7 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 
 ### Observed
 
-- v4 B/C continuous 201 步收敛，q 误差5.2e-6 rad，dq5.7e-13；q/EE/relative pose/actual grip/9D input/top-wrist input/action7=0，接触0。
+- v4 B/C continuous 201 步收敛，q 误差5.2e-6 rad，dq5.7e-13；q/EE/relative pose/actual grip/9D input/top-wrist input/action7=0；物体-机械臂接触0，物体-桌面4。
 - B/C continuous 5 seeds 均4/5，失败均 seed4 tilt19.26°，gap/tilt相同。
 - Snapshot A5/5、B5/5、C4/5；C snapshot seed4 tilt19.78°。
 - 25 次 wall_contact=0；22 次 v2.2 成功。
@@ -207,4 +208,6 @@ A/B snapshot 5/5；B/C continuous 4/5（seed4 同失败）；C snapshot4/5。
 - C snapshot seed4 与 continuous seed4 的关系仍未完全识别：两者都失败，但 snapshot C 失败而 B 成功；连续 B/C 同失败。
 - 规划为碰撞采样直线，不是连续时间动态可行轨迹。
 - wall_contact 基于仿真接触日志；未做力/穿透审计。
+
+
 

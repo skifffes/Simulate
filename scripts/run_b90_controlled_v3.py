@@ -44,7 +44,16 @@ class ConvergedEpisode(ControlledEpisode):
         q=self.sim.q();dq=np.array([p.getJointState(self.sim.robot,j,physicsClientId=self.sim.client)[1] for j in range(9)])
         pos,quat=p.getBasePositionAndOrientation(self.block,physicsClientId=self.sim.client);vel,ang=p.getBaseVelocity(self.block,physicsClientId=self.sim.client)
         ee=p.getLinkState(self.sim.robot,11,computeForwardKinematics=True,physicsClientId=self.sim.client)
-        self.initial_state={'q':q.tolist(),'dq':dq.tolist(),'ee':list(ee[4]),'ee_quat':list(ee[5]),'obj_pos':list(pos),'obj_quat':list(quat),'obj_vel':list(vel),'obj_ang':list(ang),'seed':self.control_seed,'group':self.group,'mode':self.mode,'q_target':qb.tolist(),'grip_target':gw,'grip_actual':[float(x) for x in finger_widths(self.sim)],'converged':self.converged,'conv_steps':self.conv_steps}
+        contacts=p.getContactPoints(physicsClientId=self.sim.client)
+        ct={'robot_object':0,'object_table':0,'object_wall':0,'robot_other':0}
+        for c in contacts:
+            ba,bb=c[1],c[2]
+            if {ba,bb}=={self.sim.robot,self.block}:ct['robot_object']+=1
+            elif {ba,bb}=={self.block,self.sim.plane}:ct['object_table']+=1
+            elif {ba,bb}=={self.block,self.wall}:ct['object_wall']+=1
+            elif self.sim.robot in (ba,bb):ct['robot_other']+=1
+        fdq=[float(p.getJointState(self.sim.robot,j,physicsClientId=self.sim.client)[1]) for j in (9,10)]
+        self.initial_state={'q':q.tolist(),'dq':dq.tolist(),'ee':list(ee[4]),'ee_quat':list(ee[5]),'obj_pos':list(pos),'obj_quat':list(quat),'obj_vel':list(vel),'obj_ang':list(ang),'seed':self.control_seed,'group':self.group,'mode':self.mode,'q_target':qb.tolist(),'grip_target':gw,'grip_actual':[float(x) for x in finger_widths(self.sim)],'finger_dq':fdq,'contacts_start':ct,'converged':self.converged,'conv_steps':self.conv_steps}
         (self.out/'initial_state.json').write_text(json.dumps(self.initial_state,indent=2))
         obs=self.rig256.capture();np.savez_compressed(self.out/'initial_observation.npz',top=obs['top'],wrist=obs['wrist'])
         state=np.concatenate([q,finger_widths(self.sim)]).astype(np.float32)
@@ -53,11 +62,25 @@ class ConvergedEpisode(ControlledEpisode):
         np.savez_compressed(self.out/'model_input.npz',top=top,wrist=wrist,state=state,task='push the orange block along the positive X direction to the wall')
     def run(self):
         self.build()
+        if getattr(self.args,'state_only',False):
+            if p.isConnected(self.sim.client):p.disconnect(self.sim.client)
+            return
         if not self.converged:
             self.finish(True,False,None)
             if p.isConnected(self.sim.client):p.disconnect(self.sim.client)
             return
         seed=self.control_seed;random.seed(seed);torch.manual_seed(seed);torch.cuda.manual_seed_all(seed);np.random.seed(seed)
+        if self.runner is not None:
+            orig=self.runner.act;saved=[False]
+            def act(frames,state,task):
+                if not saved[0]:
+                    saved[0]=True
+                    np.savez_compressed(self.out/'act_input.npz',**{f'raw_{k}':v for k,v in frames.items()},state=np.asarray(state),task=task)
+                    top=torch.from_numpy(np.ascontiguousarray(frames['top'])).float().div_(255.0).permute(2,0,1).numpy()
+                    wrist=torch.from_numpy(np.ascontiguousarray(frames['wrist'])).float().div_(255.0).permute(2,0,1).numpy()
+                    np.savez_compressed(self.out/'act_input_norm.npz',top=top,wrist=wrist,state=np.asarray(state),task=task)
+                return orig(frames,state,task)
+            self.runner.act=act
         success,first=(False,None)
         try:success,first=self.run_b()
         finally:

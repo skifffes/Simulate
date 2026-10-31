@@ -62,7 +62,7 @@ class ControlledEpisode(SnapshotEpisode):
         self.initial_z=float(p.getBasePositionAndOrientation(self.block,physicsClientId=self.sim.client)[0][2])
         self.initial_xy=np.asarray(p.getBasePositionAndOrientation(self.block,physicsClientId=self.sim.client)[0][:2])
         self.b_start_z=self.initial_z
-        self.runner=PolicyRunner(self.args.policy)
+        self.runner=PolicyRunner(self.args.policy) if not getattr(self.args,'state_only',False) else None
     def run(self):
         self.build()
         seed=self.control_seed

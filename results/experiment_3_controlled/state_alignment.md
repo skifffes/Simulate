@@ -18,7 +18,8 @@ This file uses the **actual state and images captured immediately before the fir
 | **actual left finger** | **35.00026 mm** |
 | **actual right finger** | **34.99980 mm** |
 | **actual gripper B/C difference** | **0.0 mm** |
-| **startup contacts** | **0** |
+| **actual finger dq (left/right)** | **5.16×10⁻¹¹ / −5.95×10⁻¹¹** |
+| **startup contacts** | **4 table; 0 robot-object; 0 wall** |
 | **9D model state input L2** | **0.0** |
 | **top/wrist normalized input MAE** | **0.0 / 0.0** |
 | top RGB hash | **equal** |
@@ -28,6 +29,14 @@ This file uses the **actual state and images captured immediately before the fir
 
 Convergence criteria: q L2≤0.01 rad, q max≤0.01, dq L2≤0.2, object speed≤0.01 m/s, grip error≤2 mm, held 120 steps, max 1200 steps. All 10 runs converged in 201 steps. The pre-v4 run had q error 0.671 rad and EE error 207 mm; it is invalid and replaced. V4 physically adjusts the gripper from the A-open state with `set_gripper` (no `resetJointState` for fingers); the B/C actual finger positions are equal at 35.00026/34.99980 mm.
 
+**Actual `PolicyRunner.act()` input check (seed 0):** the wrapper saved the exact arguments at the first `act(frames, state, task)` call, then normalized them as in `PolicyRunner.act` (`float/255`, CHW). B/C:
+- top max abs diff **0.0**
+- wrist max abs diff **0.0**
+- 9D state max abs diff **0.0**
+- task string equal
+
+This is not a reconstruction from the simulator; it is the input passed to the policy call.
+
 ## Snapshot B/C (v2 state audit; still valid)
 
 | Variable | Value |
@@ -36,7 +45,7 @@ Convergence criteria: q L2≤0.01 rad, q max≤0.01, dq L2≤0.2, object speed�
 | EE position | **1.79×10⁻⁴ mm** |
 | object position | **3.61×10⁻⁸ mm** |
 | relative translation | **1.91×10⁻⁴ mm** |
-| relative rotation | **0°** |
+| relative rotation | **0.167°** |
 | top/wrist MAE | **0 / 0** |
 | first action 7-joint L2 | **0.0** |
 | contacts | 0 vs 0 |
@@ -80,5 +89,6 @@ The rectangular block is 180°-symmetric; full relative quaternion rotation is 1
 - **A/B:** not a pure object-position test: object position and top image differ together.
 - **Controller target:** v3 `initial_state.json` has `q_target=qB`; raw full-precision first actions are in `first_action_v3.csv`.
 - **Observation hashes:** `data/observation_hashes_v3.csv`.
+
 
 
