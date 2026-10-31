@@ -1,0 +1,6 @@
+﻿source_experiment,state_id,episode_id,gripper_mm,robot_q_available,object_pose_available,top_rgb_available,wrist_rgb_available,expert_action_available,timestamps_available,physics_trace_available,first_contact_available,usable_for_teacher_forcing,limitations
+2.6_B_gripper_variation,ep66_f39,66,14,True,True,True,True,True,True,True,True,True,RGB captured by replay; original run had video only
+2.6_B_gripper_variation,ep66_f39,66,35,True,True,True,True,True,True,True,True,True,RGB captured by replay
+2.11_C3_expert,C3_seed40000000,,14,True,True,True,True,True,True,True,True,True,expert newly run; RGB captured by replay
+2.11_C3_expert,C3_seed40000000,,35,True,True,True,True,True,True,True,True,True,expert newly run; RGB captured by replay
+2.11_C3_expert,C3_seed40000000,,40,True,True,True,True,True,True,True,True,True,40mm is out of B90 training range

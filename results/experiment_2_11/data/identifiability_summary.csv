@@ -1,0 +1,9 @@
+﻿question,status,note
+Q1 available data,Observed,5 expert trajectories with q/action/video; RGB replayed; no contact labels in parquet
+Q2 expert 14 vs35 action difference,Observed,ep66/C3 expert initial target nearly identical because expert closes to14 before approach; any later difference is trajectory divergence
+Q3 C3 expert 14/35/40 approach,Observed,expert follows same fixed 0.07->0.018 path after closing; width does not change waypoint
+Q4 D2 joint target error,Observed,q L2 ~0.10-0.20 rad at h0; EE z error 1-18mm
+Q5 model vs expert conditional response,Supported,model 35-14 higher than expert at h0/h19; C3 40 even larger
+Q6 C3 deviation mode,Supported,higher initial target and delayed descent for 35/40; 40 strongest
+Q7 link to 2.10 gap,Descriptive only,both C3/ep66 wide local support is zero; no causal identification
+Q8 training intervention hypothesis,Candidate only,fixed-q wide 35 expert trajectories at C3/ep66; 40 separate extrapolation

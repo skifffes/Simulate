@@ -1,0 +1,18 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+task: "push the orange block along the positive X direction to the wall"
+expert: vla.atomic_tasks.Experts SkillExpert.skill_b (E0 hard-coded waypoints)
+states:
+  ep66_f39: {source: B90_training_frame, widths_mm: [14, 35]}
+  C3_seed40000000: {source: A90+C3_terminal, widths_mm: [14, 35, 40]}
+teacher_forcing:
+  model_seeds: 3
+  action_chunk: 50
+  action_definition: absolute joint target + gripper target
+  observations: 386 frames / 5 trajectories
+  RGB: replayed 256x256 top/wrist (not original saved arrays)
+  do_not_execute_model_actions: true
+comparison:
+  horizons: [0, 4, 9, 19, 49]
+  primary: initial frame h0/h4/h9
+training: none

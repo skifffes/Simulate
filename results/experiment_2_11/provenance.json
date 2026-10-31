@@ -1,0 +1,11 @@
+{
+  "created": "2026-10-31T11:50:00+08:00",
+  "git_commit": "d87d377 + experiment_2.11 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "expert": "E0 RecordingExpert.skill_b (fixed 0.07/0.018 waypoints)",
+  "observations": "5 expert trajectories, 386 frames, RGB replayed from snapshot+expert actions",
+  "teacher_forcing": {"model_seeds": 3, "chunk": 50, "executed": false},
+  "data_exclusions": ["no action execution of D2", "no new IK states", "no training"],
+  "limitations": ["only 2 states", "5 trajectories", "3 model seeds", "no quaternion error table"]
+}

@@ -1,0 +1,3 @@
+﻿state_id,source,widths_mm,same_q,same_object,note
+ep66_f39,B90 training frame,14;35,True,True,real B90 training midstate; 35 has no local training support
+C3_seed40000000,A90+C3 connector terminal,14;35;40,True,True,35/40 are out-of-local-coverage; 40 out-of-global B90 range
