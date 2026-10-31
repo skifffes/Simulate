@@ -2,12 +2,15 @@ checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
 checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
 base_commit: 576048a82fcef5ab60575b90c835f4a0b8fc4d16
 b_target: ep064_f000
-groups: [A_ref, B_place, C_transition]
+groups: [A_snapshot, B_snapshot, C_snapshot, B_continuous, C_continuous]
 paired_seeds: [0,1,2,3,4]
+settle_steps: 30
 command_interval: 12 physics steps
 max_policy_ticks: 260
 success_metric: v2.2
 task: "push the orange block along the positive X direction to the wall"
+relative_pose: "T_EE^-1 T_object (translation + quaternion rotation)"
+action_distance: "7-joint L2 on the first action; grip separately"
 thresholds:
   q_l2_rad: 0.01
   q_max_rad: 0.01
@@ -16,8 +19,8 @@ thresholds:
   ee_rot_deg: 1.0
   grip_mm: 0.5
   obj_pos_mm: 0.5
-  obj_axis_deg: 10.0
-  ee_obj_rel_mm: 0.5
+  rel_pos_mm: 0.5
+  rel_rot_deg: 5.0
   top_mae_px: 1.0
   wrist_mae_px: 1.0
   contacts_delta: 0

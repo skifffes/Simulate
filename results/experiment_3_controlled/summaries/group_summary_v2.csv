@@ -1,0 +1,6 @@
+﻿mode,group,n,success,wall,mean_gap_mm,mean_tilt_deg
+snapshot,A,5,5,0,15.528000000000002,1.6176
+snapshot,B,5,5,0,12.472,0.019
+snapshot,C,5,4,0,13.309999999999999,4.189400000000001
+continuous,B,5,5,0,16.334,0.1522
+continuous,C,5,5,0,16.334,0.1522

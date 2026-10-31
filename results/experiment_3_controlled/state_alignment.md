@@ -1,30 +1,78 @@
-# State alignment: A_ref vs B_place vs C_transition
+# State alignment (v2): actual first-inference states
 
-State alignment is computed from the complete saved startup states (`initial_states.csv`), images from `CameraRig` 256, and object/EE poses. B/C are the causal comparison; A/B differ by object scene only.
+This file uses the **actual state and images captured immediately before the first D2 inference** from the v2 rollouts. It does not use a separate offline 30-step audit.
 
-| Variable | A_ref vs B_place | B_place vs C_transition | Threshold | B/C pass |
-|---|---:|---:|---:|---|
-| Joint q L2 | <1e-7 rad | **8.8e-7 rad** | 0.01 rad | ✅ |
-| Joint q max | <1e-7 rad | 5.0e-7 rad | 0.01 rad | ✅ |
-| Joint dq L2 | 0 | 0 | 0.1 | ✅ |
-| EE position | 3.3e-5 mm | **1.8e-4 mm** | 1 mm | ✅ |
-| EE rotation | 0° | 0° | 1° | ✅ |
-| Gripper opening | 1.5e-7 mm | 1.6e-9 mm | 0.5 mm | ✅ |
-| Object position | **1.864 mm** | **3.6e-8 mm** | 0.5 mm | ✅ |
-| Object yaw-axis | 2.54° | 0° | 10° | ✅ |
-| Object speed | 2.6e-6 mm/s | 1.4e-10 mm/s | 1 mm/s | ✅ |
-| EE–object relative position | **1.864 mm** | 3.6e-8 mm | 0.5 mm | ✅ |
-| Contact count | 0 vs 0 | 0 vs 0 | equal | ✅ |
-| Top RGB MAE | **0.058** | **0.0** | 1.0 px | ✅ |
-| Wrist RGB MAE | 0.0 | **0.0** | 1.0 px | ✅ |
+- **Snapshot:** A/B/C restored from saved state, then one unified 30-step settle.
+- **Continuous:** B/C built from the A terminal; C executes the joint transition in the same process, then immediately starts D2; B does the diagnostic qB placement, then starts D2. Both use the same 30-step settle and no intermediate snapshot.
 
-- **B_place and C_transition are state-aligned** on every recorded variable. Their top and wrist images are bit-identical; object and q are identical to numerical precision; velocities are zero; no contacts.
-- **A_ref vs B_place** have identical q, q velocity, EE, gripper, wrist image; they differ by **object position 1.864 mm**, yaw-axis 2.54°, and top image MAE 0.058. This is a **scene mismatch**, not a joint-state mismatch.
-- **Controller target positions were not saved** in the startup diagnostics; this is a remaining unrecorded variable. The action chunk queue is reset in `run_b`; policy process is fresh per rollout. This limitation is recorded in the report.
-- Since A_ref and B_place are both static (dq≈0, object speed≈0, no contacts), velocity/contact differences are not a confound in this pilot.
+## B/C snapshot
+
+| Variable | Value |
+|---|---:|
+| q L2 | **9.07×10⁻⁷ rad** |
+| q max | 5.26×10⁻⁷ rad |
+| dq L2 | 6.55×10⁻¹¹ |
+| EE position | **1.79×10⁻⁴ mm** |
+| EE rotation | 0° |
+| gripper | 1.88×10⁻⁶ mm |
+| object position | **3.61×10⁻⁸ mm** |
+| object yaw-axis | 1.95×10⁻⁸° |
+| **full T_EE⁻¹T_object translation** | **1.91×10⁻⁴ mm** |
+| **full T_EE⁻¹T_object rotation** | **0°** |
+| top RGB MAE | **0.0** |
+| wrist RGB MAE | **0.0** |
+| contacts | 0 vs 0 |
+
+## B/C continuous
+
+| Variable | Value |
+|---|---:|
+| q L2 | **0.0** |
+| EE position | **0.0** |
+| **relative translation** | **0.0** |
+| **relative rotation** | **0.0277°** |
+| top/wrist MAE | **0.0** |
+| contacts | 0 vs 0 |
+
+Since B and C follow the same qB/grip and settle, their continuous starts are identical at recorded precision. The binary outcomes are also identical for all 5 seeds.
+
+## A/B snapshot
+
+| Variable | Value |
+|---|---:|
+| q L2 | 5.29×10⁻⁸ rad |
+| EE position | 3.33×10⁻⁵ mm |
+| EE rotation | 0° |
+| object position | **1.864 mm** |
+| object yaw-axis | 2.54° |
+| **full T_EE⁻¹T_object translation** | **1.864 mm** |
+| **full T_EE⁻¹T_object rotation** | **177.46°** |
+| top RGB MAE | **0.05798** |
+| wrist RGB MAE | 0.0 |
+
+The full relative rotation is 177.46° because the rectangular block is 180°-symmetric; the **axis-equivalent** yaw difference is 2.54°. Both are reported; for contact geometry the axis-equivalent is the physically relevant one, but the full SE(3) value is not hidden.
+
+## Thresholds
+
+| Variable | Threshold | B/C snapshot | B/C continuous | A/B |
+|---|---:|---|---|---|
+| q L2 | 0.01 rad | PASS | PASS | PASS |
+| q max | 0.01 rad | PASS | PASS | PASS |
+| dq L2 | 0.1 | PASS | PASS | PASS |
+| EE position | 1 mm | PASS | PASS | PASS |
+| EE rotation | 1° | PASS | PASS | PASS |
+| gripper | 0.5 mm | PASS | PASS | PASS |
+| object position | 0.5 mm | PASS | PASS | **FAIL (1.864 mm)** |
+| relative translation | 0.5 mm | PASS | PASS | **FAIL (1.864 mm)** |
+| relative rotation | 5° | PASS | PASS | **FAIL (177.46°) / axis 2.54°** |
+| top RGB MAE | 1 px | PASS | PASS | PASS (0.058) |
+| wrist RGB MAE | 1 px | PASS | PASS | PASS |
+| contacts | equal | PASS | PASS | PASS |
 
 ## Interpretation
 
-- B/C: **State-mismatch: NO** (all recorded thresholds pass). The difference between B and C is the arrival history, not the recorded final state.
-- A/B: **State-mismatch: YES for full physical scene** (object position and EE–object relative pose differ by 1.864 mm). A vs B can identify the effect of the object-scene shift, but not object position independently from the corresponding top-image change.
-- A/B/C all have the same q and EE and gripper; no group has an object contact or residual velocity.
+- **B/C snapshot:** state-aligned on every recorded variable; first-action q L2 is exactly **0.0**; only later dynamics/numerical amplification can differ.
+- **B/C continuous:** state-aligned and **all 5 outcomes identical**; no evidence of a transition-history residual.
+- **A/B:** not a pure object-position test; object position and top image are both different. A/B first-action q L2 is 0.0084–0.0103 rad; A and B are both 5/5 in the v2 snapshot run.
+- **Controller target:** `q_target` in `initial_state.json` is the actual held q, not an independent commanded target. The actual D2 action target is in `first_action_v2.csv` (`q1..q7`, `grip_mm`). This is an explicit limitation.
+- **Observation hashes:** `data/observation_hashes_v2.csv` archives the actual top/wrist SHA-256 prefixes at first inference.

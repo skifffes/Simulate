@@ -1,0 +1,6 @@
+﻿seed,A_snapshot,B_snapshot,C_snapshot,B_continuous,C_continuous,C_snapshot_tilt,C_snapshot_gap,C_continuous_gap
+0,True,True,True,True,True,0.009,0.63,10.52
+1,True,True,True,True,True,1.128,18.25,16.049999999999997
+2,True,True,True,True,True,0.02,15.379999999999999,17.9
+3,True,True,True,True,True,0.01,19.32,17.86
+4,True,True,False,True,True,19.78,12.97,19.34
