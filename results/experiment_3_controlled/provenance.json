@@ -1,0 +1,15 @@
+{
+  "created": "2026-10-31T15:20:00+08:00",
+  "git_base_commit": "576048a82fcef5ab60575b90c835f4a0b8fc4d16",
+  "git_worktree": "experiment_3_controlled uncommitted",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "checkpoint_sha256": "34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b",
+  "a_terminal": "results/experiment_3/snapshots/a_terminals/a90_40000000.bullet",
+  "b_target": "ep064_f000 from data/_shards_e23/B_D2",
+  "b_reference": "reconstructed scene; not original training snapshot",
+  "groups": {"A": "B reference", "B": "A scene qB reset diagnostic", "C": "A scene planned transition"},
+  "seeds": [0,1,2,3,4],
+  "controller": "sim.command, 12 steps per 0.01 rad waypoint",
+  "success": "v2.2 distance predicate; wall_contact reported separately",
+  "limitations": ["1 A state", "1 B target", "5 seeds", "controller target not saved", "B reference is reconstructed"]
+}

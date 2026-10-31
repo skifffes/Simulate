@@ -1,0 +1,24 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+base_commit: 576048a82fcef5ab60575b90c835f4a0b8fc4d16
+b_target: ep064_f000
+groups: [A_ref, B_place, C_transition]
+paired_seeds: [0,1,2,3,4]
+command_interval: 12 physics steps
+max_policy_ticks: 260
+success_metric: v2.2
+task: "push the orange block along the positive X direction to the wall"
+thresholds:
+  q_l2_rad: 0.01
+  q_max_rad: 0.01
+  dq_l2: 0.1
+  ee_pos_mm: 1.0
+  ee_rot_deg: 1.0
+  grip_mm: 0.5
+  obj_pos_mm: 0.5
+  obj_axis_deg: 10.0
+  ee_obj_rel_mm: 0.5
+  top_mae_px: 1.0
+  wrist_mae_px: 1.0
+  contacts_delta: 0
+video: videos/AtoB_full.mp4

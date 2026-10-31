@@ -1,0 +1,2 @@
+state,seed,run1,run2,first_action_q1,first_action_q4,first_action_q7,first_action_grip_mm,n_policy_steps,run1_success,run2_success,run1_wall,run2_wall,equal_at_5dp
+B_place,0,B_r0,B_seed0_rep,0.16923,-2.70469,1.14081,14.81,105,True,True,True,True,True

@@ -1,0 +1,11 @@
+{
+  "seed": 53050005,
+  "bullet": "initial_states/A_ref.bullet",
+  "group": "yaw90",
+  "tag": "A_ref",
+  "state_id": "A_ref",
+  "kind": "B_reference",
+  "source": "reconstructed B reference ep064 f000",
+  "obj": [0.54812, 0.182, 0.01999],
+  "width_m": 0.035
+}

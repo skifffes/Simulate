@@ -1,0 +1,11 @@
+{
+  "seed": 64,
+  "bullet": "initial_states/C_transition.bullet",
+  "group": "yaw90",
+  "tag": "C_transition",
+  "state_id": "C_transition",
+  "kind": "transition",
+  "source": "A90 -> planned transition -> ep064 f000",
+  "obj": [0.549967, 0.182251, 0.019988],
+  "width_m": 0.035
+}

@@ -1,0 +1,6 @@
+﻿seed,A_success,B_success,C_success,A_tilt,B_tilt,C_tilt,A_gap,B_gap,C_gap,A_wall,B_wall,C_wall
+0,True,True,True,0.016,0.006,0.008,11.43,5.0200000000000005,0.63,False,True,False
+1,True,True,True,0.007,0.02,0.829,18.72,0.47,17.52,False,False,False
+2,True,True,True,0.018,0.003,0.003,17.23,14.51,19.400000000000002,False,False,False
+3,True,True,True,2.107,0.004,0.006,18.52,9.520000000000001,10.78,False,False,False
+4,True,False,False,1.198,15.099,17.901,17.77,14.44,13.100000000000001,False,False,False

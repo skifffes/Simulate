@@ -1,0 +1,24 @@
+{
+  "seed": 60,
+  "bullet": "/scratch/lijh/simulate_vla/results/experiment_3_controlled/initial_states/B_place.bullet",
+  "group": "yaw90",
+  "tag": "B_place",
+  "state_id": "B_place",
+  "kind": "B_place",
+  "source": "A scene qB reset diagnostic",
+  "obj": [
+    0.5499672796726224,
+    0.18225080834583177,
+    0.01998821972055239
+  ],
+  "width_m": 0.03499997965991497,
+  "q": [
+    -0.0243316,
+    -0.6399978,
+    -0.0599692,
+    -1.92495,
+    -0.0788058,
+    1.4227421,
+    0.4631696
+  ]
+}
