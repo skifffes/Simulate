@@ -1,0 +1,12 @@
+{
+  "created": "2026-10-31T14:30:00+08:00",
+  "git_commit": "20972fd + experiment_3 working tree",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "a_terminals": "5 SkillExpert.skill_a90 snapshots; all identical q/object",
+  "b_starts": "60 yaw90 B_D2 episode starts",
+  "pilot_pairs": 3,
+  "planner": "straight edge with collision samples; RRT-Connect fallback in script",
+  "execution": "dense interpolation, real sim.command, object untouched",
+  "d2": "3 seeds per AtoB/Bref",
+  "limitations": ["1 unique A terminal", "object not moved to B reference position", "3 pairs", "3 D2 seeds"]
+}

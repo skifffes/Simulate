@@ -1,0 +1,11 @@
+﻿stage,metric,count,denominator,note
+1,unique A90 terminal states,1,5,5 snapshots identical q/object
+2,B90 training starts,60,60,yaw90
+3,scene-compatible pairs,60,60,object diff 1.5-17.9mm; axis<10deg
+3b,exact object position match,0,60,no teleport; A object stays at A place
+4,goal collision-valid (pilot),3,3,selected 3 B starts
+5,planned (pilot),3,3,collision-checked straight edge; RRT fallback unused
+6,executed (pilot),3,3,dense interpolated joint commands
+7,robot-state matched,3,3,"q<0.05rad, EE<10mm"
+8,visual matched,3,3,top MAE<1; wrist<5
+9,B90 pair with >=1 success,2,3,AtoB 3/9 rollouts vs Bref 6/9

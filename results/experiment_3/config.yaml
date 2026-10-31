@@ -1,0 +1,12 @@
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+checkpoint_sha256: 34a6e3080a88250302a9f0abbc01608b58097324af2c321b00b84c395fbdd58b
+task: A90 -> B90
+a_terminals: 5 snapshots from SkillExpert.skill_a90
+b_starts: 60 real yaw90 episode starts from data/_shards_e23/B_D2
+scene_threshold: {object_pos_mm: 20, yaw_axis_deg: 10}
+pilot_pairs: [ep074_f000, ep064_f000, ep070_f000]
+planner: collision-checked straight joint edge; RRT-Connect fallback implemented but unused
+execution: dense joint interpolation, 12 physics steps per waypoint
+gripper: set to recorded B90 start width (35 mm) after arm path
+thresholds: {joint_l2_rad: 0.05, ee_position_mm: 10, gripper_mm: 2}
+d2_rollout_seeds: 3
