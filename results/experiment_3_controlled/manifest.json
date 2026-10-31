@@ -135,6 +135,11 @@
       "sha256": "2e03a11ca35289ba92cb3be673768ee285dbb7381e363fa0c2c57518dc4d1849"
     },
     {
+      "path": "summaries/repeatability.csv",
+      "bytes": 251,
+      "sha256": "7239811a69d647959df9d8c691f5a2d85b1238dd578cb0c62423c0135bccb72d"
+    },
+    {
       "path": "videos/AtoB_full.mp4",
       "bytes": 1924255,
       "sha256": "ae6a565b4c6af3d133f30db11fb7efbb75711c3ee8baa31ab69c4a901e149a88"
