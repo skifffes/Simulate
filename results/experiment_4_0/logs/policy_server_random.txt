@@ -1,0 +1,24 @@
+INFO:2026-11-01 20:01:32,128:jax._src.xla_bridge:925: Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+2026-11-01 20:01:32,128 INFO Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO:2026-11-01 20:01:32,130:jax._src.xla_bridge:925: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-11-01 20:01:32,130 INFO Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-11-01 20:01:32,164 INFO jax devices: [CudaDevice(id=0)]
+2026-11-01 20:01:32,166 INFO Norm stats not found in /scratch/lijh/exp40/repo/assets/pi05_droid/droid, skipping.
+2026-11-01 20:02:41,970 INFO serving on 0.0.0.0:8000 (mode=random)
+2026-11-01 20:02:41,974 INFO server listening on 0.0.0.0:8000
+2026-11-01 20:03:12,273 INFO connection open
+2026-11-01 20:03:12,273 INFO Connection from ('127.0.0.1', 57924) opened
+2026-11-01 20:04:29,912 INFO connection closed
+2026-11-01 20:04:29,914 INFO Connection from ('127.0.0.1', 57924) closed
+2026-11-01 20:04:29,916 INFO connection open
+2026-11-01 20:04:29,916 INFO Connection from ('127.0.0.1', 57936) opened
+2026-11-01 20:04:30,215 INFO connection closed
+2026-11-01 20:04:30,215 INFO Connection from ('127.0.0.1', 57936) closed
+2026-11-01 20:04:35,990 INFO connection open
+2026-11-01 20:04:35,990 INFO Connection from ('127.0.0.1', 57940) opened
+2026-11-01 20:04:36,385 INFO connection open
+2026-11-01 20:04:36,385 INFO Connection from ('127.0.0.1', 57944) opened
+2026-11-01 20:04:36,634 INFO connection closed
+2026-11-01 20:04:36,635 INFO connection closed
+2026-11-01 20:04:36,635 INFO Connection from ('127.0.0.1', 57940) closed
+2026-11-01 20:04:36,636 INFO Connection from ('127.0.0.1', 57944) closed

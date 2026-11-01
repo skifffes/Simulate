@@ -1,0 +1,569 @@
+{
+  "A90": {
+    "scene": "A90",
+    "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+    "scene_info": {
+      "seed": 0,
+      "block_start": [
+        0.55,
+        0.0,
+        0.0199898253144541
+      ],
+      "block_yaw": 0.0,
+      "block_friction": 1.2,
+      "wall_inner_x": 0.78,
+      "tray": [
+        0.55,
+        0.4
+      ],
+      "tray_inner_gap": 0.08,
+      "scene": "A90",
+      "place_xy": [
+        0.55,
+        0.18
+      ]
+    },
+    "safety": {
+      "stopped": false,
+      "stop_reason": null,
+      "ticks": 3,
+      "wall_time_s": 0.013,
+      "limits": {
+        "joint_margin_rad": 0.02,
+        "max_joint_step_rad": 0.3,
+        "ee_box": {
+          "x": [
+            0.15,
+            0.95
+          ],
+          "y": [
+            -0.45,
+            0.6
+          ],
+          "z": [
+            0.005,
+            0.6
+          ]
+        },
+        "object_speed_max": 3.0,
+        "tracking_error_max": 0.25,
+        "wall_time_max_s": 60,
+        "max_ticks": 3
+      },
+      "events": []
+    },
+    "server_metadata": {
+      "config": "pi05_droid",
+      "mode": "checkpoint",
+      "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+      "openpi_commit": "unknown"
+    },
+    "actions": {
+      "shape": [
+        15,
+        8
+      ],
+      "first3": [
+        [
+          -0.173927,
+          0.011402,
+          0.147254,
+          0.013739,
+          0.052803,
+          -0.046965,
+          -0.037015,
+          0.829407
+        ],
+        [
+          -0.180453,
+          0.008906,
+          0.147054,
+          0.01402,
+          0.052896,
+          -0.043121,
+          -0.046999,
+          0.833581
+        ],
+        [
+          -0.166215,
+          0.009144,
+          0.133463,
+          0.022928,
+          0.062538,
+          -0.034024,
+          -0.044481,
+          0.757594
+        ]
+      ],
+      "summary": {
+        "shape": [
+          15,
+          8
+        ],
+        "dtype": "float64",
+        "finite": true,
+        "joint_delta_abs_max": 0.22067089576470866,
+        "joint_delta_abs_mean": 0.08029508140717377,
+        "gripper_min": 0.5482772064921856,
+        "gripper_max": 0.8335806964961887,
+        "gripper_binary_frac": 1.0,
+        "per_dim_absmax": [
+          0.20332,
+          0.045174,
+          0.220671,
+          0.038563,
+          0.122606,
+          0.070947,
+          0.175837,
+          0.833581
+        ]
+      }
+    },
+    "checks": [
+      {
+        "check": "A90: 场景初始化",
+        "pass": true,
+        "detail": {
+          "robot": 1,
+          "block": 2,
+          "block_pos": [
+            0.55,
+            0.0,
+            0.0199898253144541
+          ],
+          "block_yaw": 0.0
+        }
+      },
+      {
+        "check": "A90: 关节限位可读",
+        "pass": true,
+        "detail": {
+          "lower": [
+            -2.967,
+            -1.833,
+            -2.967,
+            -3.142,
+            -2.967,
+            -0.087,
+            -2.967
+          ],
+          "upper": [
+            2.967,
+            1.833,
+            2.967,
+            0.0,
+            2.967,
+            3.822,
+            2.967
+          ]
+        }
+      },
+      {
+        "check": "A90: 相机 top 出图且非全黑/全白",
+        "pass": true,
+        "detail": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "mean": 210.96
+        }
+      },
+      {
+        "check": "A90: 相机 wrist 出图且非全黑/全白",
+        "pass": true,
+        "detail": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "mean": 175.05
+        }
+      },
+      {
+        "check": "A90: DROID payload 键名/形状",
+        "pass": true,
+        "detail": {
+          "shapes": {
+            "observation/exterior_image_1_left": [
+              224,
+              224,
+              3
+            ],
+            "observation/wrist_image_left": [
+              224,
+              224,
+              3
+            ],
+            "observation/joint_position": [
+              7
+            ],
+            "observation/gripper_position": [
+              1
+            ]
+          }
+        }
+      },
+      {
+        "check": "A90: 模型返回 (horizon, 8) 且有限",
+        "pass": true,
+        "detail": {
+          "shape": [
+            15,
+            8
+          ],
+          "summary": {
+            "shape": [
+              15,
+              8
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "joint_delta_abs_max": 0.22067089576470866,
+            "joint_delta_abs_mean": 0.08029508140717377,
+            "gripper_min": 0.5482772064921856,
+            "gripper_max": 0.8335806964961887,
+            "gripper_binary_frac": 1.0,
+            "per_dim_absmax": [
+              0.20332,
+              0.045174,
+              0.220671,
+              0.038563,
+              0.122606,
+              0.070947,
+              0.175837,
+              0.833581
+            ]
+          }
+        }
+      },
+      {
+        "check": "A90: 控制流程执行 3 tick 未触发安全停止",
+        "pass": true,
+        "detail": {
+          "executed_ticks": 3,
+          "stop_reason": null,
+          "safety": {
+            "joint_margin_rad": 0.02,
+            "max_joint_step_rad": 0.3,
+            "ee_box": {
+              "x": [
+                0.15,
+                0.95
+              ],
+              "y": [
+                -0.45,
+                0.6
+              ],
+              "z": [
+                0.005,
+                0.6
+              ]
+            },
+            "object_speed_max": 3.0,
+            "tracking_error_max": 0.25,
+            "wall_time_max_s": 60,
+            "max_ticks": 3
+          }
+        }
+      },
+      {
+        "check": "A90: 回合正确退出（连接已释放）",
+        "pass": true,
+        "detail": null
+      }
+    ],
+    "n_pass": 8,
+    "n_total": 8,
+    "all_pass": true
+  },
+  "B90": {
+    "scene": "B90",
+    "prompt": "push the orange block along the positive X direction to the wall",
+    "scene_info": {
+      "seed": 0,
+      "block_start": [
+        0.55,
+        0.0,
+        0.0199898253144541
+      ],
+      "block_yaw": 0.0,
+      "block_friction": 1.2,
+      "wall_inner_x": 0.78,
+      "tray": [
+        0.55,
+        0.4
+      ],
+      "tray_inner_gap": 0.08,
+      "scene": "B90",
+      "place_xy": [
+        0.55,
+        0.18
+      ]
+    },
+    "safety": {
+      "stopped": false,
+      "stop_reason": null,
+      "ticks": 3,
+      "wall_time_s": 0.006,
+      "limits": {
+        "joint_margin_rad": 0.02,
+        "max_joint_step_rad": 0.3,
+        "ee_box": {
+          "x": [
+            0.15,
+            0.95
+          ],
+          "y": [
+            -0.45,
+            0.6
+          ],
+          "z": [
+            0.005,
+            0.6
+          ]
+        },
+        "object_speed_max": 3.0,
+        "tracking_error_max": 0.25,
+        "wall_time_max_s": 60,
+        "max_ticks": 3
+      },
+      "events": []
+    },
+    "server_metadata": {
+      "config": "pi05_droid",
+      "mode": "checkpoint",
+      "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+      "openpi_commit": "unknown"
+    },
+    "actions": {
+      "shape": [
+        15,
+        8
+      ],
+      "first3": [
+        [
+          -0.121283,
+          0.005858,
+          0.099188,
+          0.012265,
+          0.05009,
+          -0.018752,
+          -0.040019,
+          0.670919
+        ],
+        [
+          -0.132311,
+          -0.004381,
+          0.103744,
+          0.020286,
+          0.056042,
+          -0.021514,
+          -0.037375,
+          0.672384
+        ],
+        [
+          -0.126392,
+          0.005541,
+          0.103652,
+          0.011796,
+          0.046323,
+          -0.017654,
+          -0.038603,
+          0.692227
+        ]
+      ],
+      "summary": {
+        "shape": [
+          15,
+          8
+        ],
+        "dtype": "float64",
+        "finite": true,
+        "joint_delta_abs_max": 0.13231089581638572,
+        "joint_delta_abs_mean": 0.04812331989055988,
+        "gripper_min": 0.6709190952417254,
+        "gripper_max": 0.7334054658860565,
+        "gripper_binary_frac": 1.0,
+        "per_dim_absmax": [
+          0.132311,
+          0.016575,
+          0.103744,
+          0.020286,
+          0.056042,
+          0.024879,
+          0.041814,
+          0.733405
+        ]
+      }
+    },
+    "checks": [
+      {
+        "check": "B90: 场景初始化",
+        "pass": true,
+        "detail": {
+          "robot": 1,
+          "block": 2,
+          "block_pos": [
+            0.55,
+            0.0,
+            0.0199898253144541
+          ],
+          "block_yaw": 0.0
+        }
+      },
+      {
+        "check": "B90: 关节限位可读",
+        "pass": true,
+        "detail": {
+          "lower": [
+            -2.967,
+            -1.833,
+            -2.967,
+            -3.142,
+            -2.967,
+            -0.087,
+            -2.967
+          ],
+          "upper": [
+            2.967,
+            1.833,
+            2.967,
+            0.0,
+            2.967,
+            3.822,
+            2.967
+          ]
+        }
+      },
+      {
+        "check": "B90: 语言指令与实验 1–3 原文一致",
+        "pass": true,
+        "detail": {
+          "prompt": "push the orange block along the positive X direction to the wall"
+        }
+      },
+      {
+        "check": "B90: 相机 top 出图且非全黑/全白",
+        "pass": true,
+        "detail": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "mean": 210.96
+        }
+      },
+      {
+        "check": "B90: 相机 wrist 出图且非全黑/全白",
+        "pass": true,
+        "detail": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "mean": 175.05
+        }
+      },
+      {
+        "check": "B90: DROID payload 键名/形状",
+        "pass": true,
+        "detail": {
+          "shapes": {
+            "observation/exterior_image_1_left": [
+              224,
+              224,
+              3
+            ],
+            "observation/wrist_image_left": [
+              224,
+              224,
+              3
+            ],
+            "observation/joint_position": [
+              7
+            ],
+            "observation/gripper_position": [
+              1
+            ]
+          }
+        }
+      },
+      {
+        "check": "B90: 模型返回 (horizon, 8) 且有限",
+        "pass": true,
+        "detail": {
+          "shape": [
+            15,
+            8
+          ],
+          "summary": {
+            "shape": [
+              15,
+              8
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "joint_delta_abs_max": 0.13231089581638572,
+            "joint_delta_abs_mean": 0.04812331989055988,
+            "gripper_min": 0.6709190952417254,
+            "gripper_max": 0.7334054658860565,
+            "gripper_binary_frac": 1.0,
+            "per_dim_absmax": [
+              0.132311,
+              0.016575,
+              0.103744,
+              0.020286,
+              0.056042,
+              0.024879,
+              0.041814,
+              0.733405
+            ]
+          }
+        }
+      },
+      {
+        "check": "B90: 控制流程执行 3 tick 未触发安全停止",
+        "pass": true,
+        "detail": {
+          "executed_ticks": 3,
+          "stop_reason": null,
+          "safety": {
+            "joint_margin_rad": 0.02,
+            "max_joint_step_rad": 0.3,
+            "ee_box": {
+              "x": [
+                0.15,
+                0.95
+              ],
+              "y": [
+                -0.45,
+                0.6
+              ],
+              "z": [
+                0.005,
+                0.6
+              ]
+            },
+            "object_speed_max": 3.0,
+            "tracking_error_max": 0.25,
+            "wall_time_max_s": 60,
+            "max_ticks": 3
+          }
+        }
+      },
+      {
+        "check": "B90: 回合正确退出（连接已释放）",
+        "pass": true,
+        "detail": null
+      }
+    ],
+    "n_pass": 9,
+    "n_total": 9,
+    "all_pass": true
+  }
+}

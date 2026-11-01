@@ -1,0 +1,85 @@
+=== 2026-11-01T19:54:01+0800 下载 v6（多域名轮询） ===
+目标总大小 11.58 GB
+SKIP assets/droid/norm_stats.json
+SKIP params/_CHECKPOINT_METADATA
+SKIP params/_METADATA
+SKIP params/_sharding
+=== 19:54:01 START params/array_metadatas/process_0 want=8856 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 8856/8856 +8856B/20s => 442B/s
+OK   params/array_metadatas/process_0 8856
+    累计 66876/12429488598 bytes (0%)
+=== 19:54:21 START params/d/ce0f37e421bcc089104ea18d07a87f8a want=2125 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 2125/2125 +2125B/20s => 106B/s
+OK   params/d/ce0f37e421bcc089104ea18d07a87f8a 2125
+    累计 73097/12429488598 bytes (0%)
+=== 19:54:41 START params/manifest.ocdbt want=117 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 0/117 +0B/25s => 0B/s
+    try=2 host=storage-download.googleapis.com 0/117 +0B/25s => 0B/s
+    try=3 host=storage.googleapis.com 0/117 +0B/25s => 0B/s
+    try=4 host=openpi-assets.storage.googleapis.com 117/117 +117B/2s => 58B/s
+OK   params/manifest.ocdbt 117
+    累计 73214/12429488598 bytes (0%)
+=== 19:55:58 START params/ocdbt.process_0/d/213a5648ef56840990e3a9d6fca5eb89 want=2238010952 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 2238010952/2238010952 +2238010952B/295s => 7586477B/s
+OK   params/ocdbt.process_0/d/213a5648ef56840990e3a9d6fca5eb89 2238010952
+    累计 2238092358/12429488598 bytes (18%)
+=== 20:00:53 START params/ocdbt.process_0/d/3d66a3d641ef2a488f1a3dad19dcc9fa want=2254235960 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 2254235960/2254235960 +2254235960B/295s => 7641477B/s
+OK   params/ocdbt.process_0/d/3d66a3d641ef2a488f1a3dad19dcc9fa 2254235960
+    累计 4492328318/12429488598 bytes (36%)
+=== 20:05:48 START params/ocdbt.process_0/d/413535d55493c7cbed0b50498ab7bbed want=811530994 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 811530994/811530994 +811530994B/125s => 6492247B/s
+OK   params/ocdbt.process_0/d/413535d55493c7cbed0b50498ab7bbed 811530994
+    累计 5303859312/12429488598 bytes (42%)
+=== 20:07:53 START params/ocdbt.process_0/d/4d9301f722d470026c2077e91a2a9845 want=4877 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 4877/4877 +4877B/14s => 348B/s
+OK   params/ocdbt.process_0/d/4d9301f722d470026c2077e91a2a9845 4877
+    累计 5303864189/12429488598 bytes (42%)
+=== 20:08:07 START params/ocdbt.process_0/d/5d3a6bc124e3135474f32512fabd1b05 want=34981888 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 0/34981888 +0B/25s => 0B/s
+    try=2 host=storage-download.googleapis.com 0/34981888 +0B/25s => 0B/s
+    try=3 host=storage.googleapis.com 0/34981888 +0B/25s => 0B/s
+    try=4 host=openpi-assets.storage.googleapis.com 0/34981888 +0B/260s => 0B/s
+    try=5 host=storage-download.googleapis.com 0/34981888 +0B/25s => 0B/s
+    try=6 host=storage.googleapis.com 34981888/34981888 +34981888B/6s => 5830314B/s
+OK   params/ocdbt.process_0/d/5d3a6bc124e3135474f32512fabd1b05 34981888
+    累计 5338846077/12429488598 bytes (42%)
+=== 20:14:13 START params/ocdbt.process_0/d/8c310ea761a921bf26a70c03ca485197 want=5801086 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 5801086/5801086 +5801086B/4s => 1450271B/s
+OK   params/ocdbt.process_0/d/8c310ea761a921bf26a70c03ca485197 5801086
+    累计 5344647163/12429488598 bytes (42%)
+=== 20:14:17 START params/ocdbt.process_0/d/8fac3a77c4f18f0ef5ebc8208373833a want=2237971599 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 2237971599/2237971599 +2237971599B/296s => 7560714B/s
+OK   params/ocdbt.process_0/d/8fac3a77c4f18f0ef5ebc8208373833a 2237971599
+    累计 7582618762/12429488598 bytes (61%)
+=== 20:19:13 START params/ocdbt.process_0/d/a0c170c234922db4ca080df944165efe want=1954680867 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 1954680867/1954680867 +1954680867B/255s => 7665415B/s
+OK   params/ocdbt.process_0/d/a0c170c234922db4ca080df944165efe 1954680867
+    累计 9537299629/12429488598 bytes (76%)
+=== 20:23:28 START params/ocdbt.process_0/d/b4bb4418fe26353e2e194fdee8d52d98 want=959 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 959/959 +959B/13s => 73B/s
+OK   params/ocdbt.process_0/d/b4bb4418fe26353e2e194fdee8d52d98 959
+    累计 9537300588/12429488598 bytes (76%)
+=== 20:23:41 START params/ocdbt.process_0/d/b862fdd01b4477d01ea1f43ddb38b88f want=2797559229 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 0/2797559229 +0B/26s => 0B/s
+    try=2 host=storage-download.googleapis.com 0/2797559229 +0B/24s => 0B/s
+    try=3 host=storage.googleapis.com 0/2797559229 +0B/25s => 0B/s
+    try=4 host=openpi-assets.storage.googleapis.com 2797559229/2797559229 +2797559229B/408s => 6856762B/s
+OK   params/ocdbt.process_0/d/b862fdd01b4477d01ea1f43ddb38b88f 2797559229
+    累计 12334859817/12429488598 bytes (99%)
+=== 20:31:44 START params/ocdbt.process_0/d/bc8c706bafc394cde9dc5c45bc6fcc41 want=70003953 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 70003953/70003953 +70003953B/13s => 5384919B/s
+OK   params/ocdbt.process_0/d/bc8c706bafc394cde9dc5c45bc6fcc41 70003953
+    累计 12404863770/12429488598 bytes (99%)
+=== 20:31:57 START params/ocdbt.process_0/d/edabb12082994ee3894f5d98c7a3282c want=24657140 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 0/24657140 +0B/25s => 0B/s
+    try=2 host=storage-download.googleapis.com 24657140/24657140 +24657140B/18s => 1369841B/s
+OK   params/ocdbt.process_0/d/edabb12082994ee3894f5d98c7a3282c 24657140
+    累计 12429520910/12429488598 bytes (100%)
+=== 20:32:40 START params/ocdbt.process_0/manifest.ocdbt want=456 have=0
+    try=1 host=openpi-assets.storage.googleapis.com 456/456 +456B/8s => 57B/s
+OK   params/ocdbt.process_0/manifest.ocdbt 456
+    累计 12429521366/12429488598 bytes (100%)
+=== 汇总 ===
+12G	/scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid
+=== 2026-11-01T20:32:48+0800 结束 ===

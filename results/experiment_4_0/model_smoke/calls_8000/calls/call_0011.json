@@ -1,0 +1,141 @@
+{
+  "call": 11,
+  "weights": "checkpoint",
+  "wall_time_s": 0.16328998608514667,
+  "infer_ms_reported": 102.90936008095741,
+  "request_keys": [
+    "observation/exterior_image_1_left",
+    "observation/gripper_position",
+    "observation/joint_position",
+    "observation/wrist_image_left",
+    "prompt"
+  ],
+  "request_shapes": {
+    "observation/exterior_image_1_left": [
+      224,
+      224,
+      3
+    ],
+    "observation/wrist_image_left": [
+      224,
+      224,
+      3
+    ],
+    "observation/joint_position": [
+      7
+    ],
+    "observation/gripper_position": [
+      1
+    ],
+    "prompt": null
+  },
+  "request_dtypes": {
+    "observation/exterior_image_1_left": "uint8",
+    "observation/wrist_image_left": "uint8",
+    "observation/joint_position": "float32",
+    "observation/gripper_position": "float32"
+  },
+  "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+  "model_inputs": {
+    "state": [
+      -1.327011,
+      -0.67731,
+      1.317968,
+      -0.357032,
+      0.295195,
+      -0.683416,
+      0.176653,
+      1.01796,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "state_shape": [
+      32
+    ],
+    "image_shapes": {
+      "base_0_rgb": [
+        224,
+        224,
+        3
+      ],
+      "left_wrist_0_rgb": [
+        224,
+        224,
+        3
+      ],
+      "right_wrist_0_rgb": [
+        224,
+        224,
+        3
+      ]
+    },
+    "image_dtypes": {
+      "base_0_rgb": "uint8",
+      "left_wrist_0_rgb": "uint8",
+      "right_wrist_0_rgb": "uint8"
+    },
+    "image_masks": {
+      "base_0_rgb": true,
+      "left_wrist_0_rgb": true,
+      "right_wrist_0_rgb": false
+    },
+    "image_pixel_range": {
+      "base_0_rgb": [
+        15.0,
+        239.0
+      ],
+      "left_wrist_0_rgb": [
+        75.0,
+        239.0
+      ],
+      "right_wrist_0_rgb": [
+        0.0,
+        0.0
+      ]
+    },
+    "tokenized_prompt_shape": [
+      200
+    ]
+  },
+  "actions": {
+    "shape": [
+      15,
+      8
+    ],
+    "dtype": "float64",
+    "finite": true,
+    "first_action": [
+      0.017182,
+      -0.081477,
+      -0.057483,
+      0.054576,
+      0.038559,
+      -0.071033,
+      -0.065183,
+      0.865493
+    ],
+    "absmax": 0.9567453331421614
+  }
+}

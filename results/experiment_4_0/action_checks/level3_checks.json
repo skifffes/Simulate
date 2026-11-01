@@ -1,0 +1,333 @@
+{
+  "n_checks": 32,
+  "n_pass": 32,
+  "n_fail": 0,
+  "all_pass": true,
+  "joint_limit_source": "pybullet_urdf",
+  "lower": [
+    -2.9671,
+    -1.8326,
+    -2.9671,
+    -3.1416,
+    -2.9671,
+    -0.0873,
+    -2.9671
+  ],
+  "upper": [
+    2.9671,
+    1.8326,
+    2.9671,
+    0.0,
+    2.9671,
+    3.8223,
+    2.9671
+  ],
+  "checks": [
+    {
+      "check": "basic: accepted",
+      "pass": true,
+      "detail": {
+        "reasons": []
+      }
+    },
+    {
+      "check": "basic: q_target = q + delta",
+      "pass": true,
+      "detail": {
+        "q_target": [
+          0.1,
+          -0.7,
+          0.05,
+          -2.1,
+          0.0,
+          1.65,
+          0.78
+        ]
+      }
+    },
+    {
+      "check": "basic: gripper binary=1 -> 全开宽度 0.04",
+      "pass": true,
+      "detail": {
+        "width_m": 0.04,
+        "binary": 1.0
+      }
+    },
+    {
+      "check": "basic: gripper 0.2 -> binary 0 -> 闭合 0 m",
+      "pass": true,
+      "detail": {
+        "width_m": 0.0,
+        "binary": 0.0
+      }
+    },
+    {
+      "check": "basic: q=0 在 joint4 上限之外，被正确拒绝",
+      "pass": true,
+      "detail": {
+        "joint4_upper": 0.0,
+        "reasons": [
+          "joint_limit_target"
+        ]
+      }
+    },
+    {
+      "check": "clip: 超官方 clip 被拒绝",
+      "pass": true,
+      "detail": {
+        "reasons": [
+          "delta_exceeds_official_clip"
+        ]
+      }
+    },
+    {
+      "check": "clip: 实际应用量被压到 max_delta_rad",
+      "pass": true,
+      "detail": {
+        "delta_applied": [
+          0.25,
+          -0.25,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "check": "clip: 记录被裁剪维度",
+      "pass": true,
+      "detail": {
+        "clipped_dims": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "check": "reject: NaN 动作",
+      "pass": true,
+      "detail": {
+        "reasons": [
+          "nan_or_inf"
+        ]
+      }
+    },
+    {
+      "check": "reject: Inf 动作",
+      "pass": true,
+      "detail": {
+        "reasons": [
+          "nan_or_inf"
+        ]
+      }
+    },
+    {
+      "check": "reject: 关节限位",
+      "pass": true,
+      "detail": {
+        "reasons": [
+          "joint_limit_target"
+        ]
+      }
+    },
+    {
+      "check": "chunk: 逐条递推（第 k 条 = k*0.1）",
+      "pass": true,
+      "detail": {
+        "q0_sequence": [
+          0.1,
+          0.2,
+          0.30000000000000004,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.7999999999999999,
+          0.8999999999999999,
+          0.9999999999999999,
+          1.0999999999999999,
+          1.2,
+          1.3,
+          1.4000000000000001,
+          1.5000000000000002
+        ]
+      }
+    },
+    {
+      "check": "chunk: 统计摘要",
+      "pass": true,
+      "detail": {
+        "shape": [
+          15,
+          8
+        ],
+        "finite": true,
+        "gripper_binary_frac": 1.0
+      }
+    },
+    {
+      "check": "buffer: 空时需推理",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "buffer: 只执行 execute_k=4 步",
+      "pass": true,
+      "detail": {
+        "consumed": 4
+      }
+    },
+    {
+      "check": "buffer: 之后需要重新推理",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "buffer: 指令切换计数",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "buffer: reset 清空",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "obs: 五个键齐全",
+      "pass": true,
+      "detail": {
+        "keys": [
+          "observation/exterior_image_1_left",
+          "observation/gripper_position",
+          "observation/joint_position",
+          "observation/wrist_image_left"
+        ]
+      }
+    },
+    {
+      "check": "obs: 图像 224x224x3 uint8",
+      "pass": true,
+      "detail": {
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      }
+    },
+    {
+      "check": "obs: state 8 维 float32",
+      "pass": true,
+      "detail": {
+        "joint": [
+          7
+        ],
+        "gripper": [
+          1
+        ]
+      }
+    },
+    {
+      "check": "obs: 同状态可复现（sha256 一致）",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "obs: gripper 落在 [0,1]",
+      "pass": true,
+      "detail": {
+        "gripper": 0.8750004511598967
+      }
+    },
+    {
+      "check": "gripper: 1=张开 0=闭合（真实仿真）",
+      "pass": true,
+      "detail": {
+        "open_m": 0.04000000180080571,
+        "closed_m": 0.00032518423929341354,
+        "note": "binary 1 -> +X 目标 0.04，binary 0 -> 0.0 由 action_adapter 给出"
+      }
+    },
+    {
+      "check": "gripper: 归一化换算一致性",
+      "pass": true,
+      "detail": {
+        "gripper_scalar": 0.008129605982335338,
+        "closed_m": 0.00032518423929341354
+      }
+    },
+    {
+      "check": "fk: joint1 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.02028,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint2 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.0222,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint3 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.02213,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint4 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.02517,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint5 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.01022,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint6 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.04999,
+        "dee_m": 0.01148,
+        "dee_rot_rad": 0.05,
+        "note": ""
+      }
+    },
+    {
+      "check": "fk: joint7 +0.05 rad 后 EE 响应且跟踪收敛",
+      "pass": true,
+      "detail": {
+        "dq_rad": 0.05,
+        "dee_m": 0.0,
+        "dee_rot_rad": 0.05,
+        "note": "joint7 为末端自转：位置不变、姿态必须变化"
+      }
+    }
+  ]
+}

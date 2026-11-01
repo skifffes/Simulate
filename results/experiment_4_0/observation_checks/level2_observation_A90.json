@@ -1,0 +1,248 @@
+{
+  "scene": "A90",
+  "seed": 0,
+  "scene_info": {
+    "seed": 0,
+    "block_start": [
+      0.55,
+      0.0,
+      0.0199898253144541
+    ],
+    "block_yaw": 0.0,
+    "block_friction": 1.2,
+    "wall_inner_x": 0.78,
+    "tray": [
+      0.55,
+      0.4
+    ],
+    "tray_inner_gap": 0.08,
+    "scene": "A90",
+    "place_xy": [
+      0.55,
+      0.18
+    ]
+  },
+  "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+  "observation": {
+    "summary": {
+      "keys": [
+        "observation/exterior_image_1_left",
+        "observation/gripper_position",
+        "observation/joint_position",
+        "observation/wrist_image_left"
+      ],
+      "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+      "shapes": {
+        "observation/exterior_image_1_left": [
+          224,
+          224,
+          3
+        ],
+        "observation/wrist_image_left": [
+          224,
+          224,
+          3
+        ],
+        "observation/joint_position": [
+          7
+        ],
+        "observation/gripper_position": [
+          1
+        ]
+      },
+      "dtypes": {
+        "observation/exterior_image_1_left": "uint8",
+        "observation/wrist_image_left": "uint8",
+        "observation/joint_position": "float32",
+        "observation/gripper_position": "float32"
+      },
+      "sha256": {
+        "observation/exterior_image_1_left": "f7497216f49a567d6a908aa0a86ea296975ce7657c0a2b4329bd498247408dd1",
+        "observation/wrist_image_left": "b459e662c0311a48037bc95cec1450815e56de003fe2e770426d548348603c15",
+        "observation/joint_position": "028f753d15200844e5d144d60d7a3b62e81ea329914c9e0740ad9146434d47a2",
+        "observation/gripper_position": "9f31c65f1998231c22b2eddb3e80123410af0c37f76c07995f1f40efc126d62a"
+      }
+    },
+    "adapter_audit": {
+      "state_dim": 8,
+      "state_order": [
+        "panda_joint1..7 (rad)",
+        "gripper_normalized[0,1]"
+      ],
+      "state": [
+        2.6766406335809734e-06,
+        -0.49999740719795227,
+        -1.3552527358017197e-21,
+        -2.0999999046325684,
+        -5.471337772178231e-06,
+        1.6499861478805542,
+        0.7800022959709167,
+        0.8750004511598967
+      ],
+      "gripper_raw_finger_m": 0.03500001804639587,
+      "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+      "images": {
+        "observation/exterior_image_1_left": {
+          "camera": "top",
+          "raw_shape": [
+            256,
+            256,
+            3
+          ],
+          "sent_shape": [
+            224,
+            224,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 15,
+          "max": 239,
+          "mean": 210.96641156462584,
+          "std": 39.36405677627608,
+          "sha256_sent": "5605462fe206907c9d67fb8aa0921f275d622dd9538553996bdea28e36ede13f",
+          "sha256_raw": "21e32a920a40ee19b51bba4801e0290521de0d753b0677775c340fad6f830174"
+        },
+        "observation/wrist_image_left": {
+          "camera": "wrist",
+          "raw_shape": [
+            256,
+            256,
+            3
+          ],
+          "sent_shape": [
+            224,
+            224,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 75,
+          "max": 240,
+          "mean": 175.04739317602042,
+          "std": 52.808748426273574,
+          "sha256_sent": "6566de5f8a9a59ab271a430d3dbc8acbcdee05bdd4e5f853b720465c790efc8d",
+          "sha256_raw": "120ca52d2019027acebbb52d95d4eb2e976341989f92c5df26c0e068d01e687d"
+        }
+      },
+      "keys": [
+        "observation/exterior_image_1_left",
+        "observation/gripper_position",
+        "observation/joint_position",
+        "observation/wrist_image_left"
+      ]
+    },
+    "q_rad": [
+      3e-06,
+      -0.499997,
+      -0.0,
+      -2.1,
+      -5e-06,
+      1.649986,
+      0.780002
+    ],
+    "fingers_m": [
+      0.034998,
+      0.035002
+    ],
+    "ee_position": [
+      0.405631,
+      -0.0,
+      0.513782
+    ],
+    "ee_quat": [
+      0.999684,
+      0.002699,
+      0.024989,
+      7e-05
+    ],
+    "block_position": [
+      0.55,
+      0.0,
+      0.0199898253144541
+    ],
+    "block_yaw": 0.0
+  },
+  "server_metadata": {
+    "config": "pi05_droid",
+    "mode": "checkpoint",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+    "openpi_commit": "unknown"
+  },
+  "inference": {
+    "executed": true,
+    "roundtrip_s": 0.1822,
+    "weights": "unknown",
+    "chunk_summary": {
+      "shape": [
+        15,
+        8
+      ],
+      "dtype": "float64",
+      "finite": true,
+      "joint_delta_abs_max": 0.13180209894412753,
+      "joint_delta_abs_mean": 0.061481246770805985,
+      "gripper_min": 0.4512373309977651,
+      "gripper_max": 0.7619268700096608,
+      "gripper_binary_frac": 0.8,
+      "per_dim_absmax": [
+        0.131802,
+        0.020946,
+        0.098631,
+        0.044099,
+        0.088193,
+        0.060119,
+        0.091126,
+        0.761927
+      ]
+    },
+    "chunk_first3": [
+      [
+        -0.122007,
+        0.01682,
+        0.098631,
+        0.026213,
+        0.053251,
+        -0.03852,
+        -0.049748,
+        0.451237
+      ],
+      [
+        -0.12698,
+        0.014904,
+        0.096804,
+        0.027622,
+        0.054143,
+        -0.040872,
+        -0.046971,
+        0.452308
+      ],
+      [
+        -0.131802,
+        0.018153,
+        0.092775,
+        0.041562,
+        0.06062,
+        -0.041098,
+        -0.05144,
+        0.461444
+      ]
+    ],
+    "policy_timing": {
+      "infer_ms": 103.27225597575307
+    }
+  },
+  "adaptation_preview": {
+    "n": 15,
+    "accepted_frac": 1.0,
+    "first_q_target": [
+      -0.122004,
+      -0.483177,
+      0.098631,
+      -2.073787,
+      0.053245,
+      1.611467,
+      0.730255
+    ],
+    "first_gripper_m": 0.0,
+    "reasons": []
+  }
+}

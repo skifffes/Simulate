@@ -1,0 +1,48 @@
+INFO:2026-11-01 20:33:30,497:jax._src.xla_bridge:925: Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+2026-11-01 20:33:30,497 INFO Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+INFO:2026-11-01 20:33:30,499:jax._src.xla_bridge:925: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-11-01 20:33:30,499 INFO Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-11-01 20:33:30,525 INFO jax devices: [CudaDevice(id=0)]
+2026-11-01 20:33:30,526 INFO Loading model...
+2026-11-01 20:33:30,527 INFO orbax-checkpoint version: 0.11.13
+2026-11-01 20:33:30,527 INFO Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x7f1e8911e110>
+2026-11-01 20:33:30,576 INFO Restoring checkpoint from /scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/params.
+2026-11-01 20:33:31,094 INFO [thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID.
+2026-11-01 20:33:35,761 INFO [process=0] /jax/checkpoint/read/bytes_per_sec: 1.2 GiB/s (total bytes: 6.2 GiB) (time elapsed: 5 seconds) (per-host)
+2026-11-01 20:33:35,762 INFO Finished restoring checkpoint in 5.19 seconds from /scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/params.
+2026-11-01 20:33:37,574 INFO Norm stats not found in /scratch/lijh/exp40/repo/assets/pi05_droid/droid, skipping.
+2026-11-01 20:33:37,664 INFO Loaded norm stats from /scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/assets/droid
+2026-11-01 20:33:37,666 INFO serving on 0.0.0.0:8000 (mode=checkpoint)
+2026-11-01 20:33:37,667 INFO server listening on 0.0.0.0:8000
+2026-11-01 20:35:24,561 INFO connection open
+2026-11-01 20:35:24,562 INFO Connection from ('127.0.0.1', 58482) opened
+2026-11-01 20:36:41,196 INFO connection closed
+2026-11-01 20:36:41,197 INFO Connection from ('127.0.0.1', 58482) closed
+2026-11-01 20:36:41,851 INFO connection open
+2026-11-01 20:36:41,851 INFO Connection from ('127.0.0.1', 58490) opened
+2026-11-01 20:36:42,120 INFO connection closed
+2026-11-01 20:36:42,121 INFO Connection from ('127.0.0.1', 58490) closed
+2026-11-01 20:36:42,714 INFO connection open
+2026-11-01 20:36:42,715 INFO Connection from ('127.0.0.1', 58492) opened
+2026-11-01 20:36:43,204 INFO connection open
+2026-11-01 20:36:43,205 INFO Connection from ('127.0.0.1', 58494) opened
+2026-11-01 20:36:43,449 INFO connection closed
+2026-11-01 20:36:43,450 INFO connection closed
+2026-11-01 20:36:43,450 INFO Connection from ('127.0.0.1', 58492) closed
+2026-11-01 20:36:43,451 INFO Connection from ('127.0.0.1', 58494) closed
+2026-11-01 20:36:44,057 INFO connection open
+2026-11-01 20:36:44,057 INFO Connection from ('127.0.0.1', 58496) opened
+2026-11-01 20:36:46,290 INFO connection closed
+2026-11-01 20:36:46,291 INFO Connection from ('127.0.0.1', 58496) closed
+2026-11-01 20:36:46,847 INFO connection open
+2026-11-01 20:36:46,847 INFO Connection from ('127.0.0.1', 58498) opened
+2026-11-01 20:36:47,362 INFO connection closed
+2026-11-01 20:36:47,363 INFO Connection from ('127.0.0.1', 58498) closed
+2026-11-01 20:46:23,039 INFO connection open
+2026-11-01 20:46:23,040 INFO Connection from ('127.0.0.1', 58882) opened
+2026-11-01 20:46:25,185 INFO connection closed
+2026-11-01 20:46:25,185 INFO Connection from ('127.0.0.1', 58882) closed
+2026-11-01 20:46:25,744 INFO connection open
+2026-11-01 20:46:25,745 INFO Connection from ('127.0.0.1', 58884) opened
+2026-11-01 20:46:27,333 INFO connection closed
+2026-11-01 20:46:27,334 INFO Connection from ('127.0.0.1', 58884) closed

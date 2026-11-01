@@ -1,0 +1,52 @@
+=== 2026-11-01T19:39:40+0800 第四轮安装（钉住 glibc2.17 可用版本） ===
+--- cmake? ---
+which: no cmake in (/scratch/lijh/exp40/bin:/usr/local/bin:/usr/bin)
+no cmake
+=== 步骤1：scipy / dm-tree 用有 manylinux2014 wheel 的版本 ===
+Resolved 3 packages in 168ms
+Downloading scipy (36.8MiB)
+ Downloaded scipy
+Prepared 2 packages in 4.81s
+Installed 2 packages in 159ms
+ + dm-tree==0.1.8
+ + scipy==1.13.1
+=== 步骤2：JAX CUDA12 0.5.3 ===
+ Downloaded jaxlib
+Prepared 2 packages in 18.23s
+Installed 7 packages in 148ms
+ + jax==0.5.3
+ + jax-cuda12-pjrt==0.5.3
+ + jax-cuda12-plugin==0.5.3
+ + jaxlib==0.5.3
+ + ml-dtypes==0.4.1
+ + nvidia-cuda-nvcc-cu12==12.9.86
+ + opt-einsum==3.4.0
+=== 步骤3：openpi 运行时依赖 ===
+           File "/scratch/lijh/.cache/uv/builds-v0/.tmpnwYUZA/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 382, in run
+             self.build_extensions()
+           File "/scratch/lijh/.cache/uv/builds-v0/.tmpnwYUZA/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 498, in build_extensions
+             self._build_extensions_serial()
+           File "/scratch/lijh/.cache/uv/builds-v0/.tmpnwYUZA/lib/python3.11/site-packages/setuptools/_distutils/command/build_ext.py", line 524, in _build_extensions_serial
+             self.build_extension(ext)
+           File "<string>", line 112, in build_extension
+           File "/scratch/lijh/.local/share/uv/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/subprocess.py", line 413, in check_call
+             raise CalledProcessError(retcode, cmd)
+         subprocess.CalledProcessError: Command '['./build_bundled.sh', '0.2.2']' returned non-zero exit status 127.
+
+hint: Build failures usually indicate a problem with the package or the build environment
+=== 步骤4：openpi-client（--no-deps，依赖已就位） ===
+      Built openpi-client @ file:///scratch/lijh/exp40/openpi/packages/openpi-client
+Prepared 1 package in 801ms
+Installed 1 package in 2ms
+ + openpi-client==0.1.0 (from file:///scratch/lijh/exp40/openpi/packages/openpi-client)
+=== 版本自检 ===
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'flax'
+=== import openpi 推理链路 ===
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/scratch/lijh/exp40/openpi/src/openpi/training/config.py", line 11, in <module>
+    import etils.epath as epath
+ModuleNotFoundError: No module named 'etils'
+=== 2026-11-01T19:40:18+0800 第四轮安装结束 ===

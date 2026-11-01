@@ -1,0 +1,12 @@
+=== 2026-11-01T19:48:30+0800 下载 v5（Range 续传） ===
+目标总大小 11.58 GB
+SKIP assets/droid/norm_stats.json (4460)
+SKIP params/_CHECKPOINT_METADATA (258)
+=== 19:48:30 START params/_METADATA want=21402 have=0
+    try=1 21402/21402 (+21402 B in 91s => 235 B/s)
+OK   params/_METADATA 21402 md5=d8a6d3dd2796f93ced33e6c8e2046f4d
+=== 19:50:01 START params/_sharding want=11420 have=0
+    try=1 0/11420 (+0 B in 119s => 0 B/s)
+    try=2 11420/11420 (+11420 B in 61s => 187 B/s)
+OK   params/_sharding 11420 md5=7d696734d935492f88421f8210c217ea
+=== 19:53:01 START params/array_metadatas/process_0 want=8856 have=0

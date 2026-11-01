@@ -1,0 +1,172 @@
+=== 2026-11-01T19:43:21+0800 第五轮：逐包安装 ===
+--- flax==0.10.2
+ + simplejson==4.2.0
+ + tensorstore==0.1.74
+ + zipp==4.1.2
+    rc=0
+--- orbax-checkpoint==0.11.13
+Installed 1 package in 121ms
+ - orbax-checkpoint==0.11.24
+ + orbax-checkpoint==0.11.13
+    rc=0
+--- tensorstore==0.1.74
+Checked 1 package in 3ms
+    rc=0
+--- ml-dtypes==0.4.1
+Checked 1 package in 3ms
+    rc=0
+--- chex==0.1.90
+Installed 2 packages in 122ms
+ + chex==0.1.90
+ + toolz==1.2.0
+    rc=0
+--- einops>=0.8.0
+Resolved 1 package in 6ms
+Installed 1 package in 116ms
+ + einops==0.8.2
+    rc=0
+--- equinox>=0.11.8
+ + equinox==0.13.8
+ + jaxtyping==0.3.11
+ + wadler-lindig==0.1.8
+    rc=0
+--- augmax>=0.3.4
+Resolved 8 packages in 15ms
+Installed 1 package in 115ms
+ + augmax==0.4.1
+    rc=0
+--- jaxtyping==0.2.36
+Installed 1 package in 120ms
+ - jaxtyping==0.3.11
+ + jaxtyping==0.2.36
+    rc=0
+--- ml_collections==1.0.0
+Installed 2 packages in 115ms
+ + ml-collections==1.0.0
+ + six==1.17.0
+    rc=0
+--- safetensors
+Resolved 1 package in 7ms
+Installed 1 package in 119ms
+ + safetensors==0.8.0
+    rc=0
+--- transformers==4.53.2
+ + tqdm==4.70.1
+ + transformers==4.53.2
+ + urllib3==2.8.0
+    rc=0
+--- sentencepiece>=0.2.0
+Prepared 1 package in 44ms
+Installed 1 package in 122ms
+ + sentencepiece==0.2.0
+    rc=0
+--- pillow>=11.0.0
+Prepared 1 package in 692ms
+Installed 1 package in 125ms
+ + pillow==12.2.0
+    rc=0
+--- opencv-python-headless>=4.10.0.84
+ - numpy==1.26.4
+ + numpy==2.2.6
+ + opencv-python-headless==5.0.0.93
+    rc=0
+--- imageio>=2.36.1
+Resolved 3 packages in 13ms
+Installed 1 package in 121ms
+ + imageio==2.38.1
+    rc=0
+--- numpydantic>=1.6.6
+ + pydantic==2.14.2
+ + pydantic-core==2.50.2
+ + typing-inspection==0.4.4
+    rc=0
+--- beartype==0.19.0
+Resolved 1 package in 9ms
+Installed 1 package in 139ms
+ + beartype==0.19.0
+    rc=0
+--- treescope>=0.1.7
+Resolved 2 packages in 9ms
+Installed 1 package in 119ms
+ + treescope==0.1.10
+    rc=0
+--- flatbuffers>=24.3.25
+Resolved 1 package in 7ms
+Installed 1 package in 124ms
+ + flatbuffers==25.12.19
+    rc=0
+--- tqdm
+Checked 1 package in 3ms
+    rc=0
+--- tqdm-loggable>=0.2
+Resolved 2 packages in 7ms
+Installed 1 package in 120ms
+ + tqdm-loggable==0.4.1
+    rc=0
+--- tyro>=0.9.5
+ + docstring-parser==0.18.0
+ + typeguard==4.6.0
+ + tyro==1.0.16
+    rc=0
+--- rich>=14.0.0
+Checked 1 package in 5ms
+    rc=0
+--- polars>=1.30.0
+Installed 2 packages in 141ms
+ + polars==2.1.0
+ + polars-runtime-32==2.1.0
+    rc=0
+--- fsspec[gcs]>=2024.6.0
+ + pycparser==3.12
+ + requests-oauthlib==2.0.0
+ + yarl==1.25.1
+    rc=0
+--- filelock>=3.16.1
+Checked 1 package in 6ms
+    rc=0
+--- typing-extensions>=4.12.2
+Checked 1 package in 6ms
+    rc=0
+--- etils[epath]
+Checked 1 package in 6ms
+    rc=0
+--- msgpack
+Checked 1 package in 5ms
+    rc=0
+--- websockets>=13.0
+Resolved 1 package in 8ms
+Installed 1 package in 125ms
+ + websockets==17.4
+    rc=0
+=== 版本自检 ===
+jax                    0.5.3
+jaxlib                 0.5.3
+flax                   0.10.2
+numpy                  2.2.6
+scipy                  1.13.1
+orbax.checkpoint       0.11.13
+tensorstore            ok
+etils.epath            ok
+transformers           4.53.2
+safetensors            0.8.0
+einops                 0.8.2
+augmax                 0.4.1
+chex                   0.1.90
+ml_collections         1.0.0
+tyro                   1.0.16
+openpi_client          0.1.0
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+NameError: name 'jax' is not defined. Did you mean: 'max'?
+=== import openpi 推理链路 ===
+pi05 configs: ['pi05_aloha', 'pi05_droid', 'pi05_libero', 'pi05_aloha_pen_uncap', 'pi05_full_droid_finetune', 'pi05_droid_finetune', 'debug_pi05', 'pi05_droid_jointpos_polaris']
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/scratch/lijh/exp40/openpi/src/openpi/policies/policy_config.py", line 11, in <module>
+    from openpi.training import checkpoints as _checkpoints
+  File "/scratch/lijh/exp40/openpi/src/openpi/training/checkpoints.py", line 16, in <module>
+    import openpi.training.data_loader as _data_loader
+  File "/scratch/lijh/exp40/openpi/src/openpi/training/data_loader.py", line 10, in <module>
+    import lerobot.common.datasets.lerobot_dataset as lerobot_dataset
+ModuleNotFoundError: No module named 'lerobot'
+=== 2026-11-01T19:43:55+0800 第五轮结束 ===

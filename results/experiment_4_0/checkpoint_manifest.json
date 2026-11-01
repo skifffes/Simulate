@@ -1,0 +1,158 @@
+{
+  "checkpoint": "pi05_droid",
+  "source_url": "gs://openpi-assets/checkpoints/pi05_droid",
+  "http_base": "https://storage-download.googleapis.com/openpi-assets/checkpoints/pi05_droid",
+  "local_cache_path": "/scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid",
+  "cache_layout": "OPENPI_DATA_HOME/openpi-assets/checkpoints/pi05_droid",
+  "config_name": "pi05_droid (openpi src/openpi/training/config.py:631)",
+  "asset_id": "droid",
+  "openpi_commit": "",
+  "n_files": 20,
+  "n_missing": 0,
+  "total_bytes": 12429488598,
+  "total_gib": 11.576,
+  "missing": [],
+  "files": [
+    {
+      "path": "assets/droid/norm_stats.json",
+      "gcs_object": "checkpoints/pi05_droid/assets/droid/norm_stats.json",
+      "size_bytes": 4460,
+      "size_matches_listing": true,
+      "md5": "2e8bc5547dc797f1df5f4e5401136082"
+    },
+    {
+      "path": "params/_CHECKPOINT_METADATA",
+      "gcs_object": "checkpoints/pi05_droid/params/_CHECKPOINT_METADATA",
+      "size_bytes": 258,
+      "size_matches_listing": true,
+      "md5": "58d2f71cae85d00d52cdbd6aca9f6255"
+    },
+    {
+      "path": "params/_METADATA",
+      "gcs_object": "checkpoints/pi05_droid/params/_METADATA",
+      "size_bytes": 21402,
+      "size_matches_listing": true,
+      "md5": "d8a6d3dd2796f93ced33e6c8e2046f4d"
+    },
+    {
+      "path": "params/_sharding",
+      "gcs_object": "checkpoints/pi05_droid/params/_sharding",
+      "size_bytes": 11420,
+      "size_matches_listing": true,
+      "md5": "7d696734d935492f88421f8210c217ea"
+    },
+    {
+      "path": "params/array_metadatas/process_0",
+      "gcs_object": "checkpoints/pi05_droid/params/array_metadatas/process_0",
+      "size_bytes": 8856,
+      "size_matches_listing": true,
+      "md5": "fd89af451d92d3ea36f6a6621843edd3"
+    },
+    {
+      "path": "params/d/ce0f37e421bcc089104ea18d07a87f8a",
+      "gcs_object": "checkpoints/pi05_droid/params/d/ce0f37e421bcc089104ea18d07a87f8a",
+      "size_bytes": 2125,
+      "size_matches_listing": true,
+      "md5": "4de03740b7fb0273f67b3c94d92ce1a8"
+    },
+    {
+      "path": "params/manifest.ocdbt",
+      "gcs_object": "checkpoints/pi05_droid/params/manifest.ocdbt",
+      "size_bytes": 117,
+      "size_matches_listing": true,
+      "md5": "49554098420ad0fbc92a02487733f51f"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/213a5648ef56840990e3a9d6fca5eb89",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/213a5648ef56840990e3a9d6fca5eb89",
+      "size_bytes": 2238010952,
+      "size_matches_listing": true,
+      "md5": "4b9fd5d740d87f22c7f9ed0029894593"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/3d66a3d641ef2a488f1a3dad19dcc9fa",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/3d66a3d641ef2a488f1a3dad19dcc9fa",
+      "size_bytes": 2254235960,
+      "size_matches_listing": true,
+      "md5": "e81a311c7b9e180634996ce7b2cb628e"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/413535d55493c7cbed0b50498ab7bbed",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/413535d55493c7cbed0b50498ab7bbed",
+      "size_bytes": 811530994,
+      "size_matches_listing": true,
+      "md5": "a50623fa72beb23e6aeb3853a5d4ab82"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/4d9301f722d470026c2077e91a2a9845",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/4d9301f722d470026c2077e91a2a9845",
+      "size_bytes": 4877,
+      "size_matches_listing": true,
+      "md5": "ca8896da22bc29b4db1e96e8a51c9fd1"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/5d3a6bc124e3135474f32512fabd1b05",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/5d3a6bc124e3135474f32512fabd1b05",
+      "size_bytes": 34981888,
+      "size_matches_listing": true,
+      "md5": "6cb8f5c92a2ba5472423df82bd81eb52"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/8c310ea761a921bf26a70c03ca485197",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/8c310ea761a921bf26a70c03ca485197",
+      "size_bytes": 5801086,
+      "size_matches_listing": true,
+      "md5": "5f0db56695626f0d9f77af4425f30073"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/8fac3a77c4f18f0ef5ebc8208373833a",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/8fac3a77c4f18f0ef5ebc8208373833a",
+      "size_bytes": 2237971599,
+      "size_matches_listing": true,
+      "md5": "fd4cfc63a788d01a216c55b4d143bfeb"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/a0c170c234922db4ca080df944165efe",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/a0c170c234922db4ca080df944165efe",
+      "size_bytes": 1954680867,
+      "size_matches_listing": true,
+      "md5": "e3dbaba089f1089163dd3e7af054ac18"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/b4bb4418fe26353e2e194fdee8d52d98",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/b4bb4418fe26353e2e194fdee8d52d98",
+      "size_bytes": 959,
+      "size_matches_listing": true,
+      "md5": "4b242571d1f10b5981edeb5d27079c88"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/b862fdd01b4477d01ea1f43ddb38b88f",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/b862fdd01b4477d01ea1f43ddb38b88f",
+      "size_bytes": 2797559229,
+      "size_matches_listing": true,
+      "md5": "0c36a70b1d3ace3b040ef09277f66e00"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/bc8c706bafc394cde9dc5c45bc6fcc41",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/bc8c706bafc394cde9dc5c45bc6fcc41",
+      "size_bytes": 70003953,
+      "size_matches_listing": true,
+      "md5": "9e901cd5ea42e78e5790d8fa87ae8f9d"
+    },
+    {
+      "path": "params/ocdbt.process_0/d/edabb12082994ee3894f5d98c7a3282c",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/d/edabb12082994ee3894f5d98c7a3282c",
+      "size_bytes": 24657140,
+      "size_matches_listing": true,
+      "md5": "d9d44db038f9608501a504be78308d83"
+    },
+    {
+      "path": "params/ocdbt.process_0/manifest.ocdbt",
+      "gcs_object": "checkpoints/pi05_droid/params/ocdbt.process_0/manifest.ocdbt",
+      "size_bytes": 456,
+      "size_matches_listing": true,
+      "md5": "e4785622df7f8e690e5f44ae613348ec"
+    }
+  ],
+  "note": "官方为 Orbax/OCDBT 分片格式，不能按“单文件权重”处理；文件必须按相对路径原样落位，openpi 的 maybe_download 才能命中缓存。"
+}
