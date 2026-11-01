@@ -1,0 +1,609 @@
+{
+  "scene": "B90",
+  "seed": 0,
+  "prompt": "push the orange block along the positive X direction to the wall",
+  "scene_info": {
+    "seed": 0,
+    "block_start": [
+      0.55,
+      0.0,
+      0.0199898253144541
+    ],
+    "block_yaw": 0.0,
+    "block_friction": 1.2,
+    "wall_inner_x": 0.78,
+    "tray": [
+      0.55,
+      0.4
+    ],
+    "tray_inner_gap": 0.08,
+    "scene": "B90",
+    "place_xy": [
+      0.55,
+      0.18
+    ],
+    "camera_version": "v3",
+    "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+    "cameras": {
+      "top": {
+        "type": "fixed",
+        "target": [
+          0.56,
+          0.13,
+          0.06
+        ],
+        "distance": 0.7,
+        "yaw": 50.0,
+        "pitch": -35.0,
+        "fov": 60.0,
+        "near": 0.02,
+        "far": 5.0
+      },
+      "wrist": {
+        "type": "wrist",
+        "link": 8,
+        "offset": [
+          0.055,
+          0.0,
+          -0.015
+        ],
+        "forward": [
+          0.0,
+          -0.17365,
+          0.98481
+        ],
+        "up_local": [
+          0.0,
+          0.98481,
+          0.17365
+        ],
+        "look_ahead": 0.3,
+        "fov": 78.0,
+        "near": 0.01,
+        "far": 3.0
+      }
+    }
+  },
+  "camera_version": "v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "episode_seed": 0,
+  "server_metadata": {
+    "config": "pi05_droid",
+    "mode": "checkpoint",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+    "openpi_commit": "unknown"
+  },
+  "safety": {
+    "stopped": true,
+    "stop_reason": "max_ticks",
+    "ticks": 13,
+    "wall_time_s": 1.656,
+    "expected_contacts_seen": 2,
+    "limits": {
+      "joint_margin_rad": 0.02,
+      "max_joint_step_rad": 0.3,
+      "ee_box": {
+        "x": [
+          0.15,
+          0.95
+        ],
+        "y": [
+          -0.45,
+          0.6
+        ],
+        "z": [
+          0.005,
+          0.6
+        ]
+      },
+      "object_speed_max": 3.0,
+      "tracking_error_max": 0.25,
+      "wall_time_max_s": 90.0,
+      "max_ticks": 12
+    },
+    "events": [
+      {
+        "tick": 13,
+        "code": "max_ticks",
+        "message": "达到设定的最大控制步数",
+        "detail": {
+          "ticks": 13
+        },
+        "wall_time": 1793543038.981722
+      }
+    ]
+  },
+  "chunker": {
+    "execute_k": 8,
+    "clear_on_prompt_change": true,
+    "buffer_shape": [
+      15,
+      8
+    ],
+    "cursor": 4,
+    "prompt": "push the orange block along the positive X direction to the wall",
+    "chunks_received": 2,
+    "actions_consumed": 12,
+    "refills": 2,
+    "prompt_changes": 1
+  },
+  "adapter_config": {
+    "max_delta_rad": 0.15,
+    "official_clip_rad": 1.0,
+    "gripper_mode": "binary",
+    "gripper_threshold": 0.5
+  },
+  "steps_per_tick": 16,
+  "policy_hz": 15.0,
+  "sim_hz": 240,
+  "droid_control_hz": 15,
+  "timing_note": "同步闭环：每个策略控制步先推理（必要时）再推进 16 个物理步；推理期间仿真暂停，因此这是仿真时间闭环，不代表满足实时机器人 15 Hz 的墙钟约束",
+  "n_chunks": 2,
+  "chunks": [
+    {
+      "tick": 1,
+      "roundtrip_s": 0.1818,
+      "summary": {
+        "shape": [
+          15,
+          8
+        ],
+        "dtype": "float64",
+        "finite": true,
+        "joint_delta_abs_max": 0.14275299890732762,
+        "joint_delta_abs_mean": 0.04897762675170617,
+        "gripper_min": 0.7789326838447452,
+        "gripper_max": 0.9391261903797985,
+        "gripper_binary_frac": 1.0,
+        "per_dim_absmax": [
+          0.142753,
+          0.03297,
+          0.080076,
+          0.043494,
+          0.037896,
+          0.066585,
+          0.128774,
+          0.939126
+        ]
+      },
+      "raw": [
+        [
+          -0.142753,
+          -0.013164,
+          0.079747,
+          0.00962,
+          0.001393,
+          -0.066585,
+          -0.125198,
+          0.837442
+        ],
+        [
+          -0.141213,
+          -0.012699,
+          0.079932,
+          0.015713,
+          0.02219,
+          -0.049335,
+          -0.119896,
+          0.827902
+        ],
+        [
+          -0.138569,
+          0.00559,
+          0.072941,
+          0.030349,
+          0.025225,
+          -0.039386,
+          -0.104821,
+          0.919991
+        ],
+        [
+          -0.129278,
+          0.017606,
+          0.066893,
+          0.022387,
+          0.027037,
+          -0.036243,
+          -0.127093,
+          0.930072
+        ],
+        [
+          -0.127009,
+          0.02623,
+          0.061081,
+          0.02709,
+          0.034545,
+          -0.036079,
+          -0.128774,
+          0.939126
+        ],
+        [
+          -0.121828,
+          0.03297,
+          0.056191,
+          0.043494,
+          0.028081,
+          -0.034604,
+          -0.117078,
+          0.931794
+        ],
+        [
+          -0.115232,
+          0.012301,
+          0.074167,
+          0.027352,
+          0.037136,
+          -0.023526,
+          -0.05861,
+          0.869021
+        ],
+        [
+          -0.104155,
+          0.010296,
+          0.080076,
+          0.013629,
+          0.037896,
+          -0.023787,
+          -0.034758,
+          0.866417
+        ],
+        [
+          -0.099337,
+          0.009077,
+          0.078864,
+          0.01684,
+          0.034738,
+          -0.017055,
+          -0.025817,
+          0.807271
+        ],
+        [
+          -0.096952,
+          0.009244,
+          0.079805,
+          0.016354,
+          0.032333,
+          -0.014106,
+          -0.021291,
+          0.805721
+        ],
+        [
+          -0.09621,
+          0.006125,
+          0.076903,
+          0.017255,
+          0.033097,
+          -0.018006,
+          -0.020274,
+          0.778933
+        ],
+        [
+          -0.100384,
+          0.013128,
+          0.075384,
+          0.013945,
+          0.034557,
+          -0.019474,
+          -0.016614,
+          0.780724
+        ],
+        [
+          -0.097981,
+          0.007594,
+          0.077757,
+          0.003664,
+          0.028342,
+          -0.024607,
+          -0.018074,
+          0.828391
+        ],
+        [
+          -0.096932,
+          -0.003758,
+          0.074907,
+          0.008262,
+          0.03144,
+          -0.033224,
+          -0.018628,
+          0.854991
+        ],
+        [
+          -0.10618,
+          -0.010777,
+          0.077036,
+          0.005223,
+          0.024259,
+          -0.031935,
+          -0.018069,
+          0.930384
+        ]
+      ],
+      "first_action": [
+        -0.142753,
+        -0.013164,
+        0.079747,
+        0.00962,
+        0.001393,
+        -0.066585,
+        -0.125198,
+        0.837442
+      ],
+      "request": {
+        "keys": [
+          "observation/exterior_image_1_left",
+          "observation/gripper_position",
+          "observation/joint_position",
+          "observation/wrist_image_left"
+        ],
+        "prompt": "push the orange block along the positive X direction to the wall",
+        "shapes": {
+          "observation/exterior_image_1_left": [
+            224,
+            224,
+            3
+          ],
+          "observation/wrist_image_left": [
+            224,
+            224,
+            3
+          ],
+          "observation/joint_position": [
+            7
+          ],
+          "observation/gripper_position": [
+            1
+          ]
+        },
+        "dtypes": {
+          "observation/exterior_image_1_left": "uint8",
+          "observation/wrist_image_left": "uint8",
+          "observation/joint_position": "float32",
+          "observation/gripper_position": "float32"
+        },
+        "sha256": {
+          "observation/exterior_image_1_left": "5fcbadcba5c8769a119656bcb808f0389134ee11922526707672c2defbc924f2",
+          "observation/wrist_image_left": "6347b099cb86aed65c570e0228aeb9e0f88082e5bdf13e095f70bcea237138da",
+          "observation/joint_position": "028f753d15200844e5d144d60d7a3b62e81ea329914c9e0740ad9146434d47a2",
+          "observation/gripper_position": "9f31c65f1998231c22b2eddb3e80123410af0c37f76c07995f1f40efc126d62a"
+        }
+      }
+    },
+    {
+      "tick": 9,
+      "roundtrip_s": 0.1725,
+      "summary": {
+        "shape": [
+          15,
+          8
+        ],
+        "dtype": "float64",
+        "finite": true,
+        "joint_delta_abs_max": 0.9178812041314841,
+        "joint_delta_abs_mean": 0.32929211104677003,
+        "gripper_min": 0.05167463072115183,
+        "gripper_max": 0.22940960082533957,
+        "gripper_binary_frac": 0.0,
+        "per_dim_absmax": [
+          0.917881,
+          0.358853,
+          0.799744,
+          0.112208,
+          0.258284,
+          0.137188,
+          0.365886,
+          0.22941
+        ]
+      },
+      "raw": [
+        [
+          0.864294,
+          0.263915,
+          -0.725376,
+          0.033252,
+          -0.258284,
+          0.127577,
+          0.351243,
+          0.075097
+        ],
+        [
+          0.884553,
+          0.296749,
+          -0.728241,
+          0.050944,
+          -0.231131,
+          0.132953,
+          0.360814,
+          0.065392
+        ],
+        [
+          0.894185,
+          0.332443,
+          -0.720467,
+          0.074891,
+          -0.183367,
+          0.137188,
+          0.365886,
+          0.051675
+        ],
+        [
+          0.904906,
+          0.353742,
+          -0.725437,
+          0.098914,
+          -0.128471,
+          0.134278,
+          0.358062,
+          0.07583
+        ],
+        [
+          0.911288,
+          0.353931,
+          -0.746417,
+          0.10133,
+          -0.076064,
+          0.125641,
+          0.34237,
+          0.055997
+        ],
+        [
+          0.917881,
+          0.358853,
+          -0.768166,
+          0.09994,
+          -0.029416,
+          0.095827,
+          0.318479,
+          0.120093
+        ],
+        [
+          0.915924,
+          0.335085,
+          -0.77922,
+          0.108035,
+          0.006728,
+          0.077281,
+          0.286273,
+          0.15452
+        ],
+        [
+          0.905743,
+          0.31786,
+          -0.791869,
+          0.099818,
+          0.03952,
+          0.056152,
+          0.249427,
+          0.170612
+        ],
+        [
+          0.893665,
+          0.291818,
+          -0.799744,
+          0.093023,
+          0.05697,
+          0.044282,
+          0.211635,
+          0.179349
+        ],
+        [
+          0.864949,
+          0.271906,
+          -0.795345,
+          0.077717,
+          0.074802,
+          0.016261,
+          0.17007,
+          0.157839
+        ],
+        [
+          0.832067,
+          0.24137,
+          -0.780957,
+          0.060338,
+          0.093374,
+          0.005032,
+          0.121537,
+          0.144247
+        ],
+        [
+          0.766306,
+          0.20001,
+          -0.738146,
+          0.032746,
+          0.119045,
+          -0.010695,
+          0.06432,
+          0.138914
+        ],
+        [
+          0.669533,
+          0.146123,
+          -0.667979,
+          0.001856,
+          0.138443,
+          -0.010959,
+          -0.006182,
+          0.141277
+        ],
+        [
+          0.561994,
+          0.086767,
+          -0.587119,
+          -0.047544,
+          0.171232,
+          0.003481,
+          -0.141414,
+          0.180774
+        ],
+        [
+          0.489664,
+          0.015134,
+          -0.540071,
+          -0.112208,
+          0.185402,
+          0.041812,
+          -0.286526,
+          0.22941
+        ]
+      ],
+      "first_action": [
+        0.864294,
+        0.263915,
+        -0.725376,
+        0.033252,
+        -0.258284,
+        0.127577,
+        0.351243,
+        0.075097
+      ],
+      "request": {
+        "keys": [
+          "observation/exterior_image_1_left",
+          "observation/gripper_position",
+          "observation/joint_position",
+          "observation/wrist_image_left"
+        ],
+        "prompt": "push the orange block along the positive X direction to the wall",
+        "shapes": {
+          "observation/exterior_image_1_left": [
+            224,
+            224,
+            3
+          ],
+          "observation/wrist_image_left": [
+            224,
+            224,
+            3
+          ],
+          "observation/joint_position": [
+            7
+          ],
+          "observation/gripper_position": [
+            1
+          ]
+        },
+        "dtypes": {
+          "observation/exterior_image_1_left": "uint8",
+          "observation/wrist_image_left": "uint8",
+          "observation/joint_position": "float32",
+          "observation/gripper_position": "float32"
+        },
+        "sha256": {
+          "observation/exterior_image_1_left": "4692075fe77f7b4d04c37af8250cea029b6386435e9f85fc21682cf88e726080",
+          "observation/wrist_image_left": "db7f22dc148ad597fedc6d25f5cb53860f3cb366e1c2c2d2f80770fad723794b",
+          "observation/joint_position": "dd6e99429c1a2cf2c8dedd653e407a5be02c318d81953d1c13cd171423698720",
+          "observation/gripper_position": "f327d6c4ad57b5fff97d62b13893c13cee24e133e99afda07ed99f16dc5fb768"
+        }
+      }
+    }
+  ],
+  "final_block_state": [
+    0.55,
+    0.0,
+    0.01998992599829698,
+    0.0
+  ],
+  "trace_csv": "results/experiment_4_0/final_validation/B90_closed_loop/trace_B90_seed0.csv",
+  "error": null,
+  "completed_ticks": 13
+}

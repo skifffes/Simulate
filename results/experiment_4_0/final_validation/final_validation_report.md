@@ -9,16 +9,15 @@
 | External Camera task visibility | **PASS（几何/任务可见性）** | 真实专家示范 9 阶段 × A90/B90：方块短边 **19.2–26.2 px**（224×224），9/9 阶段在画面内，EE 均在画面内 |
 | Wrist Camera task visibility | **PARTIAL** | A90 专家 9/9 阶段可见方块；**B90 仅 3/9**（侧向推动接近时物体在腕部视野外） |
 | Camera rigid mounting | **PASS** | 腕部改为**固定外参**（局部 offset + forward/up_local），10 组（5 构型 × 2 指开合）`R_link_camera` 偏差 < 1e-6、`t` 偏差 0 |
-| Actual model input wiring | **PARTIAL** | `build_sim_scene()` 已强制显式相机版本（v3，SHA256 `418bad2f…`），缺失即报错不回落；4.0 的正式推理记录在上一级目录（其相机为 v2），**v3 未在 GPU 上跑真实推理**（时间不足） |
-| Episode-level JAX RNG | **PARTIAL** | 调用链已修：`level4` 仅在本回合首次推理下发 `episode_seed`，服务器重置 `jax.random.key(seed)` 并记审计；**模型级复现未在 A40 上验证**（时间不足） |
-| CSV trajectory schema | **PASS** | 表头展开为 `q1..q7` / `q_target1..7`，字段数与数据一致 |
-| A90 physical closed loop | **NOT RUN（本次）** | 4.0 基线闭环在 `../closed_loop_smoke/`；本轮未重跑 |
-| B90 physical closed loop | **NOT RUN（本次）** | 同上 |
+| Actual model input wiring | **PASS** | `build_sim_scene()` 强制显式相机版本（v3，SHA256 `418bad2f…`），缺失即报错不回落；**真实 Policy Server 已用 v3 推理**：同状态独立渲染与发送图 sha256 逐位一致（`5fa856bb…`），返回 `(15,8)` 且有限，server `mode=checkpoint` |
+| Episode-level JAX RNG | **PASS** | 真实 A40 + 真实 checkpoint：同 seed 两次**独立连接**首个 chunk 逐位一致（max_abs_diff=0.0）；同 seed 后续 chunk 也逐位一致；同 seed 连续 chunk 不同（PRNG 推进）；不同 seed 动作不同（diff 0.31） |
+| CSV trajectory schema | **PASS** | 表头展开为 `q1..q7` / `q_target1..7`（33 列），字段数与数据一致；新闭环 trace 13 行可用标准 CSV 解析 |
+| A90 physical closed loop | **PASS（跑通，安全退出）** | v3 相机 + 15 Hz + seed=0：13 个控制步 / 2 chunks，按 `max_ticks` 正常退出，无安全违规；物体未移动（`0.55, 0.0, 0.02`） |
+| B90 physical closed loop | **PASS（跑通，安全退出）** | 同上：13 步 / 2 chunks / `max_ticks`，无安全违规；物体未移动 |
 
-**Infrastructure Ready**：4.0 已成立，本轮未改动推理栈。
-**Observation and Control Validated**：External 几何/任务可见性、腕部刚性安装、CSV schema 通过；
-Model Input Wiring 与模型级 RNG 为 PARTIAL；两个闭环本轮未重跑。
-**Atomic Skill Learned**：未评测。
+**Infrastructure Ready**：4.0 已成立；本轮在真实 A40 上用 v3 相机重跑推理与闭环，仍成立。
+**Observation and Control Validated**：除 B90 腕部可见性（3/9，任务几何所限）外，其余全部 PASS。
+**Atomic Skill Learned**：未评测（两次闭环里物体都未被移动）。
 
 ## 1. 相机：修了什么
 
@@ -97,21 +96,28 @@ info['camera_sha256'] = config_sha256(cameras)
 `q1 … q7`、`q_target1 … q_target7`，其余字段逐列命名，写出前由
 `csv.DictWriter` 的表头/字段一致性保证；旧 CSV 未覆盖（4.0 原始 trace 保留原样，新写入使用修复后的 schema）。
 
-## 5. 未完成（如实列出）
+## 5. 本轮已完成 / 仍未完成
 
-1. **v3 相机未进入真实 GPU 推理链路**（Model Input Wiring = PARTIAL）；
-2. **模型级 RNG 复现未在 A40 上跑**（只有接线与语义测试）；
-3. **A90/B90 物理闭环本轮未重跑**（相机、时序、seed 修复后）；
-4. B90 腕部可见性 3/9，属任务几何限制，未做进一步的安装角调参；
-5. A90 第 6 阶段方块短边 19.2 px 略低于 20 px 门槛。
+**已完成（本轮实测）**：
+- 投影修正并通过 mask×投影 IoU 交叉验证（22/22）；
+- 腕部固定外参 v3 + 刚性验证（R 偏差 <1e-6）；
+- 真实专家示范 9 阶段 × 2 场景的可见性表；
+- 相机接入正式入口（`build_sim_scene` 强制版本化）并在**真实 Policy Server** 上验证输入一致；
+- 模型级 RNG 复现（4 条判据全部通过，真实 GPU）；
+- A90/B90 各一次 13 步闭环（v3 + 15 Hz + seed=0，`max_ticks` 安全退出）；
+- CSV schema 修复。
 
-第 1–3 项都可在下一轮以“起服务器 → 一次 15 Hz 闭环 + 同 seed 两次 episode”在 ~10 分钟内补齐，
-不属于结构性阻塞。
+**仍未完成（属于下一轮范围）**：
+1. **B90 腕部可见性 3/9**：侧向推动时物体在手掌侧下方，属任务几何限制；需要第二腕部相机或改安装角，本轮未做无根据调参；
+2. A90 第 6 阶段方块短边 19.2 px，略低于自定的 20 px 门槛（差 0.8 px）；
+3. 两次闭环都 `max_ticks` 结束且物体未移动——本轮不评测任务能力，也不据此调整相机。
 
 ## 6. 工件
 
 - `camera_geometry_tests.json`（22 项，含 IoU 与刚性验证）
 - `camera_visibility_by_phase.csv` / `.json`（真实专家 9 阶段 × 2 场景，逐阶段指标）
 - `camera_config_final.json`（v3 配置 + SHA256 `418bad2f…` + v1/v2 对照）
-- `A90_closed_loop/camera_phases/`、`B90_closed_loop/camera_phases/`（各阶段 external/wrist 原始图 + mask 图）
+- `A90_closed_loop/`、`B90_closed_loop/`（各阶段相机图 + mask 图 + 闭环 trace/JSON）
+- `model_input_audit.json`（真实推理输入/输出与 sha256）
+- `rng_model_reproducibility.json`（模型级 RNG 4 条判据）
 - `artifact_manifest.json`

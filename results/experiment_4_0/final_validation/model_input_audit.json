@@ -1,0 +1,90 @@
+{
+  "scene": "B90",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "checks": [
+    {
+      "check": "A1 服务器返回 (15,8) 且有限",
+      "pass": true,
+      "detail": {
+        "shape": [
+          15,
+          8
+        ],
+        "absmax": 0.6007529430012704
+      }
+    },
+    {
+      "check": "A2 服务器以 checkpoint 模式运行（weights=checkpoint）",
+      "pass": true,
+      "detail": {
+        "meta": {
+          "config": "pi05_droid",
+          "mode": "checkpoint",
+          "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+          "openpi_commit": "unknown"
+        }
+      }
+    },
+    {
+      "check": "A3 同状态独立渲染与发送图逐位一致（相机→模型输入可复现）",
+      "pass": true,
+      "detail": {
+        "sha256_sent": "5fa856bbb0969dc2",
+        "sha256_rerender": "5fa856bbb0969dc2"
+      }
+    },
+    {
+      "check": "A4 图像尺寸/通道为 224×224×3 uint8",
+      "pass": true,
+      "detail": {
+        "shape": [
+          224,
+          224,
+          3
+        ],
+        "dtype": "uint8"
+      }
+    },
+    {
+      "check": "A5 rig 使用的相机配置与冻结 SHA256 一致",
+      "pass": true,
+      "detail": {
+        "info_sha": "418bad2f33ef5a9e"
+      }
+    }
+  ],
+  "server_metadata": {
+    "config": "pi05_droid",
+    "mode": "checkpoint",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_droid",
+    "openpi_commit": "unknown"
+  },
+  "prompt": "push the orange block along the positive X direction to the wall",
+  "q": [
+    3e-06,
+    -0.499997,
+    -0.0,
+    -2.1,
+    -5e-06,
+    1.649986,
+    0.780002
+  ],
+  "gripper": 0.8750004511598967,
+  "image_sha256": {
+    "base": "5fa856bbb0969dc24126ddfd59b9500ed77f81ed13837b088772557d5276b10a",
+    "wrist": "23290332c3ebb30ab68308729d6824890a6cc0379dba7556878f817a0b29c765"
+  },
+  "n_action_dims_physical": 8,
+  "action_horizon": 15,
+  "first_action": [
+    -0.060104,
+    -0.239237,
+    -0.02547,
+    -0.181938,
+    0.166667,
+    0.066082,
+    -0.277202,
+    0.212139
+  ]
+}

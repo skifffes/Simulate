@@ -5,7 +5,7 @@
   "checkpoint": "pi05_droid",
   "camera_version": "exp4.0-camera-v3",
   "camera_sha256": "418bad2f33ef5a9e",
-  "n_files": 77,
+  "n_files": 85,
   "files": [
     {
       "path": "A90_closed_loop/camera_phases/A90_approach_external.png",
@@ -188,6 +188,21 @@
       "sha256": "ebad6edebfcf07dce0ab57fb702315535e3091e453f919d28cf7efd6efa037ae"
     },
     {
+      "path": "A90_closed_loop/chunks_A90_seed0.npz",
+      "size_bytes": 2355,
+      "sha256": "2516ac21fcc5085957e37ae77e033673bdf5803eb151844e527ef56fc834365c"
+    },
+    {
+      "path": "A90_closed_loop/closed_loop_A90_seed0.json",
+      "size_bytes": 13406,
+      "sha256": "3cb35a86f27459eab74e24bcbc8cb78d6ed48800f646a466e59ae844d007ef74"
+    },
+    {
+      "path": "A90_closed_loop/trace_A90_seed0.csv",
+      "size_bytes": 2864,
+      "sha256": "134896fa70c5c15424d0cc831c304093489d7996653cd3974bfdfd8a4da93da6"
+    },
+    {
       "path": "B90_closed_loop/camera_phases/B90_approach_external.png",
       "size_bytes": 4696,
       "sha256": "0455d78d921f1142a7af25daeccc880b5cf005cb07e1804c1734304148779a9f"
@@ -368,6 +383,21 @@
       "sha256": "976877b04dff351fd40ed746660350c91f06e97fb55c5b3081b013b17e0f3c35"
     },
     {
+      "path": "B90_closed_loop/chunks_B90_seed0.npz",
+      "size_bytes": 2361,
+      "sha256": "8121d8e3c95752384bd7885d09c1fb7c2b121c0a6b5a466e6fcec370458f7994"
+    },
+    {
+      "path": "B90_closed_loop/closed_loop_B90_seed0.json",
+      "size_bytes": 13279,
+      "sha256": "600dcdf524ea72941cbeeef8909c9fdb36c4564825efc2718082cb357b1b7f40"
+    },
+    {
+      "path": "B90_closed_loop/trace_B90_seed0.csv",
+      "size_bytes": 2850,
+      "sha256": "4bc40852dce5112c94e9cbfc0d13f2bf193238fa6987f9e73f8c99ef89de84aa"
+    },
+    {
       "path": "camera_config_final.json",
       "size_bytes": 1402,
       "sha256": "2fd9b580b29d6c4c3747b05e6470301a229469bdf89fbe77ec4f81ad95c4c1a4"
@@ -389,8 +419,18 @@
     },
     {
       "path": "final_validation_report.md",
-      "size_bytes": 7188,
-      "sha256": "59f88796023b3bb51bfd7ffba369f6b11fa6e75731f6b02187828c605e4cb821"
+      "size_bytes": 8034,
+      "sha256": "ae617fd67026a442f34835db170e97e04f4d2a8367278a62458d96e461234227"
+    },
+    {
+      "path": "model_input_audit.json",
+      "size_bytes": 2117,
+      "sha256": "3a11422d20ea354827538711241b7d99a7b9af356035045526b2729c6dedec9d"
+    },
+    {
+      "path": "rng_model_reproducibility.json",
+      "size_bytes": 1963,
+      "sha256": "09b7e4228454dca6ad620f07cdb5ad616d4ac28934de4fb2409f0c31d50e568e"
     }
   ]
 }
