@@ -1,0 +1,203 @@
+{
+  "experiment": "4.0-replay-fix",
+  "base_commit": "75bd153",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "checkpoint": "pi05_droid",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e",
+  "episode_id": 64,
+  "replay_mode": "PHYSICAL_REPLAY",
+  "n_files": 38,
+  "files": [
+    {
+      "path": "camera_corrected_frames/B90_approach_external.png",
+      "size_bytes": 7283,
+      "sha256": "174ff270fea2c22995ab243231d4090fbed0d14f614a5634242edb568e520275"
+    },
+    {
+      "path": "camera_corrected_frames/B90_approach_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "03a89eb0658ecd2423dc2b45c23b6bd2381ab4c0b77342ef96fd5e34a5873fe7"
+    },
+    {
+      "path": "camera_corrected_frames/B90_approach_external_segvis.png",
+      "size_bytes": 2086,
+      "sha256": "ce4633a01b16ef0c452f86ecdab2a3d0bec99678456617fd2806a26e8be364d5"
+    },
+    {
+      "path": "camera_corrected_frames/B90_approach_wrist.png",
+      "size_bytes": 2522,
+      "sha256": "b28d9cfcc78eb764686ba4e53622e5f2c0917a366424fd5244574549dfa222f6"
+    },
+    {
+      "path": "camera_corrected_frames/B90_approach_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "b33fcada3804b2d6defc6bba7f1563c2d63e35e35aa37b10424fd4c50b45953e"
+    },
+    {
+      "path": "camera_corrected_frames/B90_approach_wrist_segvis.png",
+      "size_bytes": 1166,
+      "sha256": "8d8141fc466a43ef43d1ae663b40b73c50e8a0c2774555cda1770d2029dc8fe3"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_external.png",
+      "size_bytes": 6820,
+      "sha256": "3a2aac1564d2f02c49f00e804e072c5a05b47861715a6e7d44fba966d0e11c90"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "5bd102f078c7d7f0cdf660498c4bf3b8323370f29ff113d2af604eaa679705f8"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_external_segvis.png",
+      "size_bytes": 2106,
+      "sha256": "0961c52303a0c5ea7795d8126792edc48f5e106fd73b245f9c6595d88a348804"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_wrist.png",
+      "size_bytes": 2565,
+      "sha256": "0a22ce49c88aa218f20e74e8de96ec097a769e3d2ac5a82a773319570a1430b5"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "03e44873541ba35547d1b2abd81e59c2e88b9f4c87dda03c46aef9c5748d098a"
+    },
+    {
+      "path": "camera_corrected_frames/B90_final_wrist_segvis.png",
+      "size_bytes": 1161,
+      "sha256": "02c41cdf98315076266489454107af00fd2c1a87f8742ae0e05215bf72256824"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_external.png",
+      "size_bytes": 8508,
+      "sha256": "5b323063cc99247e356cf02e0e56f8613a4d6bcc5a669e70957fce253cd09c77"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "33a4d5a26f7ff27d788c847f53aa6392dc1148a6469470dab822159302fe3b23"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_external_segvis.png",
+      "size_bytes": 2250,
+      "sha256": "7d22e1535966278a4df711f2dd108196ab7318434c1090ad8780b86a778bd527"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_wrist.png",
+      "size_bytes": 2653,
+      "sha256": "d796a291a7db7e0d866564c2d53c7a8d1a66341aa899e2aef19e936c95c02bdd"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "c39d0404a320ffba5ea7a80b550a1cd260e04aa6943ee6b30eb3507dff84950d"
+    },
+    {
+      "path": "camera_corrected_frames/B90_first_robot_contact_wrist_segvis.png",
+      "size_bytes": 1290,
+      "sha256": "a224c0eece281e3b26e3749304037fc244ca54352554b0b1d9af04911316c8c8"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_external.png",
+      "size_bytes": 4948,
+      "sha256": "bae0c0be3ef5704a8fc9b2f537fefc10d572dd2a4b3e5ca2bc581bfc1f13e217"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "f9a4f9880a8865af633a8608cc51d4c6253dbffdfe773ad02d9b947db49c2bf9"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_external_segvis.png",
+      "size_bytes": 1853,
+      "sha256": "744f0d5242720fc9311f6d708a8e9e9dab14dc5c80e886b3e3042c1a26698f43"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_wrist.png",
+      "size_bytes": 3000,
+      "sha256": "0385dab327a81fb1e72b53227ace86bec6741d8be553fbffedd37671494d5774"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "917e9ab55dfabc6234210bd30880834f8084b1e54f3d7edadc201a15e77fb19a"
+    },
+    {
+      "path": "camera_corrected_frames/B90_initial_wrist_segvis.png",
+      "size_bytes": 1155,
+      "sha256": "f1e2c0edcdae08a55098f9d619cbdeb945f27311e08ed6469f140993c7c16f9a"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_external.png",
+      "size_bytes": 8504,
+      "sha256": "24beea1433b32a12256de7b39dbe5258c25bc733e3a5b274e7b2202d1070c160"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "e0a266bcf94d678cf026fdeb434b0902e5d6416bd7026f409c8d5b7dd6d3ec66"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_external_segvis.png",
+      "size_bytes": 2269,
+      "sha256": "002b19d564a1e4f543ce19b49a50b4c150a182138f3d700ef9dddfaa1f8c2462"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_wrist.png",
+      "size_bytes": 2744,
+      "sha256": "1f99d2650c98f270c5093e1a1bc0212f1abf860b081400f29a199b78c700d5ff"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "db9bc3d3b3709b0c5378ac907c1cfe3fff604d13cea4ae7584c56c081492beb7"
+    },
+    {
+      "path": "camera_corrected_frames/B90_pushing_wrist_segvis.png",
+      "size_bytes": 1247,
+      "sha256": "2d3c2b6cf4a2a88b7cefab17b802bb472530fcaf0475fdc4cf4f972c9d8451a8"
+    },
+    {
+      "path": "camera_decision.md",
+      "size_bytes": 1312,
+      "sha256": "d81098bb80ad32868a1b2968b7de2bbc043ec25f6aae28650cb7ebfed2ca6d3a"
+    },
+    {
+      "path": "camera_visibility_corrected.csv",
+      "size_bytes": 1091,
+      "sha256": "0babca1c77af4118e81aded5028f5ec23474497ea673082197da82314a474a26"
+    },
+    {
+      "path": "contact_phase_validation.csv",
+      "size_bytes": 3702,
+      "sha256": "e5e5d914e420642afa30dbe7733014a022a2597b4c79b6aa5ddd32cb0d44a893"
+    },
+    {
+      "path": "episode_restoration_checks.json",
+      "size_bytes": 996,
+      "sha256": "f65ef18ea817636a7855beb9e15fece08d22349d3c7534aec9df04a4ee68411b"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1507,
+      "sha256": "91e256ed0ed9f4fee4434700a5393bd9eb8140931498eaac3756c45c72436d91"
+    },
+    {
+      "path": "replay_fix_report.md",
+      "size_bytes": 6121,
+      "sha256": "3db00cfe9c072406e783ea93e3ba761d767acae694bc087a907cf5ef1540db96"
+    },
+    {
+      "path": "replay_provenance.json",
+      "size_bytes": 1285,
+      "sha256": "f2f4f9025e35348c5ecd2bb76dcb0f72cde4e4089dd66b9bac61bb314b78c211"
+    },
+    {
+      "path": "segmentation_validation.json",
+      "size_bytes": 2555,
+      "sha256": "9c717f4f3e4e42cac0db9aacde1a019a539a95e48279171675f07915f3d67902"
+    }
+  ]
+}

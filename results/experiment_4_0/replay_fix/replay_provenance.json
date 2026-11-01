@@ -1,0 +1,45 @@
+{
+  "scene": "B90",
+  "requested_episode_id": 64,
+  "dataset_episode_index": 64,
+  "parquet": "/scratch/lijh/simulate_vla/data/lerobot_panda_e23_D2/data/chunk-000/episode_000064.parquet",
+  "start_state_csv": "results/experiment_3/data/b_training_start_states.csv",
+  "start_state_found": true,
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "replay_mode": "PHYSICAL_REPLAY (sim.command 关节位置目标 + 接触动力学；动作语义 = 数据集动作序列，未做额外缩放)",
+  "wall_bodies": [],
+  "restoration_errors": {
+    "object_position_error_m": 9.240622495790305e-08,
+    "object_rotation_error_rad": 0.0,
+    "robot_q_error_rad": 5.1902500546657446e-06,
+    "gripper_error_m": 2.4959573509397703e-07
+  },
+  "restoration_pass": true,
+  "roles": {
+    "block": [
+      2
+    ],
+    "robot": [
+      1
+    ],
+    "plane": [
+      0
+    ],
+    "wall": [],
+    "tray": [
+      3,
+      4,
+      5
+    ]
+  },
+  "first_robot_contact_frame": 96,
+  "first_wall_contact_frame": null,
+  "final_block_pos": [
+    0.54899,
+    0.18214,
+    0.01999
+  ],
+  "block_total_dx_m": 0.00087,
+  "phase_source": "机器人↔方块 / 方块↔墙 的真实 PyBullet 接触记录（非按帧号命名）"
+}

@@ -1,0 +1,87 @@
+{
+  "n_frames": 5,
+  "checks": [
+    {
+      "phase": "initial",
+      "frame": 0,
+      "rgb_sha256": "3f4f9cfc94c6f2a843d48de7ed9b1cef122095ccdacc40efde9d0186bb83bfbe",
+      "segvis_sha256": "98e3a6275bab28844ca1f40796cdf563ed2fb81d6c1856720a7df5c5ad992965",
+      "segids_sha256": "3375b1a4eb6b3c3d2be29ce45edfff393ce6c77328992c207d06e8037c0310e7",
+      "rgb_equals_segvis": false,
+      "unique_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "phase": "approach",
+      "frame": 88,
+      "rgb_sha256": "d3ed339d5a2306d3d037b869aab1b17826fc3f484d514d4bbd8cec28ad03c46a",
+      "segvis_sha256": "9f1626c52475d95cc5a3b2c55ea731b8f573c7aa5c62467651a15b23e6dc4fe2",
+      "segids_sha256": "66740ff886dc18c6a7abd76326984ebed4e01e101df85fa280dd86a0c37bfb45",
+      "rgb_equals_segvis": false,
+      "unique_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "phase": "first_robot_contact",
+      "frame": 96,
+      "rgb_sha256": "8a041b51697b28dd050271184153d3c9c6e176c0331aa496ccc674d902e95282",
+      "segvis_sha256": "400701c64a5d9ce2b808a72b8b1e15a9131f9ff713b4c39d612fa251e726e45e",
+      "segids_sha256": "d46dc4e8fd0137a7c12ae743523b16592ba765ce4fa81e3a52d797542afa1c41",
+      "rgb_equals_segvis": false,
+      "unique_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "phase": "pushing",
+      "frame": 102,
+      "rgb_sha256": "ac62e60f96ed3533dacb47cda32e8e90129336d377e692f48b18df9da2c9a4be",
+      "segvis_sha256": "32e1ae20e3378f076e3b1f56f646dbebee3be21326d84168f05001ca547c3a8e",
+      "segids_sha256": "864e98ca015cecd045355dd183d4d2ea9ffcbde0af1083708b412f27f6f98343",
+      "rgb_equals_segvis": false,
+      "unique_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "phase": "final",
+      "frame": 134,
+      "rgb_sha256": "f07677e8c90425f03e5fbf124674f92152b2c9aadd7bb8963cc79631f91ea910",
+      "segvis_sha256": "c3212d97ef8dfde662c205c1f472a41a5921ec30ae647d5f3658ad84a07c91d8",
+      "segids_sha256": "26392ed1a0e64612ed17cb5fec420a962a812dfe510b07ff980d5249154aa359",
+      "rgb_equals_segvis": false,
+      "unique_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "note": "mask 来自 PyBullet segmentation buffer（bodyUniqueId，int32）；另存彩色可视化（segvis）与原始 id（segids.npy），RGB 与 segvis 的 sha256 必须不同",
+  "all_rgb_not_equal_segvis": true
+}

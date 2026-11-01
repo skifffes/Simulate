@@ -1,0 +1,48 @@
+{
+  "episode_id": 64,
+  "dataset_episode_index": 64,
+  "errors": {
+    "object_position_error_m": 9.240622495790305e-08,
+    "object_rotation_error_rad": 0.0,
+    "robot_q_error_rad": 5.1902500546657446e-06,
+    "gripper_error_m": 2.4959573509397703e-07
+  },
+  "thresholds": {
+    "object_position_error_m": 0.002,
+    "object_rotation_error_rad": 0.01,
+    "robot_q_error_rad": 0.05
+  },
+  "pass": true,
+  "start_state": {
+    "episode_id": 64,
+    "q": [
+      0.1933409,
+      -0.4513477,
+      0.3331958,
+      -2.7652955,
+      0.1971959,
+      2.3259866,
+      1.144558
+    ],
+    "obj_pos": [
+      0.5481199999144979,
+      0.18199999936561415,
+      0.01998982538681541
+    ],
+    "obj_quat": [
+      0.0,
+      0.0,
+      0.693343,
+      0.720608
+    ],
+    "obj_yaw": 1.5322348895710696,
+    "fingers": [
+      0.03500022739171982,
+      0.034999825060367584
+    ],
+    "scene_seed": 53050005,
+    "yaw_label": "yaw90",
+    "start_mode": "multi_ik",
+    "episode_success": "True"
+  }
+}
