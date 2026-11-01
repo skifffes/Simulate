@@ -8,8 +8,9 @@
   * 触发任一条件立即停止，保存最后的输入、chunk、目标与实际轨迹；
   * 不做“无限制 clipping 把错误动作变成有效控制”。
 
-执行频率：策略 20 Hz（与实验 1–3 一致），每 tick 执行 12 个 240 Hz 物理步。
-DROID 原始控制频率是 15 Hz，二者的差别只影响动作的时间尺度，实验 4.0 明确记录而不隐藏。
+执行频率：策略 15 Hz（默认，与官方 DROID 一致；可用 --policy-hz 20 回到实验 1–3 的旧时序），
+每 tick 执行 240/15 = 16 个 240 Hz 物理步。推理期间仿真暂停 → 这是**仿真时间闭环**，
+不代表满足真实机器人 15 Hz 的墙钟约束（见 hotfix 报告 §D）。
 
 用法：
     python scripts/exp40/level4_closed_loop.py --scene B90 --ticks 25 --port 8000
@@ -39,7 +40,9 @@ from scripts.exp40._common import (  # noqa: E402
     build_sim_scene, capture, make_policy_client, model_input_summary, save_json,
 )
 
-STEPS_PER_TICK = 12  # 20 Hz 策略 / 240 Hz 物理
+STEPS_PER_TICK = 12  # 20 Hz 策略 / 240 Hz 物理（实验 1–3 的旧默认，保留兼容）
+SIM_HZ = 240
+DROID_HZ = dc.DROID_CONTROL_HZ  # 15 Hz：官方 DROID 采集/执行频率
 
 
 def main(argv=None) -> int:
@@ -49,6 +52,8 @@ def main(argv=None) -> int:
     parser.add_argument('--port', type=int, default=8000)
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--ticks', type=int, default=20, help='最多执行多少个策略控制步')
+    parser.add_argument('--policy-hz', type=float, default=DROID_HZ,
+                        help='策略控制频率（默认 15 Hz，与官方 DROID 一致；实验 1–3 为 20 Hz）')
     parser.add_argument('--execute-k', type=int, default=8, help='每个 chunk 执行多少步后重推理')
     parser.add_argument('--max-delta-rad', type=float, default=0.15)
     parser.add_argument('--wall-time', type=float, default=90.0)
@@ -62,6 +67,8 @@ def main(argv=None) -> int:
     limits = SafetyLimits(max_ticks=args.ticks, wall_time_max_s=args.wall_time,
                           max_joint_step_rad=0.30)
     a_cfg = ActionAdapterConfig(max_delta_rad=args.max_delta_rad)
+    # 控制时序：策略频率 -> 每个控制步内推进多少个 240 Hz 物理步
+    steps_per_tick = max(1, int(round(SIM_HZ / float(args.policy_hz))))
 
     sim, block, rig, prompt, info = build_sim_scene(args.scene, seed=args.seed)
     monitor = SafetyMonitor(sim, limits, object_ids=(block,))
@@ -137,7 +144,7 @@ def main(argv=None) -> int:
                     break
 
                 # ---- 控制 ----
-                for _ in range(STEPS_PER_TICK):
+                for _ in range(steps_per_tick):
                     sim.command(adapted.q_target)
                     _set_gripper(sim, adapted.gripper_target_m)
                     sim.step()
@@ -175,9 +182,13 @@ def main(argv=None) -> int:
                 'gripper_mode': a_cfg.gripper_mode,
                 'gripper_threshold': a_cfg.gripper_threshold,
             },
-            'steps_per_tick': STEPS_PER_TICK,
-            'policy_hz': 20,
+            'steps_per_tick': steps_per_tick,
+            'policy_hz': float(args.policy_hz),
+            'sim_hz': SIM_HZ,
             'droid_control_hz': dc.DROID_CONTROL_HZ,
+            'timing_note': ('同步闭环：每个策略控制步先推理（必要时）再推进 '
+                            f'{steps_per_tick} 个物理步；推理期间仿真暂停，'
+                            '因此这是仿真时间闭环，不代表满足实时机器人 15 Hz 的墙钟约束'),
             'n_chunks': len(chunks),
             'chunks': chunks[:5],
             'final_block_state': _block_state(block, sim),

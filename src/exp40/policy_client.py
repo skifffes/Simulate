@@ -50,6 +50,7 @@ class Pi05PolicyClient:
         self._msgpack = msgpack_numpy
         self._packer = msgpack_numpy.Packer()
         self.calls: list[CallRecord] = []
+        self.last_episode_seed: int | None = None
         self._conn = websockets.sync.client.connect(
             self._uri, compression=None, max_size=None,
             open_timeout=open_timeout, close_timeout=5.0,
@@ -62,9 +63,17 @@ class Pi05PolicyClient:
         return self._metadata
 
     # ---- 推理 -------------------------------------------------------------
-    def infer(self, obs: dict) -> dict:
+    def infer(self, obs: dict, episode_seed: int | None = None) -> dict:
+        """向服务器请求一次 action chunk。
+
+        episode_seed：本回合的显式随机种子。服务器收到后会先把 JAX PRNG 重置成
+        `jax.random.key(episode_seed)` 再推理，因此同 seed + 同观测 => 同一条采样轨迹。
+        """
+        payload = dict(obs)
+        if episode_seed is not None:
+            payload['__episode_seed__'] = int(episode_seed)
         t0 = time.perf_counter()
-        self._conn.send(self._packer.pack(obs))
+        self._conn.send(self._packer.pack(payload))
         raw = self._conn.recv(timeout=self._recv_timeout)
         dt = time.perf_counter() - t0
         if isinstance(raw, str):
@@ -74,10 +83,11 @@ class Pi05PolicyClient:
         self.calls.append(CallRecord(
             index=len(self.calls) + 1,
             roundtrip_s=dt,
-            request_shapes={k: list(np.asarray(v).shape) for k, v in obs.items() if k != 'prompt'},
+            request_shapes={k: list(np.asarray(v).shape) for k, v in payload.items() if k != 'prompt'},
             response_keys=sorted(out),
             actions_shape=list(actions.shape),
         ))
+        self.last_episode_seed = episode_seed
         return out
 
     # ---- 统计 -------------------------------------------------------------

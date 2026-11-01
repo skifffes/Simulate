@@ -1,0 +1,296 @@
+{
+  "n_checks": 29,
+  "n_pass": 29,
+  "all_pass": true,
+  "by_group": {
+    "A": {
+      "n": 7,
+      "pass": 7
+    },
+    "B": {
+      "n": 7,
+      "pass": 7
+    },
+    "C": {
+      "n": 5,
+      "pass": 5
+    },
+    "D": {
+      "n": 5,
+      "pass": 5
+    },
+    "E": {
+      "n": 5,
+      "pass": 5
+    }
+  },
+  "checks": [
+    {
+      "group": "A",
+      "check": "v2 配置哈希稳定（两次计算一致）",
+      "pass": true,
+      "detail": {
+        "sha256": "1dd123f91dac4970"
+      }
+    },
+    {
+      "group": "A",
+      "check": "v2 与 v1 基线不同（确实改了）",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "A",
+      "check": "外部相机参数完整",
+      "pass": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "group": "A",
+      "check": "外部相机是固定第三人称（不随机器人/物体变化）",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "A",
+      "check": "外部相机更近且更平视（distance↓ pitch↑ fov↑）",
+      "pass": true,
+      "detail": {
+        "v1": [
+          1.05,
+          -52.0,
+          50.0
+        ],
+        "v2": [
+          0.7,
+          -35.0,
+          60.0
+        ]
+      }
+    },
+    {
+      "group": "A",
+      "check": "腕部相机挂在 link 8（手掌）且外参固定",
+      "pass": true,
+      "detail": {
+        "link": 8,
+        "offset": [
+          0.09,
+          0.0,
+          -0.01
+        ]
+      }
+    },
+    {
+      "group": "A",
+      "check": "腕部相机未被改成“物体真值瞄准”",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "B",
+      "check": "动作 1 => 夹爪目标 = 全开 0.04 m",
+      "pass": true,
+      "detail": {
+        "width_m": 0.04
+      }
+    },
+    {
+      "group": "B",
+      "check": "动作 0 => 夹爪目标 = 闭合 0 m",
+      "pass": true,
+      "detail": {
+        "width_m": 0.0
+      }
+    },
+    {
+      "group": "B",
+      "check": "二值化阈值 0.5（官方 examples/droid/main.py:141-146）",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "B",
+      "check": "观测：张开 => gripper 标量接近 1",
+      "pass": true,
+      "detail": {
+        "g": 0.9999
+      }
+    },
+    {
+      "group": "B",
+      "check": "观测：闭合 => gripper 标量接近 0",
+      "pass": true,
+      "detail": {
+        "g": 0.00799
+      }
+    },
+    {
+      "group": "B",
+      "check": "真实手指位移与归一化一致（0.04 m <-> 1.0）",
+      "pass": true,
+      "detail": {
+        "open_m": 0.04,
+        "closed_m": 0.00032
+      }
+    },
+    {
+      "group": "B",
+      "check": "观测与动作方向一致（1 = open）",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "C",
+      "check": "适配器无额外比例因子（q_target - q == action[:7]）",
+      "pass": true,
+      "detail": {
+        "delta": [
+          0.05,
+          -0.04,
+          0.03,
+          0.02,
+          -0.01,
+          0.02,
+          -0.03
+        ]
+      }
+    },
+    {
+      "group": "C",
+      "check": "未出现 0.2 重复缩放",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "C",
+      "check": "超出官方 clip ±1 的动作被拒绝（不静默缩放）",
+      "pass": true,
+      "detail": {
+        "reasons": [
+          "delta_exceeds_official_clip"
+        ]
+      }
+    },
+    {
+      "group": "C",
+      "check": "checkpoint action 区间关于 0 对称（支持“关节增量”而非绝对角）",
+      "pass": true,
+      "detail": {
+        "q01": [
+          -0.458,
+          -0.8076,
+          -0.4472,
+          -0.9268,
+          -0.6456,
+          -0.646,
+          -0.7616
+        ],
+        "q99": [
+          0.4476,
+          0.7652,
+          0.448,
+          0.7944,
+          0.6484,
+          0.6628,
+          0.7344
+        ],
+        "relative_asymmetry": [
+          0.011,
+          0.027,
+          0.001,
+          0.077,
+          0.002,
+          0.013,
+          0.018
+        ],
+        "criterion": "q01<0<q99 且 |q01+q99|/(q99-q01) < 0.30"
+      }
+    },
+    {
+      "group": "C",
+      "check": "checkpoint 夹爪区间是 [0,1]（绝对归一化量）",
+      "pass": true,
+      "detail": {
+        "q01": 0.0,
+        "q99": 0.9998
+      }
+    },
+    {
+      "group": "D",
+      "check": "15 Hz 策略 => 每 tick 16 个物理步",
+      "pass": true,
+      "detail": {
+        "steps": 16,
+        "ms": 66.66666666666667
+      }
+    },
+    {
+      "group": "D",
+      "check": "20 Hz 策略 => 每 tick 12 个物理步",
+      "pass": true,
+      "detail": {
+        "steps": 12,
+        "ms": 50.0
+      }
+    },
+    {
+      "group": "D",
+      "check": "默认策略频率 = DROID 15 Hz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "D",
+      "check": "15 步 chunk 在 15 Hz 下 = 1.00 s",
+      "pass": true,
+      "detail": {
+        "chunk_s": 1.0
+      }
+    },
+    {
+      "group": "D",
+      "check": "execute_k=8 时每步可用预算 = 8*66.7ms = 533 ms > 实测 155 ms（同步闭环下仍可行）",
+      "pass": true,
+      "detail": {
+        "budget_ms": 533.3333333333334,
+        "measured_ms": 155
+      }
+    },
+    {
+      "group": "E",
+      "check": "seed 键被消费（没有进入模型输入）",
+      "pass": true,
+      "detail": {
+        "n_keys": 1
+      }
+    },
+    {
+      "group": "E",
+      "check": "seed 被记录到审计记录",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "E",
+      "check": "seed 键不出现在模型实际输入里",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "E",
+      "check": "客户端支持 episode_seed 且不改写调用方 obs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "group": "E",
+      "check": "服务器 reset 会清空调用记录（避免跨回合串扰）",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "camera_config_sha256": "1dd123f91dac49702d46673a849dde55923cd3cea9897e90e21d99dd2554dd58"
+}

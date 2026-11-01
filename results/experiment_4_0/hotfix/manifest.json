@@ -1,0 +1,850 @@
+{
+  "experiment": "4.0-hotfix",
+  "base_commit": "557aaea",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "checkpoint": "pi05_droid",
+  "normalization": "quantile",
+  "n_files": 168,
+  "files": [
+    {
+      "path": "camera_before_after/A90_external_c1_closer_home_model224.png",
+      "size_bytes": 9980,
+      "sha256": "5298202f40a1170ed69858e5c077bec74b36a9977f2c34a2ce1fef73400908c0"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_home_raw256.png",
+      "size_bytes": 3629,
+      "sha256": "037f58afb94ed050520627c711f7e20cb3188bc821cdf475906db4274c9f20a3"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t10_model224.png",
+      "size_bytes": 10988,
+      "sha256": "240ae2d205e06e02c9d61d36c3f4ca3bb4ef88c44e2578b0b4df7dae2af929f2"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t10_raw256.png",
+      "size_bytes": 4280,
+      "sha256": "134711220b56c3e73e565f995b23c8e69d00e469cd36635e4dd5feeabae24636"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t14_model224.png",
+      "size_bytes": 12438,
+      "sha256": "67ee3883c24bcec56a773bd3807d352633cb3de71f3a0a9ab8ee7b5da50202cd"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t14_raw256.png",
+      "size_bytes": 6037,
+      "sha256": "aff41b12cddba6dc265967191bf565549d3d2bb61b07da3d17e3732257f4aeaa"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t1_model224.png",
+      "size_bytes": 9406,
+      "sha256": "ba5044766e7455a3f06d29e1b45f1e73f101c30d8b2e74061789c5c8d3e30a13"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t1_raw256.png",
+      "size_bytes": 3250,
+      "sha256": "a8a0a0277df2c259ec74a5366e13114e773d0ffd1fb123500122813a08028afa"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t5_model224.png",
+      "size_bytes": 9461,
+      "sha256": "57fd440c2ccd92b67eefa7325fcad92667abfd5907933dba8bc891049f8a3ed0"
+    },
+    {
+      "path": "camera_before_after/A90_external_c1_closer_trace_t5_raw256.png",
+      "size_bytes": 3258,
+      "sha256": "c73336586a668f22b2f9b19cef7fdd2458ffe3353de03e97b4289606846a8c50"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_home_model224.png",
+      "size_bytes": 8650,
+      "sha256": "04be00762ea398d57fa51d28928c5068c9e4f9c25096c70b1a844a343a6316ce"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_home_raw256.png",
+      "size_bytes": 2865,
+      "sha256": "3c315e0e6ed593f0e8787b2e7cc1f0bd630f07ec5634ea412e59cfc899d45cc0"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t10_model224.png",
+      "size_bytes": 9593,
+      "sha256": "6b9c6673589925439a8b0b4c8fbab6a8c5f0c3c10087736c85d106b21295acad"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t10_raw256.png",
+      "size_bytes": 3623,
+      "sha256": "b67ba1e093d2e29031bf943b84e2a27efde66b5ecc150a759df4dd061447a93d"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t14_model224.png",
+      "size_bytes": 10240,
+      "sha256": "c4d68bdebd23c3b2c2ec5b16cb373aee886528194504aa972bae91f6f8891ef2"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t14_raw256.png",
+      "size_bytes": 4419,
+      "sha256": "8a1acbd522ade44065df71af3523bcd33ce60ee81d17a1440095bb37a79cdfc3"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t1_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t1_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t5_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/A90_external_c2_oblique_trace_t5_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_home_model224.png",
+      "size_bytes": 9919,
+      "sha256": "6e746d7e2f5c6ab331db6a33ff5d799cbc4bd2e4224730cd928bb61b04101cb1"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_home_raw256.png",
+      "size_bytes": 3971,
+      "sha256": "40a73ceeed49acd5832faa5d2a1c026d3fa0871d88b9d5164f7424b341144914"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t10_model224.png",
+      "size_bytes": 10925,
+      "sha256": "199261afff10098da2b9fa3d6dfa951c750d8c840cfcffba75f015efb85c7a85"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t10_raw256.png",
+      "size_bytes": 4464,
+      "sha256": "5a16c2e0376009c0b8b302b53790e6d5bb7db95ce32ace065b7ab89598bf5164"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t14_model224.png",
+      "size_bytes": 13153,
+      "sha256": "29892d4eeb7e17ed90cfff0e6374791c094264ca9fb2905143ce7f68916f5ee3"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t14_raw256.png",
+      "size_bytes": 7230,
+      "sha256": "d77e03224a545b53c6170c681515b4422ff01ef8ff0b0d5b71a2ba7029247934"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t1_model224.png",
+      "size_bytes": 9916,
+      "sha256": "b124d74d90710ef8be6329bc1eda7c992bb70d66ecabab8df38da89cab925326"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t1_raw256.png",
+      "size_bytes": 3995,
+      "sha256": "0056491798fe65f9a5c551be935aa9e6c2eaa611b8d448bf7e0ea2b2cf911b4e"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t5_model224.png",
+      "size_bytes": 10002,
+      "sha256": "743950fda9a9dadde60d53267f3eb0f80e9847cd2c0220fa3b7fefe918f86fd6"
+    },
+    {
+      "path": "camera_before_after/A90_external_c3_overhead_trace_t5_raw256.png",
+      "size_bytes": 4054,
+      "sha256": "b76a390998fa90ec26f06c5fbeb58c486f793e9c719d023ede460af8db30ceac"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_home_model224.png",
+      "size_bytes": 9479,
+      "sha256": "618e1c6b4344bc4000b8b81ad3659484aea8187c73733b54db94452b7b5e960d"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_home_raw256.png",
+      "size_bytes": 3763,
+      "sha256": "e5a5fb285ce29dbcd46f31af565668e977da7b88a294f45d6898affd853ff401"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t10_model224.png",
+      "size_bytes": 12017,
+      "sha256": "c3e0c5d5099efee5a66c6039d52debf94609e2c635ffb904ae63cc0154510783"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t10_raw256.png",
+      "size_bytes": 6575,
+      "sha256": "27f4ba2b8604a0977f5f1300274919746fcec6c0235824ce1f75f3e00b75bc49"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t14_model224.png",
+      "size_bytes": 13683,
+      "sha256": "42fa2c9e734f17bc20b37127096d6c27a144724294a446c2f331a2d0668fa252"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t14_raw256.png",
+      "size_bytes": 8018,
+      "sha256": "5bf65a05f36ec753b1da7895f465e4184369dc6b455691acda1da5a123ca547c"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t1_model224.png",
+      "size_bytes": 9438,
+      "sha256": "39f93cc8b2224d336b537d5fdd1b821cfe3fc2857e11f76658b410b8305b3538"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t1_raw256.png",
+      "size_bytes": 3749,
+      "sha256": "a04c048d1f455ff470e3fe22d0337cc8f5ede6f44f16b9907c0f97da28e6ce84"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t5_model224.png",
+      "size_bytes": 9595,
+      "sha256": "1308fb2db381cfda72f7e4b108e1341b9283bed169101ca04e2c91fe2f4e8007"
+    },
+    {
+      "path": "camera_before_after/A90_external_current_trace_t5_raw256.png",
+      "size_bytes": 3872,
+      "sha256": "c0714e61a2057b4825c1f77108923e67e48e9658eb47c2afd639a2e1703be52e"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_home_model224.png",
+      "size_bytes": 10393,
+      "sha256": "9887ce0fc119ccc1640aaeea4620fd5b363ca82ef2a59d26277b167ba361c540"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_home_raw256.png",
+      "size_bytes": 4443,
+      "sha256": "5d92a3ee972157c23b71fa1aeb678ac9de79f492954b9bd0dec29700f9ff7b6b"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t10_model224.png",
+      "size_bytes": 11424,
+      "sha256": "d2469e3d825b34de104b51098e988e2f5eb56788a83321561221b016ad09514b"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t10_raw256.png",
+      "size_bytes": 4991,
+      "sha256": "8aaea546834c2c9f25be2abae9e2f6616240b105b930135946d21005ff76a768"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t14_model224.png",
+      "size_bytes": 14190,
+      "sha256": "5653e050594b45a94909062d150269877de6ba18f0fe5affd8a1819df65451b3"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t14_raw256.png",
+      "size_bytes": 7952,
+      "sha256": "bca1c520211f15c8394d3c54325b0b982a083091be69224a545c36dd509990ce"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t1_model224.png",
+      "size_bytes": 10369,
+      "sha256": "c571729e1fc7c0de0b933c0418757788d2da1cceccccb17ec28604bae053bc92"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t1_raw256.png",
+      "size_bytes": 4426,
+      "sha256": "27460150f539f3813122f62c8b8596e6b976c1249daf2cf2b8d6f91f2427f3b5"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t5_model224.png",
+      "size_bytes": 10386,
+      "sha256": "7d62eb0aedf8e189182430eead8694735cf3dee214e3b5f07ed9d86fdbeb3063"
+    },
+    {
+      "path": "camera_before_after/A90_top_after_trace_t5_raw256.png",
+      "size_bytes": 4426,
+      "sha256": "dacbd62e930b99b8007de227c585a5041f6a3e23b476b3aa25d72e36564d7f45"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_home_model224.png",
+      "size_bytes": 9479,
+      "sha256": "618e1c6b4344bc4000b8b81ad3659484aea8187c73733b54db94452b7b5e960d"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_home_raw256.png",
+      "size_bytes": 3763,
+      "sha256": "e5a5fb285ce29dbcd46f31af565668e977da7b88a294f45d6898affd853ff401"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t10_model224.png",
+      "size_bytes": 12017,
+      "sha256": "c3e0c5d5099efee5a66c6039d52debf94609e2c635ffb904ae63cc0154510783"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t10_raw256.png",
+      "size_bytes": 6575,
+      "sha256": "27f4ba2b8604a0977f5f1300274919746fcec6c0235824ce1f75f3e00b75bc49"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t14_model224.png",
+      "size_bytes": 13683,
+      "sha256": "42fa2c9e734f17bc20b37127096d6c27a144724294a446c2f331a2d0668fa252"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t14_raw256.png",
+      "size_bytes": 8018,
+      "sha256": "5bf65a05f36ec753b1da7895f465e4184369dc6b455691acda1da5a123ca547c"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t1_model224.png",
+      "size_bytes": 9438,
+      "sha256": "39f93cc8b2224d336b537d5fdd1b821cfe3fc2857e11f76658b410b8305b3538"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t1_raw256.png",
+      "size_bytes": 3749,
+      "sha256": "a04c048d1f455ff470e3fe22d0337cc8f5ede6f44f16b9907c0f97da28e6ce84"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t5_model224.png",
+      "size_bytes": 9595,
+      "sha256": "1308fb2db381cfda72f7e4b108e1341b9283bed169101ca04e2c91fe2f4e8007"
+    },
+    {
+      "path": "camera_before_after/A90_top_before_trace_t5_raw256.png",
+      "size_bytes": 3872,
+      "sha256": "c0714e61a2057b4825c1f77108923e67e48e9658eb47c2afd639a2e1703be52e"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_home_model224.png",
+      "size_bytes": 4402,
+      "sha256": "bab19f1d3f942b0f438340d75bf0b661b54f098556d65fb8ac0fdf6c341f68c6"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_home_raw256.png",
+      "size_bytes": 3152,
+      "sha256": "c5fe73a43cd6fb4d0c60fede8d1a73b2f8ceeb53189cdd4f61c0f29260aee72f"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t10_model224.png",
+      "size_bytes": 9252,
+      "sha256": "e981048e1edcc4ec5ff9fa9427157a3ff1d105a08e5eaa11a247cb7a8a36f95d"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t10_raw256.png",
+      "size_bytes": 4703,
+      "sha256": "741e7c51496342bd5a456ab6e7a5ecc511b0eda718ed1de39883c59f7b6249e1"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t14_model224.png",
+      "size_bytes": 6670,
+      "sha256": "313060e9279f1802b17e705138d4d29c3ef880318a261ed85b29f4dc22e9c36a"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t14_raw256.png",
+      "size_bytes": 3915,
+      "sha256": "a7378bb0426f472a45b1fbc618e3723a98210ba38662883e36f4ffa01de8bf91"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t1_model224.png",
+      "size_bytes": 4495,
+      "sha256": "0f1f887492b1ab04b57e24d0c597584ff650fac130ac52511a5eea6247d86d2f"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t1_raw256.png",
+      "size_bytes": 3219,
+      "sha256": "7955ada3049e3724b20c1bacd77cd4968fb74dd7680cc3b949d132fb39c2daf1"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t5_model224.png",
+      "size_bytes": 5554,
+      "sha256": "125b9e087b5cf054850441905628fcfc3e55b7b8bdf8aeff79ae8fcea33dcfdd"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_after_trace_t5_raw256.png",
+      "size_bytes": 3868,
+      "sha256": "7489a86dc4008eb1d1e0f7628c39728b939dafd75660b22930dd0ab176b3adbf"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_home_model224.png",
+      "size_bytes": 4402,
+      "sha256": "bab19f1d3f942b0f438340d75bf0b661b54f098556d65fb8ac0fdf6c341f68c6"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_home_raw256.png",
+      "size_bytes": 3152,
+      "sha256": "c5fe73a43cd6fb4d0c60fede8d1a73b2f8ceeb53189cdd4f61c0f29260aee72f"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t10_model224.png",
+      "size_bytes": 9252,
+      "sha256": "e981048e1edcc4ec5ff9fa9427157a3ff1d105a08e5eaa11a247cb7a8a36f95d"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t10_raw256.png",
+      "size_bytes": 4703,
+      "sha256": "741e7c51496342bd5a456ab6e7a5ecc511b0eda718ed1de39883c59f7b6249e1"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t14_model224.png",
+      "size_bytes": 6670,
+      "sha256": "313060e9279f1802b17e705138d4d29c3ef880318a261ed85b29f4dc22e9c36a"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t14_raw256.png",
+      "size_bytes": 3915,
+      "sha256": "a7378bb0426f472a45b1fbc618e3723a98210ba38662883e36f4ffa01de8bf91"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t1_model224.png",
+      "size_bytes": 4495,
+      "sha256": "0f1f887492b1ab04b57e24d0c597584ff650fac130ac52511a5eea6247d86d2f"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t1_raw256.png",
+      "size_bytes": 3219,
+      "sha256": "7955ada3049e3724b20c1bacd77cd4968fb74dd7680cc3b949d132fb39c2daf1"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t5_model224.png",
+      "size_bytes": 5554,
+      "sha256": "125b9e087b5cf054850441905628fcfc3e55b7b8bdf8aeff79ae8fcea33dcfdd"
+    },
+    {
+      "path": "camera_before_after/A90_wrist_before_trace_t5_raw256.png",
+      "size_bytes": 3868,
+      "sha256": "7489a86dc4008eb1d1e0f7628c39728b939dafd75660b22930dd0ab176b3adbf"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_home_model224.png",
+      "size_bytes": 9375,
+      "sha256": "a9f7f55c4a318f84a02057c814b6be6d91e6ece4c5c2e8db79f7b96df47daa79"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_home_raw256.png",
+      "size_bytes": 3207,
+      "sha256": "9512ecaf488ceac5bf62336312f5bad64a71a4e7d9d5506ab5754701c45bcd98"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t14_model224.png",
+      "size_bytes": 9450,
+      "sha256": "96646d60263b26b541489db83e5e99b79b391ac4388eaa3cdcf958b5f9a27ccb"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t14_raw256.png",
+      "size_bytes": 3249,
+      "sha256": "9d07685442c7263ea5a18456de392c245868d875c2a23189c5b32297b9059957"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t1_model224.png",
+      "size_bytes": 9427,
+      "sha256": "700c6ef22b3f0bae633ed7f2c8f753d27574173f2be3ba8add12131c583de3d5"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t1_raw256.png",
+      "size_bytes": 3264,
+      "sha256": "e224b10f01e175ccdc71e14cd44854fa0362a93e8668eb732a6c8e5cb7df1151"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t20_model224.png",
+      "size_bytes": 17924,
+      "sha256": "73719907a9f2b0b74b4f00b3b0c9e0d1bbf7aa0acf3f4d67e8ef2144d76aac03"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t20_raw256.png",
+      "size_bytes": 12436,
+      "sha256": "1fb127ab7fff86ca529eff0fe2fee91af309f4d1d4afc2145942170f1c2f0fdf"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t7_model224.png",
+      "size_bytes": 9458,
+      "sha256": "3e95fbd7b055ab9a298cab5335fac4b598e592c40e756cd1df4d1aa15a311475"
+    },
+    {
+      "path": "camera_before_after/B90_external_c1_closer_trace_t7_raw256.png",
+      "size_bytes": 3237,
+      "sha256": "e39c44e18266581b82073c819610b82107bde061047654294ac2c7a37d81876d"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_home_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_home_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t14_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t14_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t1_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t1_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t20_model224.png",
+      "size_bytes": 22818,
+      "sha256": "2491b49553c3db4fb81d34c95a75ef071c19a49737fd9cb0995fab005cff3b40"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t20_raw256.png",
+      "size_bytes": 18616,
+      "sha256": "a864e621a6b984c237fbe60a77f9debddba4069ffde944f3b047200f053bd71b"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t7_model224.png",
+      "size_bytes": 8333,
+      "sha256": "6075e62cf3af22bed6c5eb1c6883cf0d2a7178f86968d00467cbc5b268561056"
+    },
+    {
+      "path": "camera_before_after/B90_external_c2_oblique_trace_t7_raw256.png",
+      "size_bytes": 2587,
+      "sha256": "85da2a27e976f733bf1873c28b1065db7a7c6ceef732a0fa9149601c6eab361a"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_home_model224.png",
+      "size_bytes": 9958,
+      "sha256": "9e8d066b23a4cbb1214dbd6258dece09fb67a816012aef613030b490b1d49d7b"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_home_raw256.png",
+      "size_bytes": 3960,
+      "sha256": "b1f8c2ddbc4f27e7a313ef4710530afc2bca7017167fa4e4a0a00f80c8db9abd"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t14_model224.png",
+      "size_bytes": 10069,
+      "sha256": "1d0e797b7d4afd316f9ecb28916442750a9ec8ef87ecf702f0bff1703d822655"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t14_raw256.png",
+      "size_bytes": 4172,
+      "sha256": "890f70fae92f171856abc36c3c801b30f6e2b48a6f0e0834e7956772989851e5"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t1_model224.png",
+      "size_bytes": 9951,
+      "sha256": "53acaa687759546d46c2fb1e037d9c76e48ae3fc23d3e47cf38893147fb97431"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t1_raw256.png",
+      "size_bytes": 4004,
+      "sha256": "500e86e3e0c89a8a4d8bc02a8eee49bcf67be4fdb03ce7b270024db843ed209f"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t20_model224.png",
+      "size_bytes": 16667,
+      "sha256": "8d8d704c3ea929a83ee3e13e12b918fe2fb446483e1a0113009b434b8eb29825"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t20_raw256.png",
+      "size_bytes": 11430,
+      "sha256": "f1e2c659c8e80530a5482a96677b6f84bcc0cd10a4aa28feca747d740d09ed18"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t7_model224.png",
+      "size_bytes": 10036,
+      "sha256": "bbbf66464a0876791d59841e698ef30689998072d1e04d35b0585953b99b3ced"
+    },
+    {
+      "path": "camera_before_after/B90_external_c3_overhead_trace_t7_raw256.png",
+      "size_bytes": 4112,
+      "sha256": "c22d599effc61a500e3c8b169b3c5155f0aa9000ddf223559bc99757f9b69b1c"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_home_model224.png",
+      "size_bytes": 9479,
+      "sha256": "618e1c6b4344bc4000b8b81ad3659484aea8187c73733b54db94452b7b5e960d"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_home_raw256.png",
+      "size_bytes": 3763,
+      "sha256": "e5a5fb285ce29dbcd46f31af565668e977da7b88a294f45d6898affd853ff401"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t14_model224.png",
+      "size_bytes": 9160,
+      "sha256": "a9f0c92f1cc43a7efb534ea483197c286ebe665026241a62a3cc8e0a7b129f89"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t14_raw256.png",
+      "size_bytes": 3469,
+      "sha256": "063382954aae53a67d2c10217667e74f6b481f64c592368ce94dd52b17ce1bde"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t1_model224.png",
+      "size_bytes": 9280,
+      "sha256": "c7b085f27dec9176b0135c282a52b4414b441707522e003d740fe4df960af872"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t1_raw256.png",
+      "size_bytes": 3624,
+      "sha256": "273d322028c67c0be20ab11109a8e663fe2c8043159297cff9e3d1d478cd232c"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t20_model224.png",
+      "size_bytes": 19393,
+      "sha256": "660b9af5a161b97528674ae618dc8fee42171888f2ccbbee9aa05cb3a9807ed5"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t20_raw256.png",
+      "size_bytes": 14751,
+      "sha256": "dac844952254086b6d5c8d914edc0b78eae6358558ad4d4172de878dd40ee430"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t7_model224.png",
+      "size_bytes": 9282,
+      "sha256": "6af7887dc820a5de3badf30dad0d431ce82047609d3c342fd8e642ebe604590b"
+    },
+    {
+      "path": "camera_before_after/B90_external_current_trace_t7_raw256.png",
+      "size_bytes": 3636,
+      "sha256": "673c350484cbe39889bc9bdc1a02235ff24e18e7bd2418ec38e3edbd0650e324"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_home_model224.png",
+      "size_bytes": 10393,
+      "sha256": "9887ce0fc119ccc1640aaeea4620fd5b363ca82ef2a59d26277b167ba361c540"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_home_raw256.png",
+      "size_bytes": 4443,
+      "sha256": "5d92a3ee972157c23b71fa1aeb678ac9de79f492954b9bd0dec29700f9ff7b6b"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t14_model224.png",
+      "size_bytes": 10309,
+      "sha256": "a39df50c84136e9aa4f21a48c6d3e0318899da58635ef871db6af15cbeb7bc61"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t14_raw256.png",
+      "size_bytes": 4345,
+      "sha256": "ced3d996a6adabfb7c010c00b7e68be5ce69c8bebc80ceca456741ed05add991"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t1_model224.png",
+      "size_bytes": 10376,
+      "sha256": "7853c6348ca84dcad77cadb222305995ba1b3fc9b63023912e3d0300bdf2c9dd"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t1_raw256.png",
+      "size_bytes": 4421,
+      "sha256": "34d494254747aec6ee0995a0e072d215c797628d1d515bd0c331904ae262cbcd"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t20_model224.png",
+      "size_bytes": 19283,
+      "sha256": "c9ef17a1c89484719d9574775e64f92c4a538c3975b96bd3e772811ef3a6ea49"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t20_raw256.png",
+      "size_bytes": 14311,
+      "sha256": "a1955bcfc6d1d18e5a8e1989a7ed4fe31c23069bb206db04cfbe824d25f5ab7b"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t7_model224.png",
+      "size_bytes": 10422,
+      "sha256": "91d2d8c704ef0abf7030bb9c917ed51c6a05e8f42ba3abdd8fb857639da4bede"
+    },
+    {
+      "path": "camera_before_after/B90_top_after_trace_t7_raw256.png",
+      "size_bytes": 4400,
+      "sha256": "1446f5859e48fd966a269793a04a049d8bd521f457d41bc4ad926809e7841d90"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_home_model224.png",
+      "size_bytes": 9479,
+      "sha256": "618e1c6b4344bc4000b8b81ad3659484aea8187c73733b54db94452b7b5e960d"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_home_raw256.png",
+      "size_bytes": 3763,
+      "sha256": "e5a5fb285ce29dbcd46f31af565668e977da7b88a294f45d6898affd853ff401"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t14_model224.png",
+      "size_bytes": 9160,
+      "sha256": "a9f0c92f1cc43a7efb534ea483197c286ebe665026241a62a3cc8e0a7b129f89"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t14_raw256.png",
+      "size_bytes": 3469,
+      "sha256": "063382954aae53a67d2c10217667e74f6b481f64c592368ce94dd52b17ce1bde"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t1_model224.png",
+      "size_bytes": 9280,
+      "sha256": "c7b085f27dec9176b0135c282a52b4414b441707522e003d740fe4df960af872"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t1_raw256.png",
+      "size_bytes": 3624,
+      "sha256": "273d322028c67c0be20ab11109a8e663fe2c8043159297cff9e3d1d478cd232c"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t20_model224.png",
+      "size_bytes": 19393,
+      "sha256": "660b9af5a161b97528674ae618dc8fee42171888f2ccbbee9aa05cb3a9807ed5"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t20_raw256.png",
+      "size_bytes": 14751,
+      "sha256": "dac844952254086b6d5c8d914edc0b78eae6358558ad4d4172de878dd40ee430"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t7_model224.png",
+      "size_bytes": 9282,
+      "sha256": "6af7887dc820a5de3badf30dad0d431ce82047609d3c342fd8e642ebe604590b"
+    },
+    {
+      "path": "camera_before_after/B90_top_before_trace_t7_raw256.png",
+      "size_bytes": 3636,
+      "sha256": "673c350484cbe39889bc9bdc1a02235ff24e18e7bd2418ec38e3edbd0650e324"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_home_model224.png",
+      "size_bytes": 4402,
+      "sha256": "bab19f1d3f942b0f438340d75bf0b661b54f098556d65fb8ac0fdf6c341f68c6"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_home_raw256.png",
+      "size_bytes": 3152,
+      "sha256": "c5fe73a43cd6fb4d0c60fede8d1a73b2f8ceeb53189cdd4f61c0f29260aee72f"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t14_model224.png",
+      "size_bytes": 7170,
+      "sha256": "c6b60ae05338d2c759adfe30e6e595923c8cee1d4166db120493a78e83806816"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t14_raw256.png",
+      "size_bytes": 4712,
+      "sha256": "16266985532fd5650eefc8089bf7cd3a791c8abb929385450762aee00dfae91a"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t1_model224.png",
+      "size_bytes": 7768,
+      "sha256": "f4ca2ff337e106043dfdc930ad11304bd1802fd010a6ff500f0b8cf8a0440244"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t1_raw256.png",
+      "size_bytes": 4476,
+      "sha256": "1e3692d3a50222020ce640ed9019a30a078b9d87bcbad7c414edbc01b0e9f6fe"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t20_model224.png",
+      "size_bytes": 7191,
+      "sha256": "ea2ff1e52ad1466b49c7c28d3de57a48137ac3a1593f3a2ff6d4acbdf9fc7c74"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t20_raw256.png",
+      "size_bytes": 4198,
+      "sha256": "fab37b314ec5d294c36f696bdd1ca9363a37c780715c39a723d017a440b78195"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t7_model224.png",
+      "size_bytes": 9961,
+      "sha256": "a52a68dd39d71b232e38f9c158ba49768bee509841a9d5b36104d68b4b43d9c5"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_after_trace_t7_raw256.png",
+      "size_bytes": 6682,
+      "sha256": "bf217e30d48ad317992c3ba7f4705da2e8f8997de1822a6d157d789fb3f16a11"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_home_model224.png",
+      "size_bytes": 4402,
+      "sha256": "bab19f1d3f942b0f438340d75bf0b661b54f098556d65fb8ac0fdf6c341f68c6"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_home_raw256.png",
+      "size_bytes": 3152,
+      "sha256": "c5fe73a43cd6fb4d0c60fede8d1a73b2f8ceeb53189cdd4f61c0f29260aee72f"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t14_model224.png",
+      "size_bytes": 7170,
+      "sha256": "c6b60ae05338d2c759adfe30e6e595923c8cee1d4166db120493a78e83806816"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t14_raw256.png",
+      "size_bytes": 4712,
+      "sha256": "16266985532fd5650eefc8089bf7cd3a791c8abb929385450762aee00dfae91a"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t1_model224.png",
+      "size_bytes": 7768,
+      "sha256": "f4ca2ff337e106043dfdc930ad11304bd1802fd010a6ff500f0b8cf8a0440244"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t1_raw256.png",
+      "size_bytes": 4476,
+      "sha256": "1e3692d3a50222020ce640ed9019a30a078b9d87bcbad7c414edbc01b0e9f6fe"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t20_model224.png",
+      "size_bytes": 7191,
+      "sha256": "ea2ff1e52ad1466b49c7c28d3de57a48137ac3a1593f3a2ff6d4acbdf9fc7c74"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t20_raw256.png",
+      "size_bytes": 4198,
+      "sha256": "fab37b314ec5d294c36f696bdd1ca9363a37c780715c39a723d017a440b78195"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t7_model224.png",
+      "size_bytes": 9961,
+      "sha256": "a52a68dd39d71b232e38f9c158ba49768bee509841a9d5b36104d68b4b43d9c5"
+    },
+    {
+      "path": "camera_before_after/B90_wrist_before_trace_t7_raw256.png",
+      "size_bytes": 6682,
+      "sha256": "bf217e30d48ad317992c3ba7f4705da2e8f8997de1822a6d157d789fb3f16a11"
+    },
+    {
+      "path": "camera_before_after/camera_before_after_metrics.csv",
+      "size_bytes": 5556,
+      "sha256": "7bd8d0e3b566eb6e73bbc42cc72175bb8038b2d492600f43c316cbe93b3ebb07"
+    },
+    {
+      "path": "camera_before_after/camera_config_used.json",
+      "size_bytes": 1155,
+      "sha256": "e6b119422992ff7e931b01ca339dc8d3fd2c176f47f15f4f8d12fde9564e35fb"
+    },
+    {
+      "path": "camera_before_after/camera_geometry.json",
+      "size_bytes": 6722,
+      "sha256": "1ce4098ee02c5face94b4068d6778148d46347a14e57fcb969a8b2e8375428a7"
+    },
+    {
+      "path": "camera_before_after/camera_visibility_metrics.csv",
+      "size_bytes": 6756,
+      "sha256": "a67b677bc4bc98f1a8e49a4740842570ba661402daf66c8530396d24376706aa"
+    },
+    {
+      "path": "hotfix_report.md",
+      "size_bytes": 5815,
+      "sha256": "8cd62b63579592da7db8804d319eddafde26b0dc25f39f0fe333d68c943dd05d"
+    },
+    {
+      "path": "hotfix_semantics_tests.json",
+      "size_bytes": 6079,
+      "sha256": "a511800312d3cc5347b0544930c90542479a3f6bd48442f8973ebe4063334925"
+    },
+    {
+      "path": "official_semantics_audit.md",
+      "size_bytes": 4872,
+      "sha256": "51e14dc2a142d838fa3b9a2df631e8b6497a3bcc46f9db7bd0fd2002fc3963d9"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1893,
+      "sha256": "53a72ddc7ab6f46cd12167d50177a0235e35f00cba161bdf74f9357f19060019"
+    }
+  ]
+}

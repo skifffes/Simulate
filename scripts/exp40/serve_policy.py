@@ -63,7 +63,17 @@ def build_random_policy(train_config, norm_stats, seed: int = 0):
 
 
 class AuditingPolicy:
-    """在官方 Policy 外面加一层记录：不改变任何计算。"""
+    """在官方 Policy 外面加一层记录：不改变任何计算，另加**逐回合 RNG 重置**。
+
+    逐回合复现（Hotfix E）：
+      客户端在请求里放一个 `__episode_seed__` 键（int），本层会在真正推理前
+      把官方 `Policy._rng` 重置成 `jax.random.key(seed)`，然后把该键从输入里删掉
+      （它不属于模型输入）。这样“同一 seed + 同一观测”得到同一条采样轨迹，
+      而不同 seed 得到不同噪声。注意：这只控制 flow-matching 的采样噪声，
+      不改变模型权重与确定性前向。
+    """
+
+    SEED_KEY = '__episode_seed__'
 
     def __init__(self, policy, dump_dir: pathlib.Path | None, weights: str, max_records: int = 200):
         self._policy = policy
@@ -71,11 +81,21 @@ class AuditingPolicy:
         self._weights = weights
         self._n = 0
         self._max = max_records
+        self._episode_seed = None
+        self._last_inputs: dict = {}
         self.calls: list[dict] = []
         if self._dump_dir:
             (self._dump_dir / 'calls').mkdir(parents=True, exist_ok=True)
         self._orig_transform = policy._input_transform
         policy._input_transform = self._recording_transform
+
+    def reset_rng(self, seed: int) -> None:
+        import jax
+
+        if hasattr(self._policy, '_rng'):
+            self._policy._rng = jax.random.key(int(seed))
+        self._episode_seed = int(seed)
+        self.calls.clear()
 
     def _recording_transform(self, data):
         out = self._orig_transform(data)
@@ -87,6 +107,7 @@ class AuditingPolicy:
             'tokenized_prompt_shape': list(np.asarray(out['tokenized_prompt']).shape)
             if 'tokenized_prompt' in out else None,
         }
+
         return out
 
     @property
@@ -94,6 +115,10 @@ class AuditingPolicy:
         return {**self._policy.metadata, 'weights': self._weights}
 
     def infer(self, obs: dict) -> dict:
+        seed = None
+        if isinstance(obs, dict) and self.SEED_KEY in obs:
+            seed = obs.pop(self.SEED_KEY)
+            self.reset_rng(int(seed))
         t0 = time.perf_counter()
         out = self._policy.infer(obs)
         dt = time.perf_counter() - t0
@@ -101,6 +126,7 @@ class AuditingPolicy:
         record = {
             'call': self._n,
             'weights': self._weights,
+            'episode_seed': self._episode_seed if seed is None else int(seed),
             'wall_time_s': dt,
             'infer_ms_reported': out.get('policy_timing', {}).get('infer_ms'),
             'request_keys': sorted(k for k in obs),
@@ -113,13 +139,17 @@ class AuditingPolicy:
             },
             'prompt': obs.get('prompt'),
             'model_inputs': {
-                'state': np.asarray(self._last_inputs['state']).round(6).tolist(),
-                'state_shape': list(np.asarray(self._last_inputs['state']).shape),
-                'image_shapes': {k: list(v.shape) for k, v in self._last_inputs['image'].items()},
-                'image_dtypes': {k: str(v.dtype) for k, v in self._last_inputs['image'].items()},
-                'image_masks': self._last_inputs['image_mask'],
-                'image_pixel_range': {k: [float(v.min()), float(v.max())] for k, v in self._last_inputs['image'].items()},
-                'tokenized_prompt_shape': self._last_inputs['tokenized_prompt_shape'],
+                # 若包装的是假 policy（单元测试）而没有 transform 记录，则退化为空，不抛异常
+                'state': np.asarray(self._last_inputs.get('state', [])).round(6).tolist(),
+                'state_shape': list(np.asarray(self._last_inputs.get('state', [])).shape),
+                'image_shapes': {k: list(np.asarray(v).shape)
+                                 for k, v in self._last_inputs.get('image', {}).items()},
+                'image_dtypes': {k: str(np.asarray(v).dtype)
+                                 for k, v in self._last_inputs.get('image', {}).items()},
+                'image_masks': self._last_inputs.get('image_mask', {}),
+                'image_pixel_range': {k: [float(np.min(v)), float(np.max(v))]
+                                      for k, v in self._last_inputs.get('image', {}).items()},
+                'tokenized_prompt_shape': self._last_inputs.get('tokenized_prompt_shape'),
             },
             'actions': {
                 'shape': list(np.asarray(out['actions']).shape),

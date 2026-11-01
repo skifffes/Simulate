@@ -1,0 +1,66 @@
+{
+  "version": "exp4.0-camera-v2",
+  "sha256": "1dd123f91dac49702d46673a849dde55923cd3cea9897e90e21d99dd2554dd58",
+  "cameras_v2": {
+    "top": {
+      "type": "fixed",
+      "target": [
+        0.56,
+        0.13,
+        0.06
+      ],
+      "distance": 0.7,
+      "yaw": 50.0,
+      "pitch": -35.0,
+      "fov": 60.0,
+      "near": 0.02,
+      "far": 5.0
+    },
+    "wrist": {
+      "type": "wrist",
+      "link": 8,
+      "offset": [
+        0.09,
+        0.0,
+        -0.01
+      ],
+      "aim": "grasp",
+      "look_ahead": 0.02,
+      "target_down": 0.02,
+      "fov": 75.0,
+      "near": 0.005,
+      "far": 3.0
+    }
+  },
+  "cameras_v1_baseline": {
+    "top": {
+      "type": "fixed",
+      "target": [
+        0.55,
+        0.21,
+        0.02
+      ],
+      "distance": 1.05,
+      "yaw": 50.0,
+      "pitch": -52.0,
+      "fov": 50.0,
+      "near": 0.02,
+      "far": 5.0
+    },
+    "wrist": {
+      "type": "wrist",
+      "link": 8,
+      "offset": [
+        0.09,
+        0.0,
+        -0.01
+      ],
+      "aim": "grasp",
+      "look_ahead": 0.02,
+      "target_down": 0.02,
+      "fov": 75.0,
+      "near": 0.005,
+      "far": 3.0
+    }
+  }
+}
