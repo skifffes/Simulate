@@ -474,7 +474,7 @@ python scripts/exp32_analyze.py
 - 阶段说明：[docs/experiment_4_0.md](docs/experiment_4_0.md)
 - 环境与依赖冲突：[results/experiment_4_0/environment_report.md](results/experiment_4_0/environment_report.md)
 
-官方 `pi05_droid` 在单张 A40 上真实加载并推理（首次 74 s 含 JIT、稳态 155 ms / 6.45 Hz、真实显存 8.5 GB）；观测/动作适配器 32/32 判据通过；A90/B90 接口检查 8/8 与 9/9；PyBullet 闭环真实跑通并被安全层正常终止。**未评测 A90/B90 成功率，未改语言指令，未做训练。** 结论 `PASS` 只表示迁移基础设施可用。
+官方 `pi05_droid` 在单张 A40 上真实加载并推理（首次 74 s 含 JIT、稳态 155 ms / 6.45 Hz、真实显存 8.5 GB）；观测/动作适配器 32/32 判据通过；A90/B90 接口检查 8/8 与 9/9；PyBullet 闭环真实跑通并按设计终止（B90 跑满预算 / A90 安全停止，物体未被移动）。**未评测 A90/B90 成功率，未改语言指令，未做训练。** 结论 `PASS` 只表示迁移基础设施可用。
 
 已知限制：相机视角与 DROID 分布不一致、控制频率 20 Hz vs DROID 15 Hz、推理延迟 155 ms/chunk、CentOS 7 / glibc 2.17 装不上 lerobot（本实验用桩绕过，仅推理）。
 
