@@ -8,7 +8,9 @@
   "camera_version": "exp4.0-camera-v3",
   "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
   "replay_mode": "PHYSICAL_REPLAY (sim.command 关节位置目标 + 接触动力学；动作语义 = 数据集动作序列，未做额外缩放)",
-  "wall_bodies": [],
+  "wall_bodies": [
+    3
+  ],
   "restoration_errors": {
     "object_position_error_m": 9.240622495790305e-08,
     "object_rotation_error_rad": 0.0,
@@ -16,6 +18,11 @@
     "gripper_error_m": 2.4959573509397703e-07
   },
   "restoration_pass": true,
+  "wall_id_source": "build_scene() 返回值（info[\"wall_body\"]）",
+  "tray_bodies": [
+    4,
+    5
+  ],
   "roles": {
     "block": [
       2
@@ -26,12 +33,17 @@
     "plane": [
       0
     ],
-    "wall": [],
+    "wall": [
+      3
+    ],
     "tray": [
-      3,
       4,
       5
     ]
+  },
+  "detector_positive_control": {
+    "steps_with_contact": 120,
+    "pass": true
   },
   "first_robot_contact_frame": 96,
   "first_wall_contact_frame": null,
@@ -41,5 +53,10 @@
     0.01999
   ],
   "block_total_dx_m": 0.00087,
-  "phase_source": "机器人↔方块 / 方块↔墙 的真实 PyBullet 接触记录（非按帧号命名）"
+  "phase_source": "机器人↔方块 / 方块↔墙 的逐物理步接触记录；pushing 需接触窗口内 +X 位移 > 1 mm",
+  "contact_steps_total": {
+    "robot": 230,
+    "wall": 0
+  },
+  "pushing_criterion_met": false
 }

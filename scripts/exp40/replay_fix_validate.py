@@ -165,48 +165,67 @@ def main(argv=None) -> int:
         provenance['restoration_pass'] = bool(errs['object_position_error_m'] < 2e-3
                                               and errs['object_rotation_error_rad'] < 1e-2
                                               and errs['robot_q_error_rad'] < 5e-2)
-        # 场景 body 角色
-        wall_bodies, tray_bodies = [], []
-        for b in range(p.getNumBodies(physicsClientId=sim.client)):
-            if b in (block, sim.robot, sim.plane):
-                continue
-            nm = p.getBodyInfo(b, physicsClientId=sim.client)[1].decode()
-            shape = p.getCollisionShapeData(b, -1, physicsClientId=sim.client)[0]
-            exts = shape[3] if len(shape) > 3 else None
-            # 墙是细长高方块（halfExtents ~ (0.01,0.15,0.06)），托盘导轨更小更矮
-            if exts is not None and abs(exts[2] - 0.06) < 1e-6:
-                wall_bodies.append(b)
-            else:
-                tray_bodies.append(b)
+        # 场景 body 角色：**直接使用 build_scene 返回的权威 ID**（wall/tray），
+        # 不再用碰撞盒尺寸猜测（上一版把墙误判成托盘，导致 wall_bodies=[] 空跑）
+        wall_bodies = [int(info['wall_body'])]
+        tray_bodies = [int(b) for b in info['tray_bodies']]
+        provenance['wall_id_source'] = 'build_scene() 返回值（info["wall_body"]）'
         provenance['wall_bodies'] = wall_bodies
+        provenance['tray_bodies'] = tray_bodies
         roles = {'block': [block], 'robot': [sim.robot], 'plane': [sim.plane],
                  'wall': wall_bodies, 'tray': tray_bodies}
         provenance['roles'] = {k: list(map(int, v)) for k, v in roles.items()}
+
+        # ---- 检测器正例自检：把方块放到墙前 3 mm，推进 120 步，探测器必须报接触 ----
+        import pybullet as p2
+        pos0, quat0 = p2.getBasePositionAndOrientation(block, physicsClientId=sim.client)
+        wall_shape = p2.getCollisionShapeData(wall_bodies[0], -1, physicsClientId=sim.client)[0]
+        wall_pos = p2.getBasePositionAndOrientation(wall_bodies[0], physicsClientId=sim.client)[0]
+        put_x = float(wall_pos[0]) - float(wall_shape[3][0]) - 0.0015  # 墙内侧 x - 方块半宽
+        p2.resetBasePositionAndOrientation(block, [put_x, wall_pos[1], float(pos0[2])], quat0,
+                                           physicsClientId=sim.client)
+        p2.resetBaseVelocity(block, [0, 0, 0], [0, 0, 0], physicsClientId=sim.client)
+        hit = 0
+        for _ in range(120):
+            sim.step()
+            if p2.getContactPoints(bodyA=block, bodyB=wall_bodies[0], physicsClientId=sim.client):
+                hit += 1
+        provenance['detector_positive_control'] = {'steps_with_contact': hit, 'pass': hit > 0}
+        # 复位到 episode 起始状态
+        restore(sim, block, st)
 
         rows = []
         first_robot_contact = None
         first_wall_contact = None
         prev_x = st['obj_pos'][0]
+        step_robot_contacts = 0   # 逐物理步计数（帧末只读一次会漏掉瞬断接触）
+        step_wall_contacts = 0
         for fid in range(len(actions)):
             a = np.asarray(actions[fid], dtype=float)
             sim.command(a[:7])
             for j in (9, 10):
                 p.setJointMotorControl2(sim.robot, j, p.POSITION_CONTROL, float(a[7]), force=30,
                                         physicsClientId=sim.client)
+            frame_rc = frame_wc = 0
             for _ in range(12):
                 sim.step()
-            # 接触检测
-            rc = p.getContactPoints(bodyA=block, bodyB=sim.robot, physicsClientId=sim.client)
-            wc = [c for wb in wall_bodies
-                  for c in p.getContactPoints(bodyA=block, bodyB=wb, physicsClientId=sim.client)]
+                # 严格接触判定：每个物理步都查（含瞬断接触）
+                if p.getContactPoints(bodyA=block, bodyB=sim.robot, physicsClientId=sim.client):
+                    frame_rc += 1
+                for wb in wall_bodies:
+                    if p.getContactPoints(bodyA=block, bodyB=wb, physicsClientId=sim.client):
+                        frame_wc += 1
+                        break
+            step_robot_contacts += frame_rc
+            step_wall_contacts += frame_wc
             pos, quat = p.getBasePositionAndOrientation(block, physicsClientId=sim.client)
-            if rc and first_robot_contact is None:
+            if frame_rc and first_robot_contact is None:
                 first_robot_contact = fid
-            if wc and first_wall_contact is None:
+            if frame_wc and first_wall_contact is None:
                 first_wall_contact = fid
             rows.append({'frame': fid, 'block_pos': [round(float(v), 5) for v in pos],
                          'block_x': round(float(pos[0]), 5), 'dx': round(float(pos[0]) - prev_x, 6),
-                         'robot_contact': len(rc), 'wall_contact': len(wc),
+                         'robot_contact_steps': frame_rc, 'wall_contact_steps': frame_wc,
                          'gripper_target_m': round(float(a[7]), 4)})
             prev_x = float(pos[0])
         provenance['first_robot_contact_frame'] = first_robot_contact
@@ -217,16 +236,25 @@ def main(argv=None) -> int:
         # ---- 阶段标注：只依据真实事件 ----
         n = len(rows)
         phases = [('initial', 0)]
+        push_ok = False
         if first_robot_contact is not None:
             phases.append(('approach', max(0, first_robot_contact - 8)))
             phases.append(('first_robot_contact', first_robot_contact))
-            phases.append(('pushing', min(n - 1, first_robot_contact + 6)))
+            # “pushing”只有在接触期间出现**实际 +X 位移**时才成立，否则只标 contact_no_forward_push
+            win = rows[first_robot_contact:min(n, first_robot_contact + 12)]
+            dx_win = (win[-1]['block_x'] - rows[first_robot_contact]['block_x']) if win else 0.0
+            push_ok = dx_win > 0.001
+            phases.append(('pushing' if push_ok else 'contact_no_forward_push',
+                           min(n - 1, first_robot_contact + 6)))
         if first_wall_contact is not None:
             phases.append(('wall_contact_verified', first_wall_contact))
         else:
             phases.append(('wall_contact_not_verified', None))
         phases.append(('final', n - 1))
-        provenance['phase_source'] = '机器人↔方块 / 方块↔墙 的真实 PyBullet 接触记录（非按帧号命名）'
+        provenance['phase_source'] = '机器人↔方块 / 方块↔墙 的逐物理步接触记录；' \
+                                     'pushing 需接触窗口内 +X 位移 > 1 mm'
+        provenance['contact_steps_total'] = {'robot': step_robot_contacts, 'wall': step_wall_contacts}
+        provenance['pushing_criterion_met'] = bool(push_ok)
 
         # ---- 渲染（RGB + 可视化 mask + 原始 seg id） ----
         # 重新构建一次场景并在目标帧渲染：物理重放必须从头按序执行，不能跳帧
@@ -314,8 +342,8 @@ def main(argv=None) -> int:
             for r in vis_rows:
                 w.writerow({k: (json.dumps(r[k]) if isinstance(r[k], list) else r[k]) for k in keys})
         with open(OUT / 'contact_phase_validation.csv', 'w', newline='', encoding='utf-8') as fh:
-            w = csv.DictWriter(fh, fieldnames=['frame', 'block_x', 'dx', 'robot_contact', 'wall_contact',
-                                               'gripper_target_m'])
+            w = csv.DictWriter(fh, fieldnames=['frame', 'block_x', 'dx', 'robot_contact_steps',
+                                               'wall_contact_steps', 'gripper_target_m'])
             w.writeheader()
             for r in rows:
                 w.writerow({k: r[k] for k in w.fieldnames})

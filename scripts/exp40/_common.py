@@ -80,6 +80,9 @@ def build_sim_scene(kind: str, seed: int | None = None, start=None, yaw: float =
     info = dict(info)
     info['scene'] = kind
     info['place_xy'] = list(PLACE[:2])
+    # 场景角色的**权威来源**：build_scene 返回的对象 ID，不靠碰撞盒尺寸猜测
+    info['wall_body'] = int(wall)
+    info['tray_bodies'] = [int(b) for b in tray]
     info['camera_version'] = camera_version
     info['camera_sha256'] = sha
     info['cameras'] = cameras

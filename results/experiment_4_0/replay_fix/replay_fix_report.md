@@ -99,7 +99,29 @@ A90 与 B90 的关键阶段可见性，**不改**。
 **Invalidated**：`final_validation/camera_visibility_by_phase.csv` 的 B90 行（错误场景 + RGB 冒充 mask）
 与 `final_validation/*_mask.png`。这些旧结论**不得**与修复后的数据混合统计。
 
-## 复现
+## 复查后修正（第二轮，针对 review 的三个问题）
+
+| review 指出的问题 | 处理 | 证据 |
+| --- | --- | --- |
+| **墙体识别靠碰撞盒高度猜测 → `wall_bodies=[]`，接触检测空跑** | 改为直接使用 `build_scene()` 返回的权威 ID：`info['wall_body']` / `info['tray_bodies']`。**实际是 wall=3、tray=4,5**（旧代码把 3 也算成托盘） | `replay_provenance.json`: `wall_bodies=[3]`, `wall_id_source="build_scene() 返回值"` |
+| 检测器可能永远静默 | 新增**正例自检**：把方块贴到墙内侧 1.5 mm，推进 120 物理步 → **120/120 步检出接触**，检测器不可能空跑 | `detector_positive_control: {steps_with_contact: 120, pass: true}` |
+| `ext_wall_px` 全为 0，与"5/5 看见墙"矛盾 | 修好 wall id 后重算：**5/5 阶段 `ext_wall_px=2832`**（墙的像素从"托盘"归位到"墙"） | `camera_visibility_corrected.csv` |
+| `pushing` 只按帧号推定 | 改为**判据驱动**：接触窗口内 +X 位移 > 1 mm 才算 `pushing`。ep064 实测窗口位移 **< 1 mm** → 阶段改名为 **`contact_no_forward_push`** | `phases` 中已无 `pushing`；`pushing_criterion_met=false` |
+| 接触只在帧末读一次，可能漏短暂接触 | 改为**每个 240 Hz 物理步**都查 `getContactPoints` | `contact_steps_total={robot:230, wall:0}`；`contact_phase_validation.csv` 逐帧 `*_contact_steps` |
+| `build_sim_scene(..., camera_version='v3')` 与公开 `_common.py` 不一致 | **经核对是误报**：`git show origin/main:scripts/exp40/_common.py` 已包含 `camera_version: str = 'v3'` 与版本校验分支（提交 `4590f0e` 起） | `git show origin/main:scripts/exp40/_common.py \| grep camera_version` 有 4 处命中 |
+
+**修正后的结论**：ep064 在 20 Hz（12 步/帧）物理重放中确实**没有**发生墙面接触
+（wall 接触步数 0，且检测器正例已验证有效），方块总位移 0.9 mm、接触窗口内无 +X 推进，
+因此不能再把它说成"pushing"或"wall_contact"。同时"外部相机 5/5 看见墙"现在**有数据支持**。
+
+## 仍未完成（本轮时间到）
+
+1. **数据集 FPS 与轨迹一致性**：尚未读取 `meta/info.json` 的 `fps`，也未把重放后的关节与 parquet `observation.state` 逐帧比对。
+   → 因此"ep064 原始示范是否成功推动"仍**无法判断**（CSV 中标 `episode_success=True`，与本次重放 0.9 mm 冲突，
+   可能是控制时序/动作语义不匹配，也可能是重放协议差异；不得据此否定原始示范）。
+2. **A90 回归**：未执行。脚本仍硬编码 B90 数据集与起始状态 CSV，`--scene A90` 会读到 B90 数据 → 需按 A90 数据源单独实现。
+3. 旧 A90 `*_mask.png` 仍作废，待第 2 项完成后一并重生成。
+
 
 ```bash
 /scratch/lijh/simulate_vla/venv/bin/python scripts/exp40/replay_fix_validate.py --episode-id 64

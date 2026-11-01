@@ -1,5 +1,6 @@
 {
   "experiment": "4.0-replay-fix",
+  "revision": 2,
   "base_commit": "75bd153",
   "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
   "checkpoint": "pi05_droid",
@@ -7,7 +8,10 @@
   "camera_sha256": "418bad2f33ef5a9e",
   "episode_id": 64,
   "replay_mode": "PHYSICAL_REPLAY",
-  "n_files": 38,
+  "wall_body": 3,
+  "wall_id_source": "build_scene() 返回值",
+  "detector_positive_control_pass": true,
+  "n_files": 44,
   "files": [
     {
       "path": "camera_corrected_frames/B90_approach_external.png",
@@ -21,8 +25,8 @@
     },
     {
       "path": "camera_corrected_frames/B90_approach_external_segvis.png",
-      "size_bytes": 2086,
-      "sha256": "ce4633a01b16ef0c452f86ecdab2a3d0bec99678456617fd2806a26e8be364d5"
+      "size_bytes": 2099,
+      "sha256": "53458fb2a1e531dd5902d27caa583ca99505ac65b58e669e56c3217d9e57b0bc"
     },
     {
       "path": "camera_corrected_frames/B90_approach_wrist.png",
@@ -40,6 +44,36 @@
       "sha256": "8d8141fc466a43ef43d1ae663b40b73c50e8a0c2774555cda1770d2029dc8fe3"
     },
     {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_external.png",
+      "size_bytes": 8504,
+      "sha256": "24beea1433b32a12256de7b39dbe5258c25bc733e3a5b274e7b2202d1070c160"
+    },
+    {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_external_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "e0a266bcf94d678cf026fdeb434b0902e5d6416bd7026f409c8d5b7dd6d3ec66"
+    },
+    {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_external_segvis.png",
+      "size_bytes": 2279,
+      "sha256": "c2880047ca18b6213cf45b8394b106dfd2ad9ec8ca21ae100e47bf680622da94"
+    },
+    {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_wrist.png",
+      "size_bytes": 2744,
+      "sha256": "1f99d2650c98f270c5093e1a1bc0212f1abf860b081400f29a199b78c700d5ff"
+    },
+    {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_wrist_segids.npy",
+      "size_bytes": 262272,
+      "sha256": "db9bc3d3b3709b0c5378ac907c1cfe3fff604d13cea4ae7584c56c081492beb7"
+    },
+    {
+      "path": "camera_corrected_frames/B90_contact_no_forward_push_wrist_segvis.png",
+      "size_bytes": 1247,
+      "sha256": "2d3c2b6cf4a2a88b7cefab17b802bb472530fcaf0475fdc4cf4f972c9d8451a8"
+    },
+    {
       "path": "camera_corrected_frames/B90_final_external.png",
       "size_bytes": 6820,
       "sha256": "3a2aac1564d2f02c49f00e804e072c5a05b47861715a6e7d44fba966d0e11c90"
@@ -51,8 +85,8 @@
     },
     {
       "path": "camera_corrected_frames/B90_final_external_segvis.png",
-      "size_bytes": 2106,
-      "sha256": "0961c52303a0c5ea7795d8126792edc48f5e106fd73b245f9c6595d88a348804"
+      "size_bytes": 2117,
+      "sha256": "307201a6d9b72c5896ec106ec0c7b2d0f987b053f47d597e02290e2eba27713f"
     },
     {
       "path": "camera_corrected_frames/B90_final_wrist.png",
@@ -81,8 +115,8 @@
     },
     {
       "path": "camera_corrected_frames/B90_first_robot_contact_external_segvis.png",
-      "size_bytes": 2250,
-      "sha256": "7d22e1535966278a4df711f2dd108196ab7318434c1090ad8780b86a778bd527"
+      "size_bytes": 2265,
+      "sha256": "85e3a3ab000c545b4e5e6ac22bbd3692bc9a8e25cfc67758f32f9b1d24e37cea"
     },
     {
       "path": "camera_corrected_frames/B90_first_robot_contact_wrist.png",
@@ -111,8 +145,8 @@
     },
     {
       "path": "camera_corrected_frames/B90_initial_external_segvis.png",
-      "size_bytes": 1853,
-      "sha256": "744f0d5242720fc9311f6d708a8e9e9dab14dc5c80e886b3e3042c1a26698f43"
+      "size_bytes": 1865,
+      "sha256": "6290470464a77fe8e2c027499ab56435233d6e0133e17797a6d20db17521a502"
     },
     {
       "path": "camera_corrected_frames/B90_initial_wrist.png",
@@ -166,13 +200,13 @@
     },
     {
       "path": "camera_visibility_corrected.csv",
-      "size_bytes": 1091,
-      "sha256": "0babca1c77af4118e81aded5028f5ec23474497ea673082197da82314a474a26"
+      "size_bytes": 1122,
+      "sha256": "c7647d9ab25199a9e43fdeed7a5ba4c1b19ba7df418acd213a39f4a2781c79f8"
     },
     {
       "path": "contact_phase_validation.csv",
-      "size_bytes": 3702,
-      "sha256": "e5e5d914e420642afa30dbe7733014a022a2597b4c79b6aa5ddd32cb0d44a893"
+      "size_bytes": 3733,
+      "sha256": "65ec705effa51d84e58253be1c40d01de8ef2e72a34de57bb79d016ee3450cd8"
     },
     {
       "path": "episode_restoration_checks.json",
@@ -186,18 +220,18 @@
     },
     {
       "path": "replay_fix_report.md",
-      "size_bytes": 6121,
-      "sha256": "3db00cfe9c072406e783ea93e3ba761d767acae694bc087a907cf5ef1540db96"
+      "size_bytes": 8886,
+      "sha256": "f39534c0e1e00512a5efc1b4e27d4e141973ed2df0ed8eafa37ea62ad2abc560"
     },
     {
       "path": "replay_provenance.json",
-      "size_bytes": 1285,
-      "sha256": "f2f4f9025e35348c5ecd2bb76dcb0f72cde4e4089dd66b9bac61bb314b78c211"
+      "size_bytes": 1609,
+      "sha256": "5cc4ffd64af8c98fd439f1d861339c5fff1feeb025ac0726e67a02e3320ae3da"
     },
     {
       "path": "segmentation_validation.json",
-      "size_bytes": 2555,
-      "sha256": "9c717f4f3e4e42cac0db9aacde1a019a539a95e48279171675f07915f3d67902"
+      "size_bytes": 2571,
+      "sha256": "d94072f1db496bf5d4d071b87093d68919a737b72f02f34008437b321948960b"
     }
   ]
 }
