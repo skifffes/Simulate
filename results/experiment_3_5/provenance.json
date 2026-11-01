@@ -1,0 +1,9 @@
+{
+  "source_commit": "915422a1ee552b7f44f52cbbb423c54aa1704446",
+  "a_stage_dir": "results/experiment_3",
+  "b_source": "results/experiment_3/data/b_training_start_states.csv",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "targets": ["ep079_f000","ep104_f000","ep082_f000","ep080_f000","ep074_f000","ep068_f000","ep064_f000"],
+  "rollout_count": 105,
+  "limitations": ["1 unique A terminal","7 targets only","B reference reconstructed","wall detection not independently calibrated"]
+}

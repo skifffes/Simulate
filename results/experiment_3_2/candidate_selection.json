@@ -1,0 +1,18 @@
+{
+  "source": "results/experiment_3_2/b90_all_candidates.csv",
+  "selection_rule": "pre-registered: 2 Near +2 Medium +2 Far by object-position difference; anchor ep064; no D2 success used",
+  "near_threshold_mm": 7.595385246558334,
+  "medium_threshold_mm": 11.615875968440838,
+  "targets": [
+    "ep068_f000",
+    "ep074_f000",
+    "ep079_f000",
+    "ep080_f000",
+    "ep082_f000",
+    "ep104_f000",
+    "ep064_f000"
+  ],
+  "anchor": "ep064_f000",
+  "unique_q_count": 31,
+  "note": "ep064 is anchor, not counted in the six new targets"
+}

@@ -1,0 +1,106 @@
+{
+  "commit": "915422a1ee552b7f44f52cbbb423c54aa1704446",
+  "rollout_server": "/scratch/lijh/simulate_vla/results/experiment_3_2/rollout",
+  "files": [
+    {
+      "path": "b90_all_candidates.csv",
+      "bytes": 16124,
+      "sha256": "ccad4a1dc8423083211c189f41f24a1e7afd65ce6ccb3da6f8a58ba5bd629624"
+    },
+    {
+      "path": "candidate_selection.json",
+      "bytes": 554,
+      "sha256": "67cd68ca5793391c23399004e6bac2c7c72c83e0eb00a18f60937b89ca960024"
+    },
+    {
+      "path": "config.yaml",
+      "bytes": 454,
+      "sha256": "49a7d43d0ed673ec71884ae03c16d54b0367e1f74a8ef15cf36ce6c61716aeda"
+    },
+    {
+      "path": "contact_metrics.csv",
+      "bytes": 1058,
+      "sha256": "8269ac153fde6e0857aaeebf615e7e3545005b18d99e15771498bb4a69baa14a"
+    },
+    {
+      "path": "experiment_3_1_report.md",
+      "bytes": 2727,
+      "sha256": "e78090bcf8bff0ade476c660482e980bc356fcfe56b34eff5311c1eeff2cae3b"
+    },
+    {
+      "path": "experiment_3_2_report.md",
+      "bytes": 4456,
+      "sha256": "37eb2501d21a029a5e5dbd627485159bcdb70fe4de646cf7c78d1d30dd3021fa"
+    },
+    {
+      "path": "first_action_comparison.csv",
+      "bytes": 18155,
+      "sha256": "98c6cb068113bee89ec12986f425ac986d3faccf6b80359e466a13b65d03f2c2"
+    },
+    {
+      "path": "joint_state_coverage.csv",
+      "bytes": 146,
+      "sha256": "1cd4dcf62dc7a3438d0db39d732ebc06275c9108f0be782e329a4acae358d105"
+    },
+    {
+      "path": "planning_results.csv",
+      "bytes": 821,
+      "sha256": "389fc5077d1e43af14297e9b91f19fcbe9529ba86aaa6feb5057c06c5d66a4e5"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 402,
+      "sha256": "b59758a4daa6539bbce1fde7fe6e9f4b4b772978c1e90d8a0fc9e66187492831"
+    },
+    {
+      "path": "README.md",
+      "bytes": 946,
+      "sha256": "6c2ffb404cf0983ffbbadd1ed467e2828156f3795179f31e67a984f2807a4d26"
+    },
+    {
+      "path": "rollout_results.csv",
+      "bytes": 13932,
+      "sha256": "78ade76930ea7f634e1dd77a2dcea182a72f9d4fc81156bbf2d63b554e9d2ff2"
+    },
+    {
+      "path": "scene_compatibility.csv",
+      "bytes": 216,
+      "sha256": "1f14465dc66eab564b539c53ce2f33ffd2945e71db4b95c9f674c8cf8c4170ca"
+    },
+    {
+      "path": "scene_effect.csv",
+      "bytes": 654,
+      "sha256": "634830d072643f1a243c488ede32ed9f962ac9d97e1a33154adab4fcedeb4c4d"
+    },
+    {
+      "path": "selected_targets.csv",
+      "bytes": 2117,
+      "sha256": "f5531e49fad19645ee4b2b8591bf37570e864f0f1c1ece6b604412463f11124d"
+    },
+    {
+      "path": "state_alignment.csv",
+      "bytes": 6700,
+      "sha256": "c490e54fd70003a4c919082695251a9b61fd94bd5e3bad93cdae0e2f3e9465f8"
+    },
+    {
+      "path": "summary_by_target.csv",
+      "bytes": 1493,
+      "sha256": "4dc2e561bfa4244975f8673f87527afbef264833576961fede8d76873c6e67b7"
+    },
+    {
+      "path": "figures/candidate_overview.png",
+      "bytes": 10888,
+      "sha256": "426521b29af465153589269af74700acbfcba74a39eac30e837da1ce7b7085c5"
+    },
+    {
+      "path": "figures/scene_effect.png",
+      "bytes": 6524,
+      "sha256": "341655afd0467723a36d65071672849f7b7b40f5c372d2b50d3dcf8234e92c13"
+    },
+    {
+      "path": "figures/summary_by_target.png",
+      "bytes": 6085,
+      "sha256": "de3de94a14606248ea89f56a4bb75dd1b2fd0cd7dad17d7da1bac033e697614c"
+    }
+  ]
+}

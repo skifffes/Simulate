@@ -1,0 +1,10 @@
+stage: 3.1-3.5
+source_commit: 915422a1ee552b7f44f52cbbb423c54aa1704446
+checkpoint: outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model
+a_terminals: 1_unique
+b_starts: 60
+targets: 7
+rollouts: 105
+paired_seeds: 5
+success: v2.2
+wall_contact: separate

@@ -1,0 +1,8 @@
+﻿target,planner,goal_static_valid,path_valid,q_dist_rad,obj_diff_mm,plan_status
+ep064_f000,collision-checked straight joint edge,True,True,1.2925677077796738,1.86422912466867,SUCCESS
+ep068_f000,collision-checked straight joint edge,True,True,1.5731165974181285,17.877229903578804,SUCCESS
+ep074_f000,collision-checked straight joint edge,True,True,0.7892107231402904,14.870164389448343,SUCCESS
+ep079_f000,collision-checked straight joint edge,True,True,1.3250904694538257,1.5319571161274852,SUCCESS
+ep080_f000,collision-checked straight joint edge,True,True,0.9560977136407868,10.723073981025175,SUCCESS
+ep082_f000,collision-checked straight joint edge,True,True,1.090877185904715,7.672705407221981,SUCCESS
+ep104_f000,collision-checked straight joint edge,True,True,1.2474426113600419,2.1450276555940184,SUCCESS

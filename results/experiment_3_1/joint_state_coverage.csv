@@ -1,0 +1,5 @@
+﻿start_mode,n_episodes,unique_q,near,medium,far
+home,30,1,11,9,10
+home_neighborhood,16,16,4,6,6
+multi_ik,7,7,3,3,1
+task_relevant,7,7,2,2,3

@@ -1,0 +1,11 @@
+﻿stage,metric,count,denominator,note
+1,unique A90 terminal,1,5,5 snapshots identical
+2,B90 starts,60,60,yaw90
+3,pre-registered targets,7,60,6 new + ep064 anchor
+4,static-valid qB,7,7,A scene
+5,planned,7,7,collision-sampled straight
+6,executed/converged,7,7,max q err 1.55e-5 rad
+7,B/C state-aligned pairs,35,35,q/EE/grip/object/input/action
+8,B90 v2.2 B,28,35,5 seeds x7 targets
+9,B90 v2.2 C,28,35,identical to B
+10,wall contact B/C,2,35,each; v2.2 differs from wall

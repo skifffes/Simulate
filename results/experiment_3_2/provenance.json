@@ -1,0 +1,9 @@
+{
+  "base_commit": "915422a1ee552b7f44f52cbbb423c54aa1704446",
+  "checkpoint": "outputs/smolvla_e23_D2/checkpoints/020000/pretrained_model",
+  "a_terminal": "results/experiment_3/data/a_terminal_states.csv (1 unique)",
+  "b_source": "results/experiment_3/data/b_training_start_states.csv (60)",
+  "targets": 7,
+  "rollouts": 105,
+  "notes": ["B/C exact", "A/B scene differs", "v2.2 != wall contact"]
+}

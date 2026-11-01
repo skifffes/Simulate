@@ -453,3 +453,17 @@ venv/bin/python scripts/exp210_coverage.py
 python scripts/exp210_local.py
 python scripts/exp210_visualize.py
 ```
+
+## 实验 3.1–3.5：Skill Composability 能力边界
+
+- 总报告：[results/experiment_3_5/final_stage_report.md](results/experiment_3_5/final_stage_report.md)
+- 交接：[docs/skill_composition_stage_handoff.md](docs/skill_composition_stage_handoff.md)
+
+本阶段：60 个 B90 起点审计 → 7 个预注册目标（Near/Medium/Far + ep064）→ 7×A/B/C×5 seeds = 105 次受控 rollout。7/7 规划/执行/收敛；B/C 35 对状态与行为完全一致（均 28/35）；A 31/35；wall contact A1/B2/C2。A/B 场景差 1.53–17.88 mm，成功率方向依目标，非单调。A90 终态只有 1 个唯一 q/object，`A_TERMINAL_DIVERSITY_LIMITED`。
+
+```bash
+python scripts/exp31_audit.py
+python scripts/exp31_select.py
+bash server/run_e32.sh
+python scripts/exp32_analyze.py
+```
