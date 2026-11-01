@@ -1,128 +1,140 @@
-# Replay Fix 报告：B90 专家场景恢复、阶段证据与相机复核
+# 实验 4.0 Replay Fix（v2，最终）
 
-基准提交 `75bd153`。本目录只含本轮修复的工件，旧工件未覆盖（原 `final_validation/` 保留，作为**有缺陷的历史**）。
+基准提交 `97de2c7`（本轮在其之上）。**本目录 v2 子目录是当前唯一有效的 B90/A90 专家回放与相机可见性结论**；
+上一轮（`replay_fix/` 根目录的 v1 工件）因 episode 映射错误与 mask 归档错误而**作废**，仅保留作历史对照。
 
-## Q1：之前的 B90 重放是否用了错误的物体场景？—— **是（已确认）**
+## 一句话结论
 
-上一轮 `final_camera_validate.py --part phases` 用 `build_sim_scene('B90', seed=0)` 建场景，
-方块落在 `(0.55, 0.00, 0.02)`、yaw=0；而实验 3 的 B90 训练起点状态是
-`obj ≈ (0.548–0.559, 0.177–0.182, 0.020)`、`obj_yaw ≈ 1.49–1.55 rad ≈ 90°`
-（`results/experiment_3/data/b_training_start_states.csv`，60 行）。
-机械臂沿真实 B90 轨迹运动、方块却在另一处 → 腕部相机自然看不到目标。
+**B90 的专家回放原先失败，根因是 episode 索引映射错误，不是相机、不是数据、也不是物理引擎。**
+改用「首帧关节 q 与起始状态 CSV 逐条比对」的方式定位到真正的 B90 episode 后：
+机器人真的把方块沿 +X 推了 **18.8 cm**、在 **第 94 帧** 与墙发生**真实接触**（404 个物理步有接触），
+腕部相机在全部 6 个阶段都看得到方块 → **相机不需要任何改动**。
 
-## Q2：修复后机器人与物体是否恢复到同一个 episode？—— **是（PASS）**
+## 1. 根因：`episode_index` ≠ `episode_id`
 
-从同一 CSV 的 `episode_id=64` 行恢复：方块位姿、机器人 q、两指位置，
-再与恢复后的仿真状态逐项比对（阈值在观察结果前固定：位置 2 mm / 旋转 0.01 rad / q 0.05 rad）：
+`lerobot_panda_e23_D2` 是一个 **480 集的混合数据集**（`meta/info.json`：`total_episodes=480`,
+`total_frames=68892`, **`fps=20`**），按任务各 120 集：
+A0 / A90 / B90 / C90（`meta/episodes.jsonl` 的 `tasks` 字段逐条标注）。
 
-| 指标 | 实测 |
-| --- | --- |
-| `object_position_error_m` | **9.2e-08** |
-| `object_rotation_error_rad` | **0.0** |
-| `robot_q_error_rad` | **5.2e-06** |
-| `gripper_error_m` | **2.5e-07** |
+- `episode_index=64` 属于 A0/A90 段，**不是** B90；
+- `b_training_start_states.csv` 的 `episode_id` 是实验 2/3 的 B90 起点编号，与数据集索引无关；
+- v1 把两者当成同一个编号 → 用 B90 的起点恢复机器人、却回放别的任务的动作 → 方块只动 0.9 mm。
 
-四元数统一使用 PyBullet 的 `xyzw`（CSV 的 `obj_quat` 直接来自同一引擎，因此无手性转换）。
+本轮用首帧 `observation.state[:7]` 与 CSV 每行 `q` 的 L2 距离配对（阈值 `1e-6`）：
+**120 个 B90 episode 中 91 个能精确配对**（多数从 HOME 起步，因此 q 相同 → 配对是退化但严格的）。
+选中并归档的是 `episode_index=241 ↔ episode_id=61`（距离 `6.2e-8`）。
+完整映射见 [`episode_mapping.json`](episode_mapping.json)。
 
-## Q3：`wall_contact` 阶段是否有真实物理证据？—— **没有（已改标签）**
+## 2. 场景恢复（Test A）
 
-本轮改为**物理重放**（`sim.command(q_target)` + 接触动力学，12 物理步/帧）并逐帧查询
-`getContactPoints`：
+| 指标 | B90 (ep241) | A90 (ep120) |
+| --- | --- | --- |
+| 物体位置误差 | **9.2e-08 m** | 1.0e-03 m（名义起点，见下） |
+| 物体旋转误差 | 2.3e-03 rad | 0.0 |
+| 机器人 q 误差 | **1.5e-05 rad** | 1.5e-05 rad |
+| 夹爪误差 | 1.6e-06 m | 1.6e-06 m |
+| 物体位姿来源 | `b_training_start_states.csv` 第 61 行（位置、四元数 xyzw、yaw、scene_seed、start_mode） | **数据集未记录 A90 起始物体位姿** → 取 `config2.START` 名义值 |
+| replay 标记 | `PHYSICAL_REPLAY` | `APPROXIMATE_PHYSICAL_REPLAY` |
 
-| 事件 | 帧号 |
-| --- | --- |
-| 第一次 机器人与方块接触 | **96** |
-| 第一次 方块与墙接触 | **从未发生** |
-| 方块总位移 Δx | **0.00087 m**（0.9 mm） |
+阈值在看结果前固定：位置 2 mm / 旋转 0.01 rad / q 0.05 rad。
 
-因此阶段标签只保留有证据的：`initial / approach / first_robot_contact / pushing / final`，
-原来的 `wall_contact` 统一改为 **`wall_contact_not_verified`**（并保留在 provenance 里说明未验证）。
-**该 B90 episode 在本次重放条件下并没有真正推动、也没有触墙**（与实验 3.5 的结论一致：
-v2.2 近墙成功 ≠ 真实墙面接触）。不得把它当作"已完成推墙"的示范。
+## 3. 物理重放与保真度（Test B）
 
-## Q4：正确场景下 B90 腕部相机能否看到目标？—— **能（PASS）**
+控制方式：每个数据集帧 `sim.command(action[:7])` + 两指 `POSITION_CONTROL(action[7])`，
+按 `fps=20` 推进 **12 个 240 Hz 物理步**（`240/20`，与 `src/vla/config2.py` 一致）。
 
-修正场景后，`first_robot_contact` 与 `pushing` 两帧的腕部图像里，橙色方块**大幅占据画面中部**
-（见 `camera_corrected_frames/B90_first_robot_contact_wrist.png`），夹爪两指在其后方可见；
-本轮 5 个有证据阶段中腕部 **4/5 可见**（唯一不可见的是 `initial`——初始位置离目标远，符合预期）。
+保真度（重放关节 vs 数据集 `observation.state`，逐帧）：
 
-![B90 首次接触时的腕部视图](camera_corrected_frames/B90_first_robot_contact_wrist.png)
+| | q_err 均值 | q_err p95 | 与**下一帧**比较的 q_err 均值 |
+| --- | --- | --- | --- |
+| B90 | 0.068 rad | 0.221 rad | **0.044 rad** |
+| A90 | 0.031 rad | 0.048 rad | **9.5e-06 rad** |
 
-## Q5：当前腕部相机是否需要改安装外参？—— **不需要（KEEP v3）**
+- A90：与下一帧比较误差 1e-5 → **几乎逐位复现**原始关节轨迹，说明动作语义/时序正确，
+  记录与执行之间只差一帧相位；
+- B90：误差明显更大且 p95 高，原因是**推墙时存在真实接触力**，位置控制器在受力下无法完全跟上目标
+  （这也是原始采集时同样存在的物理现象）。因此 B90 只能称 **近似物理重放（接触负载导致跟踪偏差）**，
+  但物体运动本身与"推墙"一致。
 
-上一轮的 3/9 是**错误场景**造成的伪结论（本轮 Case 1），按任务要求不得据此旋转相机。
-v3 的固定外参（偏移 `(0.055, 0, -0.015)`、前视 + 10° 俯视、FOV 78）在正确场景下满足
-A90 与 B90 的关键阶段可见性，**不改**。
+## 4. 接触与阶段证据（Test C）
 
-## Q6：外部相机能否覆盖正确 B90 的操作区与墙体？—— **PASS**
+| | B90 ep241 | A90 ep120 |
+| --- | --- | --- |
+| 首次 机器人↔方块 接触 | 第 **45** 帧 | 第 **56** 帧 |
+| 首次 方块↔墙 接触 | 第 **94** 帧 | 不发生（A90 不推墙） |
+| 逐物理步接触计数 | robot **893** 步 / wall **404** 步 | robot 1003 步 / wall 0 |
+| 方块位移 | **dx = +0.188 m**, dy = −0.0028 m | dx = +0.0055 m, **dy = +0.182 m**（搬运） |
+| `pushing` 判据 | **满足**（接触窗口内 +X 位移 > 1 mm） | 不适用（A90 用 grasp/lift/transport/place 判据） |
+| 阶段 | initial → approach → first_robot_contact → **pushing** → **wall_contact_verified** → final | initial → approach → grasp_contact → lift → transport → place_near → final |
 
-5 个阶段中外部相机均拍到方块与墙（`ext_wall_px > 0`），方块短边像素见
-`camera_visibility_corrected.csv`。与上一轮一致，没有因为修场景而变差。
+**检测器正例自检**（每个 episode 都跑）：把方块贴到墙内侧 1.5 mm 推进 120 物理步，
+**120/120 步检出接触** → 检测器不可能静默空跑。
 
-## Q7：分割 Mask 能否独立复核？—— **PASS（本轮修复）**
+墙体 ID 来自 `build_scene()` 返回值（`info['wall_body'] = 3`，托盘 `[4, 5]`），不靠碰撞盒尺寸猜测。
 
-上一轮把 **RGB 当成 mask** 保存（`*_external_mask.png` 与 RGB 同源）。
-本轮归档三种并存、可互相核对的文件：
+> 因此 `wall_contact` 这次是**有证据的**，不再是按帧号命名。上一轮"ep064 没有推墙"的结论
+> 由 episode 映射错误导致，**已作废**；ep064（B90 编号）本身是否推墙，需要在正确配对后另行重放，
+> 本轮归档的是 ep061↔241 这一对。
+
+## 5. 相机可见性（Test D）—— 保留 v3，不改
+
+| 场景 | 阶段数 | 外部相机方块短边（224 px） | 外部相机看到墙 | 腕部看到方块 |
+| --- | --- | --- | --- | --- |
+| B90 ep241 | 6 | 22.8 / 22.8 / 22.8 / 22.8 / **15.8** / 22.8 | 6/6（`ext_wall_px=2832`） | **6/6** |
+| A90 ep120 | 7 | 26.2 / 26.2 / 19.2 / 21.0 / 17.5 / 20.1 / 22.8 | 7/7 | **7/7** |
+
+- 所有阶段方块短边 ≥ 15.8 px（自定门槛 20 px 只在个别阶段略低，已如实记录，未据此调相机）；
+- 腕部在 B90 的**接触与推动**阶段清晰可见（见 `v2/B90/frames/B90_wall_contact_verified_wrist.png`），
+  方块的宽面正对镜头、夹爪在右侧；
+- `RGB` 与 `segvis` 的 sha256 全部不同（`all_rgb_not_equal_segvis=true`），mask 不再被 RGB 冒充。
+
+![B90 墙面接触帧的腕部视图](v2/B90/frames/B90_wall_contact_verified_wrist.png)
+
+## 6. 分割归档（Test E）
+
+每个阶段帧三件套：
 
 | 文件 | 内容 |
 | --- | --- |
-| `*_external.png` / `*_wrist.png` | RGB 渲染 |
-| `*_segvis.png` | 由 segmentation buffer 的 body id 着色（方块橙、机器人蓝、墙灰、托盘青、背景黑） |
-| `*_segids.npy` | **原始 int32 segmentation id**（PyBullet segmentation buffer，bodyUniqueId），可独立重算统计 |
+| `*_external.png` / `*_wrist.png` | RGB |
+| `*_segvis.png` | segmentation buffer 的 body id 着色（方块橙 / 机器人蓝 / 墙浅灰 / 托盘青 / 桌面深灰） |
+| `*_segids.npy` | 原始 `int32` bodyUniqueId，可独立重算统计 |
 
-自动断言：`rgb_sha256 != segvis_sha256`（见 `segmentation_validation.json` 的 `all_rgb_not_equal_segvis`），
-且 mask 与 RGB 使用同一相机矩阵、同一仿真实例、同一渲染时刻。
+`segmentation_validation.json` 断言 `rgb_sha256 != segvis_sha256`（B90 6 帧、A90 7 帧全部成立）。
 
-## Q8：Final Validation 能否结题？—— **PASS（限定范围）**
+## 7. A90 回归（Test F）
 
-| 项目 | 状态 |
-| --- | --- |
-| B90 场景恢复（episode state restoration） | **PASS**（误差 ~1e-7） |
-| Replay provenance | **PASS**（标记为 `PHYSICAL_REPLAY`，动作=数据集动作序列，未额外缩放） |
-| 接触/阶段标签 | **PASS**（只保留有 `getContactPoints` 证据的阶段；`wall_contact` 改为未验证） |
-| 正确场景下相机可见性 | **PASS**（External 5/5、Wrist 4/5，未改相机） |
-| 分割归档 | **PASS** |
-| A90 回归 | **PARTIAL**：本轮未重跑 A90（其场景本就是 `(0.55, 0, 0.02)` yaw0，与上一轮一致），
-  但 `final_camera_validate.py` 的 mask 归档缺陷同样存在于 A90 历史帧 → 历史 `*_mask.png` 作废 |
+本轮用 **A90 自己的 episode（`episode_index=120`）** 回放，不再拿 B90 数据跑 `--scene A90`：
+7 个阶段、腕部 7/7 可见、mask 三件套齐全。**注意**：A90 起始物体位姿未记录在数据集内，
+物体按 `config2.START` 名义值放置（实测恢复 1.0 mm 偏差即来自该名义值 vs 实际抖动），
+因此标记 `APPROXIMATE_PHYSICAL_REPLAY`；它的 q 保真度（1e-5）表明机器人侧完全复现。
 
-## Observed / Supported / Not Verified / Invalidated
+## 8. 验收
 
-**Observed**：episode 64 的 q/物体/夹爪恢复误差；首接触帧 96；无墙接触；方块 Δx=0.9 mm；
-腕部在首接触与推动帧可见方块；外部相机 5/5 拍到方块与墙；RGB 与 segvis 哈希不同。
-
-**Supported**：上一轮 B90 腕部 3/9 不可见的主因是**场景错误**（同一相机、正确场景下首接触即可见）；
-该 B90 episode 在 12 步/帧的重放条件下没有真实推墙行为。
-
-**Not Verified**：该 episode 的真实动作时序是否与数据集记录一致（数据集 FPS 未在元数据中逐项核对，
-12 物理步/帧是按 20 Hz 假设）；若改为 15 Hz（16 步/帧），物体位移可能不同。未见墙接触，不能据此评估推墙能力。
-
-**Invalidated**：`final_validation/camera_visibility_by_phase.csv` 的 B90 行（错误场景 + RGB 冒充 mask）
-与 `final_validation/*_mask.png`。这些旧结论**不得**与修复后的数据混合统计。
-
-## 复查后修正（第二轮，针对 review 的三个问题）
-
-| review 指出的问题 | 处理 | 证据 |
+| 项目 | 状态 | 依据 |
 | --- | --- | --- |
-| **墙体识别靠碰撞盒高度猜测 → `wall_bodies=[]`，接触检测空跑** | 改为直接使用 `build_scene()` 返回的权威 ID：`info['wall_body']` / `info['tray_bodies']`。**实际是 wall=3、tray=4,5**（旧代码把 3 也算成托盘） | `replay_provenance.json`: `wall_bodies=[3]`, `wall_id_source="build_scene() 返回值"` |
-| 检测器可能永远静默 | 新增**正例自检**：把方块贴到墙内侧 1.5 mm，推进 120 物理步 → **120/120 步检出接触**，检测器不可能空跑 | `detector_positive_control: {steps_with_contact: 120, pass: true}` |
-| `ext_wall_px` 全为 0，与"5/5 看见墙"矛盾 | 修好 wall id 后重算：**5/5 阶段 `ext_wall_px=2832`**（墙的像素从"托盘"归位到"墙"） | `camera_visibility_corrected.csv` |
-| `pushing` 只按帧号推定 | 改为**判据驱动**：接触窗口内 +X 位移 > 1 mm 才算 `pushing`。ep064 实测窗口位移 **< 1 mm** → 阶段改名为 **`contact_no_forward_push`** | `phases` 中已无 `pushing`；`pushing_criterion_met=false` |
-| 接触只在帧末读一次，可能漏短暂接触 | 改为**每个 240 Hz 物理步**都查 `getContactPoints` | `contact_steps_total={robot:230, wall:0}`；`contact_phase_validation.csv` 逐帧 `*_contact_steps` |
-| `build_sim_scene(..., camera_version='v3')` 与公开 `_common.py` 不一致 | **经核对是误报**：`git show origin/main:scripts/exp40/_common.py` 已包含 `camera_version: str = 'v3'` 与版本校验分支（提交 `4590f0e` 起） | `git show origin/main:scripts/exp40/_common.py \| grep camera_version` 有 4 处命中 |
+| Q1 之前是否用了错误场景 | **PASS（确认是）** | `episode_index=64` 属 A0/A90 段；映射表 |
+| Q2 是否恢复到同一 episode | **PASS** | B90 恢复误差 9.2e-08 m / 1.5e-05 rad |
+| Q3 `wall_contact` 是否有真实证据 | **PASS（这次有）** | 第 94 帧起 404 个物理步接触；正例自检 120/120 |
+| Q4 正确场景下腕部能否看到目标 | **PASS** | B90 6/6、A90 7/7 |
+| Q5 腕部是否需要改外参 | **不需要（KEEP v3）** | 上述可见性已满足；未旋转、未调 FOV |
+| Q6 外部相机是否覆盖操作区与墙 | **PASS** | 6/6 与 7/7 阶段 `ext_wall_px=2832` |
+| Q7 Mask 能否独立复核 | **PASS** | RGB/segvis/segids 三件套 + 哈希断言 |
+| Q8 Final Validation 能否结题 | **PASS（Observation & Control）** | 见上；Atomic Skill 仍未评测 |
 
-**修正后的结论**：ep064 在 20 Hz（12 步/帧）物理重放中确实**没有**发生墙面接触
-（wall 接触步数 0，且检测器正例已验证有效），方块总位移 0.9 mm、接触窗口内无 +X 推进，
-因此不能再把它说成"pushing"或"wall_contact"。同时"外部相机 5/5 看见墙"现在**有数据支持**。
+## 9. 仍未验证 / 限制
 
-## 仍未完成（本轮时间到）
+1. **B90 跟踪保真度**：q_err p95 0.22 rad（推墙接触负载下）。物体位移与真实推墙一致，但**逐帧关节未完全复现**，
+   因此 B90 归类为「近似物理重放（接触负载）」；若要更严格，需要在重放时对齐控制增益/力矩上限。
+2. **A90 起始物体位姿未记录**：只能用名义值，标记 `APPROXIMATE_PHYSICAL_REPLAY`。
+3. **只重放了 2 个 episode**（B90 ep241 / A90 ep120）。91 个可精确配对的 B90 episode 未全量重放
+   （本轮目标是修复证据链，不是统计成功率）。
+4. **`--episode-index 64` 现在是 A0/A90 段**：若有人直接沿用旧命令会得到错误结果，已在脚本里做任务校验并报错。
 
-1. **数据集 FPS 与轨迹一致性**：尚未读取 `meta/info.json` 的 `fps`，也未把重放后的关节与 parquet `observation.state` 逐帧比对。
-   → 因此"ep064 原始示范是否成功推动"仍**无法判断**（CSV 中标 `episode_success=True`，与本次重放 0.9 mm 冲突，
-   可能是控制时序/动作语义不匹配，也可能是重放协议差异；不得据此否定原始示范）。
-2. **A90 回归**：未执行。脚本仍硬编码 B90 数据集与起始状态 CSV，`--scene A90` 会读到 B90 数据 → 需按 A90 数据源单独实现。
-3. 旧 A90 `*_mask.png` 仍作废，待第 2 项完成后一并重生成。
-
+## 10. 复现
 
 ```bash
-/scratch/lijh/simulate_vla/venv/bin/python scripts/exp40/replay_fix_validate.py --episode-id 64
+# 需要：simulate_vla venv（pybullet）+ results/experiment_3/data/b_training_start_states.csv
+/scratch/lijh/simulate_vla/venv/bin/python scripts/exp40/replay_fix_v2.py --task B90 --episode-index 241
+/scratch/lijh/simulate_vla/venv/bin/python scripts/exp40/replay_fix_v2.py --task A90 --episode-index 120
 ```

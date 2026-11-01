@@ -1,0 +1,99 @@
+{
+  "task": "B90",
+  "episode_index": 241,
+  "parquet": "/scratch/lijh/simulate_vla/data/lerobot_panda_e23_D2/data/chunk-000/episode_000241.parquet",
+  "dataset_fps": 20,
+  "n_frames": 128,
+  "task_episodes_available": 120,
+  "replay_mode": "PHYSICAL_REPLAY",
+  "object_state": {
+    "source": "results/experiment_3/data/b_training_start_states.csv",
+    "matched_episode_id": 61,
+    "q_distance": 6.186753948035378e-08,
+    "obj_pos": [
+      0.5382299995251181,
+      0.17671999671850558,
+      0.019989825689966212
+    ],
+    "obj_quat": [
+      0.0,
+      0.0,
+      0.686165,
+      0.727445
+    ],
+    "obj_yaw_rad": 1.512409313806661,
+    "start_mode": "home",
+    "episode_success_in_csv": "True"
+  },
+  "scene": "B90",
+  "scene_seed": 53050002,
+  "wall_body": 3,
+  "tray_bodies": [
+    4,
+    5
+  ],
+  "wall_id_source": "build_scene() 返回的 wall 对象",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "steps_per_frame": 12,
+  "control": "POSITION_CONTROL 目标 = 数据集 action[:7]；夹爪目标 = action[7]",
+  "restoration_errors": {
+    "object_position_error_m": 9.231354576658828e-08,
+    "object_rotation_error_rad": 0.0023364508321273704,
+    "robot_q_error_rad": 1.5466223296987397e-05,
+    "gripper_error_m": 1.5991819377406125e-06
+  },
+  "restoration_pass": true,
+  "detector_positive_control": {
+    "steps_with_contact": 120,
+    "pass": true
+  },
+  "first_robot_contact_frame": 45,
+  "first_wall_contact_frame": 94,
+  "contact_steps_total": {
+    "robot": 893,
+    "wall": 404
+  },
+  "block_displacement_m": {
+    "dx": 0.18816,
+    "dy": -0.00279
+  },
+  "tracking_fidelity": {
+    "q_err_rad_mean": 0.06805809743165672,
+    "q_err_rad_p95": 0.22101497956608618,
+    "q_err_rad_max": 0.23601386803994032,
+    "q_err_next_rad_mean": 0.04446267109768852,
+    "q_err_next_rad_p95": 0.22067835254759663,
+    "finger_err_m_mean": 0.0016535477505848807,
+    "finger_err_next_m_mean": 0.0014203274377883519,
+    "note": "逐帧比较重放关节与数据集 observation.state；*_next 表示与下一帧 state 比较，用于区分“真正的重放偏差”与“记录相位差一帧”",
+    "phase_lag_hypothesis_supported": true
+  },
+  "phases": [
+    {
+      "name": "initial",
+      "frame": 0
+    },
+    {
+      "name": "approach",
+      "frame": 37
+    },
+    {
+      "name": "first_robot_contact",
+      "frame": 45
+    },
+    {
+      "name": "pushing",
+      "frame": 51
+    },
+    {
+      "name": "wall_contact_verified",
+      "frame": 94
+    },
+    {
+      "name": "final",
+      "frame": 127
+    }
+  ],
+  "pushing_criterion_met": true
+}

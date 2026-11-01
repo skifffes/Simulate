@@ -63,13 +63,18 @@ bash server/exp40/run_server.sh checkpoint 2 8000
 - `hotfix/`：相机 v2 冻结、夹爪与关节尺度证据链、15 Hz 时序、逐回合 seed 接线（29 条判据）
 - `final_validation/`：投影矩阵修正、腕部固定外参 **camera v3**（SHA256 `418bad2f…`）、
   真实 Policy Server 输入审计、模型级 RNG 复现、A90/B90 15 Hz 闭环、CSV schema 修复
-- `replay_fix/`：**最新**——B90 专家重放改在**正确的 episode 场景**（恢复物体位姿后物理重放）、
-  阶段标签只依据真实接触事件、mask 归档修复（RGB/segvis/segids 三件套）、相机复核后**决定不改**。
-  详见 [`replay_fix/replay_fix_report.md`](replay_fix/replay_fix_report.md)。
+- `replay_fix/`：**最新（v2 有效）**——B90 专家回放改用**正确映射的 episode**
+  （`episode_index=241 ↔ episode_id=61`，误差 9e-8 m），方块被真实推动 **18.8 cm**、
+  **第 94 帧与墙接触**（404 物理步）；腕部 B90 6/6、A90 7/7 可见；mask 改为
+  RGB/segvis/segids 三件套。详见 [`replay_fix/replay_fix_report.md`](replay_fix/replay_fix_report.md)。
 
-> **旧结论作废**：`final_validation/camera_visibility_by_phase.csv` 中的 B90 行与
-> 所有 `final_validation/**/*_mask.png` 因“错误场景 + RGB 冒充 mask”而作废，
-> 不得与 `replay_fix/` 的数据混合统计。A90 的可见性结论不受影响（其场景本就正确）。
+> **旧结论作废**：
+> 1) `final_validation/camera_visibility_by_phase.csv` 的 B90 行与所有 `final_validation/**/*_mask.png`
+>    （错误场景 + RGB 冒充 mask）；
+> 2) `replay_fix/` 根下的 v1 工件（`replay_provenance.json`、`camera_visibility_corrected.csv`、
+>    `contact_phase_validation.csv`、`camera_corrected_frames/`）——它们基于 `episode_index=64`
+>    （实际属于 A0/A90 段）与错误的墙体猜测。**以 `replay_fix/v2/` 为准**，不得混合统计。
+>    A90 的可见性结论不受影响（其场景本就正确），但 mask 需用 v2 版本。
 
 **使用哪个相机**：训练/评测一律用 `src/exp40/camera_v2.py` 的 `CAMERAS_V3`，
 `build_sim_scene()` 已强制该版本（缺配置即报错，不静默回落旧 `config2.CAMERAS`）。
