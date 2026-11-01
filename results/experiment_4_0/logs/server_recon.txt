@@ -1,0 +1,59 @@
+=== 网络可达性 ===
+200  https://pypi.tuna.tsinghua.edu.cn/simple/
+200  https://mirrors.aliyun.com/pypi/simple/
+000  https://hf-mirror.com
+000  https://huggingface.co
+200  https://github.com
+000  https://storage.googleapis.com
+200  https://pypi.org/simple/
+
+=== 代理环境变量 ===
+(none)
+
+=== 关键 URL 深层探测 ===
+404 size=232  https://storage.googleapis.com/openpi-assets/checkpoints/pi05_droid/assets/pi05_droid/norm_stats.json
+200 size=42288  https://github.com/Physical-Intelligence/openpi/info/refs?service=git-upload-pack
+
+=== curl 版本（是否支持断点续传） ===
+curl 7.29.0 (x86_64-redhat-linux-gnu) libcurl/7.29.0 NSS/3.90 zlib/1.2.7 libidn/1.28 libssh2/1.8.0
+Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp scp sftp smtp smtps telnet tftp 
+
+=== 已有 conda env 的 python 版本 ===
+arvae  3.9.21
+diffusion  3.9.19
+dinowm  3.9.23
+gdino_fix  3.10.18
+gxc  3.10.18
+halftone  3.9.20
+lcz  3.13.5
+llama  3.9.18
+omnigibson  3.10.13
+openx_env  3.10.18
+rlds_env  3.9.0
+vae  3.9.20
+virtualhome  3.9.19
+vitra  3.10.20
+yolo  3.9.20
+zoe  3.9.7
+zoenew  3.9.23
+
+=== 已有 openpi / jax / torch ===
+arvae: torch=2.1.0+cu121
+diffusion: torch=2.0.1+cu117
+dinowm: torch=2.3.0+cu121
+gdino_fix: torch=2.6.0+cu124
+halftone: torch=1.13.1+cu117
+llama: torch=2.3.0+cu118
+omnigibson: torch=2.1.2+cpu
+vitra: torch=2.3.0+cu121
+yolo: torch=1.13.1+cu117
+zoenew: torch=2.6.0+cu124
+
+=== 磁盘 ===
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/sda1                 15T   14T  269G  99% /scratch
+/dev/mapper/centos-root  382G   26G  357G   7% /
+
+=== /scratch 大目录 ===
+117G	/scratch/lijh/.cache
+65G	/scratch/lijh/simulate_vla

@@ -1,8 +1,8 @@
 {
   "call": 3,
   "weights": "checkpoint",
-  "wall_time_s": 0.16433772793971002,
-  "infer_ms_reported": 102.8068601153791,
+  "wall_time_s": 0.16649889713153243,
+  "infer_ms_reported": 102.58519789204001,
   "request_keys": [
     "observation/exterior_image_1_left",
     "observation/gripper_position",
@@ -35,17 +35,17 @@
     "observation/joint_position": "float32",
     "observation/gripper_position": "float32"
   },
-  "prompt": "pick up the orange block and place it in the target area, with its long side aligned with X",
+  "prompt": "push the orange block along the positive X direction to the wall",
   "model_inputs": {
     "state": [
-      -0.041487,
-      -0.694573,
-      0.098085,
-      -0.419517,
-      0.030851,
-      -0.583271,
-      0.331806,
-      0.765892,
+      0.1018,
+      0.560251,
+      -0.720541,
+      0.502301,
+      -0.125426,
+      -0.2732,
+      0.430611,
+      0.973099,
       0.0,
       0.0,
       0.0,
@@ -104,11 +104,11 @@
     "image_pixel_range": {
       "base_0_rgb": [
         15.0,
-        239.0
+        253.0
       ],
       "left_wrist_0_rgb": [
         75.0,
-        240.0
+        249.0
       ],
       "right_wrist_0_rgb": [
         0.0,
@@ -127,15 +127,15 @@
     "dtype": "float64",
     "finite": true,
     "first_action": [
-      -0.173927,
-      0.011402,
-      0.147254,
-      0.013739,
-      0.052803,
-      -0.046965,
-      -0.037015,
-      0.829407
+      -0.451746,
+      0.016009,
+      0.503745,
+      0.425129,
+      0.103982,
+      -0.344928,
+      -0.079692,
+      0.973489
     ],
-    "absmax": 0.8335806964961887
+    "absmax": 0.982784280685544
   }
 }

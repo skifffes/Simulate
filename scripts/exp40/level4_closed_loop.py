@@ -69,6 +69,7 @@ def main(argv=None) -> int:
     chunker.set_prompt(prompt)
 
     rows = []
+    last_rt = ''  # 当前 chunk 的推理往返时间（s），写进每一行 trace
     chunks = []
     client = None
     error = None
@@ -82,7 +83,7 @@ def main(argv=None) -> int:
             writer.writerow(['tick', 'phase', 'q1..q7', 'q_target1..7', 'ee_x', 'ee_y', 'ee_z',
                              'finger1', 'finger2', 'gripper_scalar', 'action_gripper',
                              'block_x', 'block_y', 'block_z', 'block_yaw',
-                             'infer_ms', 'accepted', 'reasons', 'stopped', 'stop_reason'])
+                             'chunk_roundtrip_s', 'accepted', 'reasons', 'stopped', 'stop_reason'])
 
             for _ in range(args.ticks + 1):
                 if not monitor.tick_once():
@@ -109,6 +110,7 @@ def main(argv=None) -> int:
                     infer_s = time.perf_counter() - t0
                     actions = np.asarray(result['actions'], dtype=np.float64)
                     chunker.push(actions)
+                    last_rt = round(infer_s, 4)
                     chunks.append({'tick': monitor.tick, 'roundtrip_s': round(infer_s, 4),
                                    'summary': summarize_chunk(actions),
                                    'raw': actions.round(6).tolist(),
@@ -130,7 +132,8 @@ def main(argv=None) -> int:
                                      *np.round(adapted.q_target, 5), *np.round(obs['ee_position'], 5),
                                      *np.round(finger_widths(sim), 5), round(g, 5), round(adapted.gripper_value, 5),
                                      *np.round(_block_state(block, sim)[:3], 5), round(_block_state(block, sim)[3], 5),
-                                     '', int(adapted.accepted), ';'.join(adapted.reasons), 1, monitor.why_stopped()])
+                                     last_rt, int(adapted.accepted), ';'.join(adapted.reasons), 1,
+                                     monitor.why_stopped()])
                     break
 
                 # ---- 控制 ----
@@ -153,7 +156,7 @@ def main(argv=None) -> int:
                                  *np.round(finger_widths(sim), 5), round(gripper_scalar(sim), 5),
                                  round(adapted.gripper_value, 5),
                                  *np.round(bs[:3], 5), round(bs[3], 5),
-                                 '', int(adapted.accepted), '', int(monitor.stopped),
+                                 last_rt, int(adapted.accepted), '', int(monitor.stopped),
                                  monitor.why_stopped() or ''])
                 if not ok:
                     break

@@ -1,8 +1,8 @@
 {
   "call": 1,
   "weights": "checkpoint",
-  "wall_time_s": 76.53141705319285,
-  "infer_ms_reported": 74799.14978193119,
+  "wall_time_s": 76.22483916091733,
+  "infer_ms_reported": 74467.34568895772,
   "request_keys": [
     "observation/exterior_image_1_left",
     "observation/gripper_position",

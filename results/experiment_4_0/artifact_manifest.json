@@ -1,11 +1,11 @@
 {
   "experiment": "4.0",
   "title": "π₀.₅ 基座迁移与 PyBullet 原子技能环境适配",
-  "simulate_commit": "300fa2082a6c86b9b9b107a6c45fd5650ac3b54c",
+  "simulate_commit": "98822eb93fba95912af4fea51ff27775204b6ffe",
   "simulate_branch": "main",
   "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
-  "n_files": 58,
-  "total_bytes": 990532,
+  "n_files": 60,
+  "total_bytes": 1023222,
   "files": [
     {
       "path": "action_checks/level3_checks.json",
@@ -19,23 +19,23 @@
     },
     {
       "path": "closed_loop_smoke/chunks_A90_seed0.npz",
-      "size_bytes": 2350,
-      "sha256": "f0c7b3f3cdb7affe4a53642fd2e82f861925c476d9011063be49e46a56ecd43b"
+      "size_bytes": 2356,
+      "sha256": "ddae432268b0e31e8e1b5c8144e5cf9afd9c937b11ec3925d6860d54f6e1e642"
     },
     {
       "path": "closed_loop_smoke/chunks_B90_seed0.npz",
-      "size_bytes": 2358,
-      "sha256": "afddd445d908d74da5502f39e6d6e9464ae2d33092e8a091887fc833315323fa"
+      "size_bytes": 3523,
+      "sha256": "21e1bb54e0bb985a8ede28f01c7dbd9f654f35567263b8062570b7deb825a9ab"
     },
     {
       "path": "closed_loop_smoke/closed_loop_A90_seed0.json",
-      "size_bytes": 12611,
-      "sha256": "2ef838f2d96f812024a82af57b5803e3625c16199267eeb2799face749dd2fe8"
+      "size_bytes": 12608,
+      "sha256": "4971cf7f10b15d12ffa7f31a408054e034319a0fe7990ef53dd94eae1305f60d"
     },
     {
       "path": "closed_loop_smoke/closed_loop_B90_seed0.json",
-      "size_bytes": 12664,
-      "sha256": "585399e0c9bed210238489b9c47d753c14c3d6098416c25db5d32b5d5a8532f5"
+      "size_bytes": 17076,
+      "sha256": "b7fcec5c70bee7665891a88f2153709729e11b0b85fb7afb4b37b5a1032e5c37"
     },
     {
       "path": "closed_loop_smoke/level5_env_interface.json",
@@ -44,13 +44,13 @@
     },
     {
       "path": "closed_loop_smoke/trace_A90_seed0.csv",
-      "size_bytes": 2875,
-      "sha256": "d4e1dceb3a04f92a56f09dc8caa1b21f0891e2ee3a729e35b93ef0d9f8b46019"
+      "size_bytes": 3191,
+      "sha256": "f5a6d121834bb6277dfd5d386a51f635470e4244be903bccd3158192ccb5b2df"
     },
     {
       "path": "closed_loop_smoke/trace_B90_seed0.csv",
-      "size_bytes": 3096,
-      "sha256": "d577117d870e4716bf212614dc24c8536b86c2ea6889adda164c90f2510c0304"
+      "size_bytes": 4568,
+      "sha256": "78ef991923edfad31dbc5242c850f8166701e6245e9bf73270a27cbc1ef422d4"
     },
     {
       "path": "compatibility_matrix.csv",
@@ -69,8 +69,8 @@
     },
     {
       "path": "experiment_4_0_report.md",
-      "size_bytes": 23841,
-      "sha256": "e96071376c0c4ab58cb4600404acb47b59683d2676c5826fe6a3166093399ab1"
+      "size_bytes": 25404,
+      "sha256": "b0dd24e4729164a3731c3d7407bacfa091d2761feba98a1d3bcffb65a2942f2f"
     },
     {
       "path": "logs/download_ckpt5.txt",
@@ -81,6 +81,11 @@
       "path": "logs/download_ckpt6.txt",
       "size_bytes": 5907,
       "sha256": "8efa0fae78a22ceceedab75ceed176588315b81779dcb9a2d661a71da780c89d"
+    },
+    {
+      "path": "logs/install_openpi4.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "logs/install_openpi5.txt",
@@ -94,8 +99,8 @@
     },
     {
       "path": "logs/policy_server_checkpoint.txt",
-      "size_bytes": 3939,
-      "sha256": "9c8d3d0824ef1c7b7b730e9b390624f64d9da9c0cdfaacd2a2940df238349e6b"
+      "size_bytes": 2511,
+      "sha256": "efed250cc31eb1f4e5fad85747fea0fa04bd1cdc3c28bdd9c9946c38a8fb923c"
     },
     {
       "path": "logs/policy_server_random.txt",
@@ -108,6 +113,11 @@
       "sha256": "6259e07fd71d7640e5aa61f06ed5a0a1122be8c735fb1fb32a73f317eab02737"
     },
     {
+      "path": "logs/server_recon.txt",
+      "size_bytes": 1687,
+      "sha256": "980a37d304ec8f3686018f11e39c0934b04bb407c96eb6d8185b7289ac809e20"
+    },
+    {
       "path": "model_smoke/action_sample.npz",
       "size_bytes": 303213,
       "sha256": "d8d3c1d2423a77820e22fc2c845ba7869cb6b60f2bc537252ee9d5b65ef101ea"
@@ -115,7 +125,7 @@
     {
       "path": "model_smoke/calls_8000/calls/call_0001.json",
       "size_bytes": 2434,
-      "sha256": "392f8b72553686cc179468fa775337f27dcfbf99fbeb840d622da399bd4bdd6e"
+      "sha256": "8d331b4809c31ea67b7aec6025655029de248b823e51c60036763bf1349b697f"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0001.npz",
@@ -124,43 +134,43 @@
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0002.json",
-      "size_bytes": 2462,
-      "sha256": "10222e28e4912ee8bcd014845ee0ac6b5242174f3b2dde1d1c624346f9689042"
+      "size_bytes": 2438,
+      "sha256": "778a5bdf7e9e0b30b417a3a2b5184592394815e401e376e19ab8425d2474f308"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0002.npz",
-      "size_bytes": 13708,
-      "sha256": "8309c56e2fa35bcd0ced01139e1aeb666b0465fd90cc3a39d47098f150ec5f11"
+      "size_bytes": 18840,
+      "sha256": "00f75cb78488e2874497d1d87c0eed9ede0b989fd55a1def1341624cc1244c93"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0003.json",
-      "size_bytes": 2464,
-      "sha256": "3f53ddd0add44691d4ca2746dbe89184a714182f8474534073a54baf00a81939"
+      "size_bytes": 2432,
+      "sha256": "2f2ff1e0aefad0422a4a903020bdc2e0d6a65d493f98ea68b1529d56cba5318d"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0003.npz",
-      "size_bytes": 13707,
-      "sha256": "7ff3d5b99eda38ae3a75d6c5b77a25b2641e1fcb49959234c640a62e0568050c"
+      "size_bytes": 29164,
+      "sha256": "aa640a6142e0fe29cb637e7b26a5e4fd3834a316179a07d7c72d7ee5d1a32670"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0004.json",
-      "size_bytes": 2436,
-      "sha256": "adb86639a530b0abdc96a4fd3d36c5ddf484729eddabbcd89e86e7947643e8f9"
+      "size_bytes": 2465,
+      "sha256": "7198b8364f0eac69d77eeb4d604ed64cc653b9737b18bc1ff962d86787553580"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0004.npz",
-      "size_bytes": 13700,
-      "sha256": "d428824cf17227dea5bb92ff97d2332015ece4dd54c0325bbd35a9fbcb5f7de6"
+      "size_bytes": 13701,
+      "sha256": "ca716d4fb6db2438fb7ba7037067e05251468c097f6117488d79ce4c2222c18e"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0005.json",
-      "size_bytes": 2437,
-      "sha256": "104da67d9c0ffacfbb3f9c8959e8ce4c61aced62b639d29c4f5628c7e31c0a58"
+      "size_bytes": 2461,
+      "sha256": "534851d8b8343b0b3f304387a7909f5ebb24d58634f7a67351f5c4f9112e3190"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0005.npz",
-      "size_bytes": 13696,
-      "sha256": "a667c58fe1516c14cfeb6fd3f65c7a0fc090ce62deebb130757bac01129b6be6"
+      "size_bytes": 16609,
+      "sha256": "321640a9c3eee605094197312f75ae24c96355b6b4872234deee6fd32e593242"
     },
     {
       "path": "model_smoke/calls_8000/calls/call_0006.json",

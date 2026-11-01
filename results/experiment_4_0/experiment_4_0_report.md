@@ -20,7 +20,7 @@
 | Level 1 模型独立推理（GPU 实测） | `model_smoke/` | ✅ |
 | Level 2 真实仿真观测→模型 | `observation_checks/` | ✅ |
 | Level 3 适配器判据（32 项） | `action_checks/level3_checks.json` | ✅ 32/32 |
-| Level 4 有限物理闭环 | `closed_loop_smoke/trace_*.csv` | ✅ 两场景各 13–14 控制步 |
+| Level 4 有限物理闭环 | `closed_loop_smoke/trace_*.csv` | ✅ B90 跑满 21 步预算 / A90 14 步后安全停止 |
 | Level 5 A90/B90 接口 | `closed_loop_smoke/level5_env_interface.json` | ✅ A90 8/8，B90 9/9 |
 | B90 评价缺口审计（4.1 用） | `evaluation_gap_analysis.md` | ✅（纯静态） |
 
@@ -34,7 +34,7 @@
 | 4 | 明确动作表示、单位、坐标系与控制接口 | ✅ | 15×8 = 7 关节增量(rad/步) + 绝对归一化夹爪[0,1]；关节空间，无 IK；`q_target=q+Δq` 送 `POSITION_CONTROL` |
 | 5 | Observation Adapter 通过测试 | ✅ | 真实仿真观测：两路 224×224×3 uint8 + 7 + 1，键名与官方客户端一致，同状态 sha256 可复现 |
 | 6 | Action Adapter 通过已知动作转换测试 | ✅ | `level3_checks.json` 32/32（含真实 FK、夹爪方向、限位、NaN、单步幅度） |
-| 7 | 至少一次安全、有限的 PyBullet 闭环完成 | ✅ | B90 14 步 / A90 13 步，均被安全层正常终止（`unexpected_collision` / `ee_workspace`），轨迹 CSV 完整 |
+| 7 | 至少一次安全、有限的 PyBullet 闭环完成 | ✅ | B90 跑满 21 步预算（`max_ticks`）正常退出；A90 在 14 步时被安全层以 `unexpected_collision`（手掌/指尖压到地面）终止；轨迹 CSV 完整 |
 | 8 | 能保存真实模型输入、动作输出与物理轨迹 | ✅ | `calls_8000/calls/*.npz`（模型实际输入张量 + 动作）、`trace_*.csv`（关节/EE/夹爪/物体逐 tick） |
 | 9 | 可复现 | ✅ | 固定种子、固定脚本、`environment_report.md` §6 的一键命令、`logs/` 全量日志 |
 | 10 | README 与 manifest 齐全 | ✅ | `README.md`、`artifact_manifest.json`（含 sha256） |
@@ -196,20 +196,36 @@ Policy Action (15×8) → Adapter Target q_target = q_now + clip(Δq) → Contro
 | 重置 | `reset()` 清空；回合开始调用 | 同上 |
 | 指令切换 | `set_prompt()` 计数 + `clear_on_prompt_change` 开关 | 为 4.2 的 A→B 边界预留，4.0 不实现连接器 |
 | 每步物理执行 | 12 个 240 Hz 步 = 50 ms（20 Hz） | `src/vla/config.py` |
-| 实测一次运行 | B90 用 2 个 chunk 执行 14 步；A90 用 2 个 chunk 执行 13 步 | `closed_loop_smoke/*.json` |
+| 实测一次运行 | B90 用 3 个 chunk 执行 21 步（跑满预算）；A90 用 2 个 chunk 执行 14 步后被安全停止 | `closed_loop_smoke/*.json` |
+| 推理往返实测 | 首个 chunk 76.24 s（含 JIT），同一次运行后续 chunk 0.186–0.189 s | `trace_*.csv` 的 `chunk_roundtrip_s` 列 |
 
 ## 13. 最小闭环是否真正完成？
 
 **是** —— `PyBullet Observation → π₀.₅ → Action Chunk → Action Adapter → Controller → PyBullet`
-在真实 checkpoint 下跑通，并且**由安全层正常终止**，不是崩溃、不是超时：
+在真实 checkpoint 下跑通，并且**按设计终止**（安全停止或跑满步数预算），不是崩溃、不是超时：
 
 | 场景 | 执行控制步 | 终止原因 | 细节 | 物体最终位置 |
 | --- | --- | --- | --- | --- |
-| B90 | 14 | `unexpected_collision` | 指尖(link 9)压进地面 `body 0`，穿透 8.18 mm | `[0.55, 0.0, 0.02]`（未移动） |
-| A90 | 13 | `ee_workspace` | 末端跑到 `z=0.6208 m`，超出上限 0.60 m | `[0.55, 0.0, 0.02]`（未移动） |
+| B90 | 21（跑满预算） | `max_ticks` | 无安全违规；末端始终没走到方块处 | `[0.55, 0.0, 0.02]`（未移动） |
+| A90 | 14 | `unexpected_collision` | 手掌(link 8)与指尖(link 9)压到地面 `body 0`，穿透 0.23 mm / 4.95 mm | `[0.55, 0.0, 0.02]`（未移动） |
+
+**同一场景同一种子的多次运行结果不同**（这是随机采样策略的正常表现，不是不确定性 bug，但必须记录）：
+
+| 运行时间 | 场景 | 执行步数 | 停止原因 |
+| --- | --- | --- | --- |
+| 20:36 | B90 | 15 | `ee_workspace`（EE 跑到 x=0.066 m） |
+| 20:47 | B90 | 14 | `ee_workspace` |
+| 21:37（归档版本） | B90 | 21 | `max_ticks` |
+| 20:36 | A90 | 3 | `unexpected_collision`（两指尖互碰，已修复为预期接触） |
+| 20:47 | A90 | 13 | `ee_workspace`（z=0.621 m） |
+| 21:37（归档版本） | A90 | 14 | `unexpected_collision`（手掌/指尖压地面） |
+
+差异来源：π₀.₅ 是 flow-matching 采样策略，每次服务器重启后 `jax.random.key(0)` 的随机序列重新开始，
+加上 chunk 的重推理时机与物理误差累积，导致停止点不同。归档的 `trace_*.csv` / `closed_loop_*.json`
+是 21:37 那一次；更早的运行记录保留在 `logs/run_all_checkpoint.txt`。
 
 两场景各保存：逐 tick CSV（关节/目标/EE/两指/夹爪/物体位姿/接受标志/停止原因）、
-5 个 chunk 的原始数组（`chunks_*.npz`）、安全事件 JSON、调用记录（`calls_8000/calls/call_0001–0011`，
+每个场景 2–3 个 chunk 的原始数组（`chunks_*.npz`）、安全事件 JSON、调用记录（`calls_8000/calls/call_0001–0011`，
 共 11 次真实推理，含每次的模型实际输入张量）。
 
 **诚实结论**：π₀.₅ 零样本在这两个场景里既没有抓也没有推，而是把手臂带向桌外/桌下；
@@ -269,8 +285,10 @@ Policy Action (15×8) → Adapter Target q_target = q_now + clip(Δq) → Contro
 9. **可重复性**：固定噪声两次推理 `max_abs_diff = 0.0`。
 10. **适配器**：32/32 判据通过（含 7 个关节的 FK 响应、夹爪开合方向、限位/NaN/单步幅度拒绝）。
 11. **观测**：真实 A90/B90 观测 → 224×224×3 uint8 ×2 + 7 + 1；A90 8/8、B90 9/9 接口检查通过。
-12. **闭环**：B90 14 步后 `unexpected_collision`（指尖压桌面 8.18 mm）停止；A90 13 步后 `ee_workspace`
-   （z=0.621 m）停止；两次物体都未被移动。
+12. **闭环**：归档的两次运行为 B90 跑满 21 步预算（`max_ticks`，无安全违规）、A90 14 步后
+    `unexpected_collision`（手掌/指尖压地面 0.23/4.95 mm）停止；更早的两次运行是 `ee_workspace`
+    （B90 15/14 步）与指尖互碰（A90 3 步，随后把 (9,10) 加入预期接触）。**所有运行里物体都未被移动。**
+    同场景同种子结果不同的原因见 §13。
 13. **服务器调用**：11 次真实 websocket 推理（`call_0001`–`call_0011`，全部 `weights=checkpoint`），
     每次的模型实际输入张量（32 维 state，后 24 维为 0）与输出 chunk 全部落盘；
     单条记录可核对到：state 前 8 维 `[-0.0415,-0.6946,0.0981,-0.4195,0.0309,-0.5833,0.3318,0.7659]`、
