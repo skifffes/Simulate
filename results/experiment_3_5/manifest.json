@@ -1,0 +1,30 @@
+{
+  "commit": "76151de",
+  "files": [
+    {
+      "path": "composability_funnel.csv",
+      "bytes": 550,
+      "sha256": "0848608accea41a24add9075d2047646518dfe38a0f1f38fb9b42ae4b7b55dd5"
+    },
+    {
+      "path": "config.yaml",
+      "bytes": 255,
+      "sha256": "ce30758ee8472d1130fb596b73c44721a2b51aef8e8c9aaa74ab9ff152504cb5"
+    },
+    {
+      "path": "final_stage_report.md",
+      "bytes": 6461,
+      "sha256": "cc7c4d1c38208d6244684d579e3135da7b5cf0b5382d92e99f6e932b04807b39"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 520,
+      "sha256": "f46ccddc9bc55960cde1412382ef64976f91f3fa1c1f6f874443dffed7e7950b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 453,
+      "sha256": "66d04c4319cdbceca67b3d6d8b084f3e04872e194397ad8cf309b327f22940a1"
+    }
+  ]
+}

@@ -16,7 +16,7 @@
 | B/C 行为完全一致 | **35/35 对** |
 | A/B 场景差异 | 物体 1.53–17.88 mm |
 | v2.2 成功 A/B/C | **31/35 / 28/35 / 28/35** |
-| 真实 wall contact | **A1 / B2 / C2** |
+| 真实 wall contact（全部失败） | **A1 / B2 / C2；成功 0** |
 
 ## 2. 分层漏斗
 
@@ -32,7 +32,7 @@
 | 8 | 不破坏 A 物体 | **7/7** | 物体启动漂移未作为失败 |
 | 9 | B/C 状态对齐 | **35/35 对** | q/dq/EE/夹爪/物体/输入/动作 |
 | 10 | B90 v2.2 成功 | **B 28/35, C 28/35** | 5 seeds/target |
-| 11 | 真实 wall contact | **B2/35, C2/35** | v2.2 ≠ wall |
+| 11 | 真实 wall contact | **B2/35, C2/35；全部失败** | v2.2 ≠ wall |
 
 ## 3. 关键发现
 
@@ -94,7 +94,7 @@
 | `STATE_ALIGNMENT_FAILURE` | B/C 0/35 对；A/B 场景差异是设计变量 |
 | `POLICY_FAILURE` | A 4/35；B/C 各7/35 |
 | `POLICY_SUCCESS_V22_NO_WALL_CONTACT` | 多数成功；wall contact 仅 A1/B2/C2 |
-| `WALL_CONTACT_SUCCESS` | 仅少数；需按 v2.2 与 wall 分开报告 |
+| `WALL_CONTACT_SUCCESS` | **0 次**；5 次接触均失败 |
 
 代表性失败：
 - ep074 B/C seed0/1/3/4：tilt 35.9°、48.5°、23.2°、13.8°；
@@ -138,3 +138,4 @@
 - 只有 1 个唯一 A 终态。
 - 没有覆盖 60 个起点的全量 rollout。
 - wall contact 检测仍需 code-level 校准；本轮只用已有接触日志。
+

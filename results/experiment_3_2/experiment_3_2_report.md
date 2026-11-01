@@ -24,6 +24,8 @@
 | ep064_f000 | anchor | 4/5 | 4/5 | 4/5 | 0 | 0 | 0 |
 | **总计** | | **31/35** | **28/35** | **28/35** | **1** | **2** | **2** |
 
+**所有 5 次 wall contact 都发生在失败 rollout 中；没有一次 `WALL_CONTACT_SUCCESS`。** v2.2 成功均是无墙接触的“距离判据成功”。
+
 - **B 与 C 在 7 个目标、5 个 seed 上完全一致**：
   - success 28/35 对 28/35；
   - 每个 seed 的 success/gap/tilt 相同；
@@ -35,9 +37,21 @@
   - Far ep068：A 4/5 vs B 5/5；
   - Medium ep082：A 5/5 vs B 4/5。
 - **A/B 视觉输入差很小**：top MAE 0.0002–0.0022；但物体位置差 1.53–17.88 mm 改变了接触几何。
-- **B/C 参考本身不稳定**：ep074 B/C 仅 1/5，ep082 4/5 且有一次 wall contact。
+- **B/C 参考本身不稳定**：ep074 B/C 仅 1/5，ep082 4/5 且有一次 wall contact（仍是失败，tilt 90.9°）。
 
 ![summary](figures/summary_by_target.png)
+
+## C 组过渡轨迹审计
+
+- 所有 C 组必须显式加载 `trajectories/planned/<target>.npy`；文件缺失会直接 `FileNotFoundError`，不再回退到直线插值。
+- 对 7 个目标新增了状态审计（`transition_audit/`、`transition_audit.csv`）：
+  - 每目标 80–159 个路径点；
+  - 过渡过程中 **robot-object 接触 0 步**，**object-wall 接触 0 步**；
+  - 物体漂移 **2.2×10⁻⁸–4.4×10⁻⁸ mm**；
+  - 过渡终点 q 误差（稳定前）约 **7.2×10⁻⁴–7.5×10⁻⁴ rad**；
+  - 收敛后目标 q 误差 **≤1.55×10⁻⁵ rad**。
+- 原始过渡审计：`transition_audit/`、`transition_audit.csv`。
+- 墙面接触校准：`wall_contact_audit.csv`；5 次接触均为 `block_base`–`wall_base`，法向沿 −X，有正法向力，但 5 次对应的 rollout 全部失败（tilt 或最终不达标），**`WALL_CONTACT_SUCCESS = 0`**。
 
 ## 关键回答
 
@@ -95,3 +109,7 @@ A/B 的 top 图像差异很小，但接触几何不同；不能只用图像 MAE 
 - B Reference 是重建场景，不是原始训练动态/视频。
 - 直线路径只做碰撞采样，不是动态安全证书。
 - 没有做 60 个起点的全量 rollout；不能把本结果外推为全部 B90 起点。
+- `state_alignment.csv` 的 B/C 接触只比较启动接触总数；未逐点比较每个接触对的法向/力，除墙面接触审计外仍有限。
+- `model_input.npz` 是入口重建的输入；尚未在每个 rollout 的 `PolicyRunner.act()` 调用处独立截获（受控 v4 已做单对 act 截获，但 3.2 未做）。
+
+

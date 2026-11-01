@@ -20,7 +20,7 @@ class Exp32Episode(SnapshotEpisode):
         snap={'seed':int(self.brow['scene_seed']),'bullet':'','group':'yaw90','tag':f'{target}_{group}_r{args.seed}','episode':int(self.brow['episode_id']),'frame':0}
         super().__init__(args,snap,'frozen')
         self.out=Path(args.out)/f'{group}_{target}_r{args.seed}';self.out.mkdir(parents=True,exist_ok=True)
-        self.raw_actions=[]
+        self.raw_actions=[];self.transition_rows=[]
     def _setup(self,sim):
         self.sim=sim;self.block=self.block if hasattr(self,'block') else None
     def build(self):
@@ -37,15 +37,26 @@ class Exp32Episode(SnapshotEpisode):
         self.side_view,self.side_proj=make_view((0.55,-0.62,0.30),(0.60,0.16,0.10),fov=46.0)
         if self.exp_group=='C':
             pf=ROOT/f'results/experiment_3_2/trajectories/planned/{self.target}.npy'
-            path=np.load(pf) if pf.exists() else np.asarray([qa,qb])
+            if not pf.exists():raise FileNotFoundError(f'missing planned trajectory: {pf}')
+            path=np.load(pf)
             dense=[]
             for i in range(len(path)-1):
                 a=np.asarray(path[i]);b=np.asarray(path[i+1]);n=max(2,int(np.ceil(np.linalg.norm(b-a)/0.01)))
                 for t in np.linspace(0,1,n,endpoint=False):dense.append(a*(1-t)+b*t)
             dense.append(np.asarray(path[-1]))
-            for q in dense:
+            for k,q in enumerate(dense):
                 self.sim.command(q)
                 for _ in range(SPA):self.sim.step();self.physics_step+=1
+                pos,_=p.getBasePositionAndOrientation(self.block,physicsClientId=self.sim.client);vel,_=p.getBaseVelocity(self.block,physicsClientId=self.sim.client)
+                ct={'robot_object':0,'object_table':0,'object_wall':0,'other':0}
+                for c in p.getContactPoints(physicsClientId=self.sim.client):
+                    ba,bb=c[1],c[2]
+                    if {ba,bb}=={self.sim.robot,self.block}:ct['robot_object']+=1
+                    elif {ba,bb}=={self.block,self.sim.plane}:ct['object_table']+=1
+                    elif {ba,bb}=={self.block,self.wall}:ct['object_wall']+=1
+                self.transition_rows.append({'step':k,'q':';'.join(f'{v:.7f}' for v in self.sim.q()),'obj_x':float(pos[0]),'obj_y':float(pos[1]),'obj_z':float(pos[2]),'obj_speed':float(np.linalg.norm(vel)),**ct})
+            with (self.out/'transition_trace.csv').open('w',newline='',encoding='utf-8-sig') as f:
+                w=__import__('csv').DictWriter(f,fieldnames=list(self.transition_rows[0].keys()));w.writeheader();w.writerows(self.transition_rows)
         else:
             for j in range(7):p.resetJointState(self.sim.robot,j,float(qb[j]),physicsClientId=self.sim.client)
         self.sim.command(qb);set_gripper(self.sim,gw,20.0,0.05)

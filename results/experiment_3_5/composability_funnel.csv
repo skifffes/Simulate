@@ -9,3 +9,4 @@
 8,B90 v2.2 B,28,35,5 seeds x7 targets
 9,B90 v2.2 C,28,35,identical to B
 10,wall contact B/C,2,35,each; v2.2 differs from wall
+11,WALL_CONTACT_SUCCESS,0,5,all 5 wall contacts were failed rollouts

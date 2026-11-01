@@ -1,0 +1,6 @@
+﻿tag,success,first_time,bodyA,bodyB,nameA,nameB,point_z,normal_x,normal_y,normal_z,force,distance,n_wall_events
+B_ep082_f000_r1,False,4.8875,2,3,block_base,wall_base,0.00165,-1.0,-0.0,-0.0,99.052,-0.000462,576
+B_ep074_f000_r0,False,4.45833,2,3,block_base,wall_base,0.02479,-1.0,-0.0,-0.0,51.0226,-3.9e-05,196
+C_ep074_f000_r0,False,4.45833,2,3,block_base,wall_base,0.02479,-1.0,-0.0,-0.0,51.0226,-3.9e-05,196
+C_ep082_f000_r1,False,4.8875,2,3,block_base,wall_base,0.00165,-1.0,-0.0,-0.0,99.052,-0.000462,576
+A_ep068_f000_r1,False,5.5625,2,3,block_base,wall_base,0.0659,-1.0,-0.0,-0.0,31.524,-0.000747,2133
