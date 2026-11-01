@@ -57,3 +57,15 @@ bash server/exp40/run_server.sh checkpoint 2 8000
 - 不修改 `outputs/smolvla_*` 下的 D2 checkpoint；
 - 不修改 `src/vla/**`、`scripts/eval_multi_atomic_vla.py` 等历史代码，只以只读方式复用其中的场景与相机定义；
 - 新代码集中在 `src/exp40/` 与 `scripts/exp40/`，历史目录零改动（可用 `git status` 核对）。
+
+## 后续两轮补丁（相机可用性 / 接线 / RNG / CSV）
+
+- `hotfix/`：相机 v2 冻结、夹爪与关节尺度证据链、15 Hz 时序、逐回合 seed 接线（29 条判据）
+- `final_validation/`：**当前有效版本**——投影矩阵修正、腕部固定外参 **camera v3**
+  （SHA256 `418bad2f…`）、真实专家示范 9 阶段可见性、真实 Policy Server 输入审计、
+  模型级 RNG 复现、A90/B90 15 Hz 闭环、CSV schema 修复。详见
+  [`final_validation/final_validation_report.md`](final_validation/final_validation_report.md)。
+
+**使用哪个相机**：训练/评测一律用 `src/exp40/camera_v2.py` 的 `CAMERAS_V3`，
+`build_sim_scene()` 已强制该版本（缺配置即报错，不静默回落旧 `config2.CAMERAS`）。
+`hotfix/` 里的 v2 与 4.0 原始记录均为历史对照，不要用于新数据。
