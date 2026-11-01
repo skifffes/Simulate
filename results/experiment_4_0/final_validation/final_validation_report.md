@@ -2,11 +2,23 @@
 
 基准提交 `5e913a6`（上一轮 hotfix）；本次在其之上补丁，不覆盖 4.0 历史工件与实验 3。
 
+> ## ⚠️ 本报告部分结论已作废（2026-11-01 复查后）
+>
+> - **B90 相关结论作废**：本报告 B90 的 9 阶段来自 `build_sim_scene('B90')` 的**名义场景**
+>   （方块 `(0.55, 0, 0.02)`、yaw 0），而真实 B90 episode 的方块在 `y≈0.18`、yaw≈90°，
+>   且当时把 `episode_index=64` 误当成 B90（实际属 A0/A90 段）。B90 的
+>   `camera_visibility_by_phase.csv` 行、"Wrist 3/9"、`wall_contact` 标签全部**无效**。
+> - **所有 `*_mask.png` 作废**：当时把 RGB 写成了 mask。
+> - **有效版本**：`results/experiment_4_0/replay_fix/v2/`（正确 episode 映射、真实墙接触、
+>   RGB/segvis/segids 三件套）。详见 [`../replay_fix/replay_fix_report.md`](../replay_fix/replay_fix_report.md)。
+> - 本报告仍然有效的部分：Level 1 推理、模型输入接线审计、模型级 RNG、15 Hz 闭环、
+>   CSV schema、以及 A90 的可见性（A90 场景本就正确，但其 mask 同样作废）。
+
 ## 0. 结论总表
 
 | 项目 | 结论 | 依据 |
 | --- | --- | --- |
-| External Camera task visibility | **PASS（几何/任务可见性）** | 真实专家示范 9 阶段 × A90/B90：方块短边 **19.2–26.2 px**（224×224），9/9 阶段在画面内，EE 均在画面内 |
+| External Camera task visibility | **PARTIAL（已被 replay_fix v2 取代）** | 当时记录：方块短边 19.2–26.2 px、9/9 阶段在画面内；但 **EE 只在 16/18 阶段在画面内**（A90/B90 的 `initial` 为 `ext_ee_inside=False`，机械臂在 HOME、位于画面边缘）。B90 行已作废 |
 | Wrist Camera task visibility | **PARTIAL** | A90 专家 9/9 阶段可见方块；**B90 仅 3/9**（侧向推动接近时物体在腕部视野外） |
 | Camera rigid mounting | **PASS** | 腕部改为**固定外参**（局部 offset + forward/up_local），10 组（5 构型 × 2 指开合）`R_link_camera` 偏差 < 1e-6、`t` 偏差 0 |
 | Actual model input wiring | **PASS** | `build_sim_scene()` 强制显式相机版本（v3，SHA256 `418bad2f…`），缺失即报错不回落；**真实 Policy Server 已用 v3 推理**：同状态独立渲染与发送图 sha256 逐位一致（`5fa856bb…`），返回 `(15,8)` 且有限，server `mode=checkpoint` |
@@ -65,7 +77,7 @@ A90 用 `lerobot_panda_multi` 的 A90 回合，B90 用 `lerobot_panda_e23_D2`，
 | --- | --- | --- |
 | E1 | 关键阶段方块不被裁出画面 | ✅ 9/9（两场景） |
 | E2 | 方块短边 ≥ 20 px（224） | ⚠️ 8/9 达标，A90 第 6 阶段 19.2 px（差 0.8 px） |
-| E3 | 接触阶段 EE 与物体同时可见 | ✅ EE 全阶段在画面内 |
+| E3 | 接触阶段 EE 与物体同时可见 | ⚠️ 更正：**16/18 阶段** EE 投影在画面内；`initial` 阶段（A90、B90）EE 在画面边缘外。关键操作阶段（抓取/推动）EE 与物体同时可见成立 |
 | E4 | A90 放置区 / B90 墙体目标在画面内 | ✅（`ext_wall_px>0` 记录于 CSV） |
 | E5 | 不为放大方块而裁掉后续路径 | ✅ 无阶段出现方块出画 |
 | W1 | A90 接近/夹持时腕部看见物体与两指 | ✅ 9/9 |
@@ -87,8 +99,9 @@ info['camera_sha256'] = config_sha256(cameras)
 `level4_closed_loop.py` 把 `camera_version` / `camera_sha256` / `episode_seed` 写进结果 JSON，
 并在本回合首次推理时下发 `episode_seed`。
 
-> **未验证的一环**：v3 相机进入真实 π₀.₅ Policy Server 的图像尚未落盘比对
-> （需要起服务器 + 一次真实推理，本轮时间不足）。因此 Model Input Wiring 判 **PARTIAL**。
+> **接线已在本报告后续补丁中验证**（见 §0 总表与 `model_input_audit.json`）：
+> 真实 Policy Server 返回 `(15,8)`、`mode=checkpoint`，同状态独立渲染与发送图的 sha256 逐位一致
+> （`5fa856bb…`），因此 **Model Input Wiring = PASS**。上一版此处写的 "PARTIAL / 时间不足" 已过期。
 
 ## 4. 轨迹 CSV schema（Hotfix 4）
 
