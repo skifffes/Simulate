@@ -61,10 +61,15 @@ bash server/exp40/run_server.sh checkpoint 2 8000
 ## 后续两轮补丁（相机可用性 / 接线 / RNG / CSV）
 
 - `hotfix/`：相机 v2 冻结、夹爪与关节尺度证据链、15 Hz 时序、逐回合 seed 接线（29 条判据）
-- `final_validation/`：**当前有效版本**——投影矩阵修正、腕部固定外参 **camera v3**
-  （SHA256 `418bad2f…`）、真实专家示范 9 阶段可见性、真实 Policy Server 输入审计、
-  模型级 RNG 复现、A90/B90 15 Hz 闭环、CSV schema 修复。详见
-  [`final_validation/final_validation_report.md`](final_validation/final_validation_report.md)。
+- `final_validation/`：投影矩阵修正、腕部固定外参 **camera v3**（SHA256 `418bad2f…`）、
+  真实 Policy Server 输入审计、模型级 RNG 复现、A90/B90 15 Hz 闭环、CSV schema 修复
+- `replay_fix/`：**最新**——B90 专家重放改在**正确的 episode 场景**（恢复物体位姿后物理重放）、
+  阶段标签只依据真实接触事件、mask 归档修复（RGB/segvis/segids 三件套）、相机复核后**决定不改**。
+  详见 [`replay_fix/replay_fix_report.md`](replay_fix/replay_fix_report.md)。
+
+> **旧结论作废**：`final_validation/camera_visibility_by_phase.csv` 中的 B90 行与
+> 所有 `final_validation/**/*_mask.png` 因“错误场景 + RGB 冒充 mask”而作废，
+> 不得与 `replay_fix/` 的数据混合统计。A90 的可见性结论不受影响（其场景本就正确）。
 
 **使用哪个相机**：训练/评测一律用 `src/exp40/camera_v2.py` 的 `CAMERAS_V3`，
 `build_sim_scene()` 已强制该版本（缺配置即报错，不静默回落旧 `config2.CAMERAS`）。
