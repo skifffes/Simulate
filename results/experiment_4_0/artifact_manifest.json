@@ -1,11 +1,11 @@
 {
   "experiment": "4.0",
   "title": "π₀.₅ 基座迁移与 PyBullet 原子技能环境适配",
-  "simulate_commit": "98822eb93fba95912af4fea51ff27775204b6ffe",
+  "simulate_commit": "ee21754e705868a2f7766bf08c56baac745aec13",
   "simulate_branch": "main",
   "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
   "n_files": 60,
-  "total_bytes": 1023222,
+  "total_bytes": 1023585,
   "files": [
     {
       "path": "action_checks/level3_checks.json",
@@ -69,8 +69,8 @@
     },
     {
       "path": "experiment_4_0_report.md",
-      "size_bytes": 25404,
-      "sha256": "b0dd24e4729164a3731c3d7407bacfa091d2761feba98a1d3bcffb65a2942f2f"
+      "size_bytes": 25767,
+      "sha256": "a11f78f6332b579f3e667750951b06c91d640c7a170d6d868506ed1a97fd53ba"
     },
     {
       "path": "logs/download_ckpt5.txt",
