@@ -77,6 +77,7 @@ def main(argv=None) -> int:
 
     rows = []
     last_rt = ''  # 当前 chunk 的推理往返时间（s），写进每一行 trace
+    first_inference = True  # 只在本回合第一次推理时下发 episode seed
     chunks = []
     client = None
     error = None
@@ -87,7 +88,9 @@ def main(argv=None) -> int:
 
         with open(trace_path, 'w', newline='', encoding='utf-8') as fh:
             writer = csv.writer(fh)
-            writer.writerow(['tick', 'phase', 'q1..q7', 'q_target1..7', 'ee_x', 'ee_y', 'ee_z',
+            writer.writerow(['tick', 'phase', *[f'q{i}' for i in range(1, 8)],
+                             *[f'q_target{i}' for i in range(1, 8)],
+                             'ee_x', 'ee_y', 'ee_z',
                              'finger1', 'finger2', 'gripper_scalar', 'action_gripper',
                              'block_x', 'block_y', 'block_z', 'block_yaw',
                              'chunk_roundtrip_s', 'accepted', 'reasons', 'stopped', 'stop_reason'])
@@ -109,7 +112,11 @@ def main(argv=None) -> int:
                 if chunker.needs_inference():
                     t0 = time.perf_counter()
                     try:
-                        result = client.infer(pkt.payload)
+                        # 逐回合 RNG（Hotfix E）：只在**本回合首次推理**传 seed，
+                        # 后续 chunk 沿用同一 PRNG 流，不被重置。
+                        result = client.infer(pkt.payload, episode_seed=(
+                            args.seed if first_inference else None))
+                        first_inference = False
                     except Exception as exc:  # 服务器异常必须安全停止
                         monitor.record('server_error', error=f'{type(exc).__name__}: {exc}')
                         error = str(exc)
@@ -173,6 +180,9 @@ def main(argv=None) -> int:
             'seed': args.seed,
             'prompt': prompt,
             'scene_info': info,
+            'camera_version': info.get('camera_version'),
+            'camera_sha256': info.get('camera_sha256'),
+            'episode_seed': args.seed,
             'server_metadata': meta,
             'safety': monitor.summary(),
             'chunker': chunker.summary(),

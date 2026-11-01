@@ -1,0 +1,396 @@
+{
+  "experiment": "4.0-final-validation",
+  "base_commit": "5e913a6",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "checkpoint": "pi05_droid",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e",
+  "n_files": 77,
+  "files": [
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_external.png",
+      "size_bytes": 4712,
+      "sha256": "2d7e036056ab6464d6639d4c54ac719e1509ba7d1c0e95786d5828072213d846"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_external_mask.png",
+      "size_bytes": 4712,
+      "sha256": "2d7e036056ab6464d6639d4c54ac719e1509ba7d1c0e95786d5828072213d846"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_place_external.png",
+      "size_bytes": 7976,
+      "sha256": "daed09098b5be1d13b20efb3aec87a370f1d15a55dae6d4d0ff6a5092422286c"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_place_external_mask.png",
+      "size_bytes": 7976,
+      "sha256": "daed09098b5be1d13b20efb3aec87a370f1d15a55dae6d4d0ff6a5092422286c"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_place_wrist.png",
+      "size_bytes": 2035,
+      "sha256": "ba62139570515a5df7893006e3eba002c0e7d54287eec8c3bd8b315ec6cf912b"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_place_wrist_mask.png",
+      "size_bytes": 2035,
+      "sha256": "ba62139570515a5df7893006e3eba002c0e7d54287eec8c3bd8b315ec6cf912b"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_wrist.png",
+      "size_bytes": 3394,
+      "sha256": "26c01fe87509c7820350063ba6176829718dfdfdade89c502a91f16be3eee2f9"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_approach_wrist_mask.png",
+      "size_bytes": 3394,
+      "sha256": "26c01fe87509c7820350063ba6176829718dfdfdade89c502a91f16be3eee2f9"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_end_external.png",
+      "size_bytes": 6683,
+      "sha256": "23ac0db4b4926d45a6470f2ae7464c30207c5c1db600e9477ae8c77bdf189b00"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_end_external_mask.png",
+      "size_bytes": 6683,
+      "sha256": "23ac0db4b4926d45a6470f2ae7464c30207c5c1db600e9477ae8c77bdf189b00"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_end_wrist.png",
+      "size_bytes": 2356,
+      "sha256": "6b037fcd828a63db78aeec0bad8354fd05ba738714c2bc153f8721a282e53ccf"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_end_wrist_mask.png",
+      "size_bytes": 2356,
+      "sha256": "6b037fcd828a63db78aeec0bad8354fd05ba738714c2bc153f8721a282e53ccf"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_grasp_close_external.png",
+      "size_bytes": 9604,
+      "sha256": "1b584eb793e760f7cca7ff69d892c0861f00e63339c43d9d061e5b5b240780ec"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_grasp_close_external_mask.png",
+      "size_bytes": 9604,
+      "sha256": "1b584eb793e760f7cca7ff69d892c0861f00e63339c43d9d061e5b5b240780ec"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_grasp_close_wrist.png",
+      "size_bytes": 2173,
+      "sha256": "0aeaac8ce8c8b9c784987cb81d4be56045cf47f8e67fb8f1ee6285b7f881bf61"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_grasp_close_wrist_mask.png",
+      "size_bytes": 2173,
+      "sha256": "0aeaac8ce8c8b9c784987cb81d4be56045cf47f8e67fb8f1ee6285b7f881bf61"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_initial_external.png",
+      "size_bytes": 4443,
+      "sha256": "5d92a3ee972157c23b71fa1aeb678ac9de79f492954b9bd0dec29700f9ff7b6b"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_initial_external_mask.png",
+      "size_bytes": 4443,
+      "sha256": "5d92a3ee972157c23b71fa1aeb678ac9de79f492954b9bd0dec29700f9ff7b6b"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_initial_wrist.png",
+      "size_bytes": 2408,
+      "sha256": "fb2a87e0edfa6b80f7b501b4aaab2cbb319f9c5d12abd087858fa8025926d436"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_initial_wrist_mask.png",
+      "size_bytes": 2408,
+      "sha256": "fb2a87e0edfa6b80f7b501b4aaab2cbb319f9c5d12abd087858fa8025926d436"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_lift_external.png",
+      "size_bytes": 7202,
+      "sha256": "67a2d83e9c2acb0ce2c8a5abc73f6660a51c48b3918835cf0c1513a2f907bdcf"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_lift_external_mask.png",
+      "size_bytes": 7202,
+      "sha256": "67a2d83e9c2acb0ce2c8a5abc73f6660a51c48b3918835cf0c1513a2f907bdcf"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_lift_wrist.png",
+      "size_bytes": 2371,
+      "sha256": "275926dc599345edb7c50b6c34978e3046e786870708c4abbc55bd0990daf14a"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_lift_wrist_mask.png",
+      "size_bytes": 2371,
+      "sha256": "275926dc599345edb7c50b6c34978e3046e786870708c4abbc55bd0990daf14a"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_pre_grasp_external.png",
+      "size_bytes": 7145,
+      "sha256": "4ec6c240b43688bac95f9a51e608af8b60254c2fdc9c212fdd38ae4e0b827e65"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_pre_grasp_external_mask.png",
+      "size_bytes": 7145,
+      "sha256": "4ec6c240b43688bac95f9a51e608af8b60254c2fdc9c212fdd38ae4e0b827e65"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_pre_grasp_wrist.png",
+      "size_bytes": 2687,
+      "sha256": "f4c4e8983edde8361586fa668a10d611aa15b9d5fc1804d072556a5f1520abe8"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_pre_grasp_wrist_mask.png",
+      "size_bytes": 2687,
+      "sha256": "f4c4e8983edde8361586fa668a10d611aa15b9d5fc1804d072556a5f1520abe8"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_release_external.png",
+      "size_bytes": 8418,
+      "sha256": "0ea665fcecbcbdbbb21976735a74eb66a86d4e28466509fbe3cc98d23c8a5cc1"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_release_external_mask.png",
+      "size_bytes": 8418,
+      "sha256": "0ea665fcecbcbdbbb21976735a74eb66a86d4e28466509fbe3cc98d23c8a5cc1"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_release_wrist.png",
+      "size_bytes": 2026,
+      "sha256": "dba3b9cc8023d5459141c515a9db1afd3ee8c02c664000f033349209b01a6c83"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_release_wrist_mask.png",
+      "size_bytes": 2026,
+      "sha256": "dba3b9cc8023d5459141c515a9db1afd3ee8c02c664000f033349209b01a6c83"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_transport_external.png",
+      "size_bytes": 6847,
+      "sha256": "1ab61dc37fb2871457677ffc9a98a19956caaa4ec0574fe5007b301e26447269"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_transport_external_mask.png",
+      "size_bytes": 6847,
+      "sha256": "1ab61dc37fb2871457677ffc9a98a19956caaa4ec0574fe5007b301e26447269"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_transport_wrist.png",
+      "size_bytes": 2583,
+      "sha256": "ebad6edebfcf07dce0ab57fb702315535e3091e453f919d28cf7efd6efa037ae"
+    },
+    {
+      "path": "A90_closed_loop/camera_phases/A90_transport_wrist_mask.png",
+      "size_bytes": 2583,
+      "sha256": "ebad6edebfcf07dce0ab57fb702315535e3091e453f919d28cf7efd6efa037ae"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_approach_external.png",
+      "size_bytes": 4696,
+      "sha256": "0455d78d921f1142a7af25daeccc880b5cf005cb07e1804c1734304148779a9f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_approach_external_mask.png",
+      "size_bytes": 4696,
+      "sha256": "0455d78d921f1142a7af25daeccc880b5cf005cb07e1804c1734304148779a9f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_approach_wrist.png",
+      "size_bytes": 3020,
+      "sha256": "0e3a18e5abc5d3e9c77088fc5aaec07505bf7f86296c46a82d1defae857a067f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_approach_wrist_mask.png",
+      "size_bytes": 3020,
+      "sha256": "0e3a18e5abc5d3e9c77088fc5aaec07505bf7f86296c46a82d1defae857a067f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_end_external.png",
+      "size_bytes": 9880,
+      "sha256": "2c40a189b3b8a43e12858ca2b54051401016dcddf0d65257ea2dbfb921702ac6"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_end_external_mask.png",
+      "size_bytes": 9880,
+      "sha256": "2c40a189b3b8a43e12858ca2b54051401016dcddf0d65257ea2dbfb921702ac6"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_end_wrist.png",
+      "size_bytes": 2094,
+      "sha256": "d5b242c65b229ef64cb0b5bda8904c52bc2d75d8ff9de2777168ab72c57c13ad"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_end_wrist_mask.png",
+      "size_bytes": 2094,
+      "sha256": "d5b242c65b229ef64cb0b5bda8904c52bc2d75d8ff9de2777168ab72c57c13ad"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_initial_external.png",
+      "size_bytes": 4373,
+      "sha256": "226be4fac1c33ee9fe11f89d669819c3d74a9af97ebafa888cfd1b0366c05e1c"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_initial_external_mask.png",
+      "size_bytes": 4373,
+      "sha256": "226be4fac1c33ee9fe11f89d669819c3d74a9af97ebafa888cfd1b0366c05e1c"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_initial_wrist.png",
+      "size_bytes": 3153,
+      "sha256": "435fe377d6cd40851ad159d55d4934e202a409f2db9b7fbd680c241c25cb82a0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_initial_wrist_mask.png",
+      "size_bytes": 3153,
+      "sha256": "435fe377d6cd40851ad159d55d4934e202a409f2db9b7fbd680c241c25cb82a0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_near_wall_external.png",
+      "size_bytes": 9419,
+      "sha256": "696c624afd92b5aa3e8a1262b7430e26cf0735b8fdf05312c86c9ab784e492d0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_near_wall_external_mask.png",
+      "size_bytes": 9419,
+      "sha256": "696c624afd92b5aa3e8a1262b7430e26cf0735b8fdf05312c86c9ab784e492d0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_near_wall_wrist.png",
+      "size_bytes": 1866,
+      "sha256": "22625dc38811e6abc8d6cf842f775de5e20bd955d1f90cd9a00ce642b1f6b88f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_near_wall_wrist_mask.png",
+      "size_bytes": 1866,
+      "sha256": "22625dc38811e6abc8d6cf842f775de5e20bd955d1f90cd9a00ce642b1f6b88f"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_pre_contact_external.png",
+      "size_bytes": 7297,
+      "sha256": "9f20a70f1af68589bba9059fd8e582b7af65df3c7207d5ec0a043934baf9ac4b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_pre_contact_external_mask.png",
+      "size_bytes": 7297,
+      "sha256": "9f20a70f1af68589bba9059fd8e582b7af65df3c7207d5ec0a043934baf9ac4b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_pre_contact_wrist.png",
+      "size_bytes": 2150,
+      "sha256": "198560c1b807e14de3011b18009cdb156e28037e02e69fc6e1366052d046b1ca"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_pre_contact_wrist_mask.png",
+      "size_bytes": 2150,
+      "sha256": "198560c1b807e14de3011b18009cdb156e28037e02e69fc6e1366052d046b1ca"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_mid_external.png",
+      "size_bytes": 8980,
+      "sha256": "7015c318c3f755342c0e60f81482537d22d6e9a0bd5d67e2a532c6bf7804ed9a"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_mid_external_mask.png",
+      "size_bytes": 8980,
+      "sha256": "7015c318c3f755342c0e60f81482537d22d6e9a0bd5d67e2a532c6bf7804ed9a"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_mid_wrist.png",
+      "size_bytes": 1818,
+      "sha256": "9b8ddb0509693697ed1431328ba80df4edbf09c92716e96bcddfb4b0354b741b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_mid_wrist_mask.png",
+      "size_bytes": 1818,
+      "sha256": "9b8ddb0509693697ed1431328ba80df4edbf09c92716e96bcddfb4b0354b741b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_start_external.png",
+      "size_bytes": 8631,
+      "sha256": "4a705f95fda20f12d4e439483d618df5887505746322fe59cc5d6d4c711581de"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_start_external_mask.png",
+      "size_bytes": 8631,
+      "sha256": "4a705f95fda20f12d4e439483d618df5887505746322fe59cc5d6d4c711581de"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_start_wrist.png",
+      "size_bytes": 1875,
+      "sha256": "fb4ab8a76d12a101a0e844f328138e0eebf7347fc6e866ee49b61dbcd794f8e0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_push_start_wrist_mask.png",
+      "size_bytes": 1875,
+      "sha256": "fb4ab8a76d12a101a0e844f328138e0eebf7347fc6e866ee49b61dbcd794f8e0"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_settle_external.png",
+      "size_bytes": 10825,
+      "sha256": "7b7251d6e74e41195dd36bb53380a061eb8cb11d0be9e17c95aa6364a0f3e02d"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_settle_external_mask.png",
+      "size_bytes": 10825,
+      "sha256": "7b7251d6e74e41195dd36bb53380a061eb8cb11d0be9e17c95aa6364a0f3e02d"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_settle_wrist.png",
+      "size_bytes": 1951,
+      "sha256": "9b9aba8404c7e9e5e65a56bb0113eb5cf0f10e7567c017dd73ed79c1ae062a95"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_settle_wrist_mask.png",
+      "size_bytes": 1951,
+      "sha256": "9b9aba8404c7e9e5e65a56bb0113eb5cf0f10e7567c017dd73ed79c1ae062a95"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_wall_contact_external.png",
+      "size_bytes": 10362,
+      "sha256": "6bb08b4a0a154816d11d75ef5165c5caabf9741c004116f889dbb9a7d6a88f4b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_wall_contact_external_mask.png",
+      "size_bytes": 10362,
+      "sha256": "6bb08b4a0a154816d11d75ef5165c5caabf9741c004116f889dbb9a7d6a88f4b"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_wall_contact_wrist.png",
+      "size_bytes": 1883,
+      "sha256": "976877b04dff351fd40ed746660350c91f06e97fb55c5b3081b013b17e0f3c35"
+    },
+    {
+      "path": "B90_closed_loop/camera_phases/B90_wall_contact_wrist_mask.png",
+      "size_bytes": 1883,
+      "sha256": "976877b04dff351fd40ed746660350c91f06e97fb55c5b3081b013b17e0f3c35"
+    },
+    {
+      "path": "camera_config_final.json",
+      "size_bytes": 1402,
+      "sha256": "2fd9b580b29d6c4c3747b05e6470301a229469bdf89fbe77ec4f81ad95c4c1a4"
+    },
+    {
+      "path": "camera_geometry_tests.json",
+      "size_bytes": 8203,
+      "sha256": "84ea8ee0e47eff4b5ffc5a42a27bcb3535af793ba49b85007f0fa43b6a7c2d07"
+    },
+    {
+      "path": "camera_visibility_by_phase.csv",
+      "size_bytes": 3589,
+      "sha256": "6d7ffd4bbdd07a80f347843e82e3902b39242de16354a0868ddcc264668aab64"
+    },
+    {
+      "path": "camera_visibility_by_phase.json",
+      "size_bytes": 14193,
+      "sha256": "a70181a1ce969212d041187782d95a7436562c1492175c329f84a502e31cdc7d"
+    },
+    {
+      "path": "final_validation_report.md",
+      "size_bytes": 7188,
+      "sha256": "59f88796023b3bb51bfd7ffba369f6b11fa6e75731f6b02187828c605e4cb821"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": "exp4.0-camera-v3",
+  "sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "cameras": {
+    "top": {
+      "type": "fixed",
+      "target": [
+        0.56,
+        0.13,
+        0.06
+      ],
+      "distance": 0.7,
+      "yaw": 50.0,
+      "pitch": -35.0,
+      "fov": 60.0,
+      "near": 0.02,
+      "far": 5.0
+    },
+    "wrist": {
+      "type": "wrist",
+      "link": 8,
+      "offset": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "forward": [
+        0.0,
+        -0.17365,
+        0.98481
+      ],
+      "up_local": [
+        0.0,
+        0.98481,
+        0.17365
+      ],
+      "look_ahead": 0.3,
+      "fov": 78.0,
+      "near": 0.01,
+      "far": 3.0
+    }
+  },
+  "v2_sha256": "1dd123f91dac49702d46673a849dde55923cd3cea9897e90e21d99dd2554dd58",
+  "v1_baseline": {
+    "top": {
+      "type": "fixed",
+      "target": [
+        0.55,
+        0.21,
+        0.02
+      ],
+      "distance": 1.05,
+      "yaw": 50.0,
+      "pitch": -52.0,
+      "fov": 50.0,
+      "near": 0.02,
+      "far": 5.0
+    },
+    "wrist": {
+      "type": "wrist",
+      "link": 8,
+      "offset": [
+        0.09,
+        0.0,
+        -0.01
+      ],
+      "aim": "grasp",
+      "look_ahead": 0.02,
+      "target_down": 0.02,
+      "fov": 75.0,
+      "near": 0.005,
+      "far": 3.0
+    }
+  }
+}

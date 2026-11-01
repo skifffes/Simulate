@@ -21,11 +21,13 @@ from __future__ import annotations
 import hashlib
 import json
 
-VERSION = 'exp4.0-camera-v2'
+VERSION = 'exp4.0-camera-v3'
 
-# 与 vla.cameras.CameraRig 完全兼容的相机字典（键名 top/wrist 保持不变：
-# top 是历史命名，实际角色是 External/Base；wrist 是腕部相机）。
-CAMERAS_V2 = {
+# v3 = v2 的外部相机（几何验证通过后保留）+ 腕部相机的**固定外参**
+# （v2 的腕部沿用历史 'aim=grasp'：朝向依赖两指尖中点，姿态随手指开合变化，不是刚性安装）
+_FORWARD_TILT_RAD = 0.1745  # 10°：在 link 局部系里向 -y 俯一点，视野覆盖两指前方
+
+CAMERAS_V3 = {
     'top': {
         'type': 'fixed',
         'target': (0.56, 0.13, 0.06),
@@ -39,6 +41,22 @@ CAMERAS_V2 = {
     'wrist': {
         'type': 'wrist',
         'link': 8,
+        'offset': (0.055, 0.0, -0.015),
+        'forward': (0.0, -0.17365, 0.98481),   # 局部系：沿接近轴前视 + 10° 俯视
+        'up_local': (0.0, 0.98481, 0.17365),
+        'look_ahead': 0.30,
+        'fov': 78.0,
+        'near': 0.01,
+        'far': 3.0,
+    },
+}
+
+# v2（上一轮 hotfix 的冻结版，腕部仍是历史 aim=grasp）
+CAMERAS_V2 = {
+    'top': dict(CAMERAS_V3['top']),
+    'wrist': {
+        'type': 'wrist',
+        'link': 8,
         'offset': (0.09, 0.0, -0.01),
         'aim': 'grasp',
         'look_ahead': 0.02,
@@ -49,7 +67,7 @@ CAMERAS_V2 = {
     },
 }
 
-# 修复前基线（= src/vla/atomic_tasks/config2.py 的 CAMERAS，逐字复制，便于 before/after）
+# 修复前基线（= src/vla/atomic_tasks/config2.py 的 CAMERAS，逐字复制）
 CAMERAS_V1_BASELINE = {
     'top': {
         'type': 'fixed',
@@ -80,9 +98,10 @@ def _canonical(cameras: dict) -> str:
 
 
 def config_sha256(cameras: dict | None = None) -> str:
-    return hashlib.sha256(_canonical(cameras or CAMERAS_V2).encode('utf-8')).hexdigest()
+    return hashlib.sha256(_canonical(cameras or CAMERAS_V3).encode('utf-8')).hexdigest()
 
 
 CAMERA_CONFIG_SHA256 = config_sha256()
 
-__all__ = ['VERSION', 'CAMERAS_V2', 'CAMERAS_V1_BASELINE', 'CAMERA_CONFIG_SHA256', 'config_sha256']
+__all__ = ['VERSION', 'CAMERAS_V3', 'CAMERAS_V2', 'CAMERAS_V1_BASELINE',
+           'CAMERA_CONFIG_SHA256', 'config_sha256']

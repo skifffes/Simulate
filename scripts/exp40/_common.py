@@ -47,30 +47,49 @@ def sha256_file(path) -> str:
     return h.hexdigest()
 
 
-def build_sim_scene(kind: str, seed: int | None = None, start=None, yaw: float = 0.0):
+def build_sim_scene(kind: str, seed: int | None = None, start=None, yaw: float = 0.0,
+                    camera_version: str = 'v3'):
     """返回 (sim, block, rig, prompt, info)。
 
     kind = 'B90' 或 'A90'：两者都用实验 2/3 的同一场景构建器（scene2.build_scene），
     区别只在初始状态与语言指令，不改变任务定义。
+
+    相机（Hotfix 3）：实验 4.0 必须使用**显式版本化**的相机配置，不允许静默退回
+    `config2.CAMERAS`。`camera_version='v3'` 为当前冻结版本（外部 v2 + 腕部固定外参），
+    `'v1'` 仅用于 before/after 对照，版本与 SHA256 会写进 info 随工件落盘。
     """
-    from vla.atomic_tasks import config2
-    from vla.atomic_tasks.scene2 import PLACE, build_scene
     from vla.cameras import CameraRig
+
+    from exp40 import camera_v2
 
     if kind not in ('A90', 'B90'):
         raise ValueError(f'未知场景 {kind}')
-    if kind == 'A90':
-        # A90 的初始状态：物体在 START 附近（搬运前），指令要求长轴沿 X
-        sim, block, wall, tray, info = build_scene(seed=seed, jitter=0.0, start=start, yaw=yaw)
-        prompt = config2.TASKS['A90']
-    else:
-        sim, block, wall, tray, info = build_scene(seed=seed, jitter=0.0, start=start, yaw=yaw)
-        prompt = dc.PROMPT_B90
-    rig = CameraRig(sim, cameras=config2.CAMERAS, image_size=config2.IMAGE_SIZE, supersample=1)
+    versions = {'v1': camera_v2.CAMERAS_V1_BASELINE,
+                'v2': camera_v2.CAMERAS_V2,
+                'v3': camera_v2.CAMERAS_V3}
+    if camera_version not in versions:
+        raise ValueError(f'未知相机版本 {camera_version}；可用: {sorted(versions)}')
+    cameras = versions[camera_version]
+    sha = camera_v2.config_sha256(cameras)
+
+    from vla.atomic_tasks.scene2 import PLACE, build_scene
+
+    sim, block, wall, tray, info = build_scene(seed=seed, jitter=0.0, start=start, yaw=yaw)
+    prompt = dc.PROMPT_B90 if kind == 'B90' else _a90_prompt()
+    rig = CameraRig(sim, cameras=cameras, image_size=(256, 256), supersample=1)
     info = dict(info)
     info['scene'] = kind
     info['place_xy'] = list(PLACE[:2])
+    info['camera_version'] = camera_version
+    info['camera_sha256'] = sha
+    info['cameras'] = cameras
     return sim, block, rig, prompt, info
+
+
+def _a90_prompt() -> str:
+    from vla.atomic_tasks import config2
+
+    return config2.TASKS['A90']
 
 
 def capture(sim, rig) -> dict:

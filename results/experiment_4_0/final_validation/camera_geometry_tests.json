@@ -1,0 +1,449 @@
+{
+  "all_pass": true,
+  "n": 22,
+  "checks": [
+    {
+      "test": "external_block_mask_vs_projection",
+      "pose": "pose0",
+      "mask_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "proj_bbox": [
+        73.1707882577573,
+        138.53611154035897,
+        110.27222521482155,
+        169.97475373324158
+      ],
+      "iou": 0.895,
+      "mask_px": 673,
+      "ee_inside": false,
+      "ee_px": [
+        33.845689724431,
+        -57.4600400992411
+      ],
+      "pass": true
+    },
+    {
+      "test": "point_culling",
+      "pose": "pose0",
+      "far_point_inside": false,
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose0",
+      "gripper": 0.0,
+      "R_link_camera": [
+        [
+          -1.000000016,
+          -0.0,
+          1.1e-08
+        ],
+        [
+          1e-09,
+          0.984807529,
+          0.173649555
+        ],
+        [
+          -1.2e-08,
+          0.173649545,
+          -0.984807508
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose0",
+      "gripper": 0.04,
+      "R_link_camera": [
+        [
+          -0.999999993,
+          -0.0,
+          6e-09
+        ],
+        [
+          0.0,
+          0.984807487,
+          0.173649566
+        ],
+        [
+          -5e-09,
+          0.173649567,
+          -0.984807484
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "external_block_mask_vs_projection",
+      "pose": "pose1",
+      "mask_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "proj_bbox": [
+        73.17078825753241,
+        138.5361115391995,
+        110.27222521475419,
+        169.9747537321112
+      ],
+      "iou": 0.895,
+      "mask_px": 673,
+      "ee_inside": false,
+      "ee_px": [
+        21.067904682313426,
+        -27.280629203292733
+      ],
+      "pass": true
+    },
+    {
+      "test": "point_culling",
+      "pose": "pose1",
+      "far_point_inside": false,
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose1",
+      "gripper": 0.0,
+      "R_link_camera": [
+        [
+          -1.000000029,
+          -1e-08,
+          -0.0
+        ],
+        [
+          -1.4e-08,
+          0.984807567,
+          0.173649571
+        ],
+        [
+          -1e-09,
+          0.17364958,
+          -0.984807518
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        -0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose1",
+      "gripper": 0.04,
+      "R_link_camera": [
+        [
+          -1.00000001,
+          -1.7e-08,
+          -1.7e-08
+        ],
+        [
+          -1.7e-08,
+          0.984807525,
+          0.173649558
+        ],
+        [
+          1.5e-08,
+          0.173649574,
+          -0.984807515
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        -0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "external_block_mask_vs_projection",
+      "pose": "pose2",
+      "mask_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "proj_bbox": [
+        73.17078825753241,
+        138.5361115391995,
+        110.27222521475419,
+        169.9747537321112
+      ],
+      "iou": 0.895,
+      "mask_px": 673,
+      "ee_inside": false,
+      "ee_px": [
+        89.08989692403256,
+        -117.31142384372265
+      ],
+      "pass": true
+    },
+    {
+      "test": "point_culling",
+      "pose": "pose2",
+      "far_point_inside": false,
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose2",
+      "gripper": 0.0,
+      "R_link_camera": [
+        [
+          -1.000000073,
+          3e-08,
+          -2e-09
+        ],
+        [
+          2e-08,
+          0.984807612,
+          0.173649577
+        ],
+        [
+          6e-09,
+          0.173649595,
+          -0.98480755
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose2",
+      "gripper": 0.04,
+      "R_link_camera": [
+        [
+          -1.000000033,
+          2.7e-08,
+          8e-09
+        ],
+        [
+          2.2e-08,
+          0.984807579,
+          0.173649583
+        ],
+        [
+          -1.7e-08,
+          0.1736496,
+          -0.98480754
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "external_block_mask_vs_projection",
+      "pose": "pose3",
+      "mask_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "proj_bbox": [
+        73.17078825753241,
+        138.5361115391995,
+        110.27222521475419,
+        169.9747537321112
+      ],
+      "iou": 0.895,
+      "mask_px": 673,
+      "ee_inside": false,
+      "ee_px": [
+        60.946381104179096,
+        -90.02942218737365
+      ],
+      "pass": true
+    },
+    {
+      "test": "point_culling",
+      "pose": "pose3",
+      "far_point_inside": false,
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose3",
+      "gripper": 0.0,
+      "R_link_camera": [
+        [
+          -0.999999983,
+          1.2e-08,
+          -1.1e-08
+        ],
+        [
+          8e-09,
+          0.984807492,
+          0.17364956
+        ],
+        [
+          1.4e-08,
+          0.173649566,
+          -0.984807495
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        -0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose3",
+      "gripper": 0.04,
+      "R_link_camera": [
+        [
+          -1.000000071,
+          2e-09,
+          3e-09
+        ],
+        [
+          6e-09,
+          0.984807679,
+          0.173649576
+        ],
+        [
+          7e-09,
+          0.173649591,
+          -0.984807606
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "external_block_mask_vs_projection",
+      "pose": "pose4",
+      "mask_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "proj_bbox": [
+        73.17078825753241,
+        138.5361115391995,
+        110.27222521475419,
+        169.9747537321112
+      ],
+      "iou": 0.895,
+      "mask_px": 673,
+      "ee_inside": false,
+      "ee_px": [
+        10.356361249827074,
+        -79.74709211860556
+      ],
+      "pass": true
+    },
+    {
+      "test": "point_culling",
+      "pose": "pose4",
+      "far_point_inside": false,
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose4",
+      "gripper": 0.0,
+      "R_link_camera": [
+        [
+          -1.00000001,
+          2.2e-08,
+          -5e-09
+        ],
+        [
+          1.5e-08,
+          0.984807583,
+          0.173649568
+        ],
+        [
+          -7e-09,
+          0.173649568,
+          -0.984807537
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        -0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity",
+      "pose": "pose4",
+      "gripper": 0.04,
+      "R_link_camera": [
+        [
+          -1.000000028,
+          1.3e-08,
+          2e-08
+        ],
+        [
+          4e-09,
+          0.984807579,
+          0.17364956
+        ],
+        [
+          -3.8e-08,
+          0.173649577,
+          -0.984807518
+        ]
+      ],
+      "t_link_camera": [
+        0.055,
+        0.0,
+        -0.015
+      ],
+      "pass": true
+    },
+    {
+      "test": "wrist_extrinsic_rigidity_summary",
+      "n_cases": 10,
+      "max_R_dev": 1.4999999997655777e-07,
+      "max_t_dev_m": 0.0,
+      "pass": true
+    },
+    {
+      "test": "v2_wrist_not_rigid_control",
+      "t_dev_m": 0.0,
+      "note": "v2 的 aim=grasp 让相机朝向依赖两指尖中点，手指开合会改变外参",
+      "pass": true
+    }
+  ]
+}

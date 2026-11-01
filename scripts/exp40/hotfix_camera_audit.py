@@ -82,25 +82,31 @@ def render_with_mask(sim, cfg):
     return rgb, seg, depth
 
 
-def project_point(sim, cfg, point):
-    """把世界点投到像素坐标（用于核对“投影与分割一致”）。"""
+def project_point(sim, cfg, point, size: int = RAW_SIZE):
+    """把世界点投到像素坐标。
+
+    修正点（Hotfix 2）：PyBullet 的 view/projection 是 **OpenGL 列主序** 16 元素，
+    必须先 `reshape(4,4).T` 再相乘；此前 `project_point` 少了转置，导致
+    `proj_block_inside=False` 与分割 mask 明明可见的方块自相矛盾。
+    这里与 `camera_geometry` 使用同一约定，并有 `hotfix_camera_geometry_tests.py` 交叉验证。
+    """
     import pybullet as p
 
     view = np.asarray(p.computeViewMatrixFromYawPitchRoll(
-        list(cfg['target']), cfg['distance'], cfg['yaw'], cfg['pitch'], 0, 2), dtype=float).reshape(4, 4)
+        list(cfg['target']), cfg['distance'], cfg['yaw'], cfg['pitch'], 0, 2), dtype=float).reshape(4, 4).T
     proj = np.asarray(p.computeProjectionMatrixFOV(cfg['fov'], 1.0, cfg['near'], cfg['far']),
-                      dtype=float).reshape(4, 4)
-    v = np.array([*point, 1.0])
-    clip = proj @ view @ v
-    if abs(clip[3]) < 1e-9:
+                      dtype=float).reshape(4, 4).T
+    clip = proj @ view @ np.array([point[0], point[1], point[2], 1.0])
+    w = float(clip[3])
+    if abs(w) < 1e-12:
         return None
-    ndc = clip[:3] / clip[3]
-    if ndc[2] < -1 or ndc[2] > 1:
-        return None
-    x = (ndc[0] * 0.5 + 0.5) * RAW_SIZE
-    y = (1 - (ndc[1] * 0.5 + 0.5)) * RAW_SIZE
-    inside = 0 <= x < RAW_SIZE and 0 <= y < RAW_SIZE
-    return {'px': float(x), 'py': float(y), 'inside': bool(inside)}
+    ndc = clip[:3] / w
+    depth_ok = -1.0 <= ndc[2] <= 1.0
+    x = (ndc[0] * 0.5 + 0.5) * size
+    y = (1.0 - (ndc[1] * 0.5 + 0.5)) * size
+    inside = depth_ok and 0 <= x < size and 0 <= y < size
+    return {'px': float(x), 'py': float(y), 'inside': bool(inside),
+            'depth_ok': bool(depth_ok), 'w': w, 'ndc': ndc.round(6).tolist()}
 
 
 def metrics_for(seg, bodies: dict) -> dict:

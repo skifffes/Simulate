@@ -67,8 +67,19 @@ class CameraRig:
         rotation = np.asarray(p.getMatrixFromQuaternion(quat), dtype=float).reshape(3, 3)
         eye = position + rotation @ np.asarray(cfg['offset'], dtype=float)
         approach = rotation[:, 2]
-        if cfg.get('aim') == 'grasp':
-            # 看向两指中点（略向接近方向前移），让夹爪与工件同时落在画面中心。
+        if cfg.get('forward') is not None:
+            # ---- 固定外参（实验 4.0 v3 起）：相机相对安装 link 的 SE(3) 恒定 ----
+            # 视线方向与 up 都在 link 局部坐标系里给定，再经正运动学转到世界系。
+            # 因此手指开合、EE 绕自身旋转都不会改变“相机相对 link 的姿态”，
+            # 也绝不使用物体真值或任务阶段去瞄准。
+            forward_local = np.asarray(cfg['forward'], dtype=float)
+            up_local = np.asarray(cfg.get('up_local', (0.0, 1.0, 0.0)), dtype=float)
+            forward_local = forward_local / np.linalg.norm(forward_local)
+            target = eye + rotation @ forward_local * float(cfg.get('look_ahead', 0.3))
+            up = rotation @ (up_local / np.linalg.norm(up_local))
+        elif cfg.get('aim') == 'grasp':
+            # 历史实现（实验 1–3）：朝向依赖两指尖中点 => 姿态随手指开合轻微变化。
+            # 保留给旧配置，实验 4.0 的新配置不再使用这条分支。
             tips = [np.asarray(p.getLinkState(self.sim.robot, link, computeForwardKinematics=True,
                                               physicsClientId=self.sim.client)[4], dtype=float)
                     for link in (9, 10)]
@@ -76,7 +87,6 @@ class CameraRig:
             target[2] -= float(cfg.get('target_down', 0.0))
             up = np.array([0.0, 0.0, 1.0])
         elif cfg.get('aim') == 'ee':
-            # 侧挂腕部相机：始终看向两指中点，避免长焦距下目标点跑出视野。
             state_ee = p.getLinkState(self.sim.robot, self.sim.ee, computeForwardKinematics=True,
                                       physicsClientId=self.sim.client)
             target = np.asarray(state_ee[4], dtype=float)
@@ -88,6 +98,42 @@ class CameraRig:
         proj = p.computeProjectionMatrixFOV(
             cfg['fov'], self.image_size[1] / self.image_size[0], cfg['near'], cfg['far'])
         return view, proj
+
+    def wrist_extrinsics(self, cfg):
+        """返回相机相对安装 link 的固定外参 (R_link_cam, t_link_cam, R_world_link)。
+
+        只依赖 link 位姿与配置，不依赖手指/物体，因此可直接用来验证“刚性安装”。
+        """
+        state = p.getLinkState(self.sim.robot, cfg['link'], computeForwardKinematics=True,
+                               physicsClientId=self.sim.client)
+        position = np.asarray(state[4], dtype=float)
+        quat = np.asarray(state[5], dtype=float)
+        rotation = np.asarray(p.getMatrixFromQuaternion(quat), dtype=float).reshape(3, 3)
+        eye = position + rotation @ np.asarray(cfg['offset'], dtype=float)
+        if cfg.get('forward') is not None:
+            forward_local = np.asarray(cfg['forward'], dtype=float)
+            forward_local = forward_local / np.linalg.norm(forward_local)
+            up_local = np.asarray(cfg.get('up_local', (0.0, 1.0, 0.0)), dtype=float)
+            up_local = up_local / np.linalg.norm(up_local)
+            target = eye + rotation @ forward_local
+            up = rotation @ up_local
+        else:
+            view, _ = self._wrist_matrices(cfg)
+            V = np.asarray(view, dtype=float).reshape(4, 4).T
+            R_cw = V[:3, :3]
+            R_wc = R_cw.T
+            eye = -R_wc @ V[:3, 3]
+            target = eye - R_wc[2, :]
+            up = R_wc[1, :]
+        view = p.computeViewMatrix(eye.tolist(), target.tolist(), up.tolist())
+        V = np.asarray(view, dtype=float).reshape(4, 4).T
+        R_cw = V[:3, :3]          # camera <- world
+        R_wc = R_cw.T             # world <- camera
+        R_lw = rotation           # world <- link
+        R_lc = R_lw.T @ R_wc      # camera <- link（固定外参的旋转部分）
+        t_lc = R_lw.T @ (eye - position)
+        return {'R_link_camera': R_lc, 't_link_camera': t_lc, 'R_world_link': R_lw,
+                'eye_world': eye, 'link_position': position}
 
     def capture(self):
         frames = {}

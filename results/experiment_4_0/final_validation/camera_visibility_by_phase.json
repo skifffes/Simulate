@@ -1,0 +1,710 @@
+{
+  "episodes": {
+    "A90": {
+      "dataset": "/scratch/lijh/simulate_vla/data/lerobot_panda_multi",
+      "episode_index": 120,
+      "n_frames": 178,
+      "task": "long side aligned with X",
+      "note": "专家示范逐帧回放（诊断性重放，非策略执行）"
+    },
+    "B90": {
+      "dataset": "/scratch/lijh/simulate_vla/data/lerobot_panda_e23_D2",
+      "episode_index": 240,
+      "n_frames": 127,
+      "task": "push the orange block",
+      "note": "专家示范逐帧回放（诊断性重放，非策略执行）"
+    }
+  },
+  "rows": [
+    {
+      "scene": "A90",
+      "phase": "initial",
+      "frame": 0,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.4056,
+        -0.0,
+        0.5138
+      ],
+      "gripper_target_m": 0.04,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": false,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.0386
+      ],
+      "wrist_block_px": 323,
+      "wrist_block_frac": 0.00493,
+      "wrist_block_bbox": [
+        105.0,
+        86.0,
+        117.0,
+        112.0
+      ],
+      "wrist_robot_frac": 0.22334,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "approach",
+      "frame": 22,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.5053,
+        0.0021,
+        0.3808
+      ],
+      "gripper_target_m": 0.04,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.04
+      ],
+      "wrist_block_px": 511,
+      "wrist_block_frac": 0.0078,
+      "wrist_block_bbox": [
+        125.0,
+        69.0,
+        156.0,
+        105.0
+      ],
+      "wrist_robot_frac": 0.22327,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "pre_grasp",
+      "frame": 44,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.5573,
+        -0.0034,
+        0.1755
+      ],
+      "gripper_target_m": 0.04,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.04
+      ],
+      "wrist_block_px": 1578,
+      "wrist_block_frac": 0.02408,
+      "wrist_block_bbox": [
+        130.0,
+        89.0,
+        193.0,
+        119.0
+      ],
+      "wrist_robot_frac": 0.22327,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "grasp_close",
+      "frame": 66,
+      "block_pos": [
+        0.5559,
+        -0.0001,
+        0.0199
+      ],
+      "ee_pos": [
+        0.5573,
+        -0.0055,
+        0.031
+      ],
+      "gripper_target_m": 0.017,
+      "ext_block_px": 354,
+      "ext_block_frac": 0.0054,
+      "ext_block_bbox": [
+        75.0,
+        146.0,
+        102.0,
+        170.0
+      ],
+      "ext_block_short_side_224": 21.0,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.0188
+      ],
+      "wrist_block_px": 4591,
+      "wrist_block_frac": 0.07005,
+      "wrist_block_bbox": [
+        128.0,
+        71.0,
+        207.0,
+        129.0
+      ],
+      "wrist_robot_frac": 0.22037,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "lift",
+      "frame": 88,
+      "block_pos": [
+        0.5562,
+        0.0245,
+        0.1389
+      ],
+      "ee_pos": [
+        0.5573,
+        0.0185,
+        0.15
+      ],
+      "gripper_target_m": 0.017,
+      "ext_block_px": 488,
+      "ext_block_frac": 0.00745,
+      "ext_block_bbox": [
+        77.0,
+        107.0,
+        117.0,
+        131.0
+      ],
+      "ext_block_short_side_224": 21.0,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.0177
+      ],
+      "wrist_block_px": 4510,
+      "wrist_block_frac": 0.06882,
+      "wrist_block_bbox": [
+        128.0,
+        74.0,
+        207.0,
+        131.0
+      ],
+      "wrist_robot_frac": 0.22075,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "transport",
+      "frame": 111,
+      "block_pos": [
+        0.5613,
+        0.0818,
+        0.1389
+      ],
+      "ee_pos": [
+        0.5573,
+        0.0781,
+        0.15
+      ],
+      "gripper_target_m": 0.017,
+      "ext_block_px": 511,
+      "ext_block_frac": 0.0078,
+      "ext_block_bbox": [
+        97.0,
+        101.0,
+        134.0,
+        123.0
+      ],
+      "ext_block_short_side_224": 19.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.0199
+      ],
+      "wrist_block_px": 4579,
+      "wrist_block_frac": 0.06987,
+      "wrist_block_bbox": [
+        128.0,
+        71.0,
+        207.0,
+        129.0
+      ],
+      "wrist_robot_frac": 0.22099,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "approach_place",
+      "frame": 133,
+      "block_pos": [
+        0.5587,
+        0.1835,
+        0.096
+      ],
+      "ee_pos": [
+        0.5532,
+        0.1806,
+        0.1071
+      ],
+      "gripper_target_m": 0.017,
+      "ext_block_px": 436,
+      "ext_block_frac": 0.00665,
+      "ext_block_bbox": [
+        126.0,
+        101.0,
+        156.0,
+        125.0
+      ],
+      "ext_block_short_side_224": 21.0,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3267,
+      "gripper": [
+        0.0181
+      ],
+      "wrist_block_px": 4537,
+      "wrist_block_frac": 0.06923,
+      "wrist_block_bbox": [
+        128.0,
+        74.0,
+        207.0,
+        132.0
+      ],
+      "wrist_robot_frac": 0.22102,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "release",
+      "frame": 155,
+      "block_pos": [
+        0.5555,
+        0.1824,
+        0.02
+      ],
+      "ee_pos": [
+        0.55,
+        0.18,
+        0.031
+      ],
+      "gripper_target_m": 0.04,
+      "ext_block_px": 396,
+      "ext_block_frac": 0.00604,
+      "ext_block_bbox": [
+        127.0,
+        121.0,
+        154.0,
+        144.0
+      ],
+      "ext_block_short_side_224": 20.1,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3262,
+      "gripper": [
+        0.04
+      ],
+      "wrist_block_px": 4542,
+      "wrist_block_frac": 0.06931,
+      "wrist_block_bbox": [
+        128.0,
+        73.0,
+        207.0,
+        131.0
+      ],
+      "wrist_robot_frac": 0.22327,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "A90",
+      "phase": "end",
+      "frame": 177,
+      "block_pos": [
+        0.5555,
+        0.1824,
+        0.02
+      ],
+      "ee_pos": [
+        0.55,
+        0.18,
+        0.18
+      ],
+      "gripper_target_m": 0.04,
+      "ext_block_px": 481,
+      "ext_block_frac": 0.00734,
+      "ext_block_bbox": [
+        125.0,
+        118.0,
+        154.0,
+        144.0
+      ],
+      "ext_block_short_side_224": 22.8,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.04
+      ],
+      "wrist_block_px": 1545,
+      "wrist_block_frac": 0.02357,
+      "wrist_block_bbox": [
+        128.0,
+        88.0,
+        190.0,
+        113.0
+      ],
+      "wrist_robot_frac": 0.22327,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "initial",
+      "frame": 0,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.3981,
+        0.0299,
+        0.5106
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": false,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.0199
+      ],
+      "wrist_block_px": 368,
+      "wrist_block_frac": 0.00562,
+      "wrist_block_bbox": [
+        114.0,
+        55.0,
+        132.0,
+        85.0
+      ],
+      "wrist_robot_frac": 0.22215,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "approach",
+      "frame": 16,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.4764,
+        0.0652,
+        0.3923
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 537,
+      "wrist_block_frac": 0.00819,
+      "wrist_block_bbox": [
+        129.0,
+        50.0,
+        149.0,
+        88.0
+      ],
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "pre_contact",
+      "frame": 32,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.474,
+        0.1465,
+        0.1314
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 1213,
+      "wrist_block_frac": 0.01851,
+      "wrist_block_bbox": [
+        93.0,
+        0.0,
+        127.0,
+        38.0
+      ],
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "push_start",
+      "frame": 47,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.4984,
+        0.1697,
+        0.018
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3287,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "push_mid",
+      "frame": 63,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.5546,
+        0.1699,
+        0.0178
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3235,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "near_wall",
+      "frame": 79,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.6069,
+        0.1697,
+        0.018
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 3146,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "wall_contact",
+      "frame": 94,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.6789,
+        0.1697,
+        0.018
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 2916,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "settle",
+      "frame": 110,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.7153,
+        0.1697,
+        0.018
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 2892,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    },
+    {
+      "scene": "B90",
+      "phase": "end",
+      "frame": 126,
+      "block_pos": [
+        0.55,
+        0.0,
+        0.02
+      ],
+      "ee_pos": [
+        0.6955,
+        0.1697,
+        0.0797
+      ],
+      "gripper_target_m": 0.014,
+      "ext_block_px": 673,
+      "ext_block_frac": 0.01027,
+      "ext_block_bbox": [
+        74.0,
+        138.0,
+        110.0,
+        168.0
+      ],
+      "ext_block_short_side_224": 26.2,
+      "ext_ee_inside": true,
+      "ext_wall_px": 2857,
+      "gripper": [
+        0.014
+      ],
+      "wrist_block_px": 0,
+      "wrist_block_frac": 0.0,
+      "wrist_block_bbox": null,
+      "wrist_robot_frac": 0.22147,
+      "wrist_status": "TARGET_NOT_VISIBLE"
+    }
+  ]
+}
