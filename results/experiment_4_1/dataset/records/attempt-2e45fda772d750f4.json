@@ -1,0 +1,347 @@
+{
+  "kind": "B90",
+  "expert_ok": false,
+  "expert_reason": "b_push_3",
+  "expert_metrics": {
+    "front_gap_m": 0.18096176781930218,
+    "goal_id": "B_wall_y_low",
+    "start_pos": [
+      0.5485909485932916,
+      0.15747381535000501,
+      0.019989918644204643
+    ],
+    "start_yaw": 1.5938254372680734
+  },
+  "goal": {
+    "goal_id": "B_wall_y_low",
+    "y_lo": 0.12,
+    "y_hi": 0.18,
+    "wall_inner_x": 0.78,
+    "y_center": 0.15
+  },
+  "initial": {
+    "task_valid": true,
+    "reasons": [],
+    "initial_gap_m": 0.18096176781930218,
+    "initial_penetration_m": -1.0082181317372374e-05,
+    "initial_speed": 1.5386630295156655e-07,
+    "initial_object": {
+      "pos": [
+        0.5485909485932916,
+        0.15747381535000501,
+        0.019989918644204643
+      ],
+      "quat": [
+        3.037275783917645e-09,
+        -3.129920100280268e-09,
+        0.7152017460074988,
+        0.6989180656613657
+      ],
+      "yaw": 1.5938254372680734
+    }
+  },
+  "evaluation": {
+    "eval_version": "exp4.1-strict-v1",
+    "skill": "B90",
+    "goal_id": "B_wall_y_low",
+    "task_valid": true,
+    "physical_execution_valid": true,
+    "expert_completed": false,
+    "strict_success": false,
+    "failure_reason": "advance_ok",
+    "checks": {
+      "initial_valid": true,
+      "pushed_by_robot": true,
+      "advance_ok": false,
+      "wall_contact_ever": false,
+      "valid_wall_contact": false,
+      "wall_normal_compatible": false,
+      "terminal_gap_ok": false,
+      "lateral_ok": true,
+      "goal_region_ok": true,
+      "yaw_ok": true,
+      "tilt_ok": false,
+      "table_supported": true,
+      "stable": false,
+      "no_rebound": true
+    },
+    "metrics": {
+      "advance_x_m": 0.028025248259738178,
+      "lateral_drift_m": 0.004389707288747546,
+      "terminal_gap_m": 0.15285222958122757,
+      "lateral_needed_for_goal": false,
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0,
+      "wall_normal_abs_x_min": null,
+      "robot_block_contact_steps": 174,
+      "robot_wall_contact_steps": 0,
+      "goal_y_range": [
+        0.12,
+        0.18
+      ],
+      "final_y": 0.15308410806125747,
+      "yaw_change_rad": 0.00450032222146346,
+      "tilt_deg": 35.46155802208425,
+      "final_speed_m_s": 0.029874565980819837,
+      "rebound_m": 0.0,
+      "obj_terminal_pos": [
+        0.5766161968530298,
+        0.15308410806125747,
+        0.03074932745244262
+      ],
+      "obj_terminal_quat": [
+        -0.21535666202495007,
+        -0.0006843643020419569,
+        0.7163066089708594,
+        0.6637212379543401
+      ],
+      "obj_terminal_yaw": 1.5983257594895368,
+      "robot_q_terminal": [
+        0.28349062028737826,
+        0.6037201961223243,
+        -0.002058308645869828,
+        -2.11332220074691,
+        0.0031693642726540803,
+        2.556747251416286,
+        1.0635617510405329
+      ],
+      "ee_terminal_pos": [
+        0.5127145051956177,
+        0.14817839860916138,
+        0.007049919571727514
+      ],
+      "ee_terminal_quat": [
+        0.9967899322509766,
+        0.00037657481152564287,
+        -0.07699371874332428,
+        0.021946869790554047
+      ],
+      "gripper_width_m": 0.016184701606854906
+    },
+    "contact_summary": {
+      "block_wall": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "robot_block": {
+        "n_steps": 174,
+        "n_entries": 395,
+        "first_step": 639,
+        "last_step": 812,
+        "max_normal_force": 149.75905062859886,
+        "min_distance": -0.005264966894776227,
+        "links": [
+          -1
+        ],
+        "normals": [
+          [
+            0.2882431687141869,
+            -0.0407456765823932,
+            -0.9566899526646279
+          ],
+          [
+            0.989415288422636,
+            -0.0536153104841494,
+            -0.13484355942068654
+          ],
+          [
+            0.5297424888405835,
+            0.8431159872060926,
+            -0.09234894495596745
+          ],
+          [
+            0.21707926724532148,
+            -0.04272485903548686,
+            -0.9752185284092135
+          ],
+          [
+            0.29078898063805736,
+            -0.040637771814169575,
+            -0.9559238150822789
+          ]
+        ]
+      },
+      "block_plane": {
+        "n_steps": 812,
+        "n_entries": 3081,
+        "first_step": 1,
+        "last_step": 812,
+        "max_normal_force": 188.97708523703727,
+        "min_distance": -0.009291656342038657,
+        "links": [
+          -1
+        ],
+        "normals": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "block_tray": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "robot_wall": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "object_track": {
+        "n_steps": 812,
+        "x_min": 0.5485909485322946,
+        "x_max": 0.5766161968530298,
+        "y_min": 0.15257733214032526,
+        "y_max": 0.15747381534863833,
+        "z_max": 0.03074932745244262,
+        "tilt_max_deg": 35.46155802208425,
+        "speed_max": 0.40395274603367753,
+        "ang_speed_max": 6.338363715534681
+      }
+    }
+  },
+  "action_phase": {
+    "max_abs_action_minus_next_state_rad": 0.111663818359375,
+    "mean": 0.007247418165206909,
+    "note": "action[t] 是 t→t+1 的关节目标；若与 state[t+1] 接近则相位正确"
+  },
+  "attempt_id": "attempt-2e45fda772d750f4",
+  "skill": "B90",
+  "seed": 420104,
+  "goal_id": "B_wall_y_low",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "action_contract_version": "exp4.1-action-v1",
+  "physics_hz": 240,
+  "policy_hz": 20,
+  "steps_per_action": 12,
+  "prompt": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
+  "strict_success": false,
+  "failure_reason": "advance_ok",
+  "checks": {
+    "initial_valid": true,
+    "pushed_by_robot": true,
+    "advance_ok": false,
+    "wall_contact_ever": false,
+    "valid_wall_contact": false,
+    "wall_normal_compatible": false,
+    "terminal_gap_ok": false,
+    "lateral_ok": true,
+    "goal_region_ok": true,
+    "yaw_ok": true,
+    "tilt_ok": false,
+    "table_supported": true,
+    "stable": false,
+    "no_rebound": true
+  },
+  "metrics": {
+    "advance_x_m": 0.028025248259738178,
+    "lateral_drift_m": 0.004389707288747546,
+    "terminal_gap_m": 0.15285222958122757,
+    "lateral_needed_for_goal": false,
+    "wall_contact_steps": 0,
+    "wall_contact_force_max_n": 0.0,
+    "wall_normal_abs_x_min": null,
+    "robot_block_contact_steps": 174,
+    "robot_wall_contact_steps": 0,
+    "goal_y_range": [
+      0.12,
+      0.18
+    ],
+    "final_y": 0.15308410806125747,
+    "yaw_change_rad": 0.00450032222146346,
+    "tilt_deg": 35.46155802208425,
+    "final_speed_m_s": 0.029874565980819837,
+    "rebound_m": 0.0,
+    "obj_terminal_pos": [
+      0.5766161968530298,
+      0.15308410806125747,
+      0.03074932745244262
+    ],
+    "obj_terminal_quat": [
+      -0.21535666202495007,
+      -0.0006843643020419569,
+      0.7163066089708594,
+      0.6637212379543401
+    ],
+    "obj_terminal_yaw": 1.5983257594895368,
+    "robot_q_terminal": [
+      0.28349062028737826,
+      0.6037201961223243,
+      -0.002058308645869828,
+      -2.11332220074691,
+      0.0031693642726540803,
+      2.556747251416286,
+      1.0635617510405329
+    ],
+    "ee_terminal_pos": [
+      0.5127145051956177,
+      0.14817839860916138,
+      0.007049919571727514
+    ],
+    "ee_terminal_quat": [
+      0.9967899322509766,
+      0.00037657481152564287,
+      -0.07699371874332428,
+      0.021946869790554047
+    ],
+    "gripper_width_m": 0.016184701606854906
+  },
+  "n_control_steps": 66,
+  "wall_seconds": 5.0,
+  "start_object": {
+    "pos": [
+      0.5485909485932916,
+      0.15747381535000501,
+      0.019989918644204643
+    ],
+    "quat": [
+      3.037275783917645e-09,
+      -3.129920100280268e-09,
+      0.7152017460074988,
+      0.6989180656613657
+    ],
+    "yaw": 1.5938254372680734
+  },
+  "initial_task_valid": true,
+  "initial_reasons": [],
+  "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset"
+}

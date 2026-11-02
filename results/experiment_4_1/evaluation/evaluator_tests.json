@@ -1,0 +1,795 @@
+{
+  "eval_config": {
+    "version": "exp4.1-strict-v1",
+    "settle_seconds": 0.8,
+    "speed_max": 0.01,
+    "ang_speed_max": 0.5,
+    "penetration_max_m": 0.002,
+    "a_pos_tol_m": 0.02,
+    "a_yaw_tol_deg": 12.0,
+    "a_tilt_max_deg": 12.0,
+    "a_min_lift_m": 0.05,
+    "a_min_transport_m": 0.1,
+    "a_slip_max_m": 0.01,
+    "a_release_grip_min_m": 0.03,
+    "a_retreat_min_m": 0.1,
+    "b_wall_contact_min_steps": 5,
+    "b_wall_force_min_n": 0.05,
+    "b_normal_x_min": 0.9,
+    "b_advance_min_m": 0.05,
+    "b_lateral_tol_m": 0.02,
+    "b_yaw_tol_deg": 15.0,
+    "b_tilt_max_deg": 12.0,
+    "b_goal_half_width_m": 0.03,
+    "b_terminal_gap_max_m": 0.006,
+    "b_gap_min_m": -0.001,
+    "b_rebound_max_m": 0.005
+  },
+  "n_cases": 17,
+  "n_pass": 17,
+  "all_pass": true,
+  "cases": [
+    {
+      "skill": "B90",
+      "case": "positive_real_push_and_wall_contact",
+      "pass": true,
+      "expected": {
+        "expect_success": true
+      },
+      "detail": {
+        "strict_success": true,
+        "failure_reason": null
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": true,
+        "wall_contact_ever": true,
+        "valid_wall_contact": true,
+        "wall_normal_compatible": true,
+        "terminal_gap_ok": true,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": 0.17672976227804071,
+        "terminal_gap_m": -1.406185326213727e-05,
+        "wall_contact_steps": 581,
+        "wall_contact_force_max_n": 59.9366742477315,
+        "robot_block_contact_steps": 828,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.21751014477608074,
+        "tilt_deg": 0.04839880038074492,
+        "final_speed_m_s": 1.3281880871693842e-05,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "near_wall_without_contact",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "wall_contact_ever",
+          "valid_wall_contact"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "wall_contact_ever",
+        "expected_any_of": [
+          "wall_contact_ever",
+          "valid_wall_contact"
+        ]
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": true,
+        "wall_contact_ever": false,
+        "valid_wall_contact": false,
+        "wall_normal_compatible": false,
+        "terminal_gap_ok": false,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": 0.166815828700971,
+        "terminal_gap_m": 0.009889527691323896,
+        "wall_contact_steps": 0,
+        "wall_contact_force_max_n": 0.0,
+        "robot_block_contact_steps": 707,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.21715348502111556,
+        "tilt_deg": 0.006894109177420919,
+        "final_speed_m_s": 3.128890321149224e-08,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "pushed_wrong_direction",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "advance_ok",
+          "wall_contact_ever",
+          "terminal_gap_ok"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "advance_ok",
+        "expected_any_of": [
+          "advance_ok",
+          "wall_contact_ever",
+          "terminal_gap_ok"
+        ]
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": false,
+        "wall_contact_ever": false,
+        "valid_wall_contact": false,
+        "wall_normal_compatible": false,
+        "terminal_gap_ok": false,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": -0.13533760975276704,
+        "terminal_gap_m": 0.3119792910704055,
+        "wall_contact_steps": 0,
+        "wall_contact_force_max_n": 0.0,
+        "robot_block_contact_steps": 730,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.20663654302896575,
+        "tilt_deg": 0.007512662879514936,
+        "final_speed_m_s": 5.92770646271989e-06,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "pushed_too_high_climbs_object",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "tilt_ok",
+          "terminal_gap_ok",
+          "wall_contact_ever",
+          "advance_ok"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "wall_contact_ever",
+        "expected_any_of": [
+          "tilt_ok",
+          "terminal_gap_ok",
+          "wall_contact_ever",
+          "advance_ok"
+        ]
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": true,
+        "wall_contact_ever": false,
+        "valid_wall_contact": false,
+        "wall_normal_compatible": false,
+        "terminal_gap_ok": false,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": 0.16783445823276677,
+        "terminal_gap_m": 0.008371579120983741,
+        "wall_contact_steps": 0,
+        "wall_contact_force_max_n": 0.0,
+        "robot_block_contact_steps": 665,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.22191764490389648,
+        "tilt_deg": 0.004889279148501821,
+        "final_speed_m_s": 3.719597842017574e-07,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "overshoot_after_wall_contact",
+      "pass": true,
+      "expected": {
+        "expect_success": true
+      },
+      "detail": {
+        "strict_success": true,
+        "failure_reason": null
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": true,
+        "wall_contact_ever": true,
+        "valid_wall_contact": true,
+        "wall_normal_compatible": true,
+        "terminal_gap_ok": true,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": 0.17629210162050013,
+        "terminal_gap_m": 0.0002866389885387566,
+        "wall_contact_steps": 598,
+        "wall_contact_force_max_n": 97.89262099790781,
+        "robot_block_contact_steps": 726,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.21829653671195348,
+        "tilt_deg": 0.006523241249265147,
+        "final_speed_m_s": 1.0801496532101451e-07,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "initial_already_touching_wall",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "initial_valid"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "initial_valid",
+        "expected_any_of": [
+          "initial_valid"
+        ]
+      },
+      "checks": {
+        "initial_valid": false,
+        "pushed_by_robot": false,
+        "advance_ok": false,
+        "wall_contact_ever": true,
+        "valid_wall_contact": true,
+        "wall_normal_compatible": true,
+        "terminal_gap_ok": true,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": -1.4138098350047201e-05,
+        "terminal_gap_m": -1.0484917278841266e-05,
+        "wall_contact_steps": 192,
+        "wall_contact_force_max_n": 0.22699665144246248,
+        "robot_block_contact_steps": 0,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.21246200538638335,
+        "tilt_deg": 0.010334542058694928,
+        "final_speed_m_s": 1.9099441344348086e-06,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "initial_penetrates_wall",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "initial_valid"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "initial_valid",
+        "expected_any_of": [
+          "initial_valid"
+        ]
+      },
+      "checks": {
+        "initial_valid": false,
+        "pushed_by_robot": false,
+        "advance_ok": false,
+        "wall_contact_ever": true,
+        "valid_wall_contact": true,
+        "wall_normal_compatible": false,
+        "terminal_gap_ok": false,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": -4.1622668145446795e-07,
+        "terminal_gap_m": -0.060751165074854896,
+        "wall_contact_steps": 192,
+        "wall_contact_force_max_n": 1129.2911504829058,
+        "robot_block_contact_steps": 0,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.21270273409011303,
+        "tilt_deg": 0.002497715307567977,
+        "final_speed_m_s": 5.73298767204581e-07,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "wrong_goal_region",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "goal_region_ok",
+          "lateral_ok",
+          "terminal_gap_ok"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "lateral_ok",
+        "expected_any_of": [
+          "goal_region_ok",
+          "lateral_ok",
+          "terminal_gap_ok"
+        ]
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": true,
+        "advance_ok": true,
+        "wall_contact_ever": true,
+        "valid_wall_contact": true,
+        "wall_normal_compatible": true,
+        "terminal_gap_ok": true,
+        "lateral_ok": false,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": 0.17597313110809165,
+        "terminal_gap_m": -7.377840170352812e-06,
+        "wall_contact_steps": 589,
+        "wall_contact_force_max_n": 28.965326797900204,
+        "robot_block_contact_steps": 1107,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.2522224820691805,
+        "tilt_deg": 0.017362043394840956,
+        "final_speed_m_s": 2.8367125944607467e-07,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "B90",
+      "case": "robot_touches_wall_block_does_not",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "pushed_by_robot",
+          "advance_ok",
+          "wall_contact_ever"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "pushed_by_robot",
+        "expected_any_of": [
+          "pushed_by_robot",
+          "advance_ok",
+          "wall_contact_ever"
+        ]
+      },
+      "checks": {
+        "initial_valid": true,
+        "pushed_by_robot": false,
+        "advance_ok": false,
+        "wall_contact_ever": false,
+        "valid_wall_contact": false,
+        "wall_normal_compatible": false,
+        "terminal_gap_ok": false,
+        "lateral_ok": true,
+        "goal_region_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "table_supported": true,
+        "stable": true,
+        "no_rebound": true
+      },
+      "key_metrics": {
+        "advance_x_m": -2.7880764363885646e-10,
+        "terminal_gap_m": 0.43190633749924806,
+        "wall_contact_steps": 0,
+        "wall_contact_force_max_n": 0.0,
+        "robot_block_contact_steps": 0,
+        "robot_wall_contact_steps": 0,
+        "final_y": 0.20842085973105248,
+        "tilt_deg": 1.0350585739624488e-05,
+        "final_speed_m_s": 9.680320851348216e-10,
+        "rebound_m": 0.0
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "positive_grasp_place_release",
+      "pass": true,
+      "expected": {
+        "expect_success": true
+      },
+      "detail": {
+        "strict_success": true,
+        "failure_reason": null
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.0032337958914602197,
+        "yaw_error_deg": 1.4184864355076467,
+        "tilt_deg": 0.006062780816461247,
+        "lift_m": 0.11899762884214271,
+        "transport_m": 0.17076235360308825,
+        "final_speed_m_s": 1.9565946021752094e-07,
+        "robot_block_contact_steps": 959
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "no_grasp",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "grasped_by_two_fingers",
+          "lifted"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "grasped_by_two_fingers",
+        "expected_any_of": [
+          "grasped_by_two_fingers",
+          "lifted"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": false,
+        "lifted": false,
+        "transported": false,
+        "position_ok": false,
+        "yaw_ok": false,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.17279268264670467,
+        "yaw_error_deg": 87.96118335639481,
+        "tilt_deg": 4.0488906065497135e-05,
+        "lift_m": 7.284402210594454e-08,
+        "transport_m": 1.2096738620362689e-08,
+        "final_speed_m_s": 1.869410209742076e-09,
+        "robot_block_contact_steps": 0
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "placed_at_wrong_position",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "position_ok"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "position_ok",
+        "expected_any_of": [
+          "position_ok"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": false,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.06724899731479499,
+        "yaw_error_deg": 1.5899584977075112,
+        "tilt_deg": 0.00549623825815864,
+        "lift_m": 0.11899942776315736,
+        "transport_m": 0.2108711413767632,
+        "final_speed_m_s": 2.1242274426032705e-07,
+        "robot_block_contact_steps": 937
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "wrong_place_orientation",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "yaw_ok"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "yaw_ok",
+        "expected_any_of": [
+          "yaw_ok"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": false,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.00016419559003106953,
+        "yaw_error_deg": 87.82046995351928,
+        "tilt_deg": 0.005430388741282407,
+        "lift_m": 0.11898416430938355,
+        "transport_m": 0.172738755939551,
+        "final_speed_m_s": 2.5279497208051393e-08,
+        "robot_block_contact_steps": 429
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "not_released",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "released"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "released",
+        "expected_any_of": [
+          "released"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": false,
+        "retreated": false,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.0022013209344877646,
+        "yaw_error_deg": 1.329128904564019,
+        "tilt_deg": 1.888120815221448,
+        "lift_m": 0.11899762884214271,
+        "transport_m": 0.17499400508273413,
+        "final_speed_m_s": 0.00013267682017805582,
+        "robot_block_contact_steps": 1141
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "no_retreat",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "retreated",
+          "released"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "retreated",
+        "expected_any_of": [
+          "retreated",
+          "released"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": false,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": true
+      },
+      "key_metrics": {
+        "position_error_m": 0.0021293188928284516,
+        "yaw_error_deg": 1.306186256044209,
+        "tilt_deg": 0.007322939333028245,
+        "lift_m": 0.11899762884214271,
+        "transport_m": 0.17489929602603002,
+        "final_speed_m_s": 8.935831582621675e-06,
+        "robot_block_contact_steps": 956
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "dropped_from_height_unstable",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "position_ok",
+          "yaw_ok",
+          "stable",
+          "tilt_ok",
+          "no_penetration"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "no_penetration",
+        "expected_any_of": [
+          "position_ok",
+          "yaw_ok",
+          "stable",
+          "tilt_ok",
+          "no_penetration"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": false
+      },
+      "key_metrics": {
+        "position_error_m": 0.001962138487601411,
+        "yaw_error_deg": 1.5074301410947728,
+        "tilt_deg": 0.016533255254989516,
+        "lift_m": 0.11899762884214271,
+        "transport_m": 0.1747413657038922,
+        "final_speed_m_s": 1.9723265577052977e-08,
+        "robot_block_contact_steps": 932
+      }
+    },
+    {
+      "skill": "A90",
+      "case": "slipped_mid_transport",
+      "pass": true,
+      "expected": {
+        "expect_success": false,
+        "failure_reason_in": [
+          "position_ok",
+          "yaw_ok",
+          "stable",
+          "tilt_ok",
+          "lifted",
+          "released",
+          "retreated",
+          "no_penetration"
+        ]
+      },
+      "detail": {
+        "strict_success": false,
+        "failure_reason": "no_penetration",
+        "expected_any_of": [
+          "position_ok",
+          "yaw_ok",
+          "stable",
+          "tilt_ok",
+          "lifted",
+          "released",
+          "retreated",
+          "no_penetration"
+        ]
+      },
+      "checks": {
+        "grasped_by_two_fingers": true,
+        "lifted": true,
+        "transported": true,
+        "position_ok": true,
+        "yaw_ok": true,
+        "tilt_ok": true,
+        "released": true,
+        "retreated": true,
+        "table_supported": true,
+        "stable": true,
+        "no_penetration": false
+      },
+      "key_metrics": {
+        "position_error_m": 0.006793248667444243,
+        "yaw_error_deg": 10.356378748060019,
+        "tilt_deg": 0.002994871525434315,
+        "lift_m": 0.11899762884214271,
+        "transport_m": 0.17008791123248454,
+        "final_speed_m_s": 4.482466870018027e-08,
+        "robot_block_contact_steps": 1078
+      }
+    }
+  ]
+}

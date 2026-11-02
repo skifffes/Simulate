@@ -1,0 +1,48 @@
+{
+  "dataset_location": "/scratch/lijh/exp40/repo/data/exp41",
+  "format": "LeRobot v2.1",
+  "fps": 20,
+  "skills": {
+    "A90": {
+      "n_episodes": 45,
+      "n_frames": 8835,
+      "tasks": [
+        "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
+        "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X"
+      ],
+      "meta_sha256": {
+        "episodes.jsonl": "7784d0d0d328b8fdee822ddfec5b29f459e2918231b358cdbc03619727699dc9",
+        "episodes_stats.jsonl": "1cc9ea6d4cd59edf222cadc55372055987e6770fe57df8ba2adcb724b5f6daa1",
+        "info.json": "00a3a51d0d718f437286918593cfd237efbd102794fa49a95887f85af535ba99",
+        "tasks.jsonl": "58b266f54207a7c3275c7e2ac44012d978e1ddea753fc06bf4b55802f1e0856c"
+      },
+      "n_checks_pass": 48,
+      "n_checks": 48
+    },
+    "B90": {
+      "n_episodes": 45,
+      "n_frames": 7255,
+      "tasks": [
+        "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
+        "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
+        "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]"
+      ],
+      "meta_sha256": {
+        "episodes.jsonl": "b0c486152217199ea12cd7730595dcffbd2bb9696ac6b81868f99d4e19e9e9d8",
+        "episodes_stats.jsonl": "132c78d8eeb7c5b9937b7ef9abda66060b0d31e05a0d285f62c7d42b2383130a",
+        "info.json": "97a3adac355c785ef1e938af37a0d16eb032f397d81f8a40c650be90eb035435",
+        "tasks.jsonl": "d68c400733625abd4b34f6ab06f7b208fb9b716d94c828fff89a012e5917ac3b"
+      },
+      "n_checks_pass": 48,
+      "n_checks": 48
+    }
+  },
+  "note": "Parquet 与视频不入 Git；此处记录 meta 哈希、帧数、任务与校验结果"
+}

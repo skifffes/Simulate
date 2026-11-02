@@ -1,0 +1,69 @@
+# 实验 4.1 严格物理评价器配置（冻结）
+# 版本：exp4.1-strict-v1
+# 实现：src/exp41/strict_eval.py::StrictEvalConfig
+# 校准证据：results/experiment_4_1/evaluation/calibration_report.md
+# 17 个物理正负案例：results/experiment_4_1/evaluation/evaluator_tests.json
+version: exp4.1-strict-v1
+
+common:
+  settle_seconds: 0.8          # 专家结束后的独立稳定性观察窗口
+  settle_tail_seconds: 0.2     # 用于回退（rebound）检测的尾段
+  speed_max: 0.01              # m/s，物体线速度（与实验 2/3 一致）
+  ang_speed_max: 0.5           # rad/s
+  penetration_max_m: 0.002     # 允许的数值穿透（超过判穿模）
+  contact_sampling: per_physics_step   # 240 Hz 每个物理步都查 getContactPoints
+  body_ids_from: build_scene_return    # block/wall/tray/plane 一律来自场景构造返回值
+
+A90:
+  pos_tol_m: 0.02
+  yaw_tol_deg: 12.0
+  tilt_max_deg: 12.0
+  min_lift_m: 0.05
+  min_transport_m: 0.10
+  slip_max_m: 0.01
+  release_grip_min_m: 0.030
+  retreat_min_m: 0.10
+  required_checks:
+    - grasped_by_two_fingers   # 任一物理步出现 robot(9/10/8) ↔ block 接触
+    - lifted                   # 物体 z 峰值超过起始 z + 0.05
+    - transported              # 物体 xy 位移 ≥ 0.10
+    - position_ok              # 到目标 ≤ 0.02
+    - yaw_ok                   # 长轴与 X 夹角 ≤ 12°
+    - tilt_ok                  # |roll|+|pitch| ≤ 12°
+    - released                 # 结束无机器人-物体接触，且两指开口 ≥ 0.030
+    - retreated                # EE 离物体 ≥ 0.10
+    - table_supported          # 结束时有物体-桌面接触
+    - stable                   # 速度 < 0.01
+    - no_penetration           # 桌面穿透 > -0.002
+
+B90:
+  wall_contact_min_steps: 5        # 每个物理步计数（≈20.8 ms）
+  wall_force_min_n: 0.05           # 物体重 1.47 N 的 3.4%
+  normal_x_min: 0.9                # 墙面法向与接触法向夹角 ≤ 25.8°
+  advance_min_m: 0.05
+  lateral_tol_m: 0.02              # 仅在起点已在目标区内时生效
+  yaw_tol_deg: 15.0
+  tilt_max_deg: 12.0
+  goal_half_width_m: 0.03
+  terminal_gap_max_m: 0.006
+  terminal_gap_min_m: -0.001
+  rebound_max_m: 0.005
+  required_checks:
+    - initial_valid            # 起点不贴墙/不穿模/稳定
+    - pushed_by_robot          # robot ↔ block 接触存在
+    - advance_ok               # +X 位移 ≥ 0.05
+    - wall_contact_ever        # block ↔ wall 接触 ≥1 物理步
+    - valid_wall_contact       # 接触步数 ≥5 且法向力 ≥0.05 N
+    - wall_normal_compatible   # |n_x| ≥ 0.9（法向与墙面几何相容）
+    - terminal_gap_ok          # -1 mm ≤ gap ≤ 6 mm
+    - goal_region_ok           # 最终 y 落在目标区（±30 mm）
+    - lateral_ok               # 起点已在目标区内时 |Δy| ≤ 20 mm
+    - yaw_ok                   # 朝向变化 ≤ 15°
+    - tilt_ok                  # ≤ 12°
+    - table_supported
+    - stable
+    - no_rebound               # 稳定窗口内回退 ≤ 5 mm
+  note: >
+    允许机器人撤离后墙面接触力消失；但执行过程中必须存在经过验证的有效墙面接触
+    （valid_wall_contact），且最终稳定留在目标区内。wall_contact_ever / valid_wall_contact /
+    terminal_gap / post_action_stable / strict_success 分别记录，不合并成一个布尔量。

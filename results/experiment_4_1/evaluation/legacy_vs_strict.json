@@ -1,0 +1,1004 @@
+{
+  "n_b90_attempts": 62,
+  "both_success": 45,
+  "strict_only": 0,
+  "legacy_only": 0,
+  "neither": 17,
+  "legacy_success_rate": 0.726,
+  "strict_success_rate": 0.726,
+  "legacy_only_examples": [],
+  "rows": [
+    {
+      "attempt_id": "attempt-023176943f6e5b1d",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 1.3124739154268816e-05,
+        "dy": 0.004742653353412979,
+        "dyaw_deg": 0.19236387572592983,
+        "tilt": 0.006515973754198873,
+        "speed": 1.3354338357768788e-07
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 103.92326068996793
+    },
+    {
+      "attempt_id": "attempt-02de76bcde565c06",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15447200881069867,
+        "dy": 0.005939887040751934,
+        "dyaw_deg": 3.697377103595802,
+        "tilt": 25.154323813325533,
+        "speed": 0.07158027682091676
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-07165246f948587d",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15779508349113258,
+        "dy": 0.0015814208538034724,
+        "dyaw_deg": 2.092742841608597,
+        "tilt": 28.57365428720835,
+        "speed": 0.01724496863135404
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-097814fe389c527f",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "tilt_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.0008606822968111327,
+        "dy": 0.0024131923051586845,
+        "dyaw_deg": 6.726024968955263,
+        "tilt": 34.1323228987856,
+        "speed": 0.0020297400762587154
+      },
+      "wall_contact_steps": 830,
+      "wall_contact_force_max_n": 63.87447185571988
+    },
+    {
+      "attempt_id": "attempt-17e2df01c2f2528f",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.00023659718807689245,
+        "dy": 0.007819396456847066,
+        "dyaw_deg": 0.7071569176614942,
+        "tilt": 0.004503023484706468,
+        "speed": 3.964252016572883e-07
+      },
+      "wall_contact_steps": 875,
+      "wall_contact_force_max_n": 78.62676969624901
+    },
+    {
+      "attempt_id": "attempt-1899b07a0bbc5a8b",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 1.0276575700185475e-05,
+        "dy": 0.009928663088956208,
+        "dyaw_deg": 1.951258070766724,
+        "tilt": 0.005058852421592085,
+        "speed": 2.238440661368028e-07
+      },
+      "wall_contact_steps": 847,
+      "wall_contact_force_max_n": 56.21281345524378
+    },
+    {
+      "attempt_id": "attempt-1a156b705d885687",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.619593422049988e-06,
+        "dy": 0.007990444828315402,
+        "dyaw_deg": 3.3669552489814816,
+        "tilt": 0.0030227059723945283,
+        "speed": 1.2370602726529994e-06
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 60.4597402684103
+    },
+    {
+      "attempt_id": "attempt-1ab6c51cc27a5130",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2773513882912155e-05,
+        "dy": 0.006604064387622927,
+        "dyaw_deg": 4.384540100046671,
+        "tilt": 0.2730088153767247,
+        "speed": 1.502527212021479e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 57.17957814517685
+    },
+    {
+      "attempt_id": "attempt-1e433d529e975325",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.335111039519777e-05,
+        "dy": 0.004799286532870012,
+        "dyaw_deg": 2.10178178759852,
+        "tilt": 0.28781843999251105,
+        "speed": 3.9158107161316665e-05
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 53.6161524423024
+    },
+    {
+      "attempt_id": "attempt-20493b439ad7583e",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 3.2939748649929435e-05,
+        "dy": 0.009713326193999394,
+        "dyaw_deg": 1.1216734768292602,
+        "tilt": 0.00821609954531039,
+        "speed": 1.735201061209253e-06
+      },
+      "wall_contact_steps": 875,
+      "wall_contact_force_max_n": 64.99778787484493
+    },
+    {
+      "attempt_id": "attempt-2121e1c0f7035dc9",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 5.15128180245128e-06,
+        "dy": 0.0098568268396316,
+        "dyaw_deg": 4.3961238638077305,
+        "tilt": 0.004738756498387158,
+        "speed": 3.828695722274837e-07
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 42.865785752368836
+    },
+    {
+      "attempt_id": "attempt-2135eb31afed5a5b",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.154620506328339,
+        "dy": 0.0020136107986512275,
+        "dyaw_deg": 0.6893330532137372,
+        "tilt": 24.84456393746519,
+        "speed": 0.010475615662442286
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-2b44ea50903e5e7f",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 3.568191013714195e-05,
+        "dy": 0.004527464613475696,
+        "dyaw_deg": 2.1236024864362864,
+        "tilt": 0.01954718314780985,
+        "speed": 7.639418839967096e-07
+      },
+      "wall_contact_steps": 629,
+      "wall_contact_force_max_n": 68.0422338889677
+    },
+    {
+      "attempt_id": "attempt-2bc37539366d52a5",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2024991957803053e-05,
+        "dy": 0.005408773660100702,
+        "dyaw_deg": 3.3850049362191155,
+        "tilt": 0.2648750596274691,
+        "speed": 2.613279609860342e-05
+      },
+      "wall_contact_steps": 632,
+      "wall_contact_force_max_n": 46.35784252209269
+    },
+    {
+      "attempt_id": "attempt-2e45fda772d750f4",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15285222958122757,
+        "dy": 0.004389707288747546,
+        "dyaw_deg": 0.25784946973879525,
+        "tilt": 35.46155802208425,
+        "speed": 0.029874565980819837
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-383fceaddc945c21",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.969631136863555e-06,
+        "dy": 0.007037928985985847,
+        "dyaw_deg": 2.8672686003488415,
+        "tilt": 0.007394234807494807,
+        "speed": 1.0302442169215703e-08
+      },
+      "wall_contact_steps": 628,
+      "wall_contact_force_max_n": 25.742190802591963
+    },
+    {
+      "attempt_id": "attempt-3e01e2acc38757f5",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.4016839284258786e-05,
+        "dy": 0.012392571125506902,
+        "dyaw_deg": 3.5682743520575713,
+        "tilt": 0.012469955784483984,
+        "speed": 5.74636883125178e-06
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 60.928791395968325
+    },
+    {
+      "attempt_id": "attempt-3f4bee6c908b58cf",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15100508030482884,
+        "dy": 0.005673238455324553,
+        "dyaw_deg": 1.5753404122869699,
+        "tilt": 32.08772120804325,
+        "speed": 0.08015567217257336
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-3fde89b5fb2455df",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2395848137568564e-05,
+        "dy": 0.005812042529236228,
+        "dyaw_deg": 2.5627323848171883,
+        "tilt": 0.2080893610221771,
+        "speed": 2.1706851129556027e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 70.99519348122098
+    },
+    {
+      "attempt_id": "attempt-3ff6fd1dc8f15387",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.00012043128312411167,
+        "dy": 0.005127672853412202,
+        "dyaw_deg": 1.5563181548414882,
+        "tilt": 0.004489997537348101,
+        "speed": 9.734702723630316e-07
+      },
+      "wall_contact_steps": 875,
+      "wall_contact_force_max_n": 71.28252584295218
+    },
+    {
+      "attempt_id": "attempt-43fb522ab28157ed",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 4.952158950832786e-05,
+        "dy": 0.0029957004978209134,
+        "dyaw_deg": 3.2720840813747425,
+        "tilt": 0.009196588841548926,
+        "speed": 2.8832102593394905e-05
+      },
+      "wall_contact_steps": 754,
+      "wall_contact_force_max_n": 64.01029637560737
+    },
+    {
+      "attempt_id": "attempt-49fd9637f2ed584b",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 4.5964158840172686e-05,
+        "dy": 0.005193873036944241,
+        "dyaw_deg": 1.6045554248516987,
+        "tilt": 0.004417518403500732,
+        "speed": 3.748552783257188e-08
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 45.2028286462635
+    },
+    {
+      "attempt_id": "attempt-4b47e3e5a357586d",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.030686961129735e-05,
+        "dy": 0.015240355331628985,
+        "dyaw_deg": 2.766808614487457,
+        "tilt": 0.5986436741504069,
+        "speed": 4.964161868501662e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 57.39086910953214
+    },
+    {
+      "attempt_id": "attempt-4d189129c9715d42",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.1540714209144738,
+        "dy": 0.0032780378316707437,
+        "dyaw_deg": 2.592688210631556,
+        "tilt": 29.14908187276014,
+        "speed": 0.06533481880671888
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-53d9fafbdf0e517d",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.967120180712545e-05,
+        "dy": 0.005821425878769937,
+        "dyaw_deg": 3.1471678940143306,
+        "tilt": 0.6371154340353904,
+        "speed": 4.998249355788775e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 57.113716373284426
+    },
+    {
+      "attempt_id": "attempt-5b03cd1e95ac5f35",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "wall_contact_ever",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.09706741726912016,
+        "dy": 0.005841323905908413,
+        "dyaw_deg": 2.6349708198374815,
+        "tilt": 21.332679162478023,
+        "speed": 0.25486139025072974
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-5bc9a133ca615a27",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.28255454650661e-05,
+        "dy": 0.007523094738126096,
+        "dyaw_deg": 3.5428181079553602,
+        "tilt": 0.7929197412135978,
+        "speed": 5.53734420777938e-05
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 52.90176318407581
+    },
+    {
+      "attempt_id": "attempt-5ff34914e9d25544",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.997996349375704e-06,
+        "dy": 0.0057807084167022516,
+        "dyaw_deg": 2.178014405575772,
+        "tilt": 0.01533365973624141,
+        "speed": 1.4899512693969314e-07
+      },
+      "wall_contact_steps": 629,
+      "wall_contact_force_max_n": 27.420522178324283
+    },
+    {
+      "attempt_id": "attempt-60666f14e7a95d96",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.4117474718421406e-05,
+        "dy": 0.001473445061104417,
+        "dyaw_deg": 3.4358964723776184,
+        "tilt": 0.2027048077992437,
+        "speed": 4.143868638969515e-05
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 62.21676021885433
+    },
+    {
+      "attempt_id": "attempt-656a50a4c87353eb",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.0309181433520997e-05,
+        "dy": 0.00765378762671165,
+        "dyaw_deg": 2.8388383456552018,
+        "tilt": 0.010446450817002344,
+        "speed": 3.0426409001311425e-09
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 41.36029449823121
+    },
+    {
+      "attempt_id": "attempt-6fcc58813cf354df",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.634672057057259e-06,
+        "dy": 0.005226233368740452,
+        "dyaw_deg": 0.6297649721810226,
+        "tilt": 0.022025726046548837,
+        "speed": 5.865685373063909e-10
+      },
+      "wall_contact_steps": 642,
+      "wall_contact_force_max_n": 42.12422485013155
+    },
+    {
+      "attempt_id": "attempt-73a04d6abeb45e2b",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 4.1374540642791224e-05,
+        "dy": 0.008864427503183864,
+        "dyaw_deg": 0.208447124668104,
+        "tilt": 0.005459790863703,
+        "speed": 1.368381248153287e-07
+      },
+      "wall_contact_steps": 839,
+      "wall_contact_force_max_n": 69.45619728006089
+    },
+    {
+      "attempt_id": "attempt-764bcb4324565915",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.00011239839866894474,
+        "dy": 0.004318980957739471,
+        "dyaw_deg": 0.9165819567291795,
+        "tilt": 0.02074405449311114,
+        "speed": 1.0191377755791155e-07
+      },
+      "wall_contact_steps": 630,
+      "wall_contact_force_max_n": 72.06308606476045
+    },
+    {
+      "attempt_id": "attempt-7a96323087ec58e4",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.651381235934224e-05,
+        "dy": 0.0018122240925731448,
+        "dyaw_deg": 2.9343136089841018,
+        "tilt": 0.5423333538836805,
+        "speed": 3.728336739988446e-05
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 61.04509359795201
+    },
+    {
+      "attempt_id": "attempt-7b9fe8e3f06e55f1",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 4.502396734140657e-05,
+        "dy": 0.008108943919665323,
+        "dyaw_deg": 1.4179800108539768,
+        "tilt": 6.342709446715537,
+        "speed": 2.5252614968614845e-06
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 89.31725984891571
+    },
+    {
+      "attempt_id": "attempt-803e4875c9e15ce3",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.0002536971912824315,
+        "dy": 0.006814804026437943,
+        "dyaw_deg": 0.4085955166726265,
+        "tilt": 0.0034444361043724655,
+        "speed": 1.9389478744223346e-07
+      },
+      "wall_contact_steps": 875,
+      "wall_contact_force_max_n": 68.65233694196336
+    },
+    {
+      "attempt_id": "attempt-8aa803e1745453cc",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.156908886168738,
+        "dy": 0.0032492584390749757,
+        "dyaw_deg": 1.8618250758908732,
+        "tilt": 30.338423363011128,
+        "speed": 0.0171599290574706
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-9486215966ee5276",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.7768460498612804e-05,
+        "dy": 0.004921548466704895,
+        "dyaw_deg": 2.345695786926829,
+        "tilt": 0.017903548456445127,
+        "speed": 3.682266411113325e-05
+      },
+      "wall_contact_steps": 628,
+      "wall_contact_force_max_n": 37.436857292173386
+    },
+    {
+      "attempt_id": "attempt-a30d133afbad5373",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15697043367075125,
+        "dy": 0.009147334730122303,
+        "dyaw_deg": 1.1600424118286699,
+        "tilt": 2.0023212923311906,
+        "speed": 0.01584217224437516
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-a4ee2ad0b21d5594",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15276714578017125,
+        "dy": 0.0033360719644555947,
+        "dyaw_deg": 1.822111004897853,
+        "tilt": 32.52483199652505,
+        "speed": 0.06717205351782798
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-a5a7ddc571ef5e63",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2450304602683602e-05,
+        "dy": 0.005276133865546845,
+        "dyaw_deg": 3.3886179493816364,
+        "tilt": 0.3010592743595235,
+        "speed": 2.603925906405352e-05
+      },
+      "wall_contact_steps": 632,
+      "wall_contact_force_max_n": 47.046358099840994
+    },
+    {
+      "attempt_id": "attempt-aaf14d5b4a375cb8",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2291222049775072e-05,
+        "dy": 0.004283554110044108,
+        "dyaw_deg": 0.4041750486468207,
+        "tilt": 0.03218825366010757,
+        "speed": 2.2209310087522774e-05
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 41.34423108913542
+    },
+    {
+      "attempt_id": "attempt-ac484bbce034567e",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.000408322202222422,
+        "dy": 0.012839760293374802,
+        "dyaw_deg": 0.5214553399190929,
+        "tilt": 0.0063351227370463505,
+        "speed": 2.21362693448691e-06
+      },
+      "wall_contact_steps": 803,
+      "wall_contact_force_max_n": 82.72900047444202
+    },
+    {
+      "attempt_id": "attempt-ae93a3c963565d15",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.123112457487537e-06,
+        "dy": 0.008178903228021062,
+        "dyaw_deg": 3.3497968729229926,
+        "tilt": 0.0055013760551166115,
+        "speed": 1.537199083543544e-07
+      },
+      "wall_contact_steps": 707,
+      "wall_contact_force_max_n": 69.81021242318815
+    },
+    {
+      "attempt_id": "attempt-b0058ac65c7f532f",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 1.39585653831098e-05,
+        "dy": 0.001146618100577812,
+        "dyaw_deg": 1.2129577879875253,
+        "tilt": 0.016542509347842634,
+        "speed": 2.6269238906018404e-07
+      },
+      "wall_contact_steps": 632,
+      "wall_contact_force_max_n": 72.67751728556641
+    },
+    {
+      "attempt_id": "attempt-b8bcd44e24305ae0",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.0449309496007864e-05,
+        "dy": 0.0003302709214407784,
+        "dyaw_deg": 1.6071744992589687,
+        "tilt": 0.004878304710894024,
+        "speed": 3.990348357714689e-08
+      },
+      "wall_contact_steps": 632,
+      "wall_contact_force_max_n": 72.39692407296084
+    },
+    {
+      "attempt_id": "attempt-bbe5a73649735fa1",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15013306873279642,
+        "dy": 0.004910571699881683,
+        "dyaw_deg": 3.1585699690740308,
+        "tilt": 25.30000232375135,
+        "speed": 0.06972770362258338
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-be4d63c8d7ad5c50",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.0993673050019304e-05,
+        "dy": 0.0021499579207819863,
+        "dyaw_deg": 0.6520628950671907,
+        "tilt": 0.008955177574040825,
+        "speed": 3.3659791688819018e-06
+      },
+      "wall_contact_steps": 644,
+      "wall_contact_force_max_n": 82.72321968867934
+    },
+    {
+      "attempt_id": "attempt-cd9aadeb9f6d50af",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15723252328884507,
+        "dy": 0.0038856991922787687,
+        "dyaw_deg": 1.0199104648695547,
+        "tilt": 32.464317843051106,
+        "speed": 0.020018421376036537
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-cf21c74fee695cd6",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 1.1807539619379526e-05,
+        "dy": 0.0013237369454107695,
+        "dyaw_deg": 1.1141695758707506,
+        "tilt": 0.003878296981036857,
+        "speed": 4.471723155409027e-07
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 72.6527108981177
+    },
+    {
+      "attempt_id": "attempt-d2b6e151166551ab",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2291274714203446e-05,
+        "dy": 0.007090010576061567,
+        "dyaw_deg": 3.0003299331840387,
+        "tilt": 0.17303153843864202,
+        "speed": 1.2657089096349396e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 60.93551175613273
+    },
+    {
+      "attempt_id": "attempt-db837f8ed40457df",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -2.2111904765753643e-05,
+        "dy": 0.009193463789730294,
+        "dyaw_deg": 5.354535817958937,
+        "tilt": 0.4016373686855305,
+        "speed": 3.81862500829444e-05
+      },
+      "wall_contact_steps": 631,
+      "wall_contact_force_max_n": 41.67374765758693
+    },
+    {
+      "attempt_id": "attempt-db9ee7bda5ce5d5e",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": false,
+      "strict_failure_reason": "advance_ok",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.15608460442695649,
+        "dy": 0.0032868712095109054,
+        "dyaw_deg": 1.2428386501888218,
+        "tilt": 35.487473860059694,
+        "speed": 0.03199085540409508
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-deb2560eb4f0520f",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "wall_contact_ever",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.12170144904801017,
+        "dy": 0.007486882917795479,
+        "dyaw_deg": 2.874169389545148,
+        "tilt": 45.66859832062595,
+        "speed": 0.02740814035333466
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-e0c720fb08b25ed3",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 0.00020398364174678552,
+        "dy": 0.0038482566467469836,
+        "dyaw_deg": 0.478407360876606,
+        "tilt": 0.008803435172174868,
+        "speed": 2.0078576023438428e-10
+      },
+      "wall_contact_steps": 644,
+      "wall_contact_force_max_n": 80.36282969437892
+    },
+    {
+      "attempt_id": "attempt-e8d3ee945de15266",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "wall_contact_ever",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.09089602328051649,
+        "dy": 0.012946278478650736,
+        "dyaw_deg": 5.425327696595292,
+        "tilt": 2.410382625166635,
+        "speed": 0.10710420345631884
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-eb498c5bdc7f5c2f",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": false,
+      "strict_failure_reason": "wall_contact_ever",
+      "legacy_v22_success": false,
+      "legacy_detail": {
+        "gap": 0.09332865697740789,
+        "dy": 0.012948382667414993,
+        "dyaw_deg": 2.6202090346995863,
+        "tilt": 20.133964536160082,
+        "speed": 0.1463477672713825
+      },
+      "wall_contact_steps": 0,
+      "wall_contact_force_max_n": 0.0
+    },
+    {
+      "attempt_id": "attempt-effb7143b538577e",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 3.677776221999718e-05,
+        "dy": 0.00991181064553362,
+        "dyaw_deg": 4.018543727007443,
+        "tilt": 0.008380705335913716,
+        "speed": 3.181948520475701e-05
+      },
+      "wall_contact_steps": 634,
+      "wall_contact_force_max_n": 61.86700022860267
+    },
+    {
+      "attempt_id": "attempt-f1c3d4eccd3f5e8f",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.9013145809654297e-05,
+        "dy": 0.004892726481464604,
+        "dyaw_deg": 2.498368308249749,
+        "tilt": 0.49193475374610934,
+        "speed": 3.979886139813998e-05
+      },
+      "wall_contact_steps": 633,
+      "wall_contact_force_max_n": 55.402449096571765
+    },
+    {
+      "attempt_id": "attempt-f3a1d75f9a1f5995",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -9.741591685319406e-06,
+        "dy": 0.004414767499185124,
+        "dyaw_deg": 1.4934471677587768,
+        "tilt": 0.016214411559308865,
+        "speed": 3.641963343232934e-08
+      },
+      "wall_contact_steps": 629,
+      "wall_contact_force_max_n": 68.89963139909737
+    },
+    {
+      "attempt_id": "attempt-fb0eda1042365ed6",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": 9.251542203136953e-05,
+        "dy": 0.004286501977014162,
+        "dyaw_deg": 1.7605658579308092,
+        "tilt": 0.004275309077889692,
+        "speed": 7.462317687106735e-07
+      },
+      "wall_contact_steps": 815,
+      "wall_contact_force_max_n": 63.38674279166795
+    },
+    {
+      "attempt_id": "attempt-ff5afa0d0c155356",
+      "config_id": "B_wall_y_high|B_obj_y027|B_robot_home",
+      "strict_success": true,
+      "strict_failure_reason": null,
+      "legacy_v22_success": true,
+      "legacy_detail": {
+        "gap": -1.0214205862224546e-05,
+        "dy": 0.0022182343668238347,
+        "dyaw_deg": 0.6786401067378376,
+        "tilt": 0.015817406137054478,
+        "speed": 4.777519953715741e-07
+      },
+      "wall_contact_steps": 644,
+      "wall_contact_force_max_n": 76.1417605974014
+    }
+  ]
+}

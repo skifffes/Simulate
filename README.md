@@ -482,3 +482,34 @@ python scripts/exp32_analyze.py
 bash server/exp40/run_server.sh checkpoint 2 8000        # 策略侧（openpi venv, GPU2）
 /scratch/lijh/simulate_vla/venv/bin/python scripts/exp40/level4_closed_loop.py --scene B90 --ticks 20
 ```
+
+## 实验 4.1：多状态原子技能数据与严格物理评价
+
+- 最终报告：[results/experiment_4_1/reports/experiment_4_1_report.md](results/experiment_4_1/reports/experiment_4_1_report.md)
+- 动作/时间契约：[results/experiment_4_1/environment_and_action_contract.md](results/experiment_4_1/environment_and_action_contract.md)
+- 评价器校准：[results/experiment_4_1/evaluation/calibration_report.md](results/experiment_4_1/evaluation/calibration_report.md)
+- 场景/目标注册表：[results/experiment_4_1/scene_space/goal_registry.json](results/experiment_4_1/scene_space/goal_registry.json)
+
+把 A90 专家参数化成 **9 个放置目标**（3×3、±3 cm 网格），把 B90 扩展成 **3 个墙面目标区 ×
+3 个物体起点 × 2 种机器人启动构型**，并用新的 **`exp4.1-strict-v1` 评价器**（每个 240 Hz 物理步记录
+`block↔wall` 接触、权威 body id、法向/力/穿透、稳定窗口）替换旧的"离墙 2 cm 即成功"。
+
+实测：A90 采集 **45/45 成功**（9 目标 × 5，位置误差 ≤5 mm、长轴 ≤3.45°），去重后 **9 种**终态；
+B90 **45/62 成功（72.6%）**，成功样本墙面接触 **628–875 个物理步**、法向力 ≥25.7 N、终止间隙 ≤0.4 mm；
+严格评价器 **17/17** 物理正负案例通过；90 条 episode 的 LeRobot 回环校验 **48/48 全通过**，
+动作相位无偏移（≤5.6 mrad，均值 0.6 mrad）。
+
+已知限制（均已写入报告 §7 与 Blockers）：B90 专家**不能向 −Y 横移**，因此"同一起点按目标切换动作"
+的目标条件泛化**未实现**；A90 的 45 条只有 9 种终态（目标网格窄）；数据仍为 20 Hz
+（15 Hz 可行性 A90 2/3、B90 2/3，需重新标定）。数据集本体（Parquet + 视频，58 MB）在服务器
+`/scratch/lijh/exp40/repo/data/exp41/`，不入 Git。
+
+```bash
+python scripts/exp41/evaluator_tests.py                       # 17 个物理正负案例
+python scripts/exp41/collect41.py --mode pilot --out results/experiment_4_1/pilot
+python scripts/exp41/collect41.py --mode collect --target-a 45 --target-b 45 \
+    --fresh-records --out results/experiment_4_1/dataset --data data/exp41
+python scripts/exp41/verify_dataset.py --data data/exp41 --out results/experiment_4_1/dataset
+```
+
+本次**未训练 π₀.₅、未做 A→B 组合评测、未比较 6D 与七关节连接**——这些留给 4.2–4.4。

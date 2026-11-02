@@ -1,0 +1,42 @@
+{
+  "policy": "split by goal/config group, never by frame; no near-duplicate scene may straddle splits",
+  "A90": {
+    "train_goals": [
+      "A_x+3_y+3",
+      "A_x+3_y-3",
+      "A_x+3_y00",
+      "A_x-3_y+3",
+      "A_x-3_y-3",
+      "A_x-3_y00"
+    ],
+    "val_goals": [
+      "A_x00_y+3",
+      "A_x00_y-3"
+    ],
+    "test_goals": [
+      "A_x00_y00"
+    ],
+    "heldout_role": "test goals are never seen during training"
+  },
+  "B90": {
+    "train_configs": [
+      "B_wall_y_high|B_obj_y027|B_robot_home",
+      "B_wall_y_high|B_obj_y027|B_robot_offset",
+      "B_wall_y_low|B_obj_y015|B_robot_home",
+      "B_wall_y_low|B_obj_y015|B_robot_offset"
+    ],
+    "val_configs": [
+      "B_wall_y_mid|B_obj_y021|B_robot_home"
+    ],
+    "test_configs": [
+      "B_wall_y_mid|B_obj_y021|B_robot_offset"
+    ],
+    "heldout_role": "test configs hold out a (object start, goal, robot start) combination"
+  },
+  "composition_conditions_future": {
+    "note": "实验 4.1 不产生任何 A→B 组合轨迹；4.2+ 将用 A 终态 × B 起点配对，组合配对本身在训练中从未出现（held-out composition）",
+    "a_terminal_states": "results/experiment_4_1/dataset/diversity_audit.json + records/*.json",
+    "b_start_states": "results/experiment_4_1/scene_space/b_start_states.json"
+  },
+  "generated_from": "collection records (strict_success only)"
+}

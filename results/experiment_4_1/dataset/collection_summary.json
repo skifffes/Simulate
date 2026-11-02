@@ -1,0 +1,54 @@
+{
+  "manifests": {
+    "A90": {
+      "dataset": "data/exp41/A90",
+      "episodes": 45,
+      "frames": 8835,
+      "attempts": 45,
+      "target": 45,
+      "elapsed_s": 756.7
+    },
+    "B90": {
+      "dataset": "data/exp41/B90",
+      "episodes": 45,
+      "frames": 7255,
+      "attempts": 62,
+      "target": 45,
+      "elapsed_s": 731.0
+    }
+  },
+  "camera_version": "v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "action_contract_version": "exp4.1-action-v1",
+  "physics_hz": 240,
+  "policy_hz": 20,
+  "steps_per_action": 12,
+  "eval_config": {
+    "version": "exp4.1-strict-v1",
+    "settle_seconds": 0.8,
+    "speed_max": 0.01,
+    "ang_speed_max": 0.5,
+    "penetration_max_m": 0.002,
+    "a_pos_tol_m": 0.02,
+    "a_yaw_tol_deg": 12.0,
+    "a_tilt_max_deg": 12.0,
+    "a_min_lift_m": 0.05,
+    "a_min_transport_m": 0.1,
+    "a_slip_max_m": 0.01,
+    "a_release_grip_min_m": 0.03,
+    "a_retreat_min_m": 0.1,
+    "b_wall_contact_min_steps": 5,
+    "b_wall_force_min_n": 0.05,
+    "b_normal_x_min": 0.9,
+    "b_advance_min_m": 0.05,
+    "b_lateral_tol_m": 0.02,
+    "b_yaw_tol_deg": 15.0,
+    "b_tilt_max_deg": 12.0,
+    "b_goal_half_width_m": 0.03,
+    "b_terminal_gap_max_m": 0.006,
+    "b_gap_min_m": -0.001,
+    "b_rebound_max_m": 0.005
+  },
+  "n_attempts": 107,
+  "n_success": 90
+}

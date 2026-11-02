@@ -1,0 +1,55 @@
+{
+  "tolerances": {
+    "object_pos_m": 0.005,
+    "object_yaw_rad": 0.08726646259971647,
+    "robot_q_l_inf_rad": 0.02
+  },
+  "by_skill": {
+    "A90": {
+      "n_success": 45,
+      "n_goals": 9,
+      "n_per_goal": {
+        "A_x+3_y+3": 5,
+        "A_x+3_y-3": 5,
+        "A_x+3_y00": 5,
+        "A_x-3_y+3": 5,
+        "A_x-3_y-3": 5,
+        "A_x-3_y00": 5,
+        "A_x00_y+3": 5,
+        "A_x00_y-3": 5,
+        "A_x00_y00": 5
+      },
+      "object_terminal_uniques": 9,
+      "robot_terminal_uniques": 9,
+      "joint_terminal_uniques": 9,
+      "per_goal_object_uniques": {
+        "A_x+3_y+3": 1,
+        "A_x+3_y-3": 1,
+        "A_x+3_y00": 1,
+        "A_x-3_y+3": 1,
+        "A_x-3_y-3": 1,
+        "A_x-3_y00": 1,
+        "A_x00_y+3": 1,
+        "A_x00_y-3": 1,
+        "A_x00_y00": 1
+      }
+    },
+    "B90": {
+      "n_success": 45,
+      "n_goals": 3,
+      "n_per_goal": {
+        "B_wall_y_high": 14,
+        "B_wall_y_low": 14,
+        "B_wall_y_mid": 17
+      },
+      "object_terminal_uniques": 10,
+      "robot_terminal_uniques": 6,
+      "joint_terminal_uniques": 16,
+      "per_goal_object_uniques": {
+        "B_wall_y_high": 4,
+        "B_wall_y_low": 3,
+        "B_wall_y_mid": 3
+      }
+    }
+  }
+}

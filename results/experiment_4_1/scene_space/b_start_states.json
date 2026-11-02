@@ -1,0 +1,115 @@
+{
+  "object_starts": [
+    {
+      "start_id": "B_obj_y015",
+      "x": 0.548,
+      "y": 0.155,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_low"
+    },
+    {
+      "start_id": "B_obj_y021",
+      "x": 0.553,
+      "y": 0.21,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_mid"
+    },
+    {
+      "start_id": "B_obj_y027",
+      "x": 0.546,
+      "y": 0.27,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_high"
+    }
+  ],
+  "robot_starts": [
+    {
+      "robot_start_id": "B_robot_home",
+      "q": [
+        0.0,
+        -0.5,
+        0.0,
+        -2.1,
+        0.0,
+        1.65,
+        0.78
+      ],
+      "gripper": 0.035,
+      "pilot": {
+        "B_wall_y_low|B_obj_y015|B_robot_home": {
+          "attempts": 3,
+          "success": 2,
+          "failure_reasons": {
+            "wall_contact_ever": 1
+          },
+          "success_rate": 0.667
+        },
+        "B_wall_y_mid|B_obj_y021|B_robot_home": {
+          "attempts": 3,
+          "success": 3,
+          "failure_reasons": {},
+          "success_rate": 1.0
+        },
+        "B_wall_y_high|B_obj_y027|B_robot_home": {
+          "attempts": 3,
+          "success": 2,
+          "failure_reasons": {
+            "wall_contact_ever": 1
+          },
+          "success_rate": 0.667
+        }
+      }
+    },
+    {
+      "robot_start_id": "B_robot_offset",
+      "q": [
+        0.35,
+        -0.65,
+        -0.1,
+        -1.95,
+        0.15,
+        1.75,
+        0.95
+      ],
+      "gripper": 0.035,
+      "pilot": {
+        "B_wall_y_low|B_obj_y015|B_robot_offset": {
+          "attempts": 3,
+          "success": 1,
+          "failure_reasons": {
+            "wall_contact_ever": 2
+          },
+          "success_rate": 0.333
+        },
+        "B_wall_y_mid|B_obj_y021|B_robot_offset": {
+          "attempts": 3,
+          "success": 3,
+          "failure_reasons": {},
+          "success_rate": 1.0
+        },
+        "B_wall_y_high|B_obj_y027|B_robot_offset": {
+          "attempts": 3,
+          "success": 1,
+          "failure_reasons": {
+            "wall_contact_ever": 2
+          },
+          "success_rate": 0.333
+        }
+      }
+    }
+  ],
+  "aligned_pairs": [
+    [
+      "B_obj_y015",
+      "B_wall_y_low"
+    ],
+    [
+      "B_obj_y021",
+      "B_wall_y_mid"
+    ],
+    [
+      "B_obj_y027",
+      "B_wall_y_high"
+    ]
+  ]
+}

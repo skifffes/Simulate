@@ -1,0 +1,313 @@
+{
+  "kind": "A90",
+  "expert_ok": true,
+  "expert_reason": "ok",
+  "expert_metrics": {
+    "goal": {
+      "x": 0.55,
+      "y": 0.15,
+      "goal_id": "A_x00_y-3"
+    },
+    "start_pos": [
+      0.5504346296881509,
+      -0.0020184183423334334,
+      0.019989918627094344
+    ],
+    "lift_m": 0.11700955021534465,
+    "place_target": [
+      0.55,
+      0.15
+    ],
+    "place_yaw_g": 0.0
+  },
+  "goal": {
+    "goal_id": "A_x00_y-3",
+    "x": 0.55,
+    "y": 0.15,
+    "target_axis": "x",
+    "region_id": "A_place"
+  },
+  "evaluation": {
+    "eval_version": "exp4.1-strict-v1",
+    "skill": "A90",
+    "goal_id": "A_x00_y-3",
+    "task_valid": true,
+    "physical_execution_valid": true,
+    "expert_completed": true,
+    "strict_success": true,
+    "failure_reason": null,
+    "checks": {
+      "grasped_by_two_fingers": true,
+      "lifted": true,
+      "transported": true,
+      "position_ok": true,
+      "yaw_ok": true,
+      "tilt_ok": true,
+      "released": true,
+      "retreated": true,
+      "table_supported": true,
+      "stable": true,
+      "no_penetration": true
+    },
+    "metrics": {
+      "position_error_m": 0.0012421845788779455,
+      "yaw_error_rad": 0.003536632539359097,
+      "yaw_error_deg": 0.20263411819391125,
+      "tilt_deg": 0.02023719756983294,
+      "lift_m": 0.11903915048835792,
+      "transport_m": 0.15233109280611498,
+      "final_speed_m_s": 7.564084422106833e-07,
+      "ee_object_distance_m": 0.2265012073758423,
+      "gripper_width_m": 0.04000000016295293,
+      "robot_block_contact_steps": 959,
+      "table_penetration_m": -0.0008734998544079955,
+      "n_control_steps": null,
+      "obj_terminal_pos": [
+        0.5512026904544061,
+        0.15031073815163706,
+        0.019983589399807523
+      ],
+      "obj_terminal_quat": [
+        -0.00012504534295117387,
+        -9.504246024739676e-05,
+        -0.7083560569830929,
+        0.7058552768563526
+      ],
+      "obj_terminal_yaw": -1.5743329593342557,
+      "robot_q_terminal": [
+        0.3972530326738103,
+        0.2278816915624218,
+        -0.4184516531135688,
+        -2.208005601374484,
+        0.13817620987290963,
+        2.4120585364754925,
+        0.6705227067387834
+      ],
+      "ee_terminal_pos": [
+        0.5500084161758423,
+        -0.009992290288209915,
+        0.179997056722641
+      ],
+      "ee_terminal_quat": [
+        1.0,
+        8.16663850855548e-06,
+        -1.4439832511925488e-06,
+        -2.6596915176924085e-06
+      ]
+    },
+    "contact_summary": {
+      "block_wall": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "robot_block": {
+        "n_steps": 959,
+        "n_entries": 6785,
+        "first_step": 745,
+        "last_step": 1903,
+        "max_normal_force": 20.991677206786427,
+        "min_distance": -0.0006812631123678203,
+        "links": [
+          -1
+        ],
+        "normals": [
+          [
+            0.00632673384273306,
+            -0.9999080970409422,
+            -0.011990409119163409
+          ],
+          [
+            0.00632673384273306,
+            -0.9999080970409422,
+            -0.011990409119163409
+          ],
+          [
+            0.0034401905892303707,
+            -0.9994695834696838,
+            -0.03238389735109561
+          ],
+          [
+            0.0034401905892303707,
+            -0.9994695834696838,
+            -0.03238389735109561
+          ],
+          [
+            -0.000885147275152996,
+            -0.9538083093471371,
+            -0.300414589417121
+          ]
+        ]
+      },
+      "block_plane": {
+        "n_steps": 1583,
+        "n_entries": 6270,
+        "first_step": 1,
+        "last_step": 2412,
+        "max_normal_force": 5.388180380143636,
+        "min_distance": -0.0008734998544079955,
+        "links": [
+          -1
+        ],
+        "normals": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "block_tray": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "robot_wall": {
+        "n_steps": 0,
+        "n_entries": 0,
+        "first_step": null,
+        "last_step": null,
+        "max_normal_force": 0.0,
+        "min_distance": null,
+        "links": [],
+        "normals": []
+      },
+      "object_track": {
+        "n_steps": 2412,
+        "x_min": 0.5464230222542925,
+        "x_max": 0.554911230026188,
+        "y_min": -0.0022296729022010897,
+        "y_max": 0.15616981258937804,
+        "z_max": 0.13902906911545226,
+        "tilt_max_deg": 12.870422718826678,
+        "speed_max": 0.6432052518231286,
+        "ang_speed_max": 7.834278942326876
+      }
+    }
+  },
+  "action_phase": {
+    "max_abs_action_minus_next_state_rad": 0.005330145359039307,
+    "mean": 0.001890883781015873,
+    "note": "action[t] 是 t→t+1 的关节目标；若与 state[t+1] 接近则相位正确"
+  },
+  "attempt_id": "attempt-6a7f250d4ee154c7",
+  "skill": "A90",
+  "seed": 410101,
+  "goal_id": "A_x00_y-3",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "action_contract_version": "exp4.1-action-v1",
+  "physics_hz": 240,
+  "policy_hz": 20,
+  "steps_per_action": 12,
+  "prompt": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+  "strict_success": true,
+  "failure_reason": null,
+  "checks": {
+    "grasped_by_two_fingers": true,
+    "lifted": true,
+    "transported": true,
+    "position_ok": true,
+    "yaw_ok": true,
+    "tilt_ok": true,
+    "released": true,
+    "retreated": true,
+    "table_supported": true,
+    "stable": true,
+    "no_penetration": true
+  },
+  "metrics": {
+    "position_error_m": 0.0012421845788779455,
+    "yaw_error_rad": 0.003536632539359097,
+    "yaw_error_deg": 0.20263411819391125,
+    "tilt_deg": 0.02023719756983294,
+    "lift_m": 0.11903915048835792,
+    "transport_m": 0.15233109280611498,
+    "final_speed_m_s": 7.564084422106833e-07,
+    "ee_object_distance_m": 0.2265012073758423,
+    "gripper_width_m": 0.04000000016295293,
+    "robot_block_contact_steps": 959,
+    "table_penetration_m": -0.0008734998544079955,
+    "n_control_steps": null,
+    "obj_terminal_pos": [
+      0.5512026904544061,
+      0.15031073815163706,
+      0.019983589399807523
+    ],
+    "obj_terminal_quat": [
+      -0.00012504534295117387,
+      -9.504246024739676e-05,
+      -0.7083560569830929,
+      0.7058552768563526
+    ],
+    "obj_terminal_yaw": -1.5743329593342557,
+    "robot_q_terminal": [
+      0.3972530326738103,
+      0.2278816915624218,
+      -0.4184516531135688,
+      -2.208005601374484,
+      0.13817620987290963,
+      2.4120585364754925,
+      0.6705227067387834
+    ],
+    "ee_terminal_pos": [
+      0.5500084161758423,
+      -0.009992290288209915,
+      0.179997056722641
+    ],
+    "ee_terminal_quat": [
+      1.0,
+      8.16663850855548e-06,
+      -1.4439832511925488e-06,
+      -2.6596915176924085e-06
+    ]
+  },
+  "n_control_steps": 197,
+  "wall_seconds": 15.08,
+  "start_object": {
+    "pos": [
+      0.5504346296881509,
+      -0.0020184183423334334,
+      0.019989918627094344
+    ],
+    "quat": [
+      -1.5676736723508257e-14,
+      -6.667227743738851e-13,
+      0.0012793914912805101,
+      0.9999991815783711
+    ],
+    "yaw": 0.0025587836806156943
+  },
+  "config_id": "A_x00_y-3",
+  "stored_episode_index": 10
+}

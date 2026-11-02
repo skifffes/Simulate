@@ -1,0 +1,354 @@
+{
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e754aa442cbca72fc69c3fc58f101b8ab4df0ede14b372480",
+  "a_goals": [
+    {
+      "goal_id": "A_x-3_y-3",
+      "x": 0.52,
+      "y": 0.15,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x00_y-3",
+      "x": 0.55,
+      "y": 0.15,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x+3_y-3",
+      "x": 0.58,
+      "y": 0.15,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x-3_y00",
+      "x": 0.52,
+      "y": 0.18,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x00_y00",
+      "x": 0.55,
+      "y": 0.18,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x+3_y00",
+      "x": 0.58,
+      "y": 0.18,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x-3_y+3",
+      "x": 0.52,
+      "y": 0.21,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x00_y+3",
+      "x": 0.55,
+      "y": 0.21,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    },
+    {
+      "goal_id": "A_x+3_y+3",
+      "x": 0.58,
+      "y": 0.21,
+      "target_axis": "x",
+      "region_id": "A_place",
+      "pilot_attempts": 3,
+      "pilot_success": 3,
+      "pilot_success_rate": 1.0
+    }
+  ],
+  "b_goals": [
+    {
+      "goal_id": "B_wall_y_low",
+      "y_lo": 0.12,
+      "y_hi": 0.18,
+      "wall_inner_x": 0.78,
+      "y_center": 0.15,
+      "aligned_configs": [
+        [
+          "B_obj_y015",
+          "B_wall_y_low"
+        ]
+      ]
+    },
+    {
+      "goal_id": "B_wall_y_mid",
+      "y_lo": 0.18,
+      "y_hi": 0.24,
+      "wall_inner_x": 0.78,
+      "y_center": 0.21,
+      "aligned_configs": [
+        [
+          "B_obj_y021",
+          "B_wall_y_mid"
+        ]
+      ]
+    },
+    {
+      "goal_id": "B_wall_y_high",
+      "y_lo": 0.24,
+      "y_hi": 0.3,
+      "wall_inner_x": 0.78,
+      "y_center": 0.27,
+      "aligned_configs": [
+        [
+          "B_obj_y027",
+          "B_wall_y_high"
+        ]
+      ]
+    }
+  ],
+  "b_object_starts": [
+    {
+      "start_id": "B_obj_y015",
+      "x": 0.548,
+      "y": 0.155,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_low"
+    },
+    {
+      "start_id": "B_obj_y021",
+      "x": 0.553,
+      "y": 0.21,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_mid"
+    },
+    {
+      "start_id": "B_obj_y027",
+      "x": 0.546,
+      "y": 0.27,
+      "yaw": 1.5707963267948966,
+      "aligned_goal": "B_wall_y_high"
+    }
+  ],
+  "b_robot_starts": [
+    {
+      "robot_start_id": "B_robot_home",
+      "q": [
+        0.0,
+        -0.5,
+        0.0,
+        -2.1,
+        0.0,
+        1.65,
+        0.78
+      ],
+      "gripper": 0.035,
+      "pilot": {
+        "B_wall_y_low|B_obj_y015|B_robot_home": {
+          "attempts": 3,
+          "success": 2,
+          "failure_reasons": {
+            "wall_contact_ever": 1
+          },
+          "success_rate": 0.667
+        },
+        "B_wall_y_mid|B_obj_y021|B_robot_home": {
+          "attempts": 3,
+          "success": 3,
+          "failure_reasons": {},
+          "success_rate": 1.0
+        },
+        "B_wall_y_high|B_obj_y027|B_robot_home": {
+          "attempts": 3,
+          "success": 2,
+          "failure_reasons": {
+            "wall_contact_ever": 1
+          },
+          "success_rate": 0.667
+        }
+      }
+    },
+    {
+      "robot_start_id": "B_robot_offset",
+      "q": [
+        0.35,
+        -0.65,
+        -0.1,
+        -1.95,
+        0.15,
+        1.75,
+        0.95
+      ],
+      "gripper": 0.035,
+      "pilot": {
+        "B_wall_y_low|B_obj_y015|B_robot_offset": {
+          "attempts": 3,
+          "success": 1,
+          "failure_reasons": {
+            "wall_contact_ever": 2
+          },
+          "success_rate": 0.333
+        },
+        "B_wall_y_mid|B_obj_y021|B_robot_offset": {
+          "attempts": 3,
+          "success": 3,
+          "failure_reasons": {},
+          "success_rate": 1.0
+        },
+        "B_wall_y_high|B_obj_y027|B_robot_offset": {
+          "attempts": 3,
+          "success": 1,
+          "failure_reasons": {
+            "wall_contact_ever": 2
+          },
+          "success_rate": 0.333
+        }
+      }
+    }
+  ],
+  "block_half_extents": [
+    0.02,
+    0.05,
+    0.02
+  ],
+  "wall_inner_x": 0.78,
+  "table_top_z": 0.0,
+  "registry_sha256": "70fce6172a4eb6f831c553e69d29da78ca31b166ffd7f74dc590886ec3f4c1a9",
+  "pilot_summary": {
+    "A90_by_goal": {
+      "A_x-3_y-3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x00_y-3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x+3_y-3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x-3_y00": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x00_y00": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x+3_y00": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x-3_y+3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x00_y+3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "A_x+3_y+3": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      }
+    },
+    "B90_by_config": {
+      "B_wall_y_low|B_obj_y015|B_robot_home": {
+        "attempts": 3,
+        "success": 2,
+        "failure_reasons": {
+          "wall_contact_ever": 1
+        },
+        "success_rate": 0.667
+      },
+      "B_wall_y_low|B_obj_y015|B_robot_offset": {
+        "attempts": 3,
+        "success": 1,
+        "failure_reasons": {
+          "wall_contact_ever": 2
+        },
+        "success_rate": 0.333
+      },
+      "B_wall_y_mid|B_obj_y021|B_robot_home": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "B_wall_y_mid|B_obj_y021|B_robot_offset": {
+        "attempts": 3,
+        "success": 3,
+        "failure_reasons": {},
+        "success_rate": 1.0
+      },
+      "B_wall_y_high|B_obj_y027|B_robot_home": {
+        "attempts": 3,
+        "success": 2,
+        "failure_reasons": {
+          "wall_contact_ever": 1
+        },
+        "success_rate": 0.667
+      },
+      "B_wall_y_high|B_obj_y027|B_robot_offset": {
+        "attempts": 3,
+        "success": 1,
+        "failure_reasons": {
+          "wall_contact_ever": 2
+        },
+        "success_rate": 0.333
+      }
+    },
+    "source": "results/experiment_4_1/pilot/attempts.csv"
+  },
+  "notes": [
+    "A 的 9 个目标是预注册网格（±3 cm），pilot 里每个目标都跑过真实抓取/放置，未按结果筛选。",
+    "B 的主数据只使用 (物体起点, 目标区) 预先配对的 3 组；跨区配对需要横向推动，当前专家在该情形不稳定（见 pilot 里的跨区失败记录），因此不进入主数据，也不声称已实现\"同一起点按目标切换动作\"的条件泛化。",
+    "相机为实验 4.0 冻结版本 exp4.0-camera-v3，SHA256 见 camera_sha256。"
+  ]
+}
