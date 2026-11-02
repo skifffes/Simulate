@@ -50,5 +50,17 @@
     "b_rebound_max_m": 0.005
   },
   "n_attempts": 107,
-  "n_success": 107
+  "n_success": 90,
+  "n_success_fixed_by_preflight": true,
+  "by_skill": {
+    "B90": {
+      "attempts": 62,
+      "success": 45
+    },
+    "A90": {
+      "attempts": 45,
+      "success": 45
+    }
+  },
+  "bug_note": "旧版把历史 CSV 读回的 strict_success 当作字符串，非空字符串恒为真 → n_success 被算成 107；现按 \"true\"/\"false\" 解析。"
 }

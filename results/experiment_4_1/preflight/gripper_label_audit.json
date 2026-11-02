@@ -1,0 +1,1530 @@
+{
+  "version": "exp4.1-training-export-v1",
+  "n_episodes": 45,
+  "n_episodes_with_state_open_while_action_closing": 45,
+  "mean_gripper_state": 0.7950547556499876,
+  "mean_gripper_action": 0.7547941309491857,
+  "gripper_state_frac_open": 1.0,
+  "gripper_action_frac_open": 0.5735550155123912,
+  "worst_case": {
+    "episode_index": 8,
+    "version": "exp4.1-training-export-v1",
+    "n_frames": 196,
+    "gripper_state_mean": 0.793781630134172,
+    "gripper_action_mean": 0.7535714256976332,
+    "gripper_state_frac_open": 1.0,
+    "gripper_action_frac_open": 0.5714285714285714,
+    "n_closing_frames": 84,
+    "closing_frames_where_action_leads_state": 84,
+    "max_action_minus_state": 0.4813331412151456,
+    "min_action_minus_state": -0.5749993957579136,
+    "mean_abs_action_minus_state": 0.06085542281519393,
+    "action_gripper_levels": [
+      0.425,
+      1.0
+    ],
+    "state_gripper_levels": [
+      0.519,
+      0.52,
+      0.521,
+      0.522,
+      0.523,
+      0.524,
+      0.525,
+      0.526
+    ],
+    "grasp_event_frames": [
+      56,
+      58
+    ],
+    "n_grasp_event_frames_state_still_open": 3
+  },
+  "per_episode": [
+    {
+      "episode_index": 0,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7961992673961578,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.47184573486447334,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.06307683180020464,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.52,
+        0.521,
+        0.524,
+        0.525,
+        0.526,
+        0.527,
+        0.528,
+        0.529
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 1,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7956399872691045,
+      "gripper_action_mean": 0.7519035505575274,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5685279187817259,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4707586020231247,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.06352104550123518,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.52,
+        0.521,
+        0.525,
+        0.526,
+        0.527,
+        0.528,
+        0.529,
+        0.53
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 2,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 189,
+      "gripper_state_mean": 0.8042138928458804,
+      "gripper_action_mean": 0.7657407369050715,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5925925925925926,
+      "n_closing_frames": 77,
+      "closing_frames_where_action_leads_state": 77,
+      "max_action_minus_state": 0.481095421127975,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.06015337522698458,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 3,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7932167352892158,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4817615495994687,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.060570604633539915,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.515,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 4,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7971050988512152,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47072756569832563,
+      "min_action_minus_state": -0.5749988835304976,
+      "mean_abs_action_minus_state": 0.06378003600889778,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.521,
+        0.522,
+        0.526,
+        0.527,
+        0.528,
+        0.529,
+        0.53,
+        0.531
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 5,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.793514297244006,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47822112683206797,
+      "min_action_minus_state": -0.5749992094933987,
+      "mean_abs_action_minus_state": 0.06035282905213535,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.511,
+        0.512,
+        0.513,
+        0.514,
+        0.518,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 6,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7930156861554192,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4733873764052987,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.059714933800877945,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.519,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 7,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7929944466058241,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4823702620342374,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.06030104379644807,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 8,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.793781630134172,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4813331412151456,
+      "min_action_minus_state": -0.5749993957579136,
+      "mean_abs_action_minus_state": 0.06085542281519393,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 9,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 199,
+      "gripper_state_mean": 0.7945517506778016,
+      "gripper_action_mean": 0.7515075349777787,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5678391959798995,
+      "n_closing_frames": 86,
+      "closing_frames_where_action_leads_state": 86,
+      "max_action_minus_state": 0.47601701226085424,
+      "min_action_minus_state": -0.5749990697950125,
+      "mean_abs_action_minus_state": 0.06297809807068888,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526,
+        0.527,
+        0.528
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 10,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 190,
+      "gripper_state_mean": 0.8028338747736262,
+      "gripper_action_mean": 0.7639473647271332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5894736842105263,
+      "n_closing_frames": 78,
+      "closing_frames_where_action_leads_state": 78,
+      "max_action_minus_state": 0.4816044820472598,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.06010981655532592,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.514,
+        0.515,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 11,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7955484215778356,
+      "gripper_action_mean": 0.7565050989351406,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.576530612244898,
+      "n_closing_frames": 83,
+      "closing_frames_where_action_leads_state": 83,
+      "max_action_minus_state": 0.4734109155833721,
+      "min_action_minus_state": -0.574998278170824,
+      "mean_abs_action_minus_state": 0.059519221350474626,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 12,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7937158089309856,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4763782722875476,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.06082450455017011,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.515,
+        0.516,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 13,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7932649447930732,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4729745676741004,
+      "min_action_minus_state": -0.5749993491917849,
+      "mean_abs_action_minus_state": 0.059868118753938965,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 14,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7953853659730937,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47460850328207016,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.06203807659485206,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 15,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7933795375495472,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4816584521904588,
+      "min_action_minus_state": -0.5749990697950125,
+      "mean_abs_action_minus_state": 0.060671310020478986,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 16,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.793203490966817,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4817500710487366,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.06047358815273156,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 17,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7948607017086553,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47481462825089693,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.061509685377039165,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 18,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 200,
+      "gripper_state_mean": 0.7927942733513191,
+      "gripper_action_mean": 0.7527499971911311,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.57,
+      "n_closing_frames": 86,
+      "closing_frames_where_action_leads_state": 86,
+      "max_action_minus_state": 0.4785348894074559,
+      "min_action_minus_state": -0.5749982316046953,
+      "mean_abs_action_minus_state": 0.06024763605091721,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.511,
+        0.512,
+        0.513,
+        0.517,
+        0.521,
+        0.522,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 19,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 191,
+      "gripper_state_mean": 0.8001915908794051,
+      "gripper_action_mean": 0.762172771315456,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5863874345549738,
+      "n_closing_frames": 79,
+      "closing_frames_where_action_leads_state": 79,
+      "max_action_minus_state": 0.4838725319132209,
+      "min_action_minus_state": -0.5749993957579136,
+      "mean_abs_action_minus_state": 0.05932582831449065,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 20,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 188,
+      "gripper_state_mean": 0.8033731889049027,
+      "gripper_action_mean": 0.7644946771138843,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5904255319148937,
+      "n_closing_frames": 77,
+      "closing_frames_where_action_leads_state": 77,
+      "max_action_minus_state": 0.4807292716577649,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.0605842605025131,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 21,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7955842217985503,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.47207099851220846,
+      "min_action_minus_state": -0.5749984178692102,
+      "mean_abs_action_minus_state": 0.062470948676381144,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.519,
+        0.52,
+        0.524,
+        0.525,
+        0.526,
+        0.527,
+        0.528,
+        0.529
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 22,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7914198109322241,
+      "gripper_action_mean": 0.7519035505575274,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5685279187817259,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4846057156100869,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.06039111082664299,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.515,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 23,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7931768829810756,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47414181753993034,
+      "min_action_minus_state": -0.5749992094933987,
+      "mean_abs_action_minus_state": 0.06008531577524026,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.519,
+        0.52,
+        0.521
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 24,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7931090538352351,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.48381080850958824,
+      "min_action_minus_state": -0.5749988835304976,
+      "mean_abs_action_minus_state": 0.06045072661675136,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 25,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7946504153320708,
+      "gripper_action_mean": 0.7548223320527125,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5736040609137056,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.48122808802872896,
+      "min_action_minus_state": -0.5749992560595274,
+      "mean_abs_action_minus_state": 0.060512876558840877,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 26,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7953515226830437,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4705966217443347,
+      "min_action_minus_state": -0.5749982316046953,
+      "mean_abs_action_minus_state": 0.062030304514925284,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.517,
+        0.518,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526,
+        0.527
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 27,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 201,
+      "gripper_state_mean": 0.7914965560900705,
+      "gripper_action_mean": 0.7511194003050896,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5671641791044776,
+      "n_closing_frames": 87,
+      "closing_frames_where_action_leads_state": 87,
+      "max_action_minus_state": 0.47291144728660583,
+      "min_action_minus_state": -0.5749985575675964,
+      "mean_abs_action_minus_state": 0.059912518570338615,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.512,
+        0.513,
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.519,
+        0.52
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 28,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7919599759501174,
+      "gripper_action_mean": 0.7519035505575274,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5685279187817259,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4733688663691282,
+      "min_action_minus_state": -0.5749988835304976,
+      "mean_abs_action_minus_state": 0.06010743049517047,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.521
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 29,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 187,
+      "gripper_state_mean": 0.8039588280032105,
+      "gripper_action_mean": 0.7663101565471307,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5935828877005348,
+      "n_closing_frames": 76,
+      "closing_frames_where_action_leads_state": 76,
+      "max_action_minus_state": 0.479294266551733,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.05940063603043078,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.511,
+        0.512,
+        0.513,
+        0.517,
+        0.518,
+        0.521,
+        0.522,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 30,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7943783654699648,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4722863668575883,
+      "min_action_minus_state": -0.5749993491917849,
+      "mean_abs_action_minus_state": 0.06127082680192108,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.512,
+        0.513,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 31,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7920134890455809,
+      "gripper_action_mean": 0.7519035505575274,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5685279187817259,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4826090531423688,
+      "min_action_minus_state": -0.5749988835304976,
+      "mean_abs_action_minus_state": 0.06082824732503159,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 32,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7932533395704718,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.473411800339818,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.05977394636150221,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 33,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7934555634621041,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.481453794054687,
+      "min_action_minus_state": -0.5749991629272699,
+      "mean_abs_action_minus_state": 0.06073523320803287,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 34,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.795223345486165,
+      "gripper_action_mean": 0.7560606029900637,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5757575757575758,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4743423778563738,
+      "min_action_minus_state": -0.5749984178692102,
+      "mean_abs_action_minus_state": 0.059431261970953206,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.52,
+        0.521
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 35,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7953221190920365,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4729954060167074,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.06188682567005103,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.519,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 36,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 199,
+      "gripper_state_mean": 0.7928334783257251,
+      "gripper_action_mean": 0.7515075349777787,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5678391959798995,
+      "n_closing_frames": 86,
+      "closing_frames_where_action_leads_state": 86,
+      "max_action_minus_state": 0.4734729416668415,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.061087735792874694,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.511,
+        0.512,
+        0.513,
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 37,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7931530086342433,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.47291412483900785,
+      "min_action_minus_state": -0.574998278170824,
+      "mean_abs_action_minus_state": 0.05981249327423296,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        57,
+        59
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 38,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 189,
+      "gripper_state_mean": 0.8026205398211325,
+      "gripper_action_mean": 0.7657407369050715,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5925925925925926,
+      "n_closing_frames": 77,
+      "closing_frames_where_action_leads_state": 77,
+      "max_action_minus_state": 0.48493281938135624,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.0588162625504155,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 39,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.7929788809316703,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4733986221253872,
+      "min_action_minus_state": -0.5749992094933987,
+      "mean_abs_action_minus_state": 0.05993997956146345,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.513,
+        0.514,
+        0.515,
+        0.516,
+        0.517,
+        0.518,
+        0.52,
+        0.521
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 40,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7948485193584038,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.47593419440090656,
+      "min_action_minus_state": -0.5749990232288837,
+      "mean_abs_action_minus_state": 0.0618900657080266,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525,
+        0.526
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 41,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7935579432060524,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.48178781289607286,
+      "min_action_minus_state": -0.5749992560595274,
+      "mean_abs_action_minus_state": 0.06069102074608815,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 42,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 198,
+      "gripper_state_mean": 0.79275058868407,
+      "gripper_action_mean": 0.7531565628155614,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5707070707070707,
+      "n_closing_frames": 85,
+      "closing_frames_where_action_leads_state": 85,
+      "max_action_minus_state": 0.4817760083824396,
+      "min_action_minus_state": -0.574998976662755,
+      "mean_abs_action_minus_state": 0.06018433399084541,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 43,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 197,
+      "gripper_state_mean": 0.7941169183899833,
+      "gripper_action_mean": 0.7548223320527125,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5736040609137056,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4752228735014796,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.05965933865078058,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.516,
+        0.517,
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    },
+    {
+      "episode_index": 44,
+      "version": "exp4.1-training-export-v1",
+      "n_frames": 196,
+      "gripper_state_mean": 0.7934666452881861,
+      "gripper_action_mean": 0.7535714256976332,
+      "gripper_state_frac_open": 1.0,
+      "gripper_action_frac_open": 0.5714285714285714,
+      "n_closing_frames": 84,
+      "closing_frames_where_action_leads_state": 84,
+      "max_action_minus_state": 0.4823613679036498,
+      "min_action_minus_state": -0.5749989300966263,
+      "mean_abs_action_minus_state": 0.06068023233864533,
+      "action_gripper_levels": [
+        0.425,
+        1.0
+      ],
+      "state_gripper_levels": [
+        0.518,
+        0.519,
+        0.52,
+        0.521,
+        0.522,
+        0.523,
+        0.524,
+        0.525
+      ],
+      "grasp_event_frames": [
+        56,
+        58
+      ],
+      "n_grasp_event_frames_state_still_open": 3
+    }
+  ],
+  "note": "训练动作夹爪必须用 action[:,7]（专家目标，闭合 0.425）而不是 state[:,7:9]（观测，抓取时仍可能接近 1.0）；否则抓取阶段会给出\"保持张开\"的错误监督。"
+}

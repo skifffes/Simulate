@@ -21,7 +21,7 @@ import numpy as np
 
 from vla.atomic_tasks.scene2 import WALL_INNER_X
 
-CONFIG_VERSION = 'exp4.1-strict-v1'
+CONFIG_VERSION = 'exp4.1-strict-v1.1'
 
 
 @dataclass(frozen=True)
@@ -39,6 +39,9 @@ class StrictEvalConfig:
     a_min_lift_m: float = 0.05
     a_min_transport_m: float = 0.10
     a_slip_max_m: float = 0.01
+    a_ang_speed_max: float = 0.5          # rad/s，作用到物体的角速度上限
+    a_grasp_force_min_n: float = 0.05     # 每个指尖的最小有效法向力
+    a_grasp_min_steps: int = 5            # 每个指尖至少持续接触的物理步数
     a_release_grip_min_m: float = 0.030   # 释放后单指开口
     a_retreat_min_m: float = 0.10         # 结束时 EE 离物体距离
     # ---- B90 ----
@@ -129,6 +132,35 @@ class PhysicsMonitor:
         rec('robot_wall', self.robot, self.wall)
 
     # ---- 汇总 ----
+    def finger_contact_stats(self, min_force: float = 0.0) -> dict:
+        """每个指尖（robot link 9 / 10）各自的接触步数与最大法向力。
+
+        `getContactPoints(bodyA=block, bodyB=robot)` 里 `link_b` 是 robot 的 link index，
+        因此用手指 link 过滤即可区分左右指；review #4 要求"双指"而不是"任意机器人接触"。
+        """
+        out = {9: {'steps': 0, 'max_force': 0.0, 'n_entries': 0},
+               10: {'steps': 0, 'max_force': 0.0, 'n_entries': 0}}
+        seen = {9: set(), 10: set()}
+        for e in self.events['robot_block']:
+            link = int(e['link_b'])
+            if link in out and e['normal_force'] >= min_force:
+                seen[link].add(e['step'])
+                out[link]['max_force'] = max(out[link]['max_force'], float(e['normal_force']))
+                out[link]['n_entries'] += 1
+        for link in out:
+            out[link]['steps'] = len(seen[link])
+        return out
+
+    def tail(self, n_steps: int = 48) -> dict:
+        """稳定窗口尾段的物体位移（slip）与最大角速度。"""
+        if not self.track:
+            return {'n_steps': 0, 'slip_m': 0.0, 'ang_speed_max': 0.0}
+        arr = np.asarray(self.track[-max(1, n_steps):], dtype=float)
+        p0 = arr[0, 1:4]
+        disp = np.linalg.norm(arr[:, 1:4] - p0[None, :], axis=1)
+        return {'n_steps': int(arr.shape[0]), 'slip_m': float(disp.max()),
+                'ang_speed_max': float(arr[:, 6].max())}
+
     def summary(self) -> dict:
         def agg(name):
             ev = self.events[name]
@@ -139,7 +171,9 @@ class PhysicsMonitor:
                 'last_step': ev[-1]['step'] if ev else None,
                 'max_normal_force': max((e['normal_force'] for e in ev), default=0.0),
                 'min_distance': min((e['distance'] for e in ev), default=None),
-                'links': sorted({e['link_a'] for e in ev}),
+                'links_a': sorted({e['link_a'] for e in ev}),
+                'links_b': sorted({e['link_b'] for e in ev}),
+                'links': sorted({e['link_b'] for e in ev}),
                 'normals': [e['normal_b_to_a'] for e in ev[-5:]],
             }
 
@@ -222,10 +256,19 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
     yaw_err = axis_error_x(st['yaw']) if goal.target_axis == 'x' else axis_error_y(st['yaw'])
     tilt = abs(st['roll_deg']) + abs(st['pitch_deg'])
     speed = float(np.linalg.norm(st['lin_vel']))
+    ang_speed = float(np.linalg.norm(st['ang_vel']))
     supported = len(scene.contacts(scene.block, scene.plane)) > 0
 
+    # ---- 双指抓取：两个指尖各自都要有"足够多步 + 足够力"的接触（review #4）----
+    finger_stats = monitor.finger_contact_stats(cfg.a_grasp_force_min_n)
+    two_finger = all(finger_stats[f]['steps'] >= cfg.a_grasp_min_steps for f in (9, 10))
+    # ---- 释放后的稳定/滑移：只看稳定窗口尾段（最后 0.2 s）----
+    tail = monitor.tail(n_steps=int(0.2 * 240))
+    slip = tail['slip_m']
+    ang_speed_tail = tail['ang_speed_max']
+
     checks = {
-        'grasped_by_two_fingers': robot_block_steps > 0,
+        'grasped_by_two_fingers': bool(two_finger),
         'lifted': lift >= cfg.a_min_lift_m,
         'transported': transport >= cfg.a_min_transport_m,
         'position_ok': pos_err <= cfg.a_pos_tol_m,
@@ -235,13 +278,16 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
         'retreated': ee_to_obj >= cfg.a_retreat_min_m,
         'table_supported': supported,
         'stable': speed < cfg.speed_max,
+        'ang_speed_ok': ang_speed_tail <= cfg.a_ang_speed_max,
+        'no_slip_after_release': slip <= cfg.a_slip_max_m,
         'no_penetration': pen_table > -cfg.penetration_max_m,
     }
     strict = all(checks.values())
     reason = None
     if not strict:
         order = ['grasped_by_two_fingers', 'lifted', 'transported', 'position_ok', 'yaw_ok',
-                 'tilt_ok', 'released', 'retreated', 'table_supported', 'stable', 'no_penetration']
+                 'tilt_ok', 'released', 'retreated', 'table_supported', 'stable',
+                 'ang_speed_ok', 'no_slip_after_release', 'no_penetration']
         reason = next(k for k in order if not checks[k])
     return {
         'eval_version': cfg.version, 'skill': 'A90', 'goal_id': goal.goal_id,
@@ -251,8 +297,14 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
         'metrics': {
             'position_error_m': pos_err, 'yaw_error_rad': yaw_err, 'yaw_error_deg': math.degrees(yaw_err),
             'tilt_deg': tilt, 'lift_m': lift, 'transport_m': transport,
-            'final_speed_m_s': speed, 'ee_object_distance_m': ee_to_obj,
+            'final_speed_m_s': speed, 'final_ang_speed_rad_s': ang_speed,
+            'ee_object_distance_m': ee_to_obj,
             'gripper_width_m': float(fingers.mean()), 'robot_block_contact_steps': robot_block_steps,
+            'finger9_contact_steps': finger_stats[9]['steps'],
+            'finger9_max_force_n': finger_stats[9]['max_force'],
+            'finger10_contact_steps': finger_stats[10]['steps'],
+            'finger10_max_force_n': finger_stats[10]['max_force'],
+            'slip_after_release_m': slip, 'ang_speed_tail_max_rad_s': ang_speed_tail,
             'table_penetration_m': pen_table, 'n_control_steps': None,
             'obj_terminal_pos': st['pos'].tolist(), 'obj_terminal_quat': st['quat'].tolist(),
             'obj_terminal_yaw': st['yaw'], 'robot_q_terminal': rs['q'].tolist(),

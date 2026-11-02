@@ -1,0 +1,12 @@
+{
+  "data_hz": 20.0,
+  "droid_hz": 15.0,
+  "correct_delta_scaling_20_to_15": 1.3333333333333333,
+  "wrong_scaling_used_in_report_v1": 0.75,
+  "explanation": "保持关节速度不变时 Δq_15 = Δq_20 × (20/15) = 1.3333×；之前文档写成 ×15/20 是把比例写反了。",
+  "recommendation": "4.2 只选一个频率：要么沿用 20 Hz（数据与专家已验证），要么在 15 Hz 下重新采集/重采样并用严格评价器验证执行轨迹；不要对已采集的闭环轨迹做简单线性缩放，因为它不保留接触动力学。",
+  "checked_values": {
+    "delta_absmax_20hz_A90": null,
+    "delta_scaled_15hz_A90": null
+  }
+}

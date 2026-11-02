@@ -26,12 +26,12 @@
     "location": "/scratch/lijh/exp40/repo/data/exp41",
     "in_git": false
   },
-  "n_files": 187,
+  "n_files": 194,
   "files": [
     {
       "path": "dataset/collection_summary.json",
-      "size_bytes": 1346,
-      "sha256": "505e7eb9f2e5a91595cc995d449c76fc9ad086a0f39cb2fd3aefbb6e3c01f8ee"
+      "size_bytes": 1700,
+      "sha256": "67fea7d67e9d320e951e8b7230d9ec86b7e1d27f15bd3ef285cfacf433a008a8"
     },
     {
       "path": "dataset/dataset_manifest.json",
@@ -665,8 +665,8 @@
     },
     {
       "path": "dataset/split_manifest.json",
-      "size_bytes": 1365,
-      "sha256": "a62e94cafbfc11ab37cb94df16233bb2db4385da0ef1503e0829ce335371acad"
+      "size_bytes": 1687,
+      "sha256": "be5756daa53beb75ebde954dee249c0132f5d5af97ab90d612e502b27d5339ce"
     },
     {
       "path": "environment_and_action_contract.md",
@@ -944,14 +944,49 @@
       "sha256": "c76679cc2c847abde9754e0bec6d21f14462324dd06e1400ff858992b21e5fa3"
     },
     {
+      "path": "preflight/gripper_label_audit.json",
+      "size_bytes": 41083,
+      "sha256": "ba3db32cfa389c06616aa0ab7cb5e73081a1924bbabbd565ef57eae06f023190"
+    },
+    {
+      "path": "preflight/openpi_transform_check.json",
+      "size_bytes": 656,
+      "sha256": "4514440aa1b426c951112bdd5f36e9cedfbaaf26151d6826b5b0860ea96aed39"
+    },
+    {
+      "path": "preflight/preflight_report.md",
+      "size_bytes": 5957,
+      "sha256": "4323967f157e1b3bf526a9129f8e1614dda5daf1227d98d35ff4b258f7d7adf8"
+    },
+    {
+      "path": "preflight/reeval_sample.json",
+      "size_bytes": 5866,
+      "sha256": "6f0aa56faecff02ea296a2d572c6a610d7527ab994ec80ab08ae6b6f427cd98e"
+    },
+    {
+      "path": "preflight/reeval_v11.json",
+      "size_bytes": 20548,
+      "sha256": "32332d63ca12f0ae0935051b0cd2be71008e7e65f34da9866fb9d184c19bb71e"
+    },
+    {
+      "path": "preflight/time_contract.json",
+      "size_bytes": 652,
+      "sha256": "a452b4bfb51c49f8f447e773690df8f343cc50063217ffb25de07ac0bc2cbb94"
+    },
+    {
+      "path": "preflight/video_and_transforms.json",
+      "size_bytes": 498,
+      "sha256": "e10f73ec2b591f48bc55bcd7518b8da01be7da8d30c8baa0ddcc389cd552b013"
+    },
+    {
       "path": "README.md",
-      "size_bytes": 3780,
-      "sha256": "0021326e0d06eaf8391849536f97ba1b4c3d0956291c6c3ed98ca348c99050f3"
+      "size_bytes": 3977,
+      "sha256": "309d25e47f1b3c79bfd4b8bfd55a13ecf2a712e71203421bb37ca0c067a0b524"
     },
     {
       "path": "reports/experiment_4_1_report.md",
-      "size_bytes": 18812,
-      "sha256": "904d032150efde14a44922f191a756965f4f593eb54f26217f212bf24986bc43"
+      "size_bytes": 19132,
+      "sha256": "02dca6a4c77c10677713e864af52fe85acf57a56950ef5153ed7c9a4f1270f44"
     },
     {
       "path": "scene_space/b_start_states.json",
@@ -963,5 +998,23 @@
       "size_bytes": 8844,
       "sha256": "6b4db34f8a228e303acc515383d002844721777746f744de2930510b0eb91362"
     }
-  ]
+  ],
+  "preflight": {
+    "eval_version": "exp4.1-strict-v1.1",
+    "training_export": "exp4.1-training-export-v1",
+    "openpi_transform_roundtrip_pass": true,
+    "openpi_roundtrip_max_err": 6.9e-18,
+    "gripper_action_levels": [
+      0.425,
+      1.0
+    ],
+    "n_success_fixed": 90,
+    "n_attempts": 107,
+    "a90_reeval_sample": {
+      "n": 6,
+      "n_success": 5,
+      "n_both_fingers": 6
+    },
+    "split_manifest_version": "exp4.1-split-v1"
+  }
 }

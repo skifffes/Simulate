@@ -1,0 +1,596 @@
+{
+  "eval_version_old": "exp4.1-strict-v1",
+  "eval_version_new": "exp4.1-strict-v1.1",
+  "n_a90_records": 45,
+  "n_unchanged_success": 45,
+  "n_downgraded": 0,
+  "n_two_finger_decidable": 0,
+  "rows": [
+    {
+      "attempt_id": "attempt-076ae6ee4b9451df",
+      "goal_id": "A_x00_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 4.622645963074536,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-084de0589693548a",
+      "goal_id": "A_x+3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 10.910616263164384,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-0ad9e50c642b53e3",
+      "goal_id": "A_x+3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.46930682349189,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-107d057807205b1f",
+      "goal_id": "A_x-3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 7.108833138700188,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-13c8de5fdd6b5ea9",
+      "goal_id": "A_x-3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 6.001870257862756,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-144abf699e925708",
+      "goal_id": "A_x00_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.288392928783852,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-183158f677d8545f",
+      "goal_id": "A_x-3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 6.866512141784831,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-34234d3228a05386",
+      "goal_id": "A_x00_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.5077067635702,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-408d3576e84a59c5",
+      "goal_id": "A_x-3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.848542629911169,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-448c8ececc135a1c",
+      "goal_id": "A_x-3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.64603906598867,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-45b8fa605de15d48",
+      "goal_id": "A_x-3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.71738780808778,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-4958e9d5dcdb524e",
+      "goal_id": "A_x+3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.012555448557391,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-4b0bc2bb766a50b0",
+      "goal_id": "A_x+3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.429541296830301,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-50b461a24db05fab",
+      "goal_id": "A_x+3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.09827782421068,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-53a5df81b9eb505a",
+      "goal_id": "A_x+3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.387559660755599,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-5b530f72c6ce5824",
+      "goal_id": "A_x+3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.527242445153755,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-69835b440fbd5e9d",
+      "goal_id": "A_x00_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.29232997763745,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-6a7f250d4ee154c7",
+      "goal_id": "A_x00_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 5.2741627395448685,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-6a85b751325d5c0f",
+      "goal_id": "A_x00_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.277269513789651,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-71b9db5917785b3c",
+      "goal_id": "A_x00_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.319903789534067,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-7316600d4c9c5bd6",
+      "goal_id": "A_x+3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.339681561975324,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-7907f11a4ec856e0",
+      "goal_id": "A_x00_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.107774927755322,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-79845366eaff5a42",
+      "goal_id": "A_x00_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.681266070127123,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-8e076d4692b1518f",
+      "goal_id": "A_x+3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.346309627555211,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-8e788a5a38575054",
+      "goal_id": "A_x00_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.490109785352514,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-9167c2d82a0b51c2",
+      "goal_id": "A_x-3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.330127323430467,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-91dd589d088359ba",
+      "goal_id": "A_x-3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.863704695775365,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-93056e1b317d523c",
+      "goal_id": "A_x-3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 6.533035452736169,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-9ff2dfc643be53d1",
+      "goal_id": "A_x+3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.336086334175308,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-ad2911492fca5f05",
+      "goal_id": "A_x-3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 7.17095256149331,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-b006eefc077c525d",
+      "goal_id": "A_x+3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.082210014374164,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-b0ea54dad2ab5a9a",
+      "goal_id": "A_x00_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.527441047545043,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-b1aa9bebd5ee5e04",
+      "goal_id": "A_x+3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.513517007932816,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-b32817871c575097",
+      "goal_id": "A_x+3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.472761627646364,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-c2c0a02b44a25e5b",
+      "goal_id": "A_x00_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.368824031019669,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-c97a45d70deb58eb",
+      "goal_id": "A_x-3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 6.183553474106385,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-cb70ded39aaf5b5b",
+      "goal_id": "A_x00_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.519045427676879,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-ceb90ac928c55eab",
+      "goal_id": "A_x00_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 8.190068686183578,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-d16bd794dde55e15",
+      "goal_id": "A_x+3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.431327605119366,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-dd4253397d055997",
+      "goal_id": "A_x-3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.483781368153576,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-dd7a07127ab25c59",
+      "goal_id": "A_x-3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.392109542806176,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-ddf39d58f0315176",
+      "goal_id": "A_x-3_y+3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 6.5704498418991575,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-e0fc7223392c56f8",
+      "goal_id": "A_x00_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.39430323728438,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-e610a17685cf5a40",
+      "goal_id": "A_x-3_y00",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.326133308288194,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    },
+    {
+      "attempt_id": "attempt-ea17df444fbd539d",
+      "goal_id": "A_x+3_y-3",
+      "v1_success": true,
+      "two_finger_decidable": false,
+      "two_finger_links_recorded": [
+        -1
+      ],
+      "episode_ang_speed_max": 9.429710598707128,
+      "episode_ang_speed_usable_for_stability": false,
+      "v11_decision": "not_decidable_from_record",
+      "slip_after_release": "not_recomputable_from_record (needs tail track)"
+    }
+  ],
+  "note": "旧记录的 contact_summary.robot_block.links 汇总的是 link_a（恒 -1），且未保存稳定窗口尾段轨迹，因此\"双指/释放后滑移/尾段角速度\"在旧记录上**不可决定**（不是\"全部失败\"）。旧标签原样保留；外部证据见 reeval_sample.json 的 6 条重放。"
+}

@@ -1,42 +1,48 @@
 {
-  "policy": "split by goal/config group, never by frame; no near-duplicate scene may straddle splits",
+  "version": "exp4.1-split-v1",
+  "frozen_before_collection": false,
+  "frozen_independent_of_results": true,
+  "generated_from": "src/exp41/scene41.py 的目标/条件定义（与采集结果无关）",
   "A90": {
-    "train_goals": [
-      "A_x+3_y+3",
-      "A_x+3_y-3",
-      "A_x+3_y00",
-      "A_x-3_y+3",
+    "train": [
       "A_x-3_y-3",
-      "A_x-3_y00"
+      "A_x00_y-3",
+      "A_x+3_y-3",
+      "A_x-3_y00",
+      "A_x00_y00",
+      "A_x+3_y00"
     ],
-    "val_goals": [
-      "A_x00_y+3",
-      "A_x00_y-3"
+    "val": [
+      "A_x-3_y+3",
+      "A_x00_y+3"
     ],
-    "test_goals": [
-      "A_x00_y00"
+    "test_atom_extrapolation": [
+      "A_x+3_y+3"
     ],
-    "heldout_role": "test goals are never seen during training"
+    "note": "test_atom_extrapolation = 目标本身在训练中未出现（更难的一档）"
   },
   "B90": {
-    "train_configs": [
-      "B_wall_y_high|B_obj_y027|B_robot_home",
-      "B_wall_y_high|B_obj_y027|B_robot_offset",
+    "train": [
       "B_wall_y_low|B_obj_y015|B_robot_home",
-      "B_wall_y_low|B_obj_y015|B_robot_offset"
-    ],
-    "val_configs": [
-      "B_wall_y_mid|B_obj_y021|B_robot_home"
-    ],
-    "test_configs": [
+      "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "B_wall_y_mid|B_obj_y021|B_robot_home",
       "B_wall_y_mid|B_obj_y021|B_robot_offset"
     ],
-    "heldout_role": "test configs hold out a (object start, goal, robot start) combination"
+    "val": [
+      "B_wall_y_high|B_obj_y027|B_robot_home"
+    ],
+    "test_atom_extrapolation": [
+      "B_wall_y_high|B_obj_y027|B_robot_offset"
+    ],
+    "note": "这里的 test 是\"未见过的 (目标, 起点, 机器人构型) 组合\"；注意它同时改变了原子条件本身，因此不能用来单独归因组合失败。"
   },
-  "composition_conditions_future": {
-    "note": "实验 4.1 不产生任何 A→B 组合轨迹；4.2+ 将用 A 终态 × B 起点配对，组合配对本身在训练中从未出现（held-out composition）",
-    "a_terminal_states": "results/experiment_4_1/dataset/diversity_audit.json + records/*.json",
-    "b_start_states": "results/experiment_4_1/scene_space/b_start_states.json"
-  },
-  "generated_from": "collection records (strict_success only)"
+  "composition_tests_future": {
+    "tier1_atoms_seen_pairing_unseen": "A 终态 × B 起点：两侧原子条件都在训练集内，但 (A 终态, B 起点) 的配对从未出现；这是 4.3 的主测试，用于隔离\"组合连接\"问题",
+    "tier2_atoms_unseen": "目标/起点本身未出现（= 本文件的 test_atom_extrapolation）",
+    "leakage_rules": [
+      "同一物理场景的近重复不得跨集合",
+      "任何 A→B 连续轨迹都不能进入训练集",
+      "B 原子示范必须独立启动，不含 A 的历史"
+    ]
+  }
 }

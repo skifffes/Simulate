@@ -1,0 +1,30 @@
+{
+  "video_decode": {
+    "A90": {
+      "n_video_files": 90,
+      "n_expected": 90,
+      "decoder": "imageio",
+      "sampled_frame_counts": [
+        198,
+        197,
+        189,
+        198
+      ]
+    },
+    "B90": {
+      "n_video_files": 90,
+      "n_expected": 90,
+      "decoder": "imageio",
+      "sampled_frame_counts": [
+        157,
+        178,
+        156,
+        162
+      ]
+    }
+  },
+  "openpi_transform": {
+    "importable": false,
+    "error": "No module named 'flax'"
+  }
+}
