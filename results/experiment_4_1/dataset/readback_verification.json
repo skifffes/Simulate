@@ -10,631 +10,631 @@
       {
         "episode_index": 0,
         "ok": true,
-        "n_frames": 199,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
+        "n_frames": 198,
+        "task": "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X",
         "task_index": 0,
         "detail": {
           "action_vs_next_state_max_rad": 0.0054582953453063965,
-          "action_vs_next_state_mean_rad": 0.0005972897139948252,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-          "n_frames": 199,
-          "video_bytes": 509949
+          "action_vs_next_state_mean_rad": 0.000596695714314983,
+          "task": "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X",
+          "n_frames": 198,
+          "video_bytes": 504166
         }
       },
       {
         "episode_index": 1,
         "ok": true,
-        "n_frames": 191,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+        "n_frames": 197,
+        "task": "pick up the orange block and place it in the target area at (0.543, 0.156) with its long side aligned with X",
         "task_index": 1,
         "detail": {
           "action_vs_next_state_max_rad": 0.0055571794509887695,
-          "action_vs_next_state_mean_rad": 0.0005958969396618029,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-          "n_frames": 191,
-          "video_bytes": 491777
+          "action_vs_next_state_mean_rad": 0.0005820208757156488,
+          "task": "pick up the orange block and place it in the target area at (0.543, 0.156) with its long side aligned with X",
+          "n_frames": 197,
+          "video_bytes": 506074
         }
       },
       {
         "episode_index": 2,
         "ok": true,
-        "n_frames": 190,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
+        "n_frames": 189,
+        "task": "pick up the orange block and place it in the target area at (0.578, 0.146) with its long side aligned with X",
         "task_index": 2,
         "detail": {
           "action_vs_next_state_max_rad": 0.005441725254058838,
-          "action_vs_next_state_mean_rad": 0.0006079343333159521,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-          "n_frames": 190,
-          "video_bytes": 486825
+          "action_vs_next_state_mean_rad": 0.0006079776663643722,
+          "task": "pick up the orange block and place it in the target area at (0.578, 0.146) with its long side aligned with X",
+          "n_frames": 189,
+          "video_bytes": 485283
         }
       },
       {
         "episode_index": 3,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+        "task": "pick up the orange block and place it in the target area at (0.528, 0.184) with its long side aligned with X",
         "task_index": 3,
         "detail": {
           "action_vs_next_state_max_rad": 0.0054607391357421875,
-          "action_vs_next_state_mean_rad": 0.0005981174832965041,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005914846444311895,
+          "task": "pick up the orange block and place it in the target area at (0.528, 0.184) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 502309
+          "video_bytes": 502066
         }
       },
       {
         "episode_index": 4,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
+        "n_frames": 196,
+        "task": "pick up the orange block and place it in the target area at (0.555, 0.181) with its long side aligned with X",
         "task_index": 4,
         "detail": {
           "action_vs_next_state_max_rad": 0.005555331707000732,
-          "action_vs_next_state_mean_rad": 0.0005851138974311051,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 502542
+          "action_vs_next_state_mean_rad": 0.0005866468924908147,
+          "task": "pick up the orange block and place it in the target area at (0.555, 0.181) with its long side aligned with X",
+          "n_frames": 196,
+          "video_bytes": 498637
         }
       },
       {
         "episode_index": 5,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+        "task": "pick up the orange block and place it in the target area at (0.575, 0.177) with its long side aligned with X",
         "task_index": 5,
         "detail": {
           "action_vs_next_state_max_rad": 0.005244463682174683,
-          "action_vs_next_state_mean_rad": 0.000601594909007389,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006016986030769055,
+          "task": "pick up the orange block and place it in the target area at (0.575, 0.177) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499930
+          "video_bytes": 500368
         }
       },
       {
         "episode_index": 6,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+        "task": "pick up the orange block and place it in the target area at (0.518, 0.217) with its long side aligned with X",
         "task_index": 6,
         "detail": {
           "action_vs_next_state_max_rad": 0.005543887615203857,
-          "action_vs_next_state_mean_rad": 0.000600461717727605,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006022359169481238,
+          "task": "pick up the orange block and place it in the target area at (0.518, 0.217) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500562
+          "video_bytes": 500190
         }
       },
       {
         "episode_index": 7,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
+        "n_frames": 196,
+        "task": "pick up the orange block and place it in the target area at (0.553, 0.210) with its long side aligned with X",
         "task_index": 7,
         "detail": {
           "action_vs_next_state_max_rad": 0.005448460578918457,
-          "action_vs_next_state_mean_rad": 0.0005994050506539597,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 500682
+          "action_vs_next_state_mean_rad": 0.0006022592455464468,
+          "task": "pick up the orange block and place it in the target area at (0.553, 0.210) with its long side aligned with X",
+          "n_frames": 196,
+          "video_bytes": 496451
         }
       },
       {
         "episode_index": 8,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+        "task": "pick up the orange block and place it in the target area at (0.581, 0.212) with its long side aligned with X",
         "task_index": 8,
         "detail": {
           "action_vs_next_state_max_rad": 0.005345940589904785,
-          "action_vs_next_state_mean_rad": 0.0006111947131626122,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.000611976460939518,
+          "task": "pick up the orange block and place it in the target area at (0.581, 0.212) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 495666
+          "video_bytes": 496182
         }
       },
       {
         "episode_index": 9,
         "ok": true,
         "n_frames": 199,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-        "task_index": 0,
+        "task": "pick up the orange block and place it in the target area at (0.516, 0.149) with its long side aligned with X",
+        "task_index": 9,
         "detail": {
           "action_vs_next_state_max_rad": 0.005365282297134399,
-          "action_vs_next_state_mean_rad": 0.0005952891257185562,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005983671280130629,
+          "task": "pick up the orange block and place it in the target area at (0.516, 0.149) with its long side aligned with X",
           "n_frames": 199,
-          "video_bytes": 509329
+          "video_bytes": 508461
         }
       },
       {
         "episode_index": 10,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-        "task_index": 1,
+        "n_frames": 190,
+        "task": "pick up the orange block and place it in the target area at (0.554, 0.143) with its long side aligned with X",
+        "task_index": 10,
         "detail": {
           "action_vs_next_state_max_rad": 0.005330145359039307,
-          "action_vs_next_state_mean_rad": 0.0005852034117027334,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 506322
+          "action_vs_next_state_mean_rad": 0.0006035369878907986,
+          "task": "pick up the orange block and place it in the target area at (0.554, 0.143) with its long side aligned with X",
+          "n_frames": 190,
+          "video_bytes": 486354
         }
       },
       {
         "episode_index": 11,
         "ok": true,
-        "n_frames": 194,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-        "task_index": 2,
+        "n_frames": 196,
+        "task": "pick up the orange block and place it in the target area at (0.579, 0.154) with its long side aligned with X",
+        "task_index": 11,
         "detail": {
           "action_vs_next_state_max_rad": 0.005153357982635498,
-          "action_vs_next_state_mean_rad": 0.0006074786984629394,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-          "n_frames": 194,
-          "video_bytes": 496809
+          "action_vs_next_state_mean_rad": 0.0006019481222513908,
+          "task": "pick up the orange block and place it in the target area at (0.579, 0.154) with its long side aligned with X",
+          "n_frames": 196,
+          "video_bytes": 502245
         }
       },
       {
         "episode_index": 12,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
-        "task_index": 3,
+        "task": "pick up the orange block and place it in the target area at (0.512, 0.175) with its long side aligned with X",
+        "task_index": 12,
         "detail": {
           "action_vs_next_state_max_rad": 0.005563139915466309,
-          "action_vs_next_state_mean_rad": 0.0005970662269706727,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006041256848412579,
+          "task": "pick up the orange block and place it in the target area at (0.512, 0.175) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 503810
+          "video_bytes": 504276
         }
       },
       {
         "episode_index": 13,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-        "task_index": 4,
+        "n_frames": 198,
+        "task": "pick up the orange block and place it in the target area at (0.544, 0.177) with its long side aligned with X",
+        "task_index": 13,
         "detail": {
           "action_vs_next_state_max_rad": 0.005347907543182373,
-          "action_vs_next_state_mean_rad": 0.000594846561835811,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 503119
+          "action_vs_next_state_mean_rad": 0.0005920065011233722,
+          "task": "pick up the orange block and place it in the target area at (0.544, 0.177) with its long side aligned with X",
+          "n_frames": 198,
+          "video_bytes": 502955
         }
       },
       {
         "episode_index": 14,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
-        "task_index": 5,
+        "task": "pick up the orange block and place it in the target area at (0.579, 0.182) with its long side aligned with X",
+        "task_index": 14,
         "detail": {
           "action_vs_next_state_max_rad": 0.005563974380493164,
-          "action_vs_next_state_mean_rad": 0.0005887363621912387,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005890629773593002,
+          "task": "pick up the orange block and place it in the target area at (0.579, 0.182) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 500359
+          "video_bytes": 499554
         }
       },
       {
         "episode_index": 15,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
-        "task_index": 6,
+        "task": "pick up the orange block and place it in the target area at (0.519, 0.214) with its long side aligned with X",
+        "task_index": 15,
         "detail": {
           "action_vs_next_state_max_rad": 0.005343198776245117,
-          "action_vs_next_state_mean_rad": 0.0006054397388895141,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006057849482233571,
+          "task": "pick up the orange block and place it in the target area at (0.519, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500264
+          "video_bytes": 500415
         }
       },
       {
         "episode_index": 16,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-        "task_index": 7,
+        "n_frames": 196,
+        "task": "pick up the orange block and place it in the target area at (0.556, 0.215) with its long side aligned with X",
+        "task_index": 16,
         "detail": {
           "action_vs_next_state_max_rad": 0.00544583797454834,
-          "action_vs_next_state_mean_rad": 0.0005929433876696613,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 500830
+          "action_vs_next_state_mean_rad": 0.0005979850030195645,
+          "task": "pick up the orange block and place it in the target area at (0.556, 0.215) with its long side aligned with X",
+          "n_frames": 196,
+          "video_bytes": 497281
         }
       },
       {
         "episode_index": 17,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
-        "task_index": 8,
+        "task": "pick up the orange block and place it in the target area at (0.576, 0.202) with its long side aligned with X",
+        "task_index": 17,
         "detail": {
           "action_vs_next_state_max_rad": 0.0054628849029541016,
-          "action_vs_next_state_mean_rad": 0.0006034486542372485,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005967848320947252,
+          "task": "pick up the orange block and place it in the target area at (0.576, 0.202) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 496230
+          "video_bytes": 498478
         }
       },
       {
         "episode_index": 18,
         "ok": true,
-        "n_frames": 201,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-        "task_index": 0,
+        "n_frames": 200,
+        "task": "pick up the orange block and place it in the target area at (0.524, 0.153) with its long side aligned with X",
+        "task_index": 18,
         "detail": {
           "action_vs_next_state_max_rad": 0.005150735378265381,
-          "action_vs_next_state_mean_rad": 0.0005971394319541494,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-          "n_frames": 201,
-          "video_bytes": 512544
+          "action_vs_next_state_mean_rad": 0.0005976837001293532,
+          "task": "pick up the orange block and place it in the target area at (0.524, 0.153) with its long side aligned with X",
+          "n_frames": 200,
+          "video_bytes": 507654
         }
       },
       {
         "episode_index": 19,
         "ok": true,
         "n_frames": 191,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-        "task_index": 1,
+        "task": "pick up the orange block and place it in the target area at (0.551, 0.154) with its long side aligned with X",
+        "task_index": 19,
         "detail": {
           "action_vs_next_state_max_rad": 0.005258768796920776,
-          "action_vs_next_state_mean_rad": 0.000605335587686951,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006050136469789698,
+          "task": "pick up the orange block and place it in the target area at (0.551, 0.154) with its long side aligned with X",
           "n_frames": 191,
-          "video_bytes": 488575
+          "video_bytes": 487695
         }
       },
       {
         "episode_index": 20,
         "ok": true,
-        "n_frames": 191,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-        "task_index": 2,
+        "n_frames": 188,
+        "task": "pick up the orange block and place it in the target area at (0.587, 0.142) with its long side aligned with X",
+        "task_index": 20,
         "detail": {
           "action_vs_next_state_max_rad": 0.005444169044494629,
-          "action_vs_next_state_mean_rad": 0.0006065912666750058,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-          "n_frames": 191,
-          "video_bytes": 491348
+          "action_vs_next_state_mean_rad": 0.0006152010117424696,
+          "task": "pick up the orange block and place it in the target area at (0.587, 0.142) with its long side aligned with X",
+          "n_frames": 188,
+          "video_bytes": 481911
         }
       },
       {
         "episode_index": 21,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
-        "task_index": 3,
+        "task": "pick up the orange block and place it in the target area at (0.519, 0.177) with its long side aligned with X",
+        "task_index": 21,
         "detail": {
           "action_vs_next_state_max_rad": 0.005271822214126587,
-          "action_vs_next_state_mean_rad": 0.0005996405941161232,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005995821473774785,
+          "task": "pick up the orange block and place it in the target area at (0.519, 0.177) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500943
+          "video_bytes": 501599
         }
       },
       {
         "episode_index": 22,
         "ok": true,
         "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-        "task_index": 4,
+        "task": "pick up the orange block and place it in the target area at (0.553, 0.175) with its long side aligned with X",
+        "task_index": 22,
         "detail": {
           "action_vs_next_state_max_rad": 0.0055408477783203125,
-          "action_vs_next_state_mean_rad": 0.0005793204048532274,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005780404927190565,
+          "task": "pick up the orange block and place it in the target area at (0.553, 0.175) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 503447
+          "video_bytes": 503374
         }
       },
       {
         "episode_index": 23,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
-        "task_index": 5,
+        "task": "pick up the orange block and place it in the target area at (0.574, 0.173) with its long side aligned with X",
+        "task_index": 23,
         "detail": {
           "action_vs_next_state_max_rad": 0.005251854658126831,
-          "action_vs_next_state_mean_rad": 0.0005992588284260196,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005991557606965203,
+          "task": "pick up the orange block and place it in the target area at (0.574, 0.173) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499671
+          "video_bytes": 499680
         }
       },
       {
         "episode_index": 24,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
-        "task_index": 6,
+        "task": "pick up the orange block and place it in the target area at (0.527, 0.209) with its long side aligned with X",
+        "task_index": 24,
         "detail": {
           "action_vs_next_state_max_rad": 0.005549073219299316,
-          "action_vs_next_state_mean_rad": 0.0006020808511485096,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005958330351611347,
+          "task": "pick up the orange block and place it in the target area at (0.527, 0.209) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500630
+          "video_bytes": 501385
         }
       },
       {
         "episode_index": 25,
         "ok": true,
         "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-        "task_index": 7,
+        "task": "pick up the orange block and place it in the target area at (0.548, 0.207) with its long side aligned with X",
+        "task_index": 25,
         "detail": {
           "action_vs_next_state_max_rad": 0.00524449348449707,
-          "action_vs_next_state_mean_rad": 0.0006054812498649172,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006021543935933579,
+          "task": "pick up the orange block and place it in the target area at (0.548, 0.207) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 499974
+          "video_bytes": 501421
         }
       },
       {
         "episode_index": 26,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
-        "task_index": 8,
+        "task": "pick up the orange block and place it in the target area at (0.586, 0.212) with its long side aligned with X",
+        "task_index": 26,
         "detail": {
-          "action_vs_next_state_max_rad": 0.005163460969924927,
-          "action_vs_next_state_mean_rad": 0.000612076107960822,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+          "action_vs_next_state_max_rad": 0.0052277445793151855,
+          "action_vs_next_state_mean_rad": 0.0006137531138104115,
+          "task": "pick up the orange block and place it in the target area at (0.586, 0.212) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501765
+          "video_bytes": 501289
         }
       },
       {
         "episode_index": 27,
         "ok": true,
         "n_frames": 201,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-        "task_index": 0,
+        "task": "pick up the orange block and place it in the target area at (0.512, 0.149) with its long side aligned with X",
+        "task_index": 27,
         "detail": {
           "action_vs_next_state_max_rad": 0.005153536796569824,
-          "action_vs_next_state_mean_rad": 0.0005951977447096266,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006018511091912972,
+          "task": "pick up the orange block and place it in the target area at (0.512, 0.149) with its long side aligned with X",
           "n_frames": 201,
-          "video_bytes": 511822
+          "video_bytes": 512659
         }
       },
       {
         "episode_index": 28,
         "ok": true,
         "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-        "task_index": 1,
+        "task": "pick up the orange block and place it in the target area at (0.545, 0.151) with its long side aligned with X",
+        "task_index": 28,
         "detail": {
           "action_vs_next_state_max_rad": 0.005537569522857666,
-          "action_vs_next_state_mean_rad": 0.0005822585006850528,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005860950351571102,
+          "task": "pick up the orange block and place it in the target area at (0.545, 0.151) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 506662
+          "video_bytes": 505921
         }
       },
       {
         "episode_index": 29,
         "ok": true,
         "n_frames": 187,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-        "task_index": 2,
+        "task": "pick up the orange block and place it in the target area at (0.584, 0.152) with its long side aligned with X",
+        "task_index": 29,
         "detail": {
           "action_vs_next_state_max_rad": 0.005548059940338135,
-          "action_vs_next_state_mean_rad": 0.0006116057557188922,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.000612607353448657,
+          "task": "pick up the orange block and place it in the target area at (0.584, 0.152) with its long side aligned with X",
           "n_frames": 187,
-          "video_bytes": 481329
+          "video_bytes": 482557
         }
       },
       {
         "episode_index": 30,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
-        "task_index": 3,
+        "task": "pick up the orange block and place it in the target area at (0.516, 0.188) with its long side aligned with X",
+        "task_index": 30,
         "detail": {
           "action_vs_next_state_max_rad": 0.005277067422866821,
-          "action_vs_next_state_mean_rad": 0.0006015492060957748,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006052101620287792,
+          "task": "pick up the orange block and place it in the target area at (0.516, 0.188) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501189
+          "video_bytes": 500638
         }
       },
       {
         "episode_index": 31,
         "ok": true,
         "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-        "task_index": 4,
+        "task": "pick up the orange block and place it in the target area at (0.553, 0.173) with its long side aligned with X",
+        "task_index": 31,
         "detail": {
           "action_vs_next_state_max_rad": 0.005536317825317383,
-          "action_vs_next_state_mean_rad": 0.0005842813250017374,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005822311513998035,
+          "task": "pick up the orange block and place it in the target area at (0.553, 0.173) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 502898
+          "video_bytes": 504029
         }
       },
       {
         "episode_index": 32,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
-        "task_index": 5,
+        "task": "pick up the orange block and place it in the target area at (0.577, 0.179) with its long side aligned with X",
+        "task_index": 32,
         "detail": {
           "action_vs_next_state_max_rad": 0.005442678928375244,
-          "action_vs_next_state_mean_rad": 0.0005907875778169104,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005916667040255161,
+          "task": "pick up the orange block and place it in the target area at (0.577, 0.179) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 500286
+          "video_bytes": 499717
         }
       },
       {
         "episode_index": 33,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
-        "task_index": 6,
+        "task": "pick up the orange block and place it in the target area at (0.522, 0.214) with its long side aligned with X",
+        "task_index": 33,
         "detail": {
           "action_vs_next_state_max_rad": 0.005342066287994385,
-          "action_vs_next_state_mean_rad": 0.0006052014247591847,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006037287248446978,
+          "task": "pick up the orange block and place it in the target area at (0.522, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500330
+          "video_bytes": 500446
         }
       },
       {
         "episode_index": 34,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-        "task_index": 7,
+        "task": "pick up the orange block and place it in the target area at (0.552, 0.214) with its long side aligned with X",
+        "task_index": 34,
         "detail": {
           "action_vs_next_state_max_rad": 0.005253702402114868,
-          "action_vs_next_state_mean_rad": 0.0006034133488576303,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006036730797982164,
+          "task": "pick up the orange block and place it in the target area at (0.552, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 498830
+          "video_bytes": 498477
         }
       },
       {
         "episode_index": 35,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
-        "task_index": 8,
+        "task": "pick up the orange block and place it in the target area at (0.575, 0.203) with its long side aligned with X",
+        "task_index": 35,
         "detail": {
           "action_vs_next_state_max_rad": 0.005454897880554199,
-          "action_vs_next_state_mean_rad": 0.0006081222721693002,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006012211933834589,
+          "task": "pick up the orange block and place it in the target area at (0.575, 0.203) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 496761
+          "video_bytes": 498192
         }
       },
       {
         "episode_index": 36,
         "ok": true,
         "n_frames": 199,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-        "task_index": 0,
+        "task": "pick up the orange block and place it in the target area at (0.517, 0.158) with its long side aligned with X",
+        "task_index": 36,
         "detail": {
           "action_vs_next_state_max_rad": 0.005563080310821533,
-          "action_vs_next_state_mean_rad": 0.0005941181945835462,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005966500003782377,
+          "task": "pick up the orange block and place it in the target area at (0.517, 0.158) with its long side aligned with X",
           "n_frames": 199,
-          "video_bytes": 510502
+          "video_bytes": 509016
         }
       },
       {
         "episode_index": 37,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-        "task_index": 1,
+        "task": "pick up the orange block and place it in the target area at (0.551, 0.147) with its long side aligned with X",
+        "task_index": 37,
         "detail": {
           "action_vs_next_state_max_rad": 0.005253434181213379,
-          "action_vs_next_state_mean_rad": 0.0005915319135683267,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005908446836167654,
+          "task": "pick up the orange block and place it in the target area at (0.551, 0.147) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 505562
+          "video_bytes": 505503
         }
       },
       {
         "episode_index": 38,
         "ok": true,
-        "n_frames": 187,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-        "task_index": 2,
+        "n_frames": 189,
+        "task": "pick up the orange block and place it in the target area at (0.578, 0.153) with its long side aligned with X",
+        "task_index": 38,
         "detail": {
           "action_vs_next_state_max_rad": 0.005449652671813965,
-          "action_vs_next_state_mean_rad": 0.0006138487354469439,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-          "n_frames": 187,
-          "video_bytes": 480070
+          "action_vs_next_state_mean_rad": 0.0006078275978145422,
+          "task": "pick up the orange block and place it in the target area at (0.578, 0.153) with its long side aligned with X",
+          "n_frames": 189,
+          "video_bytes": 484646
         }
       },
       {
         "episode_index": 39,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
-        "task_index": 3,
+        "task": "pick up the orange block and place it in the target area at (0.517, 0.182) with its long side aligned with X",
+        "task_index": 39,
         "detail": {
           "action_vs_next_state_max_rad": 0.005246669054031372,
-          "action_vs_next_state_mean_rad": 0.0006056191118326563,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006082164394732592,
+          "task": "pick up the orange block and place it in the target area at (0.517, 0.182) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501743
+          "video_bytes": 501640
         }
       },
       {
         "episode_index": 40,
         "ok": true,
-        "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-        "task_index": 4,
+        "n_frames": 196,
+        "task": "pick up the orange block and place it in the target area at (0.553, 0.182) with its long side aligned with X",
+        "task_index": 40,
         "detail": {
           "action_vs_next_state_max_rad": 0.005463600158691406,
-          "action_vs_next_state_mean_rad": 0.0005899835550099207,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-          "n_frames": 197,
-          "video_bytes": 502378
+          "action_vs_next_state_mean_rad": 0.0005926267686475882,
+          "task": "pick up the orange block and place it in the target area at (0.553, 0.182) with its long side aligned with X",
+          "n_frames": 196,
+          "video_bytes": 499219
         }
       },
       {
         "episode_index": 41,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
-        "task_index": 5,
+        "task": "pick up the orange block and place it in the target area at (0.572, 0.179) with its long side aligned with X",
+        "task_index": 41,
         "detail": {
           "action_vs_next_state_max_rad": 0.005255848169326782,
-          "action_vs_next_state_mean_rad": 0.0005968483381452859,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005962405976292041,
+          "task": "pick up the orange block and place it in the target area at (0.572, 0.179) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 498223
+          "video_bytes": 497832
         }
       },
       {
         "episode_index": 42,
         "ok": true,
         "n_frames": 198,
-        "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
-        "task_index": 6,
+        "task": "pick up the orange block and place it in the target area at (0.515, 0.206) with its long side aligned with X",
+        "task_index": 42,
         "detail": {
           "action_vs_next_state_max_rad": 0.005540788173675537,
-          "action_vs_next_state_mean_rad": 0.0005959536534222021,
-          "task": "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006011625520631604,
+          "task": "pick up the orange block and place it in the target area at (0.515, 0.206) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500780
+          "video_bytes": 500473
         }
       },
       {
         "episode_index": 43,
         "ok": true,
         "n_frames": 197,
-        "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-        "task_index": 7,
+        "task": "pick up the orange block and place it in the target area at (0.545, 0.212) with its long side aligned with X",
+        "task_index": 43,
         "detail": {
           "action_vs_next_state_max_rad": 0.005541563034057617,
-          "action_vs_next_state_mean_rad": 0.0005927780856340915,
-          "task": "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0005901776062843803,
+          "task": "pick up the orange block and place it in the target area at (0.545, 0.212) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 500149
+          "video_bytes": 499865
         }
       },
       {
         "episode_index": 44,
         "ok": true,
         "n_frames": 196,
-        "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
-        "task_index": 8,
+        "task": "pick up the orange block and place it in the target area at (0.583, 0.212) with its long side aligned with X",
+        "task_index": 44,
         "detail": {
           "action_vs_next_state_max_rad": 0.005547881126403809,
-          "action_vs_next_state_mean_rad": 0.0005997988893382888,
-          "task": "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X",
+          "action_vs_next_state_mean_rad": 0.0006006843905010893,
+          "task": "pick up the orange block and place it in the target area at (0.583, 0.212) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 497139
+          "video_bytes": 497293
         }
       }
     ],
@@ -642,8 +642,8 @@
       "codebase_version": "v2.1",
       "robot_type": "panda",
       "total_episodes": 45,
-      "total_frames": 8835,
-      "total_tasks": 9,
+      "total_frames": 8829,
+      "total_tasks": 45,
       "total_videos": 90,
       "total_chunks": 1,
       "chunks_size": 1000,
@@ -771,21 +771,57 @@
       }
     },
     "tasks": [
-      "pick up the orange block and place it in the target area at (0.520, 0.150) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.550, 0.150) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.580, 0.150) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.520, 0.180) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.550, 0.180) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.580, 0.180) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.520, 0.210) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.550, 0.210) with its long side aligned with X",
-      "pick up the orange block and place it in the target area at (0.580, 0.210) with its long side aligned with X"
+      "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.543, 0.156) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.578, 0.146) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.528, 0.184) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.555, 0.181) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.575, 0.177) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.518, 0.217) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.553, 0.210) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.581, 0.212) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.516, 0.149) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.554, 0.143) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.579, 0.154) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.512, 0.175) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.544, 0.177) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.579, 0.182) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.519, 0.214) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.556, 0.215) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.576, 0.202) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.524, 0.153) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.551, 0.154) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.587, 0.142) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.519, 0.177) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.553, 0.175) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.574, 0.173) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.527, 0.209) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.548, 0.207) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.586, 0.212) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.512, 0.149) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.545, 0.151) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.584, 0.152) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.516, 0.188) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.553, 0.173) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.577, 0.179) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.522, 0.214) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.552, 0.214) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.575, 0.203) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.517, 0.158) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.551, 0.147) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.578, 0.153) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.517, 0.182) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.553, 0.182) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.572, 0.179) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.515, 0.206) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.545, 0.212) with its long side aligned with X",
+      "pick up the orange block and place it in the target area at (0.583, 0.212) with its long side aligned with X"
     ],
     "meta_sha256": {
-      "episodes.jsonl": "7784d0d0d328b8fdee822ddfec5b29f459e2918231b358cdbc03619727699dc9",
-      "episodes_stats.jsonl": "1cc9ea6d4cd59edf222cadc55372055987e6770fe57df8ba2adcb724b5f6daa1",
-      "info.json": "00a3a51d0d718f437286918593cfd237efbd102794fa49a95887f85af535ba99",
-      "tasks.jsonl": "58b266f54207a7c3275c7e2ac44012d978e1ddea753fc06bf4b55802f1e0856c"
+      "episodes.jsonl": "82b5beb097ebbfb0373ad45561a640d728c0b42565a3159c273b2b5eee46d73a",
+      "episodes_stats.jsonl": "23d012b6a7ead1f134fd819a7f692e4bbb356579c0ec05efb3ee3c4b0a5943c6",
+      "info.json": "0d0c3d0627c604920bd3abca78df6ed478d8d8aa4cab8f7229502c9be62882c5",
+      "tasks.jsonl": "aaa27e923d0c4e7790acfe442b0684753330ab7c013c05093120389ab968f1cf"
     },
     "failed_checks": []
   },

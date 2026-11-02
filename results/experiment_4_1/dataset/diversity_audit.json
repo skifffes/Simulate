@@ -19,19 +19,19 @@
         "A_x00_y-3": 5,
         "A_x00_y00": 5
       },
-      "object_terminal_uniques": 9,
-      "robot_terminal_uniques": 9,
-      "joint_terminal_uniques": 9,
+      "object_terminal_uniques": 31,
+      "robot_terminal_uniques": 22,
+      "joint_terminal_uniques": 32,
       "per_goal_object_uniques": {
-        "A_x+3_y+3": 1,
-        "A_x+3_y-3": 1,
+        "A_x+3_y+3": 3,
+        "A_x+3_y-3": 4,
         "A_x+3_y00": 1,
-        "A_x-3_y+3": 1,
-        "A_x-3_y-3": 1,
-        "A_x-3_y00": 1,
-        "A_x00_y+3": 1,
-        "A_x00_y-3": 1,
-        "A_x00_y00": 1
+        "A_x-3_y+3": 3,
+        "A_x-3_y-3": 3,
+        "A_x-3_y00": 4,
+        "A_x00_y+3": 5,
+        "A_x00_y-3": 5,
+        "A_x00_y00": 3
       }
     },
     "B90": {

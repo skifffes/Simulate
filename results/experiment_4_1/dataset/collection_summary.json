@@ -1,13 +1,5 @@
 {
   "manifests": {
-    "A90": {
-      "dataset": "data/exp41/A90",
-      "episodes": 45,
-      "frames": 8835,
-      "attempts": 45,
-      "target": 45,
-      "elapsed_s": 756.7
-    },
     "B90": {
       "dataset": "data/exp41/B90",
       "episodes": 45,
@@ -15,6 +7,14 @@
       "attempts": 62,
       "target": 45,
       "elapsed_s": 731.0
+    },
+    "A90": {
+      "dataset": "data/exp41/A90",
+      "episodes": 45,
+      "frames": 8829,
+      "attempts": 45,
+      "target": 45,
+      "elapsed_s": 754.3
     }
   },
   "camera_version": "v3",
@@ -50,5 +50,5 @@
     "b_rebound_max_m": 0.005
   },
   "n_attempts": 107,
-  "n_success": 90
+  "n_success": 107
 }

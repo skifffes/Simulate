@@ -62,13 +62,19 @@ def run_attempt(skill: str, *, seed: int, goal, obj_start: dict | None = None,
     attempt_id = _uuid('attempt', skill, goal.goal_id, seed,
                        (obj_start or {}).get('start_id'), (robot_start or {}).get('robot_start_id'))
     t0 = time.time()
+    goal_point = None
     if skill == 'A90':
         scene = scene41.build_a_scene(goal, seed=seed, camera_version=camera_version)
-        prompt = A90_PROMPT_TEMPLATE.format(x=goal.x, y=goal.y)
+        # 把目标区域落成具体目标点（确定性抖动），指令与评价都用该点
+        gx, gy = scene41.a_goal_point(goal, seed)
+        goal_point = (gx, gy)
+        goal_eval = scene41.AGoal(goal.goal_id, gx, gy, goal.target_axis, goal.region_id)
+        prompt = A90_PROMPT_TEMPLATE.format(x=gx, y=gy)
     elif skill == 'B90':
         scene = scene41.build_b_scene(obj_start, robot_start, seed=seed,
                                       camera_version=camera_version)
         prompt = B90_PROMPT_TEMPLATE.format(y_lo=goal.y_lo, y_hi=goal.y_hi)
+        goal_eval = goal
     else:
         raise ValueError(skill)
 
@@ -84,7 +90,7 @@ def run_attempt(skill: str, *, seed: int, goal, obj_start: dict | None = None,
             camera = CameraRig(scene.sim, scene.cameras, (256, 256), supersample=1)
             expert = (A90GoalExpert if skill == 'A90' else B90GoalExpert)(
                 scene.sim, scene.block, camera, STEPS_PER_ACTION)
-            result = expert.run_goal(goal) if skill == 'A90' else \
+            result = expert.run_goal(goal_eval) if skill == 'A90' else \
                 expert.run_goal(goal, allow_lateral=allow_lateral)
         else:
             # 不录帧时仍需要一个"有 cameras 属性"的占位相机，录制器才会初始化
@@ -96,7 +102,7 @@ def run_attempt(skill: str, *, seed: int, goal, obj_start: dict | None = None,
 
             expert = (A90GoalExpert if skill == 'A90' else B90GoalExpert)(
                 scene.sim, scene.block, _NullCamera(), STEPS_PER_ACTION)
-            result = expert.run_goal(goal) if skill == 'A90' else \
+            result = expert.run_goal(goal_eval) if skill == 'A90' else \
                 expert.run_goal(goal, allow_lateral=allow_lateral)
 
         # ---- 独立稳定窗口（继续逐物理步记录）----
@@ -118,11 +124,12 @@ def run_attempt(skill: str, *, seed: int, goal, obj_start: dict | None = None,
                             'x_min': float(settle_slice[:, 1].min())}
 
         if skill == 'A90':
-            ev = evaluate_A(scene, monitor, goal, cfg, start_obj_pos=start_state['pos'])
+            ev = evaluate_A(scene, monitor, goal_eval, cfg, start_obj_pos=start_state['pos'])
             record = {'kind': 'A90', 'expert_ok': bool(result['success']),
                       'expert_reason': result['reason'],
                       'expert_metrics': result.get('metrics', {}),
-                      'goal': goal.as_dict(), 'evaluation': ev}
+                      'goal': goal_eval.as_dict(), 'goal_point': list(goal_point),
+                      'region_id': goal.goal_id, 'evaluation': ev}
         else:
             ev = evaluate_B(scene, monitor, goal, cfg, start_obj_pos=start_state['pos'],
                             initial={**initial_B,
@@ -154,6 +161,7 @@ def run_attempt(skill: str, *, seed: int, goal, obj_start: dict | None = None,
         record.update({
             'attempt_id': attempt_id, 'skill': skill, 'seed': seed,
             'goal_id': goal.goal_id,
+            'goal_point': list(goal_point) if goal_point else None,
             'camera_version': camera_v2.VERSION,
             'camera_sha256': camera_v2.CAMERA_CONFIG_SHA256,
             'action_contract_version': ACTION_CONTRACT_VERSION,

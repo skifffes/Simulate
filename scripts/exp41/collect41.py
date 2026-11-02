@@ -182,8 +182,9 @@ def collect(args) -> int:
         print(f'[collect] cleared {rec_dir}')
     quality_rows = []
     manifests = {}
+    skills = [s.strip() for s in args.skills.split(',') if s.strip()]
     for skill, target in (('A90', args.target_a), ('B90', args.target_b)):
-        if target <= 0:
+        if skill not in skills or target <= 0:
             continue
         shard = data_root / skill
         writer = LeRobotV21Writer(shard, feature_dict(), POLICY_HZ, robot_type='panda',
@@ -215,13 +216,27 @@ def collect(args) -> int:
         manifests[skill] = {'dataset': str(shard), 'episodes': len(writer.episodes),
                             'frames': writer.total_frames, 'attempts': attempts,
                             'target': target, 'elapsed_s': round(time.time() - t0, 1)}
-    with open(out / 'quality_audit.csv', 'w', newline='', encoding='utf-8') as fh:
+    qa_path = out / 'quality_audit.csv'
+    if qa_path.exists():
+        # 只保留本次未重跑的技能的历史行，避免覆盖另一个技能的质量审计
+        old = [r for r in csv.DictReader(open(qa_path, encoding='utf-8'))
+               if r['skill'] not in skills]
+        quality_rows = old + quality_rows
+    with open(qa_path, 'w', newline='', encoding='utf-8') as fh:
         keys = list(quality_rows[0].keys()) if quality_rows else ['attempt_id']
         w = csv.DictWriter(fh, fieldnames=keys)
         w.writeheader()
         w.writerows(quality_rows)
+    cs_path = out / 'collection_summary.json'
+    prev = {}
+    if cs_path.exists():
+        try:
+            prev = json.loads(cs_path.read_text(encoding='utf-8')).get('manifests', {})
+        except json.JSONDecodeError:
+            prev = {}
+    merged = {**{k: v for k, v in prev.items() if k not in manifests}, **manifests}
     (out / 'collection_summary.json').write_text(json.dumps({
-        'manifests': manifests, 'camera_version': args.camera_version,
+        'manifests': merged, 'camera_version': args.camera_version,
         'camera_sha256': scene41.camera_v2.CAMERA_CONFIG_SHA256,
         'action_contract_version': ACTION_CONTRACT_VERSION,
         'physics_hz': PHYSICS_HZ, 'policy_hz': POLICY_HZ, 'steps_per_action': STEPS_PER_ACTION,
@@ -229,7 +244,7 @@ def collect(args) -> int:
         'n_attempts': len(quality_rows),
         'n_success': sum(1 for r in quality_rows if r['strict_success']),
     }, ensure_ascii=False, indent=2, default=float), encoding='utf-8')
-    print(json.dumps(manifests, ensure_ascii=False, indent=2))
+    print(json.dumps(merged, ensure_ascii=False, indent=2))
     return 0
 
 
@@ -243,6 +258,7 @@ def main(argv=None) -> int:
     ap.add_argument('--target-a', type=int, default=0)
     ap.add_argument('--target-b', type=int, default=0)
     ap.add_argument('--camera-version', default='v3')
+    ap.add_argument('--skills', default='A90,B90', help='只重跑某些技能，例如 A90')
     ap.add_argument('--fresh-records', action='store_true',
                     help='采集前清空 dataset/records，保证 record ↔ episode 的一一对应')
     args = ap.parse_args(argv)

@@ -109,9 +109,22 @@ B_ALIGNED_PAIRS = [
 ]
 
 
+A_GOAL_JITTER_M = 0.008     # 每条 episode 在目标点附近的确定性抖动（±8 mm，仍在 2 cm 容差内）
+
+
+def a_goal_point(goal: 'AGoal', seed: int) -> tuple[float, float]:
+    """把"目标区域"落成一个具体的放置点：目标中心 + 预注册的确定性抖动。
+
+    这样 A 的终态多样性来自**不同的目标点**，而不是同一点的重复采样；
+    指令文本会写出实际目标点，评价器也按该点算误差（容差仍是 2 cm）。
+    """
+    rng = np.random.default_rng(int(seed) * 7919 + 17)
+    return (float(goal.x) + float(rng.uniform(-A_GOAL_JITTER_M, A_GOAL_JITTER_M)),
+            float(goal.y) + float(rng.uniform(-A_GOAL_JITTER_M, A_GOAL_JITTER_M)))
+
+
 def registry() -> dict:
     return {
-        'camera_version': camera_v2.VERSION,
         'camera_sha256': camera_v2.CAMERA_CONFIG_SHA256,
         'a_goals': [g.as_dict() for g in A_GOALS],
         'b_goals': [g.as_dict() for g in B_GOALS],
