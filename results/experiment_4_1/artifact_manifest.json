@@ -670,8 +670,8 @@
     },
     {
       "path": "environment_and_action_contract.md",
-      "size_bytes": 5330,
-      "sha256": "fe4bc3a9ca6ff840d0a2138dd36961b45fac76d302f59a661a67b6adde8f03a4"
+      "size_bytes": 5430,
+      "sha256": "f5c98005051d450e40cd333bcd5d849c7f1674864d1b7206f471d8c02c419c36"
     },
     {
       "path": "evaluation/calibration_cases/A90_positive.json",
