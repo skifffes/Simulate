@@ -13,10 +13,10 @@
 | Gate | 内容 | 结果 |
 | --- | --- | --- |
 | Gate 1 | 动作与时间语义 | **PASS（preflight 后）**：夹爪标签改用 action 目标、15Hz 比例纠正、OpenPI transforms 回环 5.6e-17（preflight/preflight_report.md） |
-| Gate 2 | 严格评价器（17 个物理正/负案例） | **PASS（v1.1）**：新增双指 link 检查、释放后滑移、尾段角速度；重放 6 条 6/6 双指、5/6 严格成功 |
+| Gate 2 | 严格评价器（17 个物理正/负案例） | **PASS（v1.2）**：双指分别计数 + **双指同时接触交集** + 释放后滑移 + 尾段角速度；重放 6 条 6/6 双指同时（overlap 932–947 步）、5/6 严格成功 |
 | Gate 3 | 多状态 Pilot | **PASS**（A90 9/9 目标全成功、多终态；B90 3 目标区真实推墙） |
 | Gate 4 | 有界采集 | **PASS**（A90 45 条 / B90 45 条，均在预算内；失败尝试全部保留） |
-| Gate 5 | 数据回环与划分 | **PASS（preflight 后）**：视频 90/90 解码、OpenPI transforms 回环通过、split 改为结果无关的预注册文件 |
+| Gate 5 | 数据回环与划分 | **PASS（preflight 后）**：**180/180** 视频逐条解码且帧数全匹配、OpenPI transforms 回环 5.6e-17、split 为结果无关的预注册文件 |
 
 **`PASS` 不代表 π₀.₅ 已经学会 A90 或 B90**——本次没有训练、没有评测模型成功率。
 
@@ -32,7 +32,7 @@
 | 6 | A90 成功示范完成抓取/放置/释放/稳定 | ✅ | 45/45 通过 11 项检查（位置 ≤5 mm、长轴 ≤3.45°、抬升 ≥0.119 m） |
 | 7 | Pilot 实际运行并审计 | ✅ | `pilot/attempts.csv`（A90 27、B90 18 次尝试） |
 | 8 | 预注册预算内完成合格采集 | ✅ | A90 45/45、B90 45/45（62 次尝试），预算 = 3× 目标 |
-| 9 | LeRobot 正确读取并有真实 provenance | ✅ | 90/90 episode 通过 48/48 校验（`readback_verification.json`） |
+| 9 | LeRobot 正确读取并有真实 provenance | ✅ | 90/90 episode 通过 48/48 校验；**180/180 视频逐条解码、0 帧数不一致**（`readback_verification.json`） |
 | 10 | 相机/动作/时间/状态与 π₀.₅ 路线兼容 | ✅ | 相机 v3 + 动作契约 + 相位检查（≤5.6 mrad 均值 0.6 mrad） |
 | 11 | 数据划分合理、无组合示范 | ✅ | `split_manifest.json` 按目标/条件组划分；数据集内无任何 A→B 轨迹 |
 | 12 | 配置/脚本/报告/manifest 已提交 | ✅ | 见 `artifact_manifest.json` |

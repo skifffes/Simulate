@@ -25,7 +25,7 @@
 | `dataset/split_manifest.json` | **预注册** split（按目标/条件分组，不按帧） |
 | `dataset/readback_verification.json` | 写盘→读回→特征校验结果 |
 | `dataset/fps_feasibility.json` | 15 Hz vs 20 Hz 的专家可行性对照 |
-| `preflight/` | **验收后 Data Preflight**：夹爪标签修复、15Hz 比例纠正、评价器 v1.1 补强与重放抽样、OpenPI transforms 回环、split 冻结、`n_success` 汇总修复 |
+| `preflight/` | **验收后 Data Preflight**：夹爪标签修复、15Hz 比例纠正、评价器 **v1.2**（双指同时接触/滑移/角速度）与重放抽样、OpenPI transforms 回环、split 冻结、`n_success` 汇总修复、180/180 视频解码 |
 | `reports/experiment_4_1_report.md` | 最终报告（RQ1–RQ10 + Observed/Supported/Not Verified/Blockers） |
 
 数据集本体（Parquet + 视频，体积大）**不入 Git**，保存在服务器：

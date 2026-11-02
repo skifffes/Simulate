@@ -47,11 +47,15 @@ def main(argv=None) -> int:
             'finger10_max_force_n': m.get('finger10_max_force_n'),
             'slip_after_release_m': m.get('slip_after_release_m'),
             'ang_speed_tail_max_rad_s': m.get('ang_speed_tail_max_rad_s'),
+            'two_finger_overlap_steps': m.get('two_finger_overlap_steps'),
+            'two_finger_overlap_first_step': m.get('two_finger_overlap_first_step'),
+            'two_finger_overlap_last_step': m.get('two_finger_overlap_last_step'),
             'final_ang_speed_rad_s': m.get('final_ang_speed_rad_s'),
             'checks': checks,
         })
         print(f"[{goal.goal_id}] success={att.record['strict_success']} "
               f"f9={m.get('finger9_contact_steps')} f10={m.get('finger10_contact_steps')} "
+              f"overlap={m.get('two_finger_overlap_steps')} "
               f"slip={m.get('slip_after_release_m'):.5f} "
               f"ang_tail={m.get('ang_speed_tail_max_rad_s'):.3f} reason={att.record['failure_reason']}")
     summary = {
@@ -59,6 +63,9 @@ def main(argv=None) -> int:
         'n': len(rows),
         'n_success': sum(1 for r in rows if r['strict_success']),
         'n_both_fingers': sum(1 for r in rows if r['checks'].get('grasped_by_two_fingers')),
+        'n_two_fingers_simultaneous': sum(1 for r in rows
+                                          if r['checks'].get('two_fingers_simultaneous')),
+        'two_finger_overlap_steps': [r.get('two_finger_overlap_steps') for r in rows],
         'n_slip_ok': sum(1 for r in rows if r['checks'].get('no_slip_after_release')),
         'n_ang_tail_ok': sum(1 for r in rows if r['checks'].get('ang_speed_ok')),
         'rows': rows,

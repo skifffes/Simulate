@@ -1,6 +1,6 @@
 {
   "eval_version_old": "exp4.1-strict-v1",
-  "eval_version_new": "exp4.1-strict-v1.1",
+  "eval_version_new": "exp4.1-strict-v1.2",
   "n_a90_records": 45,
   "n_unchanged_success": 45,
   "n_downgraded": 0,

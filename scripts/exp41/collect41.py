@@ -37,6 +37,17 @@ from exp41.strict_eval import DEFAULT_CONFIG, asdict as _asdict  # noqa: E402
 SEED_BASE = 410000
 
 
+def _is_true(v) -> bool:
+    """把 CSV 读回的 `strict_success` 统一解析成布尔。
+
+    review：历史 CSV 里布尔是字符串，`if r['strict_success']` 对 `"False"` 也为真，
+    曾导致 `n_success` 被算成 107。所有统计都必须走这里。
+    """
+    if isinstance(v, bool):
+        return v
+    return str(v).strip().lower() in ('true', '1', 'yes')
+
+
 def _goal(kind: str, goal_id: str):
     pool = scene41.A_GOALS if kind == 'A90' else scene41.B_GOALS
     for g in pool:
@@ -135,18 +146,18 @@ def pilot(args) -> int:
         for r in rows:
             d = by_cfg.setdefault(r['config_id'], [0, 0])
             d[1] += 1
-            d[0] += int(r['strict_success'])
+            d[0] += int(_is_true(r['strict_success']))
         summaries[skill] = {
-            'n_attempts': len(rows), 'n_success': sum(1 for r in rows if r['strict_success']),
-            'success_rate': sum(1 for r in rows if r['strict_success']) / max(1, len(rows)),
+            'n_attempts': len(rows), 'n_success': sum(1 for r in rows if _is_true(r['strict_success'])),
+            'success_rate': sum(1 for r in rows if _is_true(r['strict_success'])) / max(1, len(rows)),
             'by_config': by_cfg,
             'failure_reasons': {k: sum(1 for r in rows if r['failure_reason'] == k)
                                 for k in {r['failure_reason'] for r in rows}},
             'elapsed_s': round(time.time() - t0, 1),
             'object_terminal_uniques': len({tuple(np.round(json.loads(r['obj_terminal_pos']), 4))
-                                            for r in rows if r['strict_success']}),
+                                            for r in rows if _is_true(r['strict_success'])}),
             'robot_q_terminal_uniques': len({tuple(np.round(json.loads(r['robot_q_terminal']), 3))
-                                             for r in rows if r['strict_success']}),
+                                             for r in rows if _is_true(r['strict_success'])}),
         }
     keys = list(all_rows[0].keys())
     with open(out / 'attempts.csv', 'w', newline='', encoding='utf-8') as fh:
@@ -242,7 +253,7 @@ def collect(args) -> int:
         'physics_hz': PHYSICS_HZ, 'policy_hz': POLICY_HZ, 'steps_per_action': STEPS_PER_ACTION,
         'eval_config': asdict(DEFAULT_CONFIG),
         'n_attempts': len(quality_rows),
-        'n_success': sum(1 for r in quality_rows if r['strict_success']),
+        'n_success': sum(1 for r in quality_rows if _is_true(r['strict_success'])),
     }, ensure_ascii=False, indent=2, default=float), encoding='utf-8')
     print(json.dumps(merged, ensure_ascii=False, indent=2))
     return 0

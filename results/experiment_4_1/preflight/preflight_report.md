@@ -3,10 +3,20 @@
 对验收意见的逐条处理。**没有重新采集数据**：90 条演示原样保留，修复集中在训练导出、评价器、
 验证器与分组定义。
 
-- 评价器版本：`exp4.1-strict-v1` → **`exp4.1-strict-v1.1`**
-- 训练导出契约：**`exp4.1-training-export-v1`**（新文件 `src/exp41/training_export.py`）
+- 评价器版本：`exp4.1-strict-v1` → `v1.1` → **`exp4.1-strict-v1.2`**（v1.2 增加双指**同时**接触）
+- 训练导出契约：**`exp4.1-training-export-v1`**（`src/exp41/training_export.py`）
 - 工件：`gripper_label_audit.json`、`time_contract.json`、`reeval_v11.json`、`reeval_sample.json`、
   `video_and_transforms.json`、`openpi_transform_check.json`
+
+## 0. 第二轮验收后的三个收口（本轮新增）
+
+| 问题 | 修复 | 验证 |
+| --- | --- | --- |
+| `collect41.py` 仍用 `if r['strict_success']`（回归风险） | 新增 `_is_true()`，**所有**成功计数/比率走它 | `grep _is_true` 6 处；重跑后 `n_attempts=107, n_success=90` 不变 |
+| `audit_dataset.py` 会覆盖冻结 split | 检测到 `exp4.1-split-v1` 时只写 `split_manifest_from_results.json` 并加 `warning` | 运行日志 `[audit] kept frozen split_manifest.json` |
+| 夹爪统计只有一份 `gripper_normalized` | 拆成 `gripper_state_normalized` / `gripper_action_normalized`，各自标注来源 | `dataset_statistics.json` 两份统计并存 |
+| 视频"90/90 通过"表述不实 | `verify_dataset.py` 改为**逐条解码两路视频并比对帧数** | **180/180** 解码成功、**0** 帧数不一致 |
+| 双指仅"各自 ≥5 步"，未要求同时 | v1.2 新增 `two_fingers_simultaneous`（两指接触步集合的交集 ≥5） | 6 条重放 overlap = **932–947 步**（几乎全程同时夹住） |
 
 ## 1. 夹爪训练标签（review #1，最高优先级）——**已修复，且证明原实现确实错**
 
@@ -43,11 +53,12 @@
 
 ## 3. 评价器补强（review #4）——**已加强；旧数据不静默改标签**
 
-`exp4.1-strict-v1.1` 新增：
+`exp4.1-strict-v1.2` 新增：
 
 | 新增判据 | 实现 |
 | --- | --- |
 | 双指抓取 | `finger_contact_stats()` 分别统计 **link 9 与 link 10** 的接触步数与法向力，要求**两指都** ≥5 步、≥0.05 N |
+| **双指同时接触**（v1.2） | `two_finger_overlap()` 取两指接触**物理步集合的交集**，要求 ≥5 步（否则"先后碰过"也能通过） |
 | 释放后滑移 | 稳定窗口**最后 0.2 s** 内物体位移 ≤10 mm |
 | 尾段角速度 | 稳定窗口尾段角速度 ≤0.5 rad/s（整段角速度包含 90° 旋转，不能用于稳定性） |
 
@@ -55,11 +66,12 @@
 且没有保存稳定窗口尾段轨迹。`reeval_v11.json` 因此把 45 条标为 **`not_decidable_from_record`**，
 `n_downgraded = 0`，旧标签原样保留。
 
-**外部证据（重放 6 条，`reeval_sample.json`）**：
+**外部证据（重放 6 条，`reeval_sample.json`，v1.2）**：
 
 | 指标 | 结果 |
 | --- | --- |
-| 双指接触 | **6 / 6**（finger9 933–950 步、finger10 935–948 步，两指都在） |
+| 双指接触 | **6 / 6**（finger9 933–950 步、finger10 935–948 步） |
+| **双指同时接触（交集）** | **6 / 6**，overlap = **932–947 步**（≈4–5 s 同时夹持） |
 | 释放后滑移 | **6 / 6** ≤0.1 mm |
 | 尾段角速度 | **6 / 6** ≤0.018 rad/s |
 | 严格成功 | **5 / 6** |
@@ -72,14 +84,19 @@
 
 | 检查 | 结果 |
 | --- | --- |
-| 视频解码 | `imageio` 解码 **90/90 个视频文件**（每技能 2 相机 × 45）；抽样帧数 189–198，与 parquet 行数一致 |
+| **视频逐条解码（全部）** | `verify_dataset.py` 解码 **180 / 180** 个文件（A90 90 + B90 90，两路相机），**0** 帧数不一致、**0** 缺失 |
 | OpenPI transforms | 在 `openpi/.venv` 里 `import openpi.transforms` **成功** |
 | 8 维 state / 8 维 action | `(198, 8)` / `(198, 8)`，float64，`action8[7] ∈ [0.425, 1.0]`，`|Δq|max = 0.049` |
 | Normalize → Unnormalize 回环 | 误差 **5.6e-17 / 6.9e-18**，`pass = true` |
 | 归一化后范围 | state ∈ [−2.73, 2.09]，action ∈ [−2.84, 5.08] |
 
+> `preflight/video_and_transforms.json` 里的 `sampled_frame_counts` 仍是**小样本抽查**（4 个/技能），
+> 全量结论以 `dataset/readback_verification.json` 的 `n_videos_decoded=90 / n_video_frame_mismatch=0`
+> （每个技能）为准。两者不要混读。
+
 `normalized_action_range` 上限 5.08 说明**自算 q01/q99 与 DROID stats 不同**，
-4.2 必须显式决定用哪套统计（这是 B5 的实证）。
+4.2 必须显式决定用哪套统计（这是 B5 的实证）。**仍然没有验证**的是：图像/语言/action chunk/action mask
+组成的完整训练 dataloader（只验证了 8 维数组过 transforms）——这一项留给 4.2 的第一个 batch 检查。
 
 ## 5. 汇总布尔错误（n_success=107）——**已修复**
 

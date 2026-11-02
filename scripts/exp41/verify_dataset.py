@@ -91,20 +91,44 @@ def verify_dataset(root: Path) -> dict:
         task_text = next((t['task'] for t in tasks if t['task_index'] == ti), None)
         detail['task'] = task_text
         detail['n_frames'] = int(state.shape[0])
-        # 视频帧数（如有）
-        vid = root / 'videos' / f'chunk-{idx // 1000:03d}' / f'observation.images.top' / f'episode_{idx:06d}.mp4'
-        if vid.exists():
-            detail['video_bytes'] = vid.stat().st_size
+        # 视频：**逐个解码**并比对帧数（review：之前只抽样 8 个，不能声称 90/90 通过）
+        n_rows = int(state.shape[0])
+        for cam in ('observation.images.top', 'observation.images.wrist'):
+            vid = root / 'videos' / f'chunk-{idx // 1000:03d}' / cam / f'episode_{idx:06d}.mp4'
+            if not vid.exists():
+                ok = False
+                detail.setdefault('missing_videos', []).append(cam)
+                continue
+            try:
+                import imageio.v3 as iio
+
+                arr = iio.imread(vid, index=None)
+                n_frames = int(arr.shape[0]) if hasattr(arr, 'shape') else -1
+                detail[f'{cam}_frames'] = n_frames
+                if n_frames != n_rows:
+                    ok = False
+                    detail.setdefault('video_frame_mismatch', {})[cam] = [n_frames, n_rows]
+            except Exception as exc:  # noqa: BLE001
+                ok = False
+                detail.setdefault('video_decode_error', {})[cam] = str(exc)[:160]
         per_episode.append({'episode_index': idx, 'ok': ok,
                             'n_frames': int(state.shape[0]), 'task': task_text,
                             'task_index': ti, 'detail': detail})
         add(f'ep{idx}_valid', ok, detail)
 
     n_ok = sum(1 for e in per_episode if e['ok'])
+    n_vid = sum(1 for e in per_episode for k in ('observation.images.top_frames',
+                                                 'observation.images.wrist_frames')
+                if k in e['detail'])
+    n_mismatch = sum(1 for e in per_episode if 'video_frame_mismatch' in e['detail'])
+    n_missing = sum(1 for e in per_episode if 'missing_videos' in e['detail'])
     return {
         'dataset_dir': str(root),
         'n_episodes': len(episodes),
         'n_valid_episodes': n_ok,
+        'n_videos_decoded': n_vid,
+        'n_video_frame_mismatch': n_mismatch,
+        'n_video_missing': n_missing,
         'n_checks': len(checks),
         'n_pass': sum(1 for c in checks if c['pass']),
         'all_pass': all(c['pass'] for c in checks),

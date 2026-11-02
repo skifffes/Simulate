@@ -84,7 +84,9 @@ def dataset_stats(data_root: Path, out: Path) -> dict:
         S = np.concatenate(S); A = np.concatenate(A)
         # 训练用动作 = 相对当前 state 的关节增量 + 绝对归一化夹爪（与 pi05_droid 的语义对齐）
         dq = A[:, :7] - S[:, :7]
-        grip = np.clip(S[:, 7:9].mean(axis=1) / 0.04, 0.0, 1.0)
+        # review #1：**观测夹爪**与**动作夹爪**必须分开统计，不能混为一个 "gripper_normalized"
+        grip_state = np.clip(S[:, 7:9].mean(axis=1) / 0.04, 0.0, 1.0)
+        grip_action = np.clip(A[:, 7] / 0.04, 0.0, 1.0)
         stats[skill] = {
             'n_episodes': len(eps), 'n_frames': int(S.shape[0]),
             'state': {'dim': int(S.shape[1]), 'min': S.min(0).round(5).tolist(),
@@ -102,9 +104,17 @@ def dataset_stats(data_root: Path, out: Path) -> dict:
                                 'absmax': float(np.abs(dq).max()),
                                 'frac_abs_gt_1_rad': float((np.abs(dq) > 1.0).mean()),
                                 'note': 'π₀.₅(droid) 的动作是关节增量；此处给出可直接用于 4.2 的统计'},
-            'gripper_normalized': {'min': float(grip.min()), 'max': float(grip.max()),
-                                   'mean': float(grip.mean()),
-                                   'frac_open': float((grip > 0.5).mean())},
+            'gripper_state_normalized': {
+                'source': 'observation.state[:, 7:9] → 观测夹爪（只用于 state）',
+                'min': float(grip_state.min()), 'max': float(grip_state.max()),
+                'mean': float(grip_state.mean()),
+                'frac_open': float((grip_state > 0.5).mean())},
+            'gripper_action_normalized': {
+                'source': 'action[:, 7] → 专家下发的夹爪**动作目标**（训练标签用这个）',
+                'min': float(grip_action.min()), 'max': float(grip_action.max()),
+                'mean': float(grip_action.mean()),
+                'frac_open': float((grip_action > 0.5).mean()),
+                'note': '与 state 统计的差异即 review #1 指出的监督错误；训练导出见 src/exp41/training_export.py'},
             'fps_from_timestamps': float(1.0 / np.median(np.diff(np.concatenate(T)))),
         }
     (out / 'dataset_statistics.json').write_text(
@@ -180,8 +190,23 @@ def main(argv=None) -> int:
         },
         'generated_from': 'collection records (strict_success only)',
     }
-    (out / 'split_manifest.json').write_text(
-        json.dumps(split, ensure_ascii=False, indent=2), encoding='utf-8')
+    # review：**不得覆盖冻结的预注册 split**。权威文件由 preflight 从场景定义生成
+    # (`exp4.1-split-v1`，与采集结果无关)；这里最多写一份"基于结果的分组视图"。
+    frozen = out / 'split_manifest.json'
+    is_frozen = False
+    if frozen.exists():
+        try:
+            is_frozen = json.loads(frozen.read_text(encoding='utf-8')).get('version') == 'exp4.1-split-v1'
+        except json.JSONDecodeError:
+            is_frozen = False
+    if is_frozen:
+        split['warning'] = ('这是基于采集结果的统计视图，不是权威 split；'
+                            '权威文件是 split_manifest.json（exp4.1-split-v1，预注册）')
+        (out / 'split_manifest_from_results.json').write_text(
+            json.dumps(split, ensure_ascii=False, indent=2), encoding='utf-8')
+        print('[audit] kept frozen split_manifest.json; wrote split_manifest_from_results.json')
+    else:
+        frozen.write_text(json.dumps(split, ensure_ascii=False, indent=2), encoding='utf-8')
 
     stats = dataset_stats(data, out) if (data / 'A90' / 'meta').exists() else {}
     print(json.dumps({'diversity': audit['by_skill'], 'split': split,

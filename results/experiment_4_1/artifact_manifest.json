@@ -26,7 +26,7 @@
     "location": "/scratch/lijh/exp40/repo/data/exp41",
     "in_git": false
   },
-  "n_files": 194,
+  "n_files": 195,
   "files": [
     {
       "path": "dataset/collection_summary.json",
@@ -40,8 +40,8 @@
     },
     {
       "path": "dataset/dataset_statistics.json",
-      "size_bytes": 6137,
-      "sha256": "82b8e6bd57e032b71eced02f359a3c70e2e842a3b1dfdac2776b2e52377205c7"
+      "size_bytes": 7116,
+      "sha256": "64a12e3cf3f42a1dee6396fc183654e4eea92613de7f50ea5e902637a6703aa9"
     },
     {
       "path": "dataset/diversity_audit.json",
@@ -125,8 +125,8 @@
     },
     {
       "path": "dataset/readback_verification.json",
-      "size_bytes": 64851,
-      "sha256": "1a89f56d53aac7e7c623eb338c1c2ffd5a007b263cae6c4ef8b0ed56f2840c0f"
+      "size_bytes": 70875,
+      "sha256": "9864bda57660687dab6b3fc9b2dcd77c8fe9bd10c210dde1429c58d569bfb4de"
     },
     {
       "path": "dataset/records/attempt-023176943f6e5b1d.json",
@@ -669,6 +669,11 @@
       "sha256": "be5756daa53beb75ebde954dee249c0132f5d5af97ab90d612e502b27d5339ce"
     },
     {
+      "path": "dataset/split_manifest_from_results.json",
+      "size_bytes": 1513,
+      "sha256": "3469dba22dbfd6e8c8ef132a38e78775fcea6fcd6aa10fa6908d2867d17e4c65"
+    },
+    {
       "path": "environment_and_action_contract.md",
       "size_bytes": 5430,
       "sha256": "f5c98005051d450e40cd333bcd5d849c7f1674864d1b7206f471d8c02c419c36"
@@ -955,18 +960,18 @@
     },
     {
       "path": "preflight/preflight_report.md",
-      "size_bytes": 5957,
-      "sha256": "4323967f157e1b3bf526a9129f8e1614dda5daf1227d98d35ff4b258f7d7adf8"
+      "size_bytes": 7814,
+      "sha256": "ea5b78b2a2b68f60c099d42b044d32dbf64476609852420d3144f270d1d94948"
     },
     {
       "path": "preflight/reeval_sample.json",
-      "size_bytes": 5866,
-      "sha256": "6f0aa56faecff02ea296a2d572c6a610d7527ab994ec80ab08ae6b6f427cd98e"
+      "size_bytes": 7005,
+      "sha256": "b289c8eae9dc76dd700747d1701aa684d007248650f9534435a20e2346d3bdd4"
     },
     {
       "path": "preflight/reeval_v11.json",
       "size_bytes": 20548,
-      "sha256": "32332d63ca12f0ae0935051b0cd2be71008e7e65f34da9866fb9d184c19bb71e"
+      "sha256": "d9fc04d6550ca18fe637e7f0c60a140454a2348cc9cf461e4ba6b3a613684c14"
     },
     {
       "path": "preflight/time_contract.json",
@@ -980,13 +985,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 3977,
-      "sha256": "309d25e47f1b3c79bfd4b8bfd55a13ecf2a712e71203421bb37ca0c067a0b524"
+      "size_bytes": 4103,
+      "sha256": "ac678c7b2e877ac89a72ab2212b9bb31f109917017abec0432b960c40272cde0"
     },
     {
       "path": "reports/experiment_4_1_report.md",
-      "size_bytes": 19132,
-      "sha256": "02dca6a4c77c10677713e864af52fe85acf57a56950ef5153ed7c9a4f1270f44"
+      "size_bytes": 19271,
+      "sha256": "f817984ec510c67b2068ecd649d282fb6b636144f3c2c5a66bf57c1fd8174977"
     },
     {
       "path": "scene_space/b_start_states.json",
@@ -1000,7 +1005,7 @@
     }
   ],
   "preflight": {
-    "eval_version": "exp4.1-strict-v1.1",
+    "eval_version": "exp4.1-strict-v1.2",
     "training_export": "exp4.1-training-export-v1",
     "openpi_transform_roundtrip_pass": true,
     "openpi_roundtrip_max_err": 6.9e-18,
@@ -1015,6 +1020,14 @@
       "n_success": 5,
       "n_both_fingers": 6
     },
-    "split_manifest_version": "exp4.1-split-v1"
+    "split_manifest_version": "exp4.1-split-v1",
+    "videos_decoded_total": 180,
+    "video_frame_mismatch": 0,
+    "two_finger_overlap_steps_range": [
+      932,
+      947
+    ],
+    "collect41_boolean_fix": "applied (_is_true)",
+    "audit_keeps_frozen_split": true
   }
 }

@@ -126,7 +126,7 @@ def step3_reevaluate(out_dir: Path) -> dict:
                      'slip_after_release': 'not_recomputable_from_record (needs tail track)'})
     n = len(rows)
     summary = {
-        'eval_version_old': 'exp4.1-strict-v1', 'eval_version_new': 'exp4.1-strict-v1.1',
+        'eval_version_old': 'exp4.1-strict-v1', 'eval_version_new': 'exp4.1-strict-v1.2',
         'n_a90_records': n,
         'n_unchanged_success': sum(1 for x in rows if x['v1_success']),
         'n_downgraded': 0,
@@ -143,7 +143,10 @@ def step3_reevaluate(out_dir: Path) -> dict:
 
 
 def step4_videos_and_transforms(data: Path) -> dict:
-    res = {'video_decode': {}, 'openpi_transform': {}}
+    res = {'video_decode': {}, 'openpi_transform': {},
+           'note': ('这里只做小样本抽查；**全量** 180 个视频的逐帧解码与帧数比对见 '
+                    'dataset/readback_verification.json 的 n_videos_decoded / '
+                    'n_video_frame_mismatch（由 verify_dataset.py 产生）。')}
     # ---- 视频帧数 ----
     for skill in ('A90', 'B90'):
         root = data / skill

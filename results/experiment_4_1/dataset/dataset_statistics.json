@@ -173,11 +173,20 @@
       "frac_abs_gt_1_rad": 0.0,
       "note": "π₀.₅(droid) 的动作是关节增量；此处给出可直接用于 4.2 的统计"
     },
-    "gripper_normalized": {
+    "gripper_state_normalized": {
+      "source": "observation.state[:, 7:9] → 观测夹爪（只用于 state）",
       "min": 0.5108997458592057,
       "max": 1.0,
       "mean": 0.7950076675566768,
       "frac_open": 1.0
+    },
+    "gripper_action_normalized": {
+      "source": "action[:, 7] → 专家下发的夹爪**动作目标**（训练标签用这个）",
+      "min": 0.42500002309679985,
+      "max": 0.9999999776482582,
+      "mean": 0.7547343950408517,
+      "frac_open": 0.5734511269679465,
+      "note": "与 state 统计的差异即 review #1 指出的监督错误；训练导出见 src/exp41/training_export.py"
     },
     "fps_from_timestamps": 19.999995231629555
   },
@@ -355,11 +364,20 @@
       "frac_abs_gt_1_rad": 0.0,
       "note": "π₀.₅(droid) 的动作是关节增量；此处给出可直接用于 4.2 的统计"
     },
-    "gripper_normalized": {
+    "gripper_state_normalized": {
+      "source": "observation.state[:, 7:9] → 观测夹爪（只用于 state）",
       "min": 0.31559228664264083,
       "max": 0.8750009350478649,
       "mean": 0.3631315733929345,
       "frac_open": 0.037215713301171606
+    },
+    "gripper_action_normalized": {
+      "source": "action[:, 7] → 专家下发的夹爪**动作目标**（训练标签用这个）",
+      "min": 0.35000001080334187,
+      "max": 0.35000001080334187,
+      "mean": 0.35000001080334187,
+      "frac_open": 0.0,
+      "note": "与 state 统计的差异即 review #1 指出的监督错误；训练导出见 src/exp41/training_export.py"
     },
     "fps_from_timestamps": 20.000001192092967
   }

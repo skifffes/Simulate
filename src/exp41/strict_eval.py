@@ -21,7 +21,7 @@ import numpy as np
 
 from vla.atomic_tasks.scene2 import WALL_INNER_X
 
-CONFIG_VERSION = 'exp4.1-strict-v1.1'
+CONFIG_VERSION = 'exp4.1-strict-v1.2'
 
 
 @dataclass(frozen=True)
@@ -138,18 +138,27 @@ class PhysicsMonitor:
         `getContactPoints(bodyA=block, bodyB=robot)` 里 `link_b` 是 robot 的 link index，
         因此用手指 link 过滤即可区分左右指；review #4 要求"双指"而不是"任意机器人接触"。
         """
-        out = {9: {'steps': 0, 'max_force': 0.0, 'n_entries': 0},
-               10: {'steps': 0, 'max_force': 0.0, 'n_entries': 0}}
-        seen = {9: set(), 10: set()}
+        out = {9: {'steps': 0, 'max_force': 0.0, 'n_entries': 0, 'step_set': set()},
+               10: {'steps': 0, 'max_force': 0.0, 'n_entries': 0, 'step_set': set()}}
         for e in self.events['robot_block']:
             link = int(e['link_b'])
             if link in out and e['normal_force'] >= min_force:
-                seen[link].add(e['step'])
+                out[link]['step_set'].add(e['step'])
                 out[link]['max_force'] = max(out[link]['max_force'], float(e['normal_force']))
                 out[link]['n_entries'] += 1
         for link in out:
-            out[link]['steps'] = len(seen[link])
+            out[link]['steps'] = len(out[link]['step_set'])
         return out
+
+    def two_finger_overlap(self, min_force: float = 0.0) -> dict:
+        """两指**同时**接触的物理步（review：仅"各自 5 步"不足以证明同时夹住）。"""
+        st = self.finger_contact_stats(min_force)
+        s9, s10 = st[9]['step_set'], st[10]['step_set']
+        overlap = s9 & s10
+        return {'overlap_steps': len(overlap),
+                'finger9_steps': len(s9), 'finger10_steps': len(s10),
+                'first_overlap_step': (min(overlap) if overlap else None),
+                'last_overlap_step': (max(overlap) if overlap else None)}
 
     def tail(self, n_steps: int = 48) -> dict:
         """稳定窗口尾段的物体位移（slip）与最大角速度。"""
@@ -260,8 +269,11 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
     supported = len(scene.contacts(scene.block, scene.plane)) > 0
 
     # ---- 双指抓取：两个指尖各自都要有"足够多步 + 足够力"的接触（review #4）----
+    # v1.2：还要求两指在**同一时间窗口**同时接触（否则"先后碰过"也能通过）
     finger_stats = monitor.finger_contact_stats(cfg.a_grasp_force_min_n)
+    overlap = monitor.two_finger_overlap(cfg.a_grasp_force_min_n)
     two_finger = all(finger_stats[f]['steps'] >= cfg.a_grasp_min_steps for f in (9, 10))
+    two_finger_simultaneous = overlap['overlap_steps'] >= cfg.a_grasp_min_steps
     # ---- 释放后的稳定/滑移：只看稳定窗口尾段（最后 0.2 s）----
     tail = monitor.tail(n_steps=int(0.2 * 240))
     slip = tail['slip_m']
@@ -269,6 +281,7 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
 
     checks = {
         'grasped_by_two_fingers': bool(two_finger),
+        'two_fingers_simultaneous': bool(two_finger_simultaneous),
         'lifted': lift >= cfg.a_min_lift_m,
         'transported': transport >= cfg.a_min_transport_m,
         'position_ok': pos_err <= cfg.a_pos_tol_m,
@@ -285,7 +298,8 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
     strict = all(checks.values())
     reason = None
     if not strict:
-        order = ['grasped_by_two_fingers', 'lifted', 'transported', 'position_ok', 'yaw_ok',
+        order = ['grasped_by_two_fingers', 'two_fingers_simultaneous', 'lifted', 'transported',
+                 'position_ok', 'yaw_ok',
                  'tilt_ok', 'released', 'retreated', 'table_supported', 'stable',
                  'ang_speed_ok', 'no_slip_after_release', 'no_penetration']
         reason = next(k for k in order if not checks[k])
@@ -304,6 +318,9 @@ def evaluate_A(scene, monitor: PhysicsMonitor, goal, cfg: StrictEvalConfig = DEF
             'finger9_max_force_n': finger_stats[9]['max_force'],
             'finger10_contact_steps': finger_stats[10]['steps'],
             'finger10_max_force_n': finger_stats[10]['max_force'],
+            'two_finger_overlap_steps': overlap['overlap_steps'],
+            'two_finger_overlap_first_step': overlap['first_overlap_step'],
+            'two_finger_overlap_last_step': overlap['last_overlap_step'],
             'slip_after_release_m': slip, 'ang_speed_tail_max_rad_s': ang_speed_tail,
             'table_penetration_m': pen_table, 'n_control_steps': None,
             'obj_terminal_pos': st['pos'].tolist(), 'obj_terminal_quat': st['quat'].tolist(),

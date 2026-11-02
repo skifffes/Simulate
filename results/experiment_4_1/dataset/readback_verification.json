@@ -3,6 +3,9 @@
     "dataset_dir": "/scratch/lijh/exp40/repo/data/exp41/A90",
     "n_episodes": 45,
     "n_valid_episodes": 45,
+    "n_videos_decoded": 90,
+    "n_video_frame_mismatch": 0,
+    "n_video_missing": 0,
     "n_checks": 48,
     "n_pass": 48,
     "all_pass": true,
@@ -18,7 +21,8 @@
           "action_vs_next_state_mean_rad": 0.000596695714314983,
           "task": "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 504166
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -32,7 +36,8 @@
           "action_vs_next_state_mean_rad": 0.0005820208757156488,
           "task": "pick up the orange block and place it in the target area at (0.543, 0.156) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 506074
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -46,7 +51,8 @@
           "action_vs_next_state_mean_rad": 0.0006079776663643722,
           "task": "pick up the orange block and place it in the target area at (0.578, 0.146) with its long side aligned with X",
           "n_frames": 189,
-          "video_bytes": 485283
+          "observation.images.top_frames": 189,
+          "observation.images.wrist_frames": 189
         }
       },
       {
@@ -60,7 +66,8 @@
           "action_vs_next_state_mean_rad": 0.0005914846444311895,
           "task": "pick up the orange block and place it in the target area at (0.528, 0.184) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 502066
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -74,7 +81,8 @@
           "action_vs_next_state_mean_rad": 0.0005866468924908147,
           "task": "pick up the orange block and place it in the target area at (0.555, 0.181) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 498637
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -88,7 +96,8 @@
           "action_vs_next_state_mean_rad": 0.0006016986030769055,
           "task": "pick up the orange block and place it in the target area at (0.575, 0.177) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 500368
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -102,7 +111,8 @@
           "action_vs_next_state_mean_rad": 0.0006022359169481238,
           "task": "pick up the orange block and place it in the target area at (0.518, 0.217) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500190
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -116,7 +126,8 @@
           "action_vs_next_state_mean_rad": 0.0006022592455464468,
           "task": "pick up the orange block and place it in the target area at (0.553, 0.210) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 496451
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -130,7 +141,8 @@
           "action_vs_next_state_mean_rad": 0.000611976460939518,
           "task": "pick up the orange block and place it in the target area at (0.581, 0.212) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 496182
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -144,7 +156,8 @@
           "action_vs_next_state_mean_rad": 0.0005983671280130629,
           "task": "pick up the orange block and place it in the target area at (0.516, 0.149) with its long side aligned with X",
           "n_frames": 199,
-          "video_bytes": 508461
+          "observation.images.top_frames": 199,
+          "observation.images.wrist_frames": 199
         }
       },
       {
@@ -158,7 +171,8 @@
           "action_vs_next_state_mean_rad": 0.0006035369878907986,
           "task": "pick up the orange block and place it in the target area at (0.554, 0.143) with its long side aligned with X",
           "n_frames": 190,
-          "video_bytes": 486354
+          "observation.images.top_frames": 190,
+          "observation.images.wrist_frames": 190
         }
       },
       {
@@ -172,7 +186,8 @@
           "action_vs_next_state_mean_rad": 0.0006019481222513908,
           "task": "pick up the orange block and place it in the target area at (0.579, 0.154) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 502245
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -186,7 +201,8 @@
           "action_vs_next_state_mean_rad": 0.0006041256848412579,
           "task": "pick up the orange block and place it in the target area at (0.512, 0.175) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 504276
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -200,7 +216,8 @@
           "action_vs_next_state_mean_rad": 0.0005920065011233722,
           "task": "pick up the orange block and place it in the target area at (0.544, 0.177) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 502955
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -214,7 +231,8 @@
           "action_vs_next_state_mean_rad": 0.0005890629773593002,
           "task": "pick up the orange block and place it in the target area at (0.579, 0.182) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499554
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -228,7 +246,8 @@
           "action_vs_next_state_mean_rad": 0.0006057849482233571,
           "task": "pick up the orange block and place it in the target area at (0.519, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500415
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -242,7 +261,8 @@
           "action_vs_next_state_mean_rad": 0.0005979850030195645,
           "task": "pick up the orange block and place it in the target area at (0.556, 0.215) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 497281
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -256,7 +276,8 @@
           "action_vs_next_state_mean_rad": 0.0005967848320947252,
           "task": "pick up the orange block and place it in the target area at (0.576, 0.202) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 498478
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -270,7 +291,8 @@
           "action_vs_next_state_mean_rad": 0.0005976837001293532,
           "task": "pick up the orange block and place it in the target area at (0.524, 0.153) with its long side aligned with X",
           "n_frames": 200,
-          "video_bytes": 507654
+          "observation.images.top_frames": 200,
+          "observation.images.wrist_frames": 200
         }
       },
       {
@@ -284,7 +306,8 @@
           "action_vs_next_state_mean_rad": 0.0006050136469789698,
           "task": "pick up the orange block and place it in the target area at (0.551, 0.154) with its long side aligned with X",
           "n_frames": 191,
-          "video_bytes": 487695
+          "observation.images.top_frames": 191,
+          "observation.images.wrist_frames": 191
         }
       },
       {
@@ -298,7 +321,8 @@
           "action_vs_next_state_mean_rad": 0.0006152010117424696,
           "task": "pick up the orange block and place it in the target area at (0.587, 0.142) with its long side aligned with X",
           "n_frames": 188,
-          "video_bytes": 481911
+          "observation.images.top_frames": 188,
+          "observation.images.wrist_frames": 188
         }
       },
       {
@@ -312,7 +336,8 @@
           "action_vs_next_state_mean_rad": 0.0005995821473774785,
           "task": "pick up the orange block and place it in the target area at (0.519, 0.177) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501599
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -326,7 +351,8 @@
           "action_vs_next_state_mean_rad": 0.0005780404927190565,
           "task": "pick up the orange block and place it in the target area at (0.553, 0.175) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 503374
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -340,7 +366,8 @@
           "action_vs_next_state_mean_rad": 0.0005991557606965203,
           "task": "pick up the orange block and place it in the target area at (0.574, 0.173) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499680
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -354,7 +381,8 @@
           "action_vs_next_state_mean_rad": 0.0005958330351611347,
           "task": "pick up the orange block and place it in the target area at (0.527, 0.209) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501385
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -368,7 +396,8 @@
           "action_vs_next_state_mean_rad": 0.0006021543935933579,
           "task": "pick up the orange block and place it in the target area at (0.548, 0.207) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 501421
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -382,7 +411,8 @@
           "action_vs_next_state_mean_rad": 0.0006137531138104115,
           "task": "pick up the orange block and place it in the target area at (0.586, 0.212) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501289
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -396,7 +426,8 @@
           "action_vs_next_state_mean_rad": 0.0006018511091912972,
           "task": "pick up the orange block and place it in the target area at (0.512, 0.149) with its long side aligned with X",
           "n_frames": 201,
-          "video_bytes": 512659
+          "observation.images.top_frames": 201,
+          "observation.images.wrist_frames": 201
         }
       },
       {
@@ -410,7 +441,8 @@
           "action_vs_next_state_mean_rad": 0.0005860950351571102,
           "task": "pick up the orange block and place it in the target area at (0.545, 0.151) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 505921
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -424,7 +456,8 @@
           "action_vs_next_state_mean_rad": 0.000612607353448657,
           "task": "pick up the orange block and place it in the target area at (0.584, 0.152) with its long side aligned with X",
           "n_frames": 187,
-          "video_bytes": 482557
+          "observation.images.top_frames": 187,
+          "observation.images.wrist_frames": 187
         }
       },
       {
@@ -438,7 +471,8 @@
           "action_vs_next_state_mean_rad": 0.0006052101620287792,
           "task": "pick up the orange block and place it in the target area at (0.516, 0.188) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500638
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -452,7 +486,8 @@
           "action_vs_next_state_mean_rad": 0.0005822311513998035,
           "task": "pick up the orange block and place it in the target area at (0.553, 0.173) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 504029
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -466,7 +501,8 @@
           "action_vs_next_state_mean_rad": 0.0005916667040255161,
           "task": "pick up the orange block and place it in the target area at (0.577, 0.179) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499717
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -480,7 +516,8 @@
           "action_vs_next_state_mean_rad": 0.0006037287248446978,
           "task": "pick up the orange block and place it in the target area at (0.522, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500446
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -494,7 +531,8 @@
           "action_vs_next_state_mean_rad": 0.0006036730797982164,
           "task": "pick up the orange block and place it in the target area at (0.552, 0.214) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 498477
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -508,7 +546,8 @@
           "action_vs_next_state_mean_rad": 0.0006012211933834589,
           "task": "pick up the orange block and place it in the target area at (0.575, 0.203) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 498192
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -522,7 +561,8 @@
           "action_vs_next_state_mean_rad": 0.0005966500003782377,
           "task": "pick up the orange block and place it in the target area at (0.517, 0.158) with its long side aligned with X",
           "n_frames": 199,
-          "video_bytes": 509016
+          "observation.images.top_frames": 199,
+          "observation.images.wrist_frames": 199
         }
       },
       {
@@ -536,7 +576,8 @@
           "action_vs_next_state_mean_rad": 0.0005908446836167654,
           "task": "pick up the orange block and place it in the target area at (0.551, 0.147) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 505503
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -550,7 +591,8 @@
           "action_vs_next_state_mean_rad": 0.0006078275978145422,
           "task": "pick up the orange block and place it in the target area at (0.578, 0.153) with its long side aligned with X",
           "n_frames": 189,
-          "video_bytes": 484646
+          "observation.images.top_frames": 189,
+          "observation.images.wrist_frames": 189
         }
       },
       {
@@ -564,7 +606,8 @@
           "action_vs_next_state_mean_rad": 0.0006082164394732592,
           "task": "pick up the orange block and place it in the target area at (0.517, 0.182) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 501640
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -578,7 +621,8 @@
           "action_vs_next_state_mean_rad": 0.0005926267686475882,
           "task": "pick up the orange block and place it in the target area at (0.553, 0.182) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 499219
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -592,7 +636,8 @@
           "action_vs_next_state_mean_rad": 0.0005962405976292041,
           "task": "pick up the orange block and place it in the target area at (0.572, 0.179) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 497832
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       },
       {
@@ -606,7 +651,8 @@
           "action_vs_next_state_mean_rad": 0.0006011625520631604,
           "task": "pick up the orange block and place it in the target area at (0.515, 0.206) with its long side aligned with X",
           "n_frames": 198,
-          "video_bytes": 500473
+          "observation.images.top_frames": 198,
+          "observation.images.wrist_frames": 198
         }
       },
       {
@@ -620,7 +666,8 @@
           "action_vs_next_state_mean_rad": 0.0005901776062843803,
           "task": "pick up the orange block and place it in the target area at (0.545, 0.212) with its long side aligned with X",
           "n_frames": 197,
-          "video_bytes": 499865
+          "observation.images.top_frames": 197,
+          "observation.images.wrist_frames": 197
         }
       },
       {
@@ -634,7 +681,8 @@
           "action_vs_next_state_mean_rad": 0.0006006843905010893,
           "task": "pick up the orange block and place it in the target area at (0.583, 0.212) with its long side aligned with X",
           "n_frames": 196,
-          "video_bytes": 497293
+          "observation.images.top_frames": 196,
+          "observation.images.wrist_frames": 196
         }
       }
     ],
@@ -829,6 +877,9 @@
     "dataset_dir": "/scratch/lijh/exp40/repo/data/exp41/B90",
     "n_episodes": 45,
     "n_valid_episodes": 45,
+    "n_videos_decoded": 90,
+    "n_video_frame_mismatch": 0,
+    "n_video_missing": 0,
     "n_checks": 48,
     "n_pass": 48,
     "all_pass": true,
@@ -844,7 +895,8 @@
           "action_vs_next_state_mean_rad": 0.00047064622307159935,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 409201
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -858,7 +910,8 @@
           "action_vs_next_state_mean_rad": 0.0010711218564246835,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 178,
-          "video_bytes": 449345
+          "observation.images.top_frames": 178,
+          "observation.images.wrist_frames": 178
         }
       },
       {
@@ -872,7 +925,8 @@
           "action_vs_next_state_mean_rad": 0.0004899123011903691,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 392406
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -886,7 +940,8 @@
           "action_vs_next_state_mean_rad": 0.000529176074128441,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 162,
-          "video_bytes": 400535
+          "observation.images.top_frames": 162,
+          "observation.images.wrist_frames": 162
         }
       },
       {
@@ -900,7 +955,8 @@
           "action_vs_next_state_mean_rad": 0.0009619692941431528,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 165,
-          "video_bytes": 409325
+          "observation.images.top_frames": 165,
+          "observation.images.wrist_frames": 165
         }
       },
       {
@@ -914,7 +970,8 @@
           "action_vs_next_state_mean_rad": 0.0007764041006531099,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 409155
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -928,7 +985,8 @@
           "action_vs_next_state_mean_rad": 0.0005012669307589121,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 409370
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -942,7 +1000,8 @@
           "action_vs_next_state_mean_rad": 0.0005075996163331212,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393144
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -956,7 +1015,8 @@
           "action_vs_next_state_mean_rad": 0.00084751020381644,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 173,
-          "video_bytes": 437776
+          "observation.images.top_frames": 173,
+          "observation.images.wrist_frames": 173
         }
       },
       {
@@ -970,7 +1030,8 @@
           "action_vs_next_state_mean_rad": 0.0007764234571301374,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393809
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -984,7 +1045,8 @@
           "action_vs_next_state_mean_rad": 0.0007590697800951927,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 161,
-          "video_bytes": 399816
+          "observation.images.top_frames": 161,
+          "observation.images.wrist_frames": 161
         }
       },
       {
@@ -998,7 +1060,8 @@
           "action_vs_next_state_mean_rad": 0.0005169993997608767,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 160,
-          "video_bytes": 392964
+          "observation.images.top_frames": 160,
+          "observation.images.wrist_frames": 160
         }
       },
       {
@@ -1012,7 +1075,8 @@
           "action_vs_next_state_mean_rad": 0.0008403662501081413,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 177,
-          "video_bytes": 461197
+          "observation.images.top_frames": 177,
+          "observation.images.wrist_frames": 177
         }
       },
       {
@@ -1026,7 +1090,8 @@
           "action_vs_next_state_mean_rad": 0.0009588023728863219,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 171,
-          "video_bytes": 433202
+          "observation.images.top_frames": 171,
+          "observation.images.wrist_frames": 171
         }
       },
       {
@@ -1040,7 +1105,8 @@
           "action_vs_next_state_mean_rad": 0.0009166668954336825,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 158,
-          "video_bytes": 398628
+          "observation.images.top_frames": 158,
+          "observation.images.wrist_frames": 158
         }
       },
       {
@@ -1054,7 +1120,8 @@
           "action_vs_next_state_mean_rad": 0.0004947519972748745,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393991
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1068,7 +1135,8 @@
           "action_vs_next_state_mean_rad": 0.0008787924938530977,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 161,
-          "video_bytes": 399059
+          "observation.images.top_frames": 161,
+          "observation.images.wrist_frames": 161
         }
       },
       {
@@ -1082,7 +1150,8 @@
           "action_vs_next_state_mean_rad": 0.0005039015884008649,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 158,
-          "video_bytes": 389135
+          "observation.images.top_frames": 158,
+          "observation.images.wrist_frames": 158
         }
       },
       {
@@ -1096,7 +1165,8 @@
           "action_vs_next_state_mean_rad": 0.0004507577316250581,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 407570
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1110,7 +1180,8 @@
           "action_vs_next_state_mean_rad": 0.000851902097336008,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 172,
-          "video_bytes": 445892
+          "observation.images.top_frames": 172,
+          "observation.images.wrist_frames": 172
         }
       },
       {
@@ -1124,7 +1195,8 @@
           "action_vs_next_state_mean_rad": 0.0008887539902972682,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 178,
-          "video_bytes": 449370
+          "observation.images.top_frames": 178,
+          "observation.images.wrist_frames": 178
         }
       },
       {
@@ -1138,7 +1210,8 @@
           "action_vs_next_state_mean_rad": 0.0004286844959302295,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393123
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1152,7 +1225,8 @@
           "action_vs_next_state_mean_rad": 0.00042563629204872154,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 159,
-          "video_bytes": 392626
+          "observation.images.top_frames": 159,
+          "observation.images.wrist_frames": 159
         }
       },
       {
@@ -1166,7 +1240,8 @@
           "action_vs_next_state_mean_rad": 0.0005436374092877129,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 407966
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1180,7 +1255,8 @@
           "action_vs_next_state_mean_rad": 0.0009804972227640408,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 168,
-          "video_bytes": 424324
+          "observation.images.top_frames": 168,
+          "observation.images.wrist_frames": 168
         }
       },
       {
@@ -1194,7 +1270,8 @@
           "action_vs_next_state_mean_rad": 0.0006372775263389066,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393132
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1208,7 +1285,8 @@
           "action_vs_next_state_mean_rad": 0.0004899135272264494,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 159,
-          "video_bytes": 393573
+          "observation.images.top_frames": 159,
+          "observation.images.wrist_frames": 159
         }
       },
       {
@@ -1222,7 +1300,8 @@
           "action_vs_next_state_mean_rad": 0.0007079128454853951,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 407795
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1236,7 +1315,8 @@
           "action_vs_next_state_mean_rad": 0.0005853962363319594,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 407865
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1250,7 +1330,8 @@
           "action_vs_next_state_mean_rad": 0.0006134120474917136,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393038
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1264,7 +1345,8 @@
           "action_vs_next_state_mean_rad": 0.0005831614713778371,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 161,
-          "video_bytes": 399342
+          "observation.images.top_frames": 161,
+          "observation.images.wrist_frames": 161
         }
       },
       {
@@ -1278,7 +1360,8 @@
           "action_vs_next_state_mean_rad": 0.0004932287760785398,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 159,
-          "video_bytes": 393708
+          "observation.images.top_frames": 159,
+          "observation.images.wrist_frames": 159
         }
       },
       {
@@ -1292,7 +1375,8 @@
           "action_vs_next_state_mean_rad": 0.00045156018499698967,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 407978
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1306,7 +1390,8 @@
           "action_vs_next_state_mean_rad": 0.0008907684878067812,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 177,
-          "video_bytes": 460392
+          "observation.images.top_frames": 177,
+          "observation.images.wrist_frames": 177
         }
       },
       {
@@ -1320,7 +1405,8 @@
           "action_vs_next_state_mean_rad": 0.000460654167306229,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 158,
-          "video_bytes": 398972
+          "observation.images.top_frames": 158,
+          "observation.images.wrist_frames": 158
         }
       },
       {
@@ -1334,7 +1420,8 @@
           "action_vs_next_state_mean_rad": 0.0006962009827919683,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393986
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1348,7 +1435,8 @@
           "action_vs_next_state_mean_rad": 0.0005225989584240713,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 161,
-          "video_bytes": 399269
+          "observation.images.top_frames": 161,
+          "observation.images.wrist_frames": 161
         }
       },
       {
@@ -1362,7 +1450,8 @@
           "action_vs_next_state_mean_rad": 0.0005444719331457823,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 160,
-          "video_bytes": 394313
+          "observation.images.top_frames": 160,
+          "observation.images.wrist_frames": 160
         }
       },
       {
@@ -1376,7 +1465,8 @@
           "action_vs_next_state_mean_rad": 0.0005551737912707219,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 408977
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1390,7 +1480,8 @@
           "action_vs_next_state_mean_rad": 0.0008290323265487048,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 157,
-          "video_bytes": 408456
+          "observation.images.top_frames": 157,
+          "observation.images.wrist_frames": 157
         }
       },
       {
@@ -1404,7 +1495,8 @@
           "action_vs_next_state_mean_rad": 0.0005418891972942809,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 158,
-          "video_bytes": 398215
+          "observation.images.top_frames": 158,
+          "observation.images.wrist_frames": 158
         }
       },
       {
@@ -1418,7 +1510,8 @@
           "action_vs_next_state_mean_rad": 0.0007150486761850009,
           "task": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
           "n_frames": 156,
-          "video_bytes": 393151
+          "observation.images.top_frames": 156,
+          "observation.images.wrist_frames": 156
         }
       },
       {
@@ -1432,7 +1525,8 @@
           "action_vs_next_state_mean_rad": 0.0007240248001778582,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 161,
-          "video_bytes": 400463
+          "observation.images.top_frames": 161,
+          "observation.images.wrist_frames": 161
         }
       },
       {
@@ -1446,7 +1540,8 @@
           "action_vs_next_state_mean_rad": 0.0008552852167771493,
           "task": "push the orange block along the positive X direction to the wall region y in [0.24, 0.30]",
           "n_frames": 159,
-          "video_bytes": 395085
+          "observation.images.top_frames": 159,
+          "observation.images.wrist_frames": 159
         }
       },
       {
@@ -1460,7 +1555,8 @@
           "action_vs_next_state_mean_rad": 0.0009223494536272233,
           "task": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
           "n_frames": 167,
-          "video_bytes": 435520
+          "observation.images.top_frames": 167,
+          "observation.images.wrist_frames": 167
         }
       }
     ],
