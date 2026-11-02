@@ -1,0 +1,207 @@
+{
+  "A90": {
+    "20Hz": {
+      "steps_per_action": 12,
+      "hz": 20.0,
+      "n": 3,
+      "n_success": 3,
+      "runs": [
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": 0.002277549381949622,
+            "yaw_error_deg": 3.341920782730988,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 0.003538076507335914
+          }
+        },
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": 0.0022990224791642057,
+            "yaw_error_deg": 2.9339059582170615,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 0.004046470261871615
+          }
+        },
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": 0.0008666171268974196,
+            "yaw_error_deg": 0.11402894621714674,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 0.020839826706560774
+          }
+        }
+      ]
+    },
+    "15Hz": {
+      "steps_per_action": 16,
+      "hz": 15.0,
+      "n": 3,
+      "n_success": 2,
+      "runs": [
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": 0.005940497544697843,
+            "yaw_error_deg": 3.421242342969151,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 0.0030323438926952617
+          }
+        },
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": false,
+          "failure_reason": "tilt_ok",
+          "metrics": {
+            "position_error_m": 0.01703647088284142,
+            "yaw_error_deg": 4.62385950875772,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 32.50684474960127
+          }
+        },
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": 0.00011793911236740151,
+            "yaw_error_deg": 0.22271432648666598,
+            "advance_x_m": null,
+            "terminal_gap_m": null,
+            "wall_contact_steps": null,
+            "tilt_deg": 0.003838096283512466
+          }
+        }
+      ]
+    }
+  },
+  "B90": {
+    "20Hz": {
+      "steps_per_action": 12,
+      "hz": 20.0,
+      "n": 3,
+      "n_success": 2,
+      "runs": [
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.17482524696866564,
+            "terminal_gap_m": 0.00015258567991294214,
+            "wall_contact_steps": 827,
+            "tilt_deg": 0.003532925576687276
+          }
+        },
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.1764882141156353,
+            "terminal_gap_m": -2.2272774452436472e-05,
+            "wall_contact_steps": 586,
+            "tilt_deg": 0.1515442848243493
+          }
+        },
+        {
+          "spa": 12,
+          "hz": 20.0,
+          "strict_success": false,
+          "failure_reason": "advance_ok",
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.027680439798965395,
+            "terminal_gap_m": 0.15113271590369048,
+            "wall_contact_steps": 0,
+            "tilt_deg": 10.199871887873556
+          }
+        }
+      ]
+    },
+    "15Hz": {
+      "steps_per_action": 16,
+      "hz": 15.0,
+      "n": 3,
+      "n_success": 2,
+      "runs": [
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": false,
+          "failure_reason": "wall_contact_ever",
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.05074895542303026,
+            "terminal_gap_m": 0.12437228631932906,
+            "wall_contact_steps": 0,
+            "tilt_deg": 11.781891135654098
+          }
+        },
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.17674320749588135,
+            "terminal_gap_m": 9.93881805966268e-07,
+            "wall_contact_steps": 605,
+            "tilt_deg": 1.1254347671125393
+          }
+        },
+        {
+          "spa": 16,
+          "hz": 15.0,
+          "strict_success": true,
+          "failure_reason": null,
+          "metrics": {
+            "position_error_m": null,
+            "yaw_error_deg": null,
+            "advance_x_m": 0.17977707257103426,
+            "terminal_gap_m": -1.0524651136822882e-05,
+            "wall_contact_steps": 604,
+            "tilt_deg": 0.009094031144597881
+          }
+        }
+      ]
+    }
+  },
+  "note": "12 步 = 20 Hz（本次数据使用的基准）；16 步 = 15 Hz（DROID 原始控制频率）。两组都用同一个严格评价器；成功率相同说明 15 Hz 在该专家上同样可行，但动作与状态的**时间关系**不同（一步 62.5 ms vs 50 ms），跨频率训练/推理必须做时间归一化。"
+}

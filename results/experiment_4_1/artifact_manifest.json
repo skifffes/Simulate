@@ -26,7 +26,7 @@
     "location": "/scratch/lijh/exp40/repo/data/exp41",
     "in_git": false
   },
-  "n_files": 173,
+  "n_files": 175,
   "files": [
     {
       "path": "dataset/collection_summary.json",
@@ -47,6 +47,16 @@
       "path": "dataset/diversity_audit.json",
       "size_bytes": 1231,
       "sha256": "b34c979bbbb47a353ab58c78ebab963646f6556ac546124ac8a14a20c9c24d15"
+    },
+    {
+      "path": "dataset/fps_feasibility.json",
+      "size_bytes": 5988,
+      "sha256": "a4f64fcbf17ab49e41d8280da5828b56ecdaa4a04a19c5b8f527500069aa14af"
+    },
+    {
+      "path": "dataset/goal_conditioning_feasibility.json",
+      "size_bytes": 3102,
+      "sha256": "a4632c55f9323c462b8538c2e7095a1b2886ce923e1afa4370ae9671c2209557"
     },
     {
       "path": "dataset/quality_audit.csv",
@@ -875,8 +885,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 3686,
-      "sha256": "e4cbd04942e397e1b5d408898379ba06302662b1e1f111ace86aa3d27fe697de"
+      "size_bytes": 3780,
+      "sha256": "0021326e0d06eaf8391849536f97ba1b4c3d0956291c6c3ed98ca348c99050f3"
     },
     {
       "path": "reports/experiment_4_1_report.md",

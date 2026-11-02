@@ -1,0 +1,136 @@
+{
+  "object_start": {
+    "start_id": "B_obj_y021",
+    "x": 0.553,
+    "y": 0.21,
+    "yaw": 1.5707963267948966
+  },
+  "robot_start": {
+    "robot_start_id": "B_robot_home",
+    "q": [
+      0.0,
+      -0.5,
+      0.0,
+      -2.1,
+      0.0,
+      1.65,
+      0.78
+    ],
+    "gripper": 0.035
+  },
+  "n": 6,
+  "n_success": 4,
+  "by_goal": {
+    "B_wall_y_low": {
+      "attempts": 2,
+      "success": 0
+    },
+    "B_wall_y_mid": {
+      "attempts": 2,
+      "success": 2
+    },
+    "B_wall_y_high": {
+      "attempts": 2,
+      "success": 2
+    }
+  },
+  "rows": [
+    {
+      "goal_id": "B_wall_y_low",
+      "goal_y_range": [
+        0.12,
+        0.18
+      ],
+      "seed": 430000,
+      "strict_success": false,
+      "failure_reason": "pushed_by_robot",
+      "expert_ok": false,
+      "expert_reason": "b_lat_lower",
+      "final_y": 0.2115010330759967,
+      "advance_x_m": 0.0,
+      "wall_contact_steps": 0,
+      "lateral_needed": true
+    },
+    {
+      "goal_id": "B_wall_y_low",
+      "goal_y_range": [
+        0.12,
+        0.18
+      ],
+      "seed": 430001,
+      "strict_success": false,
+      "failure_reason": "pushed_by_robot",
+      "expert_ok": false,
+      "expert_reason": "b_lat_lower",
+      "final_y": 0.20795609832244275,
+      "advance_x_m": -6.425460163939078e-11,
+      "wall_contact_steps": 0,
+      "lateral_needed": true
+    },
+    {
+      "goal_id": "B_wall_y_mid",
+      "goal_y_range": [
+        0.18,
+        0.24
+      ],
+      "seed": 430000,
+      "strict_success": true,
+      "failure_reason": null,
+      "expert_ok": true,
+      "expert_reason": "ok",
+      "final_y": 0.21711429641185145,
+      "advance_x_m": 0.17649902151546926,
+      "wall_contact_steps": 632,
+      "lateral_needed": false
+    },
+    {
+      "goal_id": "B_wall_y_mid",
+      "goal_y_range": [
+        0.18,
+        0.24
+      ],
+      "seed": 430001,
+      "strict_success": true,
+      "failure_reason": null,
+      "expert_ok": true,
+      "expert_reason": "ok",
+      "final_y": 0.2176791779786734,
+      "advance_x_m": 0.17650742621377324,
+      "wall_contact_steps": 875,
+      "lateral_needed": false
+    },
+    {
+      "goal_id": "B_wall_y_high",
+      "goal_y_range": [
+        0.24,
+        0.3
+      ],
+      "seed": 430000,
+      "strict_success": true,
+      "failure_reason": null,
+      "expert_ok": true,
+      "expert_reason": "ok",
+      "final_y": 0.2466145117170427,
+      "advance_x_m": 0.175713708641153,
+      "wall_contact_steps": 641,
+      "lateral_needed": true
+    },
+    {
+      "goal_id": "B_wall_y_high",
+      "goal_y_range": [
+        0.24,
+        0.3
+      ],
+      "seed": 430001,
+      "strict_success": true,
+      "failure_reason": null,
+      "expert_ok": true,
+      "expert_reason": "ok",
+      "final_y": 0.24471748839446367,
+      "advance_x_m": 0.17697465079193242,
+      "wall_contact_steps": 637,
+      "lateral_needed": true
+    }
+  ],
+  "conclusion": "若只有与起点同一区域的目标成功、跨区目标失败，则说明当前 +X 专家无法把目标作为独立控制维度，主数据只用预配对 (起点, 目标)。"
+}
