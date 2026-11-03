@@ -28,6 +28,11 @@
 | `failure_analysis.md` | 为什么 loss 降了但成功率为 0（第一版：动作尺度诊断） |
 | `diagnostics_p0.md` | **P0 诊断（review 后）**：专家观测上的幅度/方向/夹爪对比 + loss 归因 + 裁剪统计；修正了"幅度是唯一根因" |
 | `action_diagnostics_p0.json` | 上述诊断的逐帧原始数据（10 帧 × 3 个模型） |
+| `diagnostics_p0b.md` | **P0b**：运动帧方向复核、逐维 loss/梯度归因、初始 HOME 帧诊断、增益 0.5/0.2 与 baseline 闭环 |
+| `p0b_diagnostics.json` / `p0c_initial_state.json` / `still_frames.json` | P0b 原始数据 |
+| `diagnostics_ab_masked_loss.md` | **A/B 受控对照**：32D vs 8D masked loss 各 300 步（同 seed），初始帧动作对比 |
+| `ab_initial_state.json` | A/B 初始帧对比原始数据 |
+| `gain_rollouts/`, `baseline_rollouts/` | 增益诊断（0.5/0.2）与原始模型基线闭环 |
 
 ## 数据集与 split（复用 4.1，未重新采集）
 
