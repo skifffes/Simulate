@@ -199,7 +199,39 @@ def init_state(cfg):
     return train_state
 
 
-def make_train_step(cfg):
+def flow_sq(model, rng, observation, actions, *, train: bool, horizon: int):
+    """与 pi0.compute_loss 完全相同的 flow-matching 计算，但返回**逐维**平方误差 (B,H,32)。
+
+    用于"有效动作维度 masked loss"（review 4.2-P0b 第三步）：官方 compute_loss 对 32 维求均值，
+    这里保留逐维结果，由调用方决定对哪些维度求平均。
+    """
+    import jax
+    import jax.numpy as jnp
+    import openpi.models.model as _model
+    from openpi.models.pi0 import make_attn_mask
+
+    pre_rng, noise_rng, time_rng = jax.random.split(rng, 3)
+    obs = _model.preprocess_observation(pre_rng, observation, train=train)
+    bs = actions.shape[:-2]
+    noise = jax.random.normal(noise_rng, actions.shape)
+    tm = jax.random.beta(time_rng, 1.5, 1, bs) * 0.999 + 0.001
+    te = tm[..., None, None]
+    x_t = te * noise + (1 - te) * actions
+    u_t = noise - actions
+    pre_tok, pre_mask, pre_ar = model.embed_prefix(obs)
+    suf_tok, suf_mask, suf_ar, adarms = model.embed_suffix(obs, x_t, tm)
+    input_mask = jnp.concatenate([pre_mask, suf_mask], axis=1)
+    ar_mask = jnp.concatenate([pre_ar, suf_ar], axis=0)
+    attn = make_attn_mask(input_mask, ar_mask)
+    pos = jnp.cumsum(input_mask, axis=1) - 1
+    (_, suf_out), _ = model.PaliGemma.llm([pre_tok, suf_tok], mask=attn, positions=pos,
+                                          adarms_cond=[None, adarms])
+    v_t = model.action_out_proj(suf_out[:, -horizon:])
+    return jnp.square(v_t - u_t)
+
+
+def make_train_step(cfg, loss_dims: int = 0):
+    """loss_dims=0 用官方 32 维 loss；loss_dims=8 只对前 8 维（7 关节 + 1 夹爪）求平均。"""
     import flax.nnx as nnx
     import jax
     import jax.numpy as jnp
@@ -214,7 +246,11 @@ def make_train_step(cfg):
 
         @at.typecheck
         def loss_fn(model, rng, observation, actions):
-            return jnp.mean(model.compute_loss(rng, observation, actions, train=True))
+            if loss_dims <= 0:
+                return jnp.mean(model.compute_loss(rng, observation, actions, train=True))
+            sq = flow_sq(model, rng, observation, actions, train=True,
+                         horizon=model.action_horizon)
+            return jnp.mean(sq[..., :loss_dims])
 
         train_rng = jax.random.fold_in(rng, state.step)
         observation, actions = batch
@@ -296,6 +332,8 @@ def main(argv=None) -> int:
     ap.add_argument('--train-split', default='train')
     ap.add_argument('--export-params', action='store_true', help='训练结束导出完整 params（orbax）')
     ap.add_argument('--init-lora', default='', help='从已有 LoRA npz 继续训练（尺度/收敛诊断用）')
+    ap.add_argument('--loss-dims', type=int, default=0,
+                    help='0=官方 32 维 loss；8=只在前 8 维（7 关节+1 夹爪）求平均（P0b 对照实验）')
     args = ap.parse_args(argv)
     OUT.mkdir(parents=True, exist_ok=True)
 
@@ -374,7 +412,7 @@ def main(argv=None) -> int:
         }, ensure_ascii=False, indent=2), encoding='utf-8')
         return 0
 
-    step_fn = make_train_step(cfg)
+    step_fn = make_train_step(cfg, loss_dims=args.loss_dims)
     jax_rng = jax.random.key(args.seed)
     t_compile = time.time()
     batch0 = (obs, actions)

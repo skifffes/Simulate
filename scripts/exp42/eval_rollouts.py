@@ -46,6 +46,8 @@ def main(argv=None) -> int:
     ap.add_argument('--goal-id', default='')
     ap.add_argument('--execute-k', type=int, default=8)
     ap.add_argument('--tag', default='ft')
+    ap.add_argument('--action-gain', type=float, default=1.0,
+                    help='诊断用：反归一化后、安全裁剪前缩放关节增量（只用于增益实验）')
     ap.add_argument('--out', default='results/experiment_4_2/finetuned_rollouts')
     args = ap.parse_args(argv)
 
@@ -113,7 +115,9 @@ def main(argv=None) -> int:
                 res = client.infer(obs, episode_seed=seed if tick == 0 else None)
                 infer_s.append(time.time() - ti)
                 n_infer += 1
-                chunk = np.asarray(res['actions'], dtype=np.float64)
+                chunk = np.asarray(res['actions'], dtype=np.float64).copy()
+                if args.action_gain != 1.0:
+                    chunk[:, :7] *= args.action_gain
                 adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg)
                 act_log.append({'tick': tick, 'action_absmax': float(np.abs(chunk[:, :8]).max()),
                                 'gripper_cmd': float(chunk[0, 7]),

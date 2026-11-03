@@ -1,0 +1,1736 @@
+{
+  "frames": [
+    {
+      "skill": "A90",
+      "episode": 0,
+      "frame": 84,
+      "split": "train",
+      "expert_norm_first": 0.04735476914167879,
+      "expert_absmax_first": 0.046024858951568604,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.1484693307520438,
+          "joint_absmax": 0.42633423672270776,
+          "expert_absmax": 0.561703585088253,
+          "magnitude_ratio": 2.010716294177449,
+          "cos_step0": -0.7638499075262226,
+          "cos_mean6": -0.7710379496771497,
+          "cos_steps": [
+            -0.764,
+            -0.766,
+            -0.786,
+            -0.798,
+            -0.78,
+            -0.733
+          ],
+          "gripper_first": 0.9121037235383392,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.16042210497693027
+        },
+        "step501": {
+          "joint_mae": 0.09211021377324527,
+          "joint_absmax": 0.2952976791381836,
+          "expert_absmax": 0.5655284970998764,
+          "magnitude_ratio": 0.9895448885706826,
+          "cos_step0": -0.5733291856849161,
+          "cos_mean6": -0.2876491382421558,
+          "cos_steps": [
+            -0.573,
+            -0.188,
+            -0.641,
+            -0.315,
+            -0.045,
+            0.037
+          ],
+          "gripper_first": 0.4399686932038665,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.573438867143162
+        },
+        "step901": {
+          "joint_mae": 0.06724323030460463,
+          "joint_absmax": 0.5009247697143555,
+          "expert_absmax": 0.5655284970998764,
+          "magnitude_ratio": 1.1259521907498682,
+          "cos_step0": -0.6017390798319365,
+          "cos_mean6": -0.575991412523534,
+          "cos_steps": [
+            -0.602,
+            -0.465,
+            -0.878,
+            -0.734,
+            -0.056,
+            -0.721
+          ],
+          "gripper_first": 0.4452166720857024,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.6575192136295529
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "frame": 88,
+      "split": "train",
+      "expert_norm_first": 0.047415945888814405,
+      "expert_absmax_first": 0.046007782220840454,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.14025062816114228,
+          "joint_absmax": 0.43136389262336494,
+          "expert_absmax": 0.5610365681350231,
+          "magnitude_ratio": 2.2394885813719494,
+          "cos_step0": -0.07013441761545362,
+          "cos_mean6": -0.09569916512727882,
+          "cos_steps": [
+            -0.07,
+            -0.102,
+            -0.094,
+            -0.125,
+            -0.117,
+            -0.067
+          ],
+          "gripper_first": 0.8641591243189574,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.20978770765798757
+        },
+        "step501": {
+          "joint_mae": 0.08411504739744483,
+          "joint_absmax": 0.40392564186042557,
+          "expert_absmax": 0.5648537017405033,
+          "magnitude_ratio": 1.1670519767019083,
+          "cos_step0": 0.04434990560704471,
+          "cos_mean6": 0.23258275818554316,
+          "cos_steps": [
+            0.044,
+            0.287,
+            0.057,
+            0.141,
+            0.346,
+            0.52
+          ],
+          "gripper_first": 0.46848595562902096,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.009954767041393753
+        },
+        "step901": {
+          "joint_mae": 0.07052302939205592,
+          "joint_absmax": 0.6333386370081306,
+          "expert_absmax": 0.5648537017405033,
+          "magnitude_ratio": 1.5593594681695038,
+          "cos_step0": 0.20808388232837602,
+          "cos_mean6": 0.5003894252862701,
+          "cos_steps": [
+            0.208,
+            0.645,
+            0.362,
+            0.388,
+            0.682,
+            0.716
+          ],
+          "gripper_first": 0.4829484090591967,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.3583819580544998
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 7,
+      "frame": 84,
+      "split": "val",
+      "expert_norm_first": 0.047936357460349126,
+      "expert_absmax_first": 0.04652458429336548,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.14174099449414554,
+          "joint_absmax": 0.2819860240909457,
+          "expert_absmax": 0.5867493525147438,
+          "magnitude_ratio": 1.8680084772797554,
+          "cos_step0": -0.07269297102685568,
+          "cos_mean6": 0.02961433246399149,
+          "cos_steps": [
+            -0.073,
+            -0.044,
+            -0.048,
+            0.01,
+            0.108,
+            0.225
+          ],
+          "gripper_first": 0.5732349621654154,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.3972096632212025
+        },
+        "step501": {
+          "joint_mae": 0.0830927079446361,
+          "joint_absmax": 0.23831474758106475,
+          "expert_absmax": 0.5982367917895317,
+          "magnitude_ratio": 1.152735993111667,
+          "cos_step0": 0.20670723672693012,
+          "cos_mean6": 0.5170710205234237,
+          "cos_steps": [
+            0.207,
+            0.454,
+            0.493,
+            0.661,
+            0.595,
+            0.692
+          ],
+          "gripper_first": 0.45805403031116726,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.3665685001389973
+        },
+        "step901": {
+          "joint_mae": 0.05172975762825057,
+          "joint_absmax": 0.35095119591581825,
+          "expert_absmax": 0.5982367917895317,
+          "magnitude_ratio": 1.2117246228754472,
+          "cos_step0": 0.26717223541383006,
+          "cos_mean6": 0.7090960313858067,
+          "cos_steps": [
+            0.267,
+            0.528,
+            0.765,
+            0.942,
+            0.844,
+            0.908
+          ],
+          "gripper_first": 0.4457426379924417,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.04479412962088208
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 7,
+      "frame": 80,
+      "split": "val",
+      "expert_norm_first": 0.04777470571753759,
+      "expert_absmax_first": 0.04643493890762329,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.13349269367331354,
+          "joint_absmax": 0.2157928080306053,
+          "expert_absmax": 0.5882634520530701,
+          "magnitude_ratio": 1.696372424861809,
+          "cos_step0": 0.354193800552693,
+          "cos_mean6": 0.30934077940396826,
+          "cos_steps": [
+            0.354,
+            0.343,
+            0.334,
+            0.307,
+            0.284,
+            0.234
+          ],
+          "gripper_first": 0.02090359902226925,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.27196731897172005
+        },
+        "step501": {
+          "joint_mae": 0.09684754444211988,
+          "joint_absmax": 0.17522902731090784,
+          "expert_absmax": 0.5998083055019379,
+          "magnitude_ratio": 1.069591962234425,
+          "cos_step0": 0.6405015105819011,
+          "cos_mean6": 0.6338549611307949,
+          "cos_steps": [
+            0.641,
+            0.611,
+            0.646,
+            0.689,
+            0.605,
+            0.612
+          ],
+          "gripper_first": 0.42766582265317443,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.4976166289938416
+        },
+        "step901": {
+          "joint_mae": 0.07069686746907154,
+          "joint_absmax": 0.2987418166294695,
+          "expert_absmax": 0.5998083055019379,
+          "magnitude_ratio": 1.0559129778456227,
+          "cos_step0": 0.7972872696542082,
+          "cos_mean6": 0.8542239194249208,
+          "cos_steps": [
+            0.797,
+            0.875,
+            0.846,
+            0.896,
+            0.865,
+            0.847
+          ],
+          "gripper_first": 0.375186033834815,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.7527785725290277
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 14,
+      "frame": 100,
+      "split": "train",
+      "expert_norm_first": 0.047961336382555134,
+      "expert_absmax_first": 0.04582050442695618,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.18679330668761904,
+          "joint_absmax": 0.3503045814631581,
+          "expert_absmax": 0.5530932620167732,
+          "magnitude_ratio": 2.0274211525219545,
+          "cos_step0": -0.11117854327428853,
+          "cos_mean6": 0.07801617883947795,
+          "cos_steps": [
+            -0.111,
+            -0.069,
+            0.088,
+            0.148,
+            0.212,
+            0.2
+          ],
+          "gripper_first": 0.04309076700729132,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.11935529153000404
+        },
+        "step501": {
+          "joint_mae": 0.09770421859343482,
+          "joint_absmax": 0.26460361498445284,
+          "expert_absmax": 0.5568209961056709,
+          "magnitude_ratio": 0.8947173724994774,
+          "cos_step0": 0.6113741616874184,
+          "cos_mean6": 0.6809617615045727,
+          "cos_steps": [
+            0.611,
+            0.686,
+            0.747,
+            0.628,
+            0.705,
+            0.709
+          ],
+          "gripper_first": 0.46064071466964485,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.6490404859646878
+        },
+        "step901": {
+          "joint_mae": 0.07290822738768535,
+          "joint_absmax": 0.41074293863087896,
+          "expert_absmax": 0.5568209961056709,
+          "magnitude_ratio": 0.7614735883910747,
+          "cos_step0": 0.8110660886742121,
+          "cos_mean6": 0.909093830527564,
+          "cos_steps": [
+            0.811,
+            0.942,
+            0.94,
+            0.869,
+            0.946,
+            0.946
+          ],
+          "gripper_first": 0.44996168787521124,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.8890287714727785
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 14,
+      "frame": 80,
+      "split": "train",
+      "expert_norm_first": 0.04693854363394257,
+      "expert_absmax_first": 0.04561680555343628,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.16121812526728344,
+          "joint_absmax": 0.28064569252777094,
+          "expert_absmax": 0.5657306015491486,
+          "magnitude_ratio": 1.5883709683483038,
+          "cos_step0": -0.05549355320379137,
+          "cos_mean6": -0.24253995499964928,
+          "cos_steps": [
+            -0.055,
+            -0.109,
+            -0.214,
+            -0.289,
+            -0.371,
+            -0.418
+          ],
+          "gripper_first": 0.8555462985123397,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.3821448789795402
+        },
+        "step501": {
+          "joint_mae": 0.0932554777243454,
+          "joint_absmax": 0.14703925642788407,
+          "expert_absmax": 0.5732566714286804,
+          "magnitude_ratio": 0.672573149541201,
+          "cos_step0": 0.3189401570363401,
+          "cos_mean6": 0.21732270172230894,
+          "cos_steps": [
+            0.319,
+            0.197,
+            0.166,
+            0.515,
+            0.051,
+            0.056
+          ],
+          "gripper_first": 0.44141363942420486,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.20086788079091655
+        },
+        "step901": {
+          "joint_mae": 0.11409762408766735,
+          "joint_absmax": 0.22606501708930726,
+          "expert_absmax": 0.5732566714286804,
+          "magnitude_ratio": 1.0640124864947547,
+          "cos_step0": 0.13329126469491123,
+          "cos_mean6": 0.04044098600361928,
+          "cos_steps": [
+            0.133,
+            -0.16,
+            -0.104,
+            0.381,
+            -0.053,
+            0.045
+          ],
+          "gripper_first": 0.41550937157142165,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.2939568406994768
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 21,
+      "frame": 84,
+      "split": "train",
+      "expert_norm_first": 0.04716889014752391,
+      "expert_absmax_first": 0.04596525430679321,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.13147624251398474,
+          "joint_absmax": 0.26594069826424116,
+          "expert_absmax": 0.5711358487606049,
+          "magnitude_ratio": 1.687310638173075,
+          "cos_step0": 0.44635499015692737,
+          "cos_mean6": 0.4265507430145133,
+          "cos_steps": [
+            0.446,
+            0.431,
+            0.442,
+            0.436,
+            0.435,
+            0.368
+          ],
+          "gripper_first": 0.4031034353017509,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.33555508325945205
+        },
+        "step501": {
+          "joint_mae": 0.08819032536530255,
+          "joint_absmax": 0.2315801992790103,
+          "expert_absmax": 0.5787604972720146,
+          "magnitude_ratio": 1.1221269508426621,
+          "cos_step0": 0.6776192958218077,
+          "cos_mean6": 0.7118062882863728,
+          "cos_steps": [
+            0.678,
+            0.753,
+            0.701,
+            0.708,
+            0.73,
+            0.701
+          ],
+          "gripper_first": 0.44385917827507854,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.6458595559767613
+        },
+        "step901": {
+          "joint_mae": 0.06373926728560296,
+          "joint_absmax": 0.4564448820602298,
+          "expert_absmax": 0.5787604972720146,
+          "magnitude_ratio": 1.4883948894204349,
+          "cos_step0": 0.8379247916115873,
+          "cos_mean6": 0.8729626621579903,
+          "cos_steps": [
+            0.838,
+            0.836,
+            0.848,
+            0.934,
+            0.843,
+            0.938
+          ],
+          "gripper_first": 0.43290936187264323,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.8451570847294024
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 21,
+      "frame": 88,
+      "split": "train",
+      "expert_norm_first": 0.047208694388352214,
+      "expert_absmax_first": 0.04592198133468628,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.15096565696148165,
+          "joint_absmax": 0.27890153380167493,
+          "expert_absmax": 0.5700524970889091,
+          "magnitude_ratio": 1.8916638484997048,
+          "cos_step0": 0.3949307838780382,
+          "cos_mean6": 0.23439342439397534,
+          "cos_steps": [
+            0.395,
+            0.374,
+            0.262,
+            0.181,
+            0.1,
+            0.095
+          ],
+          "gripper_first": 0.7476820494246483,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.8088828728214671
+        },
+        "step501": {
+          "joint_mae": 0.08102033281492496,
+          "joint_absmax": 0.25831713893854613,
+          "expert_absmax": 0.5776549987494946,
+          "magnitude_ratio": 0.8330606263985972,
+          "cos_step0": 0.7893469796126596,
+          "cos_mean6": 0.755956916315837,
+          "cos_steps": [
+            0.789,
+            0.762,
+            0.821,
+            0.731,
+            0.781,
+            0.651
+          ],
+          "gripper_first": 0.48857834788656235,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.8623067432983937
+        },
+        "step901": {
+          "joint_mae": 0.05042577701599817,
+          "joint_absmax": 0.4594866907913686,
+          "expert_absmax": 0.5776549987494946,
+          "magnitude_ratio": 1.104364880762286,
+          "cos_step0": 0.9545671976103871,
+          "cos_mean6": 0.9461951312208607,
+          "cos_steps": [
+            0.955,
+            0.964,
+            0.939,
+            0.922,
+            0.932,
+            0.966
+          ],
+          "gripper_first": 0.5176253007674217,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.8566118221528909
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 28,
+      "frame": 84,
+      "split": "train",
+      "expert_norm_first": 0.04713616088640468,
+      "expert_absmax_first": 0.04583859443664551,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.20089461628119326,
+          "joint_absmax": 0.6048344657111764,
+          "expert_absmax": 0.5583937913179398,
+          "magnitude_ratio": 2.813485623875965,
+          "cos_step0": 0.5262086723728829,
+          "cos_mean6": 0.5388704511965464,
+          "cos_steps": [
+            0.526,
+            0.549,
+            0.585,
+            0.549,
+            0.537,
+            0.487
+          ],
+          "gripper_first": 0.14019565822845698,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.028163869215693155
+        },
+        "step501": {
+          "joint_mae": 0.09499357867631716,
+          "joint_absmax": 0.25813594832670694,
+          "expert_absmax": 0.562188908457756,
+          "magnitude_ratio": 0.937325103566893,
+          "cos_step0": 0.7671724513472263,
+          "cos_mean6": 0.76818333089329,
+          "cos_steps": [
+            0.767,
+            0.803,
+            0.844,
+            0.776,
+            0.735,
+            0.684
+          ],
+          "gripper_first": 0.4683774073739648,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.01446194375026207
+        },
+        "step901": {
+          "joint_mae": 0.07613072474644571,
+          "joint_absmax": 0.2917375332876444,
+          "expert_absmax": 0.562188908457756,
+          "magnitude_ratio": 1.1208753689435678,
+          "cos_step0": 0.7700758060549472,
+          "cos_mean6": 0.9360496328641793,
+          "cos_steps": [
+            0.77,
+            0.942,
+            0.956,
+            0.995,
+            0.978,
+            0.975
+          ],
+          "gripper_first": 0.4724049260507226,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.0928628098308555
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 28,
+      "frame": 80,
+      "split": "train",
+      "expert_norm_first": 0.04709045833494329,
+      "expert_absmax_first": 0.04582846164703369,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.1723845527420793,
+          "joint_absmax": 0.3249284408363998,
+          "expert_absmax": 0.5592676103115082,
+          "magnitude_ratio": 1.9743764243015276,
+          "cos_step0": -0.16698774169783456,
+          "cos_mean6": -0.2146051207595007,
+          "cos_steps": [
+            -0.167,
+            -0.198,
+            -0.252,
+            -0.262,
+            -0.221,
+            -0.187
+          ],
+          "gripper_first": 0.07292604302403331,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.04496053354878181
+        },
+        "step501": {
+          "joint_mae": 0.10062999926018902,
+          "joint_absmax": 0.13891670300114156,
+          "expert_absmax": 0.5630731582641602,
+          "magnitude_ratio": 0.7394272862726673,
+          "cos_step0": -0.018222262690516324,
+          "cos_mean6": 0.20049319483686046,
+          "cos_steps": [
+            -0.018,
+            0.354,
+            -0.067,
+            0.0,
+            0.463,
+            0.471
+          ],
+          "gripper_first": 0.4370427173328102,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.23491417270887363
+        },
+        "step901": {
+          "joint_mae": 0.08325962026382532,
+          "joint_absmax": 0.1697882263450623,
+          "expert_absmax": 0.5630731582641602,
+          "magnitude_ratio": 0.599750763296363,
+          "cos_step0": 0.18045138843181055,
+          "cos_mean6": 0.42186168730612944,
+          "cos_steps": [
+            0.18,
+            0.648,
+            -0.172,
+            0.154,
+            0.8,
+            0.92
+          ],
+          "gripper_first": 0.4199715302142799,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.4771631543171238
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 35,
+      "frame": 84,
+      "split": "test",
+      "expert_norm_first": 0.04761839305916127,
+      "expert_absmax_first": 0.04611086845397949,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.2221782315312312,
+          "joint_absmax": 0.5707125850651265,
+          "expert_absmax": 0.5802973061800003,
+          "magnitude_ratio": 2.5380114124070254,
+          "cos_step0": -0.0715518061768857,
+          "cos_mean6": -0.012512353667439774,
+          "cos_steps": [
+            -0.072,
+            -0.047,
+            -0.028,
+            0.007,
+            0.031,
+            0.033
+          ],
+          "gripper_first": 0.9162966121891738,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.12525144128530927
+        },
+        "step501": {
+          "joint_mae": 0.13680859757462807,
+          "joint_absmax": 0.32601870570671554,
+          "expert_absmax": 0.5916349589824677,
+          "magnitude_ratio": 1.323973129773254,
+          "cos_step0": 0.38823050350822097,
+          "cos_mean6": 0.35653774638189034,
+          "cos_steps": [
+            0.388,
+            0.3,
+            0.36,
+            0.385,
+            0.358,
+            0.348
+          ],
+          "gripper_first": 0.5780765778568984,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.48273634434524704
+        },
+        "step901": {
+          "joint_mae": 0.08872567104288961,
+          "joint_absmax": 0.16814954044890396,
+          "expert_absmax": 0.5916349589824677,
+          "magnitude_ratio": 0.9142848625406907,
+          "cos_step0": 0.5623824672965908,
+          "cos_mean6": 0.482892516981392,
+          "cos_steps": [
+            0.562,
+            0.3,
+            0.356,
+            0.476,
+            0.641,
+            0.563
+          ],
+          "gripper_first": 0.6877349272831679,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.6493650288297714
+        }
+      }
+    },
+    {
+      "skill": "A90",
+      "episode": 35,
+      "frame": 80,
+      "split": "test",
+      "expert_norm_first": 0.047480970980373856,
+      "expert_absmax_first": 0.04609459638595581,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.13940260752253023,
+          "joint_absmax": 0.23397640248095986,
+          "expert_absmax": 0.5826345086097717,
+          "magnitude_ratio": 1.3288956997206605,
+          "cos_step0": 0.265157082451853,
+          "cos_mean6": -0.02169542356243712,
+          "cos_steps": [
+            0.265,
+            0.214,
+            0.052,
+            -0.133,
+            -0.246,
+            -0.282
+          ],
+          "gripper_first": 0.33395637925109267,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": -0.05118492447756343
+        },
+        "step501": {
+          "joint_mae": 0.08872051464963863,
+          "joint_absmax": 0.1253522033296227,
+          "expert_absmax": 0.594042643904686,
+          "magnitude_ratio": 0.7436466274327328,
+          "cos_step0": 0.544970738905461,
+          "cos_mean6": 0.3354238876479982,
+          "cos_steps": [
+            0.545,
+            0.319,
+            0.244,
+            0.453,
+            0.21,
+            0.242
+          ],
+          "gripper_first": 0.4181071103912294,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.4439124271447855
+        },
+        "step901": {
+          "joint_mae": 0.06995661925490519,
+          "joint_absmax": 0.22647636648350955,
+          "expert_absmax": 0.594042643904686,
+          "magnitude_ratio": 0.793942216415116,
+          "cos_step0": 0.6203374062159973,
+          "cos_mean6": 0.36968502937749914,
+          "cos_steps": [
+            0.62,
+            0.392,
+            0.05,
+            0.527,
+            0.245,
+            0.385
+          ],
+          "gripper_first": 0.3979084939971864,
+          "gripper_expert": 0.42500002309679985,
+          "cos_vs_next_frame_expert": 0.640551705919691
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "frame": 78,
+      "split": "train",
+      "expert_norm_first": 0.05035740332018843,
+      "expert_absmax_first": 0.0414121150970459,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.11897368647454835,
+          "joint_absmax": 0.22570165371274953,
+          "expert_absmax": 0.1786036491394043,
+          "magnitude_ratio": 3.510804467079886,
+          "cos_step0": 0.19337054604272394,
+          "cos_mean6": 0.1938517739123976,
+          "cos_steps": [
+            0.193,
+            0.194,
+            0.204,
+            0.203,
+            0.181,
+            0.187
+          ],
+          "gripper_first": 0.01638920730471611,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.34405388065083625
+        },
+        "step501": {
+          "joint_mae": 0.04235339061059349,
+          "joint_absmax": 0.19167759801077833,
+          "expert_absmax": 0.1786036491394043,
+          "magnitude_ratio": 1.2353175389427897,
+          "cos_step0": 0.7915309326638958,
+          "cos_mean6": 0.7525999241110791,
+          "cos_steps": [
+            0.792,
+            0.846,
+            0.784,
+            0.695,
+            0.662,
+            0.737
+          ],
+          "gripper_first": 0.39143662832522397,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.5751877634053434
+        },
+        "step901": {
+          "joint_mae": 0.05049011354926628,
+          "joint_absmax": 0.2362198138310908,
+          "expert_absmax": 0.1786036491394043,
+          "magnitude_ratio": 1.4260718860644683,
+          "cos_step0": 0.4861139653184155,
+          "cos_mean6": 0.6375764839101268,
+          "cos_steps": [
+            0.486,
+            0.816,
+            0.806,
+            0.451,
+            0.544,
+            0.722
+          ],
+          "gripper_first": 0.29087070742678645,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.547240961789062
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "frame": 87,
+      "split": "train",
+      "expert_norm_first": 0.050215824352992655,
+      "expert_absmax_first": 0.04131960868835449,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.12668730474811113,
+          "joint_absmax": 0.23107566313946248,
+          "expert_absmax": 0.2006596326828003,
+          "magnitude_ratio": 3.0599336974592704,
+          "cos_step0": 0.23529730389425502,
+          "cos_mean6": 0.18215579112856958,
+          "cos_steps": [
+            0.235,
+            0.216,
+            0.172,
+            0.166,
+            0.159,
+            0.144
+          ],
+          "gripper_first": 0.02897031656134129,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.36104084627824845
+        },
+        "step501": {
+          "joint_mae": 0.033559234540827286,
+          "joint_absmax": 0.08639736187630886,
+          "expert_absmax": 0.2006596326828003,
+          "magnitude_ratio": 0.7350030822100178,
+          "cos_step0": 0.8248558882072664,
+          "cos_mean6": 0.626756415507277,
+          "cos_steps": [
+            0.825,
+            0.798,
+            0.388,
+            0.533,
+            0.51,
+            0.707
+          ],
+          "gripper_first": 0.39423307928144935,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.6950217569895014
+        },
+        "step901": {
+          "joint_mae": 0.04169735507094247,
+          "joint_absmax": 0.11197230151140691,
+          "expert_absmax": 0.2006596326828003,
+          "magnitude_ratio": 0.8675844317250854,
+          "cos_step0": 0.42465390564741534,
+          "cos_mean6": 0.2941828238829199,
+          "cos_steps": [
+            0.425,
+            0.804,
+            -0.096,
+            0.291,
+            -0.297,
+            0.638
+          ],
+          "gripper_first": 0.33272188494551186,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.5062232831217477
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 7,
+      "frame": 60,
+      "split": "train",
+      "expert_norm_first": 0.049582572118431464,
+      "expert_absmax_first": 0.04073667526245117,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.12889146028603884,
+          "joint_absmax": 0.23510669090163705,
+          "expert_absmax": 0.17995357513427734,
+          "magnitude_ratio": 2.2686100556654014,
+          "cos_step0": -0.6477758945373618,
+          "cos_mean6": -0.6010524877639191,
+          "cos_steps": [
+            -0.648,
+            -0.649,
+            -0.607,
+            -0.567,
+            -0.573,
+            -0.563
+          ],
+          "gripper_first": 0.09775421418964864,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.3133766406596454
+        },
+        "step501": {
+          "joint_mae": 0.03839008625560097,
+          "joint_absmax": 0.09012904063224791,
+          "expert_absmax": 0.218483567237854,
+          "magnitude_ratio": 0.5496082991676101,
+          "cos_step0": 0.4089524485998721,
+          "cos_mean6": 0.5885777647224562,
+          "cos_steps": [
+            0.409,
+            0.293,
+            0.576,
+            0.539,
+            0.816,
+            0.899
+          ],
+          "gripper_first": 0.39415823074543477,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.2769917324601675
+        },
+        "step901": {
+          "joint_mae": 0.044988307924373076,
+          "joint_absmax": 0.15540642588615416,
+          "expert_absmax": 0.218483567237854,
+          "magnitude_ratio": 0.5924165885839543,
+          "cos_step0": -0.008564472245707671,
+          "cos_mean6": 0.060125878149359546,
+          "cos_steps": [
+            -0.009,
+            -0.321,
+            0.121,
+            -0.166,
+            0.689,
+            0.046
+          ],
+          "gripper_first": 0.35778851663410666,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.16299566184938388
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 7,
+      "frame": 39,
+      "split": "train",
+      "expert_norm_first": 0.051238634045135005,
+      "expert_absmax_first": 0.03996345400810242,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.12766308978215174,
+          "joint_absmax": 0.34244860106343034,
+          "expert_absmax": 0.20201969146728516,
+          "magnitude_ratio": 2.1730790426394897,
+          "cos_step0": -0.5995757673997103,
+          "cos_mean6": -0.34872046169403353,
+          "cos_steps": [
+            -0.6,
+            -0.505,
+            -0.475,
+            -0.301,
+            -0.135,
+            -0.077
+          ],
+          "gripper_first": 0.014240470311820509,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.5017164590781078
+        },
+        "step501": {
+          "joint_mae": 0.0380670982294889,
+          "joint_absmax": 0.15524977591091393,
+          "expert_absmax": 0.20201969146728516,
+          "magnitude_ratio": 1.0453288383560895,
+          "cos_step0": 0.19479290551192985,
+          "cos_mean6": 0.46477703863476655,
+          "cos_steps": [
+            0.195,
+            0.087,
+            0.248,
+            0.591,
+            0.868,
+            0.8
+          ],
+          "gripper_first": 0.3755272025200725,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.38617393998557786
+        },
+        "step901": {
+          "joint_mae": 0.04954603575858289,
+          "joint_absmax": 0.3149873774734139,
+          "expert_absmax": 0.20201969146728516,
+          "magnitude_ratio": 1.5177385514472705,
+          "cos_step0": 0.15923867808777895,
+          "cos_mean6": 0.44176742528634677,
+          "cos_steps": [
+            0.159,
+            -0.138,
+            0.226,
+            0.609,
+            0.91,
+            0.884
+          ],
+          "gripper_first": 0.3425747769829631,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.4982791672464113
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 14,
+      "frame": 66,
+      "split": "train",
+      "expert_norm_first": 0.08517199056437921,
+      "expert_absmax_first": 0.08517074584960938,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.16107486767318333,
+          "joint_absmax": 0.5523650137836039,
+          "expert_absmax": 0.23211336135864258,
+          "magnitude_ratio": 3.9793053356830232,
+          "cos_step0": -0.4688007407690567,
+          "cos_mean6": -0.3050545951026759,
+          "cos_steps": [
+            -0.469,
+            -0.509,
+            -0.42,
+            -0.263,
+            -0.111,
+            -0.058
+          ],
+          "gripper_first": 0.8784149099761248,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.10146660309413809
+        },
+        "step501": {
+          "joint_mae": 0.04073278880628729,
+          "joint_absmax": 0.10772399572777747,
+          "expert_absmax": 0.23211336135864258,
+          "magnitude_ratio": 0.9272978238486422,
+          "cos_step0": -0.5226648153873591,
+          "cos_mean6": -0.10890601175817877,
+          "cos_steps": [
+            -0.523,
+            -0.684,
+            -0.593,
+            0.058,
+            0.376,
+            0.713
+          ],
+          "gripper_first": 0.43239769823393226,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.4435749647754402
+        },
+        "step901": {
+          "joint_mae": 0.04577095993475429,
+          "joint_absmax": 0.13322949445927135,
+          "expert_absmax": 0.23211336135864258,
+          "magnitude_ratio": 1.050802971219247,
+          "cos_step0": -0.5787244015526755,
+          "cos_mean6": -0.2526491617081414,
+          "cos_steps": [
+            -0.579,
+            -0.719,
+            -0.746,
+            -0.105,
+            0.014,
+            0.62
+          ],
+          "gripper_first": 0.3900782406228483,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.43261835585168457
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 14,
+      "frame": 96,
+      "split": "train",
+      "expert_norm_first": 0.05072052131011858,
+      "expert_absmax_first": 0.04140591621398926,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.1398170293437129,
+          "joint_absmax": 0.2489542738578916,
+          "expert_absmax": 0.1610724925994873,
+          "magnitude_ratio": 2.941141259048025,
+          "cos_step0": -0.010082534286120166,
+          "cos_mean6": -0.04446614981902595,
+          "cos_steps": [
+            -0.01,
+            -0.017,
+            -0.046,
+            -0.066,
+            -0.057,
+            -0.071
+          ],
+          "gripper_first": 0.03972556252580881,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.19104054896276138
+        },
+        "step501": {
+          "joint_mae": 0.03706175974366945,
+          "joint_absmax": 0.07933300866901882,
+          "expert_absmax": 0.1610724925994873,
+          "magnitude_ratio": 0.7297230025456506,
+          "cos_step0": 0.612595805973465,
+          "cos_mean6": 0.3954725141937052,
+          "cos_steps": [
+            0.613,
+            0.271,
+            -0.117,
+            0.462,
+            0.633,
+            0.511
+          ],
+          "gripper_first": 0.42076396525222065,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.8496256124337661
+        },
+        "step901": {
+          "joint_mae": 0.046343155448518955,
+          "joint_absmax": 0.10013044706732033,
+          "expert_absmax": 0.1610724925994873,
+          "magnitude_ratio": 0.8397135894397981,
+          "cos_step0": 0.548832720946619,
+          "cos_mean6": -0.01279731391641465,
+          "cos_steps": [
+            0.549,
+            -0.228,
+            -0.531,
+            -0.065,
+            0.242,
+            -0.045
+          ],
+          "gripper_first": 0.3773487155390382,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.7484924278780657
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 21,
+      "frame": 60,
+      "split": "train",
+      "expert_norm_first": 0.04916753354249721,
+      "expert_absmax_first": 0.04050922393798828,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.09839350634931325,
+          "joint_absmax": 0.22662779476720096,
+          "expert_absmax": 0.17851686477661133,
+          "magnitude_ratio": 1.9114539896858094,
+          "cos_step0": 0.27892043442810294,
+          "cos_mean6": 0.05900626107459402,
+          "cos_steps": [
+            0.279,
+            0.165,
+            0.067,
+            0.037,
+            -0.054,
+            -0.14
+          ],
+          "gripper_first": 0.7039525073715449,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.13073996021831696
+        },
+        "step501": {
+          "joint_mae": 0.028845562057574953,
+          "joint_absmax": 0.15162555032455927,
+          "expert_absmax": 0.21668004989624023,
+          "magnitude_ratio": 0.836492051024017,
+          "cos_step0": 0.9856619270241368,
+          "cos_mean6": 0.927111622627629,
+          "cos_steps": [
+            0.986,
+            0.929,
+            0.864,
+            0.939,
+            0.963,
+            0.882
+          ],
+          "gripper_first": 0.441553563279748,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.7439292720806279
+        },
+        "step901": {
+          "joint_mae": 0.04081687004467048,
+          "joint_absmax": 0.2743443823558092,
+          "expert_absmax": 0.21668004989624023,
+          "magnitude_ratio": 1.275802745017749,
+          "cos_step0": 0.9347547403437927,
+          "cos_mean6": 0.7871741762095062,
+          "cos_steps": [
+            0.935,
+            0.787,
+            0.612,
+            0.738,
+            0.889,
+            0.762
+          ],
+          "gripper_first": 0.42544348857271674,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.31061829818044173
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 21,
+      "frame": 39,
+      "split": "train",
+      "expert_norm_first": 0.0510577225689142,
+      "expert_absmax_first": 0.03983885049819946,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.09878412544301036,
+          "joint_absmax": 0.1571704665973782,
+          "expert_absmax": 0.20010590553283691,
+          "magnitude_ratio": 1.42385605507929,
+          "cos_step0": -0.24531016580238676,
+          "cos_mean6": -0.30091002405813233,
+          "cos_steps": [
+            -0.245,
+            -0.236,
+            -0.214,
+            -0.358,
+            -0.409,
+            -0.344
+          ],
+          "gripper_first": 0.2844898995279372,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.02974333257756569
+        },
+        "step501": {
+          "joint_mae": 0.04524951114009509,
+          "joint_absmax": 0.16630489558786143,
+          "expert_absmax": 0.20010590553283691,
+          "magnitude_ratio": 1.0730866861601749,
+          "cos_step0": 0.39758368371256425,
+          "cos_mean6": 0.446367909618282,
+          "cos_steps": [
+            0.398,
+            0.352,
+            0.264,
+            0.288,
+            0.71,
+            0.666
+          ],
+          "gripper_first": 0.3948156881288588,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.29087922101963354
+        },
+        "step901": {
+          "joint_mae": 0.044255577259572486,
+          "joint_absmax": 0.25692526570504903,
+          "expert_absmax": 0.20010590553283691,
+          "magnitude_ratio": 1.1518458063384156,
+          "cos_step0": 0.6701268755670999,
+          "cos_mean6": 0.42972486884844474,
+          "cos_steps": [
+            0.67,
+            0.38,
+            -0.065,
+            0.217,
+            0.77,
+            0.606
+          ],
+          "gripper_first": 0.3546015243715346,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.554702658802012
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 28,
+      "frame": 63,
+      "split": "train",
+      "expert_norm_first": 0.07868892063191898,
+      "expert_absmax_first": 0.07863569259643555,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.1681168878050753,
+          "joint_absmax": 0.48939672565847636,
+          "expert_absmax": 0.19406378269195557,
+          "magnitude_ratio": 6.561133255270656,
+          "cos_step0": 0.3747000022036672,
+          "cos_mean6": 0.36843684423797235,
+          "cos_steps": [
+            0.375,
+            0.377,
+            0.347,
+            0.354,
+            0.378,
+            0.38
+          ],
+          "gripper_first": 0.04892752258962393,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.3532659890901824
+        },
+        "step501": {
+          "joint_mae": 0.041718787107629586,
+          "joint_absmax": 0.12916460202670088,
+          "expert_absmax": 0.2326047420501709,
+          "magnitude_ratio": 1.548612119788022,
+          "cos_step0": -0.027838564606671723,
+          "cos_mean6": -0.017582726600577924,
+          "cos_steps": [
+            -0.028,
+            -0.149,
+            -0.097,
+            -0.046,
+            -0.128,
+            0.342
+          ],
+          "gripper_first": 0.38801713481801753,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.3135066729651889
+        },
+        "step901": {
+          "joint_mae": 0.05407557823707291,
+          "joint_absmax": 0.21299921789562704,
+          "expert_absmax": 0.2326047420501709,
+          "magnitude_ratio": 1.8354868569601248,
+          "cos_step0": 0.07905198905026038,
+          "cos_mean6": -0.05601589296086502,
+          "cos_steps": [
+            0.079,
+            -0.205,
+            -0.093,
+            0.028,
+            -0.213,
+            0.069
+          ],
+          "gripper_first": 0.30380538066762686,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.39820420503801535
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 28,
+      "frame": 78,
+      "split": "train",
+      "expert_norm_first": 0.0498511657029546,
+      "expert_absmax_first": 0.04162561893463135,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.07827795591323077,
+          "joint_absmax": 0.13721031521761418,
+          "expert_absmax": 0.1797494888305664,
+          "magnitude_ratio": 1.7103225232640178,
+          "cos_step0": -0.27047100021569065,
+          "cos_mean6": -0.26057155939079985,
+          "cos_steps": [
+            -0.27,
+            -0.274,
+            -0.247,
+            -0.288,
+            -0.232,
+            -0.253
+          ],
+          "gripper_first": 0.8351835039998889,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.11910092317400683
+        },
+        "step501": {
+          "joint_mae": 0.029053015972208503,
+          "joint_absmax": 0.10886625031483177,
+          "expert_absmax": 0.1797494888305664,
+          "magnitude_ratio": 0.9554452755515945,
+          "cos_step0": 0.09733715166467931,
+          "cos_mean6": 0.3954826297621857,
+          "cos_steps": [
+            0.097,
+            0.611,
+            -0.266,
+            0.765,
+            0.341,
+            0.824
+          ],
+          "gripper_first": 0.41969308293360474,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.80136655088379
+        },
+        "step901": {
+          "joint_mae": 0.04282760383626525,
+          "joint_absmax": 0.1920214171262979,
+          "expert_absmax": 0.1797494888305664,
+          "magnitude_ratio": 1.2902518686900168,
+          "cos_step0": -0.22692446934961696,
+          "cos_mean6": 0.0026737857870664655,
+          "cos_steps": [
+            -0.227,
+            0.192,
+            -0.499,
+            0.535,
+            -0.153,
+            0.167
+          ],
+          "gripper_first": 0.4035830082265735,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.3114751645413323
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 35,
+      "frame": 63,
+      "split": "train",
+      "expert_norm_first": 0.07023718742654848,
+      "expert_absmax_first": 0.0702366828918457,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.0671223738318602,
+          "joint_absmax": 0.19346431060421465,
+          "expert_absmax": 0.22639262676239014,
+          "magnitude_ratio": 2.725156410668986,
+          "cos_step0": 0.7578474854525455,
+          "cos_mean6": 0.701367596351349,
+          "cos_steps": [
+            0.758,
+            0.762,
+            0.76,
+            0.692,
+            0.709,
+            0.527
+          ],
+          "gripper_first": 0.8487760815700293,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.7080400368570603
+        },
+        "step501": {
+          "joint_mae": 0.03483358818375905,
+          "joint_absmax": 0.11408128780573612,
+          "expert_absmax": 0.23272907733917236,
+          "magnitude_ratio": 1.0578693857252506,
+          "cos_step0": 0.018484363245136623,
+          "cos_mean6": 0.2234550484121176,
+          "cos_steps": [
+            0.018,
+            -0.015,
+            0.006,
+            -0.071,
+            0.566,
+            0.836
+          ],
+          "gripper_first": 0.4200741787837744,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.16046599559781968
+        },
+        "step901": {
+          "joint_mae": 0.03596029863352009,
+          "joint_absmax": 0.1540075688750745,
+          "expert_absmax": 0.23272907733917236,
+          "magnitude_ratio": 1.2501900451885408,
+          "cos_step0": 0.15587508756522872,
+          "cos_mean6": 0.2738224686978033,
+          "cos_steps": [
+            0.156,
+            0.081,
+            0.149,
+            -0.01,
+            0.503,
+            0.765
+          ],
+          "gripper_first": 0.3951615348476172,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.5111893258889731
+        }
+      }
+    },
+    {
+      "skill": "B90",
+      "episode": 35,
+      "frame": 39,
+      "split": "train",
+      "expert_norm_first": 0.05166135520818902,
+      "expert_absmax_first": 0.04027882218360901,
+      "moving": true,
+      "models": {
+        "baseline": {
+          "joint_mae": 0.07595254973255251,
+          "joint_absmax": 0.17713402667737005,
+          "expert_absmax": 0.20328140258789062,
+          "magnitude_ratio": 1.659059370645099,
+          "cos_step0": -0.18154640279771372,
+          "cos_mean6": 9.491590667136858e-05,
+          "cos_steps": [
+            -0.182,
+            -0.233,
+            -0.172,
+            0.046,
+            0.235,
+            0.306
+          ],
+          "gripper_first": 0.7846388716385365,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": -0.1597812555566479
+        },
+        "step501": {
+          "joint_mae": 0.04046533742455712,
+          "joint_absmax": 0.21435162728154655,
+          "expert_absmax": 0.20328140258789062,
+          "magnitude_ratio": 1.104694825323369,
+          "cos_step0": 0.2964810233863502,
+          "cos_mean6": 0.49482920132152014,
+          "cos_steps": [
+            0.296,
+            0.402,
+            0.356,
+            0.523,
+            0.666,
+            0.726
+          ],
+          "gripper_first": 0.41724221052861216,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.37987748657313575
+        },
+        "step901": {
+          "joint_mae": 0.037706322718337695,
+          "joint_absmax": 0.2777090894397497,
+          "expert_absmax": 0.20328140258789062,
+          "magnitude_ratio": 1.3989618151572598,
+          "cos_step0": 0.14722837575479053,
+          "cos_mean6": 0.5438934312950146,
+          "cos_steps": [
+            0.147,
+            0.54,
+            0.427,
+            0.609,
+            0.739,
+            0.801
+          ],
+          "gripper_first": 0.36741310871815686,
+          "gripper_expert": 0.35000001080334187,
+          "cos_vs_next_frame_expert": 0.46180177096758523
+        }
+      }
+    }
+  ],
+  "loss_split_step901": {
+    "total": 0.18991629779338837,
+    "joint7": 0.22688952088356018,
+    "gripper1": 0.2740926146507263,
+    "padding24": 0.17562508583068848
+  },
+  "grad_norm_step901": {
+    "total": 6.71875,
+    "joint7": 6.5625,
+    "gripper1": 9.6875,
+    "padding24": 7.25
+  },
+  "norm_scale": {
+    "droid_span_action8": [
+      0.9056,
+      1.5728,
+      0.8952,
+      1.7212,
+      1.294,
+      1.3088,
+      1.496,
+      0.9998
+    ],
+    "train_span_action8": [
+      0.029200000688433647,
+      0.07590000331401825,
+      0.029100000858306885,
+      0.07519999891519547,
+      0.031300000846385956,
+      0.07119999825954437,
+      0.09120000153779984,
+      0.6499999761581421
+    ],
+    "ratio_train_over_droid": [
+      0.0323,
+      0.0483,
+      0.0326,
+      0.0437,
+      0.0242,
+      0.0544,
+      0.0609,
+      0.6501
+    ]
+  },
+  "config": {
+    "move_threshold": 0.02,
+    "horizon": 16,
+    "n_frames": 24,
+    "same_noise_and_time": true
+  },
+  "summary_moving_frames": {
+    "A90/baseline": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 1.972010128794932,
+      "mean_cos_step0": 0.056246365740921865,
+      "mean_cos_mean6": 0.021557995126584777,
+      "mean_joint_mae": 0.16077224888233735,
+      "frac_cos_positive_step0": 0.4166666666666667
+    },
+    "A90/step501": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 0.9704812555788473,
+      "mean_cos_step0": 0.3664717910382982,
+      "mean_cos_mean6": 0.4268787857655613,
+      "mean_joint_mae": 0.09479071318468556,
+      "frac_cos_positive_step0": 0.8333333333333334
+    },
+    "A90/step901": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 1.0666706929920609,
+      "mean_cos_step0": 0.4617417265129102,
+      "mean_cos_mean6": 0.5389082866677247,
+      "mean_joint_mae": 0.07328636798991685,
+      "frac_cos_positive_step0": 0.9166666666666666
+    },
+    "B90/baseline": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 2.8269879551824126,
+      "mean_cos_step0": -0.04861889448222878,
+      "mean_cos_mean6": -0.02965517460141937,
+      "mean_joint_mae": 0.11581290311523242,
+      "frac_cos_positive_step0": 0.4166666666666667
+    },
+    "B90/step501": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 0.9832065773869357,
+      "mean_cos_step0": 0.33981439583293876,
+      "mean_cos_mean6": 0.43241177754602184,
+      "mean_joint_mae": 0.03752751333935764,
+      "frac_cos_positive_step0": 0.8333333333333334
+    },
+    "B90/step901": {
+      "n_moving_frames": 12,
+      "mean_magnitude_ratio": 1.2080722629859943,
+      "mean_cos_step0": 0.23263858292778347,
+      "mean_cos_mean6": 0.26245658112343057,
+      "mean_joint_mae": 0.04453984820132307,
+      "frac_cos_positive_step0": 0.75
+    }
+  }
+}
