@@ -44,12 +44,17 @@
     "/scratch/lijh/exp42/run2/ckpts (step901)"
   ],
   "large_files_in_git": false,
-  "n_files": 29,
+  "n_files": 31,
   "files": [
     {
       "path": "action_compare_baseline_vs_finetuned.json",
       "size_bytes": 2010,
       "sha256": "d238ff9684f211b4dfe41f20f82dd32a3344d887044f80fb32e753f879a29ff3"
+    },
+    {
+      "path": "action_diagnostics_p0.json",
+      "size_bytes": 40526,
+      "sha256": "c455449148189b28df9e37fc08baa13ee238c9e8e1b291381ca5272658cec167"
     },
     {
       "path": "atomic_eval_summary.json",
@@ -60,6 +65,11 @@
       "path": "checkpoint_manifest.json",
       "size_bytes": 2283,
       "sha256": "8b963b71142ec3ca0ac951afb26a397e34b93f9f68972c13c25b58764f899f4d"
+    },
+    {
+      "path": "diagnostics_p0.md",
+      "size_bytes": 4127,
+      "sha256": "9325c5ec531108bc1169905c487d1287840812f3ff8d6c7ed34d78a543067d22"
     },
     {
       "path": "environment_manifest.json",
@@ -191,5 +201,39 @@
       "size_bytes": 18895,
       "sha256": "6600e130ff0d22f7fc5c43cf62f03194dcdedf990a10cc7d45f6e862f4ee864a"
     }
-  ]
+  ],
+  "p0_diagnostics": {
+    "doc": "diagnostics_p0.md",
+    "n_frames": 10,
+    "magnitude_ratio": {
+      "baseline": 4.98,
+      "step501": 1.54,
+      "step901": 2.02
+    },
+    "joint_mae_rad": {
+      "baseline": 0.154,
+      "step501": 0.066,
+      "step901": 0.061
+    },
+    "direction_cosine_first": {
+      "baseline": 0.11,
+      "step501": 0.04,
+      "step901": -0.0001
+    },
+    "clip_frac": {
+      "baseline": 0.133,
+      "step501": 0.0018,
+      "step901": 0.015
+    },
+    "loss_attribution": {
+      "step501": {
+        "real": 0.05727,
+        "zero_real": 0.05654
+      },
+      "step901": {
+        "real": 0.04032,
+        "zero_real": 0.04438
+      }
+    }
+  }
 }
