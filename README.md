@@ -514,3 +514,33 @@ python scripts/exp41/verify_dataset.py --data data/exp41 --out results/experimen
 ```
 
 本次**未训练 π₀.₅、未做 A→B 组合评测、未比较 6D 与七关节连接**——这些留给 4.2–4.4。
+
+## 实验 4.2：π₀.₅ 原子技能联合 LoRA 微调与自主物理评价
+
+- 报告：[results/experiment_4_2/reports/experiment_4_2_report.md](results/experiment_4_2/reports/experiment_4_2_report.md)
+- 数据契约：[results/experiment_4_2/training_data_contract.md](results/experiment_4_2/training_data_contract.md)
+- 归一化决策：[results/experiment_4_2/normalization_decision.md](results/experiment_4_2/normalization_decision.md)
+- 失败分析：[results/experiment_4_2/failure_analysis.md](results/experiment_4_2/failure_analysis.md)
+
+在**一张 A40** 上用 4.1 的 90 条独立 A90/B90 示范做**联合 LoRA 微调**（`gemma_2b_lora` +
+`gemma_300m_lora`，可训练 466.96 M / 3403.4 M = 13.72%），并真实跑完闭环评价。
+
+实测：batch 4、**901 步**（501 + 续训 400）、**0.44–0.55 step/s**、1.43 epoch，
+loss 1.16 → **0.027**（val 0.0265）；LoRA 51/51 张量合并成完整 params 并被官方
+`create_trained_policy` 加载，20 Hz 闭环跑满 45 tick × 8 步；同观测下与基线动作差 0.43–0.56。
+
+**但原子技能未学会**：8 条 rollout（2 checkpoint × 2 A90 + 2 B90）**0 严格成功**。
+step501 完全不接触方块；step901 开始接触（69/21/0/22 物理步），但 A90 把方块推走 82.5 mm、
+抬升仅 8.2 mm，B90 有一条推了 −28.5 mm（方向反）。
+诊断：模型输出的关节增量（0.2–0.5 rad/step）比训练分布（0.05）大 4–10 倍，被 adapter 裁到 0.25 rad，
+机械臂无法稳定接近/抓取。
+
+`Gate 1/2/3/4 = PASS`，`Gate 5 = PARTIAL`（机制通过、技能未达成），
+`A90_ATOMIC_SKILL_LEARNED = NO`、`B90_ATOMIC_SKILL_LEARNED = NO`。
+
+```bash
+python scripts/exp42/export_data.py --data data/exp41 --out /scratch/lijh/exp42/data
+bash server/exp42/run_train.sh train --steps 501 --batch 4 --save-every 100 --export-params
+python scripts/exp42/export_params_from_lora.py --lora <npz> --out <dir>/params
+bash server/exp42/run_eval.sh <dir> 8124 2 45 1
+```
