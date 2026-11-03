@@ -25,7 +25,9 @@
 | `action_compare_baseline_vs_finetuned.json` | Gate 4：同观测下基线 vs 微调的动作差 |
 | `rollouts_step501/`, `rollouts_step901/` | Gate 5：每条 rollout 的严格评价、接触步、动作日志 |
 | `atomic_eval_summary.json` | 汇总（含总体判定） |
-| `failure_analysis.md` | 为什么 loss 降了但成功率为 0（动作尺度诊断） |
+| `failure_analysis.md` | 为什么 loss 降了但成功率为 0（第一版：动作尺度诊断） |
+| `diagnostics_p0.md` | **P0 诊断（review 后）**：专家观测上的幅度/方向/夹爪对比 + loss 归因 + 裁剪统计；修正了"幅度是唯一根因" |
+| `action_diagnostics_p0.json` | 上述诊断的逐帧原始数据（10 帧 × 3 个模型） |
 
 ## 数据集与 split（复用 4.1，未重新采集）
 
