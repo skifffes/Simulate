@@ -1,0 +1,80 @@
+{
+  "status": "PARTIAL",
+  "head": "5643db0d486f138617a37e0b85179de590919ec3",
+  "fixture": "SYNTHETIC_NOT_MODEL_NOT_PHYSICS",
+  "checks": {
+    "legacy_chunk_expected_failure_reproduced": true,
+    "anchor_candidate_roundtrip_pass": true,
+    "legacy_gripper_units_expected_failure_reproduced": true,
+    "continuous_candidate_units_pass": true,
+    "binary_candidate_still_mismatches_expert": true
+  },
+  "legacy_chunk_max_target_error_rad": 1.2,
+  "anchor_candidate_max_target_error_rad": 0.0,
+  "gripper_command_ratio": 25.0,
+  "counts_from_historical_metadata": {
+    "A90": {
+      "source": "historical still_frames.json, NOT raw-data rescan",
+      "leading_still_histogram": {
+        "6": 45
+      },
+      "splits": {
+        "train": {
+          "episodes": 30,
+          "frames": 5873,
+          "windows": 1369
+        },
+        "val": {
+          "episodes": 10,
+          "frames": 1974,
+          "windows": 460
+        },
+        "test": {
+          "episodes": 5,
+          "frames": 982,
+          "windows": 230
+        }
+      }
+    },
+    "B90": {
+      "source": "historical still_frames.json, NOT raw-data rescan",
+      "leading_still_histogram": {
+        "6": 45
+      },
+      "splits": {
+        "train": {
+          "episodes": 31,
+          "frames": 5009,
+          "windows": 1152
+        },
+        "val": {
+          "episodes": 6,
+          "frames": 967,
+          "windows": 222
+        },
+        "test": {
+          "episodes": 8,
+          "frames": 1279,
+          "windows": 292
+        }
+      }
+    }
+  },
+  "nominal_901x4_window_draws_per_train_window": 1.42959143197144,
+  "raw_frames": "NOT_EXECUTED: no local raw EXP42_DATA supplied",
+  "not_executed": [
+    "checkpoint multisampling",
+    "model tensor hash comparison",
+    "real FM loss",
+    "EE/Jacobian/physics",
+    "remote disk inspection"
+  ],
+  "source_sha256": {
+    "scripts/exp42/train_lora.py": "b67c366d751fd9793b74ead3b7c7a093d8891665c10320b75ebf513f09ba8d65",
+    "scripts/exp42/eval_rollouts.py": "3770ac5c39fd21819534f3492ff3522f543a03379ebfc47b9b71cba87294fa76",
+    "src/exp40/action_adapter.py": "f88fc21d8c0da55776bd049831581f9f960c6e5b661ad2bb2456d4a3438a8b57",
+    "src/vla/atomic_tasks/recording.py": "12814b02f1f0cc3f28cae1ca9769f68a2689ca8b5dd05315978fb5730fe5a5c6",
+    "results/experiment_4_2/still_frames.json": "c8d093fd1d0c0b2c1d40ea8ea0cd9a615e4f4808ec6fd4d140019c490e40201d",
+    "results/experiment_4_2/checkpoint_manifest.json": "8b963b71142ec3ca0ac951afb26a397e34b93f9f68972c13c25b58764f899f4d"
+  }
+}

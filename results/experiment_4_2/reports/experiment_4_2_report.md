@@ -168,6 +168,15 @@
 需要修的是 **loss 的有效维度（7D/1D 分组或 action mask）与方向监督**，
 而不是单纯把步数从 901 加到几千。P1（动作增益 1.0/0.2/0.1、基线闭环）本轮**未完成**（时间预算）。
 
+
+> **审计后更正（2026-11-03）**：Gate 5 与 §6 的 8 条 rollout 是在**有缺陷的执行契约**上跑的
+> （chunk 锚点递归累加 + 夹爪归一化值当米下发）。独立审计确认了这两个缺陷，已在
+> `src/exp40/action_adapter.py`（新增 `anchor_reference='fixed'`）与
+> `scripts/exp42/eval_rollouts.py`（改用 `gripper_target_m` + 连续夹爪）中修复并重跑：
+> 修复后仍 0/4，但行为从"大幅乱扫"变为"持续接触（B90 616 个物理步）但方向错"。
+> 详见 [`independent_audit/agent_verification.md`](../independent_audit/agent_verification.md)。
+> 修复前的 rollout 仅作历史对照，不与修复后混算。
+
 ## 7. RQ 回答（对应 §十六）
 
 **RQ1（A90 能在多少目标上严格成功）**：0/4 rollout（2 个目标 × 2 seed），无一成功。

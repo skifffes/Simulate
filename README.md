@@ -2,6 +2,10 @@
 
 已在本机 Windows 11 原生 GUI 和 DIRECT 模式实际运行。无需 ROS、WSL、模型权重或真机。
 
+## 实验 4.2 独立审计（2026-11-03，PARTIAL_REMOTE_RAW）
+
+报告见 `results/experiment_4_2/independent_audit/audit_report.md`，CPU契约复现入口为 `scripts/exp42/independent_audit.py`。已复现固定锚点chunk被累积执行、归一化夹爪值被当作米下发两项错误；当前缺少逐控制周期q/qd日志，不能判为日志过期。服务器已扫描90条启动轨迹，并核对每技能前三条示范：原始状态动作与缓存相等，两路视频前40帧逐像素一致，详见 `raw_audit.json`、`raw_first40.csv`。这不证明完整物理时序、模型或闭环成功；真实checkpoint、多种子采样和物理对照仍未完成。没有追加训练或修改部署、成功判据。
+
 ## 实验 0B：独立几何敏感性检查
 
 原实验代码和结果保持不变。新增入口 `scripts/run_experiment_0b.py`，在原环境中运行 `python scripts/run_experiment_0b.py`；默认 3 个种子 × 4 个 IK 初值 × 8 个条件，共 96 条候选记录。输出在 `results/experiment_0b/`，重跑前自动归档旧 0B 输出到 `results/experiment_0b_history/`。

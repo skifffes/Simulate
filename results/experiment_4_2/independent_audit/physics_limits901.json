@@ -1,0 +1,10 @@
+{
+  "rows": 832,
+  "scope": "Eight-step isolated robot-state replay only; no full skill success claim.",
+  "limits": [
+    "Object scene reset to canonical initial pose, not phase-matched demonstration object pose.",
+    "Middle/late temporal strata are NOT contact-phase evidence.",
+    "Original vs fixed_anchor_binary changes both anchor reconstruction and gripper units; not a single-variable ablation.",
+    "fixed_anchor_binary vs fixed_anchor_continuous isolates gripper mapping."
+  ]
+}

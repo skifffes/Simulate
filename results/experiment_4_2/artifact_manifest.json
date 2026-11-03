@@ -44,7 +44,7 @@
     "/scratch/lijh/exp42/run2/ckpts (step901)"
   ],
   "large_files_in_git": false,
-  "n_files": 48,
+  "n_files": 75,
   "files": [
     {
       "path": "ab_initial_state.json",
@@ -152,6 +152,111 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "independent_audit/action_contract_audit.md",
+      "size_bytes": 3284,
+      "sha256": "685a7ce8b78643f66ab3654f1450816958926bcd2ed7427b5fb630d3c1903ed7"
+    },
+    {
+      "path": "independent_audit/agent_contract_verify.json",
+      "size_bytes": 1048,
+      "sha256": "dfe6f14a56c40d767c5aceed6e919f8e5c1f3b1c70e9c2f71b94bf360b73b691"
+    },
+    {
+      "path": "independent_audit/agent_verification.md",
+      "size_bytes": 4670,
+      "sha256": "a60f791fcfdae3ddbdc73f31dfbcaf540a781d121b1b7a9fa95c4ba965afff83"
+    },
+    {
+      "path": "independent_audit/audit_report.md",
+      "size_bytes": 8361,
+      "sha256": "e95e1dcbc8d791f6d55888d39b19a4798591b99d89455c1d6e255e865ecb1ae4"
+    },
+    {
+      "path": "independent_audit/frozen_samples501.npz",
+      "size_bytes": 38444,
+      "sha256": "fc2582162a15e9b861c36f131a4d54125dbdd7402dff04dc9b80c8a4a85b71d5"
+    },
+    {
+      "path": "independent_audit/frozen_samples901.npz",
+      "size_bytes": 38487,
+      "sha256": "47ffa41ea1278ba6bbc881a18997cdd0419de53858b2d3fe81e354e8ef140ea2"
+    },
+    {
+      "path": "independent_audit/local_test_results.json",
+      "size_bytes": 2620,
+      "sha256": "c69b5ea0942f79ef70f427de809895a4ad2962625b21da507100492770835081"
+    },
+    {
+      "path": "independent_audit/model_behavior901.csv",
+      "size_bytes": 7943,
+      "sha256": "4584fbf76b672265633e14478dc8d1ce85e60b4315c22fee614cff00deff16f2"
+    },
+    {
+      "path": "independent_audit/model_behavior_diagnostics.csv",
+      "size_bytes": 7948,
+      "sha256": "da6e21bc5a7f6dfde97eedcd5983ff33ae0f788ca58a971ef0cd66a1a2401f19"
+    },
+    {
+      "path": "independent_audit/model_manifest.json",
+      "size_bytes": 140195,
+      "sha256": "86aa64b5ea314fd24eec87421f6305da5cf656015fb38628e8354e7cc531fe20"
+    },
+    {
+      "path": "independent_audit/physical_contract_trace901.csv",
+      "size_bytes": 1226787,
+      "sha256": "78693a58520f8df8fa91615877590712d00e45cf113eccbba2840d28c49379bd"
+    },
+    {
+      "path": "independent_audit/physics_limits901.json",
+      "size_bytes": 493,
+      "sha256": "9abe6db728ee5c7fef3437eecf366b091f39fbd9b5a644b19f06be079b0456e8"
+    },
+    {
+      "path": "independent_audit/raw_audit.json",
+      "size_bytes": 87373,
+      "sha256": "8b669708945fff80f90b5603118fafd558d989ed5af506aa2c838888c719f267"
+    },
+    {
+      "path": "independent_audit/raw_first40.csv",
+      "size_bytes": 250888,
+      "sha256": "246f5486f6f70c6b07259ada4f37e1c2804b9d4e0dca799d91508a277e8bd01a"
+    },
+    {
+      "path": "independent_audit/recommended_fix.md",
+      "size_bytes": 2200,
+      "sha256": "efcef5167140b0c0034e8fcf1671ecdfa15e9b8cf48bf20c22a3396cf54849a5"
+    },
+    {
+      "path": "independent_audit/remote_raw",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "independent_audit/root_cause_matrix.md",
+      "size_bytes": 2484,
+      "sha256": "a8c4ad0b7673f8f42ba39a5490f99cef4246e2cfd4ceffb6c1fdb6a7efaf1827"
+    },
+    {
+      "path": "independent_audit/sampling501_manifest.json",
+      "size_bytes": 30544,
+      "sha256": "69aea3ee0bfb933bb1ad0e58ab9e9f85af16617c34dc2309cac74e1e981fbe46"
+    },
+    {
+      "path": "independent_audit/sampling901_manifest.json",
+      "size_bytes": 30608,
+      "sha256": "b0db915e10ea504b96f00b7659ab54b1421023e315a6926f4ecd391d42510e58"
+    },
+    {
+      "path": "independent_audit/startup_phase_analysis.md",
+      "size_bytes": 2356,
+      "sha256": "fb620621c2f3bf617a0cc55c92a9a1fb106e8be04785ebe11c435705677687f5"
+    },
+    {
+      "path": "independent_audit/synthetic_contract_trace.csv",
+      "size_bytes": 1354,
+      "sha256": "b79116d5ea5ba5413eff64389faacb134588a2c0b365f1d7aa66ee52d74b4801"
+    },
+    {
       "path": "initial_obs_check.json",
       "size_bytes": 803,
       "sha256": "1a150ddf9fe89f110dfea4b26867abae040228b537d4d4b5512e677be7b4524f"
@@ -178,8 +283,38 @@
     },
     {
       "path": "reports/experiment_4_2_report.md",
-      "size_bytes": 14419,
-      "sha256": "06a8ca40de1444d62a1b3a7559b26123de13538a2681ce403d2c63ddc3c0b7f2"
+      "size_bytes": 15115,
+      "sha256": "15c3eb53c3f45ea987ffa2691daca0452d73232227c7033d5acdabbea93bc9f0"
+    },
+    {
+      "path": "rollouts_fixed_contract/A90_ep00.json",
+      "size_bytes": 12172,
+      "sha256": "da76bcf049e78d3e8161b67136c5e7e93ee3bed322c9015534cace6c27b7bbdf"
+    },
+    {
+      "path": "rollouts_fixed_contract/A90_ep01.json",
+      "size_bytes": 12193,
+      "sha256": "f05f46c7440891098a2136df03f44fb08fdc8110169d0be36edb519816d40ec6"
+    },
+    {
+      "path": "rollouts_fixed_contract/A90_summary.json",
+      "size_bytes": 27885,
+      "sha256": "8a8d2fdd6d876645da336c931d66285af4c954c81e344c19a904898c6470a1c3"
+    },
+    {
+      "path": "rollouts_fixed_contract/B90_ep00.json",
+      "size_bytes": 11906,
+      "sha256": "89ae4f739016e17d2d3c1170dddbeb92816f43905157c4adfc17b14f2897a803"
+    },
+    {
+      "path": "rollouts_fixed_contract/B90_ep01.json",
+      "size_bytes": 11967,
+      "sha256": "9b1f17a65faa7b3bcff292dacc882a64091a228d74913ccd1a763856de965206"
+    },
+    {
+      "path": "rollouts_fixed_contract/B90_summary.json",
+      "size_bytes": 27357,
+      "sha256": "17af7697920a94e5ee9b77b3be06758f6ce177ad2888459e4086376ba0bf42cd"
     },
     {
       "path": "rollouts_step501/A90_ep00.json",
@@ -401,5 +536,44 @@
     "gripper_dataset": 0.8750005,
     "image_top_absdiff_mean": 2.836,
     "verdict": "rollout 第一步观测与数据集起始帧几乎一致 → 初始帧失败不是分布外"
+  },
+  "independent_audit": {
+    "dir": "independent_audit/",
+    "report": "audit_report.md",
+    "agent_verification": "independent_audit/agent_verification.md",
+    "confirmed_defects": [
+      "chunk anchor recursive accumulation (fixed-anchor err 0.0 rad vs recursive 1.2 rad)",
+      "gripper_value (normalized 0.425) sent as metres (25x)"
+    ],
+    "fixes": {
+      "action_adapter": "chunk_to_targets(anchor_reference='fixed'|'recursive'); default recursive",
+      "eval_rollouts": "gripper_target_m + gripper_mode=continuous default",
+      "train_lora": "off-by-one: --steps N == N optimizer updates"
+    },
+    "fixed_contract_rollouts": {
+      "A90": {
+        "n": 2,
+        "success": 0,
+        "contact_steps": [
+          24,
+          0
+        ]
+      },
+      "B90": {
+        "n": 2,
+        "success": 0,
+        "contact_steps": [
+          616,
+          21
+        ],
+        "note": "object moved +0.14 m but toward +Y"
+      }
+    },
+    "superseded_rollouts": [
+      "rollouts_step501",
+      "rollouts_step901",
+      "gain_rollouts",
+      "baseline_rollouts"
+    ]
   }
 }

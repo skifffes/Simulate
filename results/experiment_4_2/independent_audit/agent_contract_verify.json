@@ -1,0 +1,23 @@
+{
+  "case": "synthetic expert ramp 0.01..0.16 rad, gripper 0.425",
+  "anchor": {
+    "fixed_anchor_max_err_rad": 0.0,
+    "recursive_max_err_rad": 1.2,
+    "old_exec_last_joint_rad": 1.3599999999999999,
+    "expert_last_joint_rad": 0.16,
+    "verdict": "fixed 复现专家；recursive 累积放大（缺陷 #1 成立）"
+  },
+  "gripper": {
+    "normalized_value_(bug_source)": 0.425,
+    "target_m_continuous": 0.017,
+    "target_m_binary_g1.0_(open)": 0.04,
+    "target_m_binary_g0.425_(closed)": 0.0,
+    "target_m_binary_g0.0_(closed)": 0.0,
+    "expert_close_width_m": 0.017,
+    "ratio_if_sending_normalized": 24.999999999999996,
+    "verdict": "gripper_target_m 在 continuous 下等于专家 0.017 m；下发 gripper_value 会放大 25 倍（缺陷 #2 成立）"
+  },
+  "fixed_path_used_by": "scripts/exp42/eval_rollouts.py (anchor_reference=\"fixed\", gripper_mode=continuous)",
+  "note": "默认 anchor_reference 仍为 recursive，以复现实验 4.0 归档结果；4.2 显式传 fixed",
+  "all_checks_pass": true
+}

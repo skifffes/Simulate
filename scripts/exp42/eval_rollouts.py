@@ -46,6 +46,8 @@ def main(argv=None) -> int:
     ap.add_argument('--goal-id', default='')
     ap.add_argument('--execute-k', type=int, default=8)
     ap.add_argument('--tag', default='ft')
+    ap.add_argument('--gripper-mode', choices=['continuous', 'binary'], default='continuous',
+                    help='continuous=g*0.04（与训练标签 0.425->0.017m 一致）；binary=官方 client 的 0.5 二值化')
     ap.add_argument('--action-gain', type=float, default=1.0,
                     help='诊断用：反归一化后、安全裁剪前缩放关节增量（只用于增益实验）')
     ap.add_argument('--out', default='results/experiment_4_2/finetuned_rollouts')
@@ -69,7 +71,7 @@ def main(argv=None) -> int:
     client = make_policy_client(args.host, args.port)
     print('ping:', client.ping() if hasattr(client, 'ping') else 'n/a', flush=True)
 
-    aa_cfg = ActionAdapterConfig()
+    aa_cfg = ActionAdapterConfig(gripper_mode=args.gripper_mode)
     rows = []
     for ep in range(args.episodes):
         seed = args.seed0 + ep
@@ -118,9 +120,11 @@ def main(argv=None) -> int:
                 chunk = np.asarray(res['actions'], dtype=np.float64).copy()
                 if args.action_gain != 1.0:
                     chunk[:, :7] *= args.action_gain
-                adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg)
+                adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg,
+                                           anchor_reference='fixed')
                 act_log.append({'tick': tick, 'action_absmax': float(np.abs(chunk[:, :8]).max()),
                                 'gripper_cmd': float(chunk[0, 7]),
+                                'gripper_target_m': float(adapted[0].gripper_target_m),
                                 'delta_applied_absmax': float(max(np.abs(a.delta_applied).max()
                                                                   for a in adapted))})
                 k = min(args.execute_k, len(adapted))
@@ -128,7 +132,7 @@ def main(argv=None) -> int:
                     scene.sim.command(np.asarray(adapted[i].q_target, dtype=np.float64))
                     for j in (9, 10):
                         p.setJointMotorControl2(scene.sim.robot, j, p.POSITION_CONTROL,
-                                                float(adapted[i].gripper_value), force=30,
+                                                float(adapted[i].gripper_target_m), force=30,
                                                 physicsClientId=scene.sim.client)
                     for _ in range(STEPS_PER_TICK):
                         scene.sim.step()
@@ -154,6 +158,8 @@ def main(argv=None) -> int:
             'strict_success': ev['strict_success'], 'failure_reason': ev['failure_reason'],
             'checks': ev['checks'], 'metrics': ev['metrics'],
             'n_infer': n_infer, 'seconds': round(time.time() - t0, 1),
+            'anchor_reference': 'fixed', 'gripper_mode': args.gripper_mode,
+            'action_gain': args.action_gain, 'execute_k': args.execute_k,
             'mean_infer_s': float(np.mean(infer_s)) if infer_s else None,
             'p95_infer_s': float(np.percentile(infer_s, 95)) if infer_s else None,
             'action_log': act_log,

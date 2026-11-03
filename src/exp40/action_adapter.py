@@ -145,21 +145,37 @@ def chunk_to_targets(
     lower: np.ndarray,
     upper: np.ndarray,
     config: ActionAdapterConfig | None = None,
+    *,
+    anchor_reference: str = 'recursive',
 ) -> list[AdaptedAction]:
-    """把一个 (horizon, 8) chunk 逐条适配。
+    """把一个 (horizon, 8) chunk 逐条适配成关节目标。
 
-    注意：DROID 的动作是相对“当前 state”的增量，chunk 内每一条都是相对上一控制步的增量，
-    因此适配时必须逐条递推 q_current，而不是全部相对同一个 q。
+    **锚点语义（必须与训练标签一致，实验 4.2 独立审计的缺陷 #1）**：
+
+    * ``anchor_reference='fixed'``（4.2 训练/部署的正确语义）：
+      chunk 内每一行都是**相对锚点状态 q_t** 的偏移量，
+      q_target[k] = q_t + a_k。训练导出用的正是 `A[t+k] - S[t]`，
+      因此部署必须用固定锚点，否则第 2 步起会重复累加前面各行的偏移。
+    * ``anchor_reference='recursive'``（实验 4.0 的旧行为，保留以复现历史结果）：
+      每一行被视为相对**上一步**的增量，q_target[k] = q_target[k-1] + a_k。
+      只有当训练标签是"逐控制步增量"（a_k = A[t+k] - S[t+k]）时这才是对的；
+      与 4.2 的锚点式标签混用会放大运动（审计实测 8 步末端位移 0.074 m vs 修复后 0.0086 m）。
+
+    默认值保持 ``'recursive'`` 以免静默改变实验 4.0 已归档的闭环结果；
+    4.2 的 rollout 显式传 ``'fixed'``。
     """
+    if anchor_reference not in ('fixed', 'recursive'):
+        raise ValueError(f'anchor_reference 必须是 fixed/recursive，收到 {anchor_reference}')
     chunk = np.asarray(chunk, dtype=np.float64)
     if chunk.ndim != 2 or chunk.shape[1] != dc.ACTION_DIM:
         raise ValueError(f'chunk 必须是 (T, {dc.ACTION_DIM})，收到 {chunk.shape}')
     out = []
-    q = np.asarray(q_current, dtype=np.float64).copy()
+    q0 = np.asarray(q_current, dtype=np.float64).copy()
+    q = q0.copy()
     for row in chunk:
         adapted = adapt_action(row, q, lower, upper, config)
         out.append(adapted)
-        q = adapted.q_target
+        q = adapted.q_target if anchor_reference == 'recursive' else q0
     return out
 
 

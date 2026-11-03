@@ -455,7 +455,9 @@ def main(argv=None) -> int:
         WIN_IDX = saved
         return out
 
-    for k in range(1, args.steps + 1):
+    # 注意：上面的 pre-loop step 已经是第 1 次参数更新，因此这里从 2 开始，
+    # 使 `--steps N` 恰好对应 N 次 optimizer update（独立审计缺陷 #4）。
+    for k in range(2, args.steps + 1):
         batch = build_batch(meta, cache, transform, rng_np, args.batch)
         b_obs = _model.Observation.from_dict(
             {kk: v for kk, v in batch.items() if not kk.startswith('_')})
@@ -463,7 +465,7 @@ def main(argv=None) -> int:
         if k % 5 == 0 or k == 1:
             jax.block_until_ready(train_state.params)
             el = time.time() - t_start
-            sps = k / max(el, 1e-6)
+            sps = (k - 1) / max(el, 1e-6)
             entry = {'step': k, 'loss': float(info['loss']),
                      'grad_norm': float(info['grad_norm']), 'sps': sps,
                      'skills': batch['_skills'].tolist()}
@@ -484,7 +486,7 @@ def main(argv=None) -> int:
         print(f'exported full params -> {p} in {time.time() - t_exp:.1f}s', flush=True)
 
     total_s = time.time() - t_start
-    sps = args.steps / max(total_s, 1e-6)
+    sps = max(args.steps - 1, 1) / max(total_s, 1e-6)
     mem = {}
     try:
         import subprocess
@@ -494,7 +496,9 @@ def main(argv=None) -> int:
         mem['nvidia_smi'] = out.stdout.strip().splitlines()
     except Exception:
         pass
-    bench = {'steps': args.steps, 'batch_size': args.batch, 'accum': args.accum,
+    bench = {'steps': args.steps, 'optimizer_updates': args.steps,
+             'note': 'steps = 实际 optimizer update 次数（已修正旧版 +1 偏差）',
+             'batch_size': args.batch, 'accum': args.accum,
              'seconds_per_optimizer_step': total_s / max(args.steps, 1),
              'seconds_per_microbatch': total_s / max(args.steps * args.accum, 1),
              'compile_seconds': compile_s, 'steps_per_second': sps,
