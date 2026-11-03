@@ -44,8 +44,13 @@
     "/scratch/lijh/exp42/run2/ckpts (step901)"
   ],
   "large_files_in_git": false,
-  "n_files": 45,
+  "n_files": 47,
   "files": [
+    {
+      "path": "ab_initial_state.json",
+      "size_bytes": 56764,
+      "sha256": "68062404a31699574287bf4b2255963d73624606f8936466230dbc2d5d4b0644"
+    },
     {
       "path": "action_compare_baseline_vs_finetuned.json",
       "size_bytes": 2010,
@@ -95,6 +100,11 @@
       "path": "checkpoint_manifest.json",
       "size_bytes": 2283,
       "sha256": "8b963b71142ec3ca0ac951afb26a397e34b93f9f68972c13c25b58764f899f4d"
+    },
+    {
+      "path": "diagnostics_ab_masked_loss.md",
+      "size_bytes": 2618,
+      "sha256": "2b6d3ffe60162e2ad65da2149eaae3eea1521f331e6223ed54116071919a18e4"
     },
     {
       "path": "diagnostics_p0.md",
@@ -358,5 +368,26 @@
       "A90": "0/2",
       "B90": "0/2"
     }
+  },
+  "ab_masked_loss": {
+    "doc": "diagnostics_ab_masked_loss.md",
+    "steps_each": 300,
+    "seed": 0,
+    "batch": 4,
+    "A_32d_final_loss": 0.1324,
+    "B_8d_masked_final_loss": 0.0456,
+    "initial_frame_absmax": {
+      "A90": {
+        "baseline": 0.213,
+        "A": 0.446,
+        "B": 0.331
+      },
+      "B90": {
+        "baseline": 0.442,
+        "A": 0.439,
+        "B": 0.438
+      }
+    },
+    "conclusion": "masked loss 改善 A90 初始帧幅度(0.446->0.331)，但两类技能仍远离专家的静止行为(1e-5)；padding 主因假设被否定"
   }
 }
