@@ -44,7 +44,7 @@
     "/scratch/lijh/exp42/run2/ckpts (step901)"
   ],
   "large_files_in_git": false,
-  "n_files": 47,
+  "n_files": 48,
   "files": [
     {
       "path": "ab_initial_state.json",
@@ -103,8 +103,8 @@
     },
     {
       "path": "diagnostics_ab_masked_loss.md",
-      "size_bytes": 2618,
-      "sha256": "2b6d3ffe60162e2ad65da2149eaae3eea1521f331e6223ed54116071919a18e4"
+      "size_bytes": 3627,
+      "sha256": "34be9f82bc553a491e704b5f2560c6cb2f4eae44ea34a89c85499576d7292a13"
     },
     {
       "path": "diagnostics_p0.md",
@@ -152,6 +152,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "initial_obs_check.json",
+      "size_bytes": 803,
+      "sha256": "1a150ddf9fe89f110dfea4b26867abae040228b537d4d4b5512e677be7b4524f"
+    },
+    {
       "path": "normalization_decision.md",
       "size_bytes": 2646,
       "sha256": "26d3c94bb01b5933f7281e8b9861e2690d0f87f867300fe6f3be780a1667fa05"
@@ -168,8 +173,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 3346,
-      "sha256": "12176ef1bd065b1ed2a63af1fc25d02efc1c0a391e150e159b952bdb1ce8a211"
+      "size_bytes": 3886,
+      "sha256": "62eefef5a1a9f1eb670dd3f0b6d5097606e4d46d1c91c53bf92f74fabf3d6f2e"
     },
     {
       "path": "reports/experiment_4_2_report.md",
@@ -389,5 +394,12 @@
       }
     },
     "conclusion": "masked loss 改善 A90 初始帧幅度(0.446->0.331)，但两类技能仍远离专家的静止行为(1e-5)；padding 主因假设被否定"
+  },
+  "initial_obs_check": {
+    "q_max_abs_diff_rad": 8.63e-08,
+    "gripper_rollout": 0.8750005,
+    "gripper_dataset": 0.8750005,
+    "image_top_absdiff_mean": 2.836,
+    "verdict": "rollout 第一步观测与数据集起始帧几乎一致 → 初始帧失败不是分布外"
   }
 }

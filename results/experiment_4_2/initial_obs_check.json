@@ -1,0 +1,43 @@
+{
+  "dataset_episode": 0,
+  "q_rollout": [
+    0.0,
+    -0.5,
+    0.0,
+    -2.1,
+    -1e-05,
+    1.64999,
+    0.78
+  ],
+  "q_dataset_frame0": [
+    0.0,
+    -0.5,
+    0.0,
+    -2.1,
+    -1e-05,
+    1.64999,
+    0.78
+  ],
+  "q_max_abs_diff": 8.628553604950184e-08,
+  "gripper_rollout": 0.8750004511598992,
+  "gripper_dataset_frame0": 0.8750004693865776,
+  "image_top_mean_rollout": 204.89588928222656,
+  "image_top_mean_dataset": 203.60994466145834,
+  "image_top_std_rollout": 45.20899839362728,
+  "image_top_std_dataset": 44.955045239772126,
+  "image_wrist_mean_rollout": 198.16683451334634,
+  "image_wrist_mean_dataset": 196.90408833821616,
+  "image_top_shape": [
+    [
+      256,
+      256,
+      3
+    ],
+    [
+      256,
+      256,
+      3
+    ]
+  ],
+  "image_top_absdiff_mean": 2.8361968994140625
+}
