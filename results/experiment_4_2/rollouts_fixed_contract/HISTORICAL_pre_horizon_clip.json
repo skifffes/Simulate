@@ -1,0 +1,19 @@
+{
+  "note": "历史记录：这是 fixed-anchor + 米单位已修复、但**尚未**加 horizon 缩放裁剪时的 4 条 rollout 结果。当前目录里的 A90_ep*.json/B90_ep*.json 已被 horizon-clip 版本覆盖；本文件保留当时的数字，便于追溯审计复核里引用的 616 接触步。",
+  "contract": {
+    "anchor_reference": "fixed",
+    "gripper_mode": "continuous",
+    "clip_rule": "max_delta_rad = 0.25（每步固定上限，尚未按 k+1 缩放）"
+  },
+  "results": {
+    "A90": {"n": 2, "n_success": 0, "failure_reasons": {"grasped_by_two_fingers": 2},
+             "robot_block_contact_steps": [24, 0],
+             "object_terminal": [[0.545, -0.0061], [0.552, 0.0051]],
+             "gripper_target_m": [0.0366, 0.0369]},
+    "B90": {"n": 2, "n_success": 0, "failure_reasons": {"advance_ok": 2},
+             "robot_block_contact_steps": [616, 21],
+             "object_terminal": [[0.5865, 0.2903], [0.5526, 0.2114]],
+             "note": "ep0 把方块推动约 0.14 m，方向偏 +Y"}
+  },
+  "superseded_by": "同目录下 A90_ep00/01、B90_ep00/01（horizon 缩放裁剪后的重跑：B90 接触步 7/0、物体位移 +0.015/+0.052）"
+}

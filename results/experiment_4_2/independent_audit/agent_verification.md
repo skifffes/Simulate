@@ -51,6 +51,13 @@
 "持续接触但方向错"；但**没有**让原子技能成功——这与审计自己的结论一致：
 HOME 首步预测偏差是独立问题（`p0c_initial_state.json`：专家静止 Δq≈1e-5，模型输出 0.27–0.54 rad）。
 
+## 3b. 数据覆盖说明（horizon 裁剪修复后）
+
+`results/experiment_4_2/rollouts_fixed_contract/` 里的 A90/B90 JSON 现在是**加 horizon 缩放裁剪之后**
+的重跑（B90 接触步 7/0、物体位移 +0.015/+0.052）；§3 表格里"B90 616 接触步、物体 +0.14 m"
+是**中间版本**（fixed anchor + 米单位、但裁剪仍是每步 0.25）的结果，已保存在
+`rollouts_fixed_contract/HISTORICAL_pre_horizon_clip.json`，两版不要混算。
+
 ## 4. 受影响的已归档结果（明确标注，不隐瞒）
 
 以下 rollout 是在**修复前**的执行路径上跑的，只能作为历史对照，不能与修复后混算：
