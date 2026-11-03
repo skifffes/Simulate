@@ -1,0 +1,68 @@
+{
+  "rollout": "results/experiment_4_2/rollouts_fixed_contract/B90_ep00.json",
+  "skill": "B90",
+  "episode": 0,
+  "strict_success": false,
+  "failure_reason": "advance_ok",
+  "n_ticks_analyzed": 21,
+  "L1_predicted_EE": {
+    "name": "predicted (Jacobian @ chunk row 0)",
+    "n": 21,
+    "mean_dx": 0.007897372772533476,
+    "mean_dy": -0.0012917484157770813,
+    "mean_dz": -0.00380404678951145,
+    "sum_dx": 0.165844828223203,
+    "sum_dy": -0.027126716731318706,
+    "frac_positive_x": 0.6666666666666666,
+    "abs_dx": 0.2955295958852127,
+    "abs_dy": 0.2315530869412156,
+    "y_over_x_ratio": -0.16356685355789383
+  },
+  "L2_actual_EE": {
+    "name": "actual measured EE",
+    "n": 21,
+    "mean_dx": 0.00456496931257702,
+    "mean_dy": 0.01104383963885017,
+    "mean_dz": -0.021019906515166872,
+    "sum_dx": 0.09586435556411743,
+    "sum_dy": 0.2319206324158536,
+    "frac_positive_x": 0.47619047619047616,
+    "abs_dx": 0.4735754132270813,
+    "abs_dy": 0.2928252976838799,
+    "y_over_x_ratio": 2.4192582430780227
+  },
+  "L3_object": {
+    "name": "object displacement",
+    "n": 21,
+    "mean_dx": -0.0002388489389460537,
+    "mean_dy": 0.003792727524155104,
+    "mean_dz": 0.0,
+    "sum_dx": -0.005015827717867127,
+    "sum_dy": 0.07964727800725718,
+    "frac_positive_x": 0.2857142857142857,
+    "abs_dx": 0.01669266399033109,
+    "abs_dy": 0.08340236566413822,
+    "y_over_x_ratio": 15.87918933569861
+  },
+  "expert_reference_EE": {
+    "name": "expert FK(A)-FK(S), episodes 0,1",
+    "n": 42,
+    "mean_dx": 0.0046069806530362085,
+    "mean_dy": 0.0038798906584401513,
+    "mean_dz": -0.010759605538277399,
+    "sum_dx": 0.19349318742752075,
+    "sum_dy": 0.16295540765448635,
+    "frac_positive_x": 0.9523809523809523,
+    "abs_dx": 0.19349318742752075,
+    "abs_dy": 0.16295540765448635,
+    "y_over_x_ratio": 0.8421764601687937
+  },
+  "contact_ticks": 5,
+  "verdict": "预测与实际都接近专家；物体偏离来自接触过程",
+  "cos": {
+    "pred_vs_expert": 0.6508706320877639,
+    "actual_vs_predicted": 0.22781246959001183,
+    "actual_vs_expert": 0.8875022596486601,
+    "object_vs_expert": 0.5948202908600311
+  }
+}

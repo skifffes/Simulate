@@ -70,3 +70,12 @@ HOME 首步预测偏差是独立问题（`p0c_initial_state.json`：专家静止
    32D loss、DROID stats、LR、动作增益全部不动；
 2. 若首步正常，再重跑闭环（同 seed、配对 A90/B90）；
 3. 之后再考虑归一化尺度（train/DROID 跨度比 0.024–0.061）与 masked-loss 在同设置下的比较。
+
+## 7. 后续（同一轮 Gate 0/1 追加）：第三个契约缺陷
+
+修好上面两个缺陷后，专家回放仍有 2/4 失败（teacher-forced 目标差 0.30–0.54 rad）。
+根因是 `max_delta_rad = 0.25` 的**逐步**上限与固定锚点的**累计**偏移不匹配：
+A90 旋转阶段第 8 步的 0.31 rad 合法偏移被截断。
+已在 `chunk_to_targets(anchor_reference='fixed')` 中改为第 k 步上限 `0.25*(k+1)`（recursive 不变）。
+修复后专家回放 **8/8 严格成功、目标误差 1e-17**，详见
+[`../contract_replay_p0c/execution_contract_verification.md`](../contract_replay_p0c/execution_contract_verification.md)。

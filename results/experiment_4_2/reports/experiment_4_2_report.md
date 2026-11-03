@@ -177,6 +177,12 @@
 > 详见 [`independent_audit/agent_verification.md`](../independent_audit/agent_verification.md)。
 > 修复前的 rollout 仅作历史对照，不与修复后混算。
 
+> **后续诊断（contract_replay_p0c）**：修复执行契约后，专家动作经 Adapter 的物理回放
+> **8/8 严格成功、目标误差 1e-17**（Gate 1 PASS）；B90 的 +Y 被定位为**模型 EE 方向**本身
+> （接触期模型 Δy=+0.072 vs 专家 −0.000），不是接触几何；启动段首步监督明确、chunk 行存在结构性歧义。
+> P0c 训练因条件不满足**未开展**。详见
+> [`../contract_replay_p0c/final_report.md`](../contract_replay_p0c/final_report.md)。
+
 ## 7. RQ 回答（对应 §十六）
 
 **RQ1（A90 能在多少目标上严格成功）**：0/4 rollout（2 个目标 × 2 seed），无一成功。

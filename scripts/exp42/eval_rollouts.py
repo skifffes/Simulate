@@ -122,11 +122,17 @@ def main(argv=None) -> int:
                     chunk[:, :7] *= args.action_gain
                 adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg,
                                            anchor_reference='fixed')
+                ee0, _ = scene.sim.pose()
+                obj0 = scene.object_state()['pos']
                 act_log.append({'tick': tick, 'action_absmax': float(np.abs(chunk[:, :8]).max()),
                                 'gripper_cmd': float(chunk[0, 7]),
                                 'gripper_target_m': float(adapted[0].gripper_target_m),
+                                'anchor_q': ';'.join(f'{v:.5f}' for v in q),
+                                'chunk_first_row': ';'.join(f'{v:.5f}' for v in chunk[0, :8]),
                                 'delta_applied_absmax': float(max(np.abs(a.delta_applied).max()
-                                                                  for a in adapted))})
+                                                                  for a in adapted)),
+                                'ee_before': [float(v) for v in ee0],
+                                'obj_before': [float(v) for v in obj0]})
                 k = min(args.execute_k, len(adapted))
                 for i in range(k):
                     scene.sim.command(np.asarray(adapted[i].q_target, dtype=np.float64))
@@ -136,6 +142,17 @@ def main(argv=None) -> int:
                                                 physicsClientId=scene.sim.client)
                     for _ in range(STEPS_PER_TICK):
                         scene.sim.step()
+                ee1, _ = scene.sim.pose()
+                obj1 = scene.object_state()['pos']
+                act_log[-1].update({
+                    'ee_after': [float(v) for v in ee1],
+                    'obj_after': [float(v) for v in obj1],
+                    'ee_dx': float(ee1[0] - ee0[0]), 'ee_dy': float(ee1[1] - ee0[1]),
+                    'ee_dz': float(ee1[2] - ee0[2]),
+                    'obj_dx': float(obj1[0] - obj0[0]), 'obj_dy': float(obj1[1] - obj0[1]),
+                    'robot_block_contacts': len(p.getContactPoints(
+                        bodyA=scene.block, bodyB=scene.sim.robot, physicsClientId=scene.sim.client)),
+                })
                 if tick % 10 == 0:
                     st = scene.object_state()
                     print(f'  [{args.skill} ep{ep} tick {tick}] obj={np.round(st["pos"], 4).tolist()} '

@@ -1,0 +1,106 @@
+{
+  "model": [
+    {
+      "file": "results/experiment_4_2/rollouts_fixed_contract/B90_ep00.json",
+      "skill": "B90",
+      "episode": 0,
+      "success": false,
+      "reason": "advance_ok",
+      "n_contact_ticks": 7,
+      "contact_EE": {
+        "n": 7,
+        "sum_dx": -0.01071631908416748,
+        "sum_dy": 0.07232925295829773,
+        "mean_dx": -0.00153090272630964,
+        "mean_dy": 0.010332750422613961,
+        "frac_positive_x": 0.42857142857142855
+      },
+      "contact_object": {
+        "n": 7,
+        "sum_dx": -0.0012780506428438088,
+        "sum_dy": 0.023036961117062577,
+        "mean_dx": -0.00018257866326340126,
+        "mean_dy": 0.003290994445294654,
+        "frac_positive_x": 0.5714285714285714
+      },
+      "all_EE": {
+        "n": 45,
+        "sum_dx": -0.2099367380142212,
+        "sum_dy": 0.2682658162651883,
+        "mean_dx": -0.004665260844760471,
+        "mean_dy": 0.005961462583670851,
+        "frac_positive_x": 0.3111111111111111
+      },
+      "all_object": {
+        "n": 45,
+        "sum_dx": 0.014567330941157919,
+        "sum_dy": 0.05243841916061551,
+        "mean_dx": 0.0003237184653590649,
+        "mean_dy": 0.0011652982035692335,
+        "frac_positive_x": 0.5333333333333333
+      }
+    },
+    {
+      "file": "results/experiment_4_2/rollouts_fixed_contract/B90_ep01.json",
+      "skill": "B90",
+      "episode": 1,
+      "success": false,
+      "reason": "advance_ok",
+      "n_contact_ticks": 0,
+      "contact_EE": null,
+      "contact_object": null,
+      "all_EE": {
+        "n": 45,
+        "sum_dx": -0.09058809280395508,
+        "sum_dy": 0.690405997329794,
+        "mean_dx": -0.0020130687289767794,
+        "mean_dy": 0.015342355496217645,
+        "frac_positive_x": 0.4666666666666667
+      },
+      "all_object": {
+        "n": 45,
+        "sum_dx": -0.001123364755238776,
+        "sum_dy": -0.00046756976088446756,
+        "mean_dx": -2.4963661227528357e-05,
+        "mean_dy": -1.0390439130765946e-05,
+        "frac_positive_x": 0.4
+      }
+    }
+  ],
+  "expert": [
+    {
+      "file": "results/experiment_4_2/contract_replay_p0c/expert_vs_adapter_trace_B90_measured.csv",
+      "episode": "0",
+      "n_contact_ticks": 61,
+      "contact_EE": {
+        "n": 60,
+        "sum_dx": 0.17727187275886536,
+        "sum_dy": -6.490945816040039e-05,
+        "frac_positive_x": 0.9166666666666666
+      },
+      "contact_object": {
+        "n": 60,
+        "sum_dx": 0.17516151252328827,
+        "sum_dy": 0.004409458934937549,
+        "frac_positive_x": 0.95
+      }
+    },
+    {
+      "file": "results/experiment_4_2/contract_replay_p0c/expert_vs_adapter_trace_B90_measured.csv",
+      "episode": "1",
+      "n_contact_ticks": 88,
+      "contact_EE": {
+        "n": 87,
+        "sum_dx": 0.16918790340423584,
+        "sum_dy": -0.0006445944309234619,
+        "frac_positive_x": 0.896551724137931
+      },
+      "contact_object": {
+        "n": 87,
+        "sum_dx": 0.16798492769822593,
+        "sum_dy": 0.0021243338322948224,
+        "frac_positive_x": 0.9540229885057471
+      }
+    }
+  ]
+}

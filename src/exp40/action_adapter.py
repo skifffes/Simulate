@@ -11,7 +11,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace as _dc_replace
 
 import numpy as np
 
@@ -156,6 +156,10 @@ def chunk_to_targets(
       chunk 内每一行都是**相对锚点状态 q_t** 的偏移量，
       q_target[k] = q_t + a_k。训练导出用的正是 `A[t+k] - S[t]`，
       因此部署必须用固定锚点，否则第 2 步起会重复累加前面各行的偏移。
+      **注意**：固定锚点下 ``a_k`` 是"跨 k+1 步的累计偏移"，因此安全上限必须随 k 放大
+      （``max_delta_rad * (k+1)``）；否则专家/模型在以 ~0.04 rad/step 转动时，
+      第 8 步的 0.31 rad 合法偏移会被 0.25 的上限截断（Gate 1 实测：A90 旋转阶段
+      adapter 目标落后专家 0.12–0.29 rad，导致 yaw 判据失败）。
     * ``anchor_reference='recursive'``（实验 4.0 的旧行为，保留以复现历史结果）：
       每一行被视为相对**上一步**的增量，q_target[k] = q_target[k-1] + a_k。
       只有当训练标签是"逐控制步增量"（a_k = A[t+k] - S[t+k]）时这才是对的；
@@ -169,11 +173,16 @@ def chunk_to_targets(
     chunk = np.asarray(chunk, dtype=np.float64)
     if chunk.ndim != 2 or chunk.shape[1] != dc.ACTION_DIM:
         raise ValueError(f'chunk 必须是 (T, {dc.ACTION_DIM})，收到 {chunk.shape}')
+    base = config or ActionAdapterConfig()
     out = []
     q0 = np.asarray(q_current, dtype=np.float64).copy()
     q = q0.copy()
-    for row in chunk:
-        adapted = adapt_action(row, q, lower, upper, config)
+    for k, row in enumerate(chunk):
+        cfg_k = base
+        if anchor_reference == 'fixed':
+            # 累计偏移的合法上限随步数放大（第 k 步最多跨 k+1 个控制周期）
+            cfg_k = _dc_replace(base, max_delta_rad=base.max_delta_rad * (k + 1))
+        adapted = adapt_action(row, q, lower, upper, cfg_k)
         out.append(adapted)
         q = adapted.q_target if anchor_reference == 'recursive' else q0
     return out
