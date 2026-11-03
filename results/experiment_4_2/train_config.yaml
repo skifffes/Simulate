@@ -1,0 +1,47 @@
+# 实验 4.2 训练配置（冻结）
+# 复现：bash server/exp42/run_train.sh train --steps 501 --batch 4 --save-every 100 \
+#         --val-every 200 --val-batches 4 --export-params
+name: exp42_pi05_droid_lora
+mode: lora
+base_checkpoint: pi05_droid            # /scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid
+openpi_commit: 215abfb217dbac7d5f1273282331b9b1866c0479
+model:
+  type: pi05
+  action_dim: 32
+  action_horizon: 16
+  paligemma_variant: gemma_2b_lora
+  action_expert_variant: gemma_300m_lora
+  freeze_filter: Pi0Config(gemma_2b_lora, gemma_300m_lora).get_freeze_filter()
+  ema_decay: null                      # LoRA 训练关闭 EMA
+data:
+  source: results/experiment_4_1 (LeRobot v2.1)
+  export: /scratch/lijh/exp42/data      # npy/npz 随机访问（lerobot 不可安装）
+  split_version: exp4.1-split-v1
+  split: {train: 61 episodes, val: 16 episodes, test: 13 episodes}
+  train_windows: 2521                   # horizon=16, stride=4
+  policy_hz: 20
+  transforms: [DroidInputs(PI05), Normalize(droid quantile stats), ResizeImages(224), TokenizePrompt, PadStatesAndActions(32)]
+  norm_stats: assets/droid/norm_stats.json (md5 2e8bc5547dc797f1df5f4e5401136082)
+  prompt_from_task: true
+optimizer:
+  source: official pi05_droid_finetune (optax + cosine decay)
+  peak_lr: see training_speed_benchmark.json / lr_schedule in config
+  weight_decay_mask: null
+batching:
+  batch_size: 4
+  grad_accum: 1
+  effective_batch: 4
+  trainable_params: 466.96e6
+  total_params: 3403.4e6
+  trainable_ratio: 0.1372
+training:
+  steps: 501
+  checkpoint_every: 100
+  checkpoint_format: lora-only npz (fp32) + full params (orbax, final)
+  validation: train/val loss every 200 steps (4 batches each)
+  seed: 0
+gpu:
+  device: 0 (NVIDIA A40 46 GB)
+  precision: bfloat16 (frozen params cast to bf16)
+  xla_preallocate: false
+  jax_compilation_cache: /scratch/lijh/exp42/jax_cache

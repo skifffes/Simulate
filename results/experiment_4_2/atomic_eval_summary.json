@@ -1,0 +1,143 @@
+{
+  "eval_version": "exp4.1-strict-v1.2",
+  "camera_version": "exp4.0-camera-v3",
+  "policy_hz": 20,
+  "executed_k": 8,
+  "ticks_per_episode": 45,
+  "models": {
+    "baseline_pi05_droid": {
+      "loaded": true,
+      "action_absmax_normalized": {
+        "A90_frame": 0.9969,
+        "B90_frame": 0.364
+      },
+      "evidence": "action_compare_baseline_vs_finetuned.json (same observation)"
+    },
+    "finetuned_lora_step501": {
+      "loaded": true,
+      "checkpoint": "/scratch/lijh/exp42/run/ckpts/params_nested",
+      "lora_tensors_applied": 51,
+      "action_absmax_normalized": {
+        "A90_frame": 0.9475,
+        "B90_frame": 0.5718
+      },
+      "diff_vs_baseline_absmax": {
+        "A90_frame": 0.5642,
+        "B90_frame": 0.4272
+      },
+      "identical_to_baseline": false
+    },
+    "finetuned_lora_step901": {
+      "loaded": true,
+      "checkpoint": "/scratch/lijh/exp42/run2/ckpts/params_nested",
+      "lora_md5": "7cd19b1851a4955e6995fb2189422dcc",
+      "note": "续训 400 步（累计 901），未重复做动作对比；闭环行为明显不同于 step501"
+    }
+  },
+  "diagnosis": {
+    "model_executes": true,
+    "object_ever_moved": false,
+    "action_scale_issue": {
+      "observed_normalized_absmax": 0.82,
+      "training_label_normalized_absmax_approx": 0.11,
+      "physical_delta_q_after_unnormalize_rad": 0.22,
+      "training_label_delta_q_absmax_rad": 0.05,
+      "adapter_clip_rad": 0.25,
+      "verdict": "策略输出的关节增量比训练分布大约 4 倍，且被 action adapter 的 0.25 rad 上限裁剪；机械臂大幅摆动、没有接近方块（robot_block_contact_steps=0）"
+    },
+    "possible_causes": [
+      "训练步数过少（501 step × batch 4 = 0.79 epoch），输出尺度尚未从预训练先验(±0.45 rad/step)迁移到本数据的(±0.05)",
+      "DROID 归一化统计的 action 跨度约 ±0.5 rad，本数据 Δq 约 ±0.05，量化后目标值集中在 0 附近，模型需要更多步才能学会小步幅",
+      "未做任何推理侧尺度修正（按规则也不允许用测试集调阈值）"
+    ]
+  },
+  "baseline_rollouts": {
+    "status": "NOT RUN (时间预算内只完成微调模型闭环；原始 pi05_droid 的闭环基线需在 4.2 后续补充)",
+    "note": "基线模型的动作对比已在 action_compare 中完成，但没有跑基线闭环 rollout，因此不能给出两者的成功率差"
+  },
+  "confidence": "n=2/技能，不能据此判断成功率；Wilson 95% 上界约 0.66，下界 0",
+  "rollouts_step501": {
+    "tag": "ft",
+    "note": "2 条 A90 + 2 条 B90，均为 45 个控制周期（20 Hz）、v3 相机、seed 9000/9001",
+    "A90": {
+      "n": 2,
+      "n_success": 0,
+      "success_rate": 0.0,
+      "failure_reasons": {
+        "grasped_by_two_fingers": 2
+      },
+      "robot_block_contact_steps": [
+        0,
+        0
+      ],
+      "lift_m": [
+        0.0,
+        0.0
+      ],
+      "position_error_m": [
+        0.1858,
+        0.1749
+      ]
+    },
+    "B90": {
+      "n": 2,
+      "n_success": 0,
+      "success_rate": 0.0,
+      "failure_reasons": {
+        "pushed_by_robot": 2
+      },
+      "robot_block_contact_steps": [
+        0,
+        0
+      ],
+      "advance_x_m": [
+        -0.0,
+        -0.0
+      ]
+    }
+  },
+  "rollouts_step901": {
+    "tag": "ft_step901",
+    "note": "2 条 A90 + 2 条 B90，45 tick，seed 9000/9001，同场景与评价器",
+    "A90": {
+      "n": 2,
+      "n_success": 0,
+      "failure_reasons": {
+        "lifted": 1,
+        "grasped_by_two_fingers": 1
+      },
+      "robot_block_contact_steps": [
+        69,
+        21
+      ],
+      "lift_m": [
+        0.0082,
+        0.0
+      ],
+      "note": "ep0 把方块从 x=0.5459 推到 0.4634（−82.5 mm），抬升 8.2 mm（阈值 50 mm）"
+    },
+    "B90": {
+      "n": 2,
+      "n_success": 0,
+      "failure_reasons": {
+        "pushed_by_robot": 1,
+        "advance_ok": 1
+      },
+      "robot_block_contact_steps": [
+        0,
+        22
+      ],
+      "advance_x_m": [
+        -0.0,
+        -0.0285
+      ],
+      "note": "ep1 接触 22 步但把方块推了 −28.5 mm（反方向）"
+    }
+  },
+  "overall": {
+    "n_rollouts": 8,
+    "n_strict_success": 0,
+    "verdict": "A90_ATOMIC_SKILL_LEARNED=NO, B90_ATOMIC_SKILL_LEARNED=NO",
+    "progression": "step501: 0/4 contact; step901: 3/4 contact（69/21/0/22 步）"
+  }
+}

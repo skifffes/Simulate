@@ -1,0 +1,54 @@
+{
+  "checkpoints": [
+    {
+      "tag": "step501",
+      "role": "第一段训练（501 步）",
+      "lora_npz": "/scratch/lijh/exp42/run/ckpts/lora_step00501.npz",
+      "lora_md5": "864419cce311147deba9b71ca9f0c559",
+      "lora_bytes": 1734662551,
+      "params_dir": "/scratch/lijh/exp42/run/ckpts/params_nested",
+      "params_bytes": 12614535629,
+      "params_format": "orbax OCDBT, 顶层 {\"params\": tree}, 附带 assets/droid 符号链接",
+      "loadable_by": "openpi.policies.policy_config.create_trained_policy(train_config=exp42_pi05_droid_lora, dir)",
+      "rollouts_dir": "results/experiment_4_2/rollouts_step501",
+      "strict_success": {"A90": "0/2", "B90": "0/2"},
+      "robot_block_contact_steps": [0, 0, 0, 0]
+    },
+    {
+      "tag": "step901",
+      "role": "续训 +400 步（累计 901 步，从 step501 的 LoRA 恢复）",
+      "lora_npz": "/scratch/lijh/exp42/run2/ckpts/lora_step00401.npz",
+      "lora_md5": "7cd19b1851a4955e6995fb2189422dcc",
+      "lora_bytes": 1734660071,
+      "params_dir": "/scratch/lijh/exp42/run2/ckpts/params_nested",
+      "params_bytes": 12614540956,
+      "params_format": "同上",
+      "rollouts_dir": "results/experiment_4_2/rollouts_step901",
+      "strict_success": {"A90": "0/2", "B90": "0/2"},
+      "robot_block_contact_steps": [69, 21, 0, 22],
+      "note": "接触开始出现，但 A90 把方块推走 8 cm、B90 反方向推 −28.5 mm，仍不满足严格成功"
+    }
+  ],
+  "lora_config": {
+    "paligemma_variant": "gemma_2b_lora",
+    "action_expert_variant": "gemma_300m_lora",
+    "trainable_params": 466960000,
+    "total_params": 3403400000,
+    "trainable_ratio": 0.1372,
+    "n_saved_tensors": 51,
+    "ema_decay": null
+  },
+  "base": {
+    "checkpoint": "pi05_droid",
+    "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "norm_stats_md5": "2e8bc5547dc797f1df5f4e5401136082"
+  },
+  "deploy": {
+    "server": "scripts/exp42/serve_finetuned.py (注册 exp42_pi05_droid_lora 后复用 4.0 serve_policy.py)",
+    "client_loop": "scripts/exp42/eval_rollouts.py (20 Hz, execute_k=8, 严格评价 v1.2)",
+    "required_paths": [
+      "<ckpt_dir>/params  (orbax OCDBT, 顶层 params)",
+      "<ckpt_dir>/assets/droid/norm_stats.json  (符号链接到 4.0 缓存即可)"
+    ]
+  }
+}

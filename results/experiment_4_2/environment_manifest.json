@@ -1,0 +1,83 @@
+{
+  "experiment": "4.2",
+  "task": "π₀.₅ atomic-skill joint LoRA fine-tuning (A90 + B90, single shared checkpoint)",
+  "simulate_commit": "b1b1c41",
+  "simulate_commit_note": "4.1 final + 4.2 scripts uncommitted at audit time; 4.2 commit recorded in artifact_manifest.json",
+  "openpi": {
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "checkout": "/scratch/lijh/exp40/openpi",
+    "venv": "/scratch/lijh/exp40/openpi/.venv",
+    "python": "3.11.16",
+    "jax": "0.5.3",
+    "devices": 5,
+    "device_names": ["NVIDIA A40", "NVIDIA A40", "NVIDIA A40", "NVIDIA A40", "NVIDIA A40"],
+    "device_memory_mib": 46068,
+    "driver": "550.120"
+  },
+  "checkpoint": {
+    "name": "pi05_droid",
+    "params_dir": "/scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/params",
+    "assets_dir": "/scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/assets",
+    "params_size_gib": 11.576,
+    "norm_stats_file": "assets/droid/norm_stats.json",
+    "norm_stats_md5": "2e8bc5547dc797f1df5f4e5401136082",
+    "quantile_norm": true,
+    "action_dim": 32,
+    "action_horizon_pretrain": 15,
+    "action_horizon_4_2": 16
+  },
+  "camera": {
+    "version": "exp4.0-camera-v3",
+    "sha256": "418bad2f33ef5a9e",
+    "resolution_dataset": [256, 256],
+    "resolution_model_input": [224, 224],
+    "view_external": "observation/exterior_image_1_left",
+    "view_wrist": "observation/wrist_image_left"
+  },
+  "dataset": {
+    "source": "results/experiment_4_1 (LeRobot v2.1, 20 Hz)",
+    "n_episodes": 90,
+    "n_frames": 16084,
+    "policy_hz": 20,
+    "physics_hz": 240,
+    "steps_per_action": 12,
+    "split_version": "exp4.1-split-v1",
+    "split_counts": {
+      "A90/train": {"episodes": 30, "frames": 5873},
+      "A90/val": {"episodes": 10, "frames": 1974},
+      "A90/test": {"episodes": 5, "frames": 982},
+      "B90/train": {"episodes": 31, "frames": 5009},
+      "B90/val": {"episodes": 6, "frames": 967},
+      "B90/test": {"episodes": 8, "frames": 1279}
+    },
+    "train_windows_horizon16_stride4": 2521,
+    "export_dir": "/scratch/lijh/exp42/data",
+    "export_size_gib": 5.9
+  },
+  "contracts": {
+    "action_contract": "exp4.1-action-v1",
+    "training_export": "exp4.1-training-export-v1",
+    "strict_eval": "exp4.1-strict-v1.2"
+  },
+  "host": {
+    "os": "CentOS 7 (glibc 2.17)",
+    "cpu_cores": 80,
+    "ram_total_gb": 251,
+    "ram_available_gb": 233,
+    "scratch_total": "15T",
+    "scratch_free": "251G",
+    "scratch_used_pct": 99
+  },
+  "environment_blocker": {
+    "item": "lerobot",
+    "effect": "`openpi.training.data_loader` 无法导入（ModuleNotFoundError: lerobot），因此官方 scripts/train.py 入口不可用",
+    "workaround": "复用官方模型/transform/optimizer/loss，仅用自写迭代器替换 LeRobotDataset（见 training_data_contract.md）",
+    "verified": "probe_train.py: openpi.training.config/models/transforms/optimizer 均 OK；data_loader FAIL"
+  },
+  "baseline_inference_path": {
+    "server": "scripts/exp40/serve_policy.py (websocket + msgpack-numpy, ping_interval=None)",
+    "client": "src/exp40/policy_client.py",
+    "loop": "scripts/exp40/level4_closed_loop.py --policy-hz 20",
+    "rng": "episode_seed reset per episode (4.0 verified bitwise reproducibility)"
+  }
+}

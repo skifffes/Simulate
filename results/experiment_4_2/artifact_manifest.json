@@ -1,0 +1,195 @@
+{
+  "experiment": "4.2",
+  "simulate_base_commit": "b1b1c41",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "base_checkpoint": "pi05_droid",
+  "camera_version": "exp4.0-camera-v3",
+  "camera_sha256": "418bad2f33ef5a9e",
+  "action_contract": "exp4.1-action-v1",
+  "training_export": "exp4.1-training-export-v1",
+  "strict_eval": "exp4.1-strict-v1.2",
+  "split": "exp4.1-split-v1",
+  "policy_hz": 20,
+  "physics_hz": 240,
+  "steps_per_action": 12,
+  "execute_k": 8,
+  "action_horizon": 16,
+  "lora": {
+    "paligemma": "gemma_2b_lora",
+    "action_expert": "gemma_300m_lora",
+    "trainable_params": 466960000,
+    "total_params": 3403400000,
+    "ratio": 0.1372
+  },
+  "training": {
+    "steps_total": 901,
+    "batch_size": 4,
+    "sps_step501": 0.38234199845782835,
+    "sps_step901": 0.44435702449719966,
+    "seconds_per_step": 2.615459468312368,
+    "compile_seconds": 16.258031129837036,
+    "epochs_equivalent": 1.431,
+    "val_loss_final": 0.02649,
+    "train_loss_final": 0.02681,
+    "loss_initial": 1.1643
+  },
+  "eval": {
+    "n_rollouts": 8,
+    "n_strict_success": 0,
+    "A90_ATOMIC_SKILL_LEARNED": "NO",
+    "B90_ATOMIC_SKILL_LEARNED": "NO"
+  },
+  "checkpoints": [
+    "/scratch/lijh/exp42/run/ckpts (step501)",
+    "/scratch/lijh/exp42/run2/ckpts (step901)"
+  ],
+  "large_files_in_git": false,
+  "n_files": 29,
+  "files": [
+    {
+      "path": "action_compare_baseline_vs_finetuned.json",
+      "size_bytes": 2010,
+      "sha256": "d238ff9684f211b4dfe41f20f82dd32a3344d887044f80fb32e753f879a29ff3"
+    },
+    {
+      "path": "atomic_eval_summary.json",
+      "size_bytes": 4512,
+      "sha256": "b7ac7bae28c8660401152372389522ea689054c1688f16e5a9c996e16752314a"
+    },
+    {
+      "path": "checkpoint_manifest.json",
+      "size_bytes": 2283,
+      "sha256": "8b963b71142ec3ca0ac951afb26a397e34b93f9f68972c13c25b58764f899f4d"
+    },
+    {
+      "path": "environment_manifest.json",
+      "size_bytes": 3266,
+      "sha256": "98f234cc5406d115172d82b5fe3b39289c6eccbcdcc64ce6e56c0a4424e6cf9e"
+    },
+    {
+      "path": "failure_analysis.md",
+      "size_bytes": 3710,
+      "sha256": "dbbd6b75241e87a41c31d4b4607278c11d25cd834313da34cf5ae8f675dcac6a"
+    },
+    {
+      "path": "gate1_forward_loss.json",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "normalization_decision.md",
+      "size_bytes": 2646,
+      "sha256": "26d3c94bb01b5933f7281e8b9861e2690d0f87f867300fe6f3be780a1667fa05"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3015,
+      "sha256": "54e98a86c639f1b43d955b7f2ca4dbfc30319ee6a3129a84339b5a272086dd65"
+    },
+    {
+      "path": "reports/experiment_4_2_report.md",
+      "size_bytes": 12022,
+      "sha256": "0e27879b825606917522e77baad63d16c691732b1bfdced25ff637a23622d0d0"
+    },
+    {
+      "path": "rollouts_step501/A90_ep00.json",
+      "size_bytes": 9927,
+      "sha256": "5e3ce8528d2cef33b82a97560e7066cb72ec686e4824ba4d2a6497617157b0c0"
+    },
+    {
+      "path": "rollouts_step501/A90_ep01.json",
+      "size_bytes": 9873,
+      "sha256": "52586224b7a253d027b65100b2e17fe795855af16662d15c7a7fc808940afbf0"
+    },
+    {
+      "path": "rollouts_step501/A90_summary.json",
+      "size_bytes": 22917,
+      "sha256": "024de8f634bd82c7e592894c28c3d9ef85c058e960d59e395269f22a145948c8"
+    },
+    {
+      "path": "rollouts_step501/B90_ep00.json",
+      "size_bytes": 9588,
+      "sha256": "47529983560b5606f26162d3b07a1831545e14ef722f3cfbfab2db69d8a76253"
+    },
+    {
+      "path": "rollouts_step501/B90_ep01.json",
+      "size_bytes": 9673,
+      "sha256": "245dcb9c5bbca50dacc114aaa1183b3102d9e10e4a62168652be3936866c6fe3"
+    },
+    {
+      "path": "rollouts_step501/B90_summary.json",
+      "size_bytes": 22347,
+      "sha256": "0f90c7a1f2ce0cbfa8d1108d41028d7ed25976aadee1fb7441098fb3f6051e96"
+    },
+    {
+      "path": "rollouts_step901/A90_ep00.json",
+      "size_bytes": 9787,
+      "sha256": "d11b8fccffbc2c3fb969d7c084663da41488060e6ff0ef4783ec9b467ae4ce24"
+    },
+    {
+      "path": "rollouts_step901/A90_ep01.json",
+      "size_bytes": 9907,
+      "sha256": "96b038ac0254b4ed05c65f6cbae13398e84262de49a77d070249e764a3153891"
+    },
+    {
+      "path": "rollouts_step901/A90_summary.json",
+      "size_bytes": 22827,
+      "sha256": "23b1be6e4752b40957d9af3468fcc9cc335a7b51effbadc35ccbab6cfb2d1560"
+    },
+    {
+      "path": "rollouts_step901/B90_ep00.json",
+      "size_bytes": 9559,
+      "sha256": "ebadc66b93456351819bb72ad024845b5273ee27c26d24db9ca90e3b69f6b00d"
+    },
+    {
+      "path": "rollouts_step901/B90_ep01.json",
+      "size_bytes": 9512,
+      "sha256": "296ab2fb75de13f01c7595b7e40a48e79dc9ef4b0a9b7307b13d44b590dd4d1f"
+    },
+    {
+      "path": "rollouts_step901/B90_summary.json",
+      "size_bytes": 22178,
+      "sha256": "78bac7d39462fbdcdd489e8501bbc6d623cffb6b4da285d5765f02dfea7ff0b1"
+    },
+    {
+      "path": "run2/ckpts/params_nested/assets",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "train_config.yaml",
+      "size_bytes": 1886,
+      "sha256": "2f61a106a11f1786ef2306e16382b3e5c903e6ab0e8b6aca0fd01ab8ba3d2821"
+    },
+    {
+      "path": "training_data_contract.md",
+      "size_bytes": 6810,
+      "sha256": "2a7adfa5c26508d65efbb71ef2596372cb7a966a1b5a47f676249bce86ff9311"
+    },
+    {
+      "path": "training_logs/curve_step501.csv",
+      "size_bytes": 3135,
+      "sha256": "f76e166540f3ec7aae84ed5e17ae892645377f8280607587d553087ce771a515"
+    },
+    {
+      "path": "training_logs/curve_step901.csv",
+      "size_bytes": 2516,
+      "sha256": "0fe1d07d7f382bf158dada8cece2d5bf9bd4b68a4ff6693ded35deb28692f957"
+    },
+    {
+      "path": "training_speed_benchmark.json",
+      "size_bytes": 23223,
+      "sha256": "ff54673d883730c062410f33a291fdd6032dc1b48707500fc28032e003c170fe"
+    },
+    {
+      "path": "training_speed_benchmark_step501.json",
+      "size_bytes": 23223,
+      "sha256": "ff54673d883730c062410f33a291fdd6032dc1b48707500fc28032e003c170fe"
+    },
+    {
+      "path": "training_speed_benchmark_step901.json",
+      "size_bytes": 18895,
+      "sha256": "6600e130ff0d22f7fc5c43cf62f03194dcdedf990a10cc7d45f6e862f4ee864a"
+    }
+  ]
+}

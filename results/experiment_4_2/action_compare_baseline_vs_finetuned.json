@@ -1,0 +1,99 @@
+{
+  "ckpt": "/scratch/lijh/exp42/run/ckpts/params_nested",
+  "picks": [
+    {
+      "skill": "A90",
+      "episode": 0,
+      "frame": 40
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "frame": 20
+    }
+  ],
+  "items": [
+    {
+      "skill": "A90",
+      "episode": 0,
+      "frame": 40,
+      "prompt": "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X",
+      "shape_base": [
+        15,
+        8
+      ],
+      "shape_ft": [
+        16,
+        8
+      ],
+      "base_action_absmax": 0.9968539580799938,
+      "ft_action_absmax": 0.9474700739547015,
+      "base_gripper": 0.9819,
+      "ft_gripper": 0.8295,
+      "diff_absmax": 0.5641505235900879,
+      "diff_mean_abs": 0.14156860205026545,
+      "identical": false,
+      "base_first_row": [
+        -0.3079,
+        -0.0715,
+        0.1615,
+        -0.0493,
+        -0.1324,
+        -0.1772,
+        -0.6967,
+        0.9819
+      ],
+      "ft_first_row": [
+        -0.076,
+        0.0091,
+        0.0144,
+        0.0464,
+        -0.0443,
+        0.0219,
+        -0.1907,
+        0.8295
+      ]
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "frame": 20,
+      "prompt": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]",
+      "shape_base": [
+        15,
+        8
+      ],
+      "shape_ft": [
+        16,
+        8
+      ],
+      "base_action_absmax": 0.3639558018527031,
+      "ft_action_absmax": 0.5717743001437188,
+      "base_gripper": 0.032,
+      "ft_gripper": 0.4204,
+      "diff_absmax": 0.42722209478759765,
+      "diff_mean_abs": 0.10037625416808152,
+      "identical": false,
+      "base_first_row": [
+        -0.0793,
+        0.0209,
+        0.0497,
+        0.0252,
+        -0.1019,
+        0.0631,
+        0.064,
+        0.032
+      ],
+      "ft_first_row": [
+        -0.0167,
+        0.0635,
+        0.0123,
+        0.0729,
+        -0.0777,
+        0.0106,
+        0.0258,
+        0.4204
+      ]
+    }
+  ]
+}
