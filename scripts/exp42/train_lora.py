@@ -42,7 +42,8 @@ HORIZON = 16
 
 
 # ----------------------------------------------------------------- 配置
-def build_config(*, batch_size: int, num_steps: int, lr_scale: float = 1.0):
+def build_config(*, batch_size: int, num_steps: int, lr_scale: float = 1.0,
+                 warmup_steps: int | None = None):
     import openpi.models.model as _model
     import openpi.models.pi0_config as pi0_config
     import openpi.policies.droid_policy as droid_policy
@@ -68,9 +69,16 @@ def build_config(*, batch_size: int, num_steps: int, lr_scale: float = 1.0):
         weight_loader=weight_loaders.CheckpointWeightLoader(str(PARAMS)),
         freeze_filter=freeze, ema_decay=None,
         batch_size=int(batch_size), num_train_steps=int(num_steps))
+    # 官方 CosineDecaySchedule：warmup_steps=1000、peak_lr=2.5e-5（固定版本 openpi）。
+    # 300 步实验仍处在 warmup 内（LR 只到峰值的 ~30%），因此任何 LR 相关的对照必须显式记录。
+    lr_kwargs = {}
     if lr_scale != 1.0:
-        cfg = dataclasses.replace(cfg, lr_schedule=dataclasses.replace(
-            cfg.lr_schedule, peak_value=cfg.lr_schedule.peak_value * lr_scale))
+        lr_kwargs['peak_lr'] = cfg.lr_schedule.peak_lr * lr_scale
+    if warmup_steps is not None:
+        lr_kwargs['warmup_steps'] = int(warmup_steps)
+    if lr_kwargs:
+        cfg = dataclasses.replace(cfg, lr_schedule=dataclasses.replace(cfg.lr_schedule,
+                                                                     **lr_kwargs))
     return cfg
 
 

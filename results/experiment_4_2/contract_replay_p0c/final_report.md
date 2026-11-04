@@ -11,7 +11,7 @@
 | Gate 1 | 专家动作经 Adapter 的物理回放 | **PASS**（8/8 严格成功、目标误差 1e-17） |
 | Gate 2 | B90 方向归因（逐子步、分阶段） | **PARTIAL**（口径已按审计修正：目标偏差 vs 命令路径；接触是 15 个离散 burst） |
 | Gate 3 | 启动阶段监督审计 | **PASS**（首步 VALID / chunk 行 AMBIGUOUS / 6 帧伪影） |
-| Gate 4 | 动作表示单变量训练 | **IN PROGRESS**：preflight/回归/契约测试已通过，A(anchor·fixed) 与 B(target_increment·recursive) 各 300 updates 已启动 |
+| Gate 4 | 动作表示单变量训练 | **NOT PASSED**：A/B 各 300 updates 完成但处于 warmup、首行标签相同；过拟合测试通过（8 窗口 loss 0.0064、采样 MAE 0.025）→ 问题在学习效率/覆盖，非 pipeline |
 
 ## 1. 本轮落地（回应独立审计 P0/P1/P2）
 

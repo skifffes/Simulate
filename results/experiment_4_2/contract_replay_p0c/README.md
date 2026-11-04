@@ -17,6 +17,10 @@
 | `b90_contact_phase_direction.json` | 接触阶段的模型 vs 专家方向统计 |
 | `startup_supervision_audit.md` / `startup_supervision_audit.json` | Gate 3：90 条 episode 启动时序与监督可识别性 |
 | `root_cause_matrix.md` | 13 项候选根因的证据与置信度 |
+| `gate4_overfit.md` | **P1 过拟合 + P0 资产/整段诊断**：8 窗口可拟合（loss 0.0064、采样 MAE 0.025）、A/B 首行同标签、chunk 误差分解 |
+| `overfit_log.json` / `overfit_eval_chunk.json` | 过拟合曲线与采样后的整段误差 |
+| `expert_state_picks_v2.json` | B90 四阶段拆分 + 去重（30 唯一帧 / 10 窗口起点 / 3 episodes） |
+| `full_chunk_eval.json` | 16 步整段评价（anchor 均匀 0.06；increment 累积到 9.36 rad） |
 | `expert_state_diagnostic.md` | **专家状态离线诊断**：step901 在 31 个专家状态上首行动作 3–61× 过大、方向近随机 |
 | `ab_repr_training.md` | **Gate 4 A/B 训练对照**：anchor vs target_increment 各 300 updates，离线无可分差异 |
 | `contract_sweep.json` | 归一化往返 + 噪声传播 + 安全裁剪的契约测试 |

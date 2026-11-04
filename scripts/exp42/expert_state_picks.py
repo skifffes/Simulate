@@ -53,9 +53,17 @@ def pick(rows: list[dict], skill: str) -> list[dict]:
     add(first, 'contact_onset')
 
     if skill == 'B90':
-        push = [i for i in range(first, n) if wall[i]]
-        for i in np.linspace(0, len(push) - 1, 4).astype(int) if push else []:
-            add(push[int(i)], 'push')
+        # 审计要求把 B90 拆开：接触前接近 / 机器人接触后但未触墙的主动推动 / 首次触墙 / 触墙后稳定
+        robot_touch = [int(r['robot_block_contacts']) > 0 for r in rows]
+        pre_wall = [i for i in range(first, n) if robot_touch[i] and not wall[i]]
+        wall_idx = [i for i in range(first, n) if wall[i]]
+        for i in np.linspace(0, len(pre_wall) - 1, 3).astype(int) if pre_wall else []:
+            add(pre_wall[int(i)], 'push_pre_wall')
+        if wall_idx:
+            add(wall_idx[0], 'wall_onset')
+            hold = [i for i in wall_idx if i >= wall_idx[0] + 5]
+            for i in np.linspace(0, len(hold) - 1, 3).astype(int) if hold else []:
+                add(hold[int(i)], 'wall_hold')
     else:
         grasp = [i for i in range(first, n) if touch[i]]
         for i in np.linspace(0, len(grasp) - 1, 4).astype(int) if grasp else []:
@@ -91,10 +99,37 @@ def main(argv=None) -> int:
             print(f'{skill} ep{ep}: {len(picks)} picks '
                   f'({", ".join(sorted({p["phase"] for p in picks}))})')
 
+    add_selection_stats(result)
+    print('unique frames', result['stats']['n_unique_state_frames'],
+          'window-start', result['stats']['n_window_start_frames'],
+          'episodes', result['stats']['episodes_per_skill'])
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     print('wrote', args.out, 'items', len(result['items']))
     return 0
+
+
+def add_selection_stats(result):
+    seen = {}
+    for it in result['items']:
+        seen.setdefault((it['skill'], it['episode'], it['frame']), []).append(it['phase'])
+    uniq = []
+    for (skill, ep, frame), phases in seen.items():
+        uniq.append({'skill': skill, 'episode': ep, 'frame': frame,
+                     'phases': sorted(set(phases)),
+                     'is_window_start': frame % 4 == 0})
+    result['items'] = [it for it in result['items'] if it['phase'] ==
+                       seen[(it['skill'], it['episode'], it['frame'])][0]]
+    result['unique_frames'] = uniq
+    result['stats'] = {
+        'n_items': len(result['items']),
+        'n_unique_state_frames': len(uniq),
+        'n_window_start_frames': int(sum(1 for u in uniq if u['is_window_start'])),
+        'n_non_window_start_frames': int(sum(1 for u in uniq if not u['is_window_start'])),
+        'episodes_per_skill': {sk: sorted({u['episode'] for u in uniq if u['skill'] == sk})
+                                for sk in sorted({u['skill'] for u in uniq})},
+        'note': '一个 frame 只保留第一次命中的阶段；seed 只是同一状态上的采样重复，不是独立样本',
+    }
 
 
 if __name__ == '__main__':

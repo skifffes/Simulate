@@ -69,8 +69,13 @@
     },
     "normalization_counterfactual": "NOT STARTED (span premise refuted)"
   },
-  "n_files": 39,
+  "n_files": 51,
   "files": [
+    {
+      "path": "ab_repr_comparison.json",
+      "size_bytes": 5765,
+      "sha256": "2803c444d35a7a2d469a984019cc4c40e698f4e6170d2f18aea5fdb332c6aeac"
+    },
     {
       "path": "ab_repr_training.md",
       "size_bytes": 4577,
@@ -162,9 +167,34 @@
       "sha256": "f6fe313702ed5457f8feaa1e63309c24f2bb804eed09c26d8b33128a706f59f7"
     },
     {
+      "path": "expert_state_A.npz",
+      "size_bytes": 119039,
+      "sha256": "c7bb39552f991119d10a0d0bc2832860262e1041f97e75104ac8609e328355e6"
+    },
+    {
       "path": "expert_state_analysis.json",
       "size_bytes": 97604,
       "sha256": "e8d7e4d32c17544904d3ba26dfa609e1a6bd0a6fd5de1f7529a8397cf9078433"
+    },
+    {
+      "path": "expert_state_analysis_A.json",
+      "size_bytes": 97343,
+      "sha256": "102754c37afc193e25a1b65d950f80aaace34c4b1c19b1fb875cceae8cea9182"
+    },
+    {
+      "path": "expert_state_analysis_B.json",
+      "size_bytes": 97385,
+      "sha256": "9a187d630b19ee7f9eafcb21cb8482d7988cf79b46b60970e85e2846148db399"
+    },
+    {
+      "path": "expert_state_analysis_step901_v2.json",
+      "size_bytes": 94113,
+      "sha256": "24510f6b7fb4102e2e36b56a6cbdac6cba853ec9780329b7ab289f47732cc13d"
+    },
+    {
+      "path": "expert_state_B.npz",
+      "size_bytes": 119267,
+      "sha256": "aec04af26b054cc4df2e8d7029ae9872c72eb13d720ccc3bf96de08b2979847c"
     },
     {
       "path": "expert_state_diagnostic.md",
@@ -175,6 +205,16 @@
       "path": "expert_state_picks.json",
       "size_bytes": 5210,
       "sha256": "29e0cf4e60b82962fe03fd0d51671c803d108093fb630a63e522c744ca7c2a3c"
+    },
+    {
+      "path": "expert_state_picks_v2.json",
+      "size_bytes": 10228,
+      "sha256": "2932c220661242b4c66cb299b780dd595a9b68659579fb8dbb8b9a0da841e73b"
+    },
+    {
+      "path": "expert_state_step901_v2.npz",
+      "size_bytes": 133911,
+      "sha256": "f73ad446429a462f423bb5a77d4242bf436b1d6b2affc491d74eeca774e1a3df"
     },
     {
       "path": "expert_vs_adapter_trace.csv",
@@ -232,9 +272,29 @@
       "sha256": "e60407ce76c2e394ae55b242da11fab4f038199d81a19260a9b0dcae07fa0c25"
     },
     {
+      "path": "gate4_overfit.md",
+      "size_bytes": 6471,
+      "sha256": "81cfbb17aba0d8eef49d1fdd2585094c9658c980460f5965b57fa19486aa1a31"
+    },
+    {
       "path": "gate4_preflight.md",
       "size_bytes": 10179,
       "sha256": "1045992fb0ad250c05e98c5849669ebba3b247e5ea198abd5d108ead538cb0e9"
+    },
+    {
+      "path": "overfit_eval_chunk.json",
+      "size_bytes": 4634,
+      "sha256": "b787acf34cd0b2d27b7c79e3c200ef48c34d005541e2224c154cedde13f9b334"
+    },
+    {
+      "path": "overfit_log.json",
+      "size_bytes": 2339,
+      "sha256": "9dbd736de99504dfc28fdaa3c47a49970576ef4059f1238b2f83bfbe02b6bff6"
+    },
+    {
+      "path": "overfit_picks.json",
+      "size_bytes": 1345,
+      "sha256": "73003c58d90937e3138f4ac45c84a20e5af58bdd31daaa5977d2f8b3f0e2883b"
     },
     {
       "path": "p0_substep_analysis.md",
@@ -243,8 +303,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 4318,
-      "sha256": "c0da1587aa96f8c5910bc9672c1ac8d26afc32331367c9a105f63cbf3fe23021"
+      "size_bytes": 4800,
+      "sha256": "1fd65b00d53a811ec68bee9e5f4c11a305f4f93a92956aef9e2f51857b94e789"
     },
     {
       "path": "root_cause_matrix.md",
@@ -455,5 +515,71 @@
       }
     },
     "clipping": "increment hits safety clip at sigma=0.2 (7 values); anchor none"
+  },
+  "asset_check": {
+    "official_droid_md5": "2e8bc5547dc797f1df5f4e5401136082",
+    "A": true,
+    "B": true,
+    "step901": true,
+    "action_stats_len": 32,
+    "lora_merge": "51/51 tensors each"
+  },
+  "full_chunk_eval": {
+    "step901": {
+      "row0_mae": 0.0592,
+      "rows1_15_mae": 0.0625,
+      "phys_max_err_rad": 0.636
+    },
+    "A_300": {
+      "row0_mae": 0.1963,
+      "rows1_15_mae": 0.1466,
+      "phys_max_err_rad": 0.936
+    },
+    "B_300": {
+      "row0_mae": 0.1843,
+      "rows1_15_mae": 0.1558,
+      "phys_max_err_rad": 9.357
+    },
+    "note": "anchor error uniform across k; increment accumulates eps_j to 9.36 rad at k=15"
+  },
+  "overfit_probe": {
+    "n_windows": 8,
+    "steps": 150,
+    "label_mode": "anchor",
+    "lr_scale": 4.0,
+    "warmup_steps": 10,
+    "loss_1": 1.1643,
+    "loss_150": 0.00638,
+    "sampled_row0_mae_rad": 0.0246,
+    "sampled_phys_k0_err_rad": 0.053,
+    "sampled_phys_k15_err_rad": 0.396,
+    "verdict": "model can fit 8 windows; pipeline learns, so gap is data/coverage/budget"
+  },
+  "warmup_fact": {
+    "warmup_steps": 1000,
+    "peak_lr": 2.5e-05,
+    "note": "A/B 300-step runs ended at <=30% of peak LR; step901 is two-stage"
+  },
+  "picks_v2": {
+    "n_unique_frames": 30,
+    "n_window_start": 10,
+    "episodes": {
+      "A90": [
+        5
+      ],
+      "B90": [
+        0,
+        1
+      ]
+    },
+    "b90_phases": [
+      "approach",
+      "pre_contact",
+      "contact_onset",
+      "push_pre_wall",
+      "wall_onset",
+      "wall_hold"
+    ],
+    "caveat": "push_pre_wall samples are mostly steady (median |dq|=0); ep1 has 7 genuinely moving push ticks"
   }
 }
