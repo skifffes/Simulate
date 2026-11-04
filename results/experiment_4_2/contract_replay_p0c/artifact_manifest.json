@@ -69,7 +69,7 @@
     },
     "normalization_counterfactual": "NOT STARTED (span premise refuted)"
   },
-  "n_files": 56,
+  "n_files": 60,
   "files": [
     {
       "path": "ab_repr_comparison.json",
@@ -110,6 +110,11 @@
       "path": "contract_unit_tests.json",
       "size_bytes": 57,
       "sha256": "4b1e818a87610e2d12391bd949f3bc62267e534a358c700470226442f997a90c"
+    },
+    {
+      "path": "curve1200_rollout.md",
+      "size_bytes": 1939,
+      "sha256": "38bf461459717eed1ded46d98c8b44c6e24637ae77af94d04b979247bbaa6428"
     },
     {
       "path": "execution_contract_verification.md",
@@ -187,6 +192,11 @@
       "sha256": "9a187d630b19ee7f9eafcb21cb8482d7988cf79b46b60970e85e2846148db399"
     },
     {
+      "path": "expert_state_analysis_curve1200.json",
+      "size_bytes": 94312,
+      "sha256": "65ad25ea5e2b2cd3db4a3040375fd40bed22f7c7ae099c306bfcfb479c1098ac"
+    },
+    {
       "path": "expert_state_analysis_curve300.json",
       "size_bytes": 93851,
       "sha256": "3a9e30d2a4f5cffbd3ebf86c793620b93fa42608fd73080e036db1978c058a6b"
@@ -195,6 +205,11 @@
       "path": "expert_state_analysis_curve600.json",
       "size_bytes": 93866,
       "sha256": "fd7be0dc9fe0eb9afb753de5470ba9638ad68ac233d56b7627162b12da567a67"
+    },
+    {
+      "path": "expert_state_analysis_curve900.json",
+      "size_bytes": 94270,
+      "sha256": "743cfe3e001b8da7731c72d6d7f5c3fab59896ccbb7edaf2e4deea7f9e77d05a"
     },
     {
       "path": "expert_state_analysis_push_active.json",
@@ -210,6 +225,11 @@
       "path": "expert_state_B.npz",
       "size_bytes": 119267,
       "sha256": "aec04af26b054cc4df2e8d7029ae9872c72eb13d720ccc3bf96de08b2979847c"
+    },
+    {
+      "path": "expert_state_curve1200.npz",
+      "size_bytes": 131808,
+      "sha256": "4f3885bc06a6ce0267ff58b5b3f7f0b617060fd4eca2aad63247bc9f2e2e036d"
     },
     {
       "path": "expert_state_diagnostic.md",
@@ -273,8 +293,8 @@
     },
     {
       "path": "final_report.md",
-      "size_bytes": 7761,
-      "sha256": "bec117af4f87cfc94c53ccea1ffb4bdfea1c9adf1c3fc2f008afcced4af71224"
+      "size_bytes": 8165,
+      "sha256": "5a87fc419c0880b80a86c9f9f71bc9e89687b47ee2a1714c2cdba21c092fb923"
     },
     {
       "path": "gate4_contact_timeline_B90_ep00.json",
@@ -303,8 +323,8 @@
     },
     {
       "path": "learning_curve.md",
-      "size_bytes": 2862,
-      "sha256": "1bb40412675ef5490d37f1ed79488b7ef48209d3d2335fda2a857f2807edac56"
+      "size_bytes": 3557,
+      "sha256": "37896c68e97efb9111465632a71d0d1b39d1b8c91c25577f8cd9cb1b3372cfdd"
     },
     {
       "path": "overfit_eval_chunk.json",
@@ -328,8 +348,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 5117,
-      "sha256": "a0040a9d8896c2ca49b3c2f4f6ed0ddba638df1191e178ecf573934c9f2378a7"
+      "size_bytes": 5277,
+      "sha256": "9aa4f4462211a58c5a62767be14376d0a65dd3cb01827a7b7f29b7e500ad9fda"
     },
     {
       "path": "root_cause_matrix.md",
@@ -617,7 +637,9 @@
         "final_loss": 0.209,
         "B90_approach_absmax": 0.389,
         "B90_push_pre_wall_absmax": 0.522,
-        "B90_wall_hold_absmax": 0.523
+        "B90_wall_hold_absmax": 0.523,
+        "cos_approach": -0.19,
+        "cos_contact_onset": 0.18
       },
       {
         "updates": 600,
@@ -625,19 +647,32 @@
         "final_loss": 0.0475,
         "B90_approach_absmax": 0.236,
         "B90_push_pre_wall_absmax": 0.229,
-        "B90_wall_hold_absmax": 0.236
+        "B90_wall_hold_absmax": 0.236,
+        "cos_approach": -0.26,
+        "cos_contact_onset": 0.15
       },
       {
         "updates": 900,
         "epochs": 1.43,
-        "final_loss": 0.027,
-        "source": "step901 (two-stage)",
-        "B90_approach_absmax": 0.118,
-        "B90_push_pre_wall_absmax": 0.118,
-        "B90_wall_hold_absmax": 0.112
+        "final_loss": 0.0109,
+        "B90_approach_absmax": 0.077,
+        "B90_push_pre_wall_absmax": 0.073,
+        "B90_wall_hold_absmax": 0.066,
+        "cos_approach": 0.26,
+        "cos_contact_onset": 0.48
+      },
+      {
+        "updates": 1200,
+        "epochs": 1.9,
+        "final_loss": 0.0024,
+        "B90_approach_absmax": 0.059,
+        "B90_push_pre_wall_absmax": 0.06,
+        "B90_wall_hold_absmax": 0.039,
+        "cos_approach": 0.8,
+        "cos_contact_onset": 0.83
       }
     ],
-    "verdict": "magnitude decreases monotonically with training; direction remains near-random; 900 updates not converged"
+    "verdict": "training amount + LR phase dominate: magnitude monotone down, direction cosines jump only after crossing warmup (1000)"
   },
   "push_active": {
     "n_states": 8,
@@ -647,5 +682,23 @@
     "joint_cos": 0.181,
     "ee_cos": 0.382,
     "note": "genuine active push frames (robot contact, no wall, expert |dq|>0.01)"
+  },
+  "curve1200_rollout": {
+    "B90_ep0": {
+      "robot_block_contact_steps": 845,
+      "wall_contact_steps": 0,
+      "advance_x_m": 0.015,
+      "lateral_drift_m": 0.0089
+    },
+    "B90_ep1": {
+      "robot_block_contact_steps": 0,
+      "reason": "pushed_by_robot"
+    },
+    "A90": {
+      "n": 2,
+      "success": 0,
+      "robot_block_contact_steps": 0
+    },
+    "strict_success": "0/4"
   }
 }
