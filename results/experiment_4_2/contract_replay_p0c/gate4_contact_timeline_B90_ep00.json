@@ -1,0 +1,264 @@
+{
+  "source": "results/experiment_4_2/rollouts_p0_logged/B90_ep00_substeps.csv",
+  "n_substeps": 360,
+  "first_contact": {
+    "index": 78,
+    "tick": 9,
+    "k": 6,
+    "kind": "robot_block and/or block_wall (end-of-substep measurement)"
+  },
+  "first_policy_replan_after_first_contact": {
+    "index": 80,
+    "tick": 10,
+    "k": 0
+  },
+  "contact_bursts": [
+    {
+      "start_step": 78,
+      "end_step": 79,
+      "steps": 2,
+      "start_tick_k": [
+        9,
+        6
+      ],
+      "end_tick_k": [
+        9,
+        7
+      ]
+    },
+    {
+      "start_step": 104,
+      "end_step": 106,
+      "steps": 3,
+      "start_tick_k": [
+        13,
+        0
+      ],
+      "end_tick_k": [
+        13,
+        2
+      ]
+    },
+    {
+      "start_step": 108,
+      "end_step": 108,
+      "steps": 1,
+      "start_tick_k": [
+        13,
+        4
+      ],
+      "end_tick_k": [
+        13,
+        4
+      ]
+    },
+    {
+      "start_step": 111,
+      "end_step": 115,
+      "steps": 5,
+      "start_tick_k": [
+        13,
+        7
+      ],
+      "end_tick_k": [
+        14,
+        3
+      ]
+    },
+    {
+      "start_step": 118,
+      "end_step": 119,
+      "steps": 2,
+      "start_tick_k": [
+        14,
+        6
+      ],
+      "end_tick_k": [
+        14,
+        7
+      ]
+    },
+    {
+      "start_step": 122,
+      "end_step": 122,
+      "steps": 1,
+      "start_tick_k": [
+        15,
+        2
+      ],
+      "end_tick_k": [
+        15,
+        2
+      ]
+    },
+    {
+      "start_step": 125,
+      "end_step": 133,
+      "steps": 9,
+      "start_tick_k": [
+        15,
+        5
+      ],
+      "end_tick_k": [
+        16,
+        5
+      ]
+    },
+    {
+      "start_step": 139,
+      "end_step": 145,
+      "steps": 7,
+      "start_tick_k": [
+        17,
+        3
+      ],
+      "end_tick_k": [
+        18,
+        1
+      ]
+    },
+    {
+      "start_step": 147,
+      "end_step": 148,
+      "steps": 2,
+      "start_tick_k": [
+        18,
+        3
+      ],
+      "end_tick_k": [
+        18,
+        4
+      ]
+    },
+    {
+      "start_step": 152,
+      "end_step": 152,
+      "steps": 1,
+      "start_tick_k": [
+        19,
+        0
+      ],
+      "end_tick_k": [
+        19,
+        0
+      ]
+    },
+    {
+      "start_step": 157,
+      "end_step": 157,
+      "steps": 1,
+      "start_tick_k": [
+        19,
+        5
+      ],
+      "end_tick_k": [
+        19,
+        5
+      ]
+    },
+    {
+      "start_step": 168,
+      "end_step": 181,
+      "steps": 14,
+      "start_tick_k": [
+        21,
+        0
+      ],
+      "end_tick_k": [
+        22,
+        5
+      ]
+    },
+    {
+      "start_step": 185,
+      "end_step": 185,
+      "steps": 1,
+      "start_tick_k": [
+        23,
+        1
+      ],
+      "end_tick_k": [
+        23,
+        1
+      ]
+    },
+    {
+      "start_step": 218,
+      "end_step": 218,
+      "steps": 1,
+      "start_tick_k": [
+        27,
+        2
+      ],
+      "end_tick_k": [
+        27,
+        2
+      ]
+    },
+    {
+      "start_step": 239,
+      "end_step": 239,
+      "steps": 1,
+      "start_tick_k": [
+        29,
+        7
+      ],
+      "end_tick_k": [
+        29,
+        7
+      ]
+    }
+  ],
+  "n_contact_bursts": 15,
+  "n_contact_substeps": 51,
+  "contact_substeps_with_k_gt_zero": 44,
+  "substep_groups": {
+    "strictly_before_first_contact": {
+      "steps": 78,
+      "actual_ee_dx": 0.18688279390335083,
+      "actual_ee_dy": 0.04725140600784883,
+      "object_dx": -1.5710877043773053e-11,
+      "object_dy": -1.4591228225668829e-10,
+      "mean_abs_joint_command_step_rad": 0.026711362637362637,
+      "mean_abs_joint_actual_step_rad": 0.024256478021978015,
+      "max_joint_command_step_rad": 0.22469200000000006
+    },
+    "contact_flag_active_not_necessarily_contiguous": {
+      "steps": 51,
+      "actual_ee_dx": -0.07803896069526672,
+      "actual_ee_dy": 0.15926028043031693,
+      "object_dx": -0.00023203777350666588,
+      "object_dy": 0.04852986154231076,
+      "mean_abs_joint_command_step_rad": 0.033087109243697475,
+      "mean_abs_joint_actual_step_rad": 0.02923454341736695,
+      "max_joint_command_step_rad": 0.2015530000000001
+    },
+    "noncontact_after_first_contact": {
+      "steps": 231,
+      "actual_ee_dx": -0.3187805712223053,
+      "actual_ee_dy": 0.06175412982702255,
+      "object_dx": 0.014799368730375462,
+      "object_dy": 0.00390855776421703,
+      "mean_abs_joint_command_step_rad": 0.027739393939393935,
+      "mean_abs_joint_actual_step_rad": 0.024275299938157083,
+      "max_joint_command_step_rad": 0.22128900000000007
+    },
+    "all_steps_after_first_contact_tick": {
+      "steps": 280,
+      "actual_ee_dx": -0.37595927715301514,
+      "actual_ee_dy": 0.21711763739585876,
+      "object_dx": 0.014431151553833566,
+      "object_dy": 0.053924457342901244,
+      "mean_abs_joint_command_step_rad": 0.028628762755102042,
+      "mean_abs_joint_actual_step_rad": 0.025124019897959184,
+      "max_joint_command_step_rad": 0.22128900000000007
+    }
+  },
+  "important_limitations": [
+    "Contact is measured AFTER executing the substep; its action was planned at tick start.",
+    "The first policy chunk containing contact may have been generated before any contact.",
+    "Contact-flagged substeps need not be a contiguous temporal phase.",
+    "This file does not estimate command EE trajectory; FK(qtarget) per step is required.",
+    "Summing FK(qtarget_i)-FK(qbefore_i) is summing target errors, NOT EE command-path travel."
+  ]
+}

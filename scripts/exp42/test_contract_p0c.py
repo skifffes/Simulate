@@ -17,6 +17,9 @@ for p in (ROOT / 'src', ROOT):
 
 from exp40.action_adapter import (  # noqa: E402
     ActionAdapterConfig, adapt_action, chunk_to_targets, limit_joint_step)
+from exp41.training_export import (  # noqa: E402
+    build_anchor_horizon_arrays, build_observed_residual_arrays,
+    build_target_increment_arrays)
 
 FAILS: list[str] = []
 
@@ -101,9 +104,36 @@ def main() -> int:
     check('rate limit disabled by max_step<=0',
           (not hit3) and np.allclose(lim3, q_b) and abs(jump3 - 0.5) < 1e-12)
 
+    # 13) 三种动作表示：anchor/fixed 与 target_increment/recursive 都能精确重建专家命令，
+    #     observed_residual/recursive 不能（审计 gate4_review §三）
+    S = np.zeros((30, 9))
+    A = np.zeros((30, 8))
+    A[:, :7] = np.arange(30)[:, None] * 0.04
+    S[:, :7] = np.maximum(np.arange(30) - 1, 0)[:, None] * 0.025
+    A[:, 7] = 0.04
+    A[6:, 7] = 0.017
+    ref = A[0:16, :7]
+    q_anchor = S[0, :7]
+    anchor_labels = build_anchor_horizon_arrays(S, A, horizon=16, stride=4)['anchored']
+    inc_labels = build_target_increment_arrays(S, A, horizon=16, stride=4)['target_increment']
+    res_labels = build_observed_residual_arrays(S, A, horizon=16, stride=4)['observed_residual']
+    err_anchor = float(np.abs(q_anchor + anchor_labels[0, :, :7] - ref).max())
+    err_inc = float(np.abs(q_anchor + np.cumsum(inc_labels[0, :, :7], axis=0) - ref).max())
+    err_res = float(np.abs(q_anchor + np.cumsum(res_labels[0, :, :7], axis=0) - ref)[-1].max())
+    check('anchor/fixed reconstructs expert targets', err_anchor < 1e-12, f'{err_anchor:.1e}')
+    check('target_increment/recursive reconstructs expert targets', err_inc < 1e-12,
+          f'{err_inc:.1e}')
+    check('observed_residual/recursive does NOT reconstruct', err_res > 0.1, f'{err_res:.3f}')
+
+    # 14) 夹爪标签必须逐行取未来（审计 P1：g_action[t] 常数会破坏"接近→闭合→张开"窗口）
+    g_rows = anchor_labels[0, :, 7]
+    check('gripper labels use future row values',
+          abs(float(g_rows[0]) - 1.0) < 1e-9 and abs(float(g_rows[6]) - 0.425) < 1e-9,
+          f'row0={g_rows[0]:.3f} row6={g_rows[6]:.3f}')
+
     out = ROOT / 'results' / 'experiment_4_2' / 'contract_replay_p0c' / 'contract_unit_tests.json'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({'n_checks': 12, 'n_fail': len(FAILS), 'failures': FAILS},
+    out.write_text(json.dumps({'n_checks': 16, 'n_fail': len(FAILS), 'failures': FAILS},
                               ensure_ascii=False, indent=2), encoding='utf-8')
     print('\n' + ('all contract checks passed' if not FAILS else f'{len(FAILS)} failures'))
     return 0 if not FAILS else 1

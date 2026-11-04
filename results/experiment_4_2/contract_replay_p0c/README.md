@@ -17,6 +17,9 @@
 | `b90_contact_phase_direction.json` | 接触阶段的模型 vs 专家方向统计 |
 | `startup_supervision_audit.md` / `startup_supervision_audit.json` | Gate 3：90 条 episode 启动时序与监督可识别性 |
 | `root_cause_matrix.md` | 13 项候选根因的证据与置信度 |
+| `gate4_preflight.md` | **Gate 4 预检**：三种动作表示、接触时间线、命令路径口径修正、A/B 设计 |
+| `gate4_dataset_preflight.json` | 真实 train 上三种表示的重建误差与归一化跨度 |
+| `gate4_contact_timeline_B90_ep00/01.json` | 首次接触 / 首次接触后重推理 / 接触 burst 数 |
 | `p0_substep_analysis.md` | **P0 补强**：拒绝硬阻断 / 限速 / 逐子步日志 + 分阶段配对（接触期命令反转） |
 | `substep_fk_pairing.json` | 逐子步命令 EE / 实际 EE / 物体配对（按接触阶段切分） |
 | `action_contract_audit.json` | 真实训练标签（16 步锚点）逐 k 统计 + DROID 归一化跨度（17.5–76%） |

@@ -86,7 +86,8 @@ def build_scene(skill: str, rec: dict):
 
 def run_episode(skill: str, ep: int, mode: str, meta_row: dict, rec: dict,
                 out_rows: list[dict], initial: dict | None,
-                label_anchor: str = 'measured') -> dict:
+                label_anchor: str = 'measured',
+                label_mode: str = 'anchor') -> dict:
     import pybullet as p
 
     from exp40.action_adapter import ActionAdapterConfig, chunk_to_targets
@@ -121,11 +122,20 @@ def run_episode(skill: str, ep: int, mode: str, meta_row: dict, rec: dict,
                     n = int(min(HORIZON, T - t))
                     labels = np.zeros((n, 8), dtype=np.float64)
                     ref_q = q_before if label_anchor == 'measured' else S[t, :7]
-                    labels[:, :7] = A[t:t + n, :7] - ref_q[None, :]
+                    if label_mode == 'target_increment':
+                        # k=0: A[t]-ref；k>0: A[t+k]-A[t+k-1]；部署端用 recursive
+                        labels[0, :7] = A[t, :7] - ref_q
+                        if n > 1:
+                            labels[1:n, :7] = A[t + 1:t + n, :7] - A[t:t + n - 1, :7]
+                        anchor_mode = 'recursive'
+                    else:
+                        # anchor: A[t+k]-ref 全部相对锚点；部署端用 fixed
+                        labels[:, :7] = A[t:t + n, :7] - ref_q[None, :]
+                        anchor_mode = 'fixed' 
                     labels[:, 7] = np.clip(A[t:t + n, 7] / FINGER_MAX_M, 0, 1)
                     adapted_chunk = chunk_to_targets(labels, anchor_q, scene.sim.lower,
                                                      scene.sim.upper, cfg,
-                                                     anchor_reference='fixed')
+                                                     anchor_reference=anchor_mode)
                     for k in range(n):
                         teacher_err.append(float(np.abs(adapted_chunk[k].q_target
                                                         - A[t + k, :7]).max()))
@@ -189,6 +199,7 @@ def run_episode(skill: str, ep: int, mode: str, meta_row: dict, rec: dict,
     ee_y = np.array([r['ee_y'] for r in rows])
     return {
         'skill': skill, 'episode': ep, 'mode': mode, 'label_anchor': label_anchor,
+        'label_mode': label_mode,
         'ticks': len(rows),
         'adapter_target_vs_expert_max_err_rad': (max(teacher_err) if teacher_err else None),
         'final_q_vs_expert_state_max_err_rad': rows[-1]['q_vs_expert_state_err'],
@@ -208,6 +219,10 @@ def main(argv=None) -> int:
     ap.add_argument('--skill', choices=['A90', 'B90'], required=True)
     ap.add_argument('--episodes', required=True, help='逗号分隔的数据集 episode 索引（train split）')
     ap.add_argument('--modes', default='expert,adapter')
+    ap.add_argument('--label-mode', choices=['anchor', 'target_increment'],
+                    default='anchor',
+                    help='anchor=固定锚点(fixed)；target_increment=目标增量(recursive)，'
+                         '两者都能精确重建专家命令序列')
     ap.add_argument('--label-anchor', choices=['recorded', 'measured'], default='measured',
                     help='recorded=训练标签的锚点（复现训练语义）；'
                          'measured=用实测 q 重算标签（检验执行链路能否自纠正）')
@@ -238,7 +253,8 @@ def main(argv=None) -> int:
         for mode in modes:
             print(f'[{args.skill} ep{ep}] replay {mode} ...', flush=True)
             res = run_episode(args.skill, ep, mode, row, rec, rows, initial,
-                              label_anchor=args.label_anchor)
+                              label_anchor=args.label_anchor,
+                              label_mode=args.label_mode)
             summaries.append(res)
             print(f"  -> success={res['strict_success']} reason={res['failure_reason']} "
                   f"q_err={res['final_q_vs_expert_state_max_err_rad']:.4f} "

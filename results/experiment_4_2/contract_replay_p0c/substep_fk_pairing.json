@@ -1,166 +1,317 @@
 {
   "dir": "results/experiment_4_2/rollouts_p0_logged",
+  "definitions": {
+    "target_error": "FK(q_target_i) - FK(q_before_i)（目标偏差，不是命令路径）",
+    "command_path_delta": "FK(q_target_i) - FK(q_target_{i-1})（相邻命令之间的路径）",
+    "realized_path_delta": "FK(q_after_i) - FK(q_before_i)（实际执行路径）",
+    "stratification": "chunk 生成时机（planned_after_first_contact）× 执行时是否有接触"
+  },
   "files": [
     {
       "file": "A90_ep00_substeps.csv",
       "n_substeps": 360,
-      "phases": {
-        "pre_contact": {
-          "n": 90,
-          "cmd_sum_dx": 0.27043411135673523,
-          "cmd_sum_dy": -0.09742753512323077,
-          "act_sum_dx": 0.1682089865207672,
-          "act_sum_dy": -0.09060992430526937,
-          "obj_sum_dx": -1.8935730761171499e-10,
-          "obj_sum_dy": 2.036877784494795e-11,
-          "cmd_frac_positive_x": 0.6,
-          "act_frac_positive_x": 0.5777777777777777,
-          "cos_cmd_vs_act": 0.9770908715504001,
-          "mean_q_track_err": 0.015531760160665946,
-          "max_cmd_jump_rad": 0.25,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+      "first_contact": {
+        "index": 90,
+        "tick": 11,
+        "k": 2,
+        "note": "接触在执行子步之后测量；该 chunk 的生成时刻可能早于接触"
+      },
+      "n_contact_substeps": 9,
+      "n_contact_bursts": 6,
+      "groups": {
+        "planned_before_free": {
+          "n": 95,
+          "target_error_sum": [
+            0.3052227199077606,
+            -0.10389444885328203
+          ],
+          "target_error_abs_mean": 0.011494480124845328,
+          "command_path_sum": [
+            0.13613399863243103,
+            -0.11080880069530963
+          ],
+          "command_path_abs_mean": 0.011602217928193537,
+          "command_path_frac_positive_x": 0.5684210526315789,
+          "realized_path_sum": [
+            0.18392789363861084,
+            -0.09326772439777642
+          ],
+          "realized_path_abs_mean": 0.010088813334236816,
+          "object_sum": [
+            -0.0016764093237330302,
+            0.0003372284424437589
+          ],
+          "n_rate_limited": 0
         },
-        "contact": {
-          "n": 9,
-          "cmd_sum_dx": -0.042215704917907715,
-          "cmd_sum_dy": 0.03274649195373058,
-          "act_sum_dx": 0.002562105655670166,
-          "act_sum_dy": 0.025319699198007584,
-          "obj_sum_dx": 0.008313572277395487,
-          "obj_sum_dy": 0.001244564118850825,
-          "cmd_frac_positive_x": 0.3333333333333333,
-          "act_frac_positive_x": 0.4444444444444444,
-          "cos_cmd_vs_act": 0.7260237447789989,
-          "mean_q_track_err": 0.06562417885107216,
-          "max_cmd_jump_rad": 0.09661900051730887,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+        "planned_before_contact": {
+          "n": 1,
+          "target_error_sum": [
+            0.026286542415618896,
+            0.03263845667243004
+          ],
+          "target_error_abs_mean": 0.029462499544024467,
+          "command_path_sum": [
+            0.028900146484375,
+            0.03856629505753517
+          ],
+          "command_path_abs_mean": 0.033733220770955086,
+          "command_path_frac_positive_x": 1.0,
+          "realized_path_sum": [
+            -0.010278046131134033,
+            0.026477020233869553
+          ],
+          "realized_path_abs_mean": 0.018377533182501793,
+          "object_sum": [
+            0.0006578104323629042,
+            -9.234489292379421e-05
+          ],
+          "n_rate_limited": 0
         },
-        "post_contact": {
-          "n": 261,
-          "cmd_sum_dx": 0.8598173260688782,
-          "cmd_sum_dy": 0.3049287110188743,
-          "act_sum_dx": -0.09951919317245483,
-          "act_sum_dy": 0.3283970318734646,
-          "obj_sum_dx": -0.015135531732150542,
-          "obj_sum_dy": -0.004580295995152534,
-          "cmd_frac_positive_x": 0.578544061302682,
-          "act_frac_positive_x": 0.4942528735632184,
-          "cos_cmd_vs_act": 0.9219771465708099,
-          "mean_q_track_err": 0.028355978396566395,
-          "max_cmd_jump_rad": 0.2081767777587175,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+        "planned_after_free": {
+          "n": 256,
+          "target_error_sum": [
+            0.8295708298683167,
+            0.31080560144619085
+          ],
+          "target_error_abs_mean": 0.012873476646234394,
+          "command_path_sum": [
+            -0.0878075659275055,
+            0.3362974935444072
+          ],
+          "command_path_abs_mean": 0.013368275829634513,
+          "command_path_frac_positive_x": 0.53515625,
+          "realized_path_sum": [
+            -0.11454474925994873,
+            0.3296887678006897
+          ],
+          "realized_path_abs_mean": 0.01060202334943483,
+          "object_sum": [
+            -0.01345912259777482,
+            -0.004917524417227515
+          ],
+          "n_rate_limited": 0
+        },
+        "planned_after_contact": {
+          "n": 8,
+          "target_error_sum": [
+            -0.0655292272567749,
+            -0.00034807249903678894
+          ],
+          "target_error_abs_mean": 0.01817147363908589,
+          "command_path_sum": [
+            -0.00493091344833374,
+            0.00016016513109207153
+          ],
+          "command_path_abs_mean": 0.016632184851914644,
+          "command_path_frac_positive_x": 0.375,
+          "realized_path_sum": [
+            0.01289510726928711,
+            0.0009720921516418457
+          ],
+          "realized_path_abs_mean": 0.00962640717625618,
+          "object_sum": [
+            0.007655761845032583,
+            0.0013369090117746193
+          ],
+          "n_rate_limited": 0
         }
       }
     },
     {
       "file": "B90_ep00_substeps.csv",
       "n_substeps": 360,
-      "phases": {
-        "pre_contact": {
+      "first_contact": {
+        "index": 78,
+        "tick": 9,
+        "k": 6,
+        "note": "接触在执行子步之后测量；该 chunk 的生成时刻可能早于接触"
+      },
+      "n_contact_substeps": 51,
+      "n_contact_bursts": 15,
+      "groups": {
+        "planned_before_free": {
           "n": 78,
-          "cmd_sum_dx": 0.3159293532371521,
-          "cmd_sum_dy": 0.06161580106204667,
-          "act_sum_dx": 0.18688282370567322,
-          "act_sum_dy": 0.04725104812901293,
-          "obj_sum_dx": -1.5710877043773053e-11,
-          "obj_sum_dy": -1.4591228225668829e-10,
-          "cmd_frac_positive_x": 0.6153846153846154,
-          "act_frac_positive_x": 0.5769230769230769,
-          "cos_cmd_vs_act": 0.9530939977018298,
-          "mean_q_track_err": 0.015090369565196148,
-          "max_cmd_jump_rad": 0.22487863197481628,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+          "target_error_sum": [
+            0.31490159034729004,
+            0.060195575960477754
+          ],
+          "target_error_abs_mean": 0.010913918563901804,
+          "command_path_sum": [
+            0.18585219979286194,
+            0.04736608991588298
+          ],
+          "command_path_abs_mean": 0.011084958293877888,
+          "command_path_frac_positive_x": 0.5897435897435898,
+          "realized_path_sum": [
+            0.18580320477485657,
+            0.04658337486418418
+          ],
+          "realized_path_abs_mean": 0.009242325282522793,
+          "object_sum": [
+            -1.5710877043773053e-11,
+            -1.4591228225668829e-10
+          ],
+          "n_rate_limited": 0
         },
-        "contact": {
-          "n": 51,
-          "cmd_sum_dx": -0.3432697355747223,
-          "cmd_sum_dy": 0.19431748241186142,
-          "act_sum_dx": -0.07803797721862793,
-          "act_sum_dy": 0.15926093608140945,
-          "obj_sum_dx": -0.00023203777350666588,
-          "obj_sum_dy": 0.04852986154231076,
-          "cmd_frac_positive_x": 0.37254901960784315,
-          "act_frac_positive_x": 0.43137254901960786,
-          "cos_cmd_vs_act": 0.8350270168612388,
-          "mean_q_track_err": 0.04923069000661813,
-          "max_cmd_jump_rad": 0.20196174321651483,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+        "planned_before_contact": {
+          "n": 2,
+          "target_error_sum": [
+            -0.032900989055633545,
+            0.0010855086147785187
+          ],
+          "target_error_abs_mean": 0.01268236618489027,
+          "command_path_sum": [
+            -0.02226334810256958,
+            -0.0004469454288482666
+          ],
+          "command_path_abs_mean": 0.014890216290950775,
+          "command_path_frac_positive_x": 0.5,
+          "realized_path_sum": [
+            -0.02070784568786621,
+            0.004029184579849243
+          ],
+          "realized_path_abs_mean": 0.008828112855553627,
+          "object_sum": [
+            0.00013617940303523035,
+            -0.0014860380363734549
+          ],
+          "n_rate_limited": 0
         },
-        "post_contact": {
+        "planned_after_free": {
           "n": 231,
-          "cmd_sum_dx": 0.39020389318466187,
-          "cmd_sum_dy": 0.2905503520742059,
-          "act_sum_dx": -0.31878168880939484,
-          "act_sum_dy": 0.06175357475876808,
-          "obj_sum_dx": 0.014799368730375462,
-          "obj_sum_dy": 0.00390855776421703,
-          "cmd_frac_positive_x": 0.5367965367965368,
-          "act_frac_positive_x": 0.4675324675324675,
-          "cos_cmd_vs_act": 0.9075738742496806,
-          "mean_q_track_err": 0.02210180913427073,
-          "max_cmd_jump_rad": 0.22008706764519215,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+          "target_error_sum": [
+            0.3971705138683319,
+            0.28882746770977974
+          ],
+          "target_error_abs_mean": 0.012955178236548518,
+          "command_path_sum": [
+            -0.29422062635421753,
+            0.0337260365486145
+          ],
+          "command_path_abs_mean": 0.013311886401984083,
+          "command_path_frac_positive_x": 0.48917748917748916,
+          "realized_path_sum": [
+            -0.3171459287405014,
+            0.060050928965210915
+          ],
+          "realized_path_abs_mean": 0.010791042122135172,
+          "object_sum": [
+            0.014799368730375462,
+            0.00390855776421703
+          ],
+          "n_rate_limited": 0
+        },
+        "planned_after_contact": {
+          "n": 49,
+          "target_error_sum": [
+            -0.299509197473526,
+            0.2045622393488884
+          ],
+          "target_error_abs_mean": 0.015548655345123641,
+          "command_path_sum": [
+            -0.07784074544906616,
+            0.19111140444874763
+          ],
+          "command_path_abs_mean": 0.017170820803362494,
+          "command_path_frac_positive_x": 0.46938775510204084,
+          "realized_path_sum": [
+            -0.05654078722000122,
+            0.15663626790046692
+          ],
+          "realized_path_abs_mean": 0.008051981579284278,
+          "object_sum": [
+            -0.00036821717654189623,
+            0.050015899578684214
+          ],
+          "n_rate_limited": 0
         }
       }
     },
     {
       "file": "B90_ep01_substeps.csv",
       "n_substeps": 320,
-      "phases": {
-        "pre_contact": {
-          "n": 201,
-          "cmd_sum_dx": 0.6640650928020477,
-          "cmd_sum_dy": 0.42669365279512306,
-          "act_sum_dx": 0.15153595805168152,
-          "act_sum_dy": 0.27257095147292887,
-          "obj_sum_dx": -1.4145314919389307e-09,
-          "obj_sum_dy": -1.076816816270032e-08,
-          "cmd_frac_positive_x": 0.6019900497512438,
-          "act_frac_positive_x": 0.5572139303482587,
-          "cos_cmd_vs_act": 0.9551155447492345,
-          "mean_q_track_err": 0.029433840218544637,
-          "max_cmd_jump_rad": 0.18298319627308846,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+      "first_contact": {
+        "index": 201,
+        "tick": 25,
+        "k": 1,
+        "note": "接触在执行子步之后测量；该 chunk 的生成时刻可能早于接触"
+      },
+      "n_contact_substeps": 2,
+      "n_contact_bursts": 1,
+      "groups": {
+        "planned_before_free": {
+          "n": 206,
+          "target_error_sum": [
+            0.6552939713001251,
+            0.44239449190899904
+          ],
+          "target_error_abs_mean": 0.012239423397751982,
+          "command_path_sum": [
+            0.14195379614830017,
+            0.28853122325323
+          ],
+          "command_path_abs_mean": 0.012387001587306,
+          "command_path_frac_positive_x": 0.5679611650485437,
+          "realized_path_sum": [
+            0.14097294211387634,
+            0.2848971410840022
+          ],
+          "realized_path_abs_mean": 0.010451275007437413,
+          "object_sum": [
+            -3.041809241166593e-05,
+            -0.0003372678869054402
+          ],
+          "n_rate_limited": 0
         },
-        "contact": {
+        "planned_before_contact": {
           "n": 2,
-          "cmd_sum_dx": 0.00016295909881591797,
-          "cmd_sum_dy": -0.0133991539478302,
-          "act_sum_dx": 0.005654335021972656,
-          "act_sum_dy": -0.009388744831085205,
-          "obj_sum_dx": -0.0010951956365116144,
-          "obj_sum_dy": -0.00012765998306554782,
-          "cmd_frac_positive_x": 0.5,
-          "act_frac_positive_x": 1.0,
-          "cos_cmd_vs_act": 0.700711580644287,
-          "mean_q_track_err": 0.0251163597442855,
-          "max_cmd_jump_rad": 0.07190899461865441,
-          "n_rate_limited": 0,
-          "n_rejected": 0
+          "target_error_sum": [
+            -0.001509249210357666,
+            -0.012890428304672241
+          ],
+          "target_error_abs_mean": 0.008238457143306732,
+          "command_path_sum": [
+            -0.0010966062545776367,
+            -0.012021303176879883
+          ],
+          "command_path_abs_mean": 0.01014554500579834,
+          "command_path_frac_positive_x": 0.5,
+          "realized_path_sum": [
+            0.0037375688552856445,
+            -0.00915825366973877
+          ],
+          "realized_path_abs_mean": 0.007087871432304382,
+          "object_sum": [
+            -0.0010951956365116144,
+            -0.00012765998306554782
+          ],
+          "n_rate_limited": 0
         },
-        "post_contact": {
-          "n": 117,
-          "cmd_sum_dx": -0.7133550643920898,
-          "cmd_sum_dy": 0.11296239495277405,
-          "act_sum_dx": -0.16272813081741333,
-          "act_sum_dy": 0.38461554050445557,
-          "obj_sum_dx": -2.819409344201329e-05,
-          "obj_sum_dy": -0.0003398776241410051,
-          "cmd_frac_positive_x": 0.37606837606837606,
-          "act_frac_positive_x": 0.4444444444444444,
-          "cos_cmd_vs_act": 0.6608892340542161,
-          "mean_q_track_err": 0.03933363223118294,
-          "max_cmd_jump_rad": 0.154287233506322,
-          "n_rate_limited": 0,
-          "n_rejected": 0
-        }
+        "planned_after_free": {
+          "n": 112,
+          "target_error_sum": [
+            -0.683051735162735,
+            0.1312899887561798
+          ],
+          "target_error_abs_mean": 0.01223917305469513,
+          "command_path_sum": [
+            -0.14093151688575745,
+            0.37594854831695557
+          ],
+          "command_path_abs_mean": 0.012338726515216487,
+          "command_path_frac_positive_x": 0.45535714285714285,
+          "realized_path_sum": [
+            -0.14910617470741272,
+            0.37243756651878357
+          ],
+          "realized_path_abs_mean": 0.00670989283493587,
+          "object_sum": [
+            2.222584438160702e-06,
+            -2.620505403727602e-06
+          ],
+          "n_rate_limited": 0
+        },
+        "planned_after_contact": null
       }
     }
   ]

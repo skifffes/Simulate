@@ -1,9 +1,18 @@
-"""P0：逐执行子步配对（命令 EE vs 实际 EE vs 物体），并按阶段切开。
+"""P0（修订版，回应 gate4_review_0e7bb26.md 的两处 P0）：
 
-输入：`eval_rollouts.py` 生成的 `*_substeps.csv`（每 tick 前 `execute_k` 行）。
-输出：`substep_fk_pairing.json` —— 每个阶段（接触前 / 接触中 / 接触后）的
-      命令 EE 位移（FK(q_target) − FK(q_before)）、实际 EE 位移（FK(q_after) − FK(q_before)）、
-      物体位移、方向余弦、限速/拒绝计数。
+原版把 `FK(q_target_i) − FK(q_before_i)` 求和当作"命令轨迹位移"，这是**目标偏差**（target error），
+不是命令路径；接触标记又是"子步执行之后"测的，与生成该 chunk 的时刻不同。
+本版并列报告三种量，并按「chunk 生成时机 × 执行时接触」做 2×2 分层：
+
+  target_error_i        = FK(q_target_i) − FK(q_before_i)      目标相对当前实际末端的偏差
+  command_path_delta_i  = FK(q_target_i) − FK(q_target_{i-1})  相邻命令目标之间的路径（跨 chunk 连续）
+  realized_path_delta_i = FK(q_after_i) − FK(q_before_i)       实际执行的路径
+
+分层：
+  planned_before_contact × contact_now     接近阶段（开环、尚未接触）
+  planned_before_contact × contact_now=1   **chunk 生成时还没接触，执行中才接触**（开环无法反应）
+  planned_after_contact  × contact_now=0   接触后重新推理、但本步没接触
+  planned_after_contact  × contact_now=1   接触后重新推理、本步接触（模型看到过接触状态）
 
 用法（simulate venv）：
   python scripts/exp42/substep_fk_pairing.py --dir results/experiment_4_2/rollouts_p0_logged
@@ -39,91 +48,95 @@ def main(argv=None) -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
-    scene = scene41.Scene41('B90', obj_pos=(0.55, 0.21, 0.0201), obj_yaw=np.pi / 2,
-                            robot_q=None)
+    scene = scene41.Scene41('B90', obj_pos=(0.55, 0.21, 0.0201), obj_yaw=np.pi / 2, robot_q=None)
     sim = scene.sim
 
     def fk(q):
-        for j in range(7):
-            sim.command(np.asarray(q[:7], dtype=float))
-        for j in range(7):
-            import pybullet as p
+        import pybullet as p
 
+        for j in range(7):
             p.resetJointState(sim.robot, j, float(q[j]), physicsClientId=sim.client)
+        for _ in range(1):
+            sim.step()
         pos, _ = sim.pose()
         return np.asarray(pos, dtype=float)
 
-    res = {'dir': str(d), 'files': []}
+    res = {'dir': str(d), 'definitions': {
+        'target_error': 'FK(q_target_i) - FK(q_before_i)（目标偏差，不是命令路径）',
+        'command_path_delta': 'FK(q_target_i) - FK(q_target_{i-1})（相邻命令之间的路径）',
+        'realized_path_delta': 'FK(q_after_i) - FK(q_before_i)（实际执行路径）',
+        'stratification': 'chunk 生成时机（planned_after_first_contact）× 执行时是否有接触',
+    }, 'files': []}
     try:
         for f in sorted(d.glob('*_substeps.csv')):
             rows = list(csv.DictReader(open(f, encoding='utf-8')))
             if not rows:
                 continue
+            touches = [int(float(r['robot_block_contacts'])) > 0
+                       or int(float(r['block_wall_contacts'])) > 0 for r in rows]
+            first_idx = next((i for i, v in enumerate(touches) if v), None)
+            first_tick = int(rows[first_idx]['tick']) if first_idx is not None else None
+
             rec = []
-            seen_contact = False
-            contact_ended = False
-            for r in rows:
-                qb = vec(r['q_before'])
-                qt = vec(r['q_target'])
-                qa = vec(r['q_after'])
-                ee_b = fk(qb)
-                ee_c = fk(qt)
-                ee_a = fk(qa)
-                touch = (r['robot_block_contacts'] not in ('0', '')) or \
-                        (r['block_wall_contacts'] not in ('0', ''))
-                if touch:
-                    seen_contact = True
-                elif seen_contact:
-                    contact_ended = True
-                phase = 'contact' if touch else ('post_contact' if contact_ended else 'pre_contact')
+            prev_target = vec(rows[0]['q_before'])   # 第一个子步之前没有更早的命令目标
+            for i, r in enumerate(rows):
+                qb, qt, qa = vec(r['q_before']), vec(r['q_target']), vec(r['q_after'])
+                ee_b, ee_t, ee_a = fk(qb), fk(qt), fk(qa)
+                ee_prev = fk(prev_target)
+                tick = int(r['tick'])
+                touch = touches[i]
+                planned_after = first_tick is not None and tick > first_tick
+                group = ('planned_after' if planned_after else 'planned_before') + \
+                        ('_contact' if touch else '_free')
                 rec.append({
-                    'tick': int(r['tick']), 'k': int(r['k']), 'phase': phase,
-                    'accepted': r['accepted'] == 'True',
+                    'tick': tick, 'k': int(r['k']), 'group': group, 'contact': touch,
                     'rate_limited': r['rate_limited'] == 'True',
-                    'cmd_jump_rad': float(r['cmd_jump_rad']),
-                    'q_track_err': float(r['q_track_err']),
-                    'cmd_dx': float(ee_c[0] - ee_b[0]), 'cmd_dy': float(ee_c[1] - ee_b[1]),
-                    'cmd_dz': float(ee_c[2] - ee_b[2]),
-                    'act_dx': float(ee_a[0] - ee_b[0]), 'act_dy': float(ee_a[1] - ee_b[1]),
-                    'act_dz': float(ee_a[2] - ee_b[2]),
-                    'obj_dx': float(r['obj_dx']), 'obj_dy': float(r['obj_dy']),
-                    'contacts': r['robot_block_contacts'],
+                    'target_err': (ee_t - ee_b)[:2].tolist(),
+                    'cmd_path': (ee_t - ee_prev)[:2].tolist(),
+                    'real_path': (ee_a - ee_b)[:2].tolist(),
+                    'obj_d': [float(r['obj_dx']), float(r['obj_dy'])],
                 })
+                prev_target = qt
 
             def agg(sel):
                 if not sel:
                     return None
-                cmd = np.array([[x['cmd_dx'], x['cmd_dy']] for x in sel])
-                act = np.array([[x['act_dx'], x['act_dy']] for x in sel])
-                obj = np.array([[x['obj_dx'], x['obj_dy']] for x in sel])
-                def unit(v):
-                    n = np.linalg.norm(v)
-                    return v / n if n > 1e-12 else v
-                cos_ca = float(np.mean([unit(c) @ unit(a) if np.linalg.norm(c) > 1e-9
-                                        and np.linalg.norm(a) > 1e-9 else np.nan
-                                        for c, a in zip(cmd, act)]))
-                return {
-                    'n': len(sel),
-                    'cmd_sum_dx': float(cmd[:, 0].sum()), 'cmd_sum_dy': float(cmd[:, 1].sum()),
-                    'act_sum_dx': float(act[:, 0].sum()), 'act_sum_dy': float(act[:, 1].sum()),
-                    'obj_sum_dx': float(obj[:, 0].sum()), 'obj_sum_dy': float(obj[:, 1].sum()),
-                    'cmd_frac_positive_x': float((cmd[:, 0] > 0).mean()),
-                    'act_frac_positive_x': float((act[:, 0] > 0).mean()),
-                    'cos_cmd_vs_act': cos_ca,
-                    'mean_q_track_err': float(np.mean([x['q_track_err'] for x in sel])),
-                    'max_cmd_jump_rad': float(max(x['cmd_jump_rad'] for x in sel)),
-                    'n_rate_limited': int(sum(1 for x in sel if x['rate_limited'])),
-                    'n_rejected': int(sum(1 for x in sel if not x['accepted'])),
-                }
-            phases = {ph: agg([x for x in rec if x['phase'] == ph])
-                      for ph in ('pre_contact', 'contact', 'post_contact')}
-            res['files'].append({'file': f.name, 'n_substeps': len(rec), 'phases': phases})
-            print(f'{f.name}: ' + ' | '.join(
-                f"{ph}: n={phases[ph]['n']} cmd=({phases[ph]['cmd_sum_dx']:+.3f},"
-                f"{phases[ph]['cmd_sum_dy']:+.3f}) act=({phases[ph]['act_sum_dx']:+.3f},"
-                f"{phases[ph]['act_sum_dy']:+.3f}) obj=({phases[ph]['obj_sum_dx']:+.3f},"
-                f"{phases[ph]['obj_sum_dy']:+.3f})" if phases[ph] else f'{ph}: n=0'
-                for ph in ('pre_contact', 'contact')))
+                te = np.array([x['target_err'] for x in sel])
+                cp = np.array([x['cmd_path'] for x in sel])
+                rp = np.array([x['real_path'] for x in sel])
+                ob = np.array([x['obj_d'] for x in sel])
+
+                def d(v, axis=0):
+                    return [float(v[:, 0].sum()), float(v[:, 1].sum())]
+                return {'n': len(sel),
+                        'target_error_sum': d(te), 'target_error_abs_mean': float(np.abs(te).mean()),
+                        'command_path_sum': d(cp), 'command_path_abs_mean': float(np.abs(cp).mean()),
+                        'command_path_frac_positive_x': float((cp[:, 0] > 0).mean()),
+                        'realized_path_sum': d(rp), 'realized_path_abs_mean': float(np.abs(rp).mean()),
+                        'object_sum': d(ob),
+                        'n_rate_limited': int(sum(1 for x in sel if x['rate_limited']))}
+
+            groups = {g: agg([x for x in rec if x['group'] == g])
+                      for g in ('planned_before_free', 'planned_before_contact',
+                                'planned_after_free', 'planned_after_contact')}
+            res['files'].append({
+                'file': f.name, 'n_substeps': len(rec),
+                'first_contact': None if first_idx is None else {
+                    'index': first_idx, 'tick': first_tick, 'k': int(rows[first_idx]['k']),
+                    'note': '接触在执行子步之后测量；该 chunk 的生成时刻可能早于接触'},
+                'n_contact_substeps': int(sum(touches)),
+                'n_contact_bursts': int(sum(1 for i in range(len(touches))
+                                            if touches[i] and (i == 0 or not touches[i - 1]))),
+                'groups': groups,
+            })
+            print(f.name)
+            for g, v in groups.items():
+                if v:
+                    print(f"  {g:24s} n={v['n']:4d} "
+                          f"cmd_path=({v['command_path_sum'][0]:+.3f},{v['command_path_sum'][1]:+.3f}) "
+                          f"real=({v['realized_path_sum'][0]:+.3f},{v['realized_path_sum'][1]:+.3f}) "
+                          f"obj=({v['object_sum'][0]:+.3f},{v['object_sum'][1]:+.3f}) "
+                          f"frac+x={v['command_path_frac_positive_x']:.2f}")
     finally:
         scene.close()
 

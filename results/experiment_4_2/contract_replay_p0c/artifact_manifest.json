@@ -69,7 +69,7 @@
     },
     "normalization_counterfactual": "NOT STARTED (span premise refuted)"
   },
-  "n_files": 24,
+  "n_files": 34,
   "files": [
     {
       "path": "action_contract_audit.json",
@@ -94,7 +94,7 @@
     {
       "path": "contract_unit_tests.json",
       "size_bytes": 57,
-      "sha256": "d8eb199b2568bc0d68159f6de2be6a33e7576e304b81c1770f3070fd7a4ee67b"
+      "sha256": "4b1e818a87610e2d12391bd949f3bc62267e534a358c700470226442f997a90c"
     },
     {
       "path": "execution_contract_verification.md",
@@ -112,6 +112,11 @@
       "sha256": "8e3d054279754c2dfa5a709b748abe3499c5ca09a72b1e5f39bb97454e5d1368"
     },
     {
+      "path": "expert_replay_results_A90_anchor.json",
+      "size_bytes": 4342,
+      "sha256": "da30a0a5d632fe318808649282c298fa2b43cb276a8dc6b9a70bc79ad277afb2"
+    },
+    {
       "path": "expert_replay_results_A90_measured.json",
       "size_bytes": 4230,
       "sha256": "15a3773102289c94c3a909a3928bfe421c8a0efa5fa3779748a9f2dd4311dc54"
@@ -120,6 +125,16 @@
       "path": "expert_replay_results_A90_recorded.json",
       "size_bytes": 4230,
       "sha256": "b4ece00a4c610b06ede66cc07e5b1cad34c9302b1f6a82f0bdcc1ab1ea958552"
+    },
+    {
+      "path": "expert_replay_results_A90_target_increment.json",
+      "size_bytes": 4364,
+      "sha256": "8bc364a60e9f159d83f6e17150a32b0edf6bbb7c86a3360312fca9ccd57043c0"
+    },
+    {
+      "path": "expert_replay_results_B90_anchor.json",
+      "size_bytes": 4372,
+      "sha256": "ec8f5f3bab1c4ac947fed9a039155d73488a8d2735b00ea30b7f838c613c9da6"
     },
     {
       "path": "expert_replay_results_B90_measured.json",
@@ -132,9 +147,19 @@
       "sha256": "73d03dc7f7f7657e303516471fed1c0cf2a9dd39b12a5a34498485b144d74f89"
     },
     {
+      "path": "expert_replay_results_B90_target_increment.json",
+      "size_bytes": 4374,
+      "sha256": "f6fe313702ed5457f8feaa1e63309c24f2bb804eed09c26d8b33128a706f59f7"
+    },
+    {
       "path": "expert_vs_adapter_trace.csv",
       "size_bytes": 1756869,
       "sha256": "d1f0a9c28e3dc41baf58ad5d97b9c51069856594ce4abf345e84ac96c76342df"
+    },
+    {
+      "path": "expert_vs_adapter_trace_A90_anchor.csv",
+      "size_bytes": 465930,
+      "sha256": "d722d53cdff4352e6c3e3530075305d7eac549bda9b56131b32134acd6551f00"
     },
     {
       "path": "expert_vs_adapter_trace_A90_measured.csv",
@@ -157,24 +182,49 @@
       "sha256": "8278b7dc7f7e0dd07e093b01055b965c8bc72d57fc2dd663c936929693454487"
     },
     {
+      "path": "expert_vs_adapter_trace_B90_target_increment.csv",
+      "size_bytes": 394042,
+      "sha256": "9179b649462122db0cd95df332b4e28e2c4e6849d0a511a41a492a1dfafd4272"
+    },
+    {
       "path": "final_report.md",
-      "size_bytes": 6198,
-      "sha256": "9529680259f01554fbb815954fbecaa83450c1d36de3f922203e98d35a6f7fcf"
+      "size_bytes": 7226,
+      "sha256": "307ed958ba003684d81db454c04435ced8b83cc4abf6d02f8f9c843f43145694"
+    },
+    {
+      "path": "gate4_contact_timeline_B90_ep00.json",
+      "size_bytes": 5445,
+      "sha256": "c9c144a40c4114e8acdf0146458dff7f78b6b9a558828bf04bfd7b142fe53721"
+    },
+    {
+      "path": "gate4_contact_timeline_B90_ep01.json",
+      "size_bytes": 2831,
+      "sha256": "db1c3b735d9542217f83ce40ccf403751ae799ffc53eeb2633603fe7ab63e746"
+    },
+    {
+      "path": "gate4_dataset_preflight.json",
+      "size_bytes": 5563,
+      "sha256": "e60407ce76c2e394ae55b242da11fab4f038199d81a19260a9b0dcae07fa0c25"
+    },
+    {
+      "path": "gate4_preflight.md",
+      "size_bytes": 7218,
+      "sha256": "c7acb819f05ab9969651d4122a448d624093ad735cec0d5cc001676175aa48ec"
     },
     {
       "path": "p0_substep_analysis.md",
-      "size_bytes": 4847,
-      "sha256": "e1cbd198188650838da4503b26de7f014a074dabff76433645db3d099266635f"
+      "size_bytes": 3517,
+      "sha256": "dd5ff9c16f85effb843ff9d71a81ba57b385126b758259d36636d7f76631b484"
     },
     {
       "path": "README.md",
-      "size_bytes": 3551,
-      "sha256": "f728fd255b71add9e088f821bb7bacbe3d22f310ba62a89a248127e774f3056d"
+      "size_bytes": 3884,
+      "sha256": "5410575a01714e7c4f18ba6fc2d0c4ffe9b835108ee8dc40dc5def60a44deeb4"
     },
     {
       "path": "root_cause_matrix.md",
-      "size_bytes": 3800,
-      "sha256": "cd8b524d7f97217c8af12b13259ad58cd40981af65df4bd516f05bbac7f1dceb"
+      "size_bytes": 3930,
+      "sha256": "026ba16dbe54c3ab17aec82aea019f55edf2b5d77407b6789e54bfb97af867bf"
     },
     {
       "path": "startup_supervision_audit.json",
@@ -188,8 +238,8 @@
     },
     {
       "path": "substep_fk_pairing.json",
-      "size_bytes": 6109,
-      "sha256": "5b44e3e2dc8940a6646cda2b4174d4aa48af90eec40577f03a3ce3d1ff031992"
+      "size_bytes": 9974,
+      "sha256": "f9ab83e18af9b8cbc73333d65f80423fd7ba0623db2cc7916fb975c283bc438f"
     }
   ],
   "external_audits": {
@@ -217,5 +267,80 @@
     ],
     "anchored_frac_outside_pm1": 0.0,
     "round_trip_max_abs_err": 1.1e-16
-  }
+  },
+  "gate4_preflight": {
+    "representations": {
+      "anchor_fixed_max_rad": 0.0,
+      "target_increment_recursive_max_rad": 0.0,
+      "observed_residual_recursive_max_rad": 0.379,
+      "observed_residual_recursive_final_max_rad": 0.376
+    },
+    "qspan_over_droid": {
+      "anchor": [
+        0.175,
+        0.761
+      ],
+      "target_increment": [
+        0.023,
+        0.057
+      ],
+      "observed_residual": [
+        0.024,
+        0.061
+      ]
+    },
+    "windows_with_future_gripper_change": {
+      "count": 204,
+      "fraction": 0.0809
+    },
+    "gate1_regression": {
+      "anchor": {
+        "adapter_success": "4/4",
+        "teacher_err_rad": 5.6e-17
+      },
+      "target_increment": {
+        "adapter_success": "4/4",
+        "teacher_err_rad": 0.0
+      }
+    },
+    "contact_timeline": {
+      "B90_ep00": {
+        "first_contact": [
+          9,
+          6
+        ],
+        "first_replan_after": [
+          10,
+          0
+        ],
+        "n_bursts": 15,
+        "n_contact_substeps": 51
+      },
+      "B90_ep01": {
+        "first_contact": [
+          25,
+          1
+        ],
+        "first_replan_after": [
+          26,
+          0
+        ],
+        "n_bursts": 1,
+        "n_contact_substeps": 2
+      }
+    },
+    "gate_status": {
+      "Gate0": "PASS",
+      "Gate1": "PASS(2 representations)",
+      "Gate2": "PARTIAL",
+      "Gate3": "PASS",
+      "Gate4": "BLOCKED (preflight+regression done, training not started)"
+    }
+  },
+  "corrections": {
+    "cmd_metric": "target_error(FK(q_target)-FK(q_before)) is NOT command path; command_path=Fk(q_target_i)-FK(q_target_{i-1}) now reported separately",
+    "earlier_claim_void": "contact-phase -0.343 m retract was a target-error sum; real contact-phase path is -0.078, large retract -0.294 occurs after contact",
+    "gripper_helper_bug": "build_anchor_horizon_arrays used constant g_action[t]; fixed to future rows; train_lora.make_item was already per-row, step901 unaffected"
+  },
+  "unit_tests": 16
 }

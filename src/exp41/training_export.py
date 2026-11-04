@@ -49,8 +49,8 @@ def build_anchor_horizon_arrays(states: np.ndarray, actions: np.ndarray,
                                 horizon: int = 16, stride: int = 4) -> dict:
     """实验 4.2 实际训练用的标签：`anchored[t,k,:7] = A[t+k,:7] - S[t,:7]`。
 
-    与 `train_lora.make_item` 完全一致；返回 (n_windows, horizon, 8)，夹爪维度沿用
-    `gripper_from_action`（归一化），不随 k 变化（专家同一 tick 下发同一夹爪目标）。
+    与 `train_lora.make_item` 完全一致：**夹爪维度也逐行取未来目标**
+    `g_action[t+k]`（审计 P1：早先写成常数 `g_action[t]`，会破坏"接近→闭合→张开"窗口的未来标签）。
     这是"固定锚点"语义；部署端必须用 `chunk_to_targets(anchor_reference='fixed')`。
     """
     S = np.asarray(states, dtype=np.float64)
@@ -68,10 +68,64 @@ def build_anchor_horizon_arrays(states: np.ndarray, actions: np.ndarray,
     out = np.zeros((len(starts), horizon, 8), dtype=np.float64)
     for i, t in enumerate(starts):
         out[i, :, :7] = A[t:t + horizon, :7] - S[t, :7][None, :]
-        out[i, :, 7] = g_action[t]
+        out[i, :, 7] = g_action[t:t + horizon]
     starts_arr = np.asarray(starts, dtype=np.int64)
     return {'anchored': out, 'starts': starts_arr, 'horizon': horizon, 'stride': stride,
             'version': EXPORT_VERSION + '-anchor-horizon'}
+
+
+def build_target_increment_arrays(states: np.ndarray, actions: np.ndarray,
+                                  horizon: int = 16, stride: int = 4) -> dict:
+    """"目标增量"表示：`k=0: A[t]-S[t]`，`k>0: A[t+k]-A[t+k-1]`；部署端用 `recursive`。
+
+    与 anchor/fixed 表示**互逆**：两者都能精确重建专家命令序列（前者按锚点直接加，
+    后者逐步累加），区别只在归一化后的数值分布与模型看到的目标。审计建议把它作为
+    Gate 4 的单变量对照（`target_increment` + `recursive`）。
+    """
+    S = np.asarray(states, dtype=np.float64)
+    A = np.asarray(actions, dtype=np.float64)
+    if S.ndim != 2 or S.shape[1] != 9:
+        raise ValueError(f'state 必须是 (T,9)，得到 {S.shape}')
+    if A.ndim != 2 or A.shape[1] != 8:
+        raise ValueError(f'action 必须是 (T,8)，得到 {A.shape}')
+    if S.shape[0] != A.shape[0]:
+        raise ValueError('state/action 长度不一致')
+    g_action = gripper_from_action(A)
+    starts = list(range(0, S.shape[0] - horizon + 1, stride))
+    if not starts:
+        raise ValueError(f'序列太短：{S.shape[0]} < horizon {horizon}')
+    out = np.zeros((len(starts), horizon, 8), dtype=np.float64)
+    for i, t in enumerate(starts):
+        tgt = A[t:t + horizon, :7]
+        inc = np.empty_like(tgt)
+        inc[0] = tgt[0] - S[t, :7]
+        if horizon > 1:
+            inc[1:] = tgt[1:] - tgt[:-1]
+        out[i, :, :7] = inc
+        out[i, :, 7] = g_action[t:t + horizon]
+    return {'target_increment': out, 'starts': np.asarray(starts, dtype=np.int64),
+            'horizon': horizon, 'stride': stride,
+            'version': EXPORT_VERSION + '-target-increment'}
+
+
+def build_observed_residual_arrays(states: np.ndarray, actions: np.ndarray,
+                                   horizon: int = 16, stride: int = 4) -> dict:
+    """`observed_residual[k] = A[t+k] - S[t+k]`（**只用于诊断**：递归执行不能重建专家序列）。"""
+    S = np.asarray(states, dtype=np.float64)
+    A = np.asarray(actions, dtype=np.float64)
+    if S.shape[0] != A.shape[0]:
+        raise ValueError('state/action 长度不一致')
+    g_action = gripper_from_action(A)
+    starts = list(range(0, S.shape[0] - horizon + 1, stride))
+    if not starts:
+        raise ValueError(f'序列太短：{S.shape[0]} < horizon {horizon}')
+    out = np.zeros((len(starts), horizon, 8), dtype=np.float64)
+    for i, t in enumerate(starts):
+        out[i, :, :7] = A[t:t + horizon, :7] - S[t:t + horizon, :7]
+        out[i, :, 7] = g_action[t:t + horizon]
+    return {'observed_residual': out, 'starts': np.asarray(starts, dtype=np.int64),
+            'horizon': horizon, 'stride': stride,
+            'version': EXPORT_VERSION + '-observed-residual'}
 
 
 def build_training_arrays(states: np.ndarray, actions: np.ndarray) -> dict:
