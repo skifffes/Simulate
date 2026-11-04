@@ -17,6 +17,9 @@
 | `b90_contact_phase_direction.json` | 接触阶段的模型 vs 专家方向统计 |
 | `startup_supervision_audit.md` / `startup_supervision_audit.json` | Gate 3：90 条 episode 启动时序与监督可识别性 |
 | `root_cause_matrix.md` | 13 项候选根因的证据与置信度 |
+| `learning_curve.md` | **学习曲线**：300/600/900 updates 的幅度单调下降（0.52→0.24→0.11），方向未改善 |
+| `expert_state_analysis_curve{300,600}.json` | 同批 30 状态上的曲线数据 |
+| `expert_state_analysis_push_active.json` | 真·主动推动帧（8 帧）上的 step901 结果 |
 | `gate4_overfit.md` | **P1 过拟合 + P0 资产/整段诊断**：8 窗口可拟合（loss 0.0064、采样 MAE 0.025）、A/B 首行同标签、chunk 误差分解 |
 | `overfit_log.json` / `overfit_eval_chunk.json` | 过拟合曲线与采样后的整段误差 |
 | `expert_state_picks_v2.json` | B90 四阶段拆分 + 去重（30 唯一帧 / 10 窗口起点 / 3 episodes） |

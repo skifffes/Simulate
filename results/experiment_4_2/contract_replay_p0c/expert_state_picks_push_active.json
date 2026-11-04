@@ -1,0 +1,77 @@
+{
+  "items": [
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 70,
+      "phase": "push_active",
+      "robot_block": 3,
+      "block_wall": 0,
+      "frame": 70
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 61,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 61
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 62,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 62
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 63,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 63
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 64,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 64
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 65,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 65
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 66,
+      "phase": "push_active",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 66
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 79,
+      "phase": "push_active",
+      "robot_block": 3,
+      "block_wall": 0,
+      "frame": 79
+    }
+  ],
+  "note": "机器人接触+未触墙+专家|dq|>0.01 的主动推动帧"
+}

@@ -69,7 +69,7 @@
     },
     "normalization_counterfactual": "NOT STARTED (span premise refuted)"
   },
-  "n_files": 51,
+  "n_files": 56,
   "files": [
     {
       "path": "ab_repr_comparison.json",
@@ -187,6 +187,21 @@
       "sha256": "9a187d630b19ee7f9eafcb21cb8482d7988cf79b46b60970e85e2846148db399"
     },
     {
+      "path": "expert_state_analysis_curve300.json",
+      "size_bytes": 93851,
+      "sha256": "3a9e30d2a4f5cffbd3ebf86c793620b93fa42608fd73080e036db1978c058a6b"
+    },
+    {
+      "path": "expert_state_analysis_curve600.json",
+      "size_bytes": 93866,
+      "sha256": "fd7be0dc9fe0eb9afb753de5470ba9638ad68ac233d56b7627162b12da567a67"
+    },
+    {
+      "path": "expert_state_analysis_push_active.json",
+      "size_bytes": 25308,
+      "sha256": "74d2edd720682fb3f81da09e5228d2101ebbcf2ef8b6c5160e0579ab4c5f6aea"
+    },
+    {
       "path": "expert_state_analysis_step901_v2.json",
       "size_bytes": 94113,
       "sha256": "24510f6b7fb4102e2e36b56a6cbdac6cba853ec9780329b7ab289f47732cc13d"
@@ -205,6 +220,11 @@
       "path": "expert_state_picks.json",
       "size_bytes": 5210,
       "sha256": "29e0cf4e60b82962fe03fd0d51671c803d108093fb630a63e522c744ca7c2a3c"
+    },
+    {
+      "path": "expert_state_picks_push_active.json",
+      "size_bytes": 1437,
+      "sha256": "57d6c28327d0f8216b22cfdbd8f08df3c7ed8b12673a0ecb9a5c24c775387408"
     },
     {
       "path": "expert_state_picks_v2.json",
@@ -253,8 +273,8 @@
     },
     {
       "path": "final_report.md",
-      "size_bytes": 7701,
-      "sha256": "26e763beac3db65359a805897a975198ac3e7a587a561763a2b9231e8d590832"
+      "size_bytes": 7761,
+      "sha256": "bec117af4f87cfc94c53ccea1ffb4bdfea1c9adf1c3fc2f008afcced4af71224"
     },
     {
       "path": "gate4_contact_timeline_B90_ep00.json",
@@ -273,13 +293,18 @@
     },
     {
       "path": "gate4_overfit.md",
-      "size_bytes": 6471,
-      "sha256": "81cfbb17aba0d8eef49d1fdd2585094c9658c980460f5965b57fa19486aa1a31"
+      "size_bytes": 7725,
+      "sha256": "37cd5dbcdd0c4140786f41e30f071f37ca65ca3ff64c08d1ff7bd75b0ff65916"
     },
     {
       "path": "gate4_preflight.md",
       "size_bytes": 10179,
       "sha256": "1045992fb0ad250c05e98c5849669ebba3b247e5ea198abd5d108ead538cb0e9"
+    },
+    {
+      "path": "learning_curve.md",
+      "size_bytes": 2862,
+      "sha256": "1bb40412675ef5490d37f1ed79488b7ef48209d3d2335fda2a857f2807edac56"
     },
     {
       "path": "overfit_eval_chunk.json",
@@ -303,8 +328,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 4800,
-      "sha256": "1fd65b00d53a811ec68bee9e5f4c11a305f4f93a92956aef9e2f51857b94e789"
+      "size_bytes": 5117,
+      "sha256": "a0040a9d8896c2ca49b3c2f4f6ed0ddba638df1191e178ecf573934c9f2378a7"
     },
     {
       "path": "root_cause_matrix.md",
@@ -581,5 +606,46 @@
       "wall_hold"
     ],
     "caveat": "push_pre_wall samples are mostly steady (median |dq|=0); ep1 has 7 genuinely moving push ticks"
+  },
+  "learning_curve": {
+    "label_mode": "anchor",
+    "lr_schedule": "official CosineDecaySchedule(warmup=1000, peak_lr=2.5e-5)",
+    "points": [
+      {
+        "updates": 300,
+        "epochs": 0.476,
+        "final_loss": 0.209,
+        "B90_approach_absmax": 0.389,
+        "B90_push_pre_wall_absmax": 0.522,
+        "B90_wall_hold_absmax": 0.523
+      },
+      {
+        "updates": 600,
+        "epochs": 0.952,
+        "final_loss": 0.0475,
+        "B90_approach_absmax": 0.236,
+        "B90_push_pre_wall_absmax": 0.229,
+        "B90_wall_hold_absmax": 0.236
+      },
+      {
+        "updates": 900,
+        "epochs": 1.43,
+        "final_loss": 0.027,
+        "source": "step901 (two-stage)",
+        "B90_approach_absmax": 0.118,
+        "B90_push_pre_wall_absmax": 0.118,
+        "B90_wall_hold_absmax": 0.112
+      }
+    ],
+    "verdict": "magnitude decreases monotonically with training; direction remains near-random; 900 updates not converged"
+  },
+  "push_active": {
+    "n_states": 8,
+    "expert_absmax": 0.0413,
+    "model_absmax": 0.1147,
+    "joint_mae": 0.0487,
+    "joint_cos": 0.181,
+    "ee_cos": 0.382,
+    "note": "genuine active push frames (robot contact, no wall, expert |dq|>0.01)"
   }
 }
