@@ -705,6 +705,11 @@
       "success": 0,
       "robot_block_contact_steps": 0
     },
-    "strict_success": "0/4"
+    "strict_success": "0/4",
+    "execute_k1": {
+      "B90": "pushed_by_robot x2, 0 contact steps, advance 0.0",
+      "A90": "grasped_by_two_fingers x2, 0 contact steps",
+      "note": "k=1 is worse than k=8 for the 1200 model"
+    }
   }
 }
