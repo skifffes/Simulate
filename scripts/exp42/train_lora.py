@@ -324,14 +324,16 @@ def main(argv=None) -> int:
     ap.add_argument('--mode', choices=['probe', 'train'], default='probe')
     ap.add_argument('--steps', type=int, default=20)
     ap.add_argument('--batch', type=int, default=4)
-    ap.add_argument('--accum', type=int, default=1)
+    ap.add_argument('--accum', type=int, default=1,
+                    help='梯度累积；当前实现不支持 >1（会直接报错），不要据此宣称 effective batch 扩大')
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--save-every', type=int, default=25)
     ap.add_argument('--val-every', type=int, default=0)
     ap.add_argument('--val-batches', type=int, default=8)
     ap.add_argument('--train-split', default='train')
     ap.add_argument('--export-params', action='store_true', help='训练结束导出完整 params（orbax）')
-    ap.add_argument('--init-lora', default='', help='从已有 LoRA npz 继续训练（尺度/收敛诊断用）')
+    ap.add_argument('--init-lora', default='',
+                    help='从已有 LoRA npz 继续训练：只恢复 51 个 LoRA 张量，optimizer state 与学习率调度会重新初始化（step901=502+400 两阶段累计，非一次连续优化）')
     ap.add_argument('--loss-dims', type=int, default=0,
                     help='0=官方 32 维 loss；8=只在前 8 维（7 关节+1 夹爪）求平均（P0b 对照实验）')
     args = ap.parse_args(argv)
@@ -340,6 +342,10 @@ def main(argv=None) -> int:
     import jax
     import openpi.models.model as _model
 
+    if args.accum != 1:
+        raise SystemExit(
+            'gradient accumulation 未实现：--accum>1 不会扩大 effective batch；'
+            '当前只支持 --accum 1（审计 P2）。')
     meta = load_meta()
     cfg = build_config(batch_size=args.batch, num_steps=max(args.steps, 1))
     transform, data_cfg = make_transforms(cfg)

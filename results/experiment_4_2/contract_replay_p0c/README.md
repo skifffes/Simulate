@@ -17,7 +17,10 @@
 | `b90_contact_phase_direction.json` | 接触阶段的模型 vs 专家方向统计 |
 | `startup_supervision_audit.md` / `startup_supervision_audit.json` | Gate 3：90 条 episode 启动时序与监督可识别性 |
 | `root_cause_matrix.md` | 13 项候选根因的证据与置信度 |
-| `contract_unit_tests.json` | 9 项契约单测结果 |
+| `p0_substep_analysis.md` | **P0 补强**：拒绝硬阻断 / 限速 / 逐子步日志 + 分阶段配对（接触期命令反转） |
+| `substep_fk_pairing.json` | 逐子步命令 EE / 实际 EE / 物体配对（按接触阶段切分） |
+| `action_contract_audit.json` | 真实训练标签（16 步锚点）逐 k 统计 + DROID 归一化跨度（17.5–76%） |
+| `contract_unit_tests.json` | 12 项契约单测（fixed/recursive、重锚、缩放裁剪、夹爪米、拒绝、限速） |
 | `artifact_manifest.json` | 源码/数据/checkpoint 哈希与服务器路径 |
 
 > `p0c_training_comparison.md` 与 `rollout_summary.csv` **未生成**：P0c 训练条件不满足（见 `final_report.md` Q7），

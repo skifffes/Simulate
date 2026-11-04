@@ -41,3 +41,27 @@ md5 `2e8bc5547dc797f1df5f4e5401136082`），不做自定义归一化。
 
 训练 checkpoint 与 `norm_stats_md5` 一起记录在 `checkpoint_manifest.json`；
 推理服务加载同一份 assets 目录，确保训练/推理归一化一致。
+
+## 审计更正（2026-11-04）：跨度口径必须用真实 16 步锚点标签
+
+上表的 action 关节行是**单步 Δq**（`A[t]-S[t]`），而 4.2 实际训练标签是
+**固定锚点的 16 步累计偏移**（`A[t+k]-S[t]`，见 `train_lora.make_item`）。
+两者只在 k=0 相等，所以"跨度仅为 DROID 的 2.4–6.1%"**不能**用来描述训练标签。
+
+用审计脚本在真实 train 数据上重算（`contract_replay_p0c/action_contract_audit.json`，
+61 episodes / 2521 windows）：
+
+| 口径 | 关节跨度 / DROID 跨度 |
+| --- | --- |
+| 单步 Δq（旧口径） | 0.024–0.061 |
+| **16 步锚点标签（真实训练口径）** | **0.175–0.761** |
+| 归一化后超出 [−1, 1] 的比例 | **0.000** |
+| Normalize→Unnormalize 往返误差 | **1.1e-16** |
+
+逐 k 的锚点标签 `abs_mean`：k=0 **0.008** → k=5 0.042 → k=15 **0.105 rad**（自然随 k 增长）。
+归一化后（k=0）abs_mean 0.036、std 0.094、q95 0.245、max 0.487；k=5 时 std 0.20、q95 0.46。
+
+**结论修订**：在真实训练标签口径下，关节有效信号占 DROID 量程的 **17.5%–76%**，
+且没有任何标签被 clip 到 ±1，往返误差 1e-16。
+因此"归一化把有效动作信号压窄"从 `HYPOTHESIS` 降级为 **WEAKENED**：
+不再作为下一次单变量训练的首选干预（见 `contract_replay_p0c/final_report.md` Q8）。

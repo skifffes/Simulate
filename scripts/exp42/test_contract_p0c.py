@@ -15,7 +15,8 @@ for p in (ROOT / 'src', ROOT):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
-from exp40.action_adapter import ActionAdapterConfig, chunk_to_targets  # noqa: E402
+from exp40.action_adapter import (  # noqa: E402
+    ActionAdapterConfig, adapt_action, chunk_to_targets, limit_joint_step)
 
 FAILS: list[str] = []
 
@@ -79,9 +80,30 @@ def main() -> int:
     err = float(max(np.abs(r.q_target - A[k]).max() for k, r in enumerate(recovered)))
     check('expert target recovery via fixed anchor', err < 1e-12, f'max_err={err:.2e}')
 
+    # 10) Adapter 拒绝动作必须可被调用方识别（审计 P0：以前闭环忽略了 accepted）
+    bad = np.zeros(8)
+    bad[0] = 1.5
+    rej = adapt_action(bad, q0, lo, hi, cfg)
+    check('rejected action exposes accepted=False + reason',
+          (not rej.accepted) and ('delta_exceeds_official_clip' in rej.reasons))
+
+    # 11) 逐控制周期限速
+    q_a = np.zeros(7)
+    q_b = np.full(7, 0.5)
+    lim, hit, jump = limit_joint_step(q_b, q_a, 0.2)
+    check('rate limit clamps adjacent command jump',
+          hit and abs(jump - 0.5) < 1e-12 and np.allclose(lim, np.full(7, 0.2)))
+    lim2, hit2, _ = limit_joint_step(q_a, q_a, 0.2)
+    check('rate limit no-op when within bound', (not hit2) and np.allclose(lim2, q_a))
+
+    # 12) 关闭限速
+    lim3, hit3, jump3 = limit_joint_step(q_b, q_a, 0.0)
+    check('rate limit disabled by max_step<=0',
+          (not hit3) and np.allclose(lim3, q_b) and abs(jump3 - 0.5) < 1e-12)
+
     out = ROOT / 'results' / 'experiment_4_2' / 'contract_replay_p0c' / 'contract_unit_tests.json'
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({'n_checks': 9, 'n_fail': len(FAILS), 'failures': FAILS},
+    out.write_text(json.dumps({'n_checks': 12, 'n_fail': len(FAILS), 'failures': FAILS},
                               ensure_ascii=False, indent=2), encoding='utf-8')
     print('\n' + ('all contract checks passed' if not FAILS else f'{len(FAILS)} failures'))
     return 0 if not FAILS else 1

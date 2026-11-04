@@ -13,6 +13,16 @@
 
 `state8` 与 `action8` 都保留连续版本；二值化只用于"与预训练策略下发方式对齐"的对照，
 不要同时混用连续与二值标签。
+
+**两种动作表示（必须区分，独立审计 P1）**：
+  * `single_step`（本模块 `build_training_arrays` 的输出，也是 DROID / π₀.₅ 预训练的动作语义）：
+    第 t 个样本的动作 = `A[t] - S[t]`，即"相对**当前**状态的单控制步增量"。
+  * `anchor_horizon`（实验 4.2 实际训练用的标签，见 `train_lora.make_item`）：
+    第 k 行 = `A[t+k] - S[t]`，即"相对**窗口锚点** q_t 的跨 k+1 步累计偏移"。
+  两者只在 k=0 相等；4.2 部署端用 `chunk_to_targets(anchor_reference='fixed')` 与后者对齐，
+  因此 `single_step` 的归一化跨度统计**不能**直接当作 4.2 训练标签的跨度（审计更正：
+  单步 Δq 跨度是 DROID 的 2.4–6.1%，而真实 16 步锚点标签是 17–76%）。
+  需要后者时用 `build_anchor_horizon_arrays`。
 """
 from __future__ import annotations
 
@@ -35,8 +45,37 @@ def gripper_from_action(action: np.ndarray) -> np.ndarray:
     return np.clip(a[..., 7] / FINGER_MAX_M, 0.0, 1.0)
 
 
+def build_anchor_horizon_arrays(states: np.ndarray, actions: np.ndarray,
+                                horizon: int = 16, stride: int = 4) -> dict:
+    """实验 4.2 实际训练用的标签：`anchored[t,k,:7] = A[t+k,:7] - S[t,:7]`。
+
+    与 `train_lora.make_item` 完全一致；返回 (n_windows, horizon, 8)，夹爪维度沿用
+    `gripper_from_action`（归一化），不随 k 变化（专家同一 tick 下发同一夹爪目标）。
+    这是"固定锚点"语义；部署端必须用 `chunk_to_targets(anchor_reference='fixed')`。
+    """
+    S = np.asarray(states, dtype=np.float64)
+    A = np.asarray(actions, dtype=np.float64)
+    if S.ndim != 2 or S.shape[1] != 9:
+        raise ValueError(f'state 必须是 (T,9)，得到 {S.shape}')
+    if A.ndim != 2 or A.shape[1] != 8:
+        raise ValueError(f'action 必须是 (T,8)，得到 {A.shape}')
+    if S.shape[0] != A.shape[0]:
+        raise ValueError('state/action 长度不一致')
+    g_action = gripper_from_action(A)
+    starts = list(range(0, S.shape[0] - horizon + 1, stride))
+    if not starts:
+        raise ValueError(f'序列太短：{S.shape[0]} < horizon {horizon}')
+    out = np.zeros((len(starts), horizon, 8), dtype=np.float64)
+    for i, t in enumerate(starts):
+        out[i, :, :7] = A[t:t + horizon, :7] - S[t, :7][None, :]
+        out[i, :, 7] = g_action[t]
+    starts_arr = np.asarray(starts, dtype=np.int64)
+    return {'anchored': out, 'starts': starts_arr, 'horizon': horizon, 'stride': stride,
+            'version': EXPORT_VERSION + '-anchor-horizon'}
+
+
 def build_training_arrays(states: np.ndarray, actions: np.ndarray) -> dict:
-    """返回可直接喂给 π₀.₅ 训练 transform 的 8 维 state / 8 维 action。"""
+    """返回可直接喂给 π₀.₅ 训练 transform 的 8 维 state / 8 维 action（**单步**语义）。"""
     S = np.asarray(states, dtype=np.float64)
     A = np.asarray(actions, dtype=np.float64)
     if S.ndim != 2 or S.shape[1] != 9:

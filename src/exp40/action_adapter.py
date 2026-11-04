@@ -188,6 +188,28 @@ def chunk_to_targets(
     return out
 
 
+def limit_joint_step(
+    q_target: np.ndarray,
+    q_prev: np.ndarray,
+    max_step_rad: float,
+) -> tuple[np.ndarray, bool, float]:
+    """逐控制周期的命令限速（审计 P0：固定锚点只约束相对 q0 的累计量，不约束相邻命令跳变）。
+
+    返回 ``(受限后的目标, 是否触发限速, 原始跳变量)``。
+    ``max_step_rad <= 0`` 表示不限制。
+    """
+    q_target = np.asarray(q_target, dtype=np.float64)
+    q_prev = np.asarray(q_prev, dtype=np.float64)
+    if max_step_rad is None or max_step_rad <= 0:
+        return q_target, False, float(np.max(np.abs(q_target - q_prev)))
+    delta = q_target - q_prev
+    jump = float(np.max(np.abs(delta)))
+    if jump <= max_step_rad:
+        return q_target, False, jump
+    limited = q_prev + np.clip(delta, -max_step_rad, max_step_rad)
+    return limited, True, jump
+
+
 def summarize_chunk(chunk: np.ndarray) -> dict:
     """chunk 的统计摘要（写进工件，便于跨实验比较）。"""
     c = np.asarray(chunk, dtype=np.float64)

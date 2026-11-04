@@ -65,3 +65,18 @@ A90 旋转阶段专家每步转 ~0.04 rad，第 8 步的 0.31 rad 合法偏移�
 7. 夹爪归一化值 0.425 不能被当作米；
 8. binary 0.425 → 0.0 m（闭合）；
 9. 固定锚点精确恢复专家目标（误差 0）。
+
+## 6. P0 安全与可观测性补强（2026-11-04，回应独立审计）
+
+| 项 | 状态 | 证据 |
+| --- | --- | --- |
+| Adapter `accepted=False` 时硬阻断 | **已实现** | `eval_rollouts.py` 执行前检查；触发则停止本回合并记录 `stopped_episode` |
+| 逐控制周期限速（相邻命令跳变） | **已实现** | `--max-joint-step-rad` 默认 0.30；`limit_joint_step()` 单测 3 项 |
+| 逐子步日志（不只 chunk 首行） | **已实现** | `*_epXX_substeps.csv`（25 列，含 q_target/q_after/dq/EE/物体/接触/accepted/clipped） |
+| 完整 chunk 记录 | **已实现** | 每条 tick 存 `chunk_rows`（8×8） |
+| 单测 | **12/12 通过** | `contract_unit_tests.json` |
+
+重跑（`rollouts_p0_logged/`）：**拒绝 0 次、限速 0 次**（最大跳变 0.25 rad），
+说明此前失败不是拒绝/限速造成的；逐子步配对结论见
+[`p0_substep_analysis.md`](p0_substep_analysis.md)。
+
