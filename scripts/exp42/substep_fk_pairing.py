@@ -27,6 +27,7 @@ from pathlib import Path
 
 import numpy as np
 
+EE_LINK = 11  # 与 Simulation.pose() 一致（panda_grasptarget）
 ROOT = Path(__file__).resolve().parents[2]
 for p in (ROOT / 'src', ROOT):
     if str(p) not in sys.path:
@@ -52,14 +53,19 @@ def main(argv=None) -> int:
     sim = scene.sim
 
     def fk(q):
+        """纯 FK：只 resetJointState + getLinkState(computeForwardKinematics=True)。
+
+        **不调用 sim.step()**（审计：step 会推进 240 Hz 物理，改变刚重置的关节；
+        且 sim.pose() 已用 computeForwardKinematics=True，无需推进）。
+        """
         import pybullet as p
 
         for j in range(7):
-            p.resetJointState(sim.robot, j, float(q[j]), physicsClientId=sim.client)
-        for _ in range(1):
-            sim.step()
-        pos, _ = sim.pose()
-        return np.asarray(pos, dtype=float)
+            p.resetJointState(sim.robot, j, float(q[j]), targetVelocity=0.0,
+                              physicsClientId=sim.client)
+        link = p.getLinkState(sim.robot, EE_LINK, computeForwardKinematics=True,
+                              physicsClientId=sim.client)
+        return np.asarray(link[4], dtype=float)
 
     res = {'dir': str(d), 'definitions': {
         'target_error': 'FK(q_target_i) - FK(q_before_i)（目标偏差，不是命令路径）',

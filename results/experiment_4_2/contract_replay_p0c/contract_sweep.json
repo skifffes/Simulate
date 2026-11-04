@@ -1,0 +1,260 @@
+{
+  "episode": "B90:0",
+  "start": 20,
+  "horizon": 16,
+  "sigmas": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "repeats": 32,
+  "stats": "/scratch/lijh/.cache/openpi/openpi-assets/checkpoints/pi05_droid/assets/droid/norm_stats.json",
+  "rows": [
+    {
+      "t": 20,
+      "noise": {
+        "0.0": {
+          "anchor_fixed_max_err_rad_mean": 1.1102230246251565e-16,
+          "anchor_fixed_max_err_rad_p95": 1.1102230246251565e-16,
+          "increment_recursive_max_err_rad_mean": 7.771561172376096e-16,
+          "increment_recursive_max_err_rad_p95": 7.771561172376096e-16,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.01": {
+          "anchor_fixed_max_err_rad_mean": 0.020392096942484794,
+          "anchor_fixed_max_err_rad_p95": 0.02475684337452073,
+          "increment_recursive_max_err_rad_mean": 0.05495901433333748,
+          "increment_recursive_max_err_rad_p95": 0.08677904237434536,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.05": {
+          "anchor_fixed_max_err_rad_mean": 0.09970438214019825,
+          "anchor_fixed_max_err_rad_p95": 0.12495946581865744,
+          "increment_recursive_max_err_rad_mean": 0.2853398925105711,
+          "increment_recursive_max_err_rad_p95": 0.39207395152294844,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.1": {
+          "anchor_fixed_max_err_rad_mean": 0.1972316225485632,
+          "anchor_fixed_max_err_rad_p95": 0.2483766313180212,
+          "increment_recursive_max_err_rad_mean": 0.5146298257961737,
+          "increment_recursive_max_err_rad_p95": 0.7315657135916863,
+          "anchor_clipped_values_mean": 0.03125,
+          "increment_clipped_values_mean": 0.15625
+        },
+        "0.2": {
+          "anchor_fixed_max_err_rad_mean": 0.40299118351022123,
+          "anchor_fixed_max_err_rad_p95": 0.5145939121721913,
+          "increment_recursive_max_err_rad_mean": 0.981537787999167,
+          "increment_recursive_max_err_rad_p95": 1.3328811335099835,
+          "anchor_clipped_values_mean": 0.59375,
+          "increment_clipped_values_mean": 7.40625
+        }
+      },
+      "round_trip": {
+        "anchor": 1.1102230246251565e-16,
+        "target_increment": 1.1102230246251565e-16
+      },
+      "normalized_span": {
+        "anchor": {
+          "min": -0.15114925507747823,
+          "max": 0.8631666476102795,
+          "frac_outside_pm1": 0.0
+        },
+        "target_increment": {
+          "min": -0.008501190988136842,
+          "max": 0.06273404094138413,
+          "frac_outside_pm1": 0.0
+        }
+      }
+    },
+    {
+      "t": 21,
+      "noise": {
+        "0.0": {
+          "anchor_fixed_max_err_rad_mean": 1.1102230246251565e-16,
+          "anchor_fixed_max_err_rad_p95": 1.1102230246251565e-16,
+          "increment_recursive_max_err_rad_mean": 8.881784197001252e-16,
+          "increment_recursive_max_err_rad_p95": 8.881784197001252e-16,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.01": {
+          "anchor_fixed_max_err_rad_mean": 0.020519505175894136,
+          "anchor_fixed_max_err_rad_p95": 0.025609522323233384,
+          "increment_recursive_max_err_rad_mean": 0.05467043751887772,
+          "increment_recursive_max_err_rad_p95": 0.07894876597733154,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.05": {
+          "anchor_fixed_max_err_rad_mean": 0.10282977922125977,
+          "anchor_fixed_max_err_rad_p95": 0.12983509585572567,
+          "increment_recursive_max_err_rad_mean": 0.27286602020319206,
+          "increment_recursive_max_err_rad_p95": 0.4023589102249014,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.1": {
+          "anchor_fixed_max_err_rad_mean": 0.20711125713140538,
+          "anchor_fixed_max_err_rad_p95": 0.25627800492259356,
+          "increment_recursive_max_err_rad_mean": 0.5578908107345156,
+          "increment_recursive_max_err_rad_p95": 0.8459558759109266,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.15625
+        },
+        "0.2": {
+          "anchor_fixed_max_err_rad_mean": 0.40059055153856193,
+          "anchor_fixed_max_err_rad_p95": 0.49817697378688386,
+          "increment_recursive_max_err_rad_mean": 0.9718661474410732,
+          "increment_recursive_max_err_rad_p95": 1.516500952251525,
+          "anchor_clipped_values_mean": 0.40625,
+          "increment_clipped_values_mean": 7.65625
+        }
+      },
+      "round_trip": {
+        "anchor": 1.1102230246251565e-16,
+        "target_increment": 1.1102230246251565e-16
+      },
+      "normalized_span": {
+        "anchor": {
+          "min": -0.15114953211510218,
+          "max": 0.8631670119418491,
+          "frac_outside_pm1": 0.0
+        },
+        "target_increment": {
+          "min": -0.008501202503717442,
+          "max": 0.06273404094138413,
+          "frac_outside_pm1": 0.0
+        }
+      }
+    },
+    {
+      "t": 22,
+      "noise": {
+        "0.0": {
+          "anchor_fixed_max_err_rad_mean": 1.1102230246251565e-16,
+          "anchor_fixed_max_err_rad_p95": 1.1102230246251565e-16,
+          "increment_recursive_max_err_rad_mean": 8.881784197001252e-16,
+          "increment_recursive_max_err_rad_p95": 8.881784197001252e-16,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.01": {
+          "anchor_fixed_max_err_rad_mean": 0.020872007447356258,
+          "anchor_fixed_max_err_rad_p95": 0.027357138345918457,
+          "increment_recursive_max_err_rad_mean": 0.05469820012880466,
+          "increment_recursive_max_err_rad_p95": 0.08593168188240552,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.05": {
+          "anchor_fixed_max_err_rad_mean": 0.10590874771947573,
+          "anchor_fixed_max_err_rad_p95": 0.13676873246817456,
+          "increment_recursive_max_err_rad_mean": 0.2688891216666901,
+          "increment_recursive_max_err_rad_p95": 0.3911226001877571,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.1": {
+          "anchor_fixed_max_err_rad_mean": 0.21617953732726214,
+          "anchor_fixed_max_err_rad_p95": 0.27774378516966935,
+          "increment_recursive_max_err_rad_mean": 0.5060065465210214,
+          "increment_recursive_max_err_rad_p95": 0.7592054640796972,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.15625
+        },
+        "0.2": {
+          "anchor_fixed_max_err_rad_mean": 0.40727683702382844,
+          "anchor_fixed_max_err_rad_p95": 0.4879478266854875,
+          "increment_recursive_max_err_rad_mean": 1.0116443039434946,
+          "increment_recursive_max_err_rad_p95": 1.4514096027482066,
+          "anchor_clipped_values_mean": 0.40625,
+          "increment_clipped_values_mean": 7.4375
+        }
+      },
+      "round_trip": {
+        "anchor": 1.1102230246251565e-16,
+        "target_increment": 1.1102230246251565e-16
+      },
+      "normalized_span": {
+        "anchor": {
+          "min": -0.1452372721841163,
+          "max": 0.8404593182076452,
+          "frac_outside_pm1": 0.0
+        },
+        "target_increment": {
+          "min": -0.00850123705045891,
+          "max": 0.06864630087237011,
+          "frac_outside_pm1": 0.0
+        }
+      }
+    },
+    {
+      "t": 23,
+      "noise": {
+        "0.0": {
+          "anchor_fixed_max_err_rad_mean": 1.1102230246251565e-16,
+          "anchor_fixed_max_err_rad_p95": 1.1102230246251565e-16,
+          "increment_recursive_max_err_rad_mean": 7.771561172376096e-16,
+          "increment_recursive_max_err_rad_p95": 7.771561172376096e-16,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.01": {
+          "anchor_fixed_max_err_rad_mean": 0.02097502136549378,
+          "anchor_fixed_max_err_rad_p95": 0.02661540967398077,
+          "increment_recursive_max_err_rad_mean": 0.05594940930333296,
+          "increment_recursive_max_err_rad_p95": 0.0850209357841501,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.05": {
+          "anchor_fixed_max_err_rad_mean": 0.10324438653955972,
+          "anchor_fixed_max_err_rad_p95": 0.12278295065545354,
+          "increment_recursive_max_err_rad_mean": 0.25440167228816624,
+          "increment_recursive_max_err_rad_p95": 0.394448765114469,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.0
+        },
+        "0.1": {
+          "anchor_fixed_max_err_rad_mean": 0.1955709224521427,
+          "anchor_fixed_max_err_rad_p95": 0.25721120403487513,
+          "increment_recursive_max_err_rad_mean": 0.5899855796526137,
+          "increment_recursive_max_err_rad_p95": 0.8047803874919304,
+          "anchor_clipped_values_mean": 0.0,
+          "increment_clipped_values_mean": 0.09375
+        },
+        "0.2": {
+          "anchor_fixed_max_err_rad_mean": 0.4220744289806363,
+          "anchor_fixed_max_err_rad_p95": 0.5223363294163015,
+          "increment_recursive_max_err_rad_mean": 0.9999169983936522,
+          "increment_recursive_max_err_rad_p95": 1.4848247115417077,
+          "anchor_clipped_values_mean": 0.3125,
+          "increment_clipped_values_mean": 7.875
+        }
+      },
+      "round_trip": {
+        "anchor": 1.1102230246251565e-16,
+        "target_increment": 1.1102230246251565e-16
+      },
+      "normalized_span": {
+        "anchor": {
+          "min": -0.13104795916479972,
+          "max": 0.8229353340447385,
+          "frac_outside_pm1": 0.0
+        },
+        "target_increment": {
+          "min": -0.026934765885193945,
+          "max": 0.08647976679605796,
+          "frac_outside_pm1": 0.0
+        }
+      }
+    }
+  ]
+}

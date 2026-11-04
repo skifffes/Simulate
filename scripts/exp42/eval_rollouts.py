@@ -34,6 +34,7 @@ for p in (ROOT / 'src', ROOT):
 FINGER_MAX_M = 0.04
 POLICY_HZ = 20
 STEPS_PER_TICK = 12
+HORIZON = 16
 
 
 def main(argv=None) -> int:
@@ -47,6 +48,11 @@ def main(argv=None) -> int:
     ap.add_argument('--goal-id', default='')
     ap.add_argument('--execute-k', type=int, default=8)
     ap.add_argument('--tag', default='ft')
+    ap.add_argument('--label-mode', choices=['anchor', 'target_increment'],
+                    default='anchor',
+                    help='必须与训练时一致：anchor->fixed；target_increment->recursive')
+    ap.add_argument('--ckpt-manifest', default='',
+                    help='训练产出的 manifest.json；给了就校验 label_mode 一致，不一致直接退出')
     ap.add_argument('--gripper-mode', choices=['continuous', 'binary'], default='continuous',
                     help='continuous=g*0.04（与训练标签 0.425->0.017m 一致）；binary=官方 client 的 0.5 二值化')
     ap.add_argument('--max-joint-step-rad', type=float, default=0.30,
@@ -75,6 +81,16 @@ def main(argv=None) -> int:
     client = make_policy_client(args.host, args.port)
     print('ping:', client.ping() if hasattr(client, 'ping') else 'n/a', flush=True)
 
+    anchor_reference = 'fixed' if args.label_mode == 'anchor' else 'recursive'
+    if args.ckpt_manifest:
+        man = json.loads(Path(args.ckpt_manifest).read_text(encoding='utf-8'))
+        if man.get('label_mode') and man['label_mode'] != args.label_mode:
+            raise SystemExit(f"label_mode 不一致：checkpoint={man['label_mode']} "
+                             f"vs 执行={args.label_mode}（会静默产生错误动作）")
+        if man.get('horizon') and int(man['horizon']) != HORIZON:
+            raise SystemExit(f"horizon 不一致：checkpoint={man['horizon']} vs 执行={HORIZON}")
+        print(f"[contract] manifest ok: label_mode={man['label_mode']} "
+              f"anchor_reference={man.get('anchor_reference')}", flush=True)
     aa_cfg = ActionAdapterConfig(gripper_mode=args.gripper_mode)
     rows = []
     for ep in range(args.episodes):
@@ -127,7 +143,7 @@ def main(argv=None) -> int:
                 if args.action_gain != 1.0:
                     chunk[:, :7] *= args.action_gain
                 adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg,
-                                           anchor_reference='fixed')
+                                           anchor_reference=anchor_reference)
                 ee0, _ = scene.sim.pose()
                 obj0 = scene.object_state()['pos']
                 entry = {'tick': tick, 'action_absmax': float(np.abs(chunk[:, :8]).max()),
@@ -244,7 +260,8 @@ def main(argv=None) -> int:
             'strict_success': ev['strict_success'], 'failure_reason': ev['failure_reason'],
             'checks': ev['checks'], 'metrics': ev['metrics'],
             'n_infer': n_infer, 'seconds': round(time.time() - t0, 1),
-            'anchor_reference': 'fixed', 'gripper_mode': args.gripper_mode,
+            'anchor_reference': anchor_reference, 'gripper_mode': args.gripper_mode,
+            'label_mode': args.label_mode,
             'action_gain': args.action_gain, 'execute_k': args.execute_k,
             'max_joint_step_rad': args.max_joint_step_rad,
             'stopped_episode': stopped_episode,

@@ -69,8 +69,13 @@
     },
     "normalization_counterfactual": "NOT STARTED (span premise refuted)"
   },
-  "n_files": 34,
+  "n_files": 39,
   "files": [
+    {
+      "path": "ab_repr_training.md",
+      "size_bytes": 4577,
+      "sha256": "067e0b97a298ee65a4734f79b60322d187003b7922fd7a77199f3148620dcb3f"
+    },
     {
       "path": "action_contract_audit.json",
       "size_bytes": 14910,
@@ -90,6 +95,11 @@
       "path": "b90_direction_B90_ep00.json",
       "size_bytes": 2149,
       "sha256": "5d118576d8d5f20adb9b7b1b2f09dfc922b4c061253578b5b199a4edf8096b69"
+    },
+    {
+      "path": "contract_sweep.json",
+      "size_bytes": 10109,
+      "sha256": "581cbaebeda04836ac1ae897aba7b53cfa2389bd467bd58ca88ce3506a21e5ef"
     },
     {
       "path": "contract_unit_tests.json",
@@ -152,6 +162,21 @@
       "sha256": "f6fe313702ed5457f8feaa1e63309c24f2bb804eed09c26d8b33128a706f59f7"
     },
     {
+      "path": "expert_state_analysis.json",
+      "size_bytes": 97604,
+      "sha256": "e8d7e4d32c17544904d3ba26dfa609e1a6bd0a6fd5de1f7529a8397cf9078433"
+    },
+    {
+      "path": "expert_state_diagnostic.md",
+      "size_bytes": 3849,
+      "sha256": "aa67e40745cdc5d77bce5839aca5f2b49bedf2fe418b3db1a6ebe84872178dff"
+    },
+    {
+      "path": "expert_state_picks.json",
+      "size_bytes": 5210,
+      "sha256": "29e0cf4e60b82962fe03fd0d51671c803d108093fb630a63e522c744ca7c2a3c"
+    },
+    {
       "path": "expert_vs_adapter_trace.csv",
       "size_bytes": 1756869,
       "sha256": "d1f0a9c28e3dc41baf58ad5d97b9c51069856594ce4abf345e84ac96c76342df"
@@ -188,8 +213,8 @@
     },
     {
       "path": "final_report.md",
-      "size_bytes": 7226,
-      "sha256": "307ed958ba003684d81db454c04435ced8b83cc4abf6d02f8f9c843f43145694"
+      "size_bytes": 7701,
+      "sha256": "26e763beac3db65359a805897a975198ac3e7a587a561763a2b9231e8d590832"
     },
     {
       "path": "gate4_contact_timeline_B90_ep00.json",
@@ -208,8 +233,8 @@
     },
     {
       "path": "gate4_preflight.md",
-      "size_bytes": 7218,
-      "sha256": "c7acb819f05ab9969651d4122a448d624093ad735cec0d5cc001676175aa48ec"
+      "size_bytes": 10179,
+      "sha256": "1045992fb0ad250c05e98c5849669ebba3b247e5ea198abd5d108ead538cb0e9"
     },
     {
       "path": "p0_substep_analysis.md",
@@ -218,8 +243,8 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 3884,
-      "sha256": "5410575a01714e7c4f18ba6fc2d0c4ffe9b835108ee8dc40dc5def60a44deeb4"
+      "size_bytes": 4318,
+      "sha256": "c0da1587aa96f8c5910bc9672c1ac8d26afc32331367c9a105f63cbf3fe23021"
     },
     {
       "path": "root_cause_matrix.md",
@@ -238,8 +263,8 @@
     },
     {
       "path": "substep_fk_pairing.json",
-      "size_bytes": 9974,
-      "sha256": "f9ab83e18af9b8cbc73333d65f80423fd7ba0623db2cc7916fb975c283bc438f"
+      "size_bytes": 9986,
+      "sha256": "7f2de4842fef7a9f2c022aa37268b28b55ca8df724a559eca66093ed3b07166a"
     }
   ],
   "external_audits": {
@@ -342,5 +367,93 @@
     "earlier_claim_void": "contact-phase -0.343 m retract was a target-error sum; real contact-phase path is -0.078, large retract -0.294 occurs after contact",
     "gripper_helper_bug": "build_anchor_horizon_arrays used constant g_action[t]; fixed to future rows; train_lora.make_item was already per-row, step901 unaffected"
   },
-  "unit_tests": 16
+  "unit_tests": 16,
+  "fk_purity": {
+    "fix": "substep_fk_pairing uses resetJointState + getLinkState(FK), no sim.step",
+    "test": "scripts/exp42/test_fk_purity.py",
+    "result": {
+      "sim_steps_unchanged": true,
+      "order_independent": true,
+      "fk_vs_sim_pose_max_err_m": 0.0
+    },
+    "number_shift_max_m": 0.006
+  },
+  "label_mode_wiring": {
+    "train_lora": "--label-mode anchor|target_increment",
+    "eval_rollouts": "--label-mode + --ckpt-manifest consistency check",
+    "manifest_fields": [
+      "label_mode",
+      "anchor_reference",
+      "horizon",
+      "loss_dims",
+      "steps_done",
+      "batch",
+      "seed"
+    ]
+  },
+  "expert_state_diagnostic": {
+    "n_states": 31,
+    "n_rows": 124,
+    "seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "step901_mean_absmax_by_phase": {
+      "B90_push": 0.1078,
+      "B90_approach": 0.1184,
+      "A90_approach": 0.4058
+    },
+    "verdict": "bias >> variance; model emits 0.11-0.41 rad even at expert states"
+  },
+  "ab_repr_training": {
+    "group_A": {
+      "label_mode": "anchor",
+      "anchor_reference": "fixed",
+      "steps": 300,
+      "final_loss": 0.209,
+      "lora_md5": "eb1f60b4be3892c09a550a895f12d500"
+    },
+    "group_B": {
+      "label_mode": "target_increment",
+      "anchor_reference": "recursive",
+      "steps": 300,
+      "final_loss": 0.2748,
+      "lora_md5": "8a37c122ccb5a3773f13afa65d8adf75"
+    },
+    "offline_mean": {
+      "expert_absmax": 0.019,
+      "A_absmax": 0.414,
+      "B_absmax": 0.394,
+      "A_joint_cos": 0.051,
+      "B_joint_cos": -0.002,
+      "A_ee_cos": -0.006,
+      "B_ee_cos": -0.042
+    },
+    "physical_rollouts": "not run (offline no separable difference)",
+    "verdict": "no separable representation effect at 0.476 epoch; training amount dominates"
+  },
+  "contract_sweep": {
+    "round_trip_max_err": 1.1e-16,
+    "noise_sigma_to_physical_err": {
+      "0.01": {
+        "anchor": 0.021,
+        "increment": 0.055
+      },
+      "0.05": {
+        "anchor": 0.103,
+        "increment": 0.272
+      },
+      "0.10": {
+        "anchor": 0.202,
+        "increment": 0.52
+      },
+      "0.20": {
+        "anchor": 0.404,
+        "increment": 0.99
+      }
+    },
+    "clipping": "increment hits safety clip at sigma=0.2 (7 values); anchor none"
+  }
 }

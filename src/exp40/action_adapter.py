@@ -162,8 +162,12 @@ def chunk_to_targets(
       adapter 目标落后专家 0.12–0.29 rad，导致 yaw 判据失败）。
     * ``anchor_reference='recursive'``（实验 4.0 的旧行为，保留以复现历史结果）：
       每一行被视为相对**上一步**的增量，q_target[k] = q_target[k-1] + a_k。
-      只有当训练标签是"逐控制步增量"（a_k = A[t+k] - S[t+k]）时这才是对的；
-      与 4.2 的锚点式标签混用会放大运动（审计实测 8 步末端位移 0.074 m vs 修复后 0.0086 m）。
+      它只对 ``target_increment`` 标签（``k=0: A[t]-S[t]``、``k>0: A[t+k]-A[t+k-1]``）成立；
+      对锚点式标签混用会放大运动（审计实测 8 步末端位移 0.074 m vs 修复后 0.0086 m）。
+
+    **注意 ``observed_residual``（a_k = A[t+k] - S[t+k]）不能配 recursive**：
+    实测状态未必等于前一条专家目标，累加会偏离专家命令（Gate 4 预检：重建误差 0.379 rad）。
+    若要用它，必须配 ``execute_k=1``（每步重规划），否则训练/部署语义不自洽。
 
     默认值保持 ``'recursive'`` 以免静默改变实验 4.0 已归档的闭环结果；
     4.2 的 rollout 显式传 ``'fixed'``。

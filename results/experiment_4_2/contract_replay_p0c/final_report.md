@@ -11,7 +11,7 @@
 | Gate 1 | 专家动作经 Adapter 的物理回放 | **PASS**（8/8 严格成功、目标误差 1e-17） |
 | Gate 2 | B90 方向归因（逐子步、分阶段） | **PARTIAL**（口径已按审计修正：目标偏差 vs 命令路径；接触是 15 个离散 burst） |
 | Gate 3 | 启动阶段监督审计 | **PASS**（首步 VALID / chunk 行 AMBIGUOUS / 6 帧伪影） |
-| Gate 4 | 动作表示单变量训练 | **BLOCKED**：preflight 与 Gate 1 回归已通过，训练按审计要求**未启动** |
+| Gate 4 | 动作表示单变量训练 | **IN PROGRESS**：preflight/回归/契约测试已通过，A(anchor·fixed) 与 B(target_increment·recursive) 各 300 updates 已启动 |
 
 ## 1. 本轮落地（回应独立审计 P0/P1/P2）
 
@@ -71,6 +71,10 @@ teacher-forced 目标误差 **5.6e-17 rad**（measured）/ ≤8.3e-3（recorded�
 6 帧等待是采集伪影（`_settle(0.3)`，90/90 条都在第 6 帧）。
 
 **Q6. 当前最重要的剩余问题是模型学习、时间标签、动作尺度，还是执行控制？**
+`OBSERVED`（新增证据，`expert_state_diagnostic.md`）：**在专家自己的观测上**，模型首行动作
+仍为 0.11–0.41 rad，而专家是 0.0008–0.04 rad（B90 3–61×、A90 最多 1411×），
+种子间 std 仅 0.02–0.08 → **bias 远大于 variance**，方向余弦多为 0.06–0.46（A90 抓取为负）。
+所以"条件动作学习不足"是直接观测到的，不是从闭环失败反推的。
 `SUPPORTED`：**模型在接触后/接触时的条件行为**（学习问题），但"是与否"仍与动作表示耦合：
 anchor 与 target_increment 在归一化空间的跨度差 **0.175–0.761 vs 0.023–0.057**，
 这本身就是 Gate 4 要分离的变量。

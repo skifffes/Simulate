@@ -1,0 +1,284 @@
+{
+  "source": "/scratch/lijh/exp40/repo/results/experiment_4_2/contract_replay_p0c",
+  "items": [
+    {
+      "tick": 0,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 0,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 17,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 17,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 34,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 34,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 52,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 52,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 52,
+      "phase": "pre_contact",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 52,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 53,
+      "phase": "contact_onset",
+      "robot_block": 1,
+      "block_wall": 0,
+      "frame": 53,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 109,
+      "phase": "push",
+      "robot_block": 3,
+      "block_wall": 2,
+      "frame": 109,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 124,
+      "phase": "push",
+      "robot_block": 0,
+      "block_wall": 1,
+      "frame": 124,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 140,
+      "phase": "push",
+      "robot_block": 0,
+      "block_wall": 1,
+      "frame": 140,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 156,
+      "phase": "push",
+      "robot_block": 0,
+      "block_wall": 1,
+      "frame": 156,
+      "skill": "B90",
+      "episode": 0
+    },
+    {
+      "tick": 0,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 0,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 17,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 17,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 35,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 35,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 53,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 53,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 53,
+      "phase": "pre_contact",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 53,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 54,
+      "phase": "contact_onset",
+      "robot_block": 1,
+      "block_wall": 0,
+      "frame": 54,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 109,
+      "phase": "push",
+      "robot_block": 1,
+      "block_wall": 2,
+      "frame": 109,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 131,
+      "phase": "push",
+      "robot_block": 2,
+      "block_wall": 3,
+      "frame": 131,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 154,
+      "phase": "push",
+      "robot_block": 0,
+      "block_wall": 2,
+      "frame": 154,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 177,
+      "phase": "push",
+      "robot_block": 0,
+      "block_wall": 2,
+      "frame": 177,
+      "skill": "B90",
+      "episode": 1
+    },
+    {
+      "tick": 0,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 0,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 18,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 18,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 37,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 37,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 56,
+      "phase": "approach",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 56,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 56,
+      "phase": "pre_contact",
+      "robot_block": 0,
+      "block_wall": 0,
+      "frame": 56,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 57,
+      "phase": "contact_onset",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 57,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 57,
+      "phase": "grasp",
+      "robot_block": 2,
+      "block_wall": 0,
+      "frame": 57,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 84,
+      "phase": "grasp",
+      "robot_block": 8,
+      "block_wall": 0,
+      "frame": 84,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 111,
+      "phase": "grasp",
+      "robot_block": 8,
+      "block_wall": 0,
+      "frame": 111,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 139,
+      "phase": "grasp",
+      "robot_block": 8,
+      "block_wall": 0,
+      "frame": 139,
+      "skill": "A90",
+      "episode": 5
+    },
+    {
+      "tick": 139,
+      "phase": "place",
+      "robot_block": 8,
+      "block_wall": 0,
+      "frame": 139,
+      "skill": "A90",
+      "episode": 5
+    }
+  ]
+}

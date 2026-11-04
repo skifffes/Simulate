@@ -103,3 +103,58 @@ B90 ep00 的 51 个"接触子步"分布在 **15 个离散 burst** 里，不能�
 
 限制（写进结论）：A/B 只能得出"表示及其目标分布的联合效果"；若 B 只是 normalized 空间的 7D MAE 变好、
 而 B90 的 EE +X 行为不变，则**不能**宣称学会 B90。
+
+## 8. 任务 1/3 落地（2026-11-04 第二轮）
+
+### 8.1 FK 纯净性（审计 §四）
+
+`substep_fk_pairing.py` 的 FK 原来在 `resetJointState` 后调用 `sim.step()`——那会真实推进 240 Hz 物理，
+把刚重置的关节再按旧电机目标推回去。已改为纯 FK：
+
+```python
+p.resetJointState(robot, j, q[j], targetVelocity=0.0)
+p.getLinkState(robot, 11, computeForwardKinematics=True)   # link 11 = panda_grasptarget，与 sim.pose() 一致
+```
+
+回归测试 `scripts/exp42/test_fk_purity.py`：**PASS**
+（10 次 FK 调用后 `sim.steps` 240→240、自由落体方块 z 漂移 0、顺序无关、与 `sim.pose()` 差 0.000e+00）。
+
+重算后的配对数字（`substep_fk_pairing.json`）与旧报告相比最大差 **0.006 m**，结论不变：
+
+| episode/组 | 旧（link6 + sim.step） | 新（link11 + 纯 FK） |
+| --- | --- | --- |
+| B90 ep00 接触前 | +0.186, +0.047 | +0.187, +0.048 |
+| B90 ep00 接触后无接触 | −0.294, +0.034 | −0.294, +0.038 |
+| B90 ep00 接触中 | −0.078, +0.191 | −0.080, +0.184 |
+| A90 ep00 接触后无接触 | −0.088, +0.336 | −0.089, +0.339 |
+
+### 8.2 训练/推理接线（审计 §六.1）
+
+| 项 | 状态 |
+| --- | --- |
+| `train_lora.make_item(..., label_mode=)` | 已支持 `anchor` / `target_increment`（夹爪标签始终逐行未来值） |
+| `build_batch(..., label_mode=)` | 已透传 |
+| CLI `--label-mode` | 已加 |
+| checkpoint `manifest.json` | 每次保存写 `label_mode / anchor_reference / horizon / loss_dims / steps_done / batch / seed` |
+| `eval_rollouts.py --label-mode` | 自动选 `fixed`/`recursive`；`--ckpt-manifest` 会校验 `label_mode/horizon`，不一致直接退出 |
+| `action_adapter` 注释 | 已注明 `observed_residual` 不能配 recursive（重建误差 0.379 rad） |
+
+### 8.3 训练前闭环契约测试（`contract_sweep.py`）
+
+B90 ep0 的 4 个窗口 × 专家真值，两种表示各自走 `Normalize → Unnormalize → 解码 → 物理目标`：
+
+| 归一化噪声 σ | anchor/fixed 物理目标误差 | increment/recursive | 触发裁剪值数 |
+| --- | --- | --- | --- |
+| 0 | **0.000** | **0.000** | 0 / 0 |
+| 0.01 | 0.021 | 0.055 | 0 / 0 |
+| 0.05 | 0.103 | 0.272 | 0 / 0 |
+| 0.10 | 0.202 | 0.520 | 0 / 0 |
+| 0.20 | 0.404 | 0.990 | **7**（仅 increment） |
+
+- 归一化往返误差 **1.1e-16**（两种表示相同）；
+- 噪声在 increment 上按 `Σϵ_j` 累积，物理目标误差约为 anchor 的 **2.4–2.6×**，
+  与审计 §五 的推导一致；
+- σ=0.2 时 increment 表示会先撞上安全裁剪（7 个值），anchor 不会。
+
+→ 契约测试**通过**（数值可逆、无专家标签裁剪、噪声传播量级已知）；
+A/B 的因果结论仍只能写"表示的联合效果"，因为两种表示的目标分布差 7–8 倍（§2）。

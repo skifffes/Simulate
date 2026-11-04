@@ -17,6 +17,10 @@
 | `b90_contact_phase_direction.json` | 接触阶段的模型 vs 专家方向统计 |
 | `startup_supervision_audit.md` / `startup_supervision_audit.json` | Gate 3：90 条 episode 启动时序与监督可识别性 |
 | `root_cause_matrix.md` | 13 项候选根因的证据与置信度 |
+| `expert_state_diagnostic.md` | **专家状态离线诊断**：step901 在 31 个专家状态上首行动作 3–61× 过大、方向近随机 |
+| `ab_repr_training.md` | **Gate 4 A/B 训练对照**：anchor vs target_increment 各 300 updates，离线无可分差异 |
+| `contract_sweep.json` | 归一化往返 + 噪声传播 + 安全裁剪的契约测试 |
+| `ab_repr_comparison.json` | A/B 在专家状态上的并排指标 |
 | `gate4_preflight.md` | **Gate 4 预检**：三种动作表示、接触时间线、命令路径口径修正、A/B 设计 |
 | `gate4_dataset_preflight.json` | 真实 train 上三种表示的重建误差与归一化跨度 |
 | `gate4_contact_timeline_B90_ep00/01.json` | 首次接触 / 首次接触后重推理 / 接触 burst 数 |

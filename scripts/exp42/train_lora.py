@@ -120,7 +120,16 @@ class EpisodeCache:
         return item
 
 
-def make_item(meta_row: dict, ep: dict, t: int) -> dict:
+def make_item(meta_row: dict, ep: dict, t: int, label_mode: str = 'anchor') -> dict:
+    """构造一条训练样本。
+
+    ``label_mode``：
+      * ``anchor``：``a_k = A[t+k] - S[t]``，部署端用 ``anchor_reference='fixed'``；
+      * ``target_increment``：``a_0 = A[t] - S[t]``、``a_k = A[t+k] - A[t+k-1]``，
+        部署端用 ``anchor_reference='recursive'``。两者都能精确重建专家命令序列，
+        区别只在训练目标分布（Gate 4 的单变量）。
+    夹爪标签始终逐行取 ``A[t+k,7]/0.04``（未来目标，不是常数）。
+    """
     S = ep['state']
     A = ep['action']
     T = S.shape[0]
@@ -130,7 +139,15 @@ def make_item(meta_row: dict, ep: dict, t: int) -> dict:
     q = st[:7].astype(np.float64)
     g_state = float(np.clip(st[7:9].mean() / FINGER_MAX_M, 0, 1))
     chunk = A[idx].astype(np.float64)
-    dq = chunk[:, :7] - q[None, :]
+    if label_mode == 'anchor':
+        dq = chunk[:, :7] - q[None, :]
+    elif label_mode == 'target_increment':
+        dq = np.empty_like(chunk[:, :7])
+        dq[0] = chunk[0, :7] - q
+        if dq.shape[0] > 1:
+            dq[1:] = chunk[1:, :7] - chunk[:-1, :7]
+    else:
+        raise ValueError(f'未知 label_mode: {label_mode}')
     g_cmd = np.clip(chunk[:, 7] / FINGER_MAX_M, 0, 1)
     actions = np.concatenate([dq, g_cmd[:, None]], axis=1)          # (<=16, 8)
     mask = np.zeros((HORIZON,), dtype=bool)
@@ -149,7 +166,7 @@ def make_item(meta_row: dict, ep: dict, t: int) -> dict:
     }
 
 
-def build_batch(meta, cache, transform, rng, batch_size: int):
+def build_batch(meta, cache, transform, rng, batch_size: int, label_mode: str = 'anchor'):
     import jax
 
     picks = []
@@ -159,7 +176,7 @@ def build_batch(meta, cache, transform, rng, batch_size: int):
     items, masks, skills = [], [], []
     for row, t in picks:
         ep = cache.get(row)
-        raw = make_item(row, ep, t)
+        raw = make_item(row, ep, t, label_mode=label_mode)
         masks.append(raw.pop('_valid_mask'))
         skills.append(row['skill'])
         items.append(transform(raw))
@@ -315,7 +332,8 @@ def export_full_params(train_state, path: Path) -> str:
     full = train_state.params.to_pure_dict()
     full = jax.tree.map(lambda x: np.asarray(getattr(x, 'value', x)), full)
     ckptr = ocp.PyTreeCheckpointer()
-    ckptr.save(str(path), args=ocp.args.PyTreeSave(full))
+    # 官方 checkpoint 顶层是 {"params": <tree>}；不嵌套会让 restore_params 报 KeyError: 'params'
+    ckptr.save(str(path), args=ocp.args.PyTreeSave({'params': full}))
     return str(path)
 
 
@@ -334,6 +352,9 @@ def main(argv=None) -> int:
     ap.add_argument('--export-params', action='store_true', help='训练结束导出完整 params（orbax）')
     ap.add_argument('--init-lora', default='',
                     help='从已有 LoRA npz 继续训练：只恢复 51 个 LoRA 张量，optimizer state 与学习率调度会重新初始化（step901=502+400 两阶段累计，非一次连续优化）')
+    ap.add_argument('--label-mode', choices=['anchor', 'target_increment'],
+                    default='anchor',
+                    help='anchor: a_k=A[t+k]-S[t] 配 fixed；target_increment: 逐步增量 配 recursive')
     ap.add_argument('--loss-dims', type=int, default=0,
                     help='0=官方 32 维 loss；8=只在前 8 维（7 关节+1 夹爪）求平均（P0b 对照实验）')
     args = ap.parse_args(argv)
@@ -379,7 +400,8 @@ def main(argv=None) -> int:
     print(f'params total={total/1e6:.1f}M trainable={trainable/1e6:.2f}M '
           f'({100 * trainable / total:.2f}%)', flush=True)
 
-    batch = build_batch(meta, cache, transform, rng_np, args.batch)
+    batch = build_batch(meta, cache, transform, rng_np, args.batch,
+                           label_mode=args.label_mode)
     print('batch keys:', sorted(k for k in batch if not k.startswith('_')), flush=True)
     obs = _model.Observation.from_dict({k: v for k, v in batch.items() if not k.startswith('_')})
     actions = batch['actions']
@@ -448,7 +470,8 @@ def main(argv=None) -> int:
                 continue
             vals = []
             for b in range(n_batches):
-                bt = build_batch(meta, cache, transform, rng_np, args.batch)
+                bt = build_batch(meta, cache, transform, rng_np, args.batch,
+                        label_mode=args.label_mode)
                 ob = _model.Observation.from_dict(
                     {kk: v for kk, v in bt.items() if not kk.startswith('_')})
                 # compute_loss 有 jaxtyping 检查，必须是 jax 数组而不是 numpy
@@ -464,7 +487,8 @@ def main(argv=None) -> int:
     # 注意：上面的 pre-loop step 已经是第 1 次参数更新，因此这里从 2 开始，
     # 使 `--steps N` 恰好对应 N 次 optimizer update（独立审计缺陷 #4）。
     for k in range(2, args.steps + 1):
-        batch = build_batch(meta, cache, transform, rng_np, args.batch)
+        batch = build_batch(meta, cache, transform, rng_np, args.batch,
+                           label_mode=args.label_mode)
         b_obs = _model.Observation.from_dict(
             {kk: v for kk, v in batch.items() if not kk.startswith('_')})
         train_state, info = step_fn(jax_rng, train_state, (b_obs, batch['actions']))
@@ -484,6 +508,17 @@ def main(argv=None) -> int:
         n_done = k
         if k % args.save_every == 0 or k == args.steps:
             size = save_ckpt(train_state, cfg, OUT / 'ckpts', k)
+            (OUT / 'ckpts' / 'manifest.json').write_text(json.dumps({
+                'label_mode': args.label_mode,
+                'anchor_reference': ('fixed' if args.label_mode == 'anchor'
+                                     else 'recursive'),
+                'horizon': HORIZON, 'loss_dims': args.loss_dims,
+                'steps_done': k, 'batch': args.batch,
+                'lr': getattr(args, 'lr', None),  # 训练用官方 schedule，无独立 CLI
+                'base_config': 'pi05_droid_finetune',
+                'lora_variants': ['gemma_2b_lora', 'gemma_300m_lora'],
+                'seed': args.seed, 'init_lora': args.init_lora or None,
+            }, ensure_ascii=False, indent=2), encoding='utf-8')
             print(f'  saved ckpt step {k} ({size/1e6:.1f} MB)', flush=True)
 
     if args.export_params:
@@ -503,6 +538,9 @@ def main(argv=None) -> int:
     except Exception:
         pass
     bench = {'steps': args.steps, 'optimizer_updates': args.steps,
+             'label_mode': args.label_mode,
+             'anchor_reference': ('fixed' if args.label_mode == 'anchor' else 'recursive'),
+             'horizon': HORIZON, 'loss_dims': args.loss_dims,
              'note': 'steps = 实际 optimizer update 次数（已修正旧版 +1 偏差）',
              'batch_size': args.batch, 'accum': args.accum,
              'seconds_per_optimizer_step': total_s / max(args.steps, 1),
