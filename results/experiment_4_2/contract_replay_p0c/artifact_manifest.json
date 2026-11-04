@@ -585,7 +585,13 @@
       "rows1_15_mae": 0.1558,
       "phys_max_err_rad": 9.357
     },
-    "note": "anchor error uniform across k; increment accumulates eps_j to 9.36 rad at k=15"
+    "note": "anchor error uniform across k; increment accumulates eps_j to 9.36 rad at k=15",
+    "curve1200": {
+      "row0_mae": 0.0259,
+      "rows1_15_mae": 0.034,
+      "phys_max_err_rad": 0.298,
+      "phys_err_k15": 0.288
+    }
   },
   "overfit_probe": {
     "n_windows": 8,
