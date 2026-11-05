@@ -1,0 +1,63 @@
+{
+  "A90": {
+    "train_configs": [
+      "A_x-3_y-3",
+      "A_x00_y-3",
+      "A_x+3_y-3",
+      "A_x-3_y00",
+      "A_x00_y00",
+      "A_x+3_y00"
+    ],
+    "used_by_new": [
+      "A_x+3_y-3",
+      "A_x+3_y00",
+      "A_x-3_y-3",
+      "A_x-3_y00",
+      "A_x00_y-3",
+      "A_x00_y00"
+    ],
+    "val_configs": [
+      "A_x-3_y+3",
+      "A_x00_y+3"
+    ],
+    "test_configs": [
+      "A_x+3_y+3"
+    ],
+    "uses_val_or_test": []
+  },
+  "B90": {
+    "train_configs": [
+      "B_wall_y_low|B_obj_y015|B_robot_home",
+      "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "B_wall_y_mid|B_obj_y021|B_robot_offset"
+    ],
+    "used_by_new": [
+      "B_wall_y_low|B_obj_y015|B_robot_home",
+      "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "B_wall_y_mid|B_obj_y021|B_robot_offset"
+    ],
+    "val_configs": [
+      "B_wall_y_high|B_obj_y027|B_robot_home"
+    ],
+    "test_configs": [
+      "B_wall_y_high|B_obj_y027|B_robot_offset"
+    ],
+    "uses_val_or_test": []
+  },
+  "seed_check": {
+    "n_success_episodes": 262,
+    "n_unique_new_seeds": 253,
+    "n_old_seeds": 107,
+    "seed_overlap_with_old": 0,
+    "new_seed_ranges": {
+      "A90": "offset 40-67",
+      "B90": "offset 40-79"
+    }
+  },
+  "duplicate_episode_check": {
+    "unique_(skill,seed)": 253,
+    "n_success_episodes": 262
+  }
+}

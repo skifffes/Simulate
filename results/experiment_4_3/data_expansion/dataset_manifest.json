@@ -1,0 +1,4228 @@
+{
+  "episodes": [
+    {
+      "tag": "a90",
+      "skill": "A90",
+      "episode_index": 2,
+      "seed": 410240,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 189,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006219498993348603
+      },
+      "data_dir": "/scratch/lijh/exp43/data/A90"
+    },
+    {
+      "tag": "a90",
+      "skill": "A90",
+      "episode_index": 4,
+      "seed": 410440,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0031918257533638168
+      },
+      "data_dir": "/scratch/lijh/exp43/data/A90"
+    },
+    {
+      "tag": "a90",
+      "skill": "A90",
+      "episode_index": 0,
+      "seed": 410040,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004828975450163776
+      },
+      "data_dir": "/scratch/lijh/exp43/data/A90"
+    },
+    {
+      "tag": "a90",
+      "skill": "A90",
+      "episode_index": 3,
+      "seed": 410340,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012018969599583297
+      },
+      "data_dir": "/scratch/lijh/exp43/data/A90"
+    },
+    {
+      "tag": "a90",
+      "skill": "A90",
+      "episode_index": 1,
+      "seed": 410140,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.008134020365253876
+      },
+      "data_dir": "/scratch/lijh/exp43/data/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 2,
+      "seed": 410240,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 189,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006219498993348603
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 15,
+      "seed": 410442,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00734103839708233
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 40,
+      "seed": 410546,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0055536341932935
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 52,
+      "seed": 410149,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005095796919955582
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 14,
+      "seed": 410342,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020110793666943863
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 17,
+      "seed": 410043,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0035845021134333207
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 59,
+      "seed": 410250,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003754650358214846
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 43,
+      "seed": 410347,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 200,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012669255565391373
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 36,
+      "seed": 410146,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 193,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00468284771268493
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 25,
+      "seed": 410244,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 187,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005508005731821516
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 54,
+      "seed": 410349,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.021162480705988192
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 39,
+      "seed": 410446,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003479399308076301
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 62,
+      "seed": 410550,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006866310915118779
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 35,
+      "seed": 410046,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0044779324716257875
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 60,
+      "seed": 410350,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020637956390240735
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 10,
+      "seed": 410441,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005424407323725558
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 8,
+      "seed": 410241,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 185,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005144767466180885
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 4,
+      "seed": 410440,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0031918257533638168
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 18,
+      "seed": 410143,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020653807299031164
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 42,
+      "seed": 410147,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005429541181218703
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 0,
+      "seed": 410040,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004828975450163776
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 20,
+      "seed": 410343,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007366559032206692
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 47,
+      "seed": 410148,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005038889562271541
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 50,
+      "seed": 410548,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006002709621711826
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 57,
+      "seed": 410050,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004779831351191293
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 45,
+      "seed": 410547,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020957530950778385
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 24,
+      "seed": 410144,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005522427189901172
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 58,
+      "seed": 410150,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0046770545146758
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 48,
+      "seed": 410348,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.01276582144783827
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 46,
+      "seed": 410048,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004383694718050675
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 3,
+      "seed": 410340,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012018969599583297
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 51,
+      "seed": 410049,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003209757728430331
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 31,
+      "seed": 410245,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.02069150180309165
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 67,
+      "seed": 410551,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004511883940530591
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 44,
+      "seed": 410447,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004791349797956801
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 38,
+      "seed": 410346,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.01244571354829738
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 55,
+      "seed": 410449,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020344134451245863
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 32,
+      "seed": 410345,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004124979573241079
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 19,
+      "seed": 410243,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 189,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00466096432063816
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 12,
+      "seed": 410042,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.008072981732114501
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 13,
+      "seed": 410142,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 190,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.013195759518765188
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 49,
+      "seed": 410448,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005915552526725234
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 53,
+      "seed": 410249,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 188,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020630458923869322
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 23,
+      "seed": 410044,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005266103620077514
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 30,
+      "seed": 410145,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004647735835538796
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 7,
+      "seed": 410141,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004213379142050745
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 22,
+      "seed": 410543,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005485145774022161
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 33,
+      "seed": 410445,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004396182655067696
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 9,
+      "seed": 410341,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0057097731982770905
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 61,
+      "seed": 410450,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005144015173247086
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 28,
+      "seed": 410544,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020639685279412474
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 63,
+      "seed": 410051,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00792929992479258
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 65,
+      "seed": 410351,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00461358453383725
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 69,
+      "seed": 410152,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004234378004415673
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 21,
+      "seed": 410443,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020605598621457475
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 68,
+      "seed": 410052,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006362311212431975
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 64,
+      "seed": 410151,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006443038816383138
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 37,
+      "seed": 410246,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 189,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005239888479908988
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 34,
+      "seed": 410545,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006238844128648848
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 29,
+      "seed": 410045,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005833454782472011
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 41,
+      "seed": 410047,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0041668843879017585
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 56,
+      "seed": 410549,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005635129094335069
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 66,
+      "seed": 410451,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012141427587516653
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 5,
+      "seed": 410540,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00537177908516194
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 16,
+      "seed": 410542,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0038170345958295528
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 27,
+      "seed": 410444,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005214163476561156
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 6,
+      "seed": 410041,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003913817380565672
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 26,
+      "seed": 410344,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005741218490074926
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 1,
+      "seed": 410140,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.008134020365253876
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90a",
+      "skill": "A90",
+      "episode_index": 11,
+      "seed": 410541,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00502217742820581
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90a/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 12,
+      "seed": 410156,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 190,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0040970537860022015
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 49,
+      "seed": 410562,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020356726539912454
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 48,
+      "seed": 410462,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00569367026803304
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 57,
+      "seed": 410164,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00429914984544913
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 66,
+      "seed": 410465,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004692511748942273
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 53,
+      "seed": 410363,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 200,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005535357801141965
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 25,
+      "seed": 410358,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005394664352605924
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 20,
+      "seed": 410357,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00603101187640668
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 38,
+      "seed": 410560,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005570632888095355
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 3,
+      "seed": 410454,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006034481635502428
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 13,
+      "seed": 410256,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 186,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00622367683359801
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 17,
+      "seed": 410057,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005642632056648471
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 9,
+      "seed": 410455,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.013403428958371004
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 2,
+      "seed": 410354,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012402558231878144
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 14,
+      "seed": 410356,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 200,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007022511638693479
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 1,
+      "seed": 410154,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005829340005911025
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 26,
+      "seed": 410458,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0037554712187485707
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 42,
+      "seed": 410461,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006598517127918235
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 68,
+      "seed": 410066,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 200,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003731507374163669
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 21,
+      "seed": 410457,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.01241758110743843
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 34,
+      "seed": 410160,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012997650590259396
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 18,
+      "seed": 410157,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0032643329990125697
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 36,
+      "seed": 410360,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0037171858865365564
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 37,
+      "seed": 410460,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006434007680214381
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 51,
+      "seed": 410163,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004272619915062132
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 40,
+      "seed": 410161,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.01977977077284979
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 5,
+      "seed": 410055,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005159629756630996
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 33,
+      "seed": 410060,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004127587530995208
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 52,
+      "seed": 410263,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004767339542175484
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 43,
+      "seed": 410561,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005460168226224894
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 59,
+      "seed": 410364,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005834994656478829
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 67,
+      "seed": 410565,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006145361798499288
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 22,
+      "seed": 410557,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007675924007720656
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 32,
+      "seed": 410559,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004785636115313108
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 63,
+      "seed": 410165,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.019871258633708887
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 8,
+      "seed": 410355,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 200,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007067266320323029
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 30,
+      "seed": 410359,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.008391998976078075
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 6,
+      "seed": 410155,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0034134355801687345
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 62,
+      "seed": 410065,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.021168458205814002
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 0,
+      "seed": 410054,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.01995709230524649
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 46,
+      "seed": 410262,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 188,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.006080133028761805
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 27,
+      "seed": 410558,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020560380232309987
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 45,
+      "seed": 410162,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0033788056885610093
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 56,
+      "seed": 410064,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0043794175230211065
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 55,
+      "seed": 410563,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020181912520262957
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 69,
+      "seed": 410166,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00011222857001766581
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 39,
+      "seed": 410061,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 194,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.013177054387719465
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 50,
+      "seed": 410063,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.008081319323925584
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 15,
+      "seed": 410456,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.02060074043906065
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 28,
+      "seed": 410059,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 5.713810254344064e-06
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 7,
+      "seed": 410255,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 189,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007218360001310703
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 16,
+      "seed": 410556,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.00425581019625972
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 24,
+      "seed": 410158,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005587075686659258
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 41,
+      "seed": 410361,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.02054191613934807
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 54,
+      "seed": 410463,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 197,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020607258075565814
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 10,
+      "seed": 410555,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 195,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005632573429108055
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 65,
+      "seed": 410365,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.007989823186013777
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 44,
+      "seed": 410062,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0059203459992856235
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 31,
+      "seed": 410459,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.003562536499996743
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 64,
+      "seed": 410265,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 185,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.02041872857412293
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 23,
+      "seed": 410058,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012309125049615031
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 60,
+      "seed": 410464,
+      "config_id": "A_x00_y00",
+      "goal_id": "A_x00_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012123587826620609
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 29,
+      "seed": 410159,
+      "config_id": "A_x00_y-3",
+      "goal_id": "A_x00_y-3",
+      "n_control_steps": 191,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.0032319743759987815
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 19,
+      "seed": 410257,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 190,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.005817679696634791
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 58,
+      "seed": 410264,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 190,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.02089639912479861
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 11,
+      "seed": 410056,
+      "config_id": "A_x-3_y-3",
+      "goal_id": "A_x-3_y-3",
+      "n_control_steps": 199,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020603168070389536
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 4,
+      "seed": 410554,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.015616465701165523
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 35,
+      "seed": 410260,
+      "config_id": "A_x+3_y-3",
+      "goal_id": "A_x+3_y-3",
+      "n_control_steps": 188,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.020071583135178366
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 47,
+      "seed": 410362,
+      "config_id": "A_x-3_y00",
+      "goal_id": "A_x-3_y00",
+      "n_control_steps": 198,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.012957376854994714
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "a90b",
+      "skill": "A90",
+      "episode_index": 61,
+      "seed": 410564,
+      "config_id": "A_x+3_y00",
+      "goal_id": "A_x+3_y00",
+      "n_control_steps": 196,
+      "metrics": {
+        "advance_x_m": null,
+        "wall_contact_steps": null,
+        "terminal_gap_m": null,
+        "tilt_deg": 0.004963785349814583
+      },
+      "data_dir": "/scratch/lijh/exp43/data_a90b/A90"
+    },
+    {
+      "tag": "b90",
+      "skill": "B90",
+      "episode_index": 2,
+      "seed": 420340,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17591293437267252,
+        "wall_contact_steps": 858,
+        "terminal_gap_m": 0.00016002974204820664,
+        "tilt_deg": 0.005436149499779303
+      },
+      "data_dir": "/scratch/lijh/exp43/data/B90"
+    },
+    {
+      "tag": "b90",
+      "skill": "B90",
+      "episode_index": 0,
+      "seed": 420040,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18391710674305128,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -8.317316211314818e-06,
+        "tilt_deg": 0.01375618596524597
+      },
+      "data_dir": "/scratch/lijh/exp43/data/B90"
+    },
+    {
+      "tag": "b90",
+      "skill": "B90",
+      "episode_index": 3,
+      "seed": 420041,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 167,
+      "metrics": {
+        "advance_x_m": 0.17798368416117383,
+        "wall_contact_steps": 791,
+        "terminal_gap_m": 0.0004734112470468066,
+        "tilt_deg": 0.005216644702998562
+      },
+      "data_dir": "/scratch/lijh/exp43/data/B90"
+    },
+    {
+      "tag": "b90",
+      "skill": "B90",
+      "episode_index": 1,
+      "seed": 420140,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 177,
+      "metrics": {
+        "advance_x_m": 0.18231646003026192,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 0.000170303932674587,
+        "tilt_deg": 0.005118060262738266
+      },
+      "data_dir": "/scratch/lijh/exp43/data/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 54,
+      "seed": 420258,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17699000292136113,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.4410610946646862e-05,
+        "tilt_deg": 2.509167705918179
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 18,
+      "seed": 420046,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18106772622623601,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -2.206734415155509e-05,
+        "tilt_deg": 0.32561906672723484
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 32,
+      "seed": 420051,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.1812763642562324,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00022760712452263299,
+        "tilt_deg": 0.004724613492049916
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 30,
+      "seed": 420250,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 168,
+      "metrics": {
+        "advance_x_m": 0.1732251622098897,
+        "wall_contact_steps": 799,
+        "terminal_gap_m": 0.00025076273969015794,
+        "tilt_deg": 0.005865877145626242
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 2,
+      "seed": 420340,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17591293437267252,
+        "wall_contact_steps": 858,
+        "terminal_gap_m": 0.00016002974204820664,
+        "tilt_deg": 0.005436149499779303
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 15,
+      "seed": 420145,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.18104927408846383,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00019888377776333677,
+        "tilt_deg": 0.003681386704490134
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 56,
+      "seed": 420259,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1776278160971677,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -2.2440698043579843e-05,
+        "tilt_deg": 0.36125071255995905
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 17,
+      "seed": 420345,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17871779044013958,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 9.511234060244345e-05,
+        "tilt_deg": 0.004792728904177671
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 55,
+      "seed": 420358,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 176,
+      "metrics": {
+        "advance_x_m": 0.17555390159380346,
+        "wall_contact_steps": 885,
+        "terminal_gap_m": 0.00024284988520462125,
+        "tilt_deg": 0.005750310975418418
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 11,
+      "seed": 420144,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18064153030976693,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -1.3257042414505094e-05,
+        "tilt_deg": 0.10837478063540024
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 28,
+      "seed": 420349,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 166,
+      "metrics": {
+        "advance_x_m": 0.17504061025492168,
+        "wall_contact_steps": 796,
+        "terminal_gap_m": 0.000276650253743127,
+        "tilt_deg": 0.01304446017081527
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 10,
+      "seed": 420044,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18043446070260982,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -8.213290370928661e-06,
+        "tilt_deg": 0.004748699598460042
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 8,
+      "seed": 420342,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17606662493465663,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -9.980081317806366e-06,
+        "tilt_deg": 0.00687945836711786
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 42,
+      "seed": 420254,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17580273328318052,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": 0.00020180958464299792,
+        "tilt_deg": 0.017151781560844948
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 51,
+      "seed": 420357,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.1763918517798112,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 9.077876721208522e-05,
+        "tilt_deg": 0.003624285893623258
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 37,
+      "seed": 420352,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17373363105638573,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -2.414677209972016e-05,
+        "tilt_deg": 0.18955736253979363
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 24,
+      "seed": 420347,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17740984005833027,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": 0.00013400591174961285,
+        "tilt_deg": 0.007892888122249067
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 34,
+      "seed": 420351,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 166,
+      "metrics": {
+        "advance_x_m": 0.1764026690386572,
+        "wall_contact_steps": 755,
+        "terminal_gap_m": 1.599549041753079e-05,
+        "tilt_deg": 0.004597970805100639
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 0,
+      "seed": 420040,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18391710674305128,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -8.317316211314818e-06,
+        "tilt_deg": 0.01375618596524597
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 29,
+      "seed": 420150,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.17943587779393222,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00019797221031936374,
+        "tilt_deg": 0.003403169825492202
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 47,
+      "seed": 420256,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.175963613635714,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -9.996891973118593e-06,
+        "tilt_deg": 0.006667796560532445
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 33,
+      "seed": 420151,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18317615237107743,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.0015197567492251e-05,
+        "tilt_deg": 0.00867247017512606
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 13,
+      "seed": 420344,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17827786552245206,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": 8.057091826485507e-05,
+        "tilt_deg": 0.005657182125900774
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 50,
+      "seed": 420157,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18171919975424955,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": 0.00020416402219336494,
+        "tilt_deg": 0.006766158260932957
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 19,
+      "seed": 420146,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18336413480030878,
+        "wall_contact_steps": 633,
+        "terminal_gap_m": -8.225366134650969e-06,
+        "tilt_deg": 0.0030536389484690576
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 49,
+      "seed": 420057,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.18076907890025762,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00014253698668797998,
+        "tilt_deg": 0.003917263916521985
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 41,
+      "seed": 420054,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1794609684186651,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -1.5529119886781295e-05,
+        "tilt_deg": 0.5444948984083287
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 45,
+      "seed": 420255,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17466386836075254,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -9.856982042699691e-06,
+        "tilt_deg": 0.014385704619984624
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 39,
+      "seed": 420253,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1782771773472016,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -2.2005772942867985e-05,
+        "tilt_deg": 0.43619555192902726
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 23,
+      "seed": 420247,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17539000249012515,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -8.909394337397458e-06,
+        "tilt_deg": 0.0047877529589489334
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 36,
+      "seed": 420252,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1734472147850964,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": 6.918047441661912e-05,
+        "tilt_deg": 0.003826996393311533
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 12,
+      "seed": 420244,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17556116934181487,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -9.853320201425042e-06,
+        "tilt_deg": 0.013974294030709659
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 9,
+      "seed": 420343,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17512094587937643,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": 1.4624054782363949e-05,
+        "tilt_deg": 0.009976600059273285
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 25,
+      "seed": 420248,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1776324816444278,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.123083501242128e-05,
+        "tilt_deg": 0.004593619878530639
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 52,
+      "seed": 420058,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.177457392938553,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -1.4157470680120632e-05,
+        "tilt_deg": 0.05372858403914979
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 20,
+      "seed": 420246,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1742071628825399,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -2.1774227674464797e-05,
+        "tilt_deg": 0.4887130132391613
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 16,
+      "seed": 420245,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17859228321790455,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -1.0555795749933594e-05,
+        "tilt_deg": 0.010299282620847611
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 5,
+      "seed": 420042,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1804257782243326,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -1.1427498920135726e-05,
+        "tilt_deg": 1.3219396717481207
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 7,
+      "seed": 420242,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17546482868180624,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -8.22843540093654e-06,
+        "tilt_deg": 0.020873124041662527
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 27,
+      "seed": 420149,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 167,
+      "metrics": {
+        "advance_x_m": 0.1825363613248785,
+        "wall_contact_steps": 755,
+        "terminal_gap_m": 0.00016174995043760632,
+        "tilt_deg": 0.0037166660632515624
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 14,
+      "seed": 420045,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 177,
+      "metrics": {
+        "advance_x_m": 0.1792867633808367,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 0.0003434876743030335,
+        "tilt_deg": 0.005755797115280349
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 35,
+      "seed": 420052,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1805114963046125,
+        "wall_contact_steps": 633,
+        "terminal_gap_m": -2.233339902357745e-05,
+        "tilt_deg": 0.17778897088608264
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 43,
+      "seed": 420354,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17395445507493734,
+        "wall_contact_steps": 833,
+        "terminal_gap_m": 1.3019070316921955e-05,
+        "tilt_deg": 0.007685322589772418
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 6,
+      "seed": 420142,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 167,
+      "metrics": {
+        "advance_x_m": 0.1828586164607986,
+        "wall_contact_steps": 806,
+        "terminal_gap_m": 4.432505279983179e-05,
+        "tilt_deg": 0.005360393854993873
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 31,
+      "seed": 420350,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17632600792765618,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -8.272431988975981e-06,
+        "tilt_deg": 0.013254879682193537
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 53,
+      "seed": 420158,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1806998019446613,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": 0.00014954694048530115,
+        "tilt_deg": 0.0026177628657270417
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 26,
+      "seed": 420348,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17644804566762984,
+        "wall_contact_steps": 814,
+        "terminal_gap_m": 0.00010700787542605728,
+        "tilt_deg": 0.003736692098785226
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 48,
+      "seed": 420356,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17726136364280476,
+        "wall_contact_steps": 195,
+        "terminal_gap_m": 0.00019085344078761945,
+        "tilt_deg": 0.017615846145826067
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 21,
+      "seed": 420346,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17569438361189027,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 1.114910375243916e-06,
+        "tilt_deg": 0.005742977270139499
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 4,
+      "seed": 420341,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 161,
+      "metrics": {
+        "advance_x_m": 0.17713728737754775,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": 0.00012795808669829878,
+        "tilt_deg": 0.004340441945926728
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 46,
+      "seed": 420355,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.1746690339228275,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -8.647554493257381e-06,
+        "tilt_deg": 0.0028588792329583925
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 3,
+      "seed": 420041,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 167,
+      "metrics": {
+        "advance_x_m": 0.17798368416117383,
+        "wall_contact_steps": 791,
+        "terminal_gap_m": 0.0004734112470468066,
+        "tilt_deg": 0.005216644702998562
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 38,
+      "seed": 420153,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1840676102847053,
+        "wall_contact_steps": 628,
+        "terminal_gap_m": -3.121151567198055e-07,
+        "tilt_deg": 0.005103946095334962
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 40,
+      "seed": 420353,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17714210961224253,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.2343219432442432e-05,
+        "tilt_deg": 0.01468460805596144
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 1,
+      "seed": 420140,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 177,
+      "metrics": {
+        "advance_x_m": 0.18231646003026192,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 0.000170303932674587,
+        "tilt_deg": 0.005118060262738266
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 44,
+      "seed": 420055,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 162,
+      "metrics": {
+        "advance_x_m": 0.17964059174620206,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": 4.241335132082469e-05,
+        "tilt_deg": 0.006684365200248887
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90a",
+      "skill": "B90",
+      "episode_index": 22,
+      "seed": 420147,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18444896180905734,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -8.783631181064067e-06,
+        "tilt_deg": 0.01809146916823489
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90a/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 44,
+      "seed": 420275,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 163,
+      "metrics": {
+        "advance_x_m": 0.17551872415860037,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": 7.482472517528205e-05,
+        "tilt_deg": 0.004068135136794155
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 35,
+      "seed": 420372,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 176,
+      "metrics": {
+        "advance_x_m": 0.17430059904072426,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 8.278343756107365e-05,
+        "tilt_deg": 0.005329805923673365
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 1,
+      "seed": 420360,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17406294305858194,
+        "wall_contact_steps": 843,
+        "terminal_gap_m": 3.6457894805441704e-05,
+        "tilt_deg": 0.005061255537755735
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 25,
+      "seed": 420368,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 161,
+      "metrics": {
+        "advance_x_m": 0.17436796644313513,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": -1.1506473617473034e-05,
+        "tilt_deg": 0.006957496431613749
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 2,
+      "seed": 420061,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.17954313739747219,
+        "wall_contact_steps": 633,
+        "terminal_gap_m": -1.0760418885813472e-05,
+        "tilt_deg": 0.021127314136359064
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 9,
+      "seed": 420063,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.17889145711127608,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 7.931433926300357e-06,
+        "tilt_deg": 0.003355705542490447
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 34,
+      "seed": 420272,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1770032054440306,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -9.865939825770553e-06,
+        "tilt_deg": 0.018691233358831525
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 49,
+      "seed": 420178,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18095702377888045,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -9.886878300835455e-06,
+        "tilt_deg": 0.003049658414269714
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 27,
+      "seed": 420269,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 183,
+      "metrics": {
+        "advance_x_m": 0.17488254620759425,
+        "wall_contact_steps": 935,
+        "terminal_gap_m": 0.00013892925862057925,
+        "tilt_deg": 0.004417785438501671
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 46,
+      "seed": 420176,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18096583301412517,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 7.103044111922419e-05,
+        "tilt_deg": 0.005870186200140138
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 0,
+      "seed": 420160,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18391903981930635,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -1.0036426328463577e-05,
+        "tilt_deg": 0.008976099739163006
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 51,
+      "seed": 420378,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17867797140111563,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 8.888824668595863e-05,
+        "tilt_deg": 0.0053160302729678725
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 36,
+      "seed": 420173,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 177,
+      "metrics": {
+        "advance_x_m": 0.18122830350003405,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 0.00024895386919743245,
+        "tilt_deg": 0.00389898233124089
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 8,
+      "seed": 420362,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17670726734372944,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00019160149589492192,
+        "tilt_deg": 0.003561613148962211
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 20,
+      "seed": 420166,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18377582478619914,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.0047964275061716e-05,
+        "tilt_deg": 0.008448831326268195
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 17,
+      "seed": 420165,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18283238819609415,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -8.913442244518066e-06,
+        "tilt_deg": 0.00807507811389522
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 15,
+      "seed": 420364,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 171,
+      "metrics": {
+        "advance_x_m": 0.17876429939273486,
+        "wall_contact_steps": 859,
+        "terminal_gap_m": 0.00021843887104933124,
+        "tilt_deg": 0.005830612135291199
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 55,
+      "seed": 420379,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17889689945795106,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -1.0022083493987921e-05,
+        "tilt_deg": 0.007124171851307569
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 42,
+      "seed": 420075,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.17923644511525205,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -9.98030167564945e-06,
+        "tilt_deg": 0.008672593135613693
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 30,
+      "seed": 420171,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18431100006795753,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -2.5137606529779255e-05,
+        "tilt_deg": 0.03071346260132926
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 21,
+      "seed": 420366,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17386435306130754,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -1.0091766009634462e-05,
+        "tilt_deg": 0.004190604077465309
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 47,
+      "seed": 420276,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 173,
+      "metrics": {
+        "advance_x_m": 0.17392110515629078,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 5.703109955212948e-05,
+        "tilt_deg": 0.004362325087195877
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 37,
+      "seed": 420273,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1785007741047222,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -9.968247356995086e-06,
+        "tilt_deg": 0.005744820792050504
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 12,
+      "seed": 420363,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 166,
+      "metrics": {
+        "advance_x_m": 0.1755458630284401,
+        "wall_contact_steps": 796,
+        "terminal_gap_m": 3.375922229276185e-05,
+        "tilt_deg": 0.005984606169137548
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 24,
+      "seed": 420367,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17846715710603078,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": 4.551771095040458e-06,
+        "tilt_deg": 0.008540279083175728
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 6,
+      "seed": 420162,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18241753277616068,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": 7.583999665472518e-05,
+        "tilt_deg": 0.002876611543106137
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 19,
+      "seed": 420365,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17857388995590995,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -3.136945050385975e-07,
+        "tilt_deg": 0.007429777584634891
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 18,
+      "seed": 420265,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17675956111384483,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -1.0135031612623635e-05,
+        "tilt_deg": 0.006653168368376789
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 52,
+      "seed": 420079,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1826701712086033,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.0063454022657403e-05,
+        "tilt_deg": 0.006743097378297868
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 38,
+      "seed": 420373,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17327929829915378,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -2.240866435654354e-05,
+        "tilt_deg": 0.18920390333244647
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 48,
+      "seed": 420077,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18011149962049744,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 0.00012609672544761086,
+        "tilt_deg": 0.007931622239154782
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 16,
+      "seed": 420065,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 162,
+      "metrics": {
+        "advance_x_m": 0.1804146078745723,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": 2.65936603326411e-05,
+        "tilt_deg": 0.006381048330637391
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 41,
+      "seed": 420374,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17821850214319945,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -1.1028861145789826e-05,
+        "tilt_deg": 0.004992671954726016
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 11,
+      "seed": 420263,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 163,
+      "metrics": {
+        "advance_x_m": 0.17329575174750933,
+        "wall_contact_steps": 695,
+        "terminal_gap_m": 6.404544989346839e-06,
+        "tilt_deg": 0.0033457204072634738
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 23,
+      "seed": 420167,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.17898245422008996,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 3.194091998315329e-05,
+        "tilt_deg": 0.004373374001393921
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 32,
+      "seed": 420072,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1836795452501898,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": 0.00015790272837179486,
+        "tilt_deg": 0.01593284120069122
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 10,
+      "seed": 420163,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.18018622775472204,
+        "wall_contact_steps": 628,
+        "terminal_gap_m": -1.2178500714221663e-05,
+        "tilt_deg": 0.01681300716073458
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 29,
+      "seed": 420170,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18079629803718167,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -2.2082052402616625e-05,
+        "tilt_deg": 0.29235539863220494
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 40,
+      "seed": 420274,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17623031794106736,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": 0.00011339138694965722,
+        "tilt_deg": 0.019559940594094216
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 28,
+      "seed": 420369,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17531250223056916,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -2.187034444978142e-05,
+        "tilt_deg": 0.453547827227307
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 13,
+      "seed": 420064,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.17862562085590372,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -2.4379569831700643e-05,
+        "tilt_deg": 0.1794541171128764
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 5,
+      "seed": 420361,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17672669426918886,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": 6.648570922307417e-05,
+        "tilt_deg": 0.004414985467218902
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 54,
+      "seed": 420279,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.17678428960093184,
+        "wall_contact_steps": 629,
+        "terminal_gap_m": -8.365694529333112e-07,
+        "tilt_deg": 0.02113467917351812
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 45,
+      "seed": 420375,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17385086785507442,
+        "wall_contact_steps": 634,
+        "terminal_gap_m": -2.4357103525662893e-05,
+        "tilt_deg": 0.1404370618057069
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 39,
+      "seed": 420174,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18031757777970114,
+        "wall_contact_steps": 633,
+        "terminal_gap_m": -1.9656605760198786e-05,
+        "tilt_deg": 0.3981790139533158
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 22,
+      "seed": 420067,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1800597124424791,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -1.0057330884993831e-05,
+        "tilt_deg": 0.009328650871323743
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 31,
+      "seed": 420371,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 156,
+      "metrics": {
+        "advance_x_m": 0.17901702518275464,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -2.1936202935446403e-05,
+        "tilt_deg": 0.33988870567504675
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 53,
+      "seed": 420179,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.1790152057902501,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -9.993340843728049e-06,
+        "tilt_deg": 0.00827938432169005
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 7,
+      "seed": 420262,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 178,
+      "metrics": {
+        "advance_x_m": 0.1756967206543638,
+        "wall_contact_steps": 875,
+        "terminal_gap_m": 0.00018421113581401638,
+        "tilt_deg": 0.003916753090449461
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 43,
+      "seed": 420175,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18171156170057756,
+        "wall_contact_steps": 630,
+        "terminal_gap_m": -4.811520213476861e-06,
+        "tilt_deg": 0.019924122592144492
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 50,
+      "seed": 420278,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 173,
+      "metrics": {
+        "advance_x_m": 0.17741650365705286,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00014632110673273857,
+        "tilt_deg": 0.00528568910916489
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 3,
+      "seed": 420161,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 167,
+      "metrics": {
+        "advance_x_m": 0.17885862702403243,
+        "wall_contact_steps": 755,
+        "terminal_gap_m": 0.00010958847264608274,
+        "tilt_deg": 0.004380732496432111
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 4,
+      "seed": 420261,
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "goal_id": "B_wall_y_mid",
+      "n_control_steps": 158,
+      "metrics": {
+        "advance_x_m": 0.1772350198053143,
+        "wall_contact_steps": 632,
+        "terminal_gap_m": -2.2246399257408456e-05,
+        "tilt_deg": 0.3685427691935473
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 33,
+      "seed": 420172,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.17858781252838762,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00013459489122591428,
+        "tilt_deg": 0.004896839602533919
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 26,
+      "seed": 420069,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 157,
+      "metrics": {
+        "advance_x_m": 0.18110604887709492,
+        "wall_contact_steps": 631,
+        "terminal_gap_m": -1.0173171923089086e-05,
+        "tilt_deg": 0.007677906776141928
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    },
+    {
+      "tag": "b90b",
+      "skill": "B90",
+      "episode_index": 14,
+      "seed": 420164,
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "goal_id": "B_wall_y_low",
+      "n_control_steps": 172,
+      "metrics": {
+        "advance_x_m": 0.18043955639676512,
+        "wall_contact_steps": 815,
+        "terminal_gap_m": 0.00027423763306211324,
+        "tilt_deg": 0.003899845716384167
+      },
+      "data_dir": "/scratch/lijh/exp43/data_b90b/B90"
+    }
+  ],
+  "data_dirs": {
+    "data/A90": {
+      "total_episodes": 5,
+      "total_frames": 978,
+      "info_sha256": "df1971dd7d66fdac8fc98a5c7ecd031135c06ffaf319c4304b6d56647ec72a23"
+    },
+    "data/B90": {
+      "total_episodes": 4,
+      "total_frames": 672,
+      "info_sha256": "c34cc709533fd2b7badb3c966735009a49402464b874ba2becb24d350516e22c"
+    },
+    "data_a90a/A90": {
+      "total_episodes": 70,
+      "total_frames": 13724,
+      "info_sha256": "509fb797447e137d5ace8e0ddab7c13acb869c67819fecc42657eb6c5b0a6661"
+    },
+    "data_a90b/A90": {
+      "total_episodes": 70,
+      "total_frames": 13692,
+      "info_sha256": "e8794cbf7ca07f709528e7632d7373b0be50450c66beaa8267fc29ffc663eca0"
+    },
+    "data_b90a/B90": {
+      "total_episodes": 57,
+      "total_frames": 9194,
+      "info_sha256": "a7e672e3ee803617b7767f42091eb925b9df0f2c1cc3609edb5232e166ac76ff"
+    },
+    "data_b90b/B90": {
+      "total_episodes": 56,
+      "total_frames": 9031,
+      "info_sha256": "a7185e5bb74748fc9c615978f21861abaeac9db2ce8638611eb91cb029d49f0c"
+    }
+  }
+}

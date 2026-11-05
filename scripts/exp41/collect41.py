@@ -56,7 +56,8 @@ def _goal(kind: str, goal_id: str):
     raise KeyError(goal_id)
 
 
-def build_plan(skill: str, *, per_condition: int = 2) -> list[dict]:
+def build_plan(skill: str, *, per_condition: int = 2, only_configs=None,
+               seed_offset: int = 0) -> list[dict]:
     """预注册计划：**按轮次交错**覆盖所有条件（先保证目标/条件的覆盖面，再加密种子）。
 
     顺序很关键：如果按"每个条件连续跑满种子"，上限一到就只覆盖前几个目标，
@@ -66,9 +67,12 @@ def build_plan(skill: str, *, per_condition: int = 2) -> list[dict]:
     if skill == 'A90':
         conds = [{'goal_id': g.goal_id, 'obj_start_id': None, 'robot_start_id': None,
                   'config_id': g.goal_id} for g in scene41.A_GOALS]
+        if only_configs:
+            conds = [c for c in conds if c['goal_id'] in only_configs]
         for k in range(per_condition):
             for gi, c in enumerate(conds):
-                plan.append({'skill': 'A90', **c, 'seed': SEED_BASE + gi * 100 + k})
+                plan.append({'skill': 'A90', **c,
+                             'seed': SEED_BASE + gi * 100 + seed_offset + k})
     else:
         conds = []
         for gi, (obj_id, goal_id) in enumerate(scene41.B_ALIGNED_PAIRS):
@@ -76,9 +80,12 @@ def build_plan(skill: str, *, per_condition: int = 2) -> list[dict]:
                 conds.append({'goal_id': goal_id, 'obj_start_id': obj_id,
                               'robot_start_id': robot['robot_start_id'],
                               'config_id': f'{goal_id}|{obj_id}|{robot["robot_start_id"]}'})
+        if only_configs:
+            conds = [c for c in conds if c['config_id'] in only_configs]
         for k in range(per_condition):
             for gi, c in enumerate(conds):
-                plan.append({'skill': 'B90', **c, 'seed': SEED_BASE + 10000 + gi * 100 + k})
+                plan.append({'skill': 'B90', **c,
+                             'seed': SEED_BASE + 10000 + gi * 100 + seed_offset + k})
     return plan
 
 
@@ -200,7 +207,9 @@ def collect(args) -> int:
         shard = data_root / skill
         writer = LeRobotV21Writer(shard, feature_dict(), POLICY_HZ, robot_type='panda',
                                   task=None, resume=True)
-        plan = build_plan(skill, per_condition=args.collect_seeds)
+        only = [x.strip() for x in args.only_goals.split(',') if x.strip()] or None
+        plan = build_plan(skill, per_condition=args.collect_seeds, only_configs=only,
+                          seed_offset=args.seed_offset)
         max_attempts = min(len(plan), int(target * 3))
         stored = len(writer.episodes)
         attempts = 0
@@ -270,6 +279,10 @@ def main(argv=None) -> int:
     ap.add_argument('--target-b', type=int, default=0)
     ap.add_argument('--camera-version', default='v3')
     ap.add_argument('--skills', default='A90,B90', help='只重跑某些技能，例如 A90')
+    ap.add_argument('--only-goals', default='',
+                    help='只采这些 goal/config id（逗号分隔），用于限制在 train split 条件内')
+    ap.add_argument('--seed-offset', type=int, default=0,
+                    help='种子偏移：新数据从 offset 开始取 k，避免与已有 episode 重复')
     ap.add_argument('--fresh-records', action='store_true',
                     help='采集前清空 dataset/records，保证 record ↔ episode 的一一对应')
     args = ap.parse_args(argv)

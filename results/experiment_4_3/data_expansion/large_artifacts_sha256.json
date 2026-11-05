@@ -1,0 +1,16 @@
+{
+  "root": "/scratch/lijh/exp43",
+  "per_dataset": {
+    "A90": {
+      "parquet": 5,
+      "mp4": 10,
+      "bytes": 3568960
+    },
+    "B90": {
+      "parquet": 56,
+      "mp4": 112,
+      "bytes": 32507443
+    }
+  },
+  "note": "大工件留在服务器；此处记录文件数与字节数，info.json 的 sha256 见 coverage"
+}

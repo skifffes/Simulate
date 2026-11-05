@@ -1,0 +1,102 @@
+{
+  "new_episodes_by_skill": {
+    "A90": 145,
+    "B90": 117
+  },
+  "new_attempts_by_skill": {
+    "A90": 153,
+    "B90": 167
+  },
+  "new_success_by_skill": {
+    "A90": 145,
+    "B90": 117
+  },
+  "by_config": {
+    "A90:A_x+3_y-3": {
+      "attempts": 25,
+      "stored": 17
+    },
+    "A90:A_x+3_y00": {
+      "attempts": 24,
+      "stored": 24
+    },
+    "A90:A_x-3_y-3": {
+      "attempts": 27,
+      "stored": 27
+    },
+    "A90:A_x-3_y00": {
+      "attempts": 25,
+      "stored": 25
+    },
+    "A90:A_x00_y-3": {
+      "attempts": 27,
+      "stored": 27
+    },
+    "A90:A_x00_y00": {
+      "attempts": 25,
+      "stored": 25
+    },
+    "B90:B_wall_y_low|B_obj_y015|B_robot_home": {
+      "attempts": 42,
+      "stored": 24
+    },
+    "B90:B_wall_y_low|B_obj_y015|B_robot_offset": {
+      "attempts": 42,
+      "stored": 30
+    },
+    "B90:B_wall_y_mid|B_obj_y021|B_robot_home": {
+      "attempts": 42,
+      "stored": 26
+    },
+    "B90:B_wall_y_mid|B_obj_y021|B_robot_offset": {
+      "attempts": 41,
+      "stored": 37
+    }
+  },
+  "failure_reasons": {
+    "tilt_ok": 15,
+    "advance_ok": 35,
+    "wall_contact_ever": 7,
+    "yaw_ok": 1
+  },
+  "data_dirs": {
+    "data/A90": {
+      "total_episodes": 5,
+      "total_frames": 978,
+      "info_sha256": "df1971dd7d66fdac8fc98a5c7ecd031135c06ffaf319c4304b6d56647ec72a23"
+    },
+    "data/B90": {
+      "total_episodes": 4,
+      "total_frames": 672,
+      "info_sha256": "c34cc709533fd2b7badb3c966735009a49402464b874ba2becb24d350516e22c"
+    },
+    "data_a90a/A90": {
+      "total_episodes": 70,
+      "total_frames": 13724,
+      "info_sha256": "509fb797447e137d5ace8e0ddab7c13acb869c67819fecc42657eb6c5b0a6661"
+    },
+    "data_a90b/A90": {
+      "total_episodes": 70,
+      "total_frames": 13692,
+      "info_sha256": "e8794cbf7ca07f709528e7632d7373b0be50450c66beaa8267fc29ffc663eca0"
+    },
+    "data_b90a/B90": {
+      "total_episodes": 57,
+      "total_frames": 9194,
+      "info_sha256": "a7e672e3ee803617b7767f42091eb925b9df0f2c1cc3609edb5232e166ac76ff"
+    },
+    "data_b90b/B90": {
+      "total_episodes": 56,
+      "total_frames": 9031,
+      "info_sha256": "a7185e5bb74748fc9c615978f21861abaeac9db2ce8638611eb91cb029d49f0c"
+    }
+  },
+  "old_train_counts": {
+    "A90": 30,
+    "B90": 31
+  },
+  "combined_train_counts": {
+    "A90": 175,
+    "B90": 148
+  }
+}
