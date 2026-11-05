@@ -1,0 +1,56 @@
+{
+  "A": {
+    "root": "/scratch/lijh/exp44_export_A58",
+    "n_train": 58,
+    "n_by_skill": {
+      "A90": 30,
+      "B90": 28
+    },
+    "n_by_skill_source": {
+      "A90/exp41": 30,
+      "B90/exp41": 28
+    },
+    "n_val": 16,
+    "n_test": 13,
+    "train_frames": 10375,
+    "meta_sha256": "759af00aa5f8c4755c7aa6b0475841be4bb83fa201d42d44ca12842b4bbdf849",
+    "episode_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "note": "train windows 由训练脚本统计（anchor-16 切片）",
+    "train_windows": 2404
+  },
+  "B": {
+    "root": "/scratch/lijh/exp43/export_v3",
+    "n_train": 311,
+    "n_by_skill": {
+      "A90": 170,
+      "B90": 141
+    },
+    "n_by_skill_source": {
+      "A90/exp41": 30,
+      "B90/exp41": 28,
+      "A90/exp43:a90a": 70,
+      "A90/exp43:a90b": 70,
+      "B90/exp43:b90a": 57,
+      "B90/exp43:b90b": 56
+    },
+    "n_val": 16,
+    "n_test": 13,
+    "train_frames": 56016,
+    "meta_sha256": "e62b2436eb4ddeb25d29f930324b77f9f80d245029bca8f24c56cd37fc118d84",
+    "episode_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "note": "train windows 由训练脚本统计（anchor-16 切片）",
+    "train_windows": 12967
+  }
+}

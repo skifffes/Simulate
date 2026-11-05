@@ -255,6 +255,55 @@ def flow_sq(model, rng, observation, actions, *, train: bool, horizon: int):
     return jnp.square(v_t - u_t)
 
 
+def save_opt_state(train_state, path, *, rng_jax, rng_np):
+    """保存 optimizer 状态、step 与 RNG，供真正的续训恢复。"""
+    import jax
+    import numpy as np
+
+    leaves, _ = jax.tree_util.tree_flatten(train_state.opt_state)
+    arrs = {f'p{i}': np.asarray(jax.device_get(l)) for i, l in enumerate(leaves)}
+    arrs['step'] = np.asarray(int(train_state.step))
+    arrs['rng_jax'] = np.asarray(jax.random.key_data(jax.device_get(rng_jax)))
+    # 兼容 numpy.random.Generator（default_rng）与 RandomState
+    if hasattr(rng_np, 'bit_generator'):
+        arrs['np_rng_json'] = np.asarray(json.dumps(rng_np.bit_generator.state))
+        arrs['np_rng_kind'] = np.asarray('generator')
+    else:
+        arrs['np_rng_json'] = np.asarray(json.dumps(rng_np.get_state(), default=str))
+        arrs['np_rng_kind'] = np.asarray('randomstate')
+    np.savez(path, **arrs)
+    return path, len(leaves)
+
+
+def load_opt_state(train_state, path):
+    """恢复 optimizer 状态、step 与 RNG（结构必须与当前 tx/params 一致）。"""
+    import jax
+    import jax.numpy as jnp
+    import numpy as np
+
+    z = np.load(path)
+    leaves, treedef = jax.tree_util.tree_flatten(train_state.opt_state)
+    n = len(leaves)
+    got = len([k for k in z.files if k.startswith('p')])
+    if got != n:
+        raise SystemExit(f'opt state 结构不一致：checkpoint {got} 叶 vs 当前 {n} 叶')
+    new = [jnp.asarray(z[f'p{i}']) for i in range(n)]
+    opt_state = jax.tree_util.tree_unflatten(treedef, new)
+    train_state = dataclasses.replace(train_state, opt_state=opt_state,
+                                      step=int(z['step']))
+    rng_jax = jax.random.wrap_key_data(jnp.asarray(z['rng_jax']).astype(jnp.uint32))
+    kind = str(z['np_rng_kind'])
+    payload = json.loads(str(z['np_rng_json']))
+    if kind == 'generator':
+        rng_np = np.random.default_rng()
+        rng_np.bit_generator.state = payload
+    else:
+        rng_np = np.random.RandomState()
+        rng_np.set_state(('MT19937', np.asarray(payload[1], dtype=np.uint32),
+                          int(payload[2]), int(payload[3]), float(payload[4])))
+    return train_state, rng_jax, rng_np
+
+
 def make_train_step(cfg, loss_dims: int = 0):
     """loss_dims=0 用官方 32 维 loss；loss_dims=8 只对前 8 维（7 关节 + 1 夹爪）求平均。"""
     import flax.nnx as nnx
@@ -355,7 +404,13 @@ def main(argv=None) -> int:
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--save-every', type=int, default=25)
     ap.add_argument('--save-at', default='',
-                    help='额外保存的步数，逗号分隔（例如 2100,2400）；与 --save-every 并用')
+                    help='额外保存的步数，逗号分隔（例如 1200,2400）；与 --save-every 并用')
+    ap.add_argument('--save-opt-at', default='',
+                    help='在这些 step 保存 optimizer 状态（逗号分隔），用于真正续训')
+    ap.add_argument('--resume-opt', default='',
+                    help='从 opt_stepNNNNN.npz 恢复 optimizer/RNG/step（需配合 --init-lora）')
+    ap.add_argument('--max-hours', type=float, default=0.0,
+                    help='>0 时训练到该小时数就保存并退出（防止超时被强杀）')
     ap.add_argument('--val-every', type=int, default=0)
     ap.add_argument('--val-batches', type=int, default=8)
     ap.add_argument('--train-split', default='train')
@@ -405,6 +460,14 @@ def main(argv=None) -> int:
         st.replace_by_pure_dict(traverse_util.unflatten_dict(flat))
         train_state = dataclasses.replace(train_state, params=st)
         print(f'resumed from {args.init_lora}: {n}/{len(flat_lora)} tensors', flush=True)
+    save_opt_at = {int(x) for x in args.save_opt_at.split(',') if x.strip()}
+    if args.resume_opt:
+        import dataclasses as _dc  # noqa: F401
+        train_state, jax_rng_resume, rng_np = load_opt_state(train_state, args.resume_opt)
+        print(f'resumed optimizer state <- {args.resume_opt} at step {int(train_state.step)}',
+              flush=True)
+    else:
+        jax_rng_resume = None
     print(f'weights loaded in {time.time() - t0:.1f}s', flush=True)
     total, trainable = count_params(train_state, cfg)
     print(f'params total={total/1e6:.1f}M trainable={trainable/1e6:.2f}M '
@@ -454,7 +517,7 @@ def main(argv=None) -> int:
         return 0
 
     step_fn = make_train_step(cfg, loss_dims=args.loss_dims)
-    jax_rng = jax.random.key(args.seed)
+    jax_rng = jax_rng_resume if jax_rng_resume is not None else jax.random.key(args.seed)
     t_compile = time.time()
     batch0 = (obs, actions)
     train_state, info = step_fn(jax_rng, train_state, batch0)
@@ -500,7 +563,16 @@ def main(argv=None) -> int:
     # 注意：上面的 pre-loop step 已经是第 1 次参数更新，因此这里从 2 开始，
     # 使 `--steps N` 恰好对应 N 次 optimizer update（独立审计缺陷 #4）。
     save_at = {int(x) for x in args.save_at.split(',') if x.strip()}
-    for k in range(2, args.steps + 1):
+    start_step = int(train_state.step) + 1 if args.resume_opt else 2
+    deadline = (t_start + args.max_hours * 3600.0) if args.max_hours > 0 else None
+    for k in range(start_step, args.steps + 1):
+        if deadline is not None and time.time() > deadline:
+            print(f'[max-hours] stopping at step {k - 1} '
+                  f'({(time.time() - t_start) / 3600:.2f} h); saving opt state', flush=True)
+            p_opt, n_leaf = save_opt_state(train_state, OUT / 'ckpts' / f'opt_step{k - 1:05d}.npz',
+                                           rng_jax=jax_rng, rng_np=rng_np)
+            print(f'  saved opt state {p_opt} ({n_leaf} leaves)', flush=True)
+            break
         batch = build_batch(meta, cache, transform, rng_np, args.batch,
                            label_mode=args.label_mode)
         b_obs = _model.Observation.from_dict(
@@ -534,6 +606,11 @@ def main(argv=None) -> int:
                 'seed': args.seed, 'init_lora': args.init_lora or None,
             }, ensure_ascii=False, indent=2), encoding='utf-8')
             print(f'  saved ckpt step {k} ({size/1e6:.1f} MB)', flush=True)
+            if k in save_opt_at:
+                p_opt, n_leaf = save_opt_state(
+                    train_state, OUT / 'ckpts' / f'opt_step{k:05d}.npz',
+                    rng_jax=jax_rng, rng_np=rng_np)
+                print(f'  saved opt state step {k} ({n_leaf} leaves)', flush=True)
 
     if args.export_params:
         t_exp = time.time()

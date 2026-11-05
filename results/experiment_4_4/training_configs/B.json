@@ -1,0 +1,43 @@
+{
+  "base": "pi05_droid (checkpoints/pi05_droid/params)",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "model": "pi05=True, action_dim=32, action_horizon=16, paligemma=gemma_2b_lora, action_expert=gemma_300m_lora",
+  "optimizer": "openpi training.optimizer.create_optimizer(cfg.optimizer, cfg.lr_schedule)",
+  "lr_schedule": {
+    "type": "CosineDecaySchedule",
+    "warmup_steps": 1000,
+    "peak_lr": 2.5e-05,
+    "decay_steps": 30000,
+    "decay_lr": 2.5e-06
+  },
+  "batch_size": 4,
+  "accum": 1,
+  "steps": 12000,
+  "seed": 0,
+  "label_mode": "anchor",
+  "anchor_reference": "fixed",
+  "horizon": 16,
+  "loss_dims": 0,
+  "normalization": "official droid asset (unchanged)",
+  "save_lora_at": [
+    1200,
+    1800,
+    2400,
+    3600,
+    4800,
+    6000,
+    8000,
+    10000,
+    12000
+  ],
+  "save_opt_at": [
+    6000,
+    12000
+  ],
+  "eval": "exp4.1-strict-v1.2",
+  "group": "B",
+  "data_root": "/scratch/lijh/exp43/export_v3",
+  "train_episodes": 311,
+  "train_windows": 12967,
+  "out_dir": "/scratch/lijh/exp44/B"
+}
