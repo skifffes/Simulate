@@ -50,8 +50,10 @@ A90 **140**、B90 **113**（去重后；`(skill, seed)` 唯一，无跨集重复
 （A90 val 2 个、test 1 个；B90 val/test 各 1 个，全部未使用）；seed 与原始 107 个 seed **零交集**。
 
 **Q7. 新数据是否已通过训练前 preflight？**
-**没有。** 本轮只完成了"采集 + 严格验收 + 去重/覆盖/隔离 manifest"：
-未导出到 OpenPI/LeRobot 训练接口，未重跑 normalization 统计与 action 契约检查（见 §6）。
+**数据层通过、训练接口层未通过。** 已对 253 条唯一 episode 全量检查：
+0 错误、state/action=9/8、无 NaN、dt=0.05 s、506 个视频帧数=行数、256×256@20fps、
+Anchor-16 抽样 11 条构造一致（`preflight_full.json`）；但**多源 OpenPI 导出与
+`train_lora.py --mode probe` 未做**，normalization 未重算。
 
 **Q8. 当前数据是否具备启动下一轮 π₀.₅ 微调的条件？**
 **接近但还差一步**：数据量与覆盖已满足（170/144 条 train，6+4 个条件全覆盖、无泄漏）；
