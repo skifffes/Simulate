@@ -792,5 +792,36 @@
       }
     },
     "verdict": "1800 stable across seeds; 2400 bimodal (4 of 12 seeds negative)"
+  },
+  "train_init_rollouts": {
+    "skill": "B90",
+    "n_episodes": 20,
+    "n_success": 1,
+    "episodes": "train ep0-19",
+    "success_case": {
+      "episode": 9,
+      "advance_x_m": 0.173,
+      "terminal_gap_m": 0.0006,
+      "wall_contact_steps": 2011,
+      "wall_force_max_n": 150.1
+    },
+    "near_misses": {
+      "ep4": {
+        "advance_x_m": 0.158,
+        "gap_m": 0.024
+      },
+      "ep15": {
+        "advance_x_m": 0.15,
+        "gap_m": 0.0265
+      },
+      "ep0": {
+        "advance_x_m": 0.143,
+        "gap_m": 0.0397
+      }
+    },
+    "a90": {
+      "n_episodes": 5,
+      "n_success": 0
+    }
   }
 }

@@ -1,0 +1,84 @@
+{
+  "skill": "B90",
+  "episode": 14,
+  "init": "dataset_original",
+  "prompt": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]",
+  "start_obj": [
+    0.5514732872179544,
+    0.21285063318688938,
+    0.01998992600004154
+  ],
+  "strict_success": false,
+  "failure_reason": "pushed_by_robot",
+  "checks": {
+    "initial_valid": true,
+    "pushed_by_robot": false,
+    "advance_ok": false,
+    "wall_contact_ever": false,
+    "valid_wall_contact": false,
+    "wall_normal_compatible": false,
+    "terminal_gap_ok": false,
+    "lateral_ok": true,
+    "goal_region_ok": true,
+    "yaw_ok": true,
+    "tilt_ok": true,
+    "table_supported": true,
+    "stable": true,
+    "no_rebound": true
+  },
+  "metrics": {
+    "advance_x_m": -5.359157562168093e-11,
+    "lateral_drift_m": 4.3802064753073466e-10,
+    "terminal_gap_m": 0.17825998967586865,
+    "lateral_needed_for_goal": false,
+    "wall_contact_steps": 0,
+    "wall_contact_force_max_n": 0.0,
+    "wall_normal_abs_x_min": null,
+    "robot_block_contact_steps": 0,
+    "robot_wall_contact_steps": 0,
+    "goal_y_range": [
+      0.18,
+      0.24
+    ],
+    "final_y": 0.21285063274886873,
+    "yaw_change_rad": 8.069087620299342e-10,
+    "tilt_deg": 1.4338671252111154e-06,
+    "final_speed_m_s": 3.9897757378630607e-11,
+    "rebound_m": 0.0,
+    "obj_terminal_pos": [
+      0.5514732871643628,
+      0.21285063274886873,
+      0.019989926042452612
+    ],
+    "obj_terminal_quat": [
+      8.384719901718493e-09,
+      -8.905002591619195e-09,
+      0.702294019078685,
+      0.7118870070216954
+    ],
+    "obj_terminal_yaw": 1.5572296891012285,
+    "robot_q_terminal": [
+      0.2093786487624393,
+      0.7825893638365239,
+      0.03095443975555678,
+      -1.3889490759873615,
+      0.05737011278545756,
+      2.1598571976716947,
+      1.1963369771585946
+    ],
+    "ee_terminal_pos": [
+      0.7082914710044861,
+      0.17872793972492218,
+      0.13743841648101807
+    ],
+    "ee_terminal_quat": [
+      0.9937912821769714,
+      -0.10555896908044815,
+      -0.016532981768250465,
+      -0.0310295969247818
+    ],
+    "gripper_width_m": 0.0139040503410972
+  },
+  "n_infer": 45,
+  "seconds": 25.5
+}

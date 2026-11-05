@@ -1,0 +1,87 @@
+{
+  "skill": "A90",
+  "episode": 7,
+  "init": "dataset_original",
+  "prompt": "pick up the orange block and place it in the target area at (0.553, 0.210) with its long side aligned with X",
+  "start_obj": [
+    0.551103631954256,
+    -0.00284161621395099,
+    0.01998992607983054
+  ],
+  "strict_success": false,
+  "failure_reason": "grasped_by_two_fingers",
+  "checks": {
+    "grasped_by_two_fingers": false,
+    "two_fingers_simultaneous": false,
+    "lifted": false,
+    "transported": false,
+    "position_ok": false,
+    "yaw_ok": false,
+    "tilt_ok": true,
+    "released": true,
+    "retreated": true,
+    "table_supported": true,
+    "stable": true,
+    "ang_speed_ok": true,
+    "no_slip_after_release": true,
+    "no_penetration": true
+  },
+  "metrics": {
+    "position_error_m": 0.21276764571325843,
+    "yaw_error_rad": 1.5367034432246014,
+    "yaw_error_deg": 88.04662165999117,
+    "tilt_deg": 8.086007640164766e-05,
+    "lift_m": 6.941048012049089e-08,
+    "transport_m": 2.5230901293193114e-08,
+    "final_speed_m_s": 1.5745694616637658e-09,
+    "final_ang_speed_rad_s": 8.337907153849353e-08,
+    "ee_object_distance_m": 0.1889617126344184,
+    "gripper_width_m": 0.03999950155128877,
+    "robot_block_contact_steps": 0,
+    "finger9_contact_steps": 0,
+    "finger9_max_force_n": 0.0,
+    "finger10_contact_steps": 0,
+    "finger10_max_force_n": 0.0,
+    "two_finger_overlap_steps": 0,
+    "two_finger_overlap_first_step": null,
+    "two_finger_overlap_last_step": null,
+    "slip_after_release_m": 3.071741656066536e-10,
+    "ang_speed_tail_max_rad_s": 8.33802395670826e-08,
+    "table_penetration_m": -1.0100612239053591e-05,
+    "n_control_steps": null,
+    "obj_terminal_pos": [
+      0.5511036069422419,
+      -0.0028416128976986774,
+      0.01998992849077617
+    ],
+    "obj_terminal_quat": [
+      -2.6512600045810902e-08,
+      -6.905477512166074e-07,
+      -0.01704561623462719,
+      0.9998547129291857
+    ],
+    "obj_terminal_yaw": -0.03409288357029527,
+    "robot_q_terminal": [
+      0.4418442017236955,
+      0.8823152109634298,
+      -0.30639959527139776,
+      -1.4779165928917828,
+      0.3612315703487692,
+      2.159432843850213,
+      -0.8955017275592223
+    ],
+    "ee_terminal_pos": [
+      0.6671190857887268,
+      0.14341820776462555,
+      0.04923035204410553
+    ],
+    "ee_terminal_quat": [
+      0.665838360786438,
+      0.7420958876609802,
+      -0.03928811475634575,
+      -0.06640300154685974
+    ]
+  },
+  "n_infer": 45,
+  "seconds": 25.6
+}

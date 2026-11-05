@@ -1,0 +1,313 @@
+{
+  "skill": "A90",
+  "init": "dataset_original",
+  "n": 5,
+  "n_success": 0,
+  "rows": [
+    {
+      "episode": 5,
+      "strict_success": false,
+      "failure_reason": "grasped_by_two_fingers",
+      "metrics": {
+        "position_error_m": 0.18492790705480577,
+        "yaw_error_rad": 1.568086378106222,
+        "yaw_error_deg": 89.84473137744193,
+        "tilt_deg": 3.0394984403202725e-09,
+        "lift_m": 7.40018150924282e-08,
+        "transport_m": 8.027623655632847e-13,
+        "final_speed_m_s": 6.41793293093315e-14,
+        "final_ang_speed_rad_s": 3.3616279960031103e-12,
+        "ee_object_distance_m": 0.251218719106715,
+        "gripper_width_m": 0.03999955894916388,
+        "robot_block_contact_steps": 0,
+        "finger9_contact_steps": 0,
+        "finger9_max_force_n": 0.0,
+        "finger10_contact_steps": 0,
+        "finger10_max_force_n": 0.0,
+        "two_finger_overlap_steps": 0,
+        "two_finger_overlap_first_step": null,
+        "two_finger_overlap_last_step": null,
+        "slip_after_release_m": 1.0610278166779747e-14,
+        "ang_speed_tail_max_rad_s": 3.3616279960031103e-12,
+        "table_penetration_m": -1.0074002696924822e-05,
+        "n_control_steps": null,
+        "obj_terminal_pos": [
+          0.5454137619013378,
+          -0.005494593107695367,
+          0.019989925998401367
+        ],
+        "obj_terminal_quat": [
+          -6.641815114917294e-13,
+          -2.5894657202133144e-11,
+          -0.0013549739297252592,
+          0.9999990820224035
+        ],
+        "obj_terminal_yaw": -0.00270994868867463,
+        "robot_q_terminal": [
+          0.49684104088953984,
+          0.845601856774452,
+          -0.2629035897301489,
+          -1.4871804556087531,
+          0.3291733839685576,
+          2.233158596646012,
+          -0.6427307676884231
+        ],
+        "ee_terminal_pos": [
+          0.6703137755393982,
+          0.20662298798561096,
+          0.07015927135944366
+        ],
+        "ee_terminal_quat": [
+          0.7211853861808777,
+          0.691524088382721,
+          -0.010763267986476421,
+          -0.039627064019441605
+        ]
+      }
+    },
+    {
+      "episode": 6,
+      "strict_success": false,
+      "failure_reason": "grasped_by_two_fingers",
+      "metrics": {
+        "position_error_m": 0.22587991317460082,
+        "yaw_error_rad": 1.5652209466069102,
+        "yaw_error_deg": 89.68055424604754,
+        "tilt_deg": 0.005240039932352349,
+        "lift_m": 0.0005163939109340855,
+        "transport_m": 0.009341714685052353,
+        "final_speed_m_s": 6.37018787336729e-09,
+        "final_ang_speed_rad_s": 2.3114162780162387e-07,
+        "ee_object_distance_m": 0.2571772532148139,
+        "gripper_width_m": 0.03999975106525716,
+        "robot_block_contact_steps": 10,
+        "finger9_contact_steps": 4,
+        "finger9_max_force_n": 19.709301380222033,
+        "finger10_contact_steps": 0,
+        "finger10_max_force_n": 0.0,
+        "two_finger_overlap_steps": 0,
+        "two_finger_overlap_first_step": null,
+        "two_finger_overlap_last_step": null,
+        "slip_after_release_m": 1.2491925515709693e-09,
+        "ang_speed_tail_max_rad_s": 2.3182922925010394e-07,
+        "table_penetration_m": -0.0002335661789771848,
+        "n_control_steps": null,
+        "obj_terminal_pos": [
+          0.5493278663210008,
+          -0.00672682564112184,
+          0.019987925833511548
+        ],
+        "obj_terminal_quat": [
+          -1.4376437881049592e-05,
+          -3.130452428132962e-05,
+          0.0027876860295223418,
+          0.9999961138024215
+        ],
+        "obj_terminal_yaw": 0.005575380187986208,
+        "robot_q_terminal": [
+          0.5198871097990536,
+          0.6323831336284744,
+          -0.3946429400636659,
+          -1.5931443920062527,
+          0.4363898012139797,
+          2.1291217898618386,
+          -1.0380503022743508
+        ],
+        "ee_terminal_pos": [
+          0.6715542674064636,
+          0.15524104237556458,
+          0.17799822986125946
+        ],
+        "ee_terminal_quat": [
+          0.6306254863739014,
+          0.7730185985565186,
+          0.038817085325717926,
+          -0.056982554495334625
+        ]
+      }
+    },
+    {
+      "episode": 7,
+      "strict_success": false,
+      "failure_reason": "grasped_by_two_fingers",
+      "metrics": {
+        "position_error_m": 0.21276764571325843,
+        "yaw_error_rad": 1.5367034432246014,
+        "yaw_error_deg": 88.04662165999117,
+        "tilt_deg": 8.086007640164766e-05,
+        "lift_m": 6.941048012049089e-08,
+        "transport_m": 2.5230901293193114e-08,
+        "final_speed_m_s": 1.5745694616637658e-09,
+        "final_ang_speed_rad_s": 8.337907153849353e-08,
+        "ee_object_distance_m": 0.1889617126344184,
+        "gripper_width_m": 0.03999950155128877,
+        "robot_block_contact_steps": 0,
+        "finger9_contact_steps": 0,
+        "finger9_max_force_n": 0.0,
+        "finger10_contact_steps": 0,
+        "finger10_max_force_n": 0.0,
+        "two_finger_overlap_steps": 0,
+        "two_finger_overlap_first_step": null,
+        "two_finger_overlap_last_step": null,
+        "slip_after_release_m": 3.071741656066536e-10,
+        "ang_speed_tail_max_rad_s": 8.33802395670826e-08,
+        "table_penetration_m": -1.0100612239053591e-05,
+        "n_control_steps": null,
+        "obj_terminal_pos": [
+          0.5511036069422419,
+          -0.0028416128976986774,
+          0.01998992849077617
+        ],
+        "obj_terminal_quat": [
+          -2.6512600045810902e-08,
+          -6.905477512166074e-07,
+          -0.01704561623462719,
+          0.9998547129291857
+        ],
+        "obj_terminal_yaw": -0.03409288357029527,
+        "robot_q_terminal": [
+          0.4418442017236955,
+          0.8823152109634298,
+          -0.30639959527139776,
+          -1.4779165928917828,
+          0.3612315703487692,
+          2.159432843850213,
+          -0.8955017275592223
+        ],
+        "ee_terminal_pos": [
+          0.6671190857887268,
+          0.14341820776462555,
+          0.04923035204410553
+        ],
+        "ee_terminal_quat": [
+          0.665838360786438,
+          0.7420958876609802,
+          -0.03928811475634575,
+          -0.06640300154685974
+        ]
+      }
+    },
+    {
+      "episode": 8,
+      "strict_success": false,
+      "failure_reason": "grasped_by_two_fingers",
+      "metrics": {
+        "position_error_m": 0.2202471963346033,
+        "yaw_error_rad": 1.5296103638969358,
+        "yaw_error_deg": 87.64021815076445,
+        "tilt_deg": 0.00018055114976307988,
+        "lift_m": 6.382241293095836e-08,
+        "transport_m": 5.6431464218952756e-08,
+        "final_speed_m_s": 3.3343727620279745e-09,
+        "final_ang_speed_rad_s": 1.7656534300041827e-07,
+        "ee_object_distance_m": 0.25219492078938915,
+        "gripper_width_m": 0.04000575140187168,
+        "robot_block_contact_steps": 0,
+        "finger9_contact_steps": 0,
+        "finger9_max_force_n": 0.0,
+        "finger10_contact_steps": 0,
+        "finger10_max_force_n": 0.0,
+        "two_finger_overlap_steps": 0,
+        "two_finger_overlap_first_step": null,
+        "two_finger_overlap_last_step": null,
+        "slip_after_release_m": 6.529937911096246e-10,
+        "ang_speed_tail_max_rad_s": 1.7657176377188465e-07,
+        "table_penetration_m": -1.013335644639568e-05,
+        "n_control_steps": null,
+        "obj_terminal_pos": [
+          0.5486471392831264,
+          -0.005554042675880683,
+          0.019989931566018394
+        ],
+        "obj_terminal_quat": [
+          -6.365532179260253e-08,
+          -1.5427480732856903e-06,
+          -0.020591525999221545,
+          0.9997879720493937
+        ],
+        "obj_terminal_yaw": -0.041185962897960726,
+        "robot_q_terminal": [
+          0.47478972314951995,
+          0.8990616234507572,
+          -0.3269929339280451,
+          -1.4496750104255853,
+          0.4988264512593053,
+          2.399554921581678,
+          -1.4813178011660906
+        ],
+        "ee_terminal_pos": [
+          0.7240294814109802,
+          0.1678922027349472,
+          0.07252289354801178
+        ],
+        "ee_terminal_quat": [
+          0.45557764172554016,
+          0.8868215680122375,
+          0.07387413084506989,
+          0.02322082780301571
+        ]
+      }
+    },
+    {
+      "episode": 9,
+      "strict_success": false,
+      "failure_reason": "grasped_by_two_fingers",
+      "metrics": {
+        "position_error_m": 0.14550240481938242,
+        "yaw_error_rad": 1.5250855254118607,
+        "yaw_error_deg": 87.38096400259128,
+        "tilt_deg": 0.0002687534005821902,
+        "lift_m": 5.837078725576261e-08,
+        "transport_m": 8.375341776148443e-08,
+        "final_speed_m_s": 6.414950831668221e-09,
+        "final_ang_speed_rad_s": 2.6663292289689657e-07,
+        "ee_object_distance_m": 0.2300926714706255,
+        "gripper_width_m": 0.03999982407202218,
+        "robot_block_contact_steps": 0,
+        "finger9_contact_steps": 0,
+        "finger9_max_force_n": 0.0,
+        "finger10_contact_steps": 0,
+        "finger10_max_force_n": 0.0,
+        "two_finger_overlap_steps": 0,
+        "two_finger_overlap_first_step": null,
+        "two_finger_overlap_last_step": null,
+        "slip_after_release_m": 1.2563613749284404e-09,
+        "ang_speed_tail_max_rad_s": 2.6666335395820027e-07,
+        "table_penetration_m": -1.0186320501759383e-05,
+        "n_control_steps": null,
+        "obj_terminal_pos": [
+          0.5465164369133715,
+          0.006353352034537454,
+          0.019989911285124094
+        ],
+        "obj_terminal_quat": [
+          -1.1735922365074085e-08,
+          -2.282289187022896e-06,
+          0.022853410916517887,
+          0.9997388266963887
+        ],
+        "obj_terminal_yaw": 0.045710801383035855,
+        "robot_q_terminal": [
+          0.557157346459587,
+          0.6417929634699172,
+          -0.4371310977774502,
+          -1.6213179876840735,
+          0.330504827639825,
+          2.1622556719397905,
+          -1.2181397028205612
+        ],
+        "ee_terminal_pos": [
+          0.6690424680709839,
+          0.134014293551445,
+          0.16707047820091248
+        ],
+        "ee_terminal_quat": [
+          0.5376455783843994,
+          0.8430204391479492,
+          -0.003432359779253602,
+          -0.01555615570396185
+        ]
+      }
+    }
+  ]
+}
