@@ -19,6 +19,10 @@ train 合计 **A90 170 / B90 144**。
 | `train_manifest_v2.json` | 训练输入清单（253 条唯一 episode，含 provenance 与文件路径） |
 | `selected_artifacts_sha256.json` | 入选 parquet/MP4 的逐文件 SHA256 |
 
+
+| `export_and_probe.md` | **多源导出 + probe**：314 条 train（A90 170/B90 144）、新 episode id ≥1000、forward loss 2.1367 |
+| `export_summary.json` | 导出统计（train/val/test 计数与按技能 train 计数） |
+
 ## 复现
 
 ```bash

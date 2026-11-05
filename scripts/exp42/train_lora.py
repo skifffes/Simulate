@@ -433,6 +433,9 @@ def main(argv=None) -> int:
 
         model = nnx.merge(train_state.model_def, train_state.params)
         rng = jax.random.key(args.seed)
+        # probe 路径拿到的是 numpy batch；模型要求 jax 数组（jaxtyping 会拦截 numpy）
+        obs = jax.tree.map(jnp.asarray, obs)
+        actions = jnp.asarray(actions)
         loss = jnp.mean(model.compute_loss(rng, obs, actions, train=True))
         loss = float(jax.device_get(loss))
         print(f'FORWARD LOSS = {loss:.6f}', flush=True)

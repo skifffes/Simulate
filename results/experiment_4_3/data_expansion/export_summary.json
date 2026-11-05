@@ -1,0 +1,15 @@
+{
+  "out": "/scratch/lijh/exp43/export",
+  "n_old_train": 61,
+  "n_new": 253,
+  "n_total": 343,
+  "by_split": {
+    "train": 314,
+    "val": 16,
+    "test": 13
+  },
+  "by_skill_train": {
+    "A90": 170,
+    "B90": 144
+  }
+}

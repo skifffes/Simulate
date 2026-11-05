@@ -49,7 +49,7 @@ A90 **140**、B90 **113**（去重后；`(skill, seed)` 唯一，无跨集重复
 是。新增数据只使用 train 条件；`train_split_manifest.json` 记录与 val/test 配置交集为空
 （A90 val 2 个、test 1 个；B90 val/test 各 1 个，全部未使用）；seed 与原始 107 个 seed **零交集**。
 
-**Q7. 新数据是否已通过训练前 preflight？**
+**Q7. 新数据是否已通过训练前 preflight？**（14:35 更新：导出与 probe 已完成，见 §9）
 **数据层通过、训练接口层未通过。** 已对 253 条唯一 episode 全量检查：
 0 错误、state/action=9/8、无 NaN、dt=0.05 s、506 个视频帧数=行数、256×256@20fps、
 Anchor-16 抽样 11 条构造一致（`preflight_full.json`）；但**多源 OpenPI 导出与
@@ -127,3 +127,11 @@ python scripts/exp43/compile_results.py
 - 去重后按条件：A90 16/24/24/26/26/26，B90 22/29/26/36（10 个训练条件全部覆盖）。
 
 仍未完成：OpenPI 导出（314 条）、完整 preflight、10% 分层内容抽查、旧 90 条 v1.2 复核。
+## 9. 导出与 probe 完成（14:35）
+
+- `export_multi.py` 把 61 旧 train（符号链接复用）+ 253 新（解码写入）合并为 **314 条 train**
+  （A90 170 / B90 144），val/test 16/13 原样保留；新 episode 用 **≥1000 的全局唯一 id**；
+- 全量 preflight（253 条）0 错误：9/8 维、无 NaN、dt=0.05 s、506 视频帧数=行数、256×256@20 fps；
+- `train_lora.py --mode probe` 在合并数据上跑通：state (4,32)、actions (4,16,32)、
+  三路图像（右腕掩码）、token mask 162、`FORWARD LOSS = 2.136661`；
+- 仍未做：normalization 统计重算、10% 视频内容抽查、旧 90 条 v1.2 复核、任何训练。
