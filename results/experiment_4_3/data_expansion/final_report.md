@@ -110,3 +110,8 @@ python scripts/exp43/compile_results.py
    state/action/图像时间对齐抽查（抽 10% episode）；
 3. 视频抽查：每个条件抽 1–2 条，重点看抓取闭合与 B90 墙接触瞬间；
 4. 完成后再开 π₀.₅ 微调（同 base / 同 Anchor-16 / 同优化配置，对照 30+31 与 170+144）。
+
+## 7. 采集中途补充：preflight-lite 通过（详见 preflight_report.md）
+
+抽检 A90（70 条目录）与 B90（57 条目录）各 1 条 episode：列名/维度/时间戳/视频数量全部符合 4.1 契约，
+无 NaN；(skill, seed) 唯一 253 对、与原始 seed 零交集。**完整 OpenPI 导出与 normalization 复核仍未做**。
