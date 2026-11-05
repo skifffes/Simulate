@@ -31,6 +31,11 @@ train 合计 **A90 170 / B90 144**。
 | `export_sha256.json` | 导出 761 个文件（17.95 GB）的 SHA256 |
 | `montage_A90_gid001.png` / `montage_B90_gid161.png` | 抽查用三帧拼接图 |
 
+
+| `train_manifest_v3.json` | **训练输入清单 v3**：311 条（A90 170 / B90 141），已剔除旧 B90 的 3 条 v1.2 失败项 |
+| `action_timing_check.json` | 动作-状态时序：\|a−s_next\|<\|a−s_now\| 占 100%，中位 0.0006 vs 0.0081 rad |
+| `montage_A90_gid002_top.png` / `montage_A90_gid002_wrist.png` | 第 10 个条件的 top/wrist 抽查图 |
+
 ## 复现
 
 ```bash

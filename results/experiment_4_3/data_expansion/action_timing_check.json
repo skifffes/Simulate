@@ -1,0 +1,153 @@
+{
+  "n": 21,
+  "rows": [
+    {
+      "skill": "A90",
+      "ep": 0,
+      "a_vs_s_current": 0.008133776233110764,
+      "a_vs_s_next": 0.000596695714314983,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 21,
+      "a_vs_s_current": 0.0081739968988096,
+      "a_vs_s_next": 0.0005995821473774785,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 0,
+      "a_vs_s_current": 0.005994471431412231,
+      "a_vs_s_next": 0.00047064622307159935,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 24,
+      "a_vs_s_current": 0.0062826217710640715,
+      "a_vs_s_next": 0.0009804972227640408,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1002,
+      "a_vs_s_current": 0.008275531155647643,
+      "a_vs_s_next": 0.000603337406068648,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1017,
+      "a_vs_s_current": 0.008138083608256762,
+      "a_vs_s_next": 0.0005907138402667792,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1032,
+      "a_vs_s_current": 0.008160989780957612,
+      "a_vs_s_next": 0.0005954618795230906,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1047,
+      "a_vs_s_current": 0.008104908839640058,
+      "a_vs_s_next": 0.0005895879224742933,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1062,
+      "a_vs_s_current": 0.008125599087757627,
+      "a_vs_s_next": 0.0005908432274328352,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1077,
+      "a_vs_s_current": 0.00823609248307564,
+      "a_vs_s_next": 0.0006029969362059274,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1092,
+      "a_vs_s_current": 0.008182981117296892,
+      "a_vs_s_next": 0.0006001160513433252,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1107,
+      "a_vs_s_current": 0.008052377671245654,
+      "a_vs_s_next": 0.0005887883720173354,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1122,
+      "a_vs_s_current": 0.008040617114790618,
+      "a_vs_s_next": 0.0005873600276750345,
+      "next_smaller": true
+    },
+    {
+      "skill": "A90",
+      "ep": 1137,
+      "a_vs_s_current": 0.008412251015622046,
+      "a_vs_s_next": 0.000613656793492125,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1012,
+      "a_vs_s_current": 0.006142833507040404,
+      "a_vs_s_next": 0.0009074557632688553,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1027,
+      "a_vs_s_current": 0.006219594101456756,
+      "a_vs_s_next": 0.0005139405236089784,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1042,
+      "a_vs_s_current": 0.005677480334533426,
+      "a_vs_s_next": 0.0008924922532159365,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1057,
+      "a_vs_s_current": 0.006352172869579619,
+      "a_vs_s_next": 0.0008376444044610111,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1072,
+      "a_vs_s_current": 0.005555156366656545,
+      "a_vs_s_next": 0.0004883337977654454,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1087,
+      "a_vs_s_current": 0.005940666884317836,
+      "a_vs_s_next": 0.0004876273770337437,
+      "next_smaller": true
+    },
+    {
+      "skill": "B90",
+      "ep": 1102,
+      "a_vs_s_current": 0.006135449335634959,
+      "a_vs_s_next": 0.0006578988441680729,
+      "next_smaller": true
+    }
+  ],
+  "frac_next_smaller": 1.0
+}

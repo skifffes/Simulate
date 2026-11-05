@@ -1,0 +1,39 @@
+{
+  "missing_configs": [
+    "A_x00_y00"
+  ],
+  "rows": [
+    {
+      "config": "A_x00_y00",
+      "gid": 2,
+      "camera": "top",
+      "n_frames": 198,
+      "frame_means": [
+        196.7,
+        199.5,
+        198.6
+      ],
+      "frame_stds": [
+        48.7,
+        46.8,
+        46.5
+      ]
+    },
+    {
+      "config": "A_x00_y00",
+      "gid": 2,
+      "camera": "wrist",
+      "n_frames": 198,
+      "frame_means": [
+        213.7,
+        204.3,
+        208.8
+      ],
+      "frame_stds": [
+        39.9,
+        53.0,
+        51.1
+      ]
+    }
+  ]
+}
