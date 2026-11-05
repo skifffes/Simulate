@@ -354,6 +354,8 @@ def main(argv=None) -> int:
                     help='梯度累积；当前实现不支持 >1（会直接报错），不要据此宣称 effective batch 扩大')
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--save-every', type=int, default=25)
+    ap.add_argument('--save-at', default='',
+                    help='额外保存的步数，逗号分隔（例如 2100,2400）；与 --save-every 并用')
     ap.add_argument('--val-every', type=int, default=0)
     ap.add_argument('--val-batches', type=int, default=8)
     ap.add_argument('--train-split', default='train')
@@ -494,6 +496,7 @@ def main(argv=None) -> int:
 
     # 注意：上面的 pre-loop step 已经是第 1 次参数更新，因此这里从 2 开始，
     # 使 `--steps N` 恰好对应 N 次 optimizer update（独立审计缺陷 #4）。
+    save_at = {int(x) for x in args.save_at.split(',') if x.strip()}
     for k in range(2, args.steps + 1):
         batch = build_batch(meta, cache, transform, rng_np, args.batch,
                            label_mode=args.label_mode)
@@ -514,7 +517,7 @@ def main(argv=None) -> int:
             print(f'step {k}/{args.steps} loss={float(info["loss"]):.4f} '
                   f'grad={float(info["grad_norm"]):.3f} {sps:.3f} step/s{extra}', flush=True)
         n_done = k
-        if k % args.save_every == 0 or k == args.steps:
+        if k % args.save_every == 0 or k == args.steps or k in save_at:
             size = save_ckpt(train_state, cfg, OUT / 'ckpts', k)
             (OUT / 'ckpts' / 'manifest.json').write_text(json.dumps({
                 'label_mode': args.label_mode,
