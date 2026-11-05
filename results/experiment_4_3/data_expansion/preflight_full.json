@@ -1,0 +1,8657 @@
+{
+  "n_episodes": 253,
+  "n_errors": 0,
+  "all_finite": true,
+  "all_ts_monotonic": true,
+  "dt_values": [
+    0.05
+  ],
+  "all_state_dim_9": true,
+  "all_action_dim_8": true,
+  "all_videos_match_rows": true,
+  "dq_absmax_global": 0.11093330383300781,
+  "grip_range": [
+    0.014000000432133675,
+    0.03999999910593033
+  ],
+  "n_videos_total": 506,
+  "video_res_set": [
+    [
+      256,
+      256
+    ]
+  ],
+  "video_fps_set": [
+    20.0
+  ],
+  "spot_frames": {
+    "n": 26,
+    "all_ok": true,
+    "mean_range": [
+      203.57756551106772,
+      203.94145711263022
+    ],
+    "std_min": 44.28530091638848
+  },
+  "anchor16": {
+    "n": 11,
+    "all_ok": true,
+    "k0_consistent": true
+  },
+  "by_config": {
+    "A90:A_x+3_y-3": 16,
+    "A90:A_x+3_y00": 24,
+    "A90:A_x-3_y-3": 26,
+    "A90:A_x-3_y00": 24,
+    "A90:A_x00_y-3": 26,
+    "A90:A_x00_y00": 24,
+    "B90:B_wall_y_low|B_obj_y015|B_robot_home": 22,
+    "B90:B_wall_y_low|B_obj_y015|B_robot_offset": 29,
+    "B90:B_wall_y_mid|B_obj_y021|B_robot_home": 26,
+    "B90:B_wall_y_mid|B_obj_y021|B_robot_offset": 36
+  },
+  "rows": [
+    {
+      "global_episode_id": 1,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 189,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999797090571,
+      "dq_absmax": 0.049871623516082764,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        189,
+        189
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 2,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04938626289367676,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 3,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04976910352706909,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 4,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049627065658569336,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 5,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04986518621444702,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 6,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.05001109838485718,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 7,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04960376024246216,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 8,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 200,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999904153335,
+      "dq_absmax": 0.04927605390548706,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        200,
+        200
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 9,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 193,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001986821495,
+      "dq_absmax": 0.049930453300476074,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        193,
+        193
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 10,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 187,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000102545626,
+      "dq_absmax": 0.04965883493423462,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        187,
+        187
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 11,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04954306781291962,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 12,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.049573659896850586,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 13,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04920119047164917,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 14,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04961073398590088,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 15,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04996210336685181,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 16,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.0491369366645813,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 17,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 185,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.049999998963397484,
+      "dq_absmax": 0.04936983226798475,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        185,
+        185
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 18,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.049509286880493164,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 19,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04922831058502197,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 20,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.0491102933883667,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 21,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04978996515274048,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 22,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049285709857940674,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 23,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04949617385864258,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 24,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.049103498458862305,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 25,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.048952341079711914,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 26,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04979252815246582,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 27,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.048899829387664795,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 28,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049208641052246094,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 29,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04957306385040283,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 30,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.05002647638320923,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 31,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04977336525917053,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 32,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04892796277999878,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 33,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04943978786468506,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 34,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.049492865800857544,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 35,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04998791217803955,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 36,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049485206604003906,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 37,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.0498502254486084,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 38,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049792468547821045,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 39,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 189,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999797090571,
+      "dq_absmax": 0.04998290538787842,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        189,
+        189
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 40,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.049297332763671875,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 41,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 190,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999899082083,
+      "dq_absmax": 0.04991447925567627,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        190,
+        190
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 42,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04951268434524536,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 43,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 188,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000203994506,
+      "dq_absmax": 0.05009627342224121,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        188,
+        188
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 44,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049295008182525635,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 45,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.049597740173339844,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 46,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04901397228240967,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 47,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04955339431762695,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 48,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04957759380340576,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 49,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04971957206726074,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 50,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04926389455795288,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 51,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0492551838979125,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 52,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04922482371330261,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 53,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04952085018157959,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 54,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04970383644104004,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 55,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0497933030128479,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 56,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04912078380584717,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 57,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04898548126220703,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 58,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 189,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999797090571,
+      "dq_absmax": 0.05000007152557373,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        189,
+        189
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 59,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04932423681020737,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 60,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04913625121116638,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 61,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.0493924617767334,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 62,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04979348182678223,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 63,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.05018627643585205,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 64,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04905140399932861,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 65,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04964107275009155,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 66,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04931640625,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 67,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04940074682235718,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 68,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04954703152179718,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 69,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04955613613128662,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 70,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04909193515777588,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 71,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 190,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999899082083,
+      "dq_absmax": 0.050190269947052,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        190,
+        190
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 72,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0496671199798584,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 73,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049252092838287354,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 74,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.05029892921447754,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 75,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04953092336654663,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 76,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 200,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999904153335,
+      "dq_absmax": 0.0500028133392334,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        200,
+        200
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 77,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049739062786102295,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 78,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04968482255935669,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 79,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.049686312675476074,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 80,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04965931177139282,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 81,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 186,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04966163635253906,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        186,
+        186
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 82,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04957196116447449,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 83,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04942089319229126,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 84,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04984241724014282,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 85,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 200,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999904153335,
+      "dq_absmax": 0.05010038614273071,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        200,
+        200
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 86,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04971104860305786,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 87,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04989272356033325,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 88,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049890875816345215,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 89,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 200,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999904153335,
+      "dq_absmax": 0.04941833019256592,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        200,
+        200
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 90,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049411773681640625,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 91,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.050209105014801025,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 92,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04938226938247681,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 93,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049133241176605225,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 94,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.049337029457092285,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 95,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.05002671480178833,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 96,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.05027341842651367,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 97,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04992645978927612,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 98,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04952651262283325,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 99,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04942899942398071,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 100,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04918015003204346,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 101,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049436330795288086,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 102,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04999804496765137,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 103,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04927337169647217,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 104,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04921307321637869,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 105,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.049324214458465576,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 106,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 200,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999904153335,
+      "dq_absmax": 0.04983103275299072,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        200,
+        200
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 107,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049879103899002075,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 108,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04909098148345947,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 109,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.04887969791889191,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 110,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04994326829910278,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 111,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 188,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000203994506,
+      "dq_absmax": 0.050025761127471924,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        188,
+        188
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 112,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.049803078174591064,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 113,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04936343431472778,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 114,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.0494346022605896,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 115,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04983574151992798,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 116,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04934489727020264,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 117,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 194,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999802347292,
+      "dq_absmax": 0.04987901449203491,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        194,
+        194
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 118,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04962432384490967,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 119,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.05005842447280884,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 120,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04968571662902832,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 121,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 189,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999797090571,
+      "dq_absmax": 0.05009949207305908,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        189,
+        189
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 122,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.0492100715637207,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 123,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.04930490255355835,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 124,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.049101412296295166,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 125,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 197,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000097313706,
+      "dq_absmax": 0.05013251304626465,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        197,
+        197
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 126,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 195,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0499999990168306,
+      "dq_absmax": 0.04985147714614868,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        195,
+        195
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 127,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.049106746912002563,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 128,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.0488162636756897,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 129,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04963642358779907,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 130,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 185,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.049999998963397484,
+      "dq_absmax": 0.04955720901489258,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        185,
+        185
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 131,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.050065577030181885,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 132,
+      "skill": "A90",
+      "config_id": "A_x00_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.049272775650024414,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 133,
+      "skill": "A90",
+      "config_id": "A_x00_y-3",
+      "rows": 191,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0497126579284668,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        191,
+        191
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 134,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 190,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999899082083,
+      "dq_absmax": 0.04961252212524414,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        190,
+        190
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 135,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 190,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999899082083,
+      "dq_absmax": 0.049873948097229004,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        190,
+        190
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 136,
+      "skill": "A90",
+      "config_id": "A_x-3_y-3",
+      "rows": 199,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999807338522,
+      "dq_absmax": 0.049188047647476196,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        199,
+        199
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 137,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04937160760164261,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 138,
+      "skill": "A90",
+      "config_id": "A_x+3_y-3",
+      "rows": 188,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000203994506,
+      "dq_absmax": 0.04980361461639404,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        188,
+        188
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 139,
+      "skill": "A90",
+      "config_id": "A_x-3_y00",
+      "rows": 198,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.050000001936394554,
+      "dq_absmax": 0.04921707510948181,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        198,
+        198
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 140,
+      "skill": "A90",
+      "config_id": "A_x+3_y00",
+      "rows": 196,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04907417297363281,
+      "grip_min": 0.017000000923871994,
+      "grip_max": 0.03999999910593033,
+      "n_videos": 2,
+      "video_frames": [
+        196,
+        196
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 141,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.07214736938476562,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 142,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.0419611930847168,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 143,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.08825087547302246,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 144,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 168,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000228424986,
+      "dq_absmax": 0.09268045425415039,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        168,
+        168
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 145,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.08310079574584961,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 146,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.08889174461364746,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 147,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.09433674812316895,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 148,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.06071829795837402,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 149,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 176,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.07478475570678711,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        176,
+        176
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 150,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.08066606521606445,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 151,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 166,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.08380746841430664,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        166,
+        166
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 152,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041936635971069336,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 153,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.10513114929199219,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 154,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04164254665374756,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 155,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.08331942558288574,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 156,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04155862331390381,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 157,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04177689552307129,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 158,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 166,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.07143950462341309,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        166,
+        166
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 159,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04153883457183838,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 160,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.0831441879272461,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 161,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04164004325866699,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 162,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04194903373718262,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 163,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.08189058303833008,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 164,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041832923889160156,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 165,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.09107732772827148,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 166,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.09554362297058105,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 167,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.0744931697845459,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 168,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04145157337188721,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 169,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04126882553100586,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 170,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.08511042594909668,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 171,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.08983969688415527,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 172,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.041509270668029785,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 173,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041509151458740234,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 174,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04122209548950195,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 175,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.09625744819641113,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 176,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.08513140678405762,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 177,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04114055633544922,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 178,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041899681091308594,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 179,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04151511192321777,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 180,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 167,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000011490052,
+      "dq_absmax": 0.09993171691894531,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        167,
+        167
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 181,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 177,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000108372082,
+      "dq_absmax": 0.09656834602355957,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        177,
+        177
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 182,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.08700323104858398,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 183,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.1032259464263916,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 184,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 167,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000011490052,
+      "dq_absmax": 0.11093330383300781,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        167,
+        167
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 185,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041788339614868164,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 186,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.08037543296813965,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 187,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041048526763916016,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 188,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04105997085571289,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 189,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04180622100830078,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 190,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 161,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.07914066314697266,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        161,
+        161
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 191,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.06850051879882812,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 192,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 167,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000011490052,
+      "dq_absmax": 0.09131860733032227,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        167,
+        167
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 193,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04137575626373291,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 194,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04104280471801758,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 195,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 177,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000108372082,
+      "dq_absmax": 0.0908820629119873,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        177,
+        177
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 196,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 162,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000118468859,
+      "dq_absmax": 0.09532952308654785,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        162,
+        162
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 197,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04156982898712158,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 198,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 163,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000023547514,
+      "dq_absmax": 0.07564973831176758,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        163,
+        163
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 199,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 176,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.09175992012023926,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        176,
+        176
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 200,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.09424090385437012,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 201,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 161,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041689515113830566,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        161,
+        161
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 202,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.08984708786010742,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 203,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.09026384353637695,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 204,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.041014671325683594,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 205,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04183781147003174,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 206,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 183,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000209598751,
+      "dq_absmax": 0.0807032585144043,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        183,
+        183
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 207,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.09539031982421875,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 208,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041377902030944824,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 209,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.1034860610961914,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 210,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 177,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000108372082,
+      "dq_absmax": 0.09068918228149414,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        177,
+        177
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 211,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0914156436920166,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 212,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.08312487602233887,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 213,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041861772537231445,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 214,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 171,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.09312987327575684,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        171,
+        171
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 215,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04149651527404785,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 216,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.07217907905578613,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 217,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04153275489807129,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 218,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04176938533782959,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 219,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 173,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000221784725,
+      "dq_absmax": 0.08585953712463379,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        173,
+        173
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 220,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.0411839485168457,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 221,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 166,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.10271644592285156,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        166,
+        166
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 222,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04143548011779785,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 223,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.10026097297668457,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 224,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041268229484558105,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 225,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.08844566345214844,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 226,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041884779930114746,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 227,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0414280891418457,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 228,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041692137718200684,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 229,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 162,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000118468859,
+      "dq_absmax": 0.09788084030151367,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        162,
+        162
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 230,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04133033752441406,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 231,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 163,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000023547514,
+      "dq_absmax": 0.09171438217163086,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        163,
+        163
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 232,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.07113003730773926,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 233,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.0414278507232666,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 234,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.08516812324523926,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 235,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.07744908332824707,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 236,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04169487953186035,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 237,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041708946228027344,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 238,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.09367156028747559,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 239,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.04104256629943848,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 240,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.04169607162475586,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 241,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.0890970230102539,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 242,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.0419316291809082,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 243,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.07830357551574707,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 244,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "rows": 156,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05,
+      "dq_absmax": 0.041591763496398926,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        156,
+        156
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 245,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.04175829887390137,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 246,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 178,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000021551962,
+      "dq_absmax": 0.08684635162353516,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        178,
+        178
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 247,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041950106620788574,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 248,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 173,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000221784725,
+      "dq_absmax": 0.08409333229064941,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        173,
+        173
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 249,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 167,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.0500000011490052,
+      "dq_absmax": 0.09536290168762207,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        167,
+        167
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 250,
+      "skill": "B90",
+      "config_id": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "rows": 158,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.04999999939256413,
+      "dq_absmax": 0.0413128137588501,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        158,
+        158
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 251,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.09383440017700195,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 252,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "rows": 157,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000122265938,
+      "dq_absmax": 0.041948795318603516,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        157,
+        157
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    },
+    {
+      "global_episode_id": 253,
+      "skill": "B90",
+      "config_id": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "rows": 172,
+      "state_dim": 9,
+      "action_dim": 8,
+      "finite": true,
+      "ts_monotonic": true,
+      "dt_mean": 0.05000000111540856,
+      "dq_absmax": 0.09481573104858398,
+      "grip_min": 0.014000000432133675,
+      "grip_max": 0.014000000432133675,
+      "n_videos": 2,
+      "video_frames": [
+        172,
+        172
+      ],
+      "video_res": [
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ]
+      ],
+      "video_fps": [
+        20.0,
+        20.0
+      ],
+      "frames_match_rows": true
+    }
+  ]
+}
