@@ -1,10 +1,146 @@
 {
   "A": {
-    "lora": [],
-    "opt_state": []
+    "lora": [
+      {
+        "step": 1200,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step01200.npz",
+        "bytes": 1734656540,
+        "sha256": "105ccc408e8b577b09ca392bef8aabbccb5d7a373603cf404020f68c72f74f9e"
+      },
+      {
+        "step": 1800,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step01800.npz",
+        "bytes": 1734655089,
+        "sha256": "5061d246c6ae45bba94fa675c33bc6653f982ca71a3f19474f7410b5baf2a0ec"
+      },
+      {
+        "step": 2400,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step02400.npz",
+        "bytes": 1734645845,
+        "sha256": "79870d410a179f80ad58ace0b9ffdc2df32042801bb92ee9a184833a3c996e6f"
+      },
+      {
+        "step": 3600,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step03600.npz",
+        "bytes": 1734630385,
+        "sha256": "c2620e9b1841563cfefe1d435963bff6a4c17e133cd7eb5634267315cfb74602"
+      },
+      {
+        "step": 4800,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step04800.npz",
+        "bytes": 1734620974,
+        "sha256": "3214f9326e42e41503c9d814a7de4c80f6b8c38df740a4f4102af3419300754e"
+      },
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step06000.npz",
+        "bytes": 1734618322,
+        "sha256": "4031d5a16be50ec40b2e071eee42340c1d5232428d5d8ee649361ef449675b1a"
+      },
+      {
+        "step": 8000,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step08000.npz",
+        "bytes": 1734600402,
+        "sha256": "55eb2ec026a436aa106d4c430f64b21d119f3bb4316a4f6974f0eae9be3e8ec9"
+      },
+      {
+        "step": 10000,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step10000.npz",
+        "bytes": 1734591742,
+        "sha256": "082493224261895f917b8d14471b3d864845e383ccfaa789512176a5a40ff8cf"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp44/A/ckpts/lora_step12000.npz",
+        "bytes": 1734581782,
+        "sha256": "b4cf0bad009d76fa09f5f544e13c6d869dbafc4adb8107fbe4314e5d9fc1c32a"
+      }
+    ],
+    "opt_state": [
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp44/A/ckpts/opt_step06000.npz",
+        "bytes": 3735683740,
+        "sha256": "affcd8060d085462fccb4192261968a4f6da427474bc3903f59cf2a856f5fb49"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp44/A/ckpts/opt_step12000.npz",
+        "bytes": 3735683744,
+        "sha256": "46b8eef581932c6873ab299f3b061db9c9cfa4680e14764f12445913e8d655bd"
+      }
+    ]
   },
   "B": {
-    "lora": [],
-    "opt_state": []
+    "lora": [
+      {
+        "step": 1200,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step01200.npz",
+        "bytes": 1734653334,
+        "sha256": "a6491f7c8e358c8dd434403ec64c5ad68578ff8bad54243f85191f7f283ab540"
+      },
+      {
+        "step": 1800,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step01800.npz",
+        "bytes": 1734651216,
+        "sha256": "4124a3aaef278cdc6dbe94b19d612fc0da8519208e74faea103195438cbf02d1"
+      },
+      {
+        "step": 2400,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step02400.npz",
+        "bytes": 1734642488,
+        "sha256": "2b64e4121ff76bb75c5cda84cf3fe83df9c441095958474478e773e6f4515990"
+      },
+      {
+        "step": 3600,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step03600.npz",
+        "bytes": 1734625527,
+        "sha256": "5aeb7efd1bd9d4b7d79befa3f0f79b094adb95431415f4a0b6fdec0d1f4ec37d"
+      },
+      {
+        "step": 4800,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step04800.npz",
+        "bytes": 1734620438,
+        "sha256": "4922492905f0d5b4bf66c276573fe1c87e6167ec49344977eafff2534a1cc81c"
+      },
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step06000.npz",
+        "bytes": 1734606250,
+        "sha256": "90c84526ef87150d7fd5cfcad338afd71c49b5ddb9db0b0241f8c82da8975837"
+      },
+      {
+        "step": 8000,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step08000.npz",
+        "bytes": 1734595810,
+        "sha256": "de89de0529cd53722913941494f85073de2c5112b4874cf29f4ade7348f0af4b"
+      },
+      {
+        "step": 10000,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step10000.npz",
+        "bytes": 1734582271,
+        "sha256": "f3d875b49e46e11f7a16427f0d75afd01b9a1ccda97ce321f55b7db5e1254fe2"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp44/B/ckpts/lora_step12000.npz",
+        "bytes": 1734573485,
+        "sha256": "a5f690c6152ddb91f40231015e90ec8aa238ad069a5fa59ee461e1c6cf0e3c0f"
+      }
+    ],
+    "opt_state": [
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp44/B/ckpts/opt_step06000.npz",
+        "bytes": 3735683740,
+        "sha256": "8830a9bef154e52f3eeff725286ae49035ff809a837f3a8297346e3f03316426"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp44/B/ckpts/opt_step12000.npz",
+        "bytes": 3735683744,
+        "sha256": "0b7aab9ea91db773e99888237c51d7a0c4cc2116042a7e8b41ab390c50e94f34"
+      }
+    ]
   }
 }
