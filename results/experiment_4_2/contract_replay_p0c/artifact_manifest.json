@@ -715,7 +715,7 @@
         "cos_contact_onset": 0.04
       }
     ],
-    "verdict": "non-monotonic: best at 1800 (cos 0.85, B90 advance 0.153 m); 2100/2400 degrade despite low training loss"
+    "verdict": "1800 is the most stable checkpoint (cos 0.74-0.86, seed std 0.08-0.11); 2400 has similar mean but 4x seed variance; 2100 low amplitude but poor direction"
   },
   "push_active": {
     "n_states": 8,
@@ -766,5 +766,31 @@
       "robot_block_contact_steps": 0
     },
     "strict_success": "0/4"
+  },
+  "seed_variance": {
+    "note": "2400 degradation was a seed-group artifact; per-seed analysis over 12 seeds",
+    "B90_approach": {
+      "1800": {
+        "mean": 0.74,
+        "std": 0.11,
+        "min": 0.53
+      },
+      "2400": {
+        "mean": 0.49,
+        "std": 0.46,
+        "min": -0.49
+      }
+    },
+    "B90_contact_onset": {
+      "1800": {
+        "mean": 0.86,
+        "std": 0.08
+      },
+      "2400": {
+        "mean": 0.54,
+        "std": 0.43
+      }
+    },
+    "verdict": "1800 stable across seeds; 2400 bimodal (4 of 12 seeds negative)"
   }
 }
