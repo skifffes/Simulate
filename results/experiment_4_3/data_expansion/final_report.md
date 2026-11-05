@@ -115,3 +115,13 @@ python scripts/exp43/compile_results.py
 
 抽检 A90（70 条目录）与 B90（57 条目录）各 1 条 episode：列名/维度/时间戳/视频数量全部符合 4.1 契约，
 无 NaN；(skill, seed) 唯一 253 对、与原始 seed 零交集。**完整 OpenPI 导出与 normalization 复核仍未做**。
+## 8. 验收后修复（2026-11-05，回应复核）
+
+- **去重 P0 已修**：新增 `scripts/exp43/build_train_manifest.py`，只读 `data_a90a/a90b/b90a/b90b`，
+  排除首批 9 条重复，按 `(skill, seed)` 兜底去重，分配全局唯一 `global_episode_id`（1..253），
+  得到 **A90 140 + B90 113 = 253** 条训练清单（`train_manifest_v2.json`）；
+- **哈希 P1 已修**：`selected_artifacts_sha256.json` 以完整相对路径为键，记录 253 个 parquet + 506 个 MP4 的 SHA256；
+- **措辞问题已改**：入库条件实为 `len(actions) >= 10`（动作序列帧数），不再写作“有效运动帧 ≥10”；
+- 去重后按条件：A90 16/24/24/26/26/26，B90 22/29/26/36（10 个训练条件全部覆盖）。
+
+仍未完成：OpenPI 导出（314 条）、完整 preflight、10% 分层内容抽查、旧 90 条 v1.2 复核。

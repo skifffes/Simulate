@@ -14,6 +14,11 @@ train 合计 **A90 170 / B90 144**。
 | `train_split_manifest.json` | train 条件、seed 去重与"未用 val/test"证明 |
 | `large_artifacts_sha256.json` | 服务器大工件（parquet/mp4 计数与字节数）的路径索引 |
 
+
+| `dedup_fix.md` | **P0/P1 修复**：只读四个无重复目录、全局唯一 episode id、253 parquet + 506 mp4 的 SHA256 |
+| `train_manifest_v2.json` | 训练输入清单（253 条唯一 episode，含 provenance 与文件路径） |
+| `selected_artifacts_sha256.json` | 入选 parquet/MP4 的逐文件 SHA256 |
+
 ## 复现
 
 ```bash
