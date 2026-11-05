@@ -1,0 +1,3301 @@
+{
+  "npz": "results/experiment_4_2/contract_replay_p0c/expert_state_curve2100.npz",
+  "n_rows": 120,
+  "min_expert_threshold": 0.01,
+  "by_phase": {
+    "A90:approach": {
+      "n_states": 4,
+      "n_rows": 16,
+      "expert_absmax_median": 0.02206607162952423,
+      "model_absmax_median": 0.09580985699701683,
+      "model_seed_std_median": 0.01479791211773664,
+      "joint_mae_median": 0.02620284653124158,
+      "cos_joint_median": 0.9105184893637883,
+      "ee_cos_median": 0.5497608550296463,
+      "mag_ratio_median": 9.16052281093191,
+      "gripper_err_median": 0.02805718991087376,
+      "per_tick": [
+        {
+          "expert_absmax": 0.0,
+          "model_absmax_mean": 0.054719556794352836,
+          "model_absmax_std": 0.010365559887955393,
+          "joint_mae_mean": 0.023116233957711053,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.04081099905394017,
+          "mag_ratio_median": 76490779.40505847
+        },
+        {
+          "expert_absmax": 0.04187357425689697,
+          "model_absmax_mean": 0.13690015719968082,
+          "model_absmax_std": 0.019230264347517886,
+          "joint_mae_mean": 0.029289459104772105,
+          "cos_joint": 0.903730905769547,
+          "ee_cos": 0.5983471082524822,
+          "gripper_err": 0.02817923593138158,
+          "mag_ratio_median": 3.0001657332129543
+        },
+        {
+          "expert_absmax": 0.04187217354774475,
+          "model_absmax_mean": 0.1605034444616437,
+          "model_absmax_std": 0.022087155519085605,
+          "joint_mae_mean": 0.03209740624515071,
+          "cos_joint": 0.9173060729580298,
+          "ee_cos": 0.5497608550296463,
+          "gripper_err": 0.027935143890365943,
+          "mag_ratio_median": 3.516744035469684
+        },
+        {
+          "expert_absmax": 0.002259969711303711,
+          "model_absmax_mean": 0.026824127235330633,
+          "model_absmax_std": 0.008858390554672704,
+          "joint_mae_mean": 0.011427323949409367,
+          "cos_joint": null,
+          "ee_cos": 0.1622328207829563,
+          "gripper_err": 0.009278691550374057,
+          "mag_ratio_median": 14.804301586394136
+        }
+      ]
+    },
+    "A90:contact_onset": {
+      "n_states": 1,
+      "n_rows": 4,
+      "expert_absmax_median": 0.0001552104949951172,
+      "model_absmax_median": 0.03358558034756036,
+      "model_seed_std_median": 0.01543462620709587,
+      "joint_mae_median": 0.013236838636520702,
+      "cos_joint_median": null,
+      "ee_cos_median": null,
+      "mag_ratio_median": 255.17778316008275,
+      "gripper_err_median": 0.004738806130766882,
+      "per_tick": [
+        {
+          "expert_absmax": 0.0001552104949951172,
+          "model_absmax_mean": 0.03358558034756036,
+          "model_absmax_std": 0.01543462620709587,
+          "joint_mae_mean": 0.013236838636520702,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.004738806130766882,
+          "mag_ratio_median": 255.17778316008275
+        }
+      ]
+    },
+    "A90:grasp": {
+      "n_states": 3,
+      "n_rows": 12,
+      "expert_absmax_median": 0.01802372932434082,
+      "model_absmax_median": 0.03714756945865602,
+      "model_seed_std_median": 0.010776094764666736,
+      "joint_mae_median": 0.01645147920024713,
+      "cos_joint_median": 0.4278140841411607,
+      "ee_cos_median": -0.6659794205354489,
+      "mag_ratio_median": 1.673746431523615,
+      "gripper_err_median": 0.008171869005471469,
+      "per_tick": [
+        {
+          "expert_absmax": 0.04597783088684082,
+          "model_absmax_mean": 0.03714756945865602,
+          "model_absmax_std": 0.010468329389485925,
+          "joint_mae_mean": 0.015083242263605566,
+          "cos_joint": 0.4278140841411607,
+          "ee_cos": -0.7984105543733394,
+          "gripper_err": 0.008171869005471469,
+          "mag_ratio_median": 1.109383871824701
+        },
+        {
+          "expert_absmax": 0.010620713233947754,
+          "model_absmax_mean": 0.04280599477159977,
+          "model_absmax_std": 0.012520111878944072,
+          "joint_mae_mean": 0.01645147920024713,
+          "cos_joint": 0.5462735091982808,
+          "ee_cos": -0.6659794205354489,
+          "gripper_err": 0.005968801181197164,
+          "mag_ratio_median": 5.1608239151928395
+        },
+        {
+          "expert_absmax": 0.01802372932434082,
+          "model_absmax_mean": 0.03112345792094616,
+          "model_absmax_std": 0.010776094764666736,
+          "joint_mae_mean": 0.01790911116585879,
+          "cos_joint": -0.11742831726529775,
+          "ee_cos": -0.24275911226997432,
+          "gripper_err": 0.037206778366208074,
+          "mag_ratio_median": 1.673746431523615
+        }
+      ]
+    },
+    "B90:approach": {
+      "n_states": 8,
+      "n_rows": 32,
+      "expert_absmax_median": 0.03635835647583008,
+      "model_absmax_median": 0.04207249321609735,
+      "model_seed_std_median": 0.008801248107149972,
+      "joint_mae_median": 0.017840925647364635,
+      "cos_joint_median": 0.4842161972976813,
+      "ee_cos_median": -0.05313410650612024,
+      "mag_ratio_median": 1.2603195062670056,
+      "gripper_err_median": 0.011677249212443841,
+      "per_tick": [
+        {
+          "expert_absmax": 0.0,
+          "model_absmax_mean": 0.04321455470989646,
+          "model_absmax_std": 0.003591393911629338,
+          "joint_mae_mean": 0.018170808510166173,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.013628555313766014,
+          "mag_ratio_median": 60942318.728746615
+        },
+        {
+          "expert_absmax": 0.03829550743103027,
+          "model_absmax_mean": 0.06444656590518358,
+          "model_absmax_std": 0.028127025298928333,
+          "joint_mae_mean": 0.02054785227425181,
+          "cos_joint": 0.61846774858662,
+          "ee_cos": -0.060079422346863226,
+          "gripper_err": 0.011868422861754907,
+          "mag_ratio_median": 1.5150455262754638
+        },
+        {
+          "expert_absmax": 0.03829598426818848,
+          "model_absmax_mean": 0.03973816406406461,
+          "model_absmax_std": 0.012083238629059509,
+          "joint_mae_mean": 0.017662875755241926,
+          "cos_joint": 0.46325150742156623,
+          "ee_cos": -0.665754064060052,
+          "gripper_err": 0.011486075563132775,
+          "mag_ratio_median": 1.0618440843516028
+        },
+        {
+          "expert_absmax": 0.0372622013092041,
+          "model_absmax_mean": 0.03453129823298001,
+          "model_absmax_std": 0.0055192575852404365,
+          "joint_mae_mean": 0.017366928554884007,
+          "cos_joint": 0.4301548261885679,
+          "ee_cos": 0.5438732587666818,
+          "gripper_err": 0.011231495192229754,
+          "mag_ratio_median": 1.099803456202528
+        },
+        {
+          "expert_absmax": 0.0,
+          "model_absmax_mean": 0.04243538544033468,
+          "model_absmax_std": 0.003021707090668918,
+          "joint_mae_mean": 0.017901681035347256,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.013245254530608666,
+          "mag_ratio_median": 58632990.111754194
+        },
+        {
+          "expert_absmax": 0.035826683044433594,
+          "model_absmax_mean": 0.06062716601428392,
+          "model_absmax_std": 0.025554637622033836,
+          "joint_mae_mean": 0.020355257780683863,
+          "cos_joint": 0.5771158822267117,
+          "ee_cos": -0.04618879066537726,
+          "gripper_err": 0.01189130649060012,
+          "mag_ratio_median": 1.420835556331483
+        },
+        {
+          "expert_absmax": 0.035826921463012695,
+          "model_absmax_mean": 0.041709600991860024,
+          "model_absmax_std": 0.012163440306890955,
+          "joint_mae_mean": 0.017780170259382014,
+          "cos_joint": 0.4831363750944553,
+          "ee_cos": -0.7183646605833967,
+          "gripper_err": 0.01109419341915846,
+          "mag_ratio_median": 1.0981880533303352
+        },
+        {
+          "expert_absmax": 0.03688979148864746,
+          "model_absmax_mean": 0.029391792648263235,
+          "model_absmax_std": 0.003634720806781221,
+          "joint_mae_mean": 0.01567689427570784,
+          "cos_joint": 0.4852960195009072,
+          "ee_cos": 0.587350073702039,
+          "gripper_err": 0.010140708883941169,
+          "mag_ratio_median": 1.013595935237952
+        }
+      ]
+    },
+    "B90:contact_onset": {
+      "n_states": 2,
+      "n_rows": 8,
+      "expert_absmax_median": 0.039897918701171875,
+      "model_absmax_median": 0.03062067125881087,
+      "model_seed_std_median": 0.004133447691553142,
+      "joint_mae_median": 0.016188412683824323,
+      "cos_joint_median": 0.4993263820047599,
+      "ee_cos_median": 0.5743821524566022,
+      "mag_ratio_median": 0.9579031542044536,
+      "gripper_err_median": 0.010854175335019839,
+      "per_tick": [
+        {
+          "expert_absmax": 0.04012560844421387,
+          "model_absmax_mean": 0.03285394507199524,
+          "model_absmax_std": 0.00483261806618613,
+          "joint_mae_mean": 0.016568899005132042,
+          "cos_joint": 0.504766312111186,
+          "ee_cos": 0.5790732281856207,
+          "gripper_err": 0.011788850198268905,
+          "mag_ratio_median": 0.9916151437465066
+        },
+        {
+          "expert_absmax": 0.03967022895812988,
+          "model_absmax_mean": 0.028387397445626503,
+          "model_absmax_std": 0.003434277316920154,
+          "joint_mae_mean": 0.015807926362516603,
+          "cos_joint": 0.4938864518983338,
+          "ee_cos": 0.5696910767275838,
+          "gripper_err": 0.009919500471770773,
+          "mag_ratio_median": 0.9241911646624007
+        }
+      ]
+    },
+    "B90:push_pre_wall": {
+      "n_states": 4,
+      "n_rows": 16,
+      "expert_absmax_median": 2.63899564743042e-05,
+      "model_absmax_median": 0.023496716059002956,
+      "model_seed_std_median": 0.0020702122502083745,
+      "joint_mae_median": 0.013558267442988466,
+      "cos_joint_median": -0.10319782246436736,
+      "ee_cos_median": 0.26371156329975576,
+      "mag_ratio_median": 1044.0026568521744,
+      "gripper_err_median": 0.011745943394184138,
+      "per_tick": [
+        {
+          "expert_absmax": 1.049041748046875e-05,
+          "model_absmax_mean": 0.027073138656563994,
+          "model_absmax_std": 0.0023841502584761053,
+          "joint_mae_mean": 0.014278596160748142,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.012433405744075796,
+          "mag_ratio_median": 3403.5728880387796
+        },
+        {
+          "expert_absmax": 0.02347588539123535,
+          "model_absmax_mean": 0.02311609637892237,
+          "model_absmax_std": 0.004065231166957727,
+          "joint_mae_mean": 0.01592370572999224,
+          "cos_joint": -0.10319782246436736,
+          "ee_cos": 0.26371156329975576,
+          "gripper_err": 0.00874385403984787,
+          "mag_ratio_median": 1.3652125656151584
+        },
+        {
+          "expert_absmax": 3.2782554626464844e-05,
+          "model_absmax_mean": 0.023877335739083544,
+          "model_absmax_std": 0.0012644403321924926,
+          "joint_mae_mean": 0.01283793872522879,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.01242959180593492,
+          "mag_ratio_median": 915.1774279780723
+        },
+        {
+          "expert_absmax": 1.9997358322143555e-05,
+          "model_absmax_mean": 0.022313935421585954,
+          "model_absmax_std": 0.001756274241940644,
+          "joint_mae_mean": 0.01034583718108064,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.011062294982433357,
+          "mag_ratio_median": 1172.8278857262762
+        }
+      ]
+    },
+    "B90:wall_hold": {
+      "n_states": 6,
+      "n_rows": 24,
+      "expert_absmax_median": 5.152076482772827e-05,
+      "model_absmax_median": 0.025737327091813,
+      "model_seed_std_median": 0.0037959864738418376,
+      "joint_mae_median": 0.012442567849026701,
+      "cos_joint_median": 0.17992226098693725,
+      "ee_cos_median": -0.11895639165752804,
+      "mag_ratio_median": 9826.66210814464,
+      "gripper_err_median": 0.01211827910518648,
+      "per_tick": [
+        {
+          "expert_absmax": 0.0001010894775390625,
+          "model_absmax_mean": 0.0291166713918298,
+          "model_absmax_std": 0.010069587401411334,
+          "joint_mae_mean": 0.014297511833550637,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.009743105832755575,
+          "mag_ratio_median": 256.45963932372536
+        },
+        {
+          "expert_absmax": 1.646578311920166e-06,
+          "model_absmax_mean": 0.025931504612564965,
+          "model_absmax_std": 0.003385481742700909,
+          "joint_mae_mean": 0.012490904922199023,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.011553339518070235,
+          "mag_ratio_median": 25000.26123263316
+        },
+        {
+          "expert_absmax": 1.646578311920166e-06,
+          "model_absmax_mean": 0.02514270998823634,
+          "model_absmax_std": 0.002908199114187018,
+          "joint_mae_mean": 0.01228717229289986,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.011736408548831956,
+          "mag_ratio_median": 24668.049774262472
+        },
+        {
+          "expert_absmax": 0.008758544921875,
+          "model_absmax_mean": 0.02347419009840479,
+          "model_absmax_std": 0.003540373651349611,
+          "joint_mae_mean": 0.012445400617614361,
+          "cos_joint": -0.3038131773060049,
+          "ee_cos": 0.11435549618740828,
+          "gripper_err": 0.012500149661541005,
+          "mag_ratio_median": 3.27377964692469
+        },
+        {
+          "expert_absmax": 0.03913909196853638,
+          "model_absmax_mean": 0.028850411626204844,
+          "model_absmax_std": 0.00966620431517311,
+          "joint_mae_mean": 0.012439735080439041,
+          "cos_joint": 0.6636576992798794,
+          "ee_cos": -0.35226827950246437,
+          "gripper_err": 0.01258214933156969,
+          "mag_ratio_median": 0.7963515120481914
+        },
+        {
+          "expert_absmax": 1.952052116394043e-06,
+          "model_absmax_mean": 0.025543149571061033,
+          "model_absmax_std": 0.004051599296334064,
+          "joint_mae_mean": 0.011012069529243855,
+          "cos_joint": null,
+          "ee_cos": null,
+          "gripper_err": 0.014069585206508653,
+          "mag_ratio_median": 19396.864576965552
+        }
+      ]
+    },
+    "B90:wall_onset": {
+      "n_states": 2,
+      "n_rows": 8,
+      "expert_absmax_median": 0.010367512702941895,
+      "model_absmax_median": 0.02369046860602491,
+      "model_seed_std_median": 0.004797643131364311,
+      "joint_mae_median": 0.013166408265794469,
+      "cos_joint_median": 0.07114350783624421,
+      "ee_cos_median": 0.22444553797996356,
+      "mag_ratio_median": 10.126347295691545,
+      "gripper_err_median": 0.010392212077707068,
+      "per_tick": [
+        {
+          "expert_absmax": 0.0016031265258789062,
+          "model_absmax_mean": 0.0249707431120276,
+          "model_absmax_std": 0.008048725228610429,
+          "joint_mae_mean": 0.013926048822188994,
+          "cos_joint": null,
+          "ee_cos": 0.10854479206613794,
+          "gripper_err": 0.009651571317374721,
+          "mag_ratio_median": 18.773335720898565
+        },
+        {
+          "expert_absmax": 0.019131898880004883,
+          "model_absmax_mean": 0.02241019410002222,
+          "model_absmax_std": 0.0015465610341181932,
+          "joint_mae_mean": 0.012406767709399944,
+          "cos_joint": 0.07114350783624421,
+          "ee_cos": 0.3403462838937892,
+          "gripper_err": 0.011132852838039414,
+          "mag_ratio_median": 1.4793588704845266
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04311493465697769,
+      "joint_mae": 0.019615497671455127,
+      "cos_joint": null,
+      "mag_ratio": 62281870.55088341,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.011032521724700928,
+        -0.016368980637302855
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36091338341993096,
+      "gripper_err": 0.01091337261658909
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04304827500152586,
+      "joint_mae": 0.021365712248900073,
+      "cos_joint": null,
+      "mag_ratio": 65256465.86730142,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.0006128251552581787,
+        -0.003936127877345541
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3473656196229458,
+      "gripper_err": 0.002634391180396045
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04842291178977487,
+      "joint_mae": 0.01568675297114252,
+      "cos_joint": null,
+      "mag_ratio": 59602766.90660982,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        0.006386309862136841,
+        -0.004648138421138981
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.37164920213699343,
+      "gripper_err": 0.021649191333651563
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.038272097391307436,
+      "joint_mae": 0.01601527114916697,
+      "cos_joint": null,
+      "mag_ratio": 51274653.97814754,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.005443096160888672,
+        -0.0017327951514332085
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3693172769277692,
+      "gripper_err": 0.019317266124427357
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.03829550743103027,
+      "model_absmax": 0.03534528968375927,
+      "joint_mae": 0.020533248442756242,
+      "cos_joint": 0.3494882797039297,
+      "mag_ratio": 1.1369532905708175,
+      "ee_expert": [
+        0.004117339849472046,
+        0.005310021340847015
+      ],
+      "ee_model": [
+        -0.0023743808269500732,
+        -0.014536045491695404
+      ],
+      "ee_cos": -0.8787117794592775,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3565197266816497,
+      "gripper_err": 0.006519715878307852
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.03829550743103027,
+      "model_absmax": 0.07305975731968883,
+      "joint_mae": 0.021170849953855788,
+      "cos_joint": 0.7725169961193303,
+      "mag_ratio": 1.8931377619801102,
+      "ee_expert": [
+        0.004117339849472046,
+        0.005310021340847015
+      ],
+      "ee_model": [
+        -0.0017976760864257812,
+        -0.0018710605800151825
+      ],
+      "ee_cos": -0.9944037290688189,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3454128832948208,
+      "gripper_err": 0.004587127508521083
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.03829550743103027,
+      "model_absmax": 0.10657764372336864,
+      "joint_mae": 0.02437095762369034,
+      "cos_joint": 0.9310916153664008,
+      "mag_ratio": 2.485312920531085,
+      "ee_expert": [
+        0.004117339849472046,
+        0.005310021340847015
+      ],
+      "ee_model": [
+        0.009251147508621216,
+        0.005990374833345413
+      ],
+      "ee_cos": 0.943880737252389,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36735470779037477,
+      "gripper_err": 0.017354696987032903
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.03829550743103027,
+      "model_absmax": 0.04280357289391756,
+      "joint_mae": 0.016116353076704875,
+      "cos_joint": 0.4207741031568191,
+      "mag_ratio": 1.042503924395258,
+      "ee_expert": [
+        0.004117339849472046,
+        0.005310021340847015
+      ],
+      "ee_model": [
+        0.002142965793609619,
+        0.00021596625447273254
+      ],
+      "ee_cos": 0.6889170818882545,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36901216187649966,
+      "gripper_err": 0.01901215107315779
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 34,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.03829598426818848,
+      "model_absmax": 0.030753502372383945,
+      "joint_mae": 0.019510702452152966,
+      "cos_joint": 0.20519929019952537,
+      "mag_ratio": 0.8038398992569438,
+      "ee_expert": [
+        -0.006567090749740601,
+        0.005468457937240601
+      ],
+      "ee_model": [
+        0.0022867023944854736,
+        -0.01929832249879837
+      ],
+      "ee_cos": -0.7258783062318868,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35542131249707937,
+      "gripper_err": 0.005421301693737501
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 34,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.03829598426818848,
+      "model_absmax": 0.043043767588853865,
+      "joint_mae": 0.017286812317132933,
+      "cos_joint": 0.6079776900961819,
+      "mag_ratio": 1.319848269446262,
+      "ee_expert": [
+        -0.006567090749740601,
+        0.005468457937240601
+      ],
+      "ee_model": [
+        -0.007717400789260864,
+        -0.013883106410503387
+      ],
+      "ee_cos": -0.1859301593649432,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34614515941786766,
+      "gripper_err": 0.0038548513854742006
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 34,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.03829598426818848,
+      "model_absmax": 0.05800885661399369,
+      "joint_mae": 0.01486363761738792,
+      "cos_joint": 0.819718301782388,
+      "mag_ratio": 1.5355435136558253,
+      "ee_expert": [
+        -0.006567090749740601,
+        0.005468457937240601
+      ],
+      "ee_model": [
+        0.0009391903877258301,
+        -0.005771949887275696
+      ],
+      "ee_cos": -0.7550109119905286,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3674119168624878,
+      "gripper_err": 0.017411906059145943
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 34,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.03829598426818848,
+      "model_absmax": 0.027146529681026932,
+      "joint_mae": 0.018990350634293884,
+      "cos_joint": 0.22011074760816982,
+      "mag_ratio": 0.7823265737063704,
+      "ee_expert": [
+        -0.006567090749740601,
+        0.005468457937240601
+      ],
+      "ee_model": [
+        0.007050186395645142,
+        -0.004897415637969971
+      ],
+      "ee_cos": -0.9961968786528496,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3692562539175153,
+      "gripper_err": 0.019256243114173455
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 52,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.0372622013092041,
+      "model_absmax": 0.03388963845610615,
+      "joint_mae": 0.014038763349809786,
+      "cos_joint": 0.5713379884424639,
+      "mag_ratio": 1.0433598880164914,
+      "ee_expert": [
+        0.01153409481048584,
+        0.00014816224575042725
+      ],
+      "ee_model": [
+        0.010370045900344849,
+        -0.01793217658996582
+      ],
+      "ee_cos": 0.48945127237860153,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35529926647657156,
+      "gripper_err": 0.005299255673229697
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 52,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.0372622013092041,
+      "model_absmax": 0.03958394577503199,
+      "joint_mae": 0.0222105732394925,
+      "cos_joint": 0.1976706647681307,
+      "mag_ratio": 1.1562470243885647,
+      "ee_expert": [
+        0.01153409481048584,
+        0.00014816224575042725
+      ],
+      "ee_model": [
+        0.0026220083236694336,
+        -0.017569005489349365
+      ],
+      "ee_cos": 0.13488981407240616,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3493183559510708,
+      "gripper_err": 0.000681654852271063
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 52,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.0372622013092041,
+      "model_absmax": 0.02576152845036972,
+      "joint_mae": 0.015461476212897451,
+      "cos_joint": 0.4701265208410967,
+      "mag_ratio": 0.8628953793658403,
+      "ee_expert": [
+        0.01153409481048584,
+        0.00014816224575042725
+      ],
+      "ee_model": [
+        0.008806347846984863,
+        -0.011194318532943726
+      ],
+      "ee_cos": 0.6081446326140391,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36846837772750857,
+      "gripper_err": 0.0184683669241667
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 52,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.0372622013092041,
+      "model_absmax": 0.038890080250412185,
+      "joint_mae": 0.017756901417336293,
+      "cos_joint": 0.4814841307025804,
+      "mag_ratio": 1.2040771394190073,
+      "ee_expert": [
+        0.01153409481048584,
+        0.00014816224575042725
+      ],
+      "ee_model": [
+        0.018252640962600708,
+        -0.0061785876750946045
+      ],
+      "ee_cos": 0.9430073160016805,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3704767141225934,
+      "gripper_err": 0.020476703319251555
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 53,
+      "phase": "contact_onset",
+      "seed": 0,
+      "expert_absmax": 0.04012560844421387,
+      "model_absmax": 0.032063465360403054,
+      "joint_mae": 0.01405186972713893,
+      "cos_joint": 0.6107201306895349,
+      "mag_ratio": 0.9825372107920969,
+      "ee_expert": [
+        0.012397944927215576,
+        4.437565803527832e-05
+      ],
+      "ee_model": [
+        0.010892212390899658,
+        -0.018220096826553345
+      ],
+      "ee_cos": 0.5100394613854257,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3555433585175872,
+      "gripper_err": 0.005543347714245361
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 53,
+      "phase": "contact_onset",
+      "seed": 1,
+      "expert_absmax": 0.04012560844421387,
+      "model_absmax": 0.037027303441047654,
+      "joint_mae": 0.02073201764259592,
+      "cos_joint": 0.2917592138009942,
+      "mag_ratio": 1.0006930767009163,
+      "ee_expert": [
+        0.012397944927215576,
+        4.437565803527832e-05
+      ],
+      "ee_model": [
+        0.0045909583568573,
+        -0.017252177000045776
+      ],
+      "ee_cos": 0.2536988930521502,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3502947241151333,
+      "gripper_err": 0.000294713311791428
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 53,
+      "phase": "contact_onset",
+      "seed": 2,
+      "expert_absmax": 0.04012560844421387,
+      "model_absmax": 0.02526110433182116,
+      "joint_mae": 0.014716765563747704,
+      "cos_joint": 0.5639214569337369,
+      "mag_ratio": 0.8135418588714587,
+      "ee_expert": [
+        0.012397944927215576,
+        4.437565803527832e-05
+      ],
+      "ee_model": [
+        0.00909319519996643,
+        -0.01194755733013153
+      ],
+      "ee_cos": 0.6027820901083604,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36962018704605104,
+      "gripper_err": 0.019620176242709175
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 53,
+      "phase": "contact_onset",
+      "seed": 3,
+      "expert_absmax": 0.04012560844421387,
+      "model_absmax": 0.037063907154709086,
+      "joint_mae": 0.01677494308704561,
+      "cos_joint": 0.5526644470204783,
+      "mag_ratio": 1.1102730382332655,
+      "ee_expert": [
+        0.012397944927215576,
+        4.437565803527832e-05
+      ],
+      "ee_model": [
+        0.01940062642097473,
+        -0.006315439939498901
+      ],
+      "ee_cos": 0.9497724681965465,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3716971743276715,
+      "gripper_err": 0.021697163524329655
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 84,
+      "phase": "push_pre_wall",
+      "seed": 0,
+      "expert_absmax": 1.049041748046875e-05,
+      "model_absmax": 0.027315415311574887,
+      "joint_mae": 0.01460919999143477,
+      "cos_joint": null,
+      "mag_ratio": 3471.6622432067784,
+      "ee_expert": [
+        -4.172325134277344e-07,
+        -4.753470420837402e-06
+      ],
+      "ee_model": [
+        0.008276283740997314,
+        -0.021043717861175537
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35505517443555595,
+      "gripper_err": 0.005055163632214088
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 84,
+      "phase": "push_pre_wall",
+      "seed": 1,
+      "expert_absmax": 1.049041748046875e-05,
+      "model_absmax": 0.02935737643909453,
+      "joint_mae": 0.013938952781383447,
+      "cos_joint": null,
+      "mag_ratio": 3335.483532870781,
+      "ee_expert": [
+        -4.172325134277344e-07,
+        -4.753470420837402e-06
+      ],
+      "ee_model": [
+        0.003678262233734131,
+        -0.01977086067199707
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35249155248427394,
+      "gripper_err": 0.0024915416809320745
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 84,
+      "phase": "push_pre_wall",
+      "seed": 2,
+      "expert_absmax": 1.049041748046875e-05,
+      "model_absmax": 0.023138869270682205,
+      "joint_mae": 0.012415790281231878,
+      "cos_joint": null,
+      "mag_ratio": 2809.126616726298,
+      "ee_expert": [
+        -4.172325134277344e-07,
+        -4.753470420837402e-06
+      ],
+      "ee_model": [
+        0.005831122398376465,
+        -0.01616854965686798
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36890316667556766,
+      "gripper_err": 0.018903155872225796
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 84,
+      "phase": "push_pre_wall",
+      "seed": 3,
+      "expert_absmax": 1.049041748046875e-05,
+      "model_absmax": 0.028480893604904356,
+      "joint_mae": 0.016150441588942473,
+      "cos_joint": null,
+      "mag_ratio": 3512.980407656472,
+      "ee_expert": [
+        -4.172325134277344e-07,
+        -4.753470420837402e-06
+      ],
+      "ee_model": [
+        0.01534491777420044,
+        -0.008229285478591919
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3732837725942731,
+      "gripper_err": 0.023283761790931223
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 0,
+      "expert_absmax": 0.02347588539123535,
+      "model_absmax": 0.020044310721993308,
+      "joint_mae": 0.014979384077757554,
+      "cos_joint": 0.088216666852623,
+      "mag_ratio": 1.309303896195174,
+      "ee_expert": [
+        0.004727840423583984,
+        -9.506940841674805e-06
+      ],
+      "ee_model": [
+        0.004910588264465332,
+        -0.024370327591896057
+      ],
+      "ee_cos": 0.19949937467968715,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3506615176972747,
+      "gripper_err": 0.0006615068939328506
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 1,
+      "expert_absmax": 0.02347588539123535,
+      "model_absmax": 0.021839438545524947,
+      "joint_mae": 0.018872098054506927,
+      "cos_joint": -0.2237870555066432,
+      "mag_ratio": 1.4211212350351428,
+      "ee_expert": [
+        0.004727840423583984,
+        -9.506940841674805e-06
+      ],
+      "ee_model": [
+        0.00014221668243408203,
+        -0.022344887256622314
+      ],
+      "ee_cos": 0.008375274075742914,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34712152758193016,
+      "gripper_err": 0.0028784832214117095
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 2,
+      "expert_absmax": 0.02347588539123535,
+      "model_absmax": 0.02051621009099469,
+      "joint_mae": 0.012490899083486622,
+      "cos_joint": -0.10726969038563106,
+      "mag_ratio": 0.8832098747999652,
+      "ee_expert": [
+        0.004727840423583984,
+        -9.506940841674805e-06
+      ],
+      "ee_model": [
+        0.0021704435348510742,
+        -0.015938371419906616
+      ],
+      "ee_cos": 0.1369240647083258,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3635216999588013,
+      "gripper_err": 0.013521689155459427
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 3,
+      "expert_absmax": 0.02347588539123535,
+      "model_absmax": 0.030064426157176527,
+      "joint_mae": 0.017352441704217864,
+      "cos_joint": -0.16995121081781817,
+      "mag_ratio": 1.4529921317234622,
+      "ee_expert": [
+        0.004727840423583984,
+        -9.506940841674805e-06
+      ],
+      "ee_model": [
+        0.01133817434310913,
+        -0.01128937304019928
+      ],
+      "ee_cos": 0.7100475397352672,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36791374769192936,
+      "gripper_err": 0.017913736888587495
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 0,
+      "expert_absmax": 0.0016031265258789062,
+      "model_absmax": 0.02007585750854024,
+      "joint_mae": 0.014447011127927456,
+      "cos_joint": null,
+      "mag_ratio": 17.976464516695835,
+      "ee_expert": [
+        0.0007678866386413574,
+        0.00010150671005249023
+      ],
+      "ee_model": [
+        0.004796802997589111,
+        -0.024774953722953796
+      ],
+      "ee_cos": 0.05978529261263704,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3521260699433685,
+      "gripper_err": 0.002126059140026615
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 1,
+      "expert_absmax": 0.0016031265258789062,
+      "model_absmax": 0.021293051216423386,
+      "joint_mae": 0.016115627234556815,
+      "cos_joint": null,
+      "mag_ratio": 19.570206925101296,
+      "ee_expert": [
+        0.0007678866386413574,
+        0.00010150671005249023
+      ],
+      "ee_model": [
+        -0.000762641429901123,
+        -0.022333979606628418
+      ],
+      "ee_cos": -0.16480626492404227,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34760971166396143,
+      "gripper_err": 0.0023902991393804363
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 2,
+      "expert_absmax": 0.0016031265258789062,
+      "model_absmax": 0.019641990364432205,
+      "joint_mae": 0.009336492915315289,
+      "cos_joint": null,
+      "mag_ratio": 12.069921611557506,
+      "ee_expert": [
+        0.0007678866386413574,
+        0.00010150671005249023
+      ],
+      "ee_model": [
+        0.0016197562217712402,
+        -0.014895126223564148
+      ],
+      "ee_cos": -0.02310724286121756,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3651998327407837,
+      "gripper_err": 0.015199821937441849
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 3,
+      "expert_absmax": 0.0016031265258789062,
+      "model_absmax": 0.038872073358714565,
+      "joint_mae": 0.015805064010956413,
+      "cos_joint": null,
+      "mag_ratio": 22.01601363936796,
+      "ee_expert": [
+        0.0007678866386413574,
+        0.00010150671005249023
+      ],
+      "ee_model": [
+        0.009635746479034424,
+        -0.010797545313835144
+      ],
+      "ee_cos": 0.5623073834371746,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36889011585599185,
+      "gripper_err": 0.018890105052649986
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 0.0001010894775390625,
+      "model_absmax": 0.024683672938227708,
+      "joint_mae": 0.01475206916023149,
+      "cos_joint": null,
+      "mag_ratio": 241.59717006614173,
+      "ee_expert": [
+        6.264448165893555e-05,
+        -2.1576881408691406e-05
+      ],
+      "ee_model": [
+        0.004433691501617432,
+        -0.02414950728416443
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3528583460664153,
+      "gripper_err": 0.0028583352630734415
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 0.0001010894775390625,
+      "model_absmax": 0.024979026222228917,
+      "joint_mae": 0.01652511671641465,
+      "cos_joint": null,
+      "mag_ratio": 271.322108581309,
+      "ee_expert": [
+        6.264448165893555e-05,
+        -2.1576881408691406e-05
+      ],
+      "ee_model": [
+        -0.0014134645462036133,
+        -0.02155168354511261
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3485860798280239,
+      "gripper_err": 0.0014139309753179452
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 0.0001010894775390625,
+      "model_absmax": 0.02051621009099469,
+      "joint_mae": 0.009445165401875955,
+      "cos_joint": null,
+      "mag_ratio": 173.31717788117166,
+      "ee_expert": [
+        6.264448165893555e-05,
+        -2.1576881408691406e-05
+      ],
+      "ee_model": [
+        0.0009595751762390137,
+        -0.014708921313285828
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3649557406997681,
+      "gripper_err": 0.01495572989642624
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 0.0001010894775390625,
+      "model_absmax": 0.04628777631586789,
+      "joint_mae": 0.01646769605568046,
+      "cos_joint": null,
+      "mag_ratio": 320.44808256506474,
+      "ee_expert": [
+        6.264448165893555e-05,
+        -2.1576881408691406e-05
+      ],
+      "ee_model": [
+        0.009005427360534668,
+        -0.009939983487129211
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36974443799954654,
+      "gripper_err": 0.019744427196204672
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 135,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.022885524833321458,
+      "joint_mae": 0.013097221436956066,
+      "cos_joint": null,
+      "mag_ratio": 23619.460018191974,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.0028154850006103516,
+        -0.023880168795585632
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35590949657911064,
+      "gripper_err": 0.005909485775768775
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 135,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.0239157103961109,
+      "joint_mae": 0.014758651967078438,
+      "cos_joint": null,
+      "mag_ratio": 26701.715102949292,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        -0.0033501386642456055,
+        -0.020685449242591858
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3500506320741177,
+      "gripper_err": 5.062127077581913e-05
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 135,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.02532441858708845,
+      "joint_mae": 0.00840489644608326,
+      "cos_joint": null,
+      "mag_ratio": 17818.08538772554,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.00038999319076538086,
+        -0.014763608574867249
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36880019034576417,
+      "gripper_err": 0.0188001795424223
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 135,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.03160036463373905,
+      "joint_mae": 0.013702849838678326,
+      "cos_joint": null,
+      "mag_ratio": 26381.062447074346,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.005679309368133545,
+        -0.009355589747428894
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3714530822866559,
+      "gripper_err": 0.021453071483314046
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 156,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.022284498771309724,
+      "joint_mae": 0.01308128251570886,
+      "cos_joint": null,
+      "mag_ratio": 23804.682236693923,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.002942502498626709,
+        -0.023826107382774353
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3565197266816497,
+      "gripper_err": 0.006519715878307852
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 156,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.02347860053282963,
+      "joint_mae": 0.014622027331109542,
+      "cos_joint": null,
+      "mag_ratio": 26477.996954841252,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        -0.002989053726196289,
+        -0.020789161324501038
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3505388161561489,
+      "gripper_err": 0.0005388053528070369
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 156,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.024887308723807178,
+      "joint_mae": 0.008119837253153319,
+      "cos_joint": null,
+      "mag_ratio": 17344.439847373906,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.0006638169288635254,
+        -0.014116153120994568
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36873916733551027,
+      "gripper_err": 0.0187391565321684
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 156,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 1.646578311920166e-06,
+      "model_absmax": 0.029920431924998825,
+      "joint_mae": 0.013325542071627712,
+      "cos_joint": null,
+      "mag_ratio": 25531.417311831017,
+      "ee_expert": [
+        -2.384185791015625e-07,
+        1.0728836059570312e-06
+      ],
+      "ee_model": [
+        0.005801260471343994,
+        -0.00967763364315033
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3711479672353864,
+      "gripper_err": 0.021147956432044535
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.0408110269421339,
+      "joint_mae": 0.019090985603932797,
+      "cos_joint": null,
+      "mag_ratio": 59756956.26527759,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.010212033987045288,
+        -0.016121446272840956
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3604251993378997,
+      "gripper_err": 0.010425188534557817
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04388870517730714,
+      "joint_mae": 0.02125645575519543,
+      "cos_joint": null,
+      "mag_ratio": 65428425.22193985,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.0006781816482543945,
+        -0.003995709704717854
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34712152758193016,
+      "gripper_err": 0.0028784832214117095
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04650572282493115,
+      "joint_mae": 0.015207315533676284,
+      "cos_joint": null,
+      "mag_ratio": 57509023.9582308,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        0.006245642900466919,
+        -0.004948927673062542
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.37109236716842653,
+      "gripper_err": 0.021092356365084663
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.03853608681696652,
+      "joint_mae": 0.016051967248584518,
+      "cos_joint": null,
+      "mag_ratio": 51339326.381761484,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.005733698606491089,
+        -0.0018222216763703614
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36858500080472234,
+      "gripper_err": 0.018584990001380475
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.035826683044433594,
+      "model_absmax": 0.0337476322130561,
+      "joint_mae": 0.020332029584888882,
+      "cos_joint": 0.3072166405289623,
+      "mag_ratio": 1.0454673039350937,
+      "ee_expert": [
+        0.004750549793243408,
+        0.0071110837161540985
+      ],
+      "ee_model": [
+        -0.001106172800064087,
+        -0.014235343784093857
+      ],
+      "ee_cos": -0.872056045152215,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3567638187226653,
+      "gripper_err": 0.006763807919323461
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.035826683044433594,
+      "model_absmax": 0.06832669706273087,
+      "joint_mae": 0.021648103787728683,
+      "cos_joint": 0.7075900008635667,
+      "mag_ratio": 1.796203808727872,
+      "ee_expert": [
+        0.004750549793243408,
+        0.0071110837161540985
+      ],
+      "ee_model": [
+        -0.00103682279586792,
+        -0.0023050643503665924
+      ],
+      "ee_cos": -0.9862090589022598,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34590106737685206,
+      "gripper_err": 0.0040989434264898095
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.035826683044433594,
+      "model_absmax": 0.09890888786399366,
+      "joint_mae": 0.022329128421038347,
+      "cos_joint": 0.9004195822156235,
+      "mag_ratio": 2.3357187723352455,
+      "ee_expert": [
+        0.004750549793243408,
+        0.0071110837161540985
+      ],
+      "ee_model": [
+        0.008549034595489502,
+        0.004983585327863693
+      ],
+      "ee_cos": 0.8986756171568293,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3676903343467713,
+      "gripper_err": 0.01769032354342942
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 17,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.035826683044433594,
+      "model_absmax": 0.04152544691735505,
+      "joint_mae": 0.01711176932907954,
+      "cos_joint": 0.3932373052986942,
+      "mag_ratio": 0.9857487614627378,
+      "ee_expert": [
+        0.004750549793243408,
+        0.0071110837161540985
+      ],
+      "ee_model": [
+        0.0022542178630828857,
+        0.0006911270320415497
+      ],
+      "ee_cos": 0.7748343242361365,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36901216187649966,
+      "gripper_err": 0.01901215107315779
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 35,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.035826921463012695,
+      "model_absmax": 0.029332895316719898,
+      "joint_mae": 0.01952613459321854,
+      "cos_joint": 0.28625675889288205,
+      "mag_ratio": 0.8694615729659326,
+      "ee_expert": [
+        -0.006967276334762573,
+        0.007529750466346741
+      ],
+      "ee_model": [
+        0.0023805201053619385,
+        -0.019280612468719482
+      ],
+      "ee_cos": -0.8116804188810008,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3545669903535247,
+      "gripper_err": 0.004566979550182815
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 35,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.035826921463012695,
+      "model_absmax": 0.04404230350804328,
+      "joint_mae": 0.019470929944004296,
+      "cos_joint": 0.5611311929873204,
+      "mag_ratio": 1.3269145336947377,
+      "ee_expert": [
+        -0.006967276334762573,
+        0.007529750466346741
+      ],
+      "ee_model": [
+        -0.008385330438613892,
+        -0.015454545617103577
+      ],
+      "ee_cos": -0.32125004187874107,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34638925145888333,
+      "gripper_err": 0.003610759344458536
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 35,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.035826921463012695,
+      "model_absmax": 0.06056510856711872,
+      "joint_mae": 0.014757615175115193,
+      "cos_joint": 0.8157342724557515,
+      "mag_ratio": 1.5640998176374385,
+      "ee_expert": [
+        -0.006967276334762573,
+        0.007529750466346741
+      ],
+      "ee_model": [
+        0.00012725591659545898,
+        -0.0049340128898620605
+      ],
+      "ee_cos": -0.7512565368353167,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.366881779460907,
+      "gripper_err": 0.016881768657565133
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 35,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.035826921463012695,
+      "model_absmax": 0.0328980965755582,
+      "joint_mae": 0.01736600132519003,
+      "cos_joint": 0.2694232760418672,
+      "mag_ratio": 0.8429479302126234,
+      "ee_expert": [
+        -0.006967276334762573,
+        0.007529750466346741
+      ],
+      "ee_model": [
+        0.005856513977050781,
+        -0.004712402820587158
+      ],
+      "ee_cos": -0.9892716447385277,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3693172769277692,
+      "gripper_err": 0.019317266124427357
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 53,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.03688979148864746,
+      "model_absmax": 0.028411119168996746,
+      "joint_mae": 0.013073230770728377,
+      "cos_joint": 0.6319211638204412,
+      "mag_ratio": 0.9965320375677196,
+      "ee_expert": [
+        0.011387079954147339,
+        0.0001824796199798584
+      ],
+      "ee_model": [
+        0.013239383697509766,
+        -0.018487051129341125
+      ],
+      "ee_cos": 0.5691361446770504,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3528583460664153,
+      "gripper_err": 0.0028583352630734415
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 53,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.03688979148864746,
+      "model_absmax": 0.03374019186878208,
+      "joint_mae": 0.019760801378348045,
+      "cos_joint": 0.270133913137551,
+      "mag_ratio": 1.0306598329081842,
+      "ee_expert": [
+        0.011387079954147339,
+        0.0001824796199798584
+      ],
+      "ee_model": [
+        0.004231840372085571,
+        -0.017827659845352173
+      ],
+      "ee_cos": 0.21533774605470732,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34760971166396143,
+      "gripper_err": 0.0023902991393804363
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 53,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.03688979148864746,
+      "model_absmax": 0.02401308899724469,
+      "joint_mae": 0.013978354204233196,
+      "cos_joint": 0.5152000097877807,
+      "mag_ratio": 0.7651922101958561,
+      "ee_expert": [
+        0.011387079954147339,
+        0.0001824796199798584
+      ],
+      "ee_model": [
+        0.00890699028968811,
+        -0.011100426316261292
+      ],
+      "ee_cos": 0.6132585036313564,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36624103785324097,
+      "gripper_err": 0.016241027049899104
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 53,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.03688979148864746,
+      "model_absmax": 0.031402770558029425,
+      "joint_mae": 0.015895190749521733,
+      "cos_joint": 0.5239289912578562,
+      "mag_ratio": 1.077076068037442,
+      "ee_expert": [
+        0.011387079954147339,
+        0.0001824796199798584
+      ],
+      "ee_model": [
+        0.018502414226531982,
+        -0.005645528435707092
+      ],
+      "ee_cos": 0.9516679004450417,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36907318488675356,
+      "gripper_err": 0.019073174083411693
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 54,
+      "phase": "contact_onset",
+      "seed": 0,
+      "expert_absmax": 0.03967022895812988,
+      "model_absmax": 0.026219711454153027,
+      "joint_mae": 0.013605795519628658,
+      "cos_joint": 0.6258557276820887,
+      "mag_ratio": 0.9225303370427701,
+      "ee_expert": [
+        0.012213319540023804,
+        1.5437602996826172e-05
+      ],
+      "ee_model": [
+        0.012059301137924194,
+        -0.018568679690361023
+      ],
+      "ee_cos": 0.543599492901267,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3520040239228606,
+      "gripper_err": 0.002004013119518755
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 54,
+      "phase": "contact_onset",
+      "seed": 1,
+      "expert_absmax": 0.03967022895812988,
+      "model_absmax": 0.03264448801136011,
+      "joint_mae": 0.019742422221554153,
+      "cos_joint": 0.27190324756371864,
+      "mag_ratio": 0.9258519922820313,
+      "ee_expert": [
+        0.012213319540023804,
+        1.5437602996826172e-05
+      ],
+      "ee_model": [
+        0.004386872053146362,
+        -0.018089652061462402
+      ],
+      "ee_cos": 0.2344476508107978,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.34785380370497704,
+      "gripper_err": 0.0021462070983648274
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 54,
+      "phase": "contact_onset",
+      "seed": 2,
+      "expert_absmax": 0.03967022895812988,
+      "model_absmax": 0.02401308899724469,
+      "joint_mae": 0.014049667519216023,
+      "cos_joint": 0.538002425621791,
+      "mag_ratio": 0.7051975209119832,
+      "ee_expert": [
+        0.012213319540023804,
+        1.5437602996826172e-05
+      ],
+      "ee_model": [
+        0.008212089538574219,
+        -0.01228448748588562
+      ],
+      "ee_cos": 0.5546994286161202,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3662715493583679,
+      "gripper_err": 0.016271538555026055
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 54,
+      "phase": "contact_onset",
+      "seed": 3,
+      "expert_absmax": 0.03967022895812988,
+      "model_absmax": 0.030672301319748185,
+      "joint_mae": 0.01583382018966759,
+      "cos_joint": 0.5397844067257366,
+      "mag_ratio": 0.9919349442038164,
+      "ee_expert": [
+        0.012213319540023804,
+        1.5437602996826172e-05
+      ],
+      "ee_model": [
+        0.017916351556777954,
+        -0.006113022565841675
+      ],
+      "ee_cos": 0.9460177345821499,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3692562539175153,
+      "gripper_err": 0.019256243114173455
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 82,
+      "phase": "push_pre_wall",
+      "seed": 0,
+      "expert_absmax": 3.2782554626464844e-05,
+      "model_absmax": 0.02220213064360621,
+      "joint_mae": 0.012596260321280741,
+      "cos_joint": null,
+      "mag_ratio": 905.0867405003144,
+      "ee_expert": [
+        1.531839370727539e-05,
+        -9.566545486450195e-06
+      ],
+      "ee_model": [
+        0.008783161640167236,
+        -0.020393580198287964
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35578745055860284,
+      "gripper_err": 0.00578743975526097
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 82,
+      "phase": "push_pre_wall",
+      "seed": 1,
+      "expert_absmax": 3.2782554626464844e-05,
+      "model_absmax": 0.0253397956285476,
+      "joint_mae": 0.012752161473252912,
+      "cos_joint": null,
+      "mag_ratio": 925.2681154558302,
+      "ee_expert": [
+        1.531839370727539e-05,
+        -9.566545486450195e-06
+      ],
+      "ee_model": [
+        0.0036031007766723633,
+        -0.019492581486701965
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35249155248427394,
+      "gripper_err": 0.0024915416809320745
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 82,
+      "phase": "push_pre_wall",
+      "seed": 2,
+      "expert_absmax": 3.2782554626464844e-05,
+      "model_absmax": 0.023138869270682205,
+      "joint_mae": 0.01151966646419676,
+      "cos_joint": null,
+      "mag_ratio": 803.3307143622717,
+      "ee_expert": [
+        1.531839370727539e-05,
+        -9.566545486450195e-06
+      ],
+      "ee_model": [
+        0.0059656500816345215,
+        -0.015656352043151855
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36888791092300416,
+      "gripper_err": 0.018887900119662293
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 82,
+      "phase": "push_pre_wall",
+      "seed": 3,
+      "expert_absmax": 3.2782554626464844e-05,
+      "model_absmax": 0.02482854741349816,
+      "joint_mae": 0.014483666642184747,
+      "cos_joint": null,
+      "mag_ratio": 958.432461029709,
+      "ee_expert": [
+        1.531839370727539e-05,
+        -9.566545486450195e-06
+      ],
+      "ee_model": [
+        0.013892531394958496,
+        -0.007248207926750183
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3725514964712262,
+      "gripper_err": 0.02255148566788434
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 0,
+      "expert_absmax": 1.9997358322143555e-05,
+      "model_absmax": 0.0215741952434777,
+      "joint_mae": 0.010944573103168154,
+      "cos_joint": null,
+      "mag_ratio": 1149.0684034966612,
+      "ee_expert": [
+        4.708766937255859e-06,
+        -1.1414289474487305e-05
+      ],
+      "ee_model": [
+        0.006684303283691406,
+        -0.02341504395008087
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35383471423047785,
+      "gripper_err": 0.003834703427135988
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 1,
+      "expert_absmax": 1.9997358322143555e-05,
+      "model_absmax": 0.021948716011345237,
+      "joint_mae": 0.012081173432243677,
+      "cos_joint": null,
+      "mag_ratio": 1196.5873679558913,
+      "ee_expert": [
+        4.708766937255859e-06,
+        -1.1414289474487305e-05
+      ],
+      "ee_model": [
+        0.0018950700759887695,
+        -0.021915629506111145
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35151518432021145,
+      "gripper_err": 0.0015151735168695835
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 2,
+      "expert_absmax": 1.9997358322143555e-05,
+      "model_absmax": 0.02051621009099469,
+      "joint_mae": 0.005798938977914178,
+      "cos_joint": null,
+      "mag_ratio": 768.6828746048136,
+      "ee_expert": [
+        4.708766937255859e-06,
+        -1.1414289474487305e-05
+      ],
+      "ee_model": [
+        0.0029504895210266113,
+        -0.014705061912536621
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3670801042442322,
+      "gripper_err": 0.017080093440890343
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 108,
+      "phase": "push_pre_wall",
+      "seed": 3,
+      "expert_absmax": 1.9997358322143555e-05,
+      "model_absmax": 0.025216620340526186,
+      "joint_mae": 0.012558663210996555,
+      "cos_joint": null,
+      "mag_ratio": 1275.5853948600989,
+      "ee_expert": [
+        4.708766937255859e-06,
+        -1.1414289474487305e-05
+      ],
+      "ee_model": [
+        0.011970281600952148,
+        -0.010455474257469177
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3718192203481794,
+      "gripper_err": 0.021819209544837515
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 0,
+      "expert_absmax": 0.019131898880004883,
+      "model_absmax": 0.021628833976387818,
+      "joint_mae": 0.012124420567312364,
+      "cos_joint": 0.24672264094337232,
+      "mag_ratio": 1.4446618477945523,
+      "ee_expert": [
+        0.0036898255348205566,
+        -1.080334186553955e-05
+      ],
+      "ee_model": [
+        0.007106363773345947,
+        -0.023711100220680237
+      ],
+      "ee_cos": 0.28989305978363195,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35432289831250907,
+      "gripper_err": 0.004322887509167206
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 1,
+      "expert_absmax": 0.019131898880004883,
+      "model_absmax": 0.022057993477165583,
+      "joint_mae": 0.015040206247836339,
+      "cos_joint": -0.0746367272164917,
+      "mag_ratio": 1.514055893174501,
+      "ee_expert": [
+        0.0036898255348205566,
+        -1.080334186553955e-05
+      ],
+      "ee_model": [
+        0.001990675926208496,
+        -0.021971821784973145
+      ],
+      "ee_cos": 0.09314726365473967,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35078290819716457,
+      "gripper_err": 0.0007828973938227013
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 2,
+      "expert_absmax": 0.019131898880004883,
+      "model_absmax": 0.020953319954275962,
+      "joint_mae": 0.00862162704896073,
+      "cos_joint": 0.14264536914874953,
+      "mag_ratio": 0.9817656240514735,
+      "ee_expert": [
+        0.0036898255348205566,
+        -1.080334186553955e-05
+      ],
+      "ee_model": [
+        0.003138303756713867,
+        -0.015619099140167236
+      ],
+      "ee_cos": 0.19985988739318514,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3674233586769104,
+      "gripper_err": 0.01742334787356853
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 109,
+      "phase": "wall_onset",
+      "seed": 3,
+      "expert_absmax": 0.019131898880004883,
+      "model_absmax": 0.02500062899225952,
+      "joint_mae": 0.013840816973490346,
+      "cos_joint": -0.030157251530653274,
+      "mag_ratio": 1.5790338268694402,
+      "ee_expert": [
+        0.0036898255348205566,
+        -1.080334186553955e-05
+      ],
+      "ee_model": [
+        0.012099146842956543,
+        -0.009813681244850159
+      ],
+      "ee_cos": 0.7784849247436,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3720022893789411,
+      "gripper_err": 0.02200227857559922
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 0.008758544921875,
+      "model_absmax": 0.021628833976387818,
+      "joint_mae": 0.012615380762351374,
+      "cos_joint": -0.25161578507155824,
+      "mag_ratio": 3.074453285155791,
+      "ee_expert": [
+        0.003285646438598633,
+        0.0006611496210098267
+      ],
+      "ee_model": [
+        0.006549656391143799,
+        -0.023550450801849365
+      ],
+      "ee_cos": 0.07262103559189027,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35517722045606376,
+      "gripper_err": 0.0051772096527218925
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 0.008758544921875,
+      "model_absmax": 0.021730161079704602,
+      "joint_mae": 0.014916429667093905,
+      "cos_joint": -0.3542275819239157,
+      "mag_ratio": 3.4731060086935894,
+      "ee_expert": [
+        0.003285646438598633,
+        0.0006611496210098267
+      ],
+      "ee_model": [
+        0.0009263157844543457,
+        -0.02193184196949005
+      ],
+      "ee_cos": -0.15572444148535675,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3532238286073208,
+      "gripper_err": 0.0032238178039789567
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 0.008758544921875,
+      "model_absmax": 0.020953319954275962,
+      "joint_mae": 0.0083089784820335,
+      "cos_joint": -0.2743790656954369,
+      "mag_ratio": 2.1330624509261553,
+      "ee_expert": [
+        0.003285646438598633,
+        0.0006611496210098267
+      ],
+      "ee_model": [
+        0.001965165138244629,
+        -0.014945968985557556
+      ],
+      "ee_cos": -0.06778512950067533,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3685599122428894,
+      "gripper_err": 0.018559901439547555
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 114,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 0.008758544921875,
+      "model_absmax": 0.02958444538325078,
+      "joint_mae": 0.013940813558978669,
+      "cos_joint": -0.3350302765331086,
+      "mag_ratio": 3.693731320050629,
+      "ee_expert": [
+        0.003285646438598633,
+        0.0006611496210098267
+      ],
+      "ee_model": [
+        0.01078033447265625,
+        -0.009422600269317627
+      ],
+      "ee_cos": 0.608310520143775,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3730396805532575,
+      "gripper_err": 0.023039669749915614
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 145,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 0.03913909196853638,
+      "model_absmax": 0.023915703699946445,
+      "joint_mae": 0.013716952278554398,
+      "cos_joint": 0.632261066916966,
+      "mag_ratio": 0.7570771454694712,
+      "ee_expert": [
+        -0.004370510578155518,
+        0.00040931999683380127
+      ],
+      "ee_model": [
+        0.005272805690765381,
+        -0.02276545763015747
+      ],
+      "ee_cos": -0.3155000915126147,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35566540453809503,
+      "gripper_err": 0.005665393734753166
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 145,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 0.03913909196853638,
+      "model_absmax": 0.024138596046447747,
+      "joint_mae": 0.013598707775094658,
+      "cos_joint": 0.6409340799641908,
+      "mag_ratio": 0.8356258786269116,
+      "ee_expert": [
+        -0.004370510578155518,
+        0.00040931999683380127
+      ],
+      "ee_model": [
+        -0.0006647706031799316,
+        -0.01977330446243286
+      ],
+      "ee_cos": -0.059740034946515364,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35249155248427394,
+      "gripper_err": 0.0024915416809320745
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 145,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 0.03913909196853638,
+      "model_absmax": 0.021827539680838448,
+      "joint_mae": 0.012187125551811269,
+      "cos_joint": 0.5566694639314146,
+      "mag_ratio": 0.5355198683211924,
+      "ee_expert": [
+        -0.004370510578155518,
+        0.00040931999683380127
+      ],
+      "ee_model": [
+        0.002168118953704834,
+        -0.013065963983535767
+      ],
+      "ee_cos": -0.2549738192130972,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.36894893393325806,
+      "gripper_err": 0.018948923129916195
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 145,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 0.03913909196853638,
+      "model_absmax": 0.04551980707758674,
+      "joint_mae": 0.010256154716295842,
+      "cos_joint": 0.8247661863069462,
+      "mag_ratio": 1.031927461958057,
+      "ee_expert": [
+        -0.004370510578155518,
+        0.00040931999683380127
+      ],
+      "ee_model": [
+        0.007997453212738037,
+        -0.007775604724884033
+      ],
+      "ee_cos": -0.7788591723376301,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3732227495840192,
+      "gripper_err": 0.02322273878067732
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 177,
+      "phase": "wall_hold",
+      "seed": 0,
+      "expert_absmax": 1.952052116394043e-06,
+      "model_absmax": 0.023213357230782383,
+      "joint_mae": 0.012168542851656639,
+      "cos_joint": null,
+      "mag_ratio": 18777.317605011845,
+      "ee_expert": [
+        -2.980232238769531e-07,
+        1.2516975402832031e-06
+      ],
+      "ee_model": [
+        0.0050904154777526855,
+        -0.023392945528030396
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3574960948457122,
+      "gripper_err": 0.007496084042370343
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 177,
+      "phase": "wall_hold",
+      "seed": 1,
+      "expert_absmax": 1.952052116394043e-06,
+      "model_absmax": 0.023260045601188994,
+      "joint_mae": 0.012846276144398094,
+      "cos_joint": null,
+      "mag_ratio": 20016.41154891926,
+      "ee_expert": [
+        -2.980232238769531e-07,
+        1.2516975402832031e-06
+      ],
+      "ee_model": [
+        -0.0009975433349609375,
+        -0.02018202841281891
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.35371201268935204,
+      "gripper_err": 0.0037120018860101744
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 177,
+      "phase": "wall_hold",
+      "seed": 2,
+      "expert_absmax": 1.952052116394043e-06,
+      "model_absmax": 0.023138869270682205,
+      "joint_mae": 0.00666544500968285,
+      "cos_joint": null,
+      "mag_ratio": 13240.597843587826,
+      "ee_expert": [
+        -2.980232238769531e-07,
+        1.2516975402832031e-06
+      ],
+      "ee_model": [
+        0.000862419605255127,
+        -0.01324772834777832
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.3705660437049866,
+      "gripper_err": 0.020566032901644715
+    },
+    {
+      "skill": "B90",
+      "episode": 1,
+      "tick": 177,
+      "phase": "wall_hold",
+      "seed": 3,
+      "expert_absmax": 1.952052116394043e-06,
+      "model_absmax": 0.03256032618159055,
+      "joint_mae": 0.012368014111237835,
+      "cos_joint": null,
+      "mag_ratio": 21269.87787337038,
+      "ee_expert": [
+        -2.980232238769531e-07,
+        1.2516975402832031e-06
+      ],
+      "ee_model": [
+        0.006987929344177246,
+        -0.008789241313934326
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.35000001080334187,
+      "gripper_model": 0.37450423279935124,
+      "gripper_err": 0.02450422199600938
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.06785645803618434,
+      "joint_mae": 0.025723238036619727,
+      "cos_joint": null,
+      "mag_ratio": 87017258.76223919,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.010003626346588135,
+        -0.01986715675007389
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 1.0040959710888864,
+      "gripper_err": 0.004095993440628165
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.06186325754261013,
+      "joint_mae": 0.02668282017649495,
+      "cos_joint": null,
+      "mag_ratio": 82352706.51595464,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.0005426704883575439,
+        -0.008025143413355806
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9524697893006802,
+      "gripper_err": 0.04753018834757805
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.044070687217563353,
+      "joint_mae": 0.018053873834120358,
+      "cos_joint": null,
+      "mag_ratio": 58520546.49580418,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.002126753330230713,
+        -0.00813727465133951
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9569819164924622,
+      "gripper_err": 0.043018061155795984
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 0,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.0,
+      "model_absmax": 0.04508782438105352,
+      "joint_mae": 0.022005003783609176,
+      "cos_joint": null,
+      "mag_ratio": 70628852.29416232,
+      "ee_expert": [
+        0.0,
+        0.0
+      ],
+      "ee_model": [
+        -0.006840139627456665,
+        -0.0017120837015269785
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9314002243764997,
+      "gripper_err": 0.06859975327175849
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 18,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.04187357425689697,
+      "model_absmax": 0.1609912859170437,
+      "joint_mae": 0.031287814154782455,
+      "cos_joint": 0.8560782986071004,
+      "mag_ratio": 3.259335379047661,
+      "ee_expert": [
+        0.005367398262023926,
+        0.0001395726576447487
+      ],
+      "ee_model": [
+        0.002037137746810913,
+        -0.024020325276069343
+      ],
+      "ee_cos": 0.05857498706034409,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 1.0177651253857614,
+      "gripper_err": 0.01776514773750315
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 18,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.04187357425689697,
+      "model_absmax": 0.15025003537464143,
+      "joint_mae": 0.034467047023036615,
+      "cos_joint": 0.955029155152658,
+      "mag_ratio": 3.3441657387618773,
+      "ee_expert": [
+        0.005367398262023926,
+        0.0001395726576447487
+      ],
+      "ee_model": [
+        0.008060425519943237,
+        -0.010225324775092304
+      ],
+      "ee_cos": 0.5984428607148843,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9773671774842739,
+      "gripper_err": 0.02263280016398428
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 18,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.04187357425689697,
+      "model_absmax": 0.12131780916580559,
+      "joint_mae": 0.025975912479166457,
+      "cos_joint": 0.9752615534145738,
+      "mag_ratio": 2.740996087378248,
+      "ee_expert": [
+        0.005367398262023926,
+        0.0001395726576447487
+      ],
+      "ee_model": [
+        0.009250462055206299,
+        -0.0073765431297943
+      ],
+      "ee_cos": 0.7653789824242364,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9748006354866028,
+      "gripper_err": 0.025199342161655425
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 18,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.04187357425689697,
+      "model_absmax": 0.11504149834123256,
+      "joint_mae": 0.0254270627621029,
+      "cos_joint": 0.8285546159038556,
+      "mag_ratio": 2.4802248207771367,
+      "ee_expert": [
+        0.005367398262023926,
+        0.0001395726576447487
+      ],
+      "ee_model": [
+        0.004150569438934326,
+        -0.0009083599434234202
+      ],
+      "ee_cos": 0.9709916028104639,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9528803239858747,
+      "gripper_err": 0.047119653662383465
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 37,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.04187217354774475,
+      "model_absmax": 0.1843663015420437,
+      "joint_mae": 0.034785296529961464,
+      "cos_joint": 0.8707694765861064,
+      "mag_ratio": 3.720604605856084,
+      "ee_expert": [
+        0.0014307498931884766,
+        -0.00039511086652055383
+      ],
+      "ee_model": [
+        0.0011867880821228027,
+        -0.029163399594835937
+      ],
+      "ee_cos": 0.30516630990227045,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 1.0202060457959177,
+      "gripper_err": 0.02020606814765946
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 37,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.04187217354774475,
+      "model_absmax": 0.17252934714221957,
+      "joint_mae": 0.03619122073294007,
+      "cos_joint": 0.9539390922953108,
+      "mag_ratio": 3.6982662254765906,
+      "ee_expert": [
+        0.0014307498931884766,
+        -0.00039511086652055383
+      ],
+      "ee_model": [
+        0.0039030909538269043,
+        -0.017173441010527313
+      ],
+      "ee_cos": 0.4732000039813288,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9798080978944302,
+      "gripper_err": 0.020191879753827968
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 37,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.04187217354774475,
+      "model_absmax": 0.1253353899763524,
+      "joint_mae": 0.02415795287020286,
+      "cos_joint": 0.9815598507894209,
+      "mag_ratio": 2.795378281337073,
+      "ee_expert": [
+        0.0014307498931884766,
+        -0.00039511086652055383
+      ],
+      "ee_model": [
+        0.0034334659576416016,
+        -0.013016090611927211
+      ],
+      "ee_cos": 0.5032471779458533,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9757770036506653,
+      "gripper_err": 0.024222973997592878
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 37,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.04187217354774475,
+      "model_absmax": 0.1597827391859591,
+      "joint_mae": 0.033255154847498435,
+      "cos_joint": 0.8629558721612808,
+      "mag_ratio": 3.3352218454627773,
+      "ee_expert": [
+        0.0014307498931884766,
+        -0.00039511086652055383
+      ],
+      "ee_model": [
+        0.009093940258026123,
+        -0.00733385921921581
+      ],
+      "ee_cos": 0.9174299282891331,
+      "gripper_expert": 0.9999999776482582,
+      "gripper_model": 0.9528803239858747,
+      "gripper_err": 0.047119653662383465
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 56,
+      "phase": "approach",
+      "seed": 0,
+      "expert_absmax": 0.002259969711303711,
+      "model_absmax": 0.026457557989358893,
+      "joint_mae": 0.014769637842795629,
+      "cos_joint": null,
+      "mag_ratio": 16.364155264390533,
+      "ee_expert": [
+        0.00030690431594848633,
+        2.3181550204753876e-05
+      ],
+      "ee_model": [
+        0.0018984675407409668,
+        -0.023200882598757744
+      ],
+      "ee_cos": 0.006255122896322808,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.442555496747911,
+      "gripper_err": 0.017555473651111153
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 56,
+      "phase": "approach",
+      "seed": 1,
+      "expert_absmax": 0.002259969711303711,
+      "model_absmax": 0.025409169781059004,
+      "joint_mae": 0.011131819974724717,
+      "cos_joint": null,
+      "mag_ratio": 13.24444790839774,
+      "ee_expert": [
+        0.00030690431594848633,
+        2.3181550204753876e-05
+      ],
+      "ee_model": [
+        0.0014222264289855957,
+        -0.01590849459171295
+      ],
+      "ee_cos": 0.013772645279784272,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.43060100560927395,
+      "gripper_err": 0.005600982512474095
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 56,
+      "phase": "approach",
+      "seed": 2,
+      "expert_absmax": 0.002259969711303711,
+      "model_absmax": 0.015261759722590418,
+      "joint_mae": 0.004977798947900514,
+      "cos_joint": null,
+      "mag_ratio": 6.788934738030894,
+      "ee_expert": [
+        0.00030690431594848633,
+        2.3181550204753876e-05
+      ],
+      "ee_model": [
+        -0.0008977055549621582,
+        -0.012276336550712585
+      ],
+      "ee_cos": -0.1478413408887982,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.43422829915237426,
+      "gripper_err": 0.009228276055574414
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 56,
+      "phase": "approach",
+      "seed": 3,
+      "expert_absmax": 0.002259969711303711,
+      "model_absmax": 0.04016802144831422,
+      "joint_mae": 0.014830039032216611,
+      "cos_joint": null,
+      "mag_ratio": 19.774201742532703,
+      "ee_expert": [
+        0.00030690431594848633,
+        2.3181550204753876e-05
+      ],
+      "ee_model": [
+        0.01357334852218628,
+        -0.009404576383531094
+      ],
+      "ee_cos": 0.7767448558445164,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4297300570791364,
+      "gripper_err": 0.004730033982336568
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 57,
+      "phase": "contact_onset",
+      "seed": 0,
+      "expert_absmax": 0.0001552104949951172,
+      "model_absmax": 0.03773914998900896,
+      "joint_mae": 0.017852594558243205,
+      "cos_joint": null,
+      "mag_ratio": 308.8556392184081,
+      "ee_expert": [
+        2.1219253540039062e-05,
+        -2.4167820811271667e-06
+      ],
+      "ee_model": [
+        0.002866089344024658,
+        -0.022877391427755356
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.42724539556592706,
+      "gripper_err": 0.002245372469127205
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 57,
+      "phase": "contact_onset",
+      "seed": 1,
+      "expert_absmax": 0.0001552104949951172,
+      "model_absmax": 0.02585999425348634,
+      "joint_mae": 0.010414718115768242,
+      "cos_joint": null,
+      "mag_ratio": 201.4999271017574,
+      "ee_expert": [
+        2.1219253540039062e-05,
+        -2.4167820811271667e-06
+      ],
+      "ee_model": [
+        0.0020093917846679688,
+        -0.01607397198677063
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4232782443788052,
+      "gripper_err": 0.0017217787179946709
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 57,
+      "phase": "contact_onset",
+      "seed": 2,
+      "expert_absmax": 0.0001552104949951172,
+      "model_absmax": 0.014519798811614582,
+      "joint_mae": 0.00795980225435748,
+      "cos_joint": null,
+      "mag_ratio": 131.98345432435966,
+      "ee_expert": [
+        2.1219253540039062e-05,
+        -2.4167820811271667e-06
+      ],
+      "ee_model": [
+        0.0019078850746154785,
+        -0.011913133785128593
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4347088553581238,
+      "gripper_err": 0.009708832261323963
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 57,
+      "phase": "contact_onset",
+      "seed": 3,
+      "expert_absmax": 0.0001552104949951172,
+      "model_absmax": 0.05622337833613156,
+      "joint_mae": 0.01672023961771388,
+      "cos_joint": null,
+      "mag_ratio": 351.19252112876205,
+      "ee_expert": [
+        2.1219253540039062e-05,
+        -2.4167820811271667e-06
+      ],
+      "ee_model": [
+        0.013633191585540771,
+        -0.009029168635606766
+      ],
+      "ee_cos": null,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.43027926417142154,
+      "gripper_err": 0.005279241074621688
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 84,
+      "phase": "grasp",
+      "seed": 0,
+      "expert_absmax": 0.04597783088684082,
+      "model_absmax": 0.03313133455932149,
+      "joint_mae": 0.02115773803251559,
+      "cos_joint": 0.0053237548381185615,
+      "mag_ratio": 1.1006612438500765,
+      "ee_expert": [
+        0.0007962584495544434,
+        0.003229397814720869
+      ],
+      "ee_model": [
+        0.000746607780456543,
+        -0.0195054286159575
+      ],
+      "ee_cos": -0.9610549019401716,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.41571204662793876,
+      "gripper_err": 0.009287976468861092
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 84,
+      "phase": "grasp",
+      "seed": 1,
+      "expert_absmax": 0.04597783088684082,
+      "model_absmax": 0.026576822437614167,
+      "joint_mae": 0.015396848778737466,
+      "cos_joint": 0.2997922275434003,
+      "mag_ratio": 0.8039656284884581,
+      "ee_expert": [
+        0.0007962584495544434,
+        0.003229397814720869
+      ],
+      "ee_model": [
+        -0.0001590251922607422,
+        -0.014355009887367487
+      ],
+      "ee_cos": -0.9735143183512689,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.40667998558974267,
+      "gripper_err": 0.018320037507057185
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 84,
+      "phase": "grasp",
+      "seed": 2,
+      "expert_absmax": 0.04597783088684082,
+      "model_absmax": 0.05454261536610128,
+      "joint_mae": 0.00957846987171257,
+      "cos_joint": 0.8872222152592005,
+      "mag_ratio": 1.292281074553969,
+      "ee_expert": [
+        0.0007962584495544434,
+        0.003229397814720869
+      ],
+      "ee_model": [
+        0.0060228705406188965,
+        -0.008339533349499106
+      ],
+      "ee_cos": -0.6469497836637665,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4290718547859192,
+      "gripper_err": 0.004071831689119343
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 84,
+      "phase": "grasp",
+      "seed": 3,
+      "expert_absmax": 0.04597783088684082,
+      "model_absmax": 0.03433950547158715,
+      "joint_mae": 0.01419991237145664,
+      "cos_joint": 0.5189181389239232,
+      "mag_ratio": 1.1181064997993255,
+      "ee_expert": [
+        0.0007962584495544434,
+        0.003229397814720869
+      ],
+      "ee_model": [
+        0.007354378700256348,
+        -0.009276946540921926
+      ],
+      "ee_cos": -0.6121232135381507,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4260076534536481,
+      "gripper_err": 0.0010076303568482547
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 111,
+      "phase": "grasp",
+      "seed": 0,
+      "expert_absmax": 0.010620713233947754,
+      "model_absmax": 0.04157899618041516,
+      "joint_mae": 0.017262230021344725,
+      "cos_joint": 0.17409449027406113,
+      "mag_ratio": 5.3491561865211885,
+      "ee_expert": [
+        0.00018173456192016602,
+        0.0007796064019203186
+      ],
+      "ee_model": [
+        0.0020210742950439453,
+        -0.018643032759428024
+      ],
+      "ee_cos": -0.943748199267595,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4255977742890716,
+      "gripper_err": 0.0005977511922717338
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 111,
+      "phase": "grasp",
+      "seed": 1,
+      "expert_absmax": 0.010620713233947754,
+      "model_absmax": 0.02724918116009234,
+      "joint_mae": 0.013711207122151332,
+      "cos_joint": 0.4651731858955116,
+      "mag_ratio": 3.9083518695794752,
+      "ee_expert": [
+        0.00018173456192016602,
+        0.0007796064019203186
+      ],
+      "ee_model": [
+        0.0012890100479125977,
+        -0.013568688184022903
+      ],
+      "ee_cos": -0.9480537753460142,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4137586547791958,
+      "gripper_err": 0.011241368317604028
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 111,
+      "phase": "grasp",
+      "seed": 2,
+      "expert_absmax": 0.010620713233947754,
+      "model_absmax": 0.0622125423680544,
+      "joint_mae": 0.01875466642402326,
+      "cos_joint": 0.8935332235155706,
+      "mag_ratio": 6.7752708620607995,
+      "ee_expert": [
+        0.00018173456192016602,
+        0.0007796064019203186
+      ],
+      "ee_model": [
+        0.006381809711456299,
+        -0.004472009837627411
+      ],
+      "ee_cos": -0.3729661996666518,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.4333434655036926,
+      "gripper_err": 0.008343442406892776
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 111,
+      "phase": "grasp",
+      "seed": 3,
+      "expert_absmax": 0.010620713233947754,
+      "model_absmax": 0.04018325937783718,
+      "joint_mae": 0.016077813233469202,
+      "cos_joint": 0.6522931371079799,
+      "mag_ratio": 4.97249164386449,
+      "ee_expert": [
+        0.00018173456192016602,
+        0.0007796064019203186
+      ],
+      "ee_model": [
+        0.008329927921295166,
+        -0.006196945905685425
+      ],
+      "ee_cos": -0.3991495078615345,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.42869266590481997,
+      "gripper_err": 0.003692642808020119
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 139,
+      "phase": "grasp",
+      "seed": 0,
+      "expert_absmax": 0.01802372932434082,
+      "model_absmax": 0.04104976160264012,
+      "joint_mae": 0.026751877631668506,
+      "cos_joint": -0.41328770774263723,
+      "mag_ratio": 2.2287915825050155,
+      "ee_expert": [
+        0.00016987323760986328,
+        0.00013273954391479492
+      ],
+      "ee_model": [
+        0.011052846908569336,
+        -0.02960836887359619
+      ],
+      "ee_cos": -0.3012636694092693,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.3956964992646575,
+      "gripper_err": 0.029303523832142353
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 139,
+      "phase": "grasp",
+      "seed": 1,
+      "expert_absmax": 0.01802372932434082,
+      "model_absmax": 0.03344110003694889,
+      "joint_mae": 0.014198923130610148,
+      "cos_joint": 0.3048833144225842,
+      "mag_ratio": 1.5226291727788948,
+      "ee_expert": [
+        0.00016987323760986328,
+        0.00013273954391479492
+      ],
+      "ee_model": [
+        0.0026833415031433105,
+        -0.019334807991981506
+      ],
+      "ee_cos": -0.5015558354019486,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.37909758495497703,
+      "gripper_err": 0.04590243814182282
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 139,
+      "phase": "grasp",
+      "seed": 2,
+      "expert_absmax": 0.01802372932434082,
+      "model_absmax": 0.013050819781184164,
+      "joint_mae": 0.014811541590371282,
+      "cos_joint": -0.2360796902333152,
+      "mag_ratio": 0.8505257313446462,
+      "ee_expert": [
+        0.00016987323760986328,
+        0.00013273954391479492
+      ],
+      "ee_model": [
+        0.00011980533599853516,
+        -0.012030363082885742
+      ],
+      "ee_cos": -0.6078419933607745,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.3866189093399048,
+      "gripper_err": 0.03838111375689507
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 139,
+      "phase": "grasp",
+      "seed": 3,
+      "expert_absmax": 0.01802372932434082,
+      "model_absmax": 0.03695215026301146,
+      "joint_mae": 0.015874102310785232,
+      "cos_joint": -0.12522918550782275,
+      "mag_ratio": 1.8248636902683353,
+      "ee_expert": [
+        0.00016987323760986328,
+        0.00013273954391479492
+      ],
+      "ee_model": [
+        0.011575579643249512,
+        -0.005624756217002869
+      ],
+      "ee_cos": 0.439625049092095,
+      "gripper_expert": 0.42500002309679985,
+      "gripper_model": 0.3897599853628278,
+      "gripper_err": 0.03524003773397205
+    }
+  ]
+}

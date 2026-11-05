@@ -693,9 +693,29 @@
         "B90_wall_hold_absmax": 0.0371,
         "cos_approach": 0.85,
         "cos_contact_onset": 0.87
+      },
+      {
+        "updates": 2100,
+        "epochs": 3.33,
+        "final_loss": 0.0022,
+        "B90_approach_absmax": 0.0421,
+        "B90_push_pre_wall_absmax": 0.0235,
+        "B90_wall_hold_absmax": 0.0257,
+        "cos_approach": 0.48,
+        "cos_contact_onset": 0.5
+      },
+      {
+        "updates": 2400,
+        "epochs": 3.81,
+        "final_loss": 0.0045,
+        "B90_approach_absmax": 0.0872,
+        "B90_push_pre_wall_absmax": 0.0816,
+        "B90_wall_hold_absmax": 0.0866,
+        "cos_approach": -0.16,
+        "cos_contact_onset": 0.04
       }
     ],
-    "verdict": "training amount + LR phase dominate; trend still improving at 1800 (1.53x expert amplitude, cos 0.85-0.87, chunk phys err 0.215 rad)"
+    "verdict": "non-monotonic: best at 1800 (cos 0.85, B90 advance 0.153 m); 2100/2400 degrade despite low training loss"
   },
   "push_active": {
     "n_states": 8,
@@ -728,5 +748,23 @@
       "A90": "grasped_by_two_fingers x2, 0 contact steps",
       "note": "k=1 is worse than k=8 for the 1200 model"
     }
+  },
+  "rollouts_curve2400": {
+    "B90_ep0": {
+      "advance_x_m": 0.09,
+      "lateral_drift_m": 0.067,
+      "wall_contact_steps": 0
+    },
+    "B90_ep1": {
+      "advance_x_m": 0.0
+    },
+    "A90_ep0": {
+      "robot_block_contact_steps": 50,
+      "failure_reason": "two_fingers_simultaneous"
+    },
+    "A90_ep1": {
+      "robot_block_contact_steps": 0
+    },
+    "strict_success": "0/4"
   }
 }
