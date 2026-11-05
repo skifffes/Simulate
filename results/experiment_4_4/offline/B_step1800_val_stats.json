@@ -55,23 +55,39 @@
     }
   },
   "strata": {
-    "A90:gripper_closed": null,
+    "A90:gripper_closed": {
+      "name": "closed",
+      "n_rows": 24,
+      "n_states": 6,
+      "joint_mae_mean": 0.022614852817399344,
+      "joint_mae_median": 0.02163009461070597,
+      "mag_ratio_median": 1.8917124219026955,
+      "grip_err_mean": 0.009773206705023832,
+      "dz_model_mean_m": 0.011306729012479385,
+      "dz_expert_mean_m": 1.5622625748316448e-05,
+      "seed_mae_std_mean": 0.004850880864356937,
+      "cos_mean": 0.6168057708327211,
+      "cos_median": 0.7000667114896807,
+      "cos_q10": 0.23907586604779676,
+      "cos_q90": 0.9463287266720365,
+      "frac_cos_gt_0.5": 0.7
+    },
     "A90:gripper_open": {
       "name": "open",
-      "n_rows": 60,
-      "n_states": 15,
-      "joint_mae_mean": 0.021011389015783512,
-      "joint_mae_median": 0.01887141333743718,
-      "mag_ratio_median": 2.243618708744461,
-      "grip_err_mean": 0.03664413615645963,
-      "dz_model_mean_m": 0.009420656226575374,
-      "dz_expert_mean_m": -0.0011097763975461323,
-      "seed_mae_std_mean": 0.006343267780297925,
-      "cos_mean": 0.6803561922975979,
-      "cos_median": 0.8061647610709775,
-      "cos_q10": 0.1940254252912158,
-      "cos_q90": 0.9597191553810165,
-      "frac_cos_gt_0.5": 0.75
+      "n_rows": 36,
+      "n_states": 9,
+      "joint_mae_mean": 0.019942413148039618,
+      "joint_mae_median": 0.01741781465680048,
+      "mag_ratio_median": 2.404428323848152,
+      "grip_err_mean": 0.05455808912408349,
+      "dz_model_mean_m": 0.008163274369306035,
+      "dz_expert_mean_m": -0.001860042413075765,
+      "seed_mae_std_mean": 0.007338192390925252,
+      "cos_mean": 0.7333148768516619,
+      "cos_median": 0.8617958561958691,
+      "cos_q10": 0.22717769918594002,
+      "cos_q90": 0.9630482655646537,
+      "frac_cos_gt_0.5": 0.7916666666666666
     },
     "A90:motion_low": {
       "name": "low",
@@ -111,9 +127,8 @@
       0.026822306215763064,
       0.041684875885645546
     ],
-    "B90:gripper_closed": null,
-    "B90:gripper_open": {
-      "name": "open",
+    "B90:gripper_closed": {
+      "name": "closed",
       "n_rows": 60,
       "n_states": 15,
       "joint_mae_mean": 0.016996243578462744,
@@ -129,6 +144,7 @@
       "cos_q90": 0.8968740660409487,
       "frac_cos_gt_0.5": 0.6
     },
+    "B90:gripper_open": null,
     "B90:motion_low": {
       "name": "low",
       "n_rows": 20,

@@ -1,0 +1,68 @@
+{
+  "A": {
+    "n_logged_steps": 1418,
+    "last_step": 7090,
+    "last_loss": 0.0018,
+    "last_sps": 0.655,
+    "ckpt_steps": [
+      1200,
+      1800,
+      2400,
+      3600,
+      4800,
+      6000
+    ],
+    "opt_steps": [
+      6000
+    ],
+    "manifest": {
+      "label_mode": "anchor",
+      "anchor_reference": "fixed",
+      "horizon": 16,
+      "loss_dims": 0,
+      "steps_done": 6000,
+      "batch": 4,
+      "lr": null,
+      "base_config": "pi05_droid_finetune",
+      "lora_variants": [
+        "gemma_2b_lora",
+        "gemma_300m_lora"
+      ],
+      "seed": 0,
+      "init_lora": null
+    }
+  },
+  "B": {
+    "n_logged_steps": 1418,
+    "last_step": 7090,
+    "last_loss": 0.0008,
+    "last_sps": 0.656,
+    "ckpt_steps": [
+      1200,
+      1800,
+      2400,
+      3600,
+      4800,
+      6000
+    ],
+    "opt_steps": [
+      6000
+    ],
+    "manifest": {
+      "label_mode": "anchor",
+      "anchor_reference": "fixed",
+      "horizon": 16,
+      "loss_dims": 0,
+      "steps_done": 6000,
+      "batch": 4,
+      "lr": null,
+      "base_config": "pi05_droid_finetune",
+      "lora_variants": [
+        "gemma_2b_lora",
+        "gemma_300m_lora"
+      ],
+      "seed": 0,
+      "init_lora": null
+    }
+  }
+}

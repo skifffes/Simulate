@@ -1,0 +1,277 @@
+{
+  "items": [
+    {
+      "skill": "A90",
+      "episode": 6,
+      "tick": 168,
+      "frame": 168,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 7,
+      "tick": 124,
+      "frame": 124,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 15,
+      "tick": 101,
+      "frame": 101,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 16,
+      "tick": 52,
+      "frame": 52,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 24,
+      "tick": 60,
+      "frame": 60,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 25,
+      "tick": 8,
+      "frame": 8,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 33,
+      "tick": 14,
+      "frame": 14,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 34,
+      "tick": 3,
+      "frame": 3,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 42,
+      "tick": 34,
+      "frame": 34,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 43,
+      "tick": 160,
+      "frame": 160,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 6,
+      "tick": 128,
+      "frame": 128,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 7,
+      "tick": 178,
+      "frame": 178,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 15,
+      "tick": 99,
+      "frame": 99,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 16,
+      "tick": 118,
+      "frame": 118,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 24,
+      "tick": 192,
+      "frame": 192,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 3,
+      "tick": 118,
+      "frame": 118,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 10,
+      "tick": 101,
+      "frame": 101,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 16,
+      "tick": 87,
+      "frame": 87,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 30,
+      "tick": 90,
+      "frame": 90,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 36,
+      "tick": 150,
+      "frame": 150,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 42,
+      "tick": 44,
+      "frame": 44,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 3,
+      "tick": 132,
+      "frame": 132,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 10,
+      "tick": 108,
+      "frame": 108,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 16,
+      "tick": 0,
+      "frame": 0,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 30,
+      "tick": 63,
+      "frame": 63,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 36,
+      "tick": 138,
+      "frame": 138,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 42,
+      "tick": 89,
+      "frame": 89,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 3,
+      "tick": 5,
+      "frame": 5,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 10,
+      "tick": 123,
+      "frame": 123,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 16,
+      "tick": 117,
+      "frame": 117,
+      "phase": "val_sample",
+      "robot_block": 0,
+      "block_wall": 0
+    }
+  ],
+  "source": "/scratch/lijh/exp43/export_v3",
+  "split": "val",
+  "seed": 0
+}

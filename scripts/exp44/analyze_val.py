@@ -97,7 +97,8 @@ def main() -> int:
             'grip_err': float(abs(float(z['model_gripper'][i]) - float(z['expert_gripper'][i]))),
             'dz_model': float(ee_m[i, 2] - ee_q[i, 2]),
             'dz_expert': float(ee_e[i, 2] - ee_q[i, 2]),
-            'grip_closed': bool(float(z['expert_gripper'][i]) < 0.03),
+            # expert_gripper 是**归一化**开度（0.35≈0.014 m 闭合、1.0=0.04 m 张开）
+            'grip_closed': bool(float(z['expert_gripper'][i]) < 0.6),
             'ee_x': float(ee_q[i, 0]),
         })
     # 同状态跨 seed 的 MAE 标准差

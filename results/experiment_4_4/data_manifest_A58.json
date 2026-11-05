@@ -1,0 +1,13 @@
+{
+  "root": "/scratch/lijh/exp44_export_A58",
+  "train_by_skill": {
+    "A90": 30,
+    "B90": 28
+  },
+  "n_train": 58,
+  "splits": {
+    "train": 58,
+    "val": 16,
+    "test": 13
+  }
+}
