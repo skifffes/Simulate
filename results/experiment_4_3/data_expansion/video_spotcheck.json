@@ -1,0 +1,707 @@
+{
+  "n_sampled": 26,
+  "rows": [
+    {
+      "gid": 1,
+      "skill": "A90",
+      "config": "A_x+3_y-3",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000002.mp4",
+      "n_frames": 189,
+      "picked": [
+        47,
+        94,
+        141
+      ],
+      "frame_means": [
+        196.9,
+        198.6,
+        197.9
+      ],
+      "frame_stds": [
+        48.5,
+        47.4,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.48,
+        12.97
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 11,
+      "skill": "A90",
+      "config": "A_x-3_y00",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000054.mp4",
+      "n_frames": 198,
+      "picked": [
+        49,
+        99,
+        148
+      ],
+      "frame_means": [
+        196.5,
+        199.4,
+        199.1
+      ],
+      "frame_stds": [
+        48.7,
+        46.9,
+        46.4
+      ],
+      "adjacent_mean_absdiff": [
+        7.86,
+        10.8
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 21,
+      "skill": "A90",
+      "config": "A_x-3_y-3",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000000.mp4",
+      "n_frames": 198,
+      "picked": [
+        49,
+        99,
+        148
+      ],
+      "frame_means": [
+        196.6,
+        199.2,
+        198.8
+      ],
+      "frame_stds": [
+        48.6,
+        47.1,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.05,
+        10.39
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 31,
+      "skill": "A90",
+      "config": "A_x-3_y00",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000003.mp4",
+      "n_frames": 198,
+      "picked": [
+        49,
+        99,
+        148
+      ],
+      "frame_means": [
+        196.5,
+        199.4,
+        199.0
+      ],
+      "frame_stds": [
+        48.7,
+        46.9,
+        46.4
+      ],
+      "adjacent_mean_absdiff": [
+        8.11,
+        11.02
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 41,
+      "skill": "A90",
+      "config": "A_x00_y-3",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000013.mp4",
+      "n_frames": 190,
+      "picked": [
+        47,
+        95,
+        142
+      ],
+      "frame_means": [
+        197.1,
+        198.8,
+        198.2
+      ],
+      "frame_stds": [
+        48.4,
+        47.3,
+        46.7
+      ],
+      "adjacent_mean_absdiff": [
+        7.32,
+        12.3
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 51,
+      "skill": "A90",
+      "config": "A_x+3_y00",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000028.mp4",
+      "n_frames": 196,
+      "picked": [
+        49,
+        98,
+        147
+      ],
+      "frame_means": [
+        196.5,
+        199.2,
+        198.3
+      ],
+      "frame_stds": [
+        48.7,
+        47.0,
+        46.3
+      ],
+      "adjacent_mean_absdiff": [
+        8.61,
+        12.55
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 61,
+      "skill": "A90",
+      "config": "A_x-3_y-3",
+      "video": "data_a90a/A90/videos/chunk-000/observation.images.top/episode_000041.mp4",
+      "n_frames": 198,
+      "picked": [
+        49,
+        99,
+        148
+      ],
+      "frame_means": [
+        196.8,
+        199.4,
+        198.9
+      ],
+      "frame_stds": [
+        48.5,
+        47.0,
+        46.5
+      ],
+      "adjacent_mean_absdiff": [
+        7.22,
+        10.67
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 71,
+      "skill": "A90",
+      "config": "A_x00_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000012.mp4",
+      "n_frames": 190,
+      "picked": [
+        47,
+        95,
+        142
+      ],
+      "frame_means": [
+        197.0,
+        199.2,
+        198.3
+      ],
+      "frame_stds": [
+        48.4,
+        47.0,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.39,
+        11.8
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 81,
+      "skill": "A90",
+      "config": "A_x+3_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000013.mp4",
+      "n_frames": 186,
+      "picked": [
+        46,
+        93,
+        139
+      ],
+      "frame_means": [
+        197.4,
+        198.6,
+        197.6
+      ],
+      "frame_stds": [
+        48.4,
+        47.4,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.87,
+        13.53
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 91,
+      "skill": "A90",
+      "config": "A_x00_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000034.mp4",
+      "n_frames": 191,
+      "picked": [
+        47,
+        95,
+        143
+      ],
+      "frame_means": [
+        197.2,
+        198.8,
+        198.2
+      ],
+      "frame_stds": [
+        48.5,
+        47.3,
+        46.7
+      ],
+      "adjacent_mean_absdiff": [
+        7.35,
+        12.55
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 101,
+      "skill": "A90",
+      "config": "A_x-3_y00",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000059.mp4",
+      "n_frames": 198,
+      "picked": [
+        49,
+        99,
+        148
+      ],
+      "frame_means": [
+        196.7,
+        199.4,
+        198.9
+      ],
+      "frame_stds": [
+        48.6,
+        46.9,
+        46.5
+      ],
+      "adjacent_mean_absdiff": [
+        7.92,
+        11.13
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 111,
+      "skill": "A90",
+      "config": "A_x+3_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000046.mp4",
+      "n_frames": 188,
+      "picked": [
+        47,
+        94,
+        141
+      ],
+      "frame_means": [
+        197.1,
+        198.8,
+        197.8
+      ],
+      "frame_stds": [
+        48.4,
+        47.3,
+        46.5
+      ],
+      "adjacent_mean_absdiff": [
+        7.66,
+        13.39
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 121,
+      "skill": "A90",
+      "config": "A_x+3_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000007.mp4",
+      "n_frames": 189,
+      "picked": [
+        47,
+        94,
+        141
+      ],
+      "frame_means": [
+        196.9,
+        198.6,
+        198.0
+      ],
+      "frame_stds": [
+        48.6,
+        47.4,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.61,
+        13.11
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 131,
+      "skill": "A90",
+      "config": "A_x-3_y-3",
+      "video": "data_a90b/A90/videos/chunk-000/observation.images.top/episode_000023.mp4",
+      "n_frames": 196,
+      "picked": [
+        49,
+        98,
+        147
+      ],
+      "frame_means": [
+        196.7,
+        199.3,
+        198.9
+      ],
+      "frame_stds": [
+        48.7,
+        47.0,
+        46.6
+      ],
+      "adjacent_mean_absdiff": [
+        7.51,
+        10.46
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 141,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000054.mp4",
+      "n_frames": 158,
+      "picked": [
+        39,
+        79,
+        118
+      ],
+      "frame_means": [
+        199.3,
+        197.3,
+        196.8
+      ],
+      "frame_stds": [
+        46.8,
+        46.8,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.41,
+        8.83
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 151,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000028.mp4",
+      "n_frames": 166,
+      "picked": [
+        41,
+        83,
+        124
+      ],
+      "frame_means": [
+        199.3,
+        197.2,
+        197.0
+      ],
+      "frame_stds": [
+        46.7,
+        46.7,
+        45.4
+      ],
+      "adjacent_mean_absdiff": [
+        10.42,
+        7.8
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 161,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000047.mp4",
+      "n_frames": 158,
+      "picked": [
+        39,
+        79,
+        118
+      ],
+      "frame_means": [
+        199.2,
+        197.3,
+        196.9
+      ],
+      "frame_stds": [
+        46.8,
+        46.7,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.44,
+        8.58
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 171,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000036.mp4",
+      "n_frames": 158,
+      "picked": [
+        39,
+        79,
+        118
+      ],
+      "frame_means": [
+        199.2,
+        197.2,
+        196.8
+      ],
+      "frame_stds": [
+        46.9,
+        46.8,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.38,
+        8.6
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 181,
+      "skill": "B90",
+      "config": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000014.mp4",
+      "n_frames": 177,
+      "picked": [
+        44,
+        88,
+        132
+      ],
+      "frame_means": [
+        198.9,
+        196.4,
+        196.1
+      ],
+      "frame_stds": [
+        46.9,
+        46.8,
+        45.9
+      ],
+      "adjacent_mean_absdiff": [
+        11.77,
+        6.69
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 191,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90a/B90/videos/chunk-000/observation.images.top/episode_000046.mp4",
+      "n_frames": 156,
+      "picked": [
+        39,
+        78,
+        117
+      ],
+      "frame_means": [
+        199.3,
+        197.2,
+        197.0
+      ],
+      "frame_stds": [
+        46.7,
+        46.7,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.87,
+        7.82
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 201,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000025.mp4",
+      "n_frames": 161,
+      "picked": [
+        40,
+        80,
+        120
+      ],
+      "frame_means": [
+        199.3,
+        197.2,
+        197.0
+      ],
+      "frame_stds": [
+        46.7,
+        46.7,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        10.14,
+        7.72
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 211,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000008.mp4",
+      "n_frames": 171,
+      "picked": [
+        42,
+        85,
+        128
+      ],
+      "frame_means": [
+        199.3,
+        197.2,
+        197.0
+      ],
+      "frame_stds": [
+        46.6,
+        46.6,
+        45.4
+      ],
+      "adjacent_mean_absdiff": [
+        10.95,
+        7.39
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 221,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000012.mp4",
+      "n_frames": 166,
+      "picked": [
+        41,
+        83,
+        124
+      ],
+      "frame_means": [
+        199.4,
+        197.3,
+        197.1
+      ],
+      "frame_stds": [
+        46.7,
+        46.6,
+        45.4
+      ],
+      "adjacent_mean_absdiff": [
+        10.46,
+        7.77
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 231,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_home",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000011.mp4",
+      "n_frames": 163,
+      "picked": [
+        40,
+        81,
+        122
+      ],
+      "frame_means": [
+        199.2,
+        197.0,
+        196.8
+      ],
+      "frame_stds": [
+        46.8,
+        46.7,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.84,
+        7.98
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 241,
+      "skill": "B90",
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000045.mp4",
+      "n_frames": 156,
+      "picked": [
+        39,
+        78,
+        117
+      ],
+      "frame_means": [
+        199.4,
+        197.2,
+        197.0
+      ],
+      "frame_stds": [
+        46.7,
+        46.7,
+        45.5
+      ],
+      "adjacent_mean_absdiff": [
+        9.91,
+        7.82
+      ],
+      "blank_suspect": false
+    },
+    {
+      "gid": 251,
+      "skill": "B90",
+      "config": "B_wall_y_low|B_obj_y015|B_robot_offset",
+      "video": "data_b90b/B90/videos/chunk-000/observation.images.top/episode_000033.mp4",
+      "n_frames": 172,
+      "picked": [
+        43,
+        86,
+        129
+      ],
+      "frame_means": [
+        199.2,
+        196.6,
+        196.2
+      ],
+      "frame_stds": [
+        46.7,
+        47.0,
+        45.8
+      ],
+      "adjacent_mean_absdiff": [
+        11.41,
+        7.77
+      ],
+      "blank_suspect": false
+    }
+  ]
+}

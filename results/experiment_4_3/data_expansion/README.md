@@ -23,6 +23,14 @@ train 合计 **A90 170 / B90 144**。
 | `export_and_probe.md` | **多源导出 + probe**：314 条 train（A90 170/B90 144）、新 episode id ≥1000、forward loss 2.1367 |
 | `export_summary.json` | 导出统计（train/val/test 计数与按技能 train 计数） |
 
+
+| `coverage_v2.md` | **阶段覆盖 v2**：A90 280 帧/条·接近 29%/抓取搬运 43%/放置 29%；B90 推动 42%/墙保持 35%、墙接触 195–935 步 |
+| `old_data_recheck.md` | 旧 61 条 v1.2 复核：A90 **30/30**、B90 **28/31**（3 条需剔除） |
+| `video_spotcheck.md` | 26 条视频抽查（10.3%）：0 空白、帧间差异 6.7–13.5；人工看过 A90/B90 各 1 张 |
+| `old_v12_recheck.csv` | 旧逐条复核结果（含 3 条失败） |
+| `export_sha256.json` | 导出 761 个文件（17.95 GB）的 SHA256 |
+| `montage_A90_gid001.png` / `montage_B90_gid161.png` | 抽查用三帧拼接图 |
+
 ## 复现
 
 ```bash

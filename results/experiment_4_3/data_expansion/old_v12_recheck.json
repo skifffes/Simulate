@@ -1,0 +1,18 @@
+{
+  "n": 61,
+  "by_skill": {
+    "A90": {
+      "n": 30,
+      "success": 30
+    },
+    "B90": {
+      "n": 31,
+      "success": 28
+    }
+  },
+  "failures": {
+    "yaw_ok": 1,
+    "lateral_ok": 1,
+    "tilt_ok": 1
+  }
+}
