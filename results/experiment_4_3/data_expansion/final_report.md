@@ -159,3 +159,16 @@ python scripts/exp43/compile_results.py
   说明记录的 `action` 就是"下一控制周期到达的关节目标"，与 20 Hz 位置控制一致，
   也印证 Anchor-16 标签 `A[t+k] − S[t]` 就是"未来 k 步命令相对当前状态的偏移"，没有错帧。
 - 视频抽查条件覆盖补到 **10/10**（补抽 `A_x00_y00` 的 top+wrist），wrist 内容也与抓取一致。
+## 12. 训练就绪数据根与视频级核验（19:30）
+
+- **`/scratch/lijh/exp43/export_v3`**：以 `train_manifest_v3.json` 为准的数据根，
+  train **311**（A90 170 / B90 141）、val 16、test 13；文件为指向 `export` 的符号链接，不占额外空间；
+  `train_lora.py --mode probe`（`EXP42_DATA=.../export_v3`）通过：**FORWARD LOSS 2.093963**，
+  state (4,32)、actions (4,16,32)、三路图像、token mask 164、skills 混合。
+- **视频级定量核验**（`content_verification.md`，22 条）：
+  图像变化与 |Δq| 的相关 A90 **0.455** / B90 **0.732**（22/22 正相关）→ 图像-状态同步；
+  B90 橙色方块像素质心位移中位 **36.6 px**，与 `advance_x_m` 0.178 m 对应 **204 px/m**
+  （10 条离散极小）→ 视频里看到的推动与物理记录一致。
+- 人工查看的 montage：A90（top、wrist）、B90（2 条，不同配置）共 4 张，均与任务语义一致。
+
+**训练准入判断：数据侧已就绪。** 剩余仅"更彻底的人工视频审阅"（可选，非阻塞）。

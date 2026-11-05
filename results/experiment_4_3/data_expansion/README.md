@@ -36,6 +36,12 @@ train 合计 **A90 170 / B90 144**。
 | `action_timing_check.json` | 动作-状态时序：\|a−s_next\|<\|a−s_now\| 占 100%，中位 0.0006 vs 0.0081 rad |
 | `montage_A90_gid002_top.png` / `montage_A90_gid002_wrist.png` | 第 10 个条件的 top/wrist 抽查图 |
 
+
+| `content_verification.md` | **视频级定量核验**：图像-关节运动相关 A90 0.455 / B90 0.732；B90 方块像素质心位移 36.6 px ↔ 0.178 m（204 px/m） |
+| `image_sync_check.json` | 上述 22 条抽样的逐条数值 |
+| `export_v3_summary.json` | 训练就绪数据根 `/scratch/lijh/exp43/export_v3`：311 train / 16 val / 13 test |
+| `train_manifest_v3.json` | 训练输入清单 v3（311 条，含 provenance 与剔除原因） |
+
 ## 复现
 
 ```bash
