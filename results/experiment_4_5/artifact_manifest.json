@@ -1,6 +1,7 @@
 {
   "server_roots": {
-    "/scratch/lijh/exp45/run": "17G"
+    "/scratch/lijh/exp45/run": "17G",
+    "/scratch/lijh/exp45/rescue_lr03": "19G"
   },
   "data_root": {
     "path": "/scratch/lijh/exp43/export_v3",
@@ -23,5 +24,6 @@
     "resume_test2.log": 1388,
     "resume_test3.log": 1447,
     "train_main.log": 38697
-  }
+  },
+  "n_rescue_checkpoints": 8
 }

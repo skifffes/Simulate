@@ -66,5 +66,72 @@
     "bytes": 1734573485,
     "sha256": "a5f690c6152ddb91f40231015e90ec8aa238ad069a5fa59ee461e1c6cf0e3c0f",
     "note": "实验 4.4 Group B step 12000，用于配对闭环对照"
+  },
+  "rescue_lr_0_3": {
+    "mode": "action_expert_full_ft_lr0.3",
+    "checkpoints": [
+      {
+        "step": 1000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step01000.npz",
+        "bytes": 1594190924,
+        "sha256": "ae355c070d0d231a86e0a4a25e182fa85fad3ed889ff237b62b6e65134cd45e1"
+      },
+      {
+        "step": 2000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step02000.npz",
+        "bytes": 1594193631,
+        "sha256": "78d47e2bcbc16fd9f51bdea3582326da8563377a85b05cc97c98d5ae4ca05682"
+      },
+      {
+        "step": 3000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step03000.npz",
+        "bytes": 1594188231,
+        "sha256": "1baad31c0be163cdc5538a8dec347fa932341218ffc73f222896f2ff670c78f1"
+      },
+      {
+        "step": 4000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step04000.npz",
+        "bytes": 1594188200,
+        "sha256": "0e5e5803d7d6899255e3da263c7b165e00217647c731a55e55c169d87d17e39b"
+      },
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step06000.npz",
+        "bytes": 1594184817,
+        "sha256": "508799f9652eeee21039183d78f1728cdea674c402e8b6ae882f447b5b32e8c6"
+      },
+      {
+        "step": 8000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step08000.npz",
+        "bytes": 1594184017,
+        "sha256": "048057a5dd0bc75685f8a87e35b704a9233d46a1144074068de93c5587a97222"
+      },
+      {
+        "step": 10000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step10000.npz",
+        "bytes": 1594182824,
+        "sha256": "0f40e75ac738409685ba02dfd9bf597322fd703881b5fc3f8f166c8b8412b906"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/lora_step12000.npz",
+        "bytes": 1594180426,
+        "sha256": "85d4631fd2a994fb2ff768971b13934df331a92f9f0250c5166b9ed9762d17b3"
+      }
+    ],
+    "optimizer_state": [
+      {
+        "step": 4000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/opt_step04000.npz",
+        "bytes": 3440799280,
+        "sha256": "65fb7cfca749aaef265d49b06037a881fde796c641df927d7ec963f1ed0fac5a"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp45/rescue_lr03/ckpts/opt_step12000.npz",
+        "bytes": 3440799280,
+        "sha256": "dbffebdab118777150914ad80788f5d170a0d12b2ee6be9bc16c6f9dc791e985"
+      }
+    ]
   }
 }
