@@ -11,3 +11,15 @@ step,skill,episode,seed_offset,success,failure_reason,first_gripper_close_tick,f
 1500,A90,5,2,False,grasped_by_two_fingers,0,44,44,0.20605892174393825,,,,196
 1500,B90,0,2,False,wall_contact_ever,0,20,,0.051833678727855936,,,,157
 1500,B90,2,2,False,pushed_by_robot,0,,,-2.6082691562123728e-11,,,,156
+3000,A90,0,0,False,position_ok,7,6,,0.030741050298549344,,,,198
+3000,A90,5,0,False,grasped_by_two_fingers,6,6,,0.0005542883036608881,,,,196
+3000,B90,0,0,False,wall_contact_ever,0,6,,0.10347698655932902,,,,157
+3000,B90,2,0,False,wall_contact_ever,0,7,,0.13361151277914696,,,,156
+3000,A90,0,1,False,grasped_by_two_fingers,6,6,,5.8050870425541135e-05,,,,198
+3000,A90,5,1,False,position_ok,7,7,,0.00675460101902825,,,,196
+3000,B90,0,1,False,wall_contact_ever,0,5,,0.1746120728214472,,,,157
+3000,B90,2,1,False,wall_contact_ever,0,5,,0.14751553892029934,,,,156
+3000,A90,0,2,False,grasped_by_two_fingers,7,6,,0.001668804591102413,,,,198
+3000,A90,5,2,False,grasped_by_two_fingers,6,6,,0.0022696121687505455,,,,196
+3000,B90,0,2,False,wall_contact_ever,0,11,,0.12196024671250572,,,,157
+3000,B90,2,2,False,wall_contact_ever,0,8,,0.05740841842052846,,,,156
