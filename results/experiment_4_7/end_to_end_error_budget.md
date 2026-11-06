@@ -41,3 +41,12 @@
   离线 chunk 0.019 rad 的误差，在 20 Hz 闭环里被**积分放大**到 3 cm 级/1–2 tick；
 - 因此"契约通过"并不等于"模型能完成技能"：剩余差距属于**闭环学习/终态精度**问题，
   而不是训练—推理—执行链路的数值不一致。
+## 5.4 第二个 checkpoint（4.4 Group B step12000）
+
+| checkpoint | 16×8 max abs | mean abs | 夹爪 max |
+| --- | ---: | ---: | ---: |
+| exp4.6 LoRA step3000 | 0.0013 – 0.0037 | 0.00032 – 0.00065 | 0.0006 – 0.0015 |
+| **exp4.4 Group B step12000** | **0.0013 – 0.0022** | 0.00024 – 0.00041 | 0.0005 – 0.0010 |
+
+两个 checkpoint（policy_inference_parity.csv、policy_inference_parity_b12000.csv）都在
+预设容差（5e-3 rad）内 → Gate 5 对两个必需 checkpoint 均 PASS。

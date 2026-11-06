@@ -15,14 +15,14 @@
 | Controller | 下发目标 vs 实际 q_after 差多少？ | **PASS** | max 0.0121 rad、mean 0.0017 rad |
 | Gripper | 实际两指是否跟踪专家命令？ | **PASS** | 夹爪跟踪 max 0.0065（命令 vs 实际均值） |
 | FK/EE | 诊断位置与真实 rollout 是否同坐标系？ | **PASS** | `pose()`==link 11==FK，20 构型差 **0.0 m**；4.6 的 0.33 m 是诊断脚本场景构造问题 |
-| Policy server | 离线与在线是否同一 checkpoint/输入/输出？ | **PASS（数值精度）** | 16×8 max abs 1.3–3.7e-3 rad；metadata 指向 step3000 |
+| Policy server | 离线与在线是否同一 checkpoint/输入/输出？ | **PASS（数值精度）** | step3000：1.3–3.7e-3 rad；Group B step12000：1.3–2.2e-3 rad；metadata 指向对应 checkpoint |
 
 ## 未验证 / 局限（如实）
 
 1. **图像延迟与 state/action 相对时刻**只用 4.6 的统计证据（`|a−s_next|`）间接证明，
    本轮**没有**逐帧检查"图像是否比 state 晚一帧"（需要重放渲染或图像-状态互相关实验）；
 2. 只覆盖 4 条 episode、36 帧、707 tick；未覆盖全部 311 条；
-3. Gate 5 只测了 exp4.6 step3000 一个 checkpoint（时间限制），未测 4.4 Group B step12000；
+3. Gate 5 覆盖两个 checkpoint（step3000 与 Group B step12000），但每个只有 8 个样本；
 4. 安全约束在专家轨迹上 0 次触发，**不能**据此推断"安全约束对模型轨迹无影响"；
 5. "首次 >3 cm 且持续的 tick" 只是阈值事件，**不是**可恢复性判据。
 
