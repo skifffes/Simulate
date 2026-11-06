@@ -1,0 +1,149 @@
+{
+  "rows": [
+    {
+      "path": "PaliGemma/llm/layers/mlp_1/gating_einsum",
+      "fresh": {
+        "shape": [
+          18,
+          2,
+          1024,
+          4096
+        ],
+        "mean": 2.1725297756347572e-06,
+        "std": 0.031249186024069786,
+        "absmax": 0.07105294615030289
+      },
+      "loaded": {
+        "shape": [
+          18,
+          2,
+          1024,
+          4096
+        ],
+        "mean": -2.687928827072028e-05,
+        "std": 0.03411363810300827,
+        "absmax": 0.3231810927391052
+      },
+      "changed_by_loading": true
+    },
+    {
+      "path": "PaliGemma/llm/layers/attn/q_einsum_1/w",
+      "fresh": {
+        "shape": [
+          18,
+          8,
+          1024,
+          256
+        ],
+        "mean": -5.7056900004681665e-06,
+        "std": 0.031247643753886223,
+        "absmax": 0.07105294615030289
+      },
+      "loaded": {
+        "shape": [
+          18,
+          8,
+          1024,
+          256
+        ],
+        "mean": 1.3546450645662844e-05,
+        "std": 0.03393382579088211,
+        "absmax": 0.27901628613471985
+      },
+      "changed_by_loading": true
+    },
+    {
+      "path": "PaliGemma/llm/final_norm_1/Dense_0/kernel",
+      "fresh": {
+        "shape": [
+          1024,
+          3072
+        ],
+        "mean": 0.0,
+        "std": 0.0,
+        "absmax": 0.0
+      },
+      "loaded": {
+        "shape": [
+          1024,
+          3072
+        ],
+        "mean": 0.0005428717122413218,
+        "std": 0.009683960117399693,
+        "absmax": 0.11068768054246902
+      },
+      "changed_by_loading": true
+    },
+    {
+      "path": "action_out_proj/kernel",
+      "fresh": {
+        "shape": [
+          1024,
+          32
+        ],
+        "mean": 3.82174075639341e-05,
+        "std": 0.031117422506213188,
+        "absmax": 0.07104863226413727
+      },
+      "loaded": {
+        "shape": [
+          1024,
+          32
+        ],
+        "mean": 0.00013053568545728922,
+        "std": 0.02036362886428833,
+        "absmax": 0.1378711462020874
+      },
+      "changed_by_loading": true
+    },
+    {
+      "path": "PaliGemma/llm/layers/mlp/gating_einsum",
+      "fresh": {
+        "shape": [
+          18,
+          2,
+          2048,
+          16384
+        ],
+        "mean": -4.914876967632154e-07,
+        "std": 0.022096628323197365,
+        "absmax": 0.05024201422929764
+      },
+      "loaded": {
+        "shape": [
+          18,
+          2,
+          2048,
+          16384
+        ],
+        "mean": 4.4951077143196017e-05,
+        "std": 0.038408294320106506,
+        "absmax": 1.315059781074524
+      },
+      "changed_by_loading": true
+    },
+    {
+      "path": "PaliGemma/llm/embedder/input_embedding",
+      "fresh": {
+        "shape": [
+          257152,
+          2048
+        ],
+        "mean": -1.0224890445442725e-07,
+        "std": 0.010000322014093399,
+        "absmax": 0.05419982969760895
+      },
+      "loaded": {
+        "shape": [
+          257152,
+          2048
+        ],
+        "mean": -9.001711441669613e-05,
+        "std": 0.1928406059741974,
+        "absmax": 11.879826545715332
+      },
+      "changed_by_loading": true
+    }
+  ],
+  "all_loaded_differ_from_fresh": true
+}

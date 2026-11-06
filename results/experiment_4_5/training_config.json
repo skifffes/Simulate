@@ -1,0 +1,50 @@
+{
+  "experiment": "4.5_action_expert_full_ft",
+  "date": "2026-11-06",
+  "base_commit": "060dadf",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "hypothesis": "解除 Action Expert 的低秩更新约束可改善动作质量与真实闭环能力（待检验）",
+  "data": {
+    "root": "/scratch/lijh/exp43/export_v3",
+    "train": 311, "train_a90": 170, "train_b90": 141,
+    "val": 16, "test": 13,
+    "train_windows": 12967,
+    "val_episodes": {"A90": [6, 7, 15, 16, 24, 25, 33, 34, 42, 43],
+                     "B90": [3, 10, 16, 30, 36, 42]}
+  },
+  "model": {
+    "base": "pi05_droid (checkpoints/pi05_droid/params)",
+    "paligemma_variant": "gemma_2b",
+    "action_expert_variant": "gemma_300m",
+    "pi05": true, "action_dim": 32, "action_horizon": 16,
+    "n_total": 3353433872, "n_trainable": 430098464, "trainable_ratio": 0.1283,
+    "trainable_patterns": ["PaliGemma/llm/.*_1(/.*)?", "action_in_proj(:?/.*)?",
+                            "action_out_proj(:?/.*)?", "time_mlp_in(:?/.*)?",
+                            "time_mlp_out(:?/.*)?"],
+    "frozen": ["PaliGemma/img/*", "PaliGemma/llm/embedder", "PaliGemma/llm/final_norm",
+               "PaliGemma/llm/layers/{mlp,attn/*,pre_attention_norm,pre_ffw_norm}"]
+  },
+  "optimizer": {
+    "tx": "openpi.training.optimizer.create_optimizer(cfg.optimizer, cfg.lr_schedule)",
+    "lr_schedule": {"type": "CosineDecaySchedule", "warmup_steps": 1000,
+                     "peak_lr": 2.5e-05, "decay_steps": 30000, "decay_lr": 2.5e-06},
+    "batch_size": 4, "accum": 1, "effective_batch": 4
+  },
+  "training": {
+    "steps": 12000, "seed": 0, "label_mode": "anchor", "anchor_reference": "fixed",
+    "loss_dims": 0, "normalization": "official droid (unchanged)",
+    "save_at": [1200, 2400, 4000, 6000, 8000, 10000, 12000],
+    "save_opt_at": [6000, 12000],
+    "checkpoint_format": "trainable-only npz (1.59 GB) + opt_state npz (3.44 GB)",
+    "max_hours": 5.0
+  },
+  "evaluation": {
+    "offline": {"states": 30, "seeds": [0, 1, 2, 3], "picks": "results/experiment_4_4/val_picks.json"},
+    "rollout": {"episodes": 16, "seeds_per_episode": 3, "execute_k": 8, "ticks": 45,
+                 "evaluator": "exp4.1-strict-v1.2"}
+  },
+  "comparison": {
+    "lora_reference": "experiment 4.4 Group B (311 条, 12,000 updates, LoRA)",
+    "historical_reference": "experiment 4.2 B90 step1800 (LoRA, 1/20 strict success)"
+  }
+}

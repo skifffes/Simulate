@@ -79,6 +79,8 @@ def main(argv=None) -> int:
     ap.add_argument('--host', default='127.0.0.1')
     ap.add_argument('--port', type=int, default=8191)
     ap.add_argument('--max-joint-step-rad', type=float, default=0.30)
+    ap.add_argument('--seed-offset', type=int, default=0,
+                    help='推理采样种子偏移（配对评测用）')
     ap.add_argument('--out', required=True)
     args = ap.parse_args(argv)
 
@@ -138,7 +140,8 @@ def main(argv=None) -> int:
                         [np.clip(fingers.mean() / FINGER_MAX_M, 0, 1)], dtype=np.float64),
                     'prompt': prompt,
                 }
-                res = client.infer(obs, episode_seed=(9100 + ep) if tick == 0 else None)
+                res = client.infer(obs, episode_seed=(9100 + ep + args.seed_offset)
+                                   if tick == 0 else None)
                 n_infer += 1
                 chunk = np.asarray(res['actions'], dtype=np.float64).copy()
                 adapted = chunk_to_targets(chunk, q, scene.sim.lower, scene.sim.upper, aa_cfg,
