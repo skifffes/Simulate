@@ -1,0 +1,52 @@
+{
+  "n_rollouts": 96,
+  "by_model": {
+    "ae": {
+      "n": 48,
+      "success": 0,
+      "per_skill": {
+        "A90": {
+          "n": 30,
+          "success": 0,
+          "failure_reasons": {
+            "grasped_by_two_fingers": 26,
+            "two_fingers_simultaneous": 3,
+            "lifted": 1
+          }
+        },
+        "B90": {
+          "n": 18,
+          "success": 0,
+          "failure_reasons": {
+            "pushed_by_robot": 18
+          }
+        }
+      },
+      "median_advance_b90": -1.5752519288980693e-09
+    },
+    "lora": {
+      "n": 48,
+      "success": 0,
+      "per_skill": {
+        "A90": {
+          "n": 30,
+          "success": 0,
+          "failure_reasons": {
+            "grasped_by_two_fingers": 18,
+            "lifted": 4,
+            "position_ok": 7,
+            "two_fingers_simultaneous": 1
+          }
+        },
+        "B90": {
+          "n": 18,
+          "success": 0,
+          "failure_reasons": {
+            "pushed_by_robot": 18
+          }
+        }
+      },
+      "median_advance_b90": -9.439542481004537e-10
+    }
+  }
+}

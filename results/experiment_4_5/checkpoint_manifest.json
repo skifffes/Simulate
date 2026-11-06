@@ -1,0 +1,70 @@
+{
+  "action_expert": {
+    "mode": "action_expert_full_ft",
+    "checkpoints": [
+      {
+        "step": 1200,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step01200.npz",
+        "bytes": 1594186828,
+        "sha256": "180d0fef45c0f41b79481fa01660402f0a6952f4e531a15b811c46101fe1e158"
+      },
+      {
+        "step": 2400,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step02400.npz",
+        "bytes": 1594176988,
+        "sha256": "7a914db03b8df3bc9c4a5916f789179084d4c2dece2cf27ad6e9aa68970679c7"
+      },
+      {
+        "step": 4000,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step04000.npz",
+        "bytes": 1594164678,
+        "sha256": "138c68dc80accc23dcf060b3501bce9a3e9629dab096e2596d957297df8b1781"
+      },
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step06000.npz",
+        "bytes": 1594161363,
+        "sha256": "3d30c500e496af68eb0bedb78403bc519f66ad754807f29f4e1f45f484ca909d"
+      },
+      {
+        "step": 8000,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step08000.npz",
+        "bytes": 1594160110,
+        "sha256": "f2182d36098ef51b391ba571a5866d53bc68642aa134d2c0e7d82b5909670aee"
+      },
+      {
+        "step": 10000,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step10000.npz",
+        "bytes": 1594152071,
+        "sha256": "679e22b64b6d534eac07cf31bae057dc74f17cc112338e17d7c8b45cc882beb1"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp45/run/ckpts/lora_step12000.npz",
+        "bytes": 1594150073,
+        "sha256": "ae20bcf5261ed6eadf8fac5de1337738a82b0a403bc078cbee52ccf44f0f6d17"
+      }
+    ],
+    "optimizer_state": [
+      {
+        "step": 6000,
+        "path": "/scratch/lijh/exp45/run/ckpts/opt_step06000.npz",
+        "bytes": 3440799276,
+        "sha256": "2674cda138dcb728931f82115fc53b5d7d503f8184346f17332c1459c3312e4c"
+      },
+      {
+        "step": 12000,
+        "path": "/scratch/lijh/exp45/run/ckpts/opt_step12000.npz",
+        "bytes": 3440799280,
+        "sha256": "77ac51ad70437ae1b4d15a1b9bf87387b7cfc5c2b34931895e63a8a91fe9c36d"
+      }
+    ],
+    "note": "npz 只含 trainable 参数（430.1M，19 张量，1.59 GB）"
+  },
+  "lora_reference": {
+    "path": "/scratch/lijh/exp44/B/ckpts/lora_step12000.npz",
+    "bytes": 1734573485,
+    "sha256": "a5f690c6152ddb91f40231015e90ec8aa238ad069a5fa59ee461e1c6cf0e3c0f",
+    "note": "实验 4.4 Group B step 12000，用于配对闭环对照"
+  }
+}

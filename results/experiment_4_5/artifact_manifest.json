@@ -1,0 +1,27 @@
+{
+  "server_roots": {
+    "/scratch/lijh/exp45/run": "17G"
+  },
+  "data_root": {
+    "path": "/scratch/lijh/exp43/export_v3",
+    "meta_sha256": "e62b2436eb4ddeb25d29f930324b77f9f80d245029bca8f24c56cd37fc118d84"
+  },
+  "repo_results": "/scratch/lijh/exp40/repo/results/experiment_4_5",
+  "n_ae_checkpoints": 7,
+  "n_opt_states": 2,
+  "logs": {
+    "eval_driver.log": 18423,
+    "export_test.log": 149,
+    "gate1_compare.log": 689,
+    "gate2.log": 3287,
+    "paired_ae_12000.log": 379,
+    "paired_ae_run.log": 96,
+    "paired_lora_12000.log": 432,
+    "paired_lora_run.log": 100,
+    "resume_a.log": 572,
+    "resume_test.log": 663,
+    "resume_test2.log": 1388,
+    "resume_test3.log": 1447,
+    "train_main.log": 38697
+  }
+}

@@ -50,6 +50,8 @@ def main() -> int:
     ap.add_argument('--max-hours', type=float, default=0.0)
     ap.add_argument('--log-every', type=int, default=20)
     ap.add_argument('--label-mode', default='anchor')
+    ap.add_argument('--lr-scale', type=float, default=1.0,
+                    help='学习率缩放（仅用于明确标记的救援实验）')
     args = ap.parse_args()
 
     out = Path(args.out)
@@ -59,7 +61,8 @@ def main() -> int:
     TL.OUT = out
     TL.HORIZON = HORIZON
 
-    cfg = build_config_ae(batch_size=args.batch, num_steps=args.steps)
+    cfg = build_config_ae(batch_size=args.batch, num_steps=args.steps,
+                          lr_scale=args.lr_scale)
     t0 = time.time()
     print(f'[{time.strftime("%H:%M:%S")}] building model + loading pi05_droid ...', flush=True)
     train_state = TL.init_state(cfg)
