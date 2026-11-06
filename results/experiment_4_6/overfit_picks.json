@@ -1,0 +1,3192 @@
+{
+  "items": [
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 0,
+      "frame": 0,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 2,
+      "frame": 2,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 4,
+      "frame": 4,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 6,
+      "frame": 6,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 8,
+      "frame": 8,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 10,
+      "frame": 10,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 12,
+      "frame": 12,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 14,
+      "frame": 14,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 16,
+      "frame": 16,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 18,
+      "frame": 18,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 20,
+      "frame": 20,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 22,
+      "frame": 22,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 24,
+      "frame": 24,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 26,
+      "frame": 26,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 28,
+      "frame": 28,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 30,
+      "frame": 30,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 32,
+      "frame": 32,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 34,
+      "frame": 34,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 36,
+      "frame": 36,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 38,
+      "frame": 38,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 40,
+      "frame": 40,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 42,
+      "frame": 42,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 44,
+      "frame": 44,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 46,
+      "frame": 46,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 48,
+      "frame": 48,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 50,
+      "frame": 50,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 52,
+      "frame": 52,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 54,
+      "frame": 54,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 56,
+      "frame": 56,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 58,
+      "frame": 58,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 60,
+      "frame": 60,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 62,
+      "frame": 62,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 64,
+      "frame": 64,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 66,
+      "frame": 66,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 68,
+      "frame": 68,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 70,
+      "frame": 70,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 72,
+      "frame": 72,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 74,
+      "frame": 74,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 76,
+      "frame": 76,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 78,
+      "frame": 78,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 80,
+      "frame": 80,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 82,
+      "frame": 82,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 84,
+      "frame": 84,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 86,
+      "frame": 86,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 88,
+      "frame": 88,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 90,
+      "frame": 90,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 92,
+      "frame": 92,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 94,
+      "frame": 94,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 96,
+      "frame": 96,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 98,
+      "frame": 98,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 100,
+      "frame": 100,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 102,
+      "frame": 102,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 104,
+      "frame": 104,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 106,
+      "frame": 106,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 108,
+      "frame": 108,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 110,
+      "frame": 110,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 112,
+      "frame": 112,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 114,
+      "frame": 114,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 116,
+      "frame": 116,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 118,
+      "frame": 118,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 120,
+      "frame": 120,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 122,
+      "frame": 122,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 124,
+      "frame": 124,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 126,
+      "frame": 126,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 128,
+      "frame": 128,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 130,
+      "frame": 130,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 132,
+      "frame": 132,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 134,
+      "frame": 134,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 136,
+      "frame": 136,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 138,
+      "frame": 138,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 140,
+      "frame": 140,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 142,
+      "frame": 142,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 144,
+      "frame": 144,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 146,
+      "frame": 146,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 148,
+      "frame": 148,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 150,
+      "frame": 150,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 152,
+      "frame": 152,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 154,
+      "frame": 154,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 156,
+      "frame": 156,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 158,
+      "frame": 158,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 160,
+      "frame": 160,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 162,
+      "frame": 162,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 164,
+      "frame": 164,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 166,
+      "frame": 166,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 168,
+      "frame": 168,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 170,
+      "frame": 170,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 172,
+      "frame": 172,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 174,
+      "frame": 174,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 176,
+      "frame": 176,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 178,
+      "frame": 178,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 180,
+      "frame": 180,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 182,
+      "frame": 182,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 184,
+      "frame": 184,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 186,
+      "frame": 186,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 188,
+      "frame": 188,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 190,
+      "frame": 190,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 192,
+      "frame": 192,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 194,
+      "frame": 194,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 0,
+      "tick": 196,
+      "frame": 196,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 0,
+      "frame": 0,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 2,
+      "frame": 2,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 4,
+      "frame": 4,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 6,
+      "frame": 6,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 8,
+      "frame": 8,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 10,
+      "frame": 10,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 12,
+      "frame": 12,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 14,
+      "frame": 14,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 16,
+      "frame": 16,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 18,
+      "frame": 18,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 20,
+      "frame": 20,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 22,
+      "frame": 22,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 24,
+      "frame": 24,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 26,
+      "frame": 26,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 28,
+      "frame": 28,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 30,
+      "frame": 30,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 32,
+      "frame": 32,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 34,
+      "frame": 34,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 36,
+      "frame": 36,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 38,
+      "frame": 38,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 40,
+      "frame": 40,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 42,
+      "frame": 42,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 44,
+      "frame": 44,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 46,
+      "frame": 46,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 48,
+      "frame": 48,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 50,
+      "frame": 50,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 52,
+      "frame": 52,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 54,
+      "frame": 54,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 56,
+      "frame": 56,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 58,
+      "frame": 58,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 60,
+      "frame": 60,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 62,
+      "frame": 62,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 64,
+      "frame": 64,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 66,
+      "frame": 66,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 68,
+      "frame": 68,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 70,
+      "frame": 70,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 72,
+      "frame": 72,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 74,
+      "frame": 74,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 76,
+      "frame": 76,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 78,
+      "frame": 78,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 80,
+      "frame": 80,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 82,
+      "frame": 82,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 84,
+      "frame": 84,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 86,
+      "frame": 86,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 88,
+      "frame": 88,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 90,
+      "frame": 90,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 92,
+      "frame": 92,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 94,
+      "frame": 94,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 96,
+      "frame": 96,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 98,
+      "frame": 98,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 100,
+      "frame": 100,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 102,
+      "frame": 102,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 104,
+      "frame": 104,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 106,
+      "frame": 106,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 108,
+      "frame": 108,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 110,
+      "frame": 110,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 112,
+      "frame": 112,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 114,
+      "frame": 114,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 116,
+      "frame": 116,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 118,
+      "frame": 118,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 120,
+      "frame": 120,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 122,
+      "frame": 122,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 124,
+      "frame": 124,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 126,
+      "frame": 126,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 128,
+      "frame": 128,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 130,
+      "frame": 130,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 132,
+      "frame": 132,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 134,
+      "frame": 134,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 136,
+      "frame": 136,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 138,
+      "frame": 138,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 140,
+      "frame": 140,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 142,
+      "frame": 142,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 144,
+      "frame": 144,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 146,
+      "frame": 146,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 148,
+      "frame": 148,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 150,
+      "frame": 150,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 152,
+      "frame": 152,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 154,
+      "frame": 154,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 156,
+      "frame": 156,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 158,
+      "frame": 158,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 160,
+      "frame": 160,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 162,
+      "frame": 162,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 164,
+      "frame": 164,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 166,
+      "frame": 166,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 168,
+      "frame": 168,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 170,
+      "frame": 170,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 172,
+      "frame": 172,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 174,
+      "frame": 174,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 176,
+      "frame": 176,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 178,
+      "frame": 178,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 180,
+      "frame": 180,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 182,
+      "frame": 182,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 184,
+      "frame": 184,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 186,
+      "frame": 186,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 188,
+      "frame": 188,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 190,
+      "frame": 190,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 192,
+      "frame": 192,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "tick": 194,
+      "frame": 194,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 0,
+      "frame": 0,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 2,
+      "frame": 2,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 4,
+      "frame": 4,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 6,
+      "frame": 6,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 8,
+      "frame": 8,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 10,
+      "frame": 10,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 12,
+      "frame": 12,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 14,
+      "frame": 14,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 16,
+      "frame": 16,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 18,
+      "frame": 18,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 20,
+      "frame": 20,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 22,
+      "frame": 22,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 24,
+      "frame": 24,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 26,
+      "frame": 26,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 28,
+      "frame": 28,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 30,
+      "frame": 30,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 32,
+      "frame": 32,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 34,
+      "frame": 34,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 36,
+      "frame": 36,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 38,
+      "frame": 38,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 40,
+      "frame": 40,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 42,
+      "frame": 42,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 44,
+      "frame": 44,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 46,
+      "frame": 46,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 48,
+      "frame": 48,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 50,
+      "frame": 50,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 52,
+      "frame": 52,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 54,
+      "frame": 54,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 56,
+      "frame": 56,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 58,
+      "frame": 58,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 60,
+      "frame": 60,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 62,
+      "frame": 62,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 64,
+      "frame": 64,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 66,
+      "frame": 66,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 68,
+      "frame": 68,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 70,
+      "frame": 70,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 72,
+      "frame": 72,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 74,
+      "frame": 74,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 76,
+      "frame": 76,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 78,
+      "frame": 78,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 80,
+      "frame": 80,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 82,
+      "frame": 82,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 84,
+      "frame": 84,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 86,
+      "frame": 86,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 88,
+      "frame": 88,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 90,
+      "frame": 90,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 92,
+      "frame": 92,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 94,
+      "frame": 94,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 96,
+      "frame": 96,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 98,
+      "frame": 98,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 100,
+      "frame": 100,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 102,
+      "frame": 102,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 104,
+      "frame": 104,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 106,
+      "frame": 106,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 108,
+      "frame": 108,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 110,
+      "frame": 110,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 112,
+      "frame": 112,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 114,
+      "frame": 114,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 116,
+      "frame": 116,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 118,
+      "frame": 118,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 120,
+      "frame": 120,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 122,
+      "frame": 122,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 124,
+      "frame": 124,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 126,
+      "frame": 126,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 128,
+      "frame": 128,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 130,
+      "frame": 130,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 132,
+      "frame": 132,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 134,
+      "frame": 134,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 136,
+      "frame": 136,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 138,
+      "frame": 138,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 140,
+      "frame": 140,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 142,
+      "frame": 142,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 144,
+      "frame": 144,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 146,
+      "frame": 146,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 148,
+      "frame": 148,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 150,
+      "frame": 150,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 152,
+      "frame": 152,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 154,
+      "frame": 154,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "tick": 156,
+      "frame": 156,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 0,
+      "frame": 0,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 2,
+      "frame": 2,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 4,
+      "frame": 4,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 6,
+      "frame": 6,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 8,
+      "frame": 8,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 10,
+      "frame": 10,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 12,
+      "frame": 12,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 14,
+      "frame": 14,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 16,
+      "frame": 16,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 18,
+      "frame": 18,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 20,
+      "frame": 20,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 22,
+      "frame": 22,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 24,
+      "frame": 24,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 26,
+      "frame": 26,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 28,
+      "frame": 28,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 30,
+      "frame": 30,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 32,
+      "frame": 32,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 34,
+      "frame": 34,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 36,
+      "frame": 36,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 38,
+      "frame": 38,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 40,
+      "frame": 40,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 42,
+      "frame": 42,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 44,
+      "frame": 44,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 46,
+      "frame": 46,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 48,
+      "frame": 48,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 50,
+      "frame": 50,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 52,
+      "frame": 52,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 54,
+      "frame": 54,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 56,
+      "frame": 56,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 58,
+      "frame": 58,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 60,
+      "frame": 60,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 62,
+      "frame": 62,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 64,
+      "frame": 64,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 66,
+      "frame": 66,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 68,
+      "frame": 68,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 70,
+      "frame": 70,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 72,
+      "frame": 72,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 74,
+      "frame": 74,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 76,
+      "frame": 76,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 78,
+      "frame": 78,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 80,
+      "frame": 80,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 82,
+      "frame": 82,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 84,
+      "frame": 84,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 86,
+      "frame": 86,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 88,
+      "frame": 88,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 90,
+      "frame": 90,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 92,
+      "frame": 92,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 94,
+      "frame": 94,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 96,
+      "frame": 96,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 98,
+      "frame": 98,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 100,
+      "frame": 100,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 102,
+      "frame": 102,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 104,
+      "frame": 104,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 106,
+      "frame": 106,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 108,
+      "frame": 108,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 110,
+      "frame": 110,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 112,
+      "frame": 112,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 114,
+      "frame": 114,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 116,
+      "frame": 116,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 118,
+      "frame": 118,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 120,
+      "frame": 120,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 122,
+      "frame": 122,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 124,
+      "frame": 124,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 126,
+      "frame": 126,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 128,
+      "frame": 128,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 130,
+      "frame": 130,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 132,
+      "frame": 132,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 134,
+      "frame": 134,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 136,
+      "frame": 136,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 138,
+      "frame": 138,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 140,
+      "frame": 140,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 142,
+      "frame": 142,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 144,
+      "frame": 144,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 146,
+      "frame": 146,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 148,
+      "frame": 148,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 150,
+      "frame": 150,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 152,
+      "frame": 152,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "tick": 154,
+      "frame": 154,
+      "phase": "overfit_all",
+      "robot_block": 0,
+      "block_wall": 0
+    }
+  ],
+  "source": "/scratch/lijh/exp46/export_overfit",
+  "stride": 2
+}

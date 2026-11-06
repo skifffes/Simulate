@@ -1,0 +1,38 @@
+{
+  "root": "/scratch/lijh/exp46/export_overfit",
+  "n_episodes": 4,
+  "by_skill": {
+    "A90": 2,
+    "B90": 2
+  },
+  "episodes": [
+    {
+      "skill": "A90",
+      "episode": 0,
+      "config": "A_x-3_y-3",
+      "n_frames": 198,
+      "prompt": "pick up the orange block and place it in the target area at (0.525, 0.155) with its long side aligned with X"
+    },
+    {
+      "skill": "A90",
+      "episode": 5,
+      "config": "A_x+3_y00",
+      "n_frames": 196,
+      "prompt": "pick up the orange block and place it in the target area at (0.575, 0.177) with its long side aligned with X"
+    },
+    {
+      "skill": "B90",
+      "episode": 0,
+      "config": "B_wall_y_low|B_obj_y015|B_robot_home",
+      "n_frames": 157,
+      "prompt": "push the orange block along the positive X direction to the wall region y in [0.12, 0.18]"
+    },
+    {
+      "skill": "B90",
+      "episode": 2,
+      "config": "B_wall_y_mid|B_obj_y021|B_robot_offset",
+      "n_frames": 156,
+      "prompt": "push the orange block along the positive X direction to the wall region y in [0.18, 0.24]"
+    }
+  ]
+}

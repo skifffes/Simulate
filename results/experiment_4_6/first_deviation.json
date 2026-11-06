@@ -1,0 +1,134 @@
+[
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 0,
+    "seed_offset": 0,
+    "success": false,
+    "failure_reason": "grasped_by_two_fingers",
+    "max_dev_m": 0.332251275939523,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 5,
+    "seed_offset": 0,
+    "success": false,
+    "failure_reason": "grasped_by_two_fingers",
+    "max_dev_m": 0.33256508417103764,
+    "first_unrecoverable_dev_tick": 2,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 0,
+    "seed_offset": 0,
+    "success": false,
+    "failure_reason": "advance_ok",
+    "max_dev_m": 0.3687385615926024,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 37
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 2,
+    "seed_offset": 0,
+    "success": false,
+    "failure_reason": "pushed_by_robot",
+    "max_dev_m": 0.39400696888337006,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 0,
+    "seed_offset": 1,
+    "success": false,
+    "failure_reason": "lifted",
+    "max_dev_m": 0.3325657926147448,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 5,
+    "seed_offset": 1,
+    "success": false,
+    "failure_reason": "grasped_by_two_fingers",
+    "max_dev_m": 0.4120847981102763,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 0,
+    "seed_offset": 1,
+    "success": false,
+    "failure_reason": "pushed_by_robot",
+    "max_dev_m": 0.3907137888968692,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 2,
+    "seed_offset": 1,
+    "success": false,
+    "failure_reason": "pushed_by_robot",
+    "max_dev_m": 0.21488952545959653,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 40
+  },
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 0,
+    "seed_offset": 2,
+    "success": false,
+    "failure_reason": "grasped_by_two_fingers",
+    "max_dev_m": 0.4222291967499891,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "A90",
+    "episode": 5,
+    "seed_offset": 2,
+    "success": false,
+    "failure_reason": "grasped_by_two_fingers",
+    "max_dev_m": 0.34670825087590323,
+    "first_unrecoverable_dev_tick": 2,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 0,
+    "seed_offset": 2,
+    "success": false,
+    "failure_reason": "wall_contact_ever",
+    "max_dev_m": 0.3585405902857354,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  },
+  {
+    "step": 1500,
+    "skill": "B90",
+    "episode": 2,
+    "seed_offset": 2,
+    "success": false,
+    "failure_reason": "pushed_by_robot",
+    "max_dev_m": 0.6636617893989739,
+    "first_unrecoverable_dev_tick": 1,
+    "n_ticks": 45
+  }
+]

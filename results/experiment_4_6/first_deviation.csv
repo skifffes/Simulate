@@ -1,0 +1,13 @@
+step,skill,episode,seed_offset,success,failure_reason,max_dev_m,first_unrecoverable_dev_tick,n_ticks
+1500,A90,0,0,False,grasped_by_two_fingers,0.332251275939523,1,45
+1500,A90,5,0,False,grasped_by_two_fingers,0.33256508417103764,2,45
+1500,B90,0,0,False,advance_ok,0.3687385615926024,1,37
+1500,B90,2,0,False,pushed_by_robot,0.39400696888337006,1,45
+1500,A90,0,1,False,lifted,0.3325657926147448,1,45
+1500,A90,5,1,False,grasped_by_two_fingers,0.4120847981102763,1,45
+1500,B90,0,1,False,pushed_by_robot,0.3907137888968692,1,45
+1500,B90,2,1,False,pushed_by_robot,0.21488952545959653,1,40
+1500,A90,0,2,False,grasped_by_two_fingers,0.4222291967499891,1,45
+1500,A90,5,2,False,grasped_by_two_fingers,0.34670825087590323,2,45
+1500,B90,0,2,False,wall_contact_ever,0.3585405902857354,1,45
+1500,B90,2,2,False,pushed_by_robot,0.6636617893989739,1,45
