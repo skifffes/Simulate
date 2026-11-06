@@ -1,0 +1,138 @@
+[
+  {
+    "skill": "A90",
+    "episode": 0,
+    "tick": 66,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.001680860351562452,
+    "mean_abs_8d": 0.0005228379701455845,
+    "gripper_max_abs": 0.000976368164062491,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "A90",
+    "episode": 0,
+    "tick": 99,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0016435557861327332,
+    "mean_abs_8d": 0.0004069663781019503,
+    "gripper_max_abs": 0.0006102301025390222,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "A90",
+    "episode": 5,
+    "tick": 65,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0036523461914064193,
+    "mean_abs_8d": 0.0006519808809163771,
+    "gripper_max_abs": 0.0014645522460937643,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "A90",
+    "episode": 5,
+    "tick": 98,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0014609384765624789,
+    "mean_abs_8d": 0.0003394794533002981,
+    "gripper_max_abs": 0.000976368164062491,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "B90",
+    "episode": 0,
+    "tick": 52,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.001680860351562341,
+    "mean_abs_8d": 0.0003241063530797367,
+    "gripper_max_abs": 0.000976368164062491,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "B90",
+    "episode": 0,
+    "tick": 78,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0025212905273437336,
+    "mean_abs_8d": 0.00042931396735272544,
+    "gripper_max_abs": 0.0009763681640625466,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "B90",
+    "episode": 2,
+    "tick": 52,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0014609384765624789,
+    "mean_abs_8d": 0.0003665861613988625,
+    "gripper_max_abs": 0.0007322761230468267,
+    "policy_metadata": "{}"
+  },
+  {
+    "skill": "B90",
+    "episode": 2,
+    "tick": 78,
+    "offline_shape": [
+      16,
+      8
+    ],
+    "online_shape": [
+      16,
+      8
+    ],
+    "max_abs_8d": 0.0012636728515625917,
+    "mean_abs_8d": 0.0003593256427278247,
+    "gripper_max_abs": 0.0007322761230468822,
+    "policy_metadata": "{}"
+  }
+]

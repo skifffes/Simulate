@@ -1,0 +1,28 @@
+{
+  "regions": {
+    "k0": {
+      "n": 36,
+      "joint_max": 1.1102230246251565e-16,
+      "joint_mean": 8.018278654934266e-17,
+      "gripper_max": 6.938893903907228e-18,
+      "accepted_frac": 1.0
+    },
+    "k1_7": {
+      "n": 252,
+      "joint_max": 1.1102230246251565e-16,
+      "joint_mean": 7.159176787861738e-17,
+      "gripper_max": 6.938893903907228e-18,
+      "accepted_frac": 1.0
+    },
+    "k8_15": {
+      "n": 288,
+      "joint_max": 0.01303326606750499,
+      "joint_mean": 4.525439606780526e-05,
+      "gripper_max": 6.938893903907228e-18,
+      "accepted_frac": 0.9965277777777778
+    }
+  },
+  "n_frames": 36,
+  "contract_fail_fields": 0,
+  "note": "joint_max 为 |q_target - A[t+k]| 的最大值（含 Adapter 拒绝/裁剪）"
+}

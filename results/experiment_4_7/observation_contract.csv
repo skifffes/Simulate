@@ -1,0 +1,325 @@
+skill,episode,tick,field,shape_a,shape_b,dtype_a,dtype_b,max_abs,mean_abs,sha_a,sha_b,pass
+A90,0,0,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,286caeac2e440855,286caeac2e440855,True
+A90,0,0,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,0,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,49de6574dfe6e35d,49de6574dfe6e35d,True
+A90,0,0,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,0,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,0,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,0,state,[32],[32],float64,float64,0.0,0.0,16c0aceb00bbb61b,16c0aceb00bbb61b,True
+A90,0,0,tokenized_prompt,[200],[200],int64,int64,0,0.0,1570daa3e908c97d,1570daa3e908c97d,True
+A90,0,0,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,28d2d797db6d308f,28d2d797db6d308f,True
+A90,0,39,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,32a7ed74dc6fc60b,32a7ed74dc6fc60b,True
+A90,0,39,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,39,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,32f94f198d633ef9,32f94f198d633ef9,True
+A90,0,39,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,39,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,39,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,39,state,[32],[32],float64,float64,0.0,0.0,8e60c1f416845224,8e60c1f416845224,True
+A90,0,39,tokenized_prompt,[200],[200],int64,int64,0,0.0,bdb30baf7d3f116f,bdb30baf7d3f116f,True
+A90,0,39,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,59,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,aaedc9a8505afd4e,aaedc9a8505afd4e,True
+A90,0,59,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,59,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,bffe7393ddac6261,bffe7393ddac6261,True
+A90,0,59,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,59,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,59,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,59,state,[32],[32],float64,float64,0.0,0.0,55179ada25395dda,55179ada25395dda,True
+A90,0,59,tokenized_prompt,[200],[200],int64,int64,0,0.0,c1934ef628338521,c1934ef628338521,True
+A90,0,59,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,60,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,3ed521bfaebe4fe1,3ed521bfaebe4fe1,True
+A90,0,60,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,60,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,950c5a74aa6fef74,950c5a74aa6fef74,True
+A90,0,60,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,60,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,60,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,60,state,[32],[32],float64,float64,0.0,0.0,c68c45382f89f0de,c68c45382f89f0de,True
+A90,0,60,tokenized_prompt,[200],[200],int64,int64,0,0.0,1975a0ac73e3c314,1975a0ac73e3c314,True
+A90,0,60,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,65,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,147412eaa7caf8f4,147412eaa7caf8f4,True
+A90,0,65,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,65,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3ff4778e4a2ca1,0a3ff4778e4a2ca1,True
+A90,0,65,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,65,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,65,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,65,state,[32],[32],float64,float64,0.0,0.0,8224e39e1f0dc75c,8224e39e1f0dc75c,True
+A90,0,65,tokenized_prompt,[200],[200],int64,int64,0,0.0,b7cbf8b69cb0f0f0,b7cbf8b69cb0f0f0,True
+A90,0,65,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,79,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,afd56e5a25eb0a58,afd56e5a25eb0a58,True
+A90,0,79,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,79,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,6b2521754610a824,6b2521754610a824,True
+A90,0,79,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,79,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,79,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,79,state,[32],[32],float64,float64,0.0,0.0,f68b9db53c8e01bd,f68b9db53c8e01bd,True
+A90,0,79,tokenized_prompt,[200],[200],int64,int64,0,0.0,e5417be552c8e626,e5417be552c8e626,True
+A90,0,79,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,118,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,bf799783f01238d3,bf799783f01238d3,True
+A90,0,118,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,118,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,9d7664e2ce724c56,9d7664e2ce724c56,True
+A90,0,118,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,118,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,118,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,118,state,[32],[32],float64,float64,0.0,0.0,d994780fd61021a7,d994780fd61021a7,True
+A90,0,118,tokenized_prompt,[200],[200],int64,int64,0,0.0,557f6d61a2941c08,557f6d61a2941c08,True
+A90,0,118,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,0,158,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,f3f8f3059e04b711,f3f8f3059e04b711,True
+A90,0,158,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,158,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,9424c2fb90b1df0b,9424c2fb90b1df0b,True
+A90,0,158,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,158,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,158,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,158,state,[32],[32],float64,float64,0.0,0.0,7b722479b3d1f332,7b722479b3d1f332,True
+A90,0,158,tokenized_prompt,[200],[200],int64,int64,0,0.0,2b1f8542ba74547a,2b1f8542ba74547a,True
+A90,0,158,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,0532ee75ed707847,0532ee75ed707847,True
+A90,0,181,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0846a1848975440f,0846a1848975440f,True
+A90,0,181,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,181,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,d26235dd06a234a9,d26235dd06a234a9,True
+A90,0,181,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,0,181,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,0,181,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,0,181,state,[32],[32],float64,float64,0.0,0.0,1fe125c50dc991cc,1fe125c50dc991cc,True
+A90,0,181,tokenized_prompt,[200],[200],int64,int64,0,0.0,258b4fd38c228809,258b4fd38c228809,True
+A90,0,181,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,0,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0b30495bc189e63e,0b30495bc189e63e,True
+A90,5,0,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,0,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,1638830e2b2392da,1638830e2b2392da,True
+A90,5,0,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,0,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,0,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,0,state,[32],[32],float64,float64,0.0,0.0,16c0aceb00bbb61b,16c0aceb00bbb61b,True
+A90,5,0,tokenized_prompt,[200],[200],int64,int64,0,0.0,e64bb2ab7e50b660,e64bb2ab7e50b660,True
+A90,5,0,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,28d2d797db6d308f,28d2d797db6d308f,True
+A90,5,39,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,4d4c41f74bc64db2,4d4c41f74bc64db2,True
+A90,5,39,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,39,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,54051f6cc0496039,54051f6cc0496039,True
+A90,5,39,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,39,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,39,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,39,state,[32],[32],float64,float64,0.0,0.0,15d133471de41a99,15d133471de41a99,True
+A90,5,39,tokenized_prompt,[200],[200],int64,int64,0,0.0,49d18fd2b42edc2f,49d18fd2b42edc2f,True
+A90,5,39,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,59,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,99fd6473d90cacd0,99fd6473d90cacd0,True
+A90,5,59,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,59,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,f389229cee764ba7,f389229cee764ba7,True
+A90,5,59,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,59,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,59,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,59,state,[32],[32],float64,float64,0.0,0.0,4836b4fc3d1cd0d7,4836b4fc3d1cd0d7,True
+A90,5,59,tokenized_prompt,[200],[200],int64,int64,0,0.0,a9aabde63e94250e,a9aabde63e94250e,True
+A90,5,59,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,60,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,6be583eea851b08b,6be583eea851b08b,True
+A90,5,60,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,60,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,58265136b821cc04,58265136b821cc04,True
+A90,5,60,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,60,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,60,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,60,state,[32],[32],float64,float64,0.0,0.0,e0baf03de8a64ae6,e0baf03de8a64ae6,True
+A90,5,60,tokenized_prompt,[200],[200],int64,int64,0,0.0,8044bb9b2fe3fba2,8044bb9b2fe3fba2,True
+A90,5,60,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,65,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,bcbaad99f1521d1f,bcbaad99f1521d1f,True
+A90,5,65,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,65,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,8cadb1d458d92ae1,8cadb1d458d92ae1,True
+A90,5,65,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,65,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,65,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,65,state,[32],[32],float64,float64,0.0,0.0,2a38245a5c493109,2a38245a5c493109,True
+A90,5,65,tokenized_prompt,[200],[200],int64,int64,0,0.0,5392b3794635bbd0,5392b3794635bbd0,True
+A90,5,65,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,78,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,9d605b82ff356f15,9d605b82ff356f15,True
+A90,5,78,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,78,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,8cf06572ba53c2b4,8cf06572ba53c2b4,True
+A90,5,78,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,78,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,78,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,78,state,[32],[32],float64,float64,0.0,0.0,e8bc22825dfd7f9c,e8bc22825dfd7f9c,True
+A90,5,78,tokenized_prompt,[200],[200],int64,int64,0,0.0,e068eed1ac731d8f,e068eed1ac731d8f,True
+A90,5,78,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,117,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,67f4e7ce6bc53c01,67f4e7ce6bc53c01,True
+A90,5,117,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,117,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,e1d54f2c8e63dead,e1d54f2c8e63dead,True
+A90,5,117,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,117,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,117,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,117,state,[32],[32],float64,float64,0.0,0.0,493601341c598e6a,493601341c598e6a,True
+A90,5,117,tokenized_prompt,[200],[200],int64,int64,0,0.0,1d8ad7a12b9b108d,1d8ad7a12b9b108d,True
+A90,5,117,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,156,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,53677a141f1767b5,53677a141f1767b5,True
+A90,5,156,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,156,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,3c773ec045c65d2b,3c773ec045c65d2b,True
+A90,5,156,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,156,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,156,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,156,state,[32],[32],float64,float64,0.0,0.0,df2a35d364d54097,df2a35d364d54097,True
+A90,5,156,tokenized_prompt,[200],[200],int64,int64,0,0.0,2eb9e7d95e9f67de,2eb9e7d95e9f67de,True
+A90,5,156,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+A90,5,179,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,a5032df724036276,a5032df724036276,True
+A90,5,179,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,179,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,48af0f78c19dd915,48af0f78c19dd915,True
+A90,5,179,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+A90,5,179,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+A90,5,179,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+A90,5,179,state,[32],[32],float64,float64,0.0,0.0,8684195c4babb620,8684195c4babb620,True
+A90,5,179,tokenized_prompt,[200],[200],int64,int64,0,0.0,c9eb0115fbefbe0c,c9eb0115fbefbe0c,True
+A90,5,179,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,34e7cffc737acb7b,34e7cffc737acb7b,True
+B90,0,0,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,14c443b8d2655334,14c443b8d2655334,True
+B90,0,0,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,0,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,ac684c3ed79e6aa0,ac684c3ed79e6aa0,True
+B90,0,0,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,0,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,0,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,0,state,[32],[32],float64,float64,0.0,0.0,16c0aceb00bbb61b,16c0aceb00bbb61b,True
+B90,0,0,tokenized_prompt,[200],[200],int64,int64,0,0.0,08014f2f84025280,08014f2f84025280,True
+B90,0,0,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,0,1,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,f48a3db70e209fda,f48a3db70e209fda,True
+B90,0,1,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,1,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,a9dd2ce2bc7cd22b,a9dd2ce2bc7cd22b,True
+B90,0,1,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,1,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,1,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,1,state,[32],[32],float64,float64,0.0,0.0,a9764770e93010d5,a9764770e93010d5,True
+B90,0,1,tokenized_prompt,[200],[200],int64,int64,0,0.0,a10b93e4afc825b8,a10b93e4afc825b8,True
+B90,0,1,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,0,2,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,382b13bacc29d297,382b13bacc29d297,True
+B90,0,2,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,2,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,73034509bab4d497,73034509bab4d497,True
+B90,0,2,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,2,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,2,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,2,state,[32],[32],float64,float64,0.0,0.0,5f283f00a1851d95,5f283f00a1851d95,True
+B90,0,2,tokenized_prompt,[200],[200],int64,int64,0,0.0,cc525e0cce164e49,cc525e0cce164e49,True
+B90,0,2,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,0,7,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,1d284618282404b2,1d284618282404b2,True
+B90,0,7,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,7,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,6bedae0c65cc989a,6bedae0c65cc989a,True
+B90,0,7,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,7,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,7,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,7,state,[32],[32],float64,float64,0.0,0.0,0bd4759a1a403f20,0bd4759a1a403f20,True
+B90,0,7,tokenized_prompt,[200],[200],int64,int64,0,0.0,fd19781fa288ce58,fd19781fa288ce58,True
+B90,0,7,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc0713e72f101ade,fc0713e72f101ade,True
+B90,0,31,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,269c34e061b3d57a,269c34e061b3d57a,True
+B90,0,31,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,31,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,e9f5335b93fcdcfc,e9f5335b93fcdcfc,True
+B90,0,31,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,31,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,31,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,31,state,[32],[32],float64,float64,0.0,0.0,1bc84a6981f3504c,1bc84a6981f3504c,True
+B90,0,31,tokenized_prompt,[200],[200],int64,int64,0,0.0,58acb84bad8cf5c1,58acb84bad8cf5c1,True
+B90,0,31,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,cbb7a0741b3ddbdf,cbb7a0741b3ddbdf,True
+B90,0,62,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,6eb4edff4eeb37b2,6eb4edff4eeb37b2,True
+B90,0,62,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,62,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,d1cf10e489ff8854,d1cf10e489ff8854,True
+B90,0,62,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,62,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,62,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,62,state,[32],[32],float64,float64,0.0,0.0,60b767af0f99d7d7,60b767af0f99d7d7,True
+B90,0,62,tokenized_prompt,[200],[200],int64,int64,0,0.0,149f0c14af44c624,149f0c14af44c624,True
+B90,0,62,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,cbb7a0741b3ddbdf,cbb7a0741b3ddbdf,True
+B90,0,94,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,8914b02bcd3fcc95,8914b02bcd3fcc95,True
+B90,0,94,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,94,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,7e51b758e2677904,7e51b758e2677904,True
+B90,0,94,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,94,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,94,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,94,state,[32],[32],float64,float64,0.0,0.0,beb22b74c49de6a5,beb22b74c49de6a5,True
+B90,0,94,tokenized_prompt,[200],[200],int64,int64,0,0.0,307b36afaa620d98,307b36afaa620d98,True
+B90,0,94,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True
+B90,0,125,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,79c3919b29be0133,79c3919b29be0133,True
+B90,0,125,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,125,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,f469d1c4351a696b,f469d1c4351a696b,True
+B90,0,125,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,125,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,125,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,125,state,[32],[32],float64,float64,0.0,0.0,24860f19b93b3716,24860f19b93b3716,True
+B90,0,125,tokenized_prompt,[200],[200],int64,int64,0,0.0,325be5fbaab2e4c7,325be5fbaab2e4c7,True
+B90,0,125,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True
+B90,0,140,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,8ea5d739ea68ebdd,8ea5d739ea68ebdd,True
+B90,0,140,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,140,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,e1a78cda58e4b5d3,e1a78cda58e4b5d3,True
+B90,0,140,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,0,140,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,0,140,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,0,140,state,[32],[32],float64,float64,0.0,0.0,21d0fcca585c782a,21d0fcca585c782a,True
+B90,0,140,tokenized_prompt,[200],[200],int64,int64,0,0.0,ba755bb6bef35972,ba755bb6bef35972,True
+B90,0,140,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True
+B90,2,0,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,ac907fe786452fdf,ac907fe786452fdf,True
+B90,2,0,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,0,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,6849d7cd0be8e99f,6849d7cd0be8e99f,True
+B90,2,0,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,0,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,0,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,0,state,[32],[32],float64,float64,0.0,0.0,f0fb7d37294105eb,f0fb7d37294105eb,True
+B90,2,0,tokenized_prompt,[200],[200],int64,int64,0,0.0,048522243d378d74,048522243d378d74,True
+B90,2,0,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,2,1,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,9c81ca112c0c6212,9c81ca112c0c6212,True
+B90,2,1,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,1,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,2ddb7d1dce986bd2,2ddb7d1dce986bd2,True
+B90,2,1,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,1,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,1,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,1,state,[32],[32],float64,float64,0.0,0.0,4c3e53a0037f64be,4c3e53a0037f64be,True
+B90,2,1,tokenized_prompt,[200],[200],int64,int64,0,0.0,b01ec079bfae8af2,b01ec079bfae8af2,True
+B90,2,1,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,2,2,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,ed8856796f1ef919,ed8856796f1ef919,True
+B90,2,2,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,2,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,09544ff70bc28392,09544ff70bc28392,True
+B90,2,2,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,2,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,2,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,2,state,[32],[32],float64,float64,0.0,0.0,3ecac09cc970ff89,3ecac09cc970ff89,True
+B90,2,2,tokenized_prompt,[200],[200],int64,int64,0,0.0,eeb5195f3dda2720,eeb5195f3dda2720,True
+B90,2,2,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,c278c91417c1e0c3,c278c91417c1e0c3,True
+B90,2,7,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,12cd58bccec4072c,12cd58bccec4072c,True
+B90,2,7,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,7,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,5631f054fe4191f2,5631f054fe4191f2,True
+B90,2,7,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,7,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,7,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,7,state,[32],[32],float64,float64,0.0,0.0,8b89a1c97b041e1d,8b89a1c97b041e1d,True
+B90,2,7,tokenized_prompt,[200],[200],int64,int64,0,0.0,4257f95ee44eee2a,4257f95ee44eee2a,True
+B90,2,7,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc0713e72f101ade,fc0713e72f101ade,True
+B90,2,31,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,d6911835a6821703,d6911835a6821703,True
+B90,2,31,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,31,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,5b826e77f5533763,5b826e77f5533763,True
+B90,2,31,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,31,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,31,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,31,state,[32],[32],float64,float64,0.0,0.0,b07a062d172893f7,b07a062d172893f7,True
+B90,2,31,tokenized_prompt,[200],[200],int64,int64,0,0.0,37085d8d2c20f6b5,37085d8d2c20f6b5,True
+B90,2,31,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,cbb7a0741b3ddbdf,cbb7a0741b3ddbdf,True
+B90,2,62,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,026ab22a150012b8,026ab22a150012b8,True
+B90,2,62,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,62,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,a93b96d994d46634,a93b96d994d46634,True
+B90,2,62,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,62,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,62,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,62,state,[32],[32],float64,float64,0.0,0.0,7a0bea9d03fe9f3a,7a0bea9d03fe9f3a,True
+B90,2,62,tokenized_prompt,[200],[200],int64,int64,0,0.0,892a8c61773ae8b2,892a8c61773ae8b2,True
+B90,2,62,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,cbb7a0741b3ddbdf,cbb7a0741b3ddbdf,True
+B90,2,93,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,8ad54e87370642f7,8ad54e87370642f7,True
+B90,2,93,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,93,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,01c9aaf3bd67e31b,01c9aaf3bd67e31b,True
+B90,2,93,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,93,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,93,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,93,state,[32],[32],float64,float64,0.0,0.0,c8cff679d234b02c,c8cff679d234b02c,True
+B90,2,93,tokenized_prompt,[200],[200],int64,int64,0,0.0,2733fc6b7f153db5,2733fc6b7f153db5,True
+B90,2,93,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True
+B90,2,124,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,162320836ec6d44e,162320836ec6d44e,True
+B90,2,124,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,124,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,d9c37245262209f7,d9c37245262209f7,True
+B90,2,124,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,124,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,124,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,124,state,[32],[32],float64,float64,0.0,0.0,b4c0f6361efa7c8f,b4c0f6361efa7c8f,True
+B90,2,124,tokenized_prompt,[200],[200],int64,int64,0,0.0,81c185d673232cce,81c185d673232cce,True
+B90,2,124,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True
+B90,2,139,image.base_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,d180e504b865a55c,d180e504b865a55c,True
+B90,2,139,image_mask.base_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,139,image.left_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,ec901c64b9e3da36,ec901c64b9e3da36,True
+B90,2,139,image_mask.left_wrist_0_rgb,[],[],bool,bool,0,0.0,4bf5122f344554c5,4bf5122f344554c5,True
+B90,2,139,image.right_wrist_0_rgb,"[224, 224, 3]","[224, 224, 3]",uint8,uint8,0.0,0.0,0a3f0ee9e3cbab26,0a3f0ee9e3cbab26,True
+B90,2,139,image_mask.right_wrist_0_rgb,[],[],bool,bool,0,0.0,6e340b9cffb37a98,6e340b9cffb37a98,True
+B90,2,139,state,[32],[32],float64,float64,0.0,0.0,7190db5f90043d48,7190db5f90043d48,True
+B90,2,139,tokenized_prompt,[200],[200],int64,int64,0,0.0,cff685a648de289a,cff685a648de289a,True
+B90,2,139,tokenized_prompt_mask,[200],[200],bool,bool,0,0.0,fc35877717cc5973,fc35877717cc5973,True

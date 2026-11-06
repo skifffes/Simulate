@@ -1,0 +1,22 @@
+{
+  "ee_link_index": 11,
+  "ee_link_name": "panda_grasptarget",
+  "link_names": {
+    "0": "panda_link1",
+    "1": "panda_link2",
+    "2": "panda_link3",
+    "3": "panda_link4",
+    "4": "panda_link5",
+    "5": "panda_link6",
+    "6": "panda_link7",
+    "7": "panda_link8",
+    "8": "panda_hand",
+    "9": "panda_leftfinger",
+    "10": "panda_rightfinger",
+    "11": "panda_grasptarget"
+  },
+  "pose_vs_same_link_max_m": 0.0,
+  "pose_vs_link11_max_m": 0.0,
+  "pose_vs_link11_mean_m": 0.0,
+  "n_configs": 20
+}
