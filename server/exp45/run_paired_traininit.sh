@@ -19,14 +19,14 @@ export CUDA_VISIBLE_DEVICES=$GPU
 A90_EPS=5,6
 B90_EPS=0,1,2,3
 BASE=/scratch/lijh/exp45/paired_traininit
-OUT=results/experiment_4_5/rollouts_traininit/${MODEL}_step${STEP}
-LOG=/scratch/lijh/exp45/traininit_${MODEL}_${STEP}.log
+OUT=results/experiment_4_5/rollouts_traininit/${MODEL}_step${STEP}${TAG_SUFFIX:-}
+LOG=/scratch/lijh/exp45/traininit_${MODEL}_${STEP}${TAG_SUFFIX:-}.log
 PORT=$((8700 + RANDOM % 90))
 mkdir -p "$BASE" "$OUT"
 : > "$LOG"
 
 if [ "$MODEL" = "ae" ]; then
-  PARAMS=/scratch/lijh/exp45/run/ckpts/lora_step$(printf '%05d' "$STEP").npz
+  PARAMS=${AE_RUN_DIR:-/scratch/lijh/exp45/run}/ckpts/lora_step$(printf '%05d' "$STEP").npz
   MERGED=$BASE/ae_${STEP}; CFG=exp45_pi05_ae
   SERVE=scripts/exp45/serve_ae.py; EXPORT=scripts/exp45/export_ae_params.py
 else
